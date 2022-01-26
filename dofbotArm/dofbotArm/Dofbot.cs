@@ -312,5 +312,27 @@ namespace dofbotArm
 
         }
 
+        public void cameraColor()
+        {
+            var psi = new ProcessStartInfo();
+
+            psi.FileName = @"/usr/bin/python3";
+            var script = @"/home/dofbot/Dofbot/3.ctrl_Arm/dofbot.py";
+            var func = "cameraColor";
+
+            psi.Arguments = $"\"{script}\" \"{func}\"";
+
+            psi.UseShellExecute = false; ;
+            psi.CreateNoWindow = true;
+            psi.RedirectStandardOutput = true;
+            psi.RedirectStandardError = true;
+
+            var process = Process.Start(psi);
+            var results = process.StandardOutput.ReadToEnd();
+
+            Console.WriteLine();
+
+        }
+
     }
 }
