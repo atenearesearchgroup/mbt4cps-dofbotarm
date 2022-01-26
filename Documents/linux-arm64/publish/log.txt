@@ -1,0 +1,15 @@
+2022-01-13 17:39:11.877  Info  -1;-----------------------------------------------
+2022-01-13 17:39:12.059  Info  -1; McpApplication startup
+2022-01-13 17:39:12.068  Info  -1;- - - - - - - - - - - - - - - - - - - - - - - -
+2022-01-13 17:39:12.068  Info  -1;Your projectspecific .dll: Company.Project.dll is build in: None while MCP is build in: MSIL
+This may cause issues.
+2022-01-13 17:39:12.656 Error  -1;No license file found. MCP will run for one hour.
+2022-01-13 17:39:12.777  Info  -1;Name of the Computer = Dofbot
+2022-01-13 17:39:12.777  Info  -1;Machine Description = Machine (Simulation Mode)
+2022-01-13 17:39:12.777  Info  -1;Hardware Identification = Machine
+2022-01-13 17:39:12.777  Info  -1;Hardware Version = Name: SystemConfiguration.xml, Version: 1
+2022-01-13 17:39:12.780  Info  -1;Database Files = 
+2022-01-13 17:39:12.780  Info  -1;    
+2022-01-13 17:39:12.784  Info  -1;Software Identification =  [Copyright 2000-2019 Cordis Products B.V.]
+2022-01-13 17:39:12.788  Info  -1;Software Version =  [ v2.1.0.0]
+2022-01-13 17:39:12.930  Warn   3;2022-01-13 17:39:12.922 ; WARNING;Machine;TEST;TEST

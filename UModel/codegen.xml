@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TargetConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <classgeninfo>
+    <geninfo>
+      <generatecode>True</generatecode>
+      <classname>BuzzerOffClass</classname>
+      <rootpackage>Sandbox</rootpackage>
+      <uuid>673afd4e-be15-4a94-868b-4fa670ee9b13</uuid>
+    </geninfo>
+    <geninfo>
+      <generatecode>True</generatecode>
+      <classname>BuzzerOnClass</classname>
+      <rootpackage>Sandbox</rootpackage>
+      <uuid>c7fbd124-eb2f-46fe-b443-c7e1479609b2</uuid>
+    </geninfo>
+    <geninfo>
+      <generatecode>True</generatecode>
+      <classname>DofbotClass</classname>
+      <rootpackage>Sandbox</rootpackage>
+      <uuid>2bcef891-f29b-4e74-8ccc-3dbf5be820f1</uuid>
+    </geninfo>
+    <geninfo>
+      <generatecode>True</generatecode>
+      <classname>LightRGBClass</classname>
+      <rootpackage>Sandbox</rootpackage>
+      <uuid>999dd697-c2a9-4d31-a788-f98ac24d06e2</uuid>
+    </geninfo>
+    <geninfo>
+      <generatecode>True</generatecode>
+      <classname>Machine</classname>
+      <rootpackage>Sandbox</rootpackage>
+      <uuid>19225c09-f2d9-4495-b1ff-0562ab9c16ae</uuid>
+    </geninfo>
+    <geninfo>
+      <generatecode>True</generatecode>
+      <classname>MoveToXYZClass</classname>
+      <rootpackage>Sandbox</rootpackage>
+      <uuid>4187b10d-7daf-4a89-9b02-236e47e0506f</uuid>
+    </geninfo>
+    <geninfo>
+      <generatecode>True</generatecode>
+      <classname>ReadAllServosClass</classname>
+      <rootpackage>Sandbox</rootpackage>
+      <uuid>a7a9b2e4-9c8c-47c1-9546-00e10141e7a6</uuid>
+    </geninfo>
+    <geninfo>
+      <generatecode>True</generatecode>
+      <classname>ReadServoClass</classname>
+      <rootpackage>Sandbox</rootpackage>
+      <uuid>9934c800-56c4-423f-86a9-b07bd7862ba4</uuid>
+    </geninfo>
+    <geninfo>
+      <generatecode>True</generatecode>
+      <classname>ReadXYZClass</classname>
+      <rootpackage>Sandbox</rootpackage>
+      <uuid>60d9d112-685e-4241-9207-7821a3727cef</uuid>
+    </geninfo>
+    <geninfo>
+      <generatecode>True</generatecode>
+      <classname>ReadyPositionClass</classname>
+      <rootpackage>Sandbox</rootpackage>
+      <uuid>70294d92-40d6-4696-ab82-dc204f1c2e40</uuid>
+    </geninfo>
+    <geninfo>
+      <generatecode>True</generatecode>
+      <classname>RotateAllServosArrayClass</classname>
+      <rootpackage>Sandbox</rootpackage>
+      <uuid>51bd63bb-77ae-4a1f-9e44-066b3d18f4d5</uuid>
+    </geninfo>
+    <geninfo>
+      <generatecode>True</generatecode>
+      <classname>RotateAllServosClass</classname>
+      <rootpackage>Sandbox</rootpackage>
+      <uuid>e4c5444f-2a0f-4f21-abb5-a48a7fc94c47</uuid>
+    </geninfo>
+    <geninfo>
+      <generatecode>True</generatecode>
+      <classname>RotateServoClass</classname>
+      <rootpackage>Sandbox</rootpackage>
+      <uuid>41f986a4-dede-4e06-babf-959aa101aa25</uuid>
+    </geninfo>
+    <geninfo>
+      <generatecode>True</generatecode>
+      <classname>StraightPositionClass</classname>
+      <rootpackage>Sandbox</rootpackage>
+      <uuid>43e93e93-f266-4cc9-a85d-7bc7ee7ea789</uuid>
+    </geninfo>
+    <geninfo>
+      <generatecode>True</generatecode>
+      <classname>WaitClass</classname>
+      <rootpackage>Sandbox</rootpackage>
+      <uuid>7cb01541-9eb1-473e-8e50-dc958b87d373</uuid>
+    </geninfo>
+  </classgeninfo>
+  <activetarget>C#</activetarget>
+  <InputsOutputsFile>true</InputsOutputsFile>
+  <DateAndTimestamp>false</DateAndTimestamp>
+  <TransitionInfoLines>false</TransitionInfoLines>
+  <LineTypeComments>false</LineTypeComments>
+  <SubstatePublication>false</SubstatePublication>
+  <OpcPublication>false</OpcPublication>
+  <GenerateValidationModel>false</GenerateValidationModel>
+  <GenerateMachinePartHashes>true</GenerateMachinePartHashes>
+  <GenerateRad>false</GenerateRad>
+  <TiaPortalEnabled>false</TiaPortalEnabled>
+  <TiaPortalversionSelected />
+  <TiaPortalAssemblyPath />
+  <ImportSourceCode>false</ImportSourceCode>
+  <GenerateBlocksFromSource>true</GenerateBlocksFromSource>
+  <GenerateBlocksFromSourceEnable>false</GenerateBlocksFromSourceEnable>
+  <CompilePlcCheck>true</CompilePlcCheck>
+  <CompilePlcEnable>false</CompilePlcEnable>
+  <DownloadToPlcCheck>false</DownloadToPlcCheck>
+  <DownloadToPlcEnable>false</DownloadToPlcEnable>
+  <RunPlcCheck>false</RunPlcCheck>
+  <RunPlcEnable>false</RunPlcEnable>
+  <TiaProjectPath />
+  <TiaPortalRelativePathCheck>false</TiaPortalRelativePathCheck>
+  <Plc />
+  <PcInterface />
+  <TargetInterface />
+  <CloseTiaPortal>false</CloseTiaPortal>
+  <SkipItemDeletionModelCheck>false</SkipItemDeletionModelCheck>
+  <SkipSearchAndReplaceModelCheck>false</SkipSearchAndReplaceModelCheck>
+  <ImportTwincatCode>false</ImportTwincatCode>
+  <BuildSolution>false</BuildSolution>
+  <ActivateTwincatConfiguration>false</ActivateTwincatConfiguration>
+  <RunTwincat>false</RunTwincat>
+  <CloseTwincat>false</CloseTwincat>
+  <TwincatProjectPath />
+  <TwincatRelativePathCheck>false</TwincatRelativePathCheck>
+  <TwincatVisualStudioVersion />
+  <TwincatTargetSystemList />
+  <TwincatTargetSystem />
+  <UseTwincatRemoteIp>false</UseTwincatRemoteIp>
+  <TwincatRemoteIp />
+  <ImportCSharpCode>false</ImportCSharpCode>
+  <BuildCSharpSolution>false</BuildCSharpSolution>
+  <RunCSharp>false</RunCSharp>
+  <CloseCSharp>false</CloseCSharp>
+  <CloseCSharpCheckboxEnabled>false</CloseCSharpCheckboxEnabled>
+  <CSharpProjectPath>D:\RaspberryPi\dotnet-mcp\Build\MCP .NET Core.sln</CSharpProjectPath>
+  <CSharpRelativePathCheck>false</CSharpRelativePathCheck>
+  <CSharpVisualStudioVersion>Visual Studio 2019</CSharpVisualStudioVersion>
+  <S7HeaderPath />
+  <CodeSysHeaderPath />
+  <TwincatHeaderPath />
+  <CSharpHeaderPath />
+  <BandRHeaderPath />
+  <LenzeHeaderPath />
+  <BoschRexrothHeaderPath />
+  <RockwellHeaderPath />
+  <S7Path />
+  <TwincatPath />
+  <CSharpPath>D:\TestComm</CSharpPath>
+  <BandRPath />
+  <LenzePath />
+  <BoschRexrothPath />
+  <RockwellPath />
+  <PreprocessCommand />
+  <PostprocessCommand />
+  <Namespace>Cordis.Machine</Namespace>
+  <ColorNormalstate>#9FA0DD</ColorNormalstate>
+  <ColorPrestate>#80FF80</ColorPrestate>
+  <ColorPoststate>#80D0FF</ColorPoststate>
+  <ColorCompositestate>#A0D0FF</ColorCompositestate>
+  <ColorFlatstate>#D0D0D0</ColorFlatstate>
+  <ColorLinkedstate>#509090</ColorLinkedstate>
+  <SymbolTableFBstartNumber>200</SymbolTableFBstartNumber>
+  <SymbolTableDBstartNumber>200</SymbolTableDBstartNumber>
+  <SymbolTableUDTstartNumber>200</SymbolTableUDTstartNumber>
+  <CheckPackages>
+    <string>bfd67d6a-cf6c-4e6e-8f3b-ad249ddac248</string>
+  </CheckPackages>
+  <RadBlocks>10</RadBlocks>
+</TargetConfiguration>

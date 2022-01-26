@@ -1,0 +1,2 @@
+2022-01-13 17:39:12.656 Error  -1;No license file found. MCP will run for one hour.
+2022-01-13 17:39:12.930  Warn   3;2022-01-13 17:39:12.922 ; WARNING;Machine;TEST;TEST
