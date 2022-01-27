@@ -25,11 +25,25 @@ p_Green = [136, 66, 20, 29, 270, 135]
 p_Blue = [44, 66, 20, 28, 270, 135]
 
 p_gray = [90, 48, 35, 35, 270, 60]
-start = time.time()
+
 
 def main():
 
-    it = True
+    #Release the operation when it ends
+    def _async_raise(tid, exctype):
+        """raises the exception, performs cleanup if needed"""
+        tid = ctypes.c_long(tid)
+        if not inspect.isclass(exctype):
+            exctype = type(exctype)
+        res = ctypes.pythonapi.PyThreadState_SetAsyncExc(tid, ctypes.py_object(exctype))
+        if res == 0:
+            raise ValueError("invalid thread id")
+        elif res != 1:
+
+            ctypes.pythonapi.PyThreadState_SetAsyncExc(tid, None)
+
+    def stop_thread(thread):
+        _async_raise(thread.ident, SystemExit)
 
 
 
@@ -176,6 +190,7 @@ def main():
 
 
     def Color_Recongnize():
+
         while(1):
             ret, frame = cap.read()
             frame, color_name = get_color(frame)
@@ -188,29 +203,17 @@ def main():
                     start_move_arm(3)
                 elif color_name['name'] == 'blue':
                     start_move_arm(4)
-                                                        #HACER AQUI CONTADOR SI SE QUIERE SALIR DEL PROGRAMA
-            clock = 20
-            if clock > 0:
-                end = time.time()
-                if (end - start) >= clock:
-                    print(end - start)
-                    quit()
-            #stop_thread(thread1)
-            #cap.release()  
-                time.sleep(0.01)
-         
 
-    #thread1 = threading.Thread(target=Color_Recongnize)
-    #thread1.setDaemon(True)
-    #thread1.start()
+            time.sleep(0.01)
+
+        cap.release()
+
+    thread1 = threading.Thread(target=Color_Recongnize)
+    thread1.setDaemon(True)
+    thread1.start()
 
     Arm.Arm_serial_servo_write6_array(ready, 1000)
     time.sleep(1)
-    Color_Recongnize()
-    #release
-
-    
-    
 
 
 try:

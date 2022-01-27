@@ -16,6 +16,8 @@ import ctypes
 
 from Arm_Lib import Arm_Device
 
+start = time.time()
+
 Arm = Arm_Device()
 
 func = sys.argv[1]
@@ -136,7 +138,9 @@ def main():
         print(clock)
 
     elif func == "cameraColor":
-
+        
+        clock = int(sys.argv[2])/1000
+        
         Arm.Arm_serial_servo_write6_array(ready, 1000)
         time.sleep(1)
         
@@ -296,8 +300,14 @@ def main():
                         start_move_arm(3)
                     elif color_name['name'] == 'blue':
                         start_move_arm(4)
+                
+                if clock > 0:
+                    end = time.time()
+                    if (end - start) >= clock:
+                        #print(end - start)
+                        quit()
 
-                time.sleep(0.01)
+                    time.sleep(0.01)
 
             cap.release()
 

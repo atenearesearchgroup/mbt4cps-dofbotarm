@@ -312,7 +312,7 @@ namespace dofbotArm
 
         }
 
-        public void cameraColor()
+        public void cameraColor(int time)
         {
             var psi = new ProcessStartInfo();
 
@@ -320,7 +320,7 @@ namespace dofbotArm
             var script = @"/home/dofbot/Dofbot/3.ctrl_Arm/dofbot.py";
             var func = "cameraColor";
 
-            psi.Arguments = $"\"{script}\" \"{func}\"";
+            psi.Arguments = $"\"{script}\" \"{func}\" \"{time}\"";
 
             psi.UseShellExecute = false; ;
             psi.CreateNoWindow = true;
