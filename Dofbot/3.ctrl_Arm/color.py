@@ -1,9 +1,13 @@
-#bgr8 to jpeg format
+#!/usr/bin/env python3
+#coding=utf-8
+import time
+import sys
+import os
+import subprocess
 import enum
 import cv2
 import traitlets
 import ipywidgets.widgets as widgets
-import time
 import numpy as np
 
 import threading
@@ -12,9 +16,10 @@ import ctypes
 
 from Arm_Lib import Arm_Device
 
+start = time.time()
+
 Arm = Arm_Device()
 
-# Define variable parameters at different locations
 ready = [90, 120, 5, 0, 90, 30]
 p_top_catch = [90, 80, 50, 50, 270, 135]
 p_top_free = [90, 80, 50, 50, 270, 60]
@@ -25,13 +30,13 @@ p_Green = [136, 66, 20, 29, 270, 135]
 p_Blue = [44, 66, 20, 28, 270, 135]
 
 p_gray = [90, 48, 35, 35, 270, 60]
-start = time.time()
 
 def main():
 
-    it = True
+    clock = 20000
 
-
+    Arm.Arm_serial_servo_write6_array(ready, 1000)
+    time.sleep(1)
 
     #Parameters of calibration with the information of the colors to recognise
     def get_color(img):
@@ -52,8 +57,6 @@ def main():
         H_min = min(H);H_max = max(H)
         S_min = min(S);S_max = max(S)
         V_min = min(V);V_max = max(V)
-
-        #print(H_min,S_min,V_min,H_max,S_max,V_max)
 
         if H_min >= 0 and S_min >= 200 and V_min >= 190 and H_max <= 179 and S_max <= 248 and V_max <= 224 : color_name['name'] = 'red'
         elif H_min >= 57 and S_min >= 124 and V_min >= 64 and H_max <= 80 and S_max <= 215 and V_max <= 92 : color_name['name'] = 'green'
@@ -176,6 +179,7 @@ def main():
 
 
     def Color_Recongnize():
+
         while(1):
             ret, frame = cap.read()
             frame, color_name = get_color(frame)
@@ -188,35 +192,24 @@ def main():
                     start_move_arm(3)
                 elif color_name['name'] == 'blue':
                     start_move_arm(4)
-                                                        #HACER AQUI CONTADOR SI SE QUIERE SALIR DEL PROGRAMA
-            clock = 20
-            if clock > 0:
+
+            counter = clock/1000
+            if counter > 0:
                 end = time.time()
-                if (end - start) >= clock:
-                    print(end - start)
+                if (end - start) >= counter:
+                    time.sleep(counter)
+                    print(int((end-start)*1000))
                     quit()
-            #stop_thread(thread1)
-            #cap.release()  
+
                 time.sleep(0.01)
-         
+        
+        cap.release()
 
-    #thread1 = threading.Thread(target=Color_Recongnize)
-    #thread1.setDaemon(True)
-    #thread1.start()
-
-    Arm.Arm_serial_servo_write6_array(ready, 1000)
-    time.sleep(1)
     Color_Recongnize()
-    #release
-
-    
-    
 
 
-try:
+try :
     main()
-    while True:
-        time.sleep(.000001)
 
 
 except KeyboardInterrupt:

@@ -122,7 +122,7 @@ namespace dofbotArm
             return doubles;
 
         }
-        public void cameraColor(int time)
+        public int cameraColor(int time)
         {
             var psi = new ProcessStartInfo();
 
@@ -137,10 +137,16 @@ namespace dofbotArm
             psi.RedirectStandardOutput = true;
             psi.RedirectStandardError = true;
 
-            var process = Process.Start(psi);
-            var results = process.StandardOutput.ReadToEnd();
+            var errors = "";
+            var results = "";
 
-            Console.WriteLine();
+            using (var process = Process.Start(psi))
+            {
+                results = process.StandardOutput.ReadToEnd();
+                errors = process.StandardError.ReadToEnd();
+            }
+            return Convert.ToInt32(results); 
+
 
         }
 

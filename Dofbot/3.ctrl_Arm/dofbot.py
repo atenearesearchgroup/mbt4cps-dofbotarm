@@ -164,11 +164,13 @@ def main():
         
     elif func == "cameraColor":
         
-        clock = int(sys.argv[2])/1000
-        
+        start = time.time()
+
+        clock = int(sys.argv[2])
+
         Arm.Arm_serial_servo_write6_array(ready, 1000)
         time.sleep(1)
-        
+
         #Parameters of calibration with the information of the colors to recognise
         def get_color(img):
             H = [];S = [];V = []
@@ -312,7 +314,7 @@ def main():
 
 
         def Color_Recongnize():
-
+            start = time.time()
             while(1):
                 ret, frame = cap.read()
                 frame, color_name = get_color(frame)
@@ -325,20 +327,20 @@ def main():
                         start_move_arm(3)
                     elif color_name['name'] == 'blue':
                         start_move_arm(4)
-                
-                if clock > 0:
+
+                counter = clock/1000
+                if counter > 0:
                     end = time.time()
-                    if (end - start) >= clock:
-                        #print(end - start)
+                    if (end - start) >= counter:
+                        print(int((end-start)*1000))
                         quit()
 
-                    time.sleep(0.01)
-
+            
             cap.release()
-
+        
         Color_Recongnize()
 
-    
+
 try :
     main()
 
