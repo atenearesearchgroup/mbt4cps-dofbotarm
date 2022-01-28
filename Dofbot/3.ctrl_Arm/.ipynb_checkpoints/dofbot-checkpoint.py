@@ -40,9 +40,14 @@ def main():
         angle = int(sys.argv[3])
         clock = int(sys.argv[4])
         
+        start = time.time()
         Arm.Arm_serial_servo_write(id, angle, clock)
-        print(clock)
-
+        time.sleep(clock/1000)
+        end = time.time()
+        
+        print(int((end-start)*1000))
+        
+        
     elif func == "rotateAllServos":
         angle1 = int(sys.argv[2])
         angle2 = int(sys.argv[3])
@@ -52,15 +57,26 @@ def main():
         angle6 = int(sys.argv[7])
         clock = int(sys.argv[8])
         
+        start = time.time()
         Arm.Arm_serial_servo_write6(angle1, angle2, angle3, angle4, angle5, angle6, clock)
-        print(clock)
+        time.sleep(clock/1000)
+        end = time.time()
+        
+        print(int((end-start)*1000))
+
+
         
     elif func == "rotateAllServosArray":
         array = (int(sys.argv[2]), int(sys.argv[3]), int(sys.argv[4]), int(sys.argv[5]), int(sys.argv[6]), int(sys.argv[7]))
         clock = int(sys.argv[8])
-        
+
+        start = time.time()
         Arm.Arm_serial_servo_write6_array(array, clock)
-        print(clock)
+        time.sleep(clock/1000)
+        end = time.time()
+        
+        print(int((end-start)*1000))
+        
         
     elif func == "readServo":
         id = int(sys.argv[2])
@@ -89,11 +105,16 @@ def main():
         del array[-1]
         array.append(90)
         array.append(0)
-
+        
+        start = time.time()
         Arm.Arm_serial_servo_write6_array(array, clock)
         Arm.Arm_serial_set_torque(1)
-        print(clock)
-                    
+        time.sleep(clock/1000)
+        end = time.time()
+        
+        print(int((end-start)*1000))
+        
+        
     elif func == "readXYZ":
         
         inst = ('rosrun dofbot_moveit dofbot_kinematics_fk')
@@ -133,10 +154,14 @@ def main():
         
         dist = int(sys.argv[2])
         clock = int(sys.argv[3])
-
+        
+        start = time.time()
         Arm.distGrip(dist, clock)
-        print(clock)
-
+        time.sleep(clock/1000)
+        end = time.time()
+        
+        print(int((end-start)*1000))
+        
     elif func == "cameraColor":
         
         clock = int(sys.argv[2])/1000
