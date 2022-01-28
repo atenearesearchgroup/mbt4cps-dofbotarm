@@ -91,6 +91,12 @@
       <rootpackage>Sandbox</rootpackage>
       <uuid>7cb01541-9eb1-473e-8e50-dc958b87d373</uuid>
     </geninfo>
+    <geninfo>
+      <generatecode>True</generatecode>
+      <classname>cameraColorClass</classname>
+      <rootpackage>Sandbox</rootpackage>
+      <uuid>310d039b-682d-462f-9cd6-f727f1d04cbe</uuid>
+    </geninfo>
   </classgeninfo>
   <activetarget>C#</activetarget>
   <InputsOutputsFile>true</InputsOutputsFile>

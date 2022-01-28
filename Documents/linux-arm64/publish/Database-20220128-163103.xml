@@ -594,16 +594,6 @@
         <DefaultValue>1000</DefaultValue>
         <SavedValue>1000</SavedValue>
       </waitArgaTime>
-      <cameraColorArgaTime>
-        <IdString>cameraColorArgaTime</IdString>
-        <Name>aTime</Name>
-        <Format />
-        <Unit />
-        <LowerLimit>0</LowerLimit>
-        <UpperLimit>0</UpperLimit>
-        <DefaultValue>0</DefaultValue>
-        <SavedValue>0</SavedValue>
-      </cameraColorArgaTime>
     </DofbotClass>
   </Machine>
   <Generic>
