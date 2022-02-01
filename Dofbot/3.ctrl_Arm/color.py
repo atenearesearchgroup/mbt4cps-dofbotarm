@@ -33,7 +33,7 @@ p_gray = [90, 48, 35, 35, 270, 60]
 
 def main():
 
-    clock = 20000
+    clock = 2000000
 
     Arm.Arm_serial_servo_write6_array(ready, 1000)
     time.sleep(1)
@@ -58,10 +58,15 @@ def main():
         S_min = min(S);S_max = max(S)
         V_min = min(V);V_max = max(V)
 
-        if H_min >= 0 and S_min >= 200 and V_min >= 190 and H_max <= 179 and S_max <= 248 and V_max <= 224 : color_name['name'] = 'red'
-        elif H_min >= 57 and S_min >= 124 and V_min >= 64 and H_max <= 80 and S_max <= 215 and V_max <= 92 : color_name['name'] = 'green'
-        elif H_min >= 108 and S_min >= 210 and V_min >= 97 and H_max <= 117 and S_max <= 255 and V_max <= 135 : color_name['name'] = 'blue'
-        elif H_min >= 22 and S_min >= 159 and V_min >= 216 and H_max <= 26 and S_max <= 247 and V_max <= 250 : color_name['name'] = 'yellow'
+        #if H_min >= 0 and S_min >= 200 and V_min >= 190 and H_max <= 179 and S_max <= 248 and V_max <= 224 : color_name['name'] = 'red'
+        #elif H_min >= 57 and S_min >= 124 and V_min >= 64 and H_max <= 80 and S_max <= 215 and V_max <= 92 : color_name['name'] = 'green'
+        #elif H_min >= 108 and S_min >= 210 and V_min >= 97 and H_max <= 117 and S_max <= 255 and V_max <= 135 : color_name['name'] = 'blue'
+        #elif H_min >= 22 and S_min >= 159 and V_min >= 216 and H_max <= 26 and S_max <= 247 and V_max <= 250 : color_name['name'] = 'yellow'
+
+        if H_min >= 0 and S_min >= 160 and V_min >= 252 and H_max <= 255 and S_max <= 254 and V_max <= 255 : color_name['name'] = 'red'
+        elif H_min >= 52 and S_min >= 113 and V_min >= 0 and H_max <= 93 and S_max <= 190 and V_max <= 255 : color_name['name'] = 'green'
+        elif H_min >= 86 and S_min >= 156 and V_min >= 0 and H_max <= 131 and S_max <= 255 and V_max <= 216 : color_name['name'] = 'blue'
+        elif H_min >= 9 and S_min >= 87 and V_min >= 197 and H_max <= 85 and S_max <= 244 and V_max <= 255 : color_name['name'] = 'yellow'
 
         return img, color_name
 

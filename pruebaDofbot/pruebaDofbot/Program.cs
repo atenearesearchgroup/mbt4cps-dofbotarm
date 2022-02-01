@@ -29,6 +29,29 @@ namespace pruebaDofbot
             int time4 = dof.rotateServo(6, 180, 1000);
             Console.WriteLine(time4);
             
+            double servo = dof.readServo(4);
+            Console.WriteLine(servo);
+
+            double[] servos = dof.readAllServos();
+
+            foreach (double word in servos)
+            {
+                Console.WriteLine($"{word}");
+            }
+
+            int time5 = dof.cameraColor(10000);
+            Console.WriteLine(time5);
+
+            dof.lightRGB(0, 50, 0);
+
+            int time6 = dof.readyPosition(1000);
+            Console.WriteLine(time6);
+
+            int time7 = dof.straightPosition(1000);
+            Console.WriteLine(time7);
+
+
+
         }
     }
 }
