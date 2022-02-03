@@ -3,27 +3,9 @@
   <classgeninfo>
     <geninfo>
       <generatecode>True</generatecode>
-      <classname>BuzzerOffClass</classname>
-      <rootpackage>Sandbox</rootpackage>
-      <uuid>673afd4e-be15-4a94-868b-4fa670ee9b13</uuid>
-    </geninfo>
-    <geninfo>
-      <generatecode>True</generatecode>
-      <classname>BuzzerOnClass</classname>
-      <rootpackage>Sandbox</rootpackage>
-      <uuid>c7fbd124-eb2f-46fe-b443-c7e1479609b2</uuid>
-    </geninfo>
-    <geninfo>
-      <generatecode>True</generatecode>
       <classname>DofbotClass</classname>
       <rootpackage>Sandbox</rootpackage>
       <uuid>2bcef891-f29b-4e74-8ccc-3dbf5be820f1</uuid>
-    </geninfo>
-    <geninfo>
-      <generatecode>True</generatecode>
-      <classname>LightRGBClass</classname>
-      <rootpackage>Sandbox</rootpackage>
-      <uuid>999dd697-c2a9-4d31-a788-f98ac24d06e2</uuid>
     </geninfo>
     <geninfo>
       <generatecode>True</generatecode>
@@ -33,69 +15,9 @@
     </geninfo>
     <geninfo>
       <generatecode>True</generatecode>
-      <classname>MoveToXYZClass</classname>
+      <classname>OperationsClass</classname>
       <rootpackage>Sandbox</rootpackage>
-      <uuid>4187b10d-7daf-4a89-9b02-236e47e0506f</uuid>
-    </geninfo>
-    <geninfo>
-      <generatecode>True</generatecode>
-      <classname>ReadAllServosClass</classname>
-      <rootpackage>Sandbox</rootpackage>
-      <uuid>a7a9b2e4-9c8c-47c1-9546-00e10141e7a6</uuid>
-    </geninfo>
-    <geninfo>
-      <generatecode>True</generatecode>
-      <classname>ReadServoClass</classname>
-      <rootpackage>Sandbox</rootpackage>
-      <uuid>9934c800-56c4-423f-86a9-b07bd7862ba4</uuid>
-    </geninfo>
-    <geninfo>
-      <generatecode>True</generatecode>
-      <classname>ReadXYZClass</classname>
-      <rootpackage>Sandbox</rootpackage>
-      <uuid>60d9d112-685e-4241-9207-7821a3727cef</uuid>
-    </geninfo>
-    <geninfo>
-      <generatecode>True</generatecode>
-      <classname>ReadyPositionClass</classname>
-      <rootpackage>Sandbox</rootpackage>
-      <uuid>70294d92-40d6-4696-ab82-dc204f1c2e40</uuid>
-    </geninfo>
-    <geninfo>
-      <generatecode>True</generatecode>
-      <classname>RotateAllServosArrayClass</classname>
-      <rootpackage>Sandbox</rootpackage>
-      <uuid>51bd63bb-77ae-4a1f-9e44-066b3d18f4d5</uuid>
-    </geninfo>
-    <geninfo>
-      <generatecode>True</generatecode>
-      <classname>RotateAllServosClass</classname>
-      <rootpackage>Sandbox</rootpackage>
-      <uuid>e4c5444f-2a0f-4f21-abb5-a48a7fc94c47</uuid>
-    </geninfo>
-    <geninfo>
-      <generatecode>True</generatecode>
-      <classname>RotateServoClass</classname>
-      <rootpackage>Sandbox</rootpackage>
-      <uuid>41f986a4-dede-4e06-babf-959aa101aa25</uuid>
-    </geninfo>
-    <geninfo>
-      <generatecode>True</generatecode>
-      <classname>StraightPositionClass</classname>
-      <rootpackage>Sandbox</rootpackage>
-      <uuid>43e93e93-f266-4cc9-a85d-7bc7ee7ea789</uuid>
-    </geninfo>
-    <geninfo>
-      <generatecode>True</generatecode>
-      <classname>WaitClass</classname>
-      <rootpackage>Sandbox</rootpackage>
-      <uuid>7cb01541-9eb1-473e-8e50-dc958b87d373</uuid>
-    </geninfo>
-    <geninfo>
-      <generatecode>True</generatecode>
-      <classname>cameraColorClass</classname>
-      <rootpackage>Sandbox</rootpackage>
-      <uuid>310d039b-682d-462f-9cd6-f727f1d04cbe</uuid>
+      <uuid>a2b9d58a-f7e7-44d4-aa93-d12b88616f09</uuid>
     </geninfo>
   </classgeninfo>
   <activetarget>C#</activetarget>
