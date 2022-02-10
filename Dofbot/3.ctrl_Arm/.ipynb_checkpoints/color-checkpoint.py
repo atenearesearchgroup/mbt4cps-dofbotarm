@@ -31,6 +31,12 @@ p_Blue = [44, 66, 20, 28, 270, 135]
 
 p_gray = [90, 48, 35, 35, 270, 60]
 
+
+
+
+
+
+
 def main():
 
     clock = 2000000
@@ -57,16 +63,13 @@ def main():
         H_min = min(H);H_max = max(H)
         S_min = min(S);S_max = max(S)
         V_min = min(V);V_max = max(V)
+    
+        with open('/home/dofbot/Dofbot/3.ctrl_Arm/color.txt', 'r') as f:
+            lines = f.readlines()
 
-        #if H_min >= 0 and S_min >= 200 and V_min >= 190 and H_max <= 179 and S_max <= 248 and V_max <= 224 : color_name['name'] = 'red'
-        #elif H_min >= 57 and S_min >= 124 and V_min >= 64 and H_max <= 80 and S_max <= 215 and V_max <= 92 : color_name['name'] = 'green'
-        #elif H_min >= 108 and S_min >= 210 and V_min >= 97 and H_max <= 117 and S_max <= 255 and V_max <= 135 : color_name['name'] = 'blue'
-        #elif H_min >= 22 and S_min >= 159 and V_min >= 216 and H_max <= 26 and S_max <= 247 and V_max <= 250 : color_name['name'] = 'yellow'
+            for line in lines:
+                if H_min >= int(line.split(',')[1]) and S_min >= int(line.split(',')[2]) and V_min >= int(line.split(',')[3]) and H_max <= int(line.split(',')[4]) and S_max <= int(line.split(',')[5]) and V_max <= int(line.split(',')[6]) : color_name['name'] = str(line.split(',')[0])
 
-        if H_min >= 0 and S_min >= 160 and V_min >= 252 and H_max <= 255 and S_max <= 254 and V_max <= 255 : color_name['name'] = 'red'
-        elif H_min >= 52 and S_min >= 113 and V_min >= 0 and H_max <= 93 and S_max <= 190 and V_max <= 255 : color_name['name'] = 'green'
-        elif H_min >= 86 and S_min >= 156 and V_min >= 0 and H_max <= 131 and S_max <= 255 and V_max <= 216 : color_name['name'] = 'blue'
-        elif H_min >= 9 and S_min >= 87 and V_min >= 197 and H_max <= 85 and S_max <= 244 and V_max <= 255 : color_name['name'] = 'yellow'
 
         return img, color_name
 

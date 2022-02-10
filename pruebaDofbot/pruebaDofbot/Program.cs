@@ -16,6 +16,10 @@ namespace pruebaDofbot
 
             Dofbot dof = new Dofbot();
 
+            dof.colorConfiguration("green", 0, 5, 0, 0, 0, 6);
+            dof.colorConfiguration("blue", 86, 156, 0, 131, 255, 216);
+
+            /*
             int time1 = dof.rotateAllServos(90, 90, 90, 90, 90, 90, 2000);
             Console.WriteLine(time1);
             
@@ -50,7 +54,7 @@ namespace pruebaDofbot
             int time7 = dof.straightPosition(1000);
             Console.WriteLine(time7);
 
-
+            */
 
         }
     }

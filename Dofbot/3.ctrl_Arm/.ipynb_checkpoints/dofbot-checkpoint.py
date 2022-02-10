@@ -154,10 +154,11 @@ def main():
             # Set the color value to recognize
             color_name={}
 
-            if H_min >= 0 and S_min >= 160 and V_min >= 252 and H_max <= 255 and S_max <= 254 and V_max <= 255 : color_name['name'] = 'red'
-            elif H_min >= 52 and S_min >= 113 and V_min >= 0 and H_max <= 93 and S_max <= 190 and V_max <= 255 : color_name['name'] = 'green'
-            elif H_min >= 86 and S_min >= 156 and V_min >= 0 and H_max <= 131 and S_max <= 255 and V_max <= 216 : color_name['name'] = 'blue'
-            elif H_min >= 9 and S_min >= 87 and V_min >= 197 and H_max <= 85 and S_max <= 244 and V_max <= 255 : color_name['name'] = 'yellow'
+            with open('/home/dofbot/Dofbot/3.ctrl_Arm/color.txt', 'r') as f:
+                lines = f.readlines()
+
+                for line in lines:
+                    if H_min >= int(line.split(',')[1]) and S_min >= int(line.split(',')[2]) and V_min >= int(line.split(',')[3]) and H_max <= int(line.split(',')[4]) and S_max <= int(line.split(',')[5]) and V_max <= int(line.split(',')[6]) : color_name['name'] = str(line.split(',')[0])
 
             return img, color_name
 
