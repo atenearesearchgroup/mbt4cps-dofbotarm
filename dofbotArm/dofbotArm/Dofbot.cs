@@ -242,7 +242,7 @@ namespace dofbotArm
         }
 
 
-        public void colorConfiguration(string color, double H_min, double S_min, double V_min, double H_max, double S_max, int V_max)
+        public void colorConfiguration(string color, double H_min, double S_min, double V_min, double H_max, double S_max, double V_max)
         {
             // Creation of the process
             ProcessStartInfo psi = new ProcessStartInfo();
@@ -257,6 +257,38 @@ namespace dofbotArm
 
             // Arguments with the values that we want to pass to the script
             psi.Arguments = $"\"{script}\" \"{func}\"  \"{color}\" \"{H_min}\" \"{S_min}\" \"{V_min}\" \"{H_max}\" \"{S_max}\" \"{V_max}\"";
+
+            // Configuration of process characteristics
+            psi.UseShellExecute = false;
+            psi.CreateNoWindow = true;
+            psi.RedirectStandardOutput = true;
+            psi.RedirectStandardError = true;
+
+            string errors = "";
+            string results = "";
+
+            using (Process process = Process.Start(psi))
+            {
+                results = process.StandardOutput.ReadToEnd();
+                errors = process.StandardError.ReadToEnd();
+            }
+        }
+
+        public void deleteColor(string color)
+        {
+            // Creation of the process
+            ProcessStartInfo psi = new ProcessStartInfo();
+
+            // python.exe location
+            psi.FileName = @"/usr/bin/python3";
+
+            // The location of the python script that we want to execute with the libraries
+            string script = @"/home/dofbot/Dofbot/3.ctrl_Arm/color_configuration.py";
+            string func = "deleteColor";
+
+
+            // Arguments with the values that we want to pass to the script
+            psi.Arguments = $"\"{script}\" \"{func}\"  \"{color}\"";
 
             // Configuration of process characteristics
             psi.UseShellExecute = false;

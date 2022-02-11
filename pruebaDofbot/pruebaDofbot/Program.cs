@@ -16,8 +16,14 @@ namespace pruebaDofbot
 
             Dofbot dof = new Dofbot();
 
+            /*
             dof.colorConfiguration("green", 0, 5, 0, 0, 0, 6);
             dof.colorConfiguration("blue", 86, 156, 0, 131, 255, 216);
+            */
+
+            dof.deleteColor("red");
+            
+
 
             /*
             int time1 = dof.rotateAllServos(90, 90, 90, 90, 90, 90, 2000);
