@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<UModel version="13">
-	<Settings>
+<UModel version="22">
+	<Settings CppMSCVersion="1900">
 		<ProjectStyles attfont="Arial" font="Arial" headerfont="Arial" nestedfont="Arial" opfont="Arial" stereofont="Arial" taggedvalues="0"/>
 	</Settings>
 	<Model>
 		<Package uuid="00000001-7510-11d9-86f2-000476a22f44" name="Root" visibility="public">
+			<ownedComment>
+				<Comment uuid="e4677244-56bc-4804-ab7f-3c0cfb18d3d3" body="&lt;MacroUpdateExecuted&gt;"/>
+			</ownedComment>
 			<packagedElement>
 				<Package uuid="00000003-7510-11d9-86f2-000476a22f44" name="Component View" visibility="public"/>
 				<Profile uuid="00000102-7510-11d9-86f2-000476a22f44" name="CordisProfile" visibility="public" shared="true">
 					<packagedElement>
 						<InstanceSpecification uuid="2e004629-cd06-4f37-aba7-c8b77f7d8e49" name="Version" visibility="public" classifier="cbde8a25-9eb6-40de-81b3-3ea6252b06c3">
 							<specification>
-								<LiteralString uuid="5e43a5c5-f8d4-4093-81dd-05c7a95547b0" visibility="public" value="1.1"/>
+								<LiteralString uuid="5e43a5c5-f8d4-4093-81dd-05c7a95547b0" visibility="public" value="1.2"/>
 							</specification>
 						</InstanceSpecification>
 						<Stereotype uuid="44d1972c-13bf-47d5-bae4-906719540236" name="IOLink" visibility="public" baseClass="Property">
@@ -358,6 +361,9 @@
 						<PrimitiveType uuid="bcb3a9d2-54ca-44a1-a7ea-f9aed165d3f4" name="Unknown" visibility="public"/>
 						<PrimitiveType uuid="f4f250b5-bb98-4e70-8e45-3f318cf2dc45" name="Void" visibility="public"/>
 						<PrimitiveType uuid="1763963e-70f1-43ab-a002-b44220f4c38d" name="Word" visibility="public"/>
+						<PrimitiveType uuid="0071f5b9-1189-4208-94f1-976e1b1c03b0" name="LInt" visibility="public"/>
+						<PrimitiveType uuid="e35abb0a-ae81-4a6a-a43d-593b6c1b9093" name="LReal" visibility="public"/>
+						<PrimitiveType uuid="11d27895-7825-4123-b6d3-63c813acccca" name="ULInt" visibility="public"/>
 					</packagedElement>
 				</Profile>
 			</packagedElement>

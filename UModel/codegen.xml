@@ -2,6 +2,18 @@
 <TargetConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <classgeninfo>
     <geninfo>
+      <generatecode>False</generatecode>
+      <classname>IOLinks</classname>
+      <rootpackage>IOLinks</rootpackage>
+      <uuid>c2cf8f4a-b247-406e-b01e-1dcb6b955c44</uuid>
+    </geninfo>
+    <geninfo>
+      <generatecode>True</generatecode>
+      <classname>CmdClass</classname>
+      <rootpackage>Sandbox</rootpackage>
+      <uuid>672bf744-ec61-4e9c-b178-30050768cb30</uuid>
+    </geninfo>
+    <geninfo>
       <generatecode>True</generatecode>
       <classname>DofbotClass</classname>
       <rootpackage>Sandbox</rootpackage>
@@ -67,7 +79,7 @@
   <RunCSharp>false</RunCSharp>
   <CloseCSharp>false</CloseCSharp>
   <CloseCSharpCheckboxEnabled>false</CloseCSharpCheckboxEnabled>
-  <CSharpProjectPath>D:\RaspberryPi\dotnet-mcp\Build\MCP .NET Core.sln</CSharpProjectPath>
+  <CSharpProjectPath>D:\TestComm2\Build\MCP .NET Core.sln</CSharpProjectPath>
   <CSharpRelativePathCheck>false</CSharpRelativePathCheck>
   <CSharpVisualStudioVersion>Visual Studio 2019</CSharpVisualStudioVersion>
   <S7HeaderPath />
