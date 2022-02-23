@@ -199,7 +199,46 @@ namespace dofbotArm
 
         }
 
+        public double[] readTime()
+        {
+            // Creation of the process
+            ProcessStartInfo psi = new ProcessStartInfo();
 
+            // python.exe location
+            psi.FileName = @"/usr/bin/python3";
+
+            // The location of the python script that we want to execute with the libraries
+            string script = @"/home/dofbot/Dofbot/3.ctrl_Arm/dofbot.py";
+
+            // Name of the function that we want to execute
+            string func = "readTime";
+
+            // Arguments with the values that we want to pass to the script
+            psi.Arguments = $"\"{script}\" \"{func}\"";
+
+            // Configuration of process characteristics
+            psi.UseShellExecute = false;
+            psi.CreateNoWindow = true;
+            psi.RedirectStandardOutput = true;
+            psi.RedirectStandardError = true;
+
+            // Process initialization
+            Process process = Process.Start(psi);
+
+            // We read the result that is printed in the python library
+            string results = process.StandardOutput.ReadToEnd();
+
+            // Similar to readServo, but in this case we have multiple values that we read
+            // We need to split and convert each one of them to an array of ints
+            char[] delimiterChars = { '\r', '\n' };
+            string[] words = results.Split(delimiterChars);
+            words = words.Where(w => w != words[108]).ToArray();
+            double[] doubles = words.Select(x => double.Parse(x)).ToArray();
+
+            // In this case we return the array of values that we read in double format
+            return doubles;
+
+        }
         //Start the color recognition process for a given time (if 0, it runs forever).
         //Returns the time of the process.
         public int cameraColor(int time)
@@ -614,6 +653,38 @@ namespace dofbotArm
 
             // In this case we return the array of values that we read in double format
             return doubles;
+        }
+
+        public bool isAt(double angle1, double angle2, double angle3, double angle4, double angle5, double angle6, double res)
+        {
+            // Creation of the process
+            ProcessStartInfo psi = new ProcessStartInfo();
+
+            // python.exe location
+            psi.FileName = @"/usr/bin/python3";
+
+            // The location of the python script that we want to execute with the libraries
+            string script = @"/home/dofbot/Dofbot/3.ctrl_Arm/dofbot.py";
+
+            // Name of the function that we want to execute
+            string func = "isAt";
+
+            // Arguments with the values that we want to pass to the script
+            psi.Arguments = $"\"{script}\" \"{func}\" \"{angle1}\" \"{angle2}\" \"{angle3}\" \"{angle4}\" \"{angle5}\" \"{angle6}\" \"{res}\"";
+
+            // Configuration of process characteristics
+            psi.UseShellExecute = false;
+            psi.CreateNoWindow = true;
+            psi.RedirectStandardOutput = true;
+            psi.RedirectStandardError = true;
+
+            // Process initialization
+            Process process = Process.Start(psi);
+
+            // We read the result that is printed in the python library
+            string results = process.StandardOutput.ReadToEnd();
+
+            return Convert.ToBoolean(results);
         }
 
     }

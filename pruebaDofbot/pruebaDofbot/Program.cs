@@ -16,16 +16,64 @@ namespace pruebaDofbot
 
             Dofbot dof = new Dofbot();
 
+
+            bool res = dof.isAt(90, 130, 0, 0, 270, 60, 2);
+
+            Console.WriteLine(res);
+
+
+
+
             /*
+            double[] servos = dof.readTime();
+
+            foreach (double word in servos)
+            {
+                Console.WriteLine($"{word}");
+            }
+            
+
+
+            
+            var timer = new Stopwatch();
+            
+            int time = dof.rotateAllServos(90, 90, 0, 90, 90, 90, 10000);
+
+            timer.Start();
+
+            while (timer.Elapsed.TotalSeconds < 10)
+            {
+                double[] servos = dof.readAllServos();
+
+                foreach (double word in servos)
+                {
+                    Console.WriteLine($"{word}");
+                }
+                Console.WriteLine();
+
+            }
+            timer.Stop();
+
+            Console.WriteLine(time);
+
+            dof.rotateAllServos(90, 90, 90, 90, 90, 90, 2000);
+
+
+
+
+
+
+
+           
             dof.colorConfiguration("green", 0, 5, 0, 0, 0, 6);
             dof.colorConfiguration("blue", 86, 156, 0, 131, 255, 216);
-            */
+            
 
             dof.deleteColor("red");
             
 
 
-            /*
+            
             int time1 = dof.rotateAllServos(90, 90, 90, 90, 90, 90, 2000);
             Console.WriteLine(time1);
             

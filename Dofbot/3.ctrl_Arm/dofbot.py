@@ -41,7 +41,7 @@ def main():
         # Execute the operation
         Arm.Arm_serial_servo_write(id, angle, clock)
         # Wait for the movement to finish
-        time.sleep(clock/1000)
+        # time.sleep(clock/1000)
         # Stop the clock
         end = time.time()
         
@@ -66,7 +66,7 @@ def main():
         # Execute the operation
         Arm.Arm_serial_servo_write6(angle1, angle2, angle3, angle4, angle5, angle6, clock)
         # Wait for the movement to finish
-        time.sleep(clock/1000)
+        # time.sleep(clock/1000)
         # Stop the clock
         end = time.time()
         
@@ -87,13 +87,31 @@ def main():
         # Execute the operation
         Arm.Arm_serial_servo_write6_array(array, clock)
         # Wait for the movement to finish
-        time.sleep(clock/1000)
+        # time.sleep(clock/1000)
         # Stop the clock
         end = time.time()
         
         # Print execution time        
         print(int((end-start)*1000))
         
+    # Read all the six angles
+    elif func == "readTime":
+        
+        clock = 2000
+        end = 0
+        start = time.time()
+        Arm.Arm_serial_servo_write6(90, 90, 0, 90, 90, 180, clock)
+        time.sleep(.01)
+        
+        while (end - start <= 10):
+            for i in range(6):
+                aa = Arm.Arm_serial_servo_read(i+1)
+                print(aa)
+                time.sleep(.01)
+            time.sleep(.5)
+            #print(end - start)
+            end = time.time()   
+
 
     # Read the servo angle    
     elif func == "readServo":
@@ -384,6 +402,37 @@ def main():
         end = time.time()
         
         print(int((end-start)*1000))
+        
+    elif func == "isAt":
+        
+        # angle resolution
+        
+        pos_bool = False
+        counter = 0
+        
+        a_1 = int(sys.argv[2])
+        a_2 = int(sys.argv[3])
+        a_3 = int(sys.argv[4])
+        a_4 = int(sys.argv[5])
+        a_5 = int(sys.argv[6])
+        a_6 = int(sys.argv[7])
+        a_res = int(sys.argv[8])
+        
+        
+        for i in range(6):
+            angle = Arm.Arm_serial_servo_read(i+1)
+            
+            if locals()['a_'+str(i+1)]-a_res <= angle <= locals()['a_'+str(i+1)]+a_res:
+                counter+=1
+                pass
+            else:
+                break
+        
+        if counter == 6:
+            pos_bool = True
+        
+                
+        print(pos_bool)
         
     
 
