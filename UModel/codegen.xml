@@ -2,22 +2,100 @@
 <TargetConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <classgeninfo>
     <geninfo>
-      <generatecode>False</generatecode>
+      <generatecode>True</generatecode>
       <classname>IOLinks</classname>
       <rootpackage>IOLinks</rootpackage>
       <uuid>c2cf8f4a-b247-406e-b01e-1dcb6b955c44</uuid>
     </geninfo>
     <geninfo>
       <generatecode>True</generatecode>
-      <classname>CmdClass</classname>
+      <classname>Arm</classname>
       <rootpackage>Sandbox</rootpackage>
-      <uuid>672bf744-ec61-4e9c-b178-30050768cb30</uuid>
+      <uuid>ac5dbf19-e631-4f85-997a-ae154bcb4394</uuid>
     </geninfo>
     <geninfo>
       <generatecode>True</generatecode>
-      <classname>DofbotClass</classname>
+      <classname>ArmOperations</classname>
       <rootpackage>Sandbox</rootpackage>
-      <uuid>2bcef891-f29b-4e74-8ccc-3dbf5be820f1</uuid>
+      <uuid>7448fcef-f56d-4ff4-bd7b-a68037b8821c</uuid>
+    </geninfo>
+    <geninfo>
+      <generatecode>True</generatecode>
+      <classname>BaseServo</classname>
+      <rootpackage>Sandbox</rootpackage>
+      <uuid>7eb16e98-1ec1-4156-8ca4-8203511a11ee</uuid>
+    </geninfo>
+    <geninfo>
+      <generatecode>True</generatecode>
+      <classname>BaseServoOperations</classname>
+      <rootpackage>Sandbox</rootpackage>
+      <uuid>b097c34d-0192-4747-ba99-778314b65641</uuid>
+    </geninfo>
+    <geninfo>
+      <generatecode>True</generatecode>
+      <classname>Board</classname>
+      <rootpackage>Sandbox</rootpackage>
+      <uuid>5547554e-13d8-49ec-a695-9b78b780dfee</uuid>
+    </geninfo>
+    <geninfo>
+      <generatecode>True</generatecode>
+      <classname>BodyServoOperations</classname>
+      <rootpackage>Sandbox</rootpackage>
+      <uuid>321a66ab-48bc-45ca-96d7-d19140529aab</uuid>
+    </geninfo>
+    <geninfo>
+      <generatecode>True</generatecode>
+      <classname>BodyServos</classname>
+      <rootpackage>Sandbox</rootpackage>
+      <uuid>d9eb7c8c-a942-4b02-ab10-11486dee71e9</uuid>
+    </geninfo>
+    <geninfo>
+      <generatecode>True</generatecode>
+      <classname>Buzzer</classname>
+      <rootpackage>Sandbox</rootpackage>
+      <uuid>736f53c3-bf84-477b-a7d2-f7448fdeec18</uuid>
+    </geninfo>
+    <geninfo>
+      <generatecode>True</generatecode>
+      <classname>BuzzerOperations</classname>
+      <rootpackage>Sandbox</rootpackage>
+      <uuid>f9f33ae1-a0a9-4461-a9ec-98deeeef3907</uuid>
+    </geninfo>
+    <geninfo>
+      <generatecode>True</generatecode>
+      <classname>Camera</classname>
+      <rootpackage>Sandbox</rootpackage>
+      <uuid>900462cb-fbd8-46a3-a7b0-840595c60196</uuid>
+    </geninfo>
+    <geninfo>
+      <generatecode>True</generatecode>
+      <classname>CameraOperations</classname>
+      <rootpackage>Sandbox</rootpackage>
+      <uuid>85c86cd4-4efd-4143-a370-6ab3737ae1ca</uuid>
+    </geninfo>
+    <geninfo>
+      <generatecode>True</generatecode>
+      <classname>ClawServo</classname>
+      <rootpackage>Sandbox</rootpackage>
+      <uuid>6461b665-cb5d-4162-b4ec-fa93e1268dd6</uuid>
+    </geninfo>
+    <geninfo>
+      <generatecode>True</generatecode>
+      <classname>ClawServoOperations</classname>
+      <rootpackage>Sandbox</rootpackage>
+      <uuid>a514df5e-9761-44c6-b952-01cc88a0d590</uuid>
+    </geninfo>
+    <geninfo>
+      <generatecode>True</generatecode>
+      <classname>Light</classname>
+      <rootpackage>Sandbox</rootpackage>
+      <uuid>cbc032fc-d1d1-4069-ad0d-0e90744729de</uuid>
+    </geninfo>
+    <geninfo>
+      <generatecode>True</generatecode>
+      <classname>LightOperations</classname>
+      <rootpackage>Sandbox</rootpackage>
+      <uuid>e08722cb-5119-4acc-9378-9333284d822c</uuid>
     </geninfo>
     <geninfo>
       <generatecode>True</generatecode>
@@ -27,9 +105,15 @@
     </geninfo>
     <geninfo>
       <generatecode>True</generatecode>
-      <classname>OperationsClass</classname>
+      <classname>WristServo</classname>
       <rootpackage>Sandbox</rootpackage>
-      <uuid>a2b9d58a-f7e7-44d4-aa93-d12b88616f09</uuid>
+      <uuid>cdf5f344-26dd-4967-a732-ec21042e8e89</uuid>
+    </geninfo>
+    <geninfo>
+      <generatecode>True</generatecode>
+      <classname>WristServoOperations</classname>
+      <rootpackage>Sandbox</rootpackage>
+      <uuid>b6a0ceca-7014-43d8-9f73-e6c7dd3068b9</uuid>
     </geninfo>
   </classgeninfo>
   <activetarget>C#</activetarget>
