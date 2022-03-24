@@ -687,5 +687,38 @@ namespace dofbotArm
             return Convert.ToBoolean(results);
         }
 
+
+        public bool isAtSingle(double id, double angle, double res)
+        {
+            // Creation of the process
+            ProcessStartInfo psi = new ProcessStartInfo();
+
+            // python.exe location
+            psi.FileName = @"/usr/bin/python3";
+
+            // The location of the python script that we want to execute with the libraries
+            string script = @"/home/dofbot/Dofbot/3.ctrl_Arm/dofbot.py";
+
+            // Name of the function that we want to execute
+            string func = "isAtSingle";
+
+            // Arguments with the values that we want to pass to the script
+            psi.Arguments = $"\"{script}\" \"{func}\" \"{id}\" \"{angle}\" \"{res}\"";
+
+            // Configuration of process characteristics
+            psi.UseShellExecute = false;
+            psi.CreateNoWindow = true;
+            psi.RedirectStandardOutput = true;
+            psi.RedirectStandardError = true;
+
+            // Process initialization
+            Process process = Process.Start(psi);
+
+            // We read the result that is printed in the python library
+            string results = process.StandardOutput.ReadToEnd();
+
+            return Convert.ToBoolean(results);
+        }
+
     }
 }

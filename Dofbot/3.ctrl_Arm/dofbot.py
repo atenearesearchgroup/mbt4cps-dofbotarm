@@ -434,6 +434,22 @@ def main():
                 
         print(pos_bool)
         
+    elif func == "isAtSingle":
+        
+        pos_bool = False
+        
+        id_angle = int(sys.argv[2])
+        a_given = int(sys.argv[3])
+        a_res = int(sys.argv[4])
+        
+        angle = Arm.Arm_serial_servo_read(id_angle)
+        
+        if a_given-a_res <= angle <= a_given+a_res:
+            pos_bool = True
+            
+        print(pos_bool)
+
+        
     
 
 try :

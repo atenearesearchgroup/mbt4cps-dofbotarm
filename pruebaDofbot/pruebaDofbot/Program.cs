@@ -17,7 +17,7 @@ namespace pruebaDofbot
             Dofbot dof = new Dofbot();
 
 
-            bool res = dof.isAt(90, 130, 0, 0, 270, 60, 2);
+            bool res = dof.isAtSingle(1, 90, 2);
 
             Console.WriteLine(res);
 
