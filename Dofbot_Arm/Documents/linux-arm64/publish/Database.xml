@@ -1,0 +1,237 @@
+<?xml version="1.0"?>
+<McpApplication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Machine>
+    <IdString>Machine</IdString>
+    <Name>Machine</Name>
+    <Settings />
+    <Observers />
+    <Messages />
+    <Commands />
+    <IoPoints />
+    <mSettStateMachineLog>
+      <IdString>STATEMACHINE_LOGGING</IdString>
+      <Name>Statemachine File Logging</Name>
+      <DefaultValueString>Off</DefaultValueString>
+      <SavedValueString>Off</SavedValueString>
+    </mSettStateMachineLog>
+    <MachinePartID>1000</MachinePartID>
+    <DofbotClass>
+      <IdString>DofbotClass</IdString>
+      <Name>DofbotClass</Name>
+      <Settings />
+      <Observers />
+      <Messages />
+      <Commands />
+      <IoPoints />
+      <mSettStateMachineLog>
+        <IdString>STATEMACHINE_LOGGING</IdString>
+        <Name>Statemachine File Logging</Name>
+        <DefaultValueString>Off</DefaultValueString>
+        <SavedValueString>Off</SavedValueString>
+      </mSettStateMachineLog>
+      <MachinePartID>1003</MachinePartID>
+      <OperationsClass>
+        <IdString>OperationsClass</IdString>
+        <Name>OperationsClass</Name>
+        <Settings />
+        <Observers />
+        <Messages />
+        <Commands />
+        <IoPoints />
+        <mSettStateMachineLog>
+          <IdString>STATEMACHINE_LOGGING</IdString>
+          <Name>Statemachine File Logging</Name>
+          <DefaultValueString>Off</DefaultValueString>
+          <SavedValueString>Off</SavedValueString>
+        </mSettStateMachineLog>
+        <MachinePartID>1004</MachinePartID>
+      </OperationsClass>
+    </DofbotClass>
+  </Machine>
+  <Generic>
+    <Commands>
+      <Command>
+        <IdString>MANUFACTURING</IdString>
+        <Name>Manufacturing</Name>
+        <Timeout>
+          <DefaultValue>0</DefaultValue>
+          <SavedValue>0</SavedValue>
+        </Timeout>
+        <Arguments />
+        <MinAuthorisationLvl>UL_OPERATOR</MinAuthorisationLvl>
+        <Allowed>ALWAYS</Allowed>
+      </Command>
+      <Command>
+        <IdString>MAINTENANCE</IdString>
+        <Name>Maintenance</Name>
+        <Timeout>
+          <DefaultValue>0</DefaultValue>
+          <SavedValue>0</SavedValue>
+        </Timeout>
+        <Arguments />
+        <MinAuthorisationLvl>UL_OPERATOR</MinAuthorisationLvl>
+        <Allowed>ALWAYS</Allowed>
+      </Command>
+      <Command>
+        <IdString>EMERGENCYSTOP</IdString>
+        <Name>Emergency Stop</Name>
+        <Timeout>
+          <DefaultValue>0</DefaultValue>
+          <SavedValue>0</SavedValue>
+        </Timeout>
+        <Arguments />
+        <MinAuthorisationLvl>UL_OPERATOR</MinAuthorisationLvl>
+        <Allowed>ALWAYS</Allowed>
+      </Command>
+      <Command>
+        <IdString>RESET_ERROR</IdString>
+        <Name>Reset Errors</Name>
+        <Timeout>
+          <DefaultValue>0</DefaultValue>
+          <SavedValue>0</SavedValue>
+        </Timeout>
+        <Arguments />
+        <MinAuthorisationLvl>UL_OPERATOR</MinAuthorisationLvl>
+        <Allowed>ALWAYS</Allowed>
+      </Command>
+      <Command>
+        <IdString>INITIALIZE</IdString>
+        <Name>Initialize</Name>
+        <Timeout>
+          <DefaultValue>0</DefaultValue>
+          <SavedValue>0</SavedValue>
+        </Timeout>
+        <Arguments />
+        <MinAuthorisationLvl>UL_OPERATOR</MinAuthorisationLvl>
+        <Allowed>ALWAYS</Allowed>
+      </Command>
+      <Command>
+        <IdString>RESET_PERF_IND</IdString>
+        <Name>Reset Durations</Name>
+        <Timeout>
+          <DefaultValue>0</DefaultValue>
+          <SavedValue>0</SavedValue>
+        </Timeout>
+        <Arguments />
+        <MinAuthorisationLvl>UL_OPERATOR</MinAuthorisationLvl>
+        <Allowed>ALWAYS</Allowed>
+      </Command>
+    </Commands>
+    <Messages>
+      <Message>
+        <IdString>CMD_UNKNOWN</IdString>
+        <Name>Unknown command.</Name>
+        <Category>ERROR</Category>
+      </Message>
+      <Message>
+        <IdString>CMD_UNKNOWN_ID</IdString>
+        <Name>Unknown command ID.</Name>
+        <Category>WARNING</Category>
+      </Message>
+      <Message>
+        <IdString>CMD_TIMEOUT</IdString>
+        <Name>Timeout command execution.</Name>
+        <Category>ERROR</Category>
+      </Message>
+      <Message>
+        <IdString>CMD_NOT_ALLOWED</IdString>
+        <Name>Command not accepted, operating state is not Maintenance.</Name>
+        <Category>WARNING</Category>
+      </Message>
+      <Message>
+        <IdString>CMD_NOT_AUTHORIZED</IdString>
+        <Name>Command not accepted, current user is not authorized.</Name>
+        <Category>WARNING</Category>
+      </Message>
+      <Message>
+        <IdString>VAR_INVALID_STRING_VALUE</IdString>
+        <Name>String value could not be parsed to specific type.</Name>
+        <Category>WARNING</Category>
+      </Message>
+      <Message>
+        <IdString>VAR_INVALID_ENUM_RESTRICTION</IdString>
+        <Name>AllowedList and DisAllowedList annihilate all allowed enum values</Name>
+        <Category>WARNING</Category>
+      </Message>
+      <Message>
+        <IdString>VAR_LIMITS_CROSSED</IdString>
+        <Name>High/Low Limits ignored, due to overlap.</Name>
+        <Category>WARNING</Category>
+      </Message>
+      <Message>
+        <IdString>VAR_LOWER_LIMIT_REACHED</IdString>
+        <Name>Value ignored, exceeded LowerLimit.</Name>
+        <Category>WARNING</Category>
+      </Message>
+      <Message>
+        <IdString>VAR_UPPER_LIMIT_REACHED</IdString>
+        <Name>Value ignored, exceeded UpperLimit.</Name>
+        <Category>WARNING</Category>
+      </Message>
+      <Message>
+        <IdString>VAR_INVALID_LOWER_LIMIT</IdString>
+        <Name>Lower Limit ignored, value too low.</Name>
+        <Category>WARNING</Category>
+      </Message>
+      <Message>
+        <IdString>VAR_INVALID_UPPER_LIMIT</IdString>
+        <Name>Upper Limit ignored, value too high.</Name>
+        <Category>WARNING</Category>
+      </Message>
+    </Messages>
+    <Observers>
+      <ObserverString>
+        <IdString>SM_STATE</IdString>
+        <Name>State</Name>
+      </ObserverString>
+      <ObserverString>
+        <IdString>SM_SUBSTATE</IdString>
+        <Name>Substate</Name>
+      </ObserverString>
+      <ObserverString>
+        <IdString>IO_ACTUALVALUE</IdString>
+        <Name />
+      </ObserverString>
+      <ObserverString>
+        <IdString>CMD_EXECUTOR_STATE</IdString>
+        <Name>State</Name>
+      </ObserverString>
+      <ObserverString>
+        <IdString>CMD_EXECUTOR_CMD</IdString>
+        <Name>Cmd</Name>
+      </ObserverString>
+      <ObserverString>
+        <IdString>CMD_EXECUTOR_EXSTATE</IdString>
+        <Name>ExState</Name>
+      </ObserverString>
+      <ObserverString>
+        <IdString>ERROR_STATE</IdString>
+        <Name>ErrorState</Name>
+      </ObserverString>
+      <ObserverDouble>
+        <IdString>EXEC_DURATION</IdString>
+        <Name>Execution Duration</Name>
+        <Format>0.###</Format>
+        <Unit>ms</Unit>
+      </ObserverDouble>
+      <ObserverDouble>
+        <IdString>EXEC_TREE_DURATION</IdString>
+        <Name>Tree Execution Duration</Name>
+        <Format>0.###</Format>
+        <Unit>ms</Unit>
+      </ObserverDouble>
+      <ObserverDouble>
+        <IdString>PEAK_EXEC_DURATION</IdString>
+        <Name>Peak Exec Duration</Name>
+        <Format>0.###</Format>
+        <Unit>ms</Unit>
+      </ObserverDouble>
+      <ObserverDouble>
+        <IdString>PEAK_TREE_DURATION</IdString>
+        <Name>Peak Tree Exec  Duration</Name>
+        <Format>0.###</Format>
+        <Unit>ms</Unit>
+      </ObserverDouble>
+    </Observers>
+  </Generic>
+</McpApplication>

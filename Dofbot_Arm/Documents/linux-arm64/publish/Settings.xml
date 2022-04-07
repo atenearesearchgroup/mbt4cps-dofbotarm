@@ -1,0 +1,13 @@
+﻿<Settings>
+  <OpcSettings>
+    <InstanceNamespace>http://yourorganisation.org/BuildingAutomation/</InstanceNamespace>
+    <TypeNamespace>http://yourorganisation.com/lesson02/</TypeNamespace>
+    <OpcAddress>opc.tcp://127.0.0.1</OpcAddress>
+    <Port>4830</Port>
+    <ServerName>CordisOPCUAServer</ServerName>
+  </OpcSettings>
+  <MqttSettings>
+    <IpAddress>localhost</IpAddress>
+    <Port>54321</Port>
+  </MqttSettings>
+</Settings>

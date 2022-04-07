@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--File %name: Machine%-->
+<!--%version: 3 %-->
+<MachineConfiguration>
+  <!--System General-->
+  <Machine>
+    <ComputerName>Any</ComputerName>
+    <SystemConfiguration>
+      <Identification>Machine</Identification>
+      <MachineDescription>Machine (Simulation Mode)</MachineDescription>
+      <!--The machine version identifies the particular instance of the machine-->
+      <MachineVersion>1.0</MachineVersion>
+      <!--The priority of the MCP process within the Windows process pool, e.g. Normal, High, AboveNormal, BelowNormal, RealTime-->
+      <ProcessPriority>RealTime</ProcessPriority>
+      <!--Database save option: If true, settings, observers and commands are only saved when they have changed (short database.xml file). If false, all entries are saved (long database.xml file).-->
+      <SaveOnlyChangesToDatabase>false</SaveOnlyChangesToDatabase>
+      <!--MCP cycle time in [ms]-->
+      <CyclicPeriod>10</CyclicPeriod>
+    </SystemConfiguration>
+    <IoConfiguration>
+      <IoCards>
+        <Xenax>
+          <Available>false</Available>
+          <XenaxDeviceOptionList>
+            <Devices>
+              <XenaxDeviceOptions>
+                <IpAddress>192.168.2.100</IpAddress>
+                <PortNr>10001</PortNr>
+                <DeviceId>1</DeviceId>
+              </XenaxDeviceOptions>
+            </Devices>
+          </XenaxDeviceOptionList>
+        </Xenax>
+        <EtherCAT>
+          <Available>false</Available>
+          <EtherCatOptions>
+            <!--First (unique) part of the network card, as shown in WireShark-->
+            <NetworkDesc>Intel(R) 82567</NetworkDesc>
+            <TimeOut>5</TimeOut>
+            <Cards>
+              <Card>
+                <!--Digital Inputs 4x-->
+                <CardType>EL1004</CardType>
+                <CardInstance>1</CardInstance>
+                <SlotNr>1</SlotNr>
+                <CardId>EL1004#1</CardId>
+              </Card>
+              <Card>
+                <!--Digital Outputs 4x-->
+                <CardType>EL2004</CardType>
+                <CardInstance>1</CardInstance>
+                <SlotNr>2</SlotNr>
+                <CardId>EL2004#1</CardId>
+              </Card>
+              <Card>
+                <!--Digital Outputs 4x-->
+                <CardType>EL2004</CardType>
+                <CardInstance>2</CardInstance>
+                <SlotNr>3</SlotNr>
+                <CardId>EL2004#2</CardId>
+              </Card>
+              <Card>
+                <!--Digital Outputs 4x-->
+                <CardType>EL2004</CardType>
+                <CardInstance>3</CardInstance>
+                <SlotNr>4</SlotNr>
+                <CardId>EL2004#3</CardId>
+              </Card>
+              <Card>
+                <!--Analog Inputs 2x-->
+                <CardType>EL3162</CardType>
+                <CardInstance>1</CardInstance>
+                <SlotNr>3</SlotNr>
+                <CardId>EL3162#1</CardId>
+              </Card>
+            </Cards>
+          </EtherCatOptions>
+        </EtherCAT>
+      </IoCards>
+      <!--Valid values for IOSimulationOverride: AllAsSimulatedIO, AllAsRealIO, UseIndividualSettings-->
+      <IOSimulationOverride>AllAsSimulatedIO</IOSimulationOverride>
+      <IoListProcessVariables>
+        <ioList></ioList>
+      </IoListProcessVariables>
+      <IoListSimulatedHardware>
+        <ioList>
+            <!--Add all Simulation IO here-->
+            <!--SimulatedDigitalIn><Name>UseSimulatorIO</Name></SimulatedDigitalIn-->
+        </ioList>
+      </IoListSimulatedHardware>
+      <IoListSupportedHardware>
+        <ioList>
+          <!--IO on EtherCAT-->
+          <EtherCatDigitalIn>
+            <isSimulated>false</isSimulated>
+            <Name>ECAT-Din2</Name>
+            <cardId>EL1004#1</cardId>
+            <lineNr>1</lineNr>
+          </EtherCatDigitalIn>
+          <EtherCatDigitalIn>
+            <isSimulated>false</isSimulated>
+            <Name>ECAT-Din3</Name>
+            <cardId>EL1004#1</cardId>
+            <lineNr>2</lineNr>
+          </EtherCatDigitalIn>
+          <EtherCatDigitalIn>
+            <isSimulated>false</isSimulated>
+            <Name>ECAT-Din4</Name>
+            <cardId>EL1004#1</cardId>
+            <lineNr>3</lineNr>
+          </EtherCatDigitalIn>
+          <EtherCatDigitalOut>
+            <isSimulated>false</isSimulated>
+            <Name>DO_WASH_Valve1</Name>
+            <cardId>EL2004#1</cardId>
+            <lineNr>0</lineNr>
+          </EtherCatDigitalOut>
+          <EtherCatDigitalOut>
+            <isSimulated>false</isSimulated>
+            <Name>DO_WASH_Valve2</Name>
+            <cardId>EL2004#1</cardId>
+            <lineNr>1</lineNr>
+          </EtherCatDigitalOut>
+          <EtherCatDigitalOut>
+            <isSimulated>false</isSimulated>
+            <Name>DO_WASH_Valve3</Name>
+            <cardId>EL2004#1</cardId>
+            <lineNr>2</lineNr>
+          </EtherCatDigitalOut>
+          <EtherCatDigitalOut>
+            <isSimulated>false</isSimulated>
+            <Name>DO_WASH_Valve4</Name>
+            <cardId>EL2004#1</cardId>
+            <lineNr>3</lineNr>
+          </EtherCatDigitalOut>
+          <EtherCatDigitalOut>
+            <isSimulated>false</isSimulated>
+            <Name>DO_WASH_Valve5</Name>
+            <cardId>EL2004#2</cardId>
+            <lineNr>0</lineNr>
+          </EtherCatDigitalOut>
+          <EtherCatDigitalOut>
+            <isSimulated>false</isSimulated>
+            <Name>DO_WASH_Pump1</Name>
+            <cardId>EL2004#2</cardId>
+            <lineNr>1</lineNr>
+          </EtherCatDigitalOut>
+          <EtherCatDigitalOut>
+            <isSimulated>false</isSimulated>
+            <Name>DO_WASH_Pump2</Name>
+            <cardId>EL2004#2</cardId>
+            <lineNr>2</lineNr>
+          </EtherCatDigitalOut>
+          <EtherCatDigitalOut>
+            <isSimulated>false</isSimulated>
+            <Name>DO_DRY_Valve</Name>
+            <cardId>EL2004#2</cardId>
+            <lineNr>3</lineNr>
+          </EtherCatDigitalOut>
+          <EtherCatDigitalOut>
+            <isSimulated>false</isSimulated>
+            <Name>DO_Vacuum_Pump</Name>
+            <cardId>EL2004#3</cardId>
+            <lineNr>0</lineNr>
+          </EtherCatDigitalOut>
+          <EtherCatAnalogIn>
+            <isSimulated>false</isSimulated>
+            <Name>TempSensor</Name>
+            <cardId>EL3162#1</cardId>
+            <channelNr>0</channelNr>
+            <gain>10</gain>
+            <offset>0</offset>
+          </EtherCatAnalogIn>
+        </ioList>
+      </IoListSupportedHardware>
+      <IoListUnsupportedHardware>
+        <ioList></ioList>
+      </IoListUnsupportedHardware>
+    </IoConfiguration>
+    <ServoConfig></ServoConfig>
+  </Machine>
+  <!--Machine Simulator-->
+  <MachineSimulator></MachineSimulator>
+</MachineConfiguration>
