@@ -1,0 +1,54 @@
+"We have an operational arm"
+
+		Transition: (Initial->Given)
+			Guard: []
+			
+		
+		State: Given
+			Activity: Arm.BaseServo.ServosOperations.posInicial(1000);
+			
+		State: GivenWarning
+			Activity: MessReport(mWarning, Warning Time)
+			
+		Transition: (GivenWarning->Given)
+			Guard: []
+					
+		Transition: (Given->GivenWarning)
+			Guard: Arm.BaseServo.ServosOperations.Time(1000)
+		Transition: (Given->When1)
+			Guard: Arm.BaseServo.ServosOperations.isAt(90,90,90,90,90,90,2)
+
+
+"operation" ##Deberia hacerse un contador antes de ver la operacion, mirando la canitdad de "when" que hay y crear primero las transiciones?
+    if "rotateServoOperation(<id>, <angle>, <aTime>)"
+
+       		State: When1
+			Activity: result = Arm.BaseServo.ServosOperations.rotateServoOperation(<id>, <angle>, <aTime>)
+
+            Transition: (When1->Error)
+			Guard: !equals(result,  <aTime>)
+		
+		    Transition: (When1->Error)
+			Guard: LaterThan(oRunTime,  <aTime>)		
+
+
+                if "Then"
+                        State: When1+1
+                        Activity: result = Arm.BaseServo.ServosOperations.rotateServoOperation(<id>, <angle>, <aTime>)
+
+                        Transition: (When1+1->Error)
+                        Guard: !equals(result,  <aTime>)
+                    
+                        Transition: (When1+1->Error)
+                        Guard: LaterThan(oRunTime,  <aTime>)		
+
+                else
+                		Transition: (When1->Final)
+			            Guard: equals(result,  <aTime>)
+			            Guard: Arm.BaseServo.ServosOperations.isAtSingleOperation(<id>, <angle>, <aTime>)
+
+
+			
+"Not_Later_Than"
+		Transition: (When->Error)
+        Guard: LaterThan(oRunTime, 1000)		##El "LaterThan" donde se crearia la operacion para Cordis: StateVar(oRuntime) >= (Sett(setTime)+Sett(time_resolution)) ??
