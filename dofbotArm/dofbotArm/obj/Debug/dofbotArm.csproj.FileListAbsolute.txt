@@ -1,5 +1,0 @@
-C:\Users\Migue\source\repos\dofbotArm\dofbotArm\bin\Debug\dofbotArm.dll
-C:\Users\Migue\source\repos\dofbotArm\dofbotArm\bin\Debug\dofbotArm.pdb
-C:\Users\Migue\source\repos\dofbotArm\dofbotArm\obj\Debug\dofbotArm.csproj.CoreCompileInputs.cache
-C:\Users\Migue\source\repos\dofbotArm\dofbotArm\obj\Debug\dofbotArm.dll
-C:\Users\Migue\source\repos\dofbotArm\dofbotArm\obj\Debug\dofbotArm.pdb
