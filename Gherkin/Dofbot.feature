@@ -10,8 +10,10 @@ Feature: Series of operations for the arm
 	Scenario: Rotate a single servo:
 		Given We have an operational arm 
 		When  We call operation rotateServoOperation(1, 90, 1000)
-		Then  Query isAtSingleOperation(1, 90, AnglePrecision) returns True
-		And   The result is Not_Later_Than 1000
+		Then  The result is 1000
+		And   Not_Later_Than 1000 Query isAtSingleOperation(1, 90, AnglePrecision) returns True
+		
+		
 				
       
       
@@ -63,9 +65,8 @@ Class: Machine
 		And   We call operation rotateServoOperation(5, 10, 2000)
 		And   We call operation rotateServoOperation(3, 0, 1500)
 		And   We call operation rotateServoOperation(2, 45, 2000)
-		
-		Then  Query isAtSingleOperation(2, 45, AnglePrecision) returns True
-		And   The result is Not_Later_Than 2000
+		Then  The result is 2000
+		And   Not_Later_Than 2000 Query isAtSingleOperation(2, 45, AnglePrecision) returns True
 						
 		
       
@@ -154,8 +155,9 @@ Class: Machine
 	Scenario Outline: Rotate a single servo:
 		Given We have an operational arm 
 		When  We call operation rotateServoOperation(<id>, <angle>, <aTime>)
-		Then  Query isAtSingleOperation(<id>, <angle>, AnglePrecision) returns True
-		And   The result is Not_Later_Than <aTime>
+		Then  The result is <aTime>
+		And   Not_Later_Than <aTime> Query isAtSingleOperation(<id>, <angle>, AnglePrecision) returns True
+			
 				
 	Examples:
       | id  | angle | aTime | 	
@@ -231,9 +233,9 @@ Class: Machine
   Scenario: Rotate multiple servos:
 	  Given We have an operational arm
 	  When  We call operation rotateAllServosOperation(45, 45, 45, 45, 45, 45, 1000)   
-		Then  Query isAtOperation(45, 45, 45, 45, 45, 45, AnglePrecision) returns True
-		And   The result is Not_Later_Than 1000
-        
+		Then  The result is 1000
+		And   Not_Later_Than 1000 Query isAtOperation(45, 45, 45, 45, 45, 45, AnglePrecision) returns True
+			
 
 			
 Class: Machine
@@ -280,9 +282,8 @@ Class: Machine
   Scenario Outline: Rotate multiple servos:
 	  Given We have an operational arm
 	  When  We call operation rotateAllServosOperation(<angle1>, <angle2>, <angle3>, <angle4>, <angle5>, <angle6>, <time>)   
-		Then  Query isAtOperation(<angle1>, <angle2>, <angle3>, <angle4>, <angle5>, <angle6>, AnglePrecision) returns True
-		And   The result is Not_Later_Than <aTime>
-        
+		Then  The result is <aTime>
+		And   Not_Later_Than <aTime> Query isAtOperation(<angle1>, <angle2>, <angle3>, <angle4>, <angle5>, <angle6>, AnglePrecision) returns True        
 	Examples:
       | angle1 |  angle2 | angle3 | angle4 | angle5 | angle6 | time | a_precision |  
       |			80 |      80 |     80 |     80 |     80 |     80 | 1000 |           2 |
