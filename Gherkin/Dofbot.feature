@@ -9,7 +9,7 @@ Feature: Series of operations for the arm
 	@Rotate @Single
 	Scenario: Rotate a single servo:
 		Given We have an operational arm 
-		When  We call operation rotateServoOperation(1, 90, 1000)
+		When  We call operation rotateServoOperation(1,90,1000)
 		Then  The result is 1000
 		And   Not_Later_Than 1000 Query isAtSingleOperation(1, 90, AnglePrecision) returns True
 		
@@ -45,6 +45,7 @@ Class: Machine
 				
 		State: When
 			Activity: Arm.BaseServo.ServosOperations.rotateServoOperation(1, 90, 1000)
+		
 		
 		Transition: (When->Error)
 			Guard: LaterThan(oRunTime, 1000)		
