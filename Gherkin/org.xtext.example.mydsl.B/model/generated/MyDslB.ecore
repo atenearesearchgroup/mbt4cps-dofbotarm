@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="myDslB" nsURI="http://www.xtext.org/example/mydsl/MyDslB" nsPrefix="myDslB">
+  <eClassifiers xsi:type="ecore:EClass" name="Call">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="person" eType="ecore:EClass platform:/resource/org.xtext.example.mydsl.A/model/generated/MyDslA.ecore#//Person"
+        containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>

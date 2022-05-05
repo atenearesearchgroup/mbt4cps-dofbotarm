@@ -1,0 +1,42 @@
+grammar org.xtext.DofbotDSL with org.eclipse.xtext.common.Terminals
+
+generate dofbotDSL "http://www.xtext.org/DofbotDSL"
+
+
+Arm:
+	'Name' name=ID
+	'{'
+		
+		('rotateMultiple' (rotateMultiple+=RotateMultiple)+)?
+		('rotateSingle' (rotateSingle+=RotateSingle)+)?
+		
+	'}'
+;
+
+RotateMultiple:
+	'RotateMultiple' name=ID
+	'{'
+		(Angle+=Angles)+
+		'Time' time=INT
+	'}'
+;
+
+RotateSingle:
+	'RotateSingle' name=ID
+	'{'
+		Servo=Servos
+		Angle=Angles
+		'Time' time=INT
+	'}'
+	
+;
+
+
+
+Servos:
+	'Servo' name=INT
+;
+
+Angles:
+	'Angle' name=INT
+;
