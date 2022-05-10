@@ -1,0 +1,5 @@
+SCENARIO "RotateASingleServo"
+WHEN OperationalArm(1) 
+GIVEN rotateServoOperation(1,1,1) 
+THEN result=1 
+AND NotLaterThan(1) Query isAtSingleOperation(1,1,1)=True 
