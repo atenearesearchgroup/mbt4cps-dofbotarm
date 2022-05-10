@@ -1,0 +1,11 @@
+grammar org.xtext.CPTester with org.xtext.Operations
+
+generate cPTester "http://www.xtext.org/CPTester"
+
+Scenario:
+	'SCENARIO' name=STRING
+	'WHEN' when=Operation
+	'GIVEN' given=Operation
+	'THEN' then=Result
+	'AND' and1=Operation
+;

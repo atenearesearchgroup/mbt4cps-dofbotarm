@@ -1,0 +1,24 @@
+grammar org.xtext.Operations with org.eclipse.xtext.common.Terminals
+
+generate operations "http://www.xtext.org/Operations"
+
+Operation:
+  rotateServoOperation | OperationalArm | NotLaterThan
+;
+
+rotateServoOperation:
+	name = 'rotateServoOperation(' + INT + ',' + INT + ',' + INT + ')'
+;
+
+OperationalArm:
+	name = 'OperationalArm(' + INT + ')'
+;
+
+
+NotLaterThan:
+	name = 'NotLaterThan(' + INT + ')' + ' Query ' + 'isAtSingleOperation(' + INT + ',' + INT + ',' + INT + ')=' + 'True'
+;
+
+Result:
+	name= 'result=' + INT
+;
