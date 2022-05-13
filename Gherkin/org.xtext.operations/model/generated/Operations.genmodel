@@ -6,14 +6,85 @@
     complianceLevel="8.0" copyrightFields="false" runtimeVersion="2.20">
   <genPackages prefix="Operations" basePackage="org.xtext" disposableProviderFactory="true"
       fileExtensions="operations" ecorePackage="Operations.ecore#/">
+    <genClasses ecoreClass="Operations.ecore#//Initial"/>
     <genClasses ecoreClass="Operations.ecore#//Operation">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Operations.ecore#//Operation/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Operations.ecore#//Operation/SEP1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Operations.ecore#//Operation/SEP2"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Operations.ecore#//Operation/TIME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Operations.ecore#//Operation/END"/>
     </genClasses>
-    <genClasses ecoreClass="Operations.ecore#//rotateServoOperation"/>
-    <genClasses ecoreClass="Operations.ecore#//OperationalArm"/>
-    <genClasses ecoreClass="Operations.ecore#//NotLaterThan"/>
-    <genClasses ecoreClass="Operations.ecore#//Result">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Operations.ecore#//Result/name"/>
+    <genClasses ecoreClass="Operations.ecore#//Solution"/>
+    <genClasses ecoreClass="Operations.ecore#//Conditions">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Operations.ecore#//Conditions/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Operations.ecore#//OperationalArm">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Operations.ecore#//OperationalArm/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Operations.ecore#//OperationalArm/TIME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Operations.ecore#//OperationalArm/END"/>
+    </genClasses>
+    <genClasses ecoreClass="Operations.ecore#//rotateServoOperation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Operations.ecore#//rotateServoOperation/SERVO"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Operations.ecore#//rotateServoOperation/ANGLE"/>
+    </genClasses>
+    <genClasses ecoreClass="Operations.ecore#//rotateAllServosOperation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Operations.ecore#//rotateAllServosOperation/ANGLE1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Operations.ecore#//rotateAllServosOperation/ANGLE2"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Operations.ecore#//rotateAllServosOperation/ANGLE3"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Operations.ecore#//rotateAllServosOperation/SEP3"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Operations.ecore#//rotateAllServosOperation/ANGLE4"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Operations.ecore#//rotateAllServosOperation/SEP4"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Operations.ecore#//rotateAllServosOperation/ANGLE5"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Operations.ecore#//rotateAllServosOperation/SEP5"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Operations.ecore#//rotateAllServosOperation/ANGLE6"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Operations.ecore#//rotateAllServosOperation/SEP6"/>
+    </genClasses>
+    <genClasses ecoreClass="Operations.ecore#//result">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Operations.ecore#//result/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Operations.ecore#//result/TIME"/>
+    </genClasses>
+    <genClasses ecoreClass="Operations.ecore#//NotLaterThan">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Operations.ecore#//NotLaterThan/TIME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Operations.ecore#//NotLaterThan/SEP"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Operations.ecore#//NotLaterThan/QUERY"/>
+    </genClasses>
+    <genClasses ecoreClass="Operations.ecore#//isAtSingleOperation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Operations.ecore#//isAtSingleOperation/SERVO"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Operations.ecore#//isAtSingleOperation/SEP1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Operations.ecore#//isAtSingleOperation/ANGLE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Operations.ecore#//isAtSingleOperation/SEP2"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Operations.ecore#//isAtSingleOperation/ANGLE_RES"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Operations.ecore#//isAtSingleOperation/END"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Operations.ecore#//isAtSingleOperation/VALUE"/>
+    </genClasses>
+    <genClasses ecoreClass="Operations.ecore#//isAtOperation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Operations.ecore#//isAtOperation/ANGLE1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Operations.ecore#//isAtOperation/SEP1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Operations.ecore#//isAtOperation/ANGLE2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Operations.ecore#//isAtOperation/SEP2"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Operations.ecore#//isAtOperation/ANGLE3"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Operations.ecore#//isAtOperation/SEP3"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Operations.ecore#//isAtOperation/ANGLE4"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Operations.ecore#//isAtOperation/SEP4"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Operations.ecore#//isAtOperation/ANGLE5"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Operations.ecore#//isAtOperation/SEP5"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Operations.ecore#//isAtOperation/ANGLE6"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Operations.ecore#//isAtOperation/SEP6"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Operations.ecore#//isAtOperation/ANGLE_RES"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Operations.ecore#//isAtOperation/END"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Operations.ecore#//isAtOperation/VALUE"/>
+    </genClasses>
+    <genClasses ecoreClass="Operations.ecore#//time">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Operations.ecore#//time/TIME"/>
+    </genClasses>
+    <genClasses ecoreClass="Operations.ecore#//servo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Operations.ecore#//servo/SERVO"/>
+    </genClasses>
+    <genClasses ecoreClass="Operations.ecore#//angle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Operations.ecore#//angle/ANGLE"/>
+    </genClasses>
+    <genClasses ecoreClass="Operations.ecore#//angle_res">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Operations.ecore#//angle_res/ANGLE_RES"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

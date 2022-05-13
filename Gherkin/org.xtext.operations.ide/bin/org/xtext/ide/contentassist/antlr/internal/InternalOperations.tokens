@@ -1,12 +1,15 @@
-' Query '=13
 ')'=12
-')='=15
-','=11
-'NotLaterThan('=19
-'OperationalArm('=18
-'True'=16
-'isAtSingleOperation('=14
-'rotateServoOperation('=17
+')='=20
+','=14
+'NotLaterThan('=17
+'OperationalArm('=11
+'Query'=18
+'True'=21
+'isAtOperation('=22
+'isAtSingleOperation('=19
+'result='=16
+'rotateAllServosOperation('=15
+'rotateServoOperation('=13
 RULE_ANY_OTHER=10
 RULE_ID=5
 RULE_INT=4
@@ -23,3 +26,6 @@ T__16=16
 T__17=17
 T__18=18
 T__19=19
+T__20=20
+T__21=21
+T__22=22

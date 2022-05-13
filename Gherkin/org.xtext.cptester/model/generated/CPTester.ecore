@@ -3,13 +3,13 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="cPTester" nsURI="http://www.xtext.org/CPTester" nsPrefix="cPTester">
   <eClassifiers xsi:type="ecore:EClass" name="Scenario">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="when" eType="ecore:EClass platform:/resource/org.xtext.operations/model/generated/Operations.ecore#//Operation"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="when" eType="ecore:EClass platform:/resource/org.xtext.operations/model/generated/Operations.ecore#//Initial"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="given" eType="ecore:EClass platform:/resource/org.xtext.operations/model/generated/Operations.ecore#//Operation"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="then" eType="ecore:EClass platform:/resource/org.xtext.operations/model/generated/Operations.ecore#//Result"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="then" eType="ecore:EClass platform:/resource/org.xtext.operations/model/generated/Operations.ecore#//Solution"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="and1" eType="ecore:EClass platform:/resource/org.xtext.operations/model/generated/Operations.ecore#//Operation"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="and1" eType="ecore:EClass platform:/resource/org.xtext.operations/model/generated/Operations.ecore#//Conditions"
         containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

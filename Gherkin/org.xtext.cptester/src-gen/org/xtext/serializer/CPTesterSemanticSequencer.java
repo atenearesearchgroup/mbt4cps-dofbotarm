@@ -18,8 +18,15 @@ import org.xtext.cPTester.Scenario;
 import org.xtext.operations.NotLaterThan;
 import org.xtext.operations.OperationalArm;
 import org.xtext.operations.OperationsPackage;
-import org.xtext.operations.Result;
+import org.xtext.operations.angle;
+import org.xtext.operations.angle_res;
+import org.xtext.operations.isAtOperation;
+import org.xtext.operations.isAtSingleOperation;
+import org.xtext.operations.result;
+import org.xtext.operations.rotateAllServosOperation;
 import org.xtext.operations.rotateServoOperation;
+import org.xtext.operations.servo;
+import org.xtext.operations.time;
 import org.xtext.services.CPTesterGrammarAccess;
 
 @SuppressWarnings("all")
@@ -48,11 +55,32 @@ public class CPTesterSemanticSequencer extends OperationsSemanticSequencer {
 			case OperationsPackage.OPERATIONAL_ARM:
 				sequence_OperationalArm(context, (OperationalArm) semanticObject); 
 				return; 
+			case OperationsPackage.ANGLE:
+				sequence_angle(context, (angle) semanticObject); 
+				return; 
+			case OperationsPackage.ANGLE_RES:
+				sequence_angle_res(context, (angle_res) semanticObject); 
+				return; 
+			case OperationsPackage.IS_AT_OPERATION:
+				sequence_isAtOperation(context, (isAtOperation) semanticObject); 
+				return; 
+			case OperationsPackage.IS_AT_SINGLE_OPERATION:
+				sequence_isAtSingleOperation(context, (isAtSingleOperation) semanticObject); 
+				return; 
 			case OperationsPackage.RESULT:
-				sequence_Result(context, (Result) semanticObject); 
+				sequence_result(context, (result) semanticObject); 
+				return; 
+			case OperationsPackage.ROTATE_ALL_SERVOS_OPERATION:
+				sequence_rotateAllServosOperation(context, (rotateAllServosOperation) semanticObject); 
 				return; 
 			case OperationsPackage.ROTATE_SERVO_OPERATION:
 				sequence_rotateServoOperation(context, (rotateServoOperation) semanticObject); 
+				return; 
+			case OperationsPackage.SERVO:
+				sequence_servo(context, (servo) semanticObject); 
+				return; 
+			case OperationsPackage.TIME:
+				sequence_time(context, (time) semanticObject); 
 				return; 
 			}
 		if (errorAcceptor != null)
@@ -65,7 +93,7 @@ public class CPTesterSemanticSequencer extends OperationsSemanticSequencer {
 	 *     Scenario returns Scenario
 	 *
 	 * Constraint:
-	 *     (name=STRING when=Operation given=Operation then=Result and1=Operation)
+	 *     (name=STRING when=Initial given=Operation then=Solution and1=Conditions)
 	 * </pre>
 	 */
 	protected void sequence_Scenario(ISerializationContext context, Scenario semanticObject) {
@@ -83,10 +111,10 @@ public class CPTesterSemanticSequencer extends OperationsSemanticSequencer {
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getScenarioAccess().getNameSTRINGTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getScenarioAccess().getWhenOperationParserRuleCall_3_0(), semanticObject.getWhen());
+		feeder.accept(grammarAccess.getScenarioAccess().getWhenInitialParserRuleCall_3_0(), semanticObject.getWhen());
 		feeder.accept(grammarAccess.getScenarioAccess().getGivenOperationParserRuleCall_5_0(), semanticObject.getGiven());
-		feeder.accept(grammarAccess.getScenarioAccess().getThenResultParserRuleCall_7_0(), semanticObject.getThen());
-		feeder.accept(grammarAccess.getScenarioAccess().getAnd1OperationParserRuleCall_9_0(), semanticObject.getAnd1());
+		feeder.accept(grammarAccess.getScenarioAccess().getThenSolutionParserRuleCall_7_0(), semanticObject.getThen());
+		feeder.accept(grammarAccess.getScenarioAccess().getAnd1ConditionsParserRuleCall_9_0(), semanticObject.getAnd1());
 		feeder.finish();
 	}
 	

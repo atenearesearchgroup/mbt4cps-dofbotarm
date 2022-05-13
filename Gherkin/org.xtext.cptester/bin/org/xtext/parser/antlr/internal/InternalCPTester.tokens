@@ -1,18 +1,20 @@
-' Query '=21
-')'=18
-')='=23
-','=17
+')'=17
+')='=25
+','=19
 'AND'=15
 'GIVEN'=13
-'NotLaterThan('=20
-'OperationalArm('=19
+'NotLaterThan('=22
+'OperationalArm('=16
+'Query'=23
 'SCENARIO'=11
 'THEN'=14
-'True'=24
+'True'=26
 'WHEN'=12
-'isAtSingleOperation('=22
-'result='=25
-'rotateServoOperation('=16
+'isAtOperation('=27
+'isAtSingleOperation('=24
+'result='=21
+'rotateAllServosOperation('=20
+'rotateServoOperation('=18
 RULE_ANY_OTHER=10
 RULE_ID=6
 RULE_INT=5
@@ -35,3 +37,5 @@ T__22=22
 T__23=23
 T__24=24
 T__25=25
+T__26=26
+T__27=27

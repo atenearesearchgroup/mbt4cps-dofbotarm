@@ -65,14 +65,36 @@ public class OperationsFactoryImpl extends EFactoryImpl implements OperationsFac
   {
     switch (eClass.getClassifierID())
     {
+      case OperationsPackage.INITIAL: return createInitial();
       case OperationsPackage.OPERATION: return createOperation();
-      case OperationsPackage.ROTATE_SERVO_OPERATION: return createrotateServoOperation();
+      case OperationsPackage.SOLUTION: return createSolution();
+      case OperationsPackage.CONDITIONS: return createConditions();
       case OperationsPackage.OPERATIONAL_ARM: return createOperationalArm();
+      case OperationsPackage.ROTATE_SERVO_OPERATION: return createrotateServoOperation();
+      case OperationsPackage.ROTATE_ALL_SERVOS_OPERATION: return createrotateAllServosOperation();
+      case OperationsPackage.RESULT: return createresult();
       case OperationsPackage.NOT_LATER_THAN: return createNotLaterThan();
-      case OperationsPackage.RESULT: return createResult();
+      case OperationsPackage.IS_AT_SINGLE_OPERATION: return createisAtSingleOperation();
+      case OperationsPackage.IS_AT_OPERATION: return createisAtOperation();
+      case OperationsPackage.TIME: return createtime();
+      case OperationsPackage.SERVO: return createservo();
+      case OperationsPackage.ANGLE: return createangle();
+      case OperationsPackage.ANGLE_RES: return createangle_res();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Initial createInitial()
+  {
+    InitialImpl initial = new InitialImpl();
+    return initial;
   }
 
   /**
@@ -93,10 +115,22 @@ public class OperationsFactoryImpl extends EFactoryImpl implements OperationsFac
    * @generated
    */
   @Override
-  public rotateServoOperation createrotateServoOperation()
+  public Solution createSolution()
   {
-    rotateServoOperationImpl rotateServoOperation = new rotateServoOperationImpl();
-    return rotateServoOperation;
+    SolutionImpl solution = new SolutionImpl();
+    return solution;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Conditions createConditions()
+  {
+    ConditionsImpl conditions = new ConditionsImpl();
+    return conditions;
   }
 
   /**
@@ -117,6 +151,42 @@ public class OperationsFactoryImpl extends EFactoryImpl implements OperationsFac
    * @generated
    */
   @Override
+  public rotateServoOperation createrotateServoOperation()
+  {
+    rotateServoOperationImpl rotateServoOperation = new rotateServoOperationImpl();
+    return rotateServoOperation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public rotateAllServosOperation createrotateAllServosOperation()
+  {
+    rotateAllServosOperationImpl rotateAllServosOperation = new rotateAllServosOperationImpl();
+    return rotateAllServosOperation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public result createresult()
+  {
+    resultImpl result = new resultImpl();
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public NotLaterThan createNotLaterThan()
   {
     NotLaterThanImpl notLaterThan = new NotLaterThanImpl();
@@ -129,10 +199,70 @@ public class OperationsFactoryImpl extends EFactoryImpl implements OperationsFac
    * @generated
    */
   @Override
-  public Result createResult()
+  public isAtSingleOperation createisAtSingleOperation()
   {
-    ResultImpl result = new ResultImpl();
-    return result;
+    isAtSingleOperationImpl isAtSingleOperation = new isAtSingleOperationImpl();
+    return isAtSingleOperation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public isAtOperation createisAtOperation()
+  {
+    isAtOperationImpl isAtOperation = new isAtOperationImpl();
+    return isAtOperation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public time createtime()
+  {
+    timeImpl time = new timeImpl();
+    return time;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public servo createservo()
+  {
+    servoImpl servo = new servoImpl();
+    return servo;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public angle createangle()
+  {
+    angleImpl angle = new angleImpl();
+    return angle;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public angle_res createangle_res()
+  {
+    angle_resImpl angle_res = new angle_resImpl();
+    return angle_res;
   }
 
   /**

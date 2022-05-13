@@ -9,11 +9,85 @@ package org.xtext.operations;
  * A representation of the model object '<em><b>Not Later Than</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link org.xtext.operations.NotLaterThan#getTIME <em>TIME</em>}</li>
+ *   <li>{@link org.xtext.operations.NotLaterThan#getSEP <em>SEP</em>}</li>
+ *   <li>{@link org.xtext.operations.NotLaterThan#getQUERY <em>QUERY</em>}</li>
+ * </ul>
  *
  * @see org.xtext.operations.OperationsPackage#getNotLaterThan()
  * @model
  * @generated
  */
-public interface NotLaterThan extends Operation
+public interface NotLaterThan extends Conditions
 {
+  /**
+   * Returns the value of the '<em><b>TIME</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>TIME</em>' containment reference.
+   * @see #setTIME(time)
+   * @see org.xtext.operations.OperationsPackage#getNotLaterThan_TIME()
+   * @model containment="true"
+   * @generated
+   */
+  time getTIME();
+
+  /**
+   * Sets the value of the '{@link org.xtext.operations.NotLaterThan#getTIME <em>TIME</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>TIME</em>' containment reference.
+   * @see #getTIME()
+   * @generated
+   */
+  void setTIME(time value);
+
+  /**
+   * Returns the value of the '<em><b>SEP</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>SEP</em>' attribute.
+   * @see #setSEP(String)
+   * @see org.xtext.operations.OperationsPackage#getNotLaterThan_SEP()
+   * @model
+   * @generated
+   */
+  String getSEP();
+
+  /**
+   * Sets the value of the '{@link org.xtext.operations.NotLaterThan#getSEP <em>SEP</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>SEP</em>' attribute.
+   * @see #getSEP()
+   * @generated
+   */
+  void setSEP(String value);
+
+  /**
+   * Returns the value of the '<em><b>QUERY</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>QUERY</em>' attribute.
+   * @see #setQUERY(String)
+   * @see org.xtext.operations.OperationsPackage#getNotLaterThan_QUERY()
+   * @model
+   * @generated
+   */
+  String getQUERY();
+
+  /**
+   * Sets the value of the '{@link org.xtext.operations.NotLaterThan#getQUERY <em>QUERY</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>QUERY</em>' attribute.
+   * @see #getQUERY()
+   * @generated
+   */
+  void setQUERY(String value);
+
 } // NotLaterThan

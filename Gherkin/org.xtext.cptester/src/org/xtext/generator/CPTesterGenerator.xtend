@@ -7,7 +7,6 @@ import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.AbstractGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
-import java.util.Scanner
 import org.xtext.cPTester.Scenario
 
 /**
@@ -35,7 +34,7 @@ class CPTesterGenerator extends AbstractGenerator {
 					Guard: []
 					
 				State: Given
-					Activity: Arm.BaseServo.ServosOperations.posInicial(1000);
+					Activity: Arm.BaseServo.ServosOperations.posInicial(«scenario»);
 					
 				State: GivenWarning
 					Activity: MessReport(mWarning, Warning Time)
@@ -44,13 +43,13 @@ class CPTesterGenerator extends AbstractGenerator {
 					Guard: []
 							
 				Transition: (Given->GivenWarning)
-					Guard: Arm.BaseServo.ServosOperations.Time(1000)
+					Guard: Arm.BaseServo.ServosOperations.Time(«scenario.given.TIME»)
 					
 				Transition: (Given->When1)
 					Guard: Arm.BaseServo.ServosOperations.isAtOperation(90,90,90,90,90,90,2)
 						
 				State: When1
-					Activity: Arm.BaseServo.ServosOperations.«scenario.given.name»1, 90, 1000) 
+					Activity: Arm.BaseServo.ServosOperations.«scenario.given.name» «scenario.given.TIME», 90, 1000) 
 				
 				Transition: (When1->Error)
 					Guard: LaterThan(oRunTime, 1000)		
@@ -59,6 +58,7 @@ class CPTesterGenerator extends AbstractGenerator {
 					Guard: Arm.BaseServo.ServosOperations.isAtSingleOperation(1, 90, 1000)
 					'''
 	}
+	
 	
 //We define a function className that will be used to obtain the name of the file with extension 'wrld’
 

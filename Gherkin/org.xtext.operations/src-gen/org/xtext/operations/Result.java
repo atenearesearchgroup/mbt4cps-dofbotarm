@@ -3,25 +3,25 @@
  */
 package org.xtext.operations;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Result</b></em>'.
+ * A representation of the model object '<em><b>result</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.operations.Result#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.operations.result#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.operations.result#getTIME <em>TIME</em>}</li>
  * </ul>
  *
- * @see org.xtext.operations.OperationsPackage#getResult()
+ * @see org.xtext.operations.OperationsPackage#getresult()
  * @model
  * @generated
  */
-public interface Result extends EObject
+public interface result extends Solution
 {
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -29,14 +29,14 @@ public interface Result extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Name</em>' attribute.
    * @see #setName(String)
-   * @see org.xtext.operations.OperationsPackage#getResult_Name()
+   * @see org.xtext.operations.OperationsPackage#getresult_Name()
    * @model
    * @generated
    */
   String getName();
 
   /**
-   * Sets the value of the '{@link org.xtext.operations.Result#getName <em>Name</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.operations.result#getName <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Name</em>' attribute.
@@ -45,4 +45,26 @@ public interface Result extends EObject
    */
   void setName(String value);
 
-} // Result
+  /**
+   * Returns the value of the '<em><b>TIME</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>TIME</em>' containment reference.
+   * @see #setTIME(time)
+   * @see org.xtext.operations.OperationsPackage#getresult_TIME()
+   * @model containment="true"
+   * @generated
+   */
+  time getTIME();
+
+  /**
+   * Sets the value of the '{@link org.xtext.operations.result#getTIME <em>TIME</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>TIME</em>' containment reference.
+   * @see #getTIME()
+   * @generated
+   */
+  void setTIME(time value);
+
+} // result

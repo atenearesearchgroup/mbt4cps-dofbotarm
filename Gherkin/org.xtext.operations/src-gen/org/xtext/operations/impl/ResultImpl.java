@@ -4,29 +4,32 @@
 package org.xtext.operations.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.operations.OperationsPackage;
-import org.xtext.operations.Result;
+import org.xtext.operations.result;
+import org.xtext.operations.time;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Result</b></em>'.
+ * An implementation of the model object '<em><b>result</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.operations.impl.ResultImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.operations.impl.resultImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.operations.impl.resultImpl#getTIME <em>TIME</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ResultImpl extends MinimalEObjectImpl.Container implements Result
+public class resultImpl extends SolutionImpl implements result
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -49,11 +52,21 @@ public class ResultImpl extends MinimalEObjectImpl.Container implements Result
   protected String name = NAME_EDEFAULT;
 
   /**
+   * The cached value of the '{@link #getTIME() <em>TIME</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTIME()
+   * @generated
+   * @ordered
+   */
+  protected time time;
+
+  /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ResultImpl()
+  protected resultImpl()
   {
     super();
   }
@@ -100,12 +113,80 @@ public class ResultImpl extends MinimalEObjectImpl.Container implements Result
    * @generated
    */
   @Override
+  public time getTIME()
+  {
+    return time;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetTIME(time newTIME, NotificationChain msgs)
+  {
+    time oldTIME = time;
+    time = newTIME;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OperationsPackage.RESULT__TIME, oldTIME, newTIME);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setTIME(time newTIME)
+  {
+    if (newTIME != time)
+    {
+      NotificationChain msgs = null;
+      if (time != null)
+        msgs = ((InternalEObject)time).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OperationsPackage.RESULT__TIME, null, msgs);
+      if (newTIME != null)
+        msgs = ((InternalEObject)newTIME).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OperationsPackage.RESULT__TIME, null, msgs);
+      msgs = basicSetTIME(newTIME, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, OperationsPackage.RESULT__TIME, newTIME, newTIME));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case OperationsPackage.RESULT__TIME:
+        return basicSetTIME(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
     switch (featureID)
     {
       case OperationsPackage.RESULT__NAME:
         return getName();
+      case OperationsPackage.RESULT__TIME:
+        return getTIME();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -122,6 +203,9 @@ public class ResultImpl extends MinimalEObjectImpl.Container implements Result
     {
       case OperationsPackage.RESULT__NAME:
         setName((String)newValue);
+        return;
+      case OperationsPackage.RESULT__TIME:
+        setTIME((time)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -140,6 +224,9 @@ public class ResultImpl extends MinimalEObjectImpl.Container implements Result
       case OperationsPackage.RESULT__NAME:
         setName(NAME_EDEFAULT);
         return;
+      case OperationsPackage.RESULT__TIME:
+        setTIME((time)null);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -156,6 +243,8 @@ public class ResultImpl extends MinimalEObjectImpl.Container implements Result
     {
       case OperationsPackage.RESULT__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case OperationsPackage.RESULT__TIME:
+        return time != null;
     }
     return super.eIsSet(featureID);
   }
@@ -177,4 +266,4 @@ public class ResultImpl extends MinimalEObjectImpl.Container implements Result
     return result.toString();
   }
 
-} //ResultImpl
+} //resultImpl

@@ -11,12 +11,21 @@ import org.eclipse.xtext.Action;
 import org.eclipse.xtext.Parameter;
 import org.eclipse.xtext.ParserRule;
 import org.eclipse.xtext.serializer.ISerializationContext;
+import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequencer;
+import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 import org.xtext.operations.NotLaterThan;
 import org.xtext.operations.OperationalArm;
 import org.xtext.operations.OperationsPackage;
-import org.xtext.operations.Result;
+import org.xtext.operations.angle;
+import org.xtext.operations.angle_res;
+import org.xtext.operations.isAtOperation;
+import org.xtext.operations.isAtSingleOperation;
+import org.xtext.operations.result;
+import org.xtext.operations.rotateAllServosOperation;
 import org.xtext.operations.rotateServoOperation;
+import org.xtext.operations.servo;
+import org.xtext.operations.time;
 import org.xtext.services.OperationsGrammarAccess;
 
 @SuppressWarnings("all")
@@ -39,11 +48,32 @@ public class OperationsSemanticSequencer extends AbstractDelegatingSemanticSeque
 			case OperationsPackage.OPERATIONAL_ARM:
 				sequence_OperationalArm(context, (OperationalArm) semanticObject); 
 				return; 
+			case OperationsPackage.ANGLE:
+				sequence_angle(context, (angle) semanticObject); 
+				return; 
+			case OperationsPackage.ANGLE_RES:
+				sequence_angle_res(context, (angle_res) semanticObject); 
+				return; 
+			case OperationsPackage.IS_AT_OPERATION:
+				sequence_isAtOperation(context, (isAtOperation) semanticObject); 
+				return; 
+			case OperationsPackage.IS_AT_SINGLE_OPERATION:
+				sequence_isAtSingleOperation(context, (isAtSingleOperation) semanticObject); 
+				return; 
 			case OperationsPackage.RESULT:
-				sequence_Result(context, (Result) semanticObject); 
+				sequence_result(context, (result) semanticObject); 
+				return; 
+			case OperationsPackage.ROTATE_ALL_SERVOS_OPERATION:
+				sequence_rotateAllServosOperation(context, (rotateAllServosOperation) semanticObject); 
 				return; 
 			case OperationsPackage.ROTATE_SERVO_OPERATION:
 				sequence_rotateServoOperation(context, (rotateServoOperation) semanticObject); 
+				return; 
+			case OperationsPackage.SERVO:
+				sequence_servo(context, (servo) semanticObject); 
+				return; 
+			case OperationsPackage.TIME:
+				sequence_time(context, (time) semanticObject); 
 				return; 
 			}
 		if (errorAcceptor != null)
@@ -53,44 +83,334 @@ public class OperationsSemanticSequencer extends AbstractDelegatingSemanticSeque
 	/**
 	 * <pre>
 	 * Contexts:
-	 *     Operation returns NotLaterThan
+	 *     Conditions returns NotLaterThan
 	 *     NotLaterThan returns NotLaterThan
 	 *
 	 * Constraint:
-	 *     name='NotLaterThan('+
+	 *     (name='NotLaterThan(' TIME=time SEP=')' QUERY='Query')
 	 * </pre>
 	 */
 	protected void sequence_NotLaterThan(ISerializationContext context, NotLaterThan semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.CONDITIONS__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.CONDITIONS__NAME));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.NOT_LATER_THAN__TIME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.NOT_LATER_THAN__TIME));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.NOT_LATER_THAN__SEP) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.NOT_LATER_THAN__SEP));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.NOT_LATER_THAN__QUERY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.NOT_LATER_THAN__QUERY));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getNotLaterThanAccess().getNameNotLaterThanKeyword_0_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getNotLaterThanAccess().getTIMETimeParserRuleCall_1_0(), semanticObject.getTIME());
+		feeder.accept(grammarAccess.getNotLaterThanAccess().getSEPRightParenthesisKeyword_2_0(), semanticObject.getSEP());
+		feeder.accept(grammarAccess.getNotLaterThanAccess().getQUERYQueryKeyword_3_0(), semanticObject.getQUERY());
+		feeder.finish();
 	}
 	
 	
 	/**
 	 * <pre>
 	 * Contexts:
-	 *     Operation returns OperationalArm
+	 *     Initial returns OperationalArm
 	 *     OperationalArm returns OperationalArm
 	 *
 	 * Constraint:
-	 *     name='OperationalArm('+
+	 *     (name='OperationalArm(' TIME=time END=')')
 	 * </pre>
 	 */
 	protected void sequence_OperationalArm(ISerializationContext context, OperationalArm semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.OPERATIONAL_ARM__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.OPERATIONAL_ARM__NAME));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.OPERATIONAL_ARM__TIME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.OPERATIONAL_ARM__TIME));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.OPERATIONAL_ARM__END) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.OPERATIONAL_ARM__END));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getOperationalArmAccess().getNameOperationalArmKeyword_0_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getOperationalArmAccess().getTIMETimeParserRuleCall_1_0(), semanticObject.getTIME());
+		feeder.accept(grammarAccess.getOperationalArmAccess().getENDRightParenthesisKeyword_2_0(), semanticObject.getEND());
+		feeder.finish();
 	}
 	
 	
 	/**
 	 * <pre>
 	 * Contexts:
-	 *     Result returns Result
+	 *     angle returns angle
 	 *
 	 * Constraint:
-	 *     name='result='+
+	 *     ANGLE=INT
 	 * </pre>
 	 */
-	protected void sequence_Result(ISerializationContext context, Result semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+	protected void sequence_angle(ISerializationContext context, angle semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.ANGLE__ANGLE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.ANGLE__ANGLE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getAngleAccess().getANGLEINTTerminalRuleCall_0(), semanticObject.getANGLE());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     angle_res returns angle_res
+	 *
+	 * Constraint:
+	 *     ANGLE_RES=INT
+	 * </pre>
+	 */
+	protected void sequence_angle_res(ISerializationContext context, angle_res semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.ANGLE_RES__ANGLE_RES) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.ANGLE_RES__ANGLE_RES));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getAngle_resAccess().getANGLE_RESINTTerminalRuleCall_0(), semanticObject.getANGLE_RES());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Conditions returns isAtOperation
+	 *     isAtOperation returns isAtOperation
+	 *
+	 * Constraint:
+	 *     (
+	 *         name='isAtOperation(' 
+	 *         ANGLE1=angle 
+	 *         SEP1=',' 
+	 *         ANGLE2=angle 
+	 *         SEP2=',' 
+	 *         ANGLE3=angle 
+	 *         SEP3=',' 
+	 *         ANGLE4=angle 
+	 *         SEP4=',' 
+	 *         ANGLE5=angle 
+	 *         SEP5=',' 
+	 *         ANGLE6=angle 
+	 *         SEP6=',' 
+	 *         ANGLE_RES=angle_res 
+	 *         END=')=' 
+	 *         VALUE='True'
+	 *     )
+	 * </pre>
+	 */
+	protected void sequence_isAtOperation(ISerializationContext context, isAtOperation semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.CONDITIONS__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.CONDITIONS__NAME));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.IS_AT_OPERATION__ANGLE1) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.IS_AT_OPERATION__ANGLE1));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.IS_AT_OPERATION__SEP1) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.IS_AT_OPERATION__SEP1));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.IS_AT_OPERATION__ANGLE2) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.IS_AT_OPERATION__ANGLE2));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.IS_AT_OPERATION__SEP2) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.IS_AT_OPERATION__SEP2));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.IS_AT_OPERATION__ANGLE3) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.IS_AT_OPERATION__ANGLE3));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.IS_AT_OPERATION__SEP3) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.IS_AT_OPERATION__SEP3));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.IS_AT_OPERATION__ANGLE4) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.IS_AT_OPERATION__ANGLE4));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.IS_AT_OPERATION__SEP4) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.IS_AT_OPERATION__SEP4));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.IS_AT_OPERATION__ANGLE5) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.IS_AT_OPERATION__ANGLE5));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.IS_AT_OPERATION__SEP5) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.IS_AT_OPERATION__SEP5));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.IS_AT_OPERATION__ANGLE6) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.IS_AT_OPERATION__ANGLE6));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.IS_AT_OPERATION__SEP6) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.IS_AT_OPERATION__SEP6));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.IS_AT_OPERATION__ANGLE_RES) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.IS_AT_OPERATION__ANGLE_RES));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.IS_AT_OPERATION__END) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.IS_AT_OPERATION__END));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.IS_AT_OPERATION__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.IS_AT_OPERATION__VALUE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getIsAtOperationAccess().getNameIsAtOperationKeyword_0_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getIsAtOperationAccess().getANGLE1AngleParserRuleCall_1_0(), semanticObject.getANGLE1());
+		feeder.accept(grammarAccess.getIsAtOperationAccess().getSEP1CommaKeyword_2_0(), semanticObject.getSEP1());
+		feeder.accept(grammarAccess.getIsAtOperationAccess().getANGLE2AngleParserRuleCall_3_0(), semanticObject.getANGLE2());
+		feeder.accept(grammarAccess.getIsAtOperationAccess().getSEP2CommaKeyword_4_0(), semanticObject.getSEP2());
+		feeder.accept(grammarAccess.getIsAtOperationAccess().getANGLE3AngleParserRuleCall_5_0(), semanticObject.getANGLE3());
+		feeder.accept(grammarAccess.getIsAtOperationAccess().getSEP3CommaKeyword_6_0(), semanticObject.getSEP3());
+		feeder.accept(grammarAccess.getIsAtOperationAccess().getANGLE4AngleParserRuleCall_7_0(), semanticObject.getANGLE4());
+		feeder.accept(grammarAccess.getIsAtOperationAccess().getSEP4CommaKeyword_8_0(), semanticObject.getSEP4());
+		feeder.accept(grammarAccess.getIsAtOperationAccess().getANGLE5AngleParserRuleCall_9_0(), semanticObject.getANGLE5());
+		feeder.accept(grammarAccess.getIsAtOperationAccess().getSEP5CommaKeyword_10_0(), semanticObject.getSEP5());
+		feeder.accept(grammarAccess.getIsAtOperationAccess().getANGLE6AngleParserRuleCall_11_0(), semanticObject.getANGLE6());
+		feeder.accept(grammarAccess.getIsAtOperationAccess().getSEP6CommaKeyword_12_0(), semanticObject.getSEP6());
+		feeder.accept(grammarAccess.getIsAtOperationAccess().getANGLE_RESAngle_resParserRuleCall_13_0(), semanticObject.getANGLE_RES());
+		feeder.accept(grammarAccess.getIsAtOperationAccess().getENDRightParenthesisEqualsSignKeyword_14_0(), semanticObject.getEND());
+		feeder.accept(grammarAccess.getIsAtOperationAccess().getVALUETrueKeyword_15_0(), semanticObject.getVALUE());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Conditions returns isAtSingleOperation
+	 *     isAtSingleOperation returns isAtSingleOperation
+	 *
+	 * Constraint:
+	 *     (
+	 *         name='isAtSingleOperation(' 
+	 *         SERVO=servo 
+	 *         SEP1=',' 
+	 *         ANGLE=angle 
+	 *         SEP2=',' 
+	 *         ANGLE_RES=angle_res 
+	 *         END=')=' 
+	 *         VALUE='True'
+	 *     )
+	 * </pre>
+	 */
+	protected void sequence_isAtSingleOperation(ISerializationContext context, isAtSingleOperation semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.CONDITIONS__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.CONDITIONS__NAME));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.IS_AT_SINGLE_OPERATION__SERVO) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.IS_AT_SINGLE_OPERATION__SERVO));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.IS_AT_SINGLE_OPERATION__SEP1) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.IS_AT_SINGLE_OPERATION__SEP1));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.IS_AT_SINGLE_OPERATION__ANGLE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.IS_AT_SINGLE_OPERATION__ANGLE));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.IS_AT_SINGLE_OPERATION__SEP2) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.IS_AT_SINGLE_OPERATION__SEP2));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.IS_AT_SINGLE_OPERATION__ANGLE_RES) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.IS_AT_SINGLE_OPERATION__ANGLE_RES));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.IS_AT_SINGLE_OPERATION__END) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.IS_AT_SINGLE_OPERATION__END));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.IS_AT_SINGLE_OPERATION__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.IS_AT_SINGLE_OPERATION__VALUE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getIsAtSingleOperationAccess().getNameIsAtSingleOperationKeyword_0_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getIsAtSingleOperationAccess().getSERVOServoParserRuleCall_1_0(), semanticObject.getSERVO());
+		feeder.accept(grammarAccess.getIsAtSingleOperationAccess().getSEP1CommaKeyword_2_0(), semanticObject.getSEP1());
+		feeder.accept(grammarAccess.getIsAtSingleOperationAccess().getANGLEAngleParserRuleCall_3_0(), semanticObject.getANGLE());
+		feeder.accept(grammarAccess.getIsAtSingleOperationAccess().getSEP2CommaKeyword_4_0(), semanticObject.getSEP2());
+		feeder.accept(grammarAccess.getIsAtSingleOperationAccess().getANGLE_RESAngle_resParserRuleCall_5_0(), semanticObject.getANGLE_RES());
+		feeder.accept(grammarAccess.getIsAtSingleOperationAccess().getENDRightParenthesisEqualsSignKeyword_6_0(), semanticObject.getEND());
+		feeder.accept(grammarAccess.getIsAtSingleOperationAccess().getVALUETrueKeyword_7_0(), semanticObject.getVALUE());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Solution returns result
+	 *     result returns result
+	 *
+	 * Constraint:
+	 *     (name='result=' TIME=time)
+	 * </pre>
+	 */
+	protected void sequence_result(ISerializationContext context, result semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.RESULT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.RESULT__NAME));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.RESULT__TIME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.RESULT__TIME));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getResultAccess().getNameResultKeyword_0_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getResultAccess().getTIMETimeParserRuleCall_1_0(), semanticObject.getTIME());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Operation returns rotateAllServosOperation
+	 *     rotateAllServosOperation returns rotateAllServosOperation
+	 *
+	 * Constraint:
+	 *     (
+	 *         name='rotateAllServosOperation(' 
+	 *         ANGLE1=angle 
+	 *         SEP1=',' 
+	 *         ANGLE2=angle 
+	 *         SEP2=',' 
+	 *         ANGLE3=angle 
+	 *         SEP3=',' 
+	 *         ANGLE4=angle 
+	 *         SEP4=',' 
+	 *         ANGLE5=angle 
+	 *         SEP5=',' 
+	 *         ANGLE6=angle 
+	 *         SEP6=',' 
+	 *         TIME=time 
+	 *         END=')'
+	 *     )
+	 * </pre>
+	 */
+	protected void sequence_rotateAllServosOperation(ISerializationContext context, rotateAllServosOperation semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.OPERATION__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.OPERATION__NAME));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.ROTATE_ALL_SERVOS_OPERATION__ANGLE1) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.ROTATE_ALL_SERVOS_OPERATION__ANGLE1));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.OPERATION__SEP1) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.OPERATION__SEP1));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.ROTATE_ALL_SERVOS_OPERATION__ANGLE2) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.ROTATE_ALL_SERVOS_OPERATION__ANGLE2));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.OPERATION__SEP2) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.OPERATION__SEP2));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.ROTATE_ALL_SERVOS_OPERATION__ANGLE3) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.ROTATE_ALL_SERVOS_OPERATION__ANGLE3));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.ROTATE_ALL_SERVOS_OPERATION__SEP3) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.ROTATE_ALL_SERVOS_OPERATION__SEP3));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.ROTATE_ALL_SERVOS_OPERATION__ANGLE4) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.ROTATE_ALL_SERVOS_OPERATION__ANGLE4));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.ROTATE_ALL_SERVOS_OPERATION__SEP4) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.ROTATE_ALL_SERVOS_OPERATION__SEP4));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.ROTATE_ALL_SERVOS_OPERATION__ANGLE5) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.ROTATE_ALL_SERVOS_OPERATION__ANGLE5));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.ROTATE_ALL_SERVOS_OPERATION__SEP5) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.ROTATE_ALL_SERVOS_OPERATION__SEP5));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.ROTATE_ALL_SERVOS_OPERATION__ANGLE6) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.ROTATE_ALL_SERVOS_OPERATION__ANGLE6));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.ROTATE_ALL_SERVOS_OPERATION__SEP6) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.ROTATE_ALL_SERVOS_OPERATION__SEP6));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.OPERATION__TIME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.OPERATION__TIME));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.OPERATION__END) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.OPERATION__END));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getRotateAllServosOperationAccess().getNameRotateAllServosOperationKeyword_0_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getRotateAllServosOperationAccess().getANGLE1AngleParserRuleCall_1_0(), semanticObject.getANGLE1());
+		feeder.accept(grammarAccess.getRotateAllServosOperationAccess().getSEP1CommaKeyword_2_0(), semanticObject.getSEP1());
+		feeder.accept(grammarAccess.getRotateAllServosOperationAccess().getANGLE2AngleParserRuleCall_3_0(), semanticObject.getANGLE2());
+		feeder.accept(grammarAccess.getRotateAllServosOperationAccess().getSEP2CommaKeyword_4_0(), semanticObject.getSEP2());
+		feeder.accept(grammarAccess.getRotateAllServosOperationAccess().getANGLE3AngleParserRuleCall_5_0(), semanticObject.getANGLE3());
+		feeder.accept(grammarAccess.getRotateAllServosOperationAccess().getSEP3CommaKeyword_6_0(), semanticObject.getSEP3());
+		feeder.accept(grammarAccess.getRotateAllServosOperationAccess().getANGLE4AngleParserRuleCall_7_0(), semanticObject.getANGLE4());
+		feeder.accept(grammarAccess.getRotateAllServosOperationAccess().getSEP4CommaKeyword_8_0(), semanticObject.getSEP4());
+		feeder.accept(grammarAccess.getRotateAllServosOperationAccess().getANGLE5AngleParserRuleCall_9_0(), semanticObject.getANGLE5());
+		feeder.accept(grammarAccess.getRotateAllServosOperationAccess().getSEP5CommaKeyword_10_0(), semanticObject.getSEP5());
+		feeder.accept(grammarAccess.getRotateAllServosOperationAccess().getANGLE6AngleParserRuleCall_11_0(), semanticObject.getANGLE6());
+		feeder.accept(grammarAccess.getRotateAllServosOperationAccess().getSEP6CommaKeyword_12_0(), semanticObject.getSEP6());
+		feeder.accept(grammarAccess.getRotateAllServosOperationAccess().getTIMETimeParserRuleCall_13_0(), semanticObject.getTIME());
+		feeder.accept(grammarAccess.getRotateAllServosOperationAccess().getENDRightParenthesisKeyword_14_0(), semanticObject.getEND());
+		feeder.finish();
 	}
 	
 	
@@ -101,11 +421,83 @@ public class OperationsSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     rotateServoOperation returns rotateServoOperation
 	 *
 	 * Constraint:
-	 *     name='rotateServoOperation('+
+	 *     (
+	 *         name='rotateServoOperation(' 
+	 *         SERVO=servo 
+	 *         SEP1=',' 
+	 *         ANGLE=angle 
+	 *         SEP2=',' 
+	 *         TIME=time 
+	 *         END=')'
+	 *     )
 	 * </pre>
 	 */
 	protected void sequence_rotateServoOperation(ISerializationContext context, rotateServoOperation semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.OPERATION__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.OPERATION__NAME));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.ROTATE_SERVO_OPERATION__SERVO) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.ROTATE_SERVO_OPERATION__SERVO));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.OPERATION__SEP1) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.OPERATION__SEP1));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.ROTATE_SERVO_OPERATION__ANGLE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.ROTATE_SERVO_OPERATION__ANGLE));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.OPERATION__SEP2) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.OPERATION__SEP2));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.OPERATION__TIME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.OPERATION__TIME));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.OPERATION__END) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.OPERATION__END));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getRotateServoOperationAccess().getNameRotateServoOperationKeyword_0_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getRotateServoOperationAccess().getSERVOServoParserRuleCall_1_0(), semanticObject.getSERVO());
+		feeder.accept(grammarAccess.getRotateServoOperationAccess().getSEP1CommaKeyword_2_0(), semanticObject.getSEP1());
+		feeder.accept(grammarAccess.getRotateServoOperationAccess().getANGLEAngleParserRuleCall_3_0(), semanticObject.getANGLE());
+		feeder.accept(grammarAccess.getRotateServoOperationAccess().getSEP2CommaKeyword_4_0(), semanticObject.getSEP2());
+		feeder.accept(grammarAccess.getRotateServoOperationAccess().getTIMETimeParserRuleCall_5_0(), semanticObject.getTIME());
+		feeder.accept(grammarAccess.getRotateServoOperationAccess().getENDRightParenthesisKeyword_6_0(), semanticObject.getEND());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     servo returns servo
+	 *
+	 * Constraint:
+	 *     SERVO=INT
+	 * </pre>
+	 */
+	protected void sequence_servo(ISerializationContext context, servo semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.SERVO__SERVO) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.SERVO__SERVO));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getServoAccess().getSERVOINTTerminalRuleCall_0(), semanticObject.getSERVO());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     time returns time
+	 *
+	 * Constraint:
+	 *     TIME=INT
+	 * </pre>
+	 */
+	protected void sequence_time(ISerializationContext context, time semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.TIME__TIME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.TIME__TIME));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getTimeAccess().getTIMEINTTerminalRuleCall_0(), semanticObject.getTIME());
+		feeder.finish();
 	}
 	
 	

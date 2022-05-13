@@ -24,6 +24,15 @@ public interface OperationsFactory extends EFactory
   OperationsFactory eINSTANCE = org.xtext.operations.impl.OperationsFactoryImpl.init();
 
   /**
+   * Returns a new object of class '<em>Initial</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Initial</em>'.
+   * @generated
+   */
+  Initial createInitial();
+
+  /**
    * Returns a new object of class '<em>Operation</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -33,13 +42,22 @@ public interface OperationsFactory extends EFactory
   Operation createOperation();
 
   /**
-   * Returns a new object of class '<em>rotate Servo Operation</em>'.
+   * Returns a new object of class '<em>Solution</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>rotate Servo Operation</em>'.
+   * @return a new object of class '<em>Solution</em>'.
    * @generated
    */
-  rotateServoOperation createrotateServoOperation();
+  Solution createSolution();
+
+  /**
+   * Returns a new object of class '<em>Conditions</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Conditions</em>'.
+   * @generated
+   */
+  Conditions createConditions();
 
   /**
    * Returns a new object of class '<em>Operational Arm</em>'.
@@ -51,6 +69,33 @@ public interface OperationsFactory extends EFactory
   OperationalArm createOperationalArm();
 
   /**
+   * Returns a new object of class '<em>rotate Servo Operation</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>rotate Servo Operation</em>'.
+   * @generated
+   */
+  rotateServoOperation createrotateServoOperation();
+
+  /**
+   * Returns a new object of class '<em>rotate All Servos Operation</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>rotate All Servos Operation</em>'.
+   * @generated
+   */
+  rotateAllServosOperation createrotateAllServosOperation();
+
+  /**
+   * Returns a new object of class '<em>result</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>result</em>'.
+   * @generated
+   */
+  result createresult();
+
+  /**
    * Returns a new object of class '<em>Not Later Than</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -60,13 +105,58 @@ public interface OperationsFactory extends EFactory
   NotLaterThan createNotLaterThan();
 
   /**
-   * Returns a new object of class '<em>Result</em>'.
+   * Returns a new object of class '<em>is At Single Operation</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Result</em>'.
+   * @return a new object of class '<em>is At Single Operation</em>'.
    * @generated
    */
-  Result createResult();
+  isAtSingleOperation createisAtSingleOperation();
+
+  /**
+   * Returns a new object of class '<em>is At Operation</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>is At Operation</em>'.
+   * @generated
+   */
+  isAtOperation createisAtOperation();
+
+  /**
+   * Returns a new object of class '<em>time</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>time</em>'.
+   * @generated
+   */
+  time createtime();
+
+  /**
+   * Returns a new object of class '<em>servo</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>servo</em>'.
+   * @generated
+   */
+  servo createservo();
+
+  /**
+   * Returns a new object of class '<em>angle</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>angle</em>'.
+   * @generated
+   */
+  angle createangle();
+
+  /**
+   * Returns a new object of class '<em>angle res</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>angle res</em>'.
+   * @generated
+   */
+  angle_res createangle_res();
 
   /**
    * Returns the package supported by this factory.

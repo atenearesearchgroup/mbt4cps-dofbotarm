@@ -5,8 +5,10 @@ package org.xtext.cPTester;
 
 import org.eclipse.emf.ecore.EObject;
 
+import org.xtext.operations.Conditions;
+import org.xtext.operations.Initial;
 import org.xtext.operations.Operation;
-import org.xtext.operations.Result;
+import org.xtext.operations.Solution;
 
 /**
  * <!-- begin-user-doc -->
@@ -57,12 +59,12 @@ public interface Scenario extends EObject
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>When</em>' containment reference.
-   * @see #setWhen(Operation)
+   * @see #setWhen(Initial)
    * @see org.xtext.cPTester.CPTesterPackage#getScenario_When()
    * @model containment="true"
    * @generated
    */
-  Operation getWhen();
+  Initial getWhen();
 
   /**
    * Sets the value of the '{@link org.xtext.cPTester.Scenario#getWhen <em>When</em>}' containment reference.
@@ -72,7 +74,7 @@ public interface Scenario extends EObject
    * @see #getWhen()
    * @generated
    */
-  void setWhen(Operation value);
+  void setWhen(Initial value);
 
   /**
    * Returns the value of the '<em><b>Given</b></em>' containment reference.
@@ -101,12 +103,12 @@ public interface Scenario extends EObject
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Then</em>' containment reference.
-   * @see #setThen(Result)
+   * @see #setThen(Solution)
    * @see org.xtext.cPTester.CPTesterPackage#getScenario_Then()
    * @model containment="true"
    * @generated
    */
-  Result getThen();
+  Solution getThen();
 
   /**
    * Sets the value of the '{@link org.xtext.cPTester.Scenario#getThen <em>Then</em>}' containment reference.
@@ -116,19 +118,19 @@ public interface Scenario extends EObject
    * @see #getThen()
    * @generated
    */
-  void setThen(Result value);
+  void setThen(Solution value);
 
   /**
    * Returns the value of the '<em><b>And1</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>And1</em>' containment reference.
-   * @see #setAnd1(Operation)
+   * @see #setAnd1(Conditions)
    * @see org.xtext.cPTester.CPTesterPackage#getScenario_And1()
    * @model containment="true"
    * @generated
    */
-  Operation getAnd1();
+  Conditions getAnd1();
 
   /**
    * Sets the value of the '{@link org.xtext.cPTester.Scenario#getAnd1 <em>And1</em>}' containment reference.
@@ -138,6 +140,6 @@ public interface Scenario extends EObject
    * @see #getAnd1()
    * @generated
    */
-  void setAnd1(Operation value);
+  void setAnd1(Conditions value);
 
 } // Scenario

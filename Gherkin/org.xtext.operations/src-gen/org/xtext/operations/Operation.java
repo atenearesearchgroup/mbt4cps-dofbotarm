@@ -15,6 +15,10 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.operations.Operation#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.operations.Operation#getSEP1 <em>SEP1</em>}</li>
+ *   <li>{@link org.xtext.operations.Operation#getSEP2 <em>SEP2</em>}</li>
+ *   <li>{@link org.xtext.operations.Operation#getTIME <em>TIME</em>}</li>
+ *   <li>{@link org.xtext.operations.Operation#getEND <em>END</em>}</li>
  * </ul>
  *
  * @see org.xtext.operations.OperationsPackage#getOperation()
@@ -44,5 +48,93 @@ public interface Operation extends EObject
    * @generated
    */
   void setName(String value);
+
+  /**
+   * Returns the value of the '<em><b>SEP1</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>SEP1</em>' attribute.
+   * @see #setSEP1(String)
+   * @see org.xtext.operations.OperationsPackage#getOperation_SEP1()
+   * @model
+   * @generated
+   */
+  String getSEP1();
+
+  /**
+   * Sets the value of the '{@link org.xtext.operations.Operation#getSEP1 <em>SEP1</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>SEP1</em>' attribute.
+   * @see #getSEP1()
+   * @generated
+   */
+  void setSEP1(String value);
+
+  /**
+   * Returns the value of the '<em><b>SEP2</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>SEP2</em>' attribute.
+   * @see #setSEP2(String)
+   * @see org.xtext.operations.OperationsPackage#getOperation_SEP2()
+   * @model
+   * @generated
+   */
+  String getSEP2();
+
+  /**
+   * Sets the value of the '{@link org.xtext.operations.Operation#getSEP2 <em>SEP2</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>SEP2</em>' attribute.
+   * @see #getSEP2()
+   * @generated
+   */
+  void setSEP2(String value);
+
+  /**
+   * Returns the value of the '<em><b>TIME</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>TIME</em>' containment reference.
+   * @see #setTIME(time)
+   * @see org.xtext.operations.OperationsPackage#getOperation_TIME()
+   * @model containment="true"
+   * @generated
+   */
+  time getTIME();
+
+  /**
+   * Sets the value of the '{@link org.xtext.operations.Operation#getTIME <em>TIME</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>TIME</em>' containment reference.
+   * @see #getTIME()
+   * @generated
+   */
+  void setTIME(time value);
+
+  /**
+   * Returns the value of the '<em><b>END</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>END</em>' attribute.
+   * @see #setEND(String)
+   * @see org.xtext.operations.OperationsPackage#getOperation_END()
+   * @model
+   * @generated
+   */
+  String getEND();
+
+  /**
+   * Sets the value of the '{@link org.xtext.operations.Operation#getEND <em>END</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>END</em>' attribute.
+   * @see #getEND()
+   * @generated
+   */
+  void setEND(String value);
 
 } // Operation

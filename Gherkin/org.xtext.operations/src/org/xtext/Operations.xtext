@@ -2,23 +2,116 @@ grammar org.xtext.Operations with org.eclipse.xtext.common.Terminals
 
 generate operations "http://www.xtext.org/Operations"
 
-Operation:
-  rotateServoOperation | OperationalArm | NotLaterThan
+
+Initial:
+	OperationalArm 
 ;
 
-rotateServoOperation:
-	name = 'rotateServoOperation(' + INT + ',' + INT + ',' + INT + ')'
+Operation:
+  rotateServoOperation | rotateAllServosOperation
 ;
+
+Solution:
+	result
+;
+
+Conditions:
+	NotLaterThan | isAtSingleOperation | isAtOperation
+;
+
 
 OperationalArm:
-	name = 'OperationalArm(' + INT + ')'
+	name = 'OperationalArm('
+	TIME = time 
+	END = ')'
 ;
 
+
+rotateServoOperation:
+	name = 'rotateServoOperation('
+	SERVO = servo
+	SEP1 = ','
+	ANGLE = angle
+	SEP2 = ','
+	TIME = time
+	END = ')'	
+;
+
+
+rotateAllServosOperation:
+	name = 'rotateAllServosOperation('
+	ANGLE1 = angle	
+	SEP1 = ','
+	ANGLE2 = angle
+	SEP2 = ','
+	ANGLE3 = angle
+	SEP3 = ','
+	ANGLE4 = angle
+	SEP4 = ','
+	ANGLE5 = angle
+	SEP5 = ','
+	ANGLE6 = angle
+	SEP6 = ','
+	TIME = time
+	END = ')'
+;
+
+result:
+	name= 'result='
+	TIME = time
+;
 
 NotLaterThan:
-	name = 'NotLaterThan(' + INT + ')' + ' Query ' + 'isAtSingleOperation(' + INT + ',' + INT + ',' + INT + ')=' + 'True'
+	name = 'NotLaterThan('
+	TIME = time
+	SEP = ')'
+	QUERY = 'Query'
 ;
 
-Result:
-	name= 'result=' + INT
+isAtSingleOperation:
+	name = 'isAtSingleOperation('
+	SERVO = servo
+	SEP1 = ','
+	ANGLE = angle
+	SEP2 = ','
+	ANGLE_RES = angle_res
+	END = ')='
+	VALUE = 'True'	
 ;
+
+isAtOperation:
+	name = 'isAtOperation('
+	ANGLE1 = angle	
+	SEP1 = ','
+	ANGLE2 = angle
+	SEP2 = ','
+	ANGLE3 = angle
+	SEP3 = ','
+	ANGLE4 = angle
+	SEP4 = ','
+	ANGLE5 = angle
+	SEP5 = ','
+	ANGLE6 = angle
+	SEP6 = ','
+	ANGLE_RES = angle_res
+	END = ')='
+	VALUE = 'True'
+;
+
+
+time:
+	TIME = INT
+;
+
+servo:
+	SERVO = INT
+;
+
+angle:
+	ANGLE = INT
+;
+
+angle_res:
+	ANGLE_RES = INT
+;
+

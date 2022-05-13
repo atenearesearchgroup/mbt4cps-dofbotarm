@@ -22,197 +22,775 @@ import org.eclipse.xtext.service.GrammarProvider;
 @Singleton
 public class OperationsGrammarAccess extends AbstractElementFinder.AbstractGrammarElementFinder {
 	
+	public class InitialElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Operations.Initial");
+		private final RuleCall cOperationalArmParserRuleCall = (RuleCall)rule.eContents().get(1);
+		
+		//Initial:
+		//    OperationalArm
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//OperationalArm
+		public RuleCall getOperationalArmParserRuleCall() { return cOperationalArmParserRuleCall; }
+	}
 	public class OperationElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Operations.Operation");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cRotateServoOperationParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cOperationalArmParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cNotLaterThanParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cRotateAllServosOperationParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
 		//Operation:
-		//  rotateServoOperation | OperationalArm | NotLaterThan
+		//  rotateServoOperation | rotateAllServosOperation
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//rotateServoOperation | OperationalArm | NotLaterThan
+		//rotateServoOperation | rotateAllServosOperation
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//rotateServoOperation
 		public RuleCall getRotateServoOperationParserRuleCall_0() { return cRotateServoOperationParserRuleCall_0; }
 		
-		//OperationalArm
-		public RuleCall getOperationalArmParserRuleCall_1() { return cOperationalArmParserRuleCall_1; }
-		
-		//NotLaterThan
-		public RuleCall getNotLaterThanParserRuleCall_2() { return cNotLaterThanParserRuleCall_2; }
+		//rotateAllServosOperation
+		public RuleCall getRotateAllServosOperationParserRuleCall_1() { return cRotateAllServosOperationParserRuleCall_1; }
 	}
-	public class RotateServoOperationElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Operations.rotateServoOperation");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cNameRotateServoOperationKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
-		private final RuleCall cINTTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
-		private final Keyword cCommaKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final RuleCall cINTTerminalRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
-		private final Keyword cCommaKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final RuleCall cINTTerminalRuleCall_5 = (RuleCall)cGroup.eContents().get(5);
-		private final Keyword cRightParenthesisKeyword_6 = (Keyword)cGroup.eContents().get(6);
+	public class SolutionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Operations.Solution");
+		private final RuleCall cResultParserRuleCall = (RuleCall)rule.eContents().get(1);
 		
-		//rotateServoOperation:
-		//    name = 'rotateServoOperation(' + INT + ',' + INT + ',' + INT + ')'
+		//Solution:
+		//    result
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//name = 'rotateServoOperation(' + INT + ',' + INT + ',' + INT + ')'
-		public Group getGroup() { return cGroup; }
+		//result
+		public RuleCall getResultParserRuleCall() { return cResultParserRuleCall; }
+	}
+	public class ConditionsElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Operations.Conditions");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cNotLaterThanParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cIsAtSingleOperationParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cIsAtOperationParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		
-		//name = 'rotateServoOperation(' +
-		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+		//Conditions:
+		//    NotLaterThan | isAtSingleOperation | isAtOperation
+		//;
+		@Override public ParserRule getRule() { return rule; }
 		
-		//'rotateServoOperation('
-		public Keyword getNameRotateServoOperationKeyword_0_0() { return cNameRotateServoOperationKeyword_0_0; }
+		//NotLaterThan | isAtSingleOperation | isAtOperation
+		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//INT +
-		public RuleCall getINTTerminalRuleCall_1() { return cINTTerminalRuleCall_1; }
+		//NotLaterThan
+		public RuleCall getNotLaterThanParserRuleCall_0() { return cNotLaterThanParserRuleCall_0; }
 		
-		//',' +
-		public Keyword getCommaKeyword_2() { return cCommaKeyword_2; }
+		//isAtSingleOperation
+		public RuleCall getIsAtSingleOperationParserRuleCall_1() { return cIsAtSingleOperationParserRuleCall_1; }
 		
-		//INT +
-		public RuleCall getINTTerminalRuleCall_3() { return cINTTerminalRuleCall_3; }
-		
-		//',' +
-		public Keyword getCommaKeyword_4() { return cCommaKeyword_4; }
-		
-		//INT +
-		public RuleCall getINTTerminalRuleCall_5() { return cINTTerminalRuleCall_5; }
-		
-		//')'
-		public Keyword getRightParenthesisKeyword_6() { return cRightParenthesisKeyword_6; }
+		//isAtOperation
+		public RuleCall getIsAtOperationParserRuleCall_2() { return cIsAtOperationParserRuleCall_2; }
 	}
 	public class OperationalArmElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Operations.OperationalArm");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final Keyword cNameOperationalArmKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
-		private final RuleCall cINTTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
-		private final Keyword cRightParenthesisKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cTIMEAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cTIMETimeParserRuleCall_1_0 = (RuleCall)cTIMEAssignment_1.eContents().get(0);
+		private final Assignment cENDAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final Keyword cENDRightParenthesisKeyword_2_0 = (Keyword)cENDAssignment_2.eContents().get(0);
 		
 		//OperationalArm:
-		//    name = 'OperationalArm(' + INT + ')'
+		//    name = 'OperationalArm('
+		//    TIME = time
+		//    END = ')'
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//name = 'OperationalArm(' + INT + ')'
+		//name = 'OperationalArm('
+		//TIME = time
+		//END = ')'
 		public Group getGroup() { return cGroup; }
 		
-		//name = 'OperationalArm(' +
+		//name = 'OperationalArm('
 		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
 		
 		//'OperationalArm('
 		public Keyword getNameOperationalArmKeyword_0_0() { return cNameOperationalArmKeyword_0_0; }
 		
-		//INT +
-		public RuleCall getINTTerminalRuleCall_1() { return cINTTerminalRuleCall_1; }
+		//TIME = time
+		public Assignment getTIMEAssignment_1() { return cTIMEAssignment_1; }
+		
+		//time
+		public RuleCall getTIMETimeParserRuleCall_1_0() { return cTIMETimeParserRuleCall_1_0; }
+		
+		//END = ')'
+		public Assignment getENDAssignment_2() { return cENDAssignment_2; }
 		
 		//')'
-		public Keyword getRightParenthesisKeyword_2() { return cRightParenthesisKeyword_2; }
+		public Keyword getENDRightParenthesisKeyword_2_0() { return cENDRightParenthesisKeyword_2_0; }
+	}
+	public class RotateServoOperationElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Operations.rotateServoOperation");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cNameRotateServoOperationKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
+		private final Assignment cSERVOAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cSERVOServoParserRuleCall_1_0 = (RuleCall)cSERVOAssignment_1.eContents().get(0);
+		private final Assignment cSEP1Assignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final Keyword cSEP1CommaKeyword_2_0 = (Keyword)cSEP1Assignment_2.eContents().get(0);
+		private final Assignment cANGLEAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cANGLEAngleParserRuleCall_3_0 = (RuleCall)cANGLEAssignment_3.eContents().get(0);
+		private final Assignment cSEP2Assignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final Keyword cSEP2CommaKeyword_4_0 = (Keyword)cSEP2Assignment_4.eContents().get(0);
+		private final Assignment cTIMEAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cTIMETimeParserRuleCall_5_0 = (RuleCall)cTIMEAssignment_5.eContents().get(0);
+		private final Assignment cENDAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final Keyword cENDRightParenthesisKeyword_6_0 = (Keyword)cENDAssignment_6.eContents().get(0);
+		
+		//rotateServoOperation:
+		//    name = 'rotateServoOperation('
+		//    SERVO = servo
+		//    SEP1 = ','
+		//    ANGLE = angle
+		//    SEP2 = ','
+		//    TIME = time
+		//    END = ')'
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//name = 'rotateServoOperation('
+		//SERVO = servo
+		//SEP1 = ','
+		//ANGLE = angle
+		//SEP2 = ','
+		//TIME = time
+		//END = ')'
+		public Group getGroup() { return cGroup; }
+		
+		//name = 'rotateServoOperation('
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+		
+		//'rotateServoOperation('
+		public Keyword getNameRotateServoOperationKeyword_0_0() { return cNameRotateServoOperationKeyword_0_0; }
+		
+		//SERVO = servo
+		public Assignment getSERVOAssignment_1() { return cSERVOAssignment_1; }
+		
+		//servo
+		public RuleCall getSERVOServoParserRuleCall_1_0() { return cSERVOServoParserRuleCall_1_0; }
+		
+		//SEP1 = ','
+		public Assignment getSEP1Assignment_2() { return cSEP1Assignment_2; }
+		
+		//','
+		public Keyword getSEP1CommaKeyword_2_0() { return cSEP1CommaKeyword_2_0; }
+		
+		//ANGLE = angle
+		public Assignment getANGLEAssignment_3() { return cANGLEAssignment_3; }
+		
+		//angle
+		public RuleCall getANGLEAngleParserRuleCall_3_0() { return cANGLEAngleParserRuleCall_3_0; }
+		
+		//SEP2 = ','
+		public Assignment getSEP2Assignment_4() { return cSEP2Assignment_4; }
+		
+		//','
+		public Keyword getSEP2CommaKeyword_4_0() { return cSEP2CommaKeyword_4_0; }
+		
+		//TIME = time
+		public Assignment getTIMEAssignment_5() { return cTIMEAssignment_5; }
+		
+		//time
+		public RuleCall getTIMETimeParserRuleCall_5_0() { return cTIMETimeParserRuleCall_5_0; }
+		
+		//END = ')'
+		public Assignment getENDAssignment_6() { return cENDAssignment_6; }
+		
+		//')'
+		public Keyword getENDRightParenthesisKeyword_6_0() { return cENDRightParenthesisKeyword_6_0; }
+	}
+	public class RotateAllServosOperationElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Operations.rotateAllServosOperation");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cNameRotateAllServosOperationKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
+		private final Assignment cANGLE1Assignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cANGLE1AngleParserRuleCall_1_0 = (RuleCall)cANGLE1Assignment_1.eContents().get(0);
+		private final Assignment cSEP1Assignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final Keyword cSEP1CommaKeyword_2_0 = (Keyword)cSEP1Assignment_2.eContents().get(0);
+		private final Assignment cANGLE2Assignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cANGLE2AngleParserRuleCall_3_0 = (RuleCall)cANGLE2Assignment_3.eContents().get(0);
+		private final Assignment cSEP2Assignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final Keyword cSEP2CommaKeyword_4_0 = (Keyword)cSEP2Assignment_4.eContents().get(0);
+		private final Assignment cANGLE3Assignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cANGLE3AngleParserRuleCall_5_0 = (RuleCall)cANGLE3Assignment_5.eContents().get(0);
+		private final Assignment cSEP3Assignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final Keyword cSEP3CommaKeyword_6_0 = (Keyword)cSEP3Assignment_6.eContents().get(0);
+		private final Assignment cANGLE4Assignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cANGLE4AngleParserRuleCall_7_0 = (RuleCall)cANGLE4Assignment_7.eContents().get(0);
+		private final Assignment cSEP4Assignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final Keyword cSEP4CommaKeyword_8_0 = (Keyword)cSEP4Assignment_8.eContents().get(0);
+		private final Assignment cANGLE5Assignment_9 = (Assignment)cGroup.eContents().get(9);
+		private final RuleCall cANGLE5AngleParserRuleCall_9_0 = (RuleCall)cANGLE5Assignment_9.eContents().get(0);
+		private final Assignment cSEP5Assignment_10 = (Assignment)cGroup.eContents().get(10);
+		private final Keyword cSEP5CommaKeyword_10_0 = (Keyword)cSEP5Assignment_10.eContents().get(0);
+		private final Assignment cANGLE6Assignment_11 = (Assignment)cGroup.eContents().get(11);
+		private final RuleCall cANGLE6AngleParserRuleCall_11_0 = (RuleCall)cANGLE6Assignment_11.eContents().get(0);
+		private final Assignment cSEP6Assignment_12 = (Assignment)cGroup.eContents().get(12);
+		private final Keyword cSEP6CommaKeyword_12_0 = (Keyword)cSEP6Assignment_12.eContents().get(0);
+		private final Assignment cTIMEAssignment_13 = (Assignment)cGroup.eContents().get(13);
+		private final RuleCall cTIMETimeParserRuleCall_13_0 = (RuleCall)cTIMEAssignment_13.eContents().get(0);
+		private final Assignment cENDAssignment_14 = (Assignment)cGroup.eContents().get(14);
+		private final Keyword cENDRightParenthesisKeyword_14_0 = (Keyword)cENDAssignment_14.eContents().get(0);
+		
+		//rotateAllServosOperation:
+		//    name = 'rotateAllServosOperation('
+		//    ANGLE1 = angle
+		//    SEP1 = ','
+		//    ANGLE2 = angle
+		//    SEP2 = ','
+		//    ANGLE3 = angle
+		//    SEP3 = ','
+		//    ANGLE4 = angle
+		//    SEP4 = ','
+		//    ANGLE5 = angle
+		//    SEP5 = ','
+		//    ANGLE6 = angle
+		//    SEP6 = ','
+		//    TIME = time
+		//    END = ')'
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//name = 'rotateAllServosOperation('
+		//ANGLE1 = angle
+		//SEP1 = ','
+		//ANGLE2 = angle
+		//SEP2 = ','
+		//ANGLE3 = angle
+		//SEP3 = ','
+		//ANGLE4 = angle
+		//SEP4 = ','
+		//ANGLE5 = angle
+		//SEP5 = ','
+		//ANGLE6 = angle
+		//SEP6 = ','
+		//TIME = time
+		//END = ')'
+		public Group getGroup() { return cGroup; }
+		
+		//name = 'rotateAllServosOperation('
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+		
+		//'rotateAllServosOperation('
+		public Keyword getNameRotateAllServosOperationKeyword_0_0() { return cNameRotateAllServosOperationKeyword_0_0; }
+		
+		//ANGLE1 = angle
+		public Assignment getANGLE1Assignment_1() { return cANGLE1Assignment_1; }
+		
+		//angle
+		public RuleCall getANGLE1AngleParserRuleCall_1_0() { return cANGLE1AngleParserRuleCall_1_0; }
+		
+		//SEP1 = ','
+		public Assignment getSEP1Assignment_2() { return cSEP1Assignment_2; }
+		
+		//','
+		public Keyword getSEP1CommaKeyword_2_0() { return cSEP1CommaKeyword_2_0; }
+		
+		//ANGLE2 = angle
+		public Assignment getANGLE2Assignment_3() { return cANGLE2Assignment_3; }
+		
+		//angle
+		public RuleCall getANGLE2AngleParserRuleCall_3_0() { return cANGLE2AngleParserRuleCall_3_0; }
+		
+		//SEP2 = ','
+		public Assignment getSEP2Assignment_4() { return cSEP2Assignment_4; }
+		
+		//','
+		public Keyword getSEP2CommaKeyword_4_0() { return cSEP2CommaKeyword_4_0; }
+		
+		//ANGLE3 = angle
+		public Assignment getANGLE3Assignment_5() { return cANGLE3Assignment_5; }
+		
+		//angle
+		public RuleCall getANGLE3AngleParserRuleCall_5_0() { return cANGLE3AngleParserRuleCall_5_0; }
+		
+		//SEP3 = ','
+		public Assignment getSEP3Assignment_6() { return cSEP3Assignment_6; }
+		
+		//','
+		public Keyword getSEP3CommaKeyword_6_0() { return cSEP3CommaKeyword_6_0; }
+		
+		//ANGLE4 = angle
+		public Assignment getANGLE4Assignment_7() { return cANGLE4Assignment_7; }
+		
+		//angle
+		public RuleCall getANGLE4AngleParserRuleCall_7_0() { return cANGLE4AngleParserRuleCall_7_0; }
+		
+		//SEP4 = ','
+		public Assignment getSEP4Assignment_8() { return cSEP4Assignment_8; }
+		
+		//','
+		public Keyword getSEP4CommaKeyword_8_0() { return cSEP4CommaKeyword_8_0; }
+		
+		//ANGLE5 = angle
+		public Assignment getANGLE5Assignment_9() { return cANGLE5Assignment_9; }
+		
+		//angle
+		public RuleCall getANGLE5AngleParserRuleCall_9_0() { return cANGLE5AngleParserRuleCall_9_0; }
+		
+		//SEP5 = ','
+		public Assignment getSEP5Assignment_10() { return cSEP5Assignment_10; }
+		
+		//','
+		public Keyword getSEP5CommaKeyword_10_0() { return cSEP5CommaKeyword_10_0; }
+		
+		//ANGLE6 = angle
+		public Assignment getANGLE6Assignment_11() { return cANGLE6Assignment_11; }
+		
+		//angle
+		public RuleCall getANGLE6AngleParserRuleCall_11_0() { return cANGLE6AngleParserRuleCall_11_0; }
+		
+		//SEP6 = ','
+		public Assignment getSEP6Assignment_12() { return cSEP6Assignment_12; }
+		
+		//','
+		public Keyword getSEP6CommaKeyword_12_0() { return cSEP6CommaKeyword_12_0; }
+		
+		//TIME = time
+		public Assignment getTIMEAssignment_13() { return cTIMEAssignment_13; }
+		
+		//time
+		public RuleCall getTIMETimeParserRuleCall_13_0() { return cTIMETimeParserRuleCall_13_0; }
+		
+		//END = ')'
+		public Assignment getENDAssignment_14() { return cENDAssignment_14; }
+		
+		//')'
+		public Keyword getENDRightParenthesisKeyword_14_0() { return cENDRightParenthesisKeyword_14_0; }
+	}
+	public class ResultElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Operations.result");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cNameResultKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
+		private final Assignment cTIMEAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cTIMETimeParserRuleCall_1_0 = (RuleCall)cTIMEAssignment_1.eContents().get(0);
+		
+		//result:
+		//    name= 'result='
+		//    TIME = time
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//name= 'result='
+		//TIME = time
+		public Group getGroup() { return cGroup; }
+		
+		//name= 'result='
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+		
+		//'result='
+		public Keyword getNameResultKeyword_0_0() { return cNameResultKeyword_0_0; }
+		
+		//TIME = time
+		public Assignment getTIMEAssignment_1() { return cTIMEAssignment_1; }
+		
+		//time
+		public RuleCall getTIMETimeParserRuleCall_1_0() { return cTIMETimeParserRuleCall_1_0; }
 	}
 	public class NotLaterThanElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Operations.NotLaterThan");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final Keyword cNameNotLaterThanKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
-		private final RuleCall cINTTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
-		private final Keyword cRightParenthesisKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Keyword cQueryKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Keyword cIsAtSingleOperationKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final RuleCall cINTTerminalRuleCall_5 = (RuleCall)cGroup.eContents().get(5);
-		private final Keyword cCommaKeyword_6 = (Keyword)cGroup.eContents().get(6);
-		private final RuleCall cINTTerminalRuleCall_7 = (RuleCall)cGroup.eContents().get(7);
-		private final Keyword cCommaKeyword_8 = (Keyword)cGroup.eContents().get(8);
-		private final RuleCall cINTTerminalRuleCall_9 = (RuleCall)cGroup.eContents().get(9);
-		private final Keyword cRightParenthesisEqualsSignKeyword_10 = (Keyword)cGroup.eContents().get(10);
-		private final Keyword cTrueKeyword_11 = (Keyword)cGroup.eContents().get(11);
+		private final Assignment cTIMEAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cTIMETimeParserRuleCall_1_0 = (RuleCall)cTIMEAssignment_1.eContents().get(0);
+		private final Assignment cSEPAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final Keyword cSEPRightParenthesisKeyword_2_0 = (Keyword)cSEPAssignment_2.eContents().get(0);
+		private final Assignment cQUERYAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final Keyword cQUERYQueryKeyword_3_0 = (Keyword)cQUERYAssignment_3.eContents().get(0);
 		
 		//NotLaterThan:
-		//    name = 'NotLaterThan(' + INT + ')' + ' Query ' + 'isAtSingleOperation(' + INT + ',' + INT + ',' + INT + ')=' + 'True'
+		//    name = 'NotLaterThan('
+		//    TIME = time
+		//    SEP = ')'
+		//    QUERY = 'Query'
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//name = 'NotLaterThan(' + INT + ')' + ' Query ' + 'isAtSingleOperation(' + INT + ',' + INT + ',' + INT + ')=' + 'True'
+		//name = 'NotLaterThan('
+		//TIME = time
+		//SEP = ')'
+		//QUERY = 'Query'
 		public Group getGroup() { return cGroup; }
 		
-		//name = 'NotLaterThan(' +
+		//name = 'NotLaterThan('
 		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
 		
 		//'NotLaterThan('
 		public Keyword getNameNotLaterThanKeyword_0_0() { return cNameNotLaterThanKeyword_0_0; }
 		
-		//INT +
-		public RuleCall getINTTerminalRuleCall_1() { return cINTTerminalRuleCall_1; }
+		//TIME = time
+		public Assignment getTIMEAssignment_1() { return cTIMEAssignment_1; }
 		
-		//')' +
-		public Keyword getRightParenthesisKeyword_2() { return cRightParenthesisKeyword_2; }
+		//time
+		public RuleCall getTIMETimeParserRuleCall_1_0() { return cTIMETimeParserRuleCall_1_0; }
 		
-		//' Query ' +
-		public Keyword getQueryKeyword_3() { return cQueryKeyword_3; }
+		//SEP = ')'
+		public Assignment getSEPAssignment_2() { return cSEPAssignment_2; }
 		
-		//'isAtSingleOperation(' +
-		public Keyword getIsAtSingleOperationKeyword_4() { return cIsAtSingleOperationKeyword_4; }
+		//')'
+		public Keyword getSEPRightParenthesisKeyword_2_0() { return cSEPRightParenthesisKeyword_2_0; }
 		
-		//INT +
-		public RuleCall getINTTerminalRuleCall_5() { return cINTTerminalRuleCall_5; }
+		//QUERY = 'Query'
+		public Assignment getQUERYAssignment_3() { return cQUERYAssignment_3; }
 		
-		//',' +
-		public Keyword getCommaKeyword_6() { return cCommaKeyword_6; }
-		
-		//INT +
-		public RuleCall getINTTerminalRuleCall_7() { return cINTTerminalRuleCall_7; }
-		
-		//',' +
-		public Keyword getCommaKeyword_8() { return cCommaKeyword_8; }
-		
-		//INT +
-		public RuleCall getINTTerminalRuleCall_9() { return cINTTerminalRuleCall_9; }
-		
-		//')=' +
-		public Keyword getRightParenthesisEqualsSignKeyword_10() { return cRightParenthesisEqualsSignKeyword_10; }
-		
-		//'True'
-		public Keyword getTrueKeyword_11() { return cTrueKeyword_11; }
+		//'Query'
+		public Keyword getQUERYQueryKeyword_3_0() { return cQUERYQueryKeyword_3_0; }
 	}
-	public class ResultElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Operations.Result");
+	public class IsAtSingleOperationElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Operations.isAtSingleOperation");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cNameResultKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
-		private final RuleCall cINTTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Keyword cNameIsAtSingleOperationKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
+		private final Assignment cSERVOAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cSERVOServoParserRuleCall_1_0 = (RuleCall)cSERVOAssignment_1.eContents().get(0);
+		private final Assignment cSEP1Assignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final Keyword cSEP1CommaKeyword_2_0 = (Keyword)cSEP1Assignment_2.eContents().get(0);
+		private final Assignment cANGLEAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cANGLEAngleParserRuleCall_3_0 = (RuleCall)cANGLEAssignment_3.eContents().get(0);
+		private final Assignment cSEP2Assignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final Keyword cSEP2CommaKeyword_4_0 = (Keyword)cSEP2Assignment_4.eContents().get(0);
+		private final Assignment cANGLE_RESAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cANGLE_RESAngle_resParserRuleCall_5_0 = (RuleCall)cANGLE_RESAssignment_5.eContents().get(0);
+		private final Assignment cENDAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final Keyword cENDRightParenthesisEqualsSignKeyword_6_0 = (Keyword)cENDAssignment_6.eContents().get(0);
+		private final Assignment cVALUEAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final Keyword cVALUETrueKeyword_7_0 = (Keyword)cVALUEAssignment_7.eContents().get(0);
 		
-		//Result:
-		//    name= 'result=' + INT
+		//isAtSingleOperation:
+		//    name = 'isAtSingleOperation('
+		//    SERVO = servo
+		//    SEP1 = ','
+		//    ANGLE = angle
+		//    SEP2 = ','
+		//    ANGLE_RES = angle_res
+		//    END = ')='
+		//    VALUE = 'True'
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//name= 'result=' + INT
+		//name = 'isAtSingleOperation('
+		//SERVO = servo
+		//SEP1 = ','
+		//ANGLE = angle
+		//SEP2 = ','
+		//ANGLE_RES = angle_res
+		//END = ')='
+		//VALUE = 'True'
 		public Group getGroup() { return cGroup; }
 		
-		//name= 'result=' +
+		//name = 'isAtSingleOperation('
 		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
 		
-		//'result='
-		public Keyword getNameResultKeyword_0_0() { return cNameResultKeyword_0_0; }
+		//'isAtSingleOperation('
+		public Keyword getNameIsAtSingleOperationKeyword_0_0() { return cNameIsAtSingleOperationKeyword_0_0; }
+		
+		//SERVO = servo
+		public Assignment getSERVOAssignment_1() { return cSERVOAssignment_1; }
+		
+		//servo
+		public RuleCall getSERVOServoParserRuleCall_1_0() { return cSERVOServoParserRuleCall_1_0; }
+		
+		//SEP1 = ','
+		public Assignment getSEP1Assignment_2() { return cSEP1Assignment_2; }
+		
+		//','
+		public Keyword getSEP1CommaKeyword_2_0() { return cSEP1CommaKeyword_2_0; }
+		
+		//ANGLE = angle
+		public Assignment getANGLEAssignment_3() { return cANGLEAssignment_3; }
+		
+		//angle
+		public RuleCall getANGLEAngleParserRuleCall_3_0() { return cANGLEAngleParserRuleCall_3_0; }
+		
+		//SEP2 = ','
+		public Assignment getSEP2Assignment_4() { return cSEP2Assignment_4; }
+		
+		//','
+		public Keyword getSEP2CommaKeyword_4_0() { return cSEP2CommaKeyword_4_0; }
+		
+		//ANGLE_RES = angle_res
+		public Assignment getANGLE_RESAssignment_5() { return cANGLE_RESAssignment_5; }
+		
+		//angle_res
+		public RuleCall getANGLE_RESAngle_resParserRuleCall_5_0() { return cANGLE_RESAngle_resParserRuleCall_5_0; }
+		
+		//END = ')='
+		public Assignment getENDAssignment_6() { return cENDAssignment_6; }
+		
+		//')='
+		public Keyword getENDRightParenthesisEqualsSignKeyword_6_0() { return cENDRightParenthesisEqualsSignKeyword_6_0; }
+		
+		//VALUE = 'True'
+		public Assignment getVALUEAssignment_7() { return cVALUEAssignment_7; }
+		
+		//'True'
+		public Keyword getVALUETrueKeyword_7_0() { return cVALUETrueKeyword_7_0; }
+	}
+	public class IsAtOperationElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Operations.isAtOperation");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cNameIsAtOperationKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
+		private final Assignment cANGLE1Assignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cANGLE1AngleParserRuleCall_1_0 = (RuleCall)cANGLE1Assignment_1.eContents().get(0);
+		private final Assignment cSEP1Assignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final Keyword cSEP1CommaKeyword_2_0 = (Keyword)cSEP1Assignment_2.eContents().get(0);
+		private final Assignment cANGLE2Assignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cANGLE2AngleParserRuleCall_3_0 = (RuleCall)cANGLE2Assignment_3.eContents().get(0);
+		private final Assignment cSEP2Assignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final Keyword cSEP2CommaKeyword_4_0 = (Keyword)cSEP2Assignment_4.eContents().get(0);
+		private final Assignment cANGLE3Assignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cANGLE3AngleParserRuleCall_5_0 = (RuleCall)cANGLE3Assignment_5.eContents().get(0);
+		private final Assignment cSEP3Assignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final Keyword cSEP3CommaKeyword_6_0 = (Keyword)cSEP3Assignment_6.eContents().get(0);
+		private final Assignment cANGLE4Assignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cANGLE4AngleParserRuleCall_7_0 = (RuleCall)cANGLE4Assignment_7.eContents().get(0);
+		private final Assignment cSEP4Assignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final Keyword cSEP4CommaKeyword_8_0 = (Keyword)cSEP4Assignment_8.eContents().get(0);
+		private final Assignment cANGLE5Assignment_9 = (Assignment)cGroup.eContents().get(9);
+		private final RuleCall cANGLE5AngleParserRuleCall_9_0 = (RuleCall)cANGLE5Assignment_9.eContents().get(0);
+		private final Assignment cSEP5Assignment_10 = (Assignment)cGroup.eContents().get(10);
+		private final Keyword cSEP5CommaKeyword_10_0 = (Keyword)cSEP5Assignment_10.eContents().get(0);
+		private final Assignment cANGLE6Assignment_11 = (Assignment)cGroup.eContents().get(11);
+		private final RuleCall cANGLE6AngleParserRuleCall_11_0 = (RuleCall)cANGLE6Assignment_11.eContents().get(0);
+		private final Assignment cSEP6Assignment_12 = (Assignment)cGroup.eContents().get(12);
+		private final Keyword cSEP6CommaKeyword_12_0 = (Keyword)cSEP6Assignment_12.eContents().get(0);
+		private final Assignment cANGLE_RESAssignment_13 = (Assignment)cGroup.eContents().get(13);
+		private final RuleCall cANGLE_RESAngle_resParserRuleCall_13_0 = (RuleCall)cANGLE_RESAssignment_13.eContents().get(0);
+		private final Assignment cENDAssignment_14 = (Assignment)cGroup.eContents().get(14);
+		private final Keyword cENDRightParenthesisEqualsSignKeyword_14_0 = (Keyword)cENDAssignment_14.eContents().get(0);
+		private final Assignment cVALUEAssignment_15 = (Assignment)cGroup.eContents().get(15);
+		private final Keyword cVALUETrueKeyword_15_0 = (Keyword)cVALUEAssignment_15.eContents().get(0);
+		
+		//isAtOperation:
+		//    name = 'isAtOperation('
+		//    ANGLE1 = angle
+		//    SEP1 = ','
+		//    ANGLE2 = angle
+		//    SEP2 = ','
+		//    ANGLE3 = angle
+		//    SEP3 = ','
+		//    ANGLE4 = angle
+		//    SEP4 = ','
+		//    ANGLE5 = angle
+		//    SEP5 = ','
+		//    ANGLE6 = angle
+		//    SEP6 = ','
+		//    ANGLE_RES = angle_res
+		//    END = ')='
+		//    VALUE = 'True'
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//name = 'isAtOperation('
+		//ANGLE1 = angle
+		//SEP1 = ','
+		//ANGLE2 = angle
+		//SEP2 = ','
+		//ANGLE3 = angle
+		//SEP3 = ','
+		//ANGLE4 = angle
+		//SEP4 = ','
+		//ANGLE5 = angle
+		//SEP5 = ','
+		//ANGLE6 = angle
+		//SEP6 = ','
+		//ANGLE_RES = angle_res
+		//END = ')='
+		//VALUE = 'True'
+		public Group getGroup() { return cGroup; }
+		
+		//name = 'isAtOperation('
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+		
+		//'isAtOperation('
+		public Keyword getNameIsAtOperationKeyword_0_0() { return cNameIsAtOperationKeyword_0_0; }
+		
+		//ANGLE1 = angle
+		public Assignment getANGLE1Assignment_1() { return cANGLE1Assignment_1; }
+		
+		//angle
+		public RuleCall getANGLE1AngleParserRuleCall_1_0() { return cANGLE1AngleParserRuleCall_1_0; }
+		
+		//SEP1 = ','
+		public Assignment getSEP1Assignment_2() { return cSEP1Assignment_2; }
+		
+		//','
+		public Keyword getSEP1CommaKeyword_2_0() { return cSEP1CommaKeyword_2_0; }
+		
+		//ANGLE2 = angle
+		public Assignment getANGLE2Assignment_3() { return cANGLE2Assignment_3; }
+		
+		//angle
+		public RuleCall getANGLE2AngleParserRuleCall_3_0() { return cANGLE2AngleParserRuleCall_3_0; }
+		
+		//SEP2 = ','
+		public Assignment getSEP2Assignment_4() { return cSEP2Assignment_4; }
+		
+		//','
+		public Keyword getSEP2CommaKeyword_4_0() { return cSEP2CommaKeyword_4_0; }
+		
+		//ANGLE3 = angle
+		public Assignment getANGLE3Assignment_5() { return cANGLE3Assignment_5; }
+		
+		//angle
+		public RuleCall getANGLE3AngleParserRuleCall_5_0() { return cANGLE3AngleParserRuleCall_5_0; }
+		
+		//SEP3 = ','
+		public Assignment getSEP3Assignment_6() { return cSEP3Assignment_6; }
+		
+		//','
+		public Keyword getSEP3CommaKeyword_6_0() { return cSEP3CommaKeyword_6_0; }
+		
+		//ANGLE4 = angle
+		public Assignment getANGLE4Assignment_7() { return cANGLE4Assignment_7; }
+		
+		//angle
+		public RuleCall getANGLE4AngleParserRuleCall_7_0() { return cANGLE4AngleParserRuleCall_7_0; }
+		
+		//SEP4 = ','
+		public Assignment getSEP4Assignment_8() { return cSEP4Assignment_8; }
+		
+		//','
+		public Keyword getSEP4CommaKeyword_8_0() { return cSEP4CommaKeyword_8_0; }
+		
+		//ANGLE5 = angle
+		public Assignment getANGLE5Assignment_9() { return cANGLE5Assignment_9; }
+		
+		//angle
+		public RuleCall getANGLE5AngleParserRuleCall_9_0() { return cANGLE5AngleParserRuleCall_9_0; }
+		
+		//SEP5 = ','
+		public Assignment getSEP5Assignment_10() { return cSEP5Assignment_10; }
+		
+		//','
+		public Keyword getSEP5CommaKeyword_10_0() { return cSEP5CommaKeyword_10_0; }
+		
+		//ANGLE6 = angle
+		public Assignment getANGLE6Assignment_11() { return cANGLE6Assignment_11; }
+		
+		//angle
+		public RuleCall getANGLE6AngleParserRuleCall_11_0() { return cANGLE6AngleParserRuleCall_11_0; }
+		
+		//SEP6 = ','
+		public Assignment getSEP6Assignment_12() { return cSEP6Assignment_12; }
+		
+		//','
+		public Keyword getSEP6CommaKeyword_12_0() { return cSEP6CommaKeyword_12_0; }
+		
+		//ANGLE_RES = angle_res
+		public Assignment getANGLE_RESAssignment_13() { return cANGLE_RESAssignment_13; }
+		
+		//angle_res
+		public RuleCall getANGLE_RESAngle_resParserRuleCall_13_0() { return cANGLE_RESAngle_resParserRuleCall_13_0; }
+		
+		//END = ')='
+		public Assignment getENDAssignment_14() { return cENDAssignment_14; }
+		
+		//')='
+		public Keyword getENDRightParenthesisEqualsSignKeyword_14_0() { return cENDRightParenthesisEqualsSignKeyword_14_0; }
+		
+		//VALUE = 'True'
+		public Assignment getVALUEAssignment_15() { return cVALUEAssignment_15; }
+		
+		//'True'
+		public Keyword getVALUETrueKeyword_15_0() { return cVALUETrueKeyword_15_0; }
+	}
+	public class TimeElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Operations.time");
+		private final Assignment cTIMEAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cTIMEINTTerminalRuleCall_0 = (RuleCall)cTIMEAssignment.eContents().get(0);
+		
+		//time:
+		//    TIME = INT
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//TIME = INT
+		public Assignment getTIMEAssignment() { return cTIMEAssignment; }
 		
 		//INT
-		public RuleCall getINTTerminalRuleCall_1() { return cINTTerminalRuleCall_1; }
+		public RuleCall getTIMEINTTerminalRuleCall_0() { return cTIMEINTTerminalRuleCall_0; }
+	}
+	public class ServoElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Operations.servo");
+		private final Assignment cSERVOAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cSERVOINTTerminalRuleCall_0 = (RuleCall)cSERVOAssignment.eContents().get(0);
+		
+		//servo:
+		//    SERVO = INT
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//SERVO = INT
+		public Assignment getSERVOAssignment() { return cSERVOAssignment; }
+		
+		//INT
+		public RuleCall getSERVOINTTerminalRuleCall_0() { return cSERVOINTTerminalRuleCall_0; }
+	}
+	public class AngleElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Operations.angle");
+		private final Assignment cANGLEAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cANGLEINTTerminalRuleCall_0 = (RuleCall)cANGLEAssignment.eContents().get(0);
+		
+		//angle:
+		//    ANGLE = INT
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//ANGLE = INT
+		public Assignment getANGLEAssignment() { return cANGLEAssignment; }
+		
+		//INT
+		public RuleCall getANGLEINTTerminalRuleCall_0() { return cANGLEINTTerminalRuleCall_0; }
+	}
+	public class Angle_resElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Operations.angle_res");
+		private final Assignment cANGLE_RESAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cANGLE_RESINTTerminalRuleCall_0 = (RuleCall)cANGLE_RESAssignment.eContents().get(0);
+		
+		//angle_res:
+		//    ANGLE_RES = INT
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//ANGLE_RES = INT
+		public Assignment getANGLE_RESAssignment() { return cANGLE_RESAssignment; }
+		
+		//INT
+		public RuleCall getANGLE_RESINTTerminalRuleCall_0() { return cANGLE_RESINTTerminalRuleCall_0; }
 	}
 	
 	
+	private final InitialElements pInitial;
 	private final OperationElements pOperation;
-	private final RotateServoOperationElements pRotateServoOperation;
+	private final SolutionElements pSolution;
+	private final ConditionsElements pConditions;
 	private final OperationalArmElements pOperationalArm;
-	private final NotLaterThanElements pNotLaterThan;
+	private final RotateServoOperationElements pRotateServoOperation;
+	private final RotateAllServosOperationElements pRotateAllServosOperation;
 	private final ResultElements pResult;
+	private final NotLaterThanElements pNotLaterThan;
+	private final IsAtSingleOperationElements pIsAtSingleOperation;
+	private final IsAtOperationElements pIsAtOperation;
+	private final TimeElements pTime;
+	private final ServoElements pServo;
+	private final AngleElements pAngle;
+	private final Angle_resElements pAngle_res;
 	
 	private final Grammar grammar;
 	
@@ -223,11 +801,21 @@ public class OperationsGrammarAccess extends AbstractElementFinder.AbstractGramm
 			TerminalsGrammarAccess gaTerminals) {
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
+		this.pInitial = new InitialElements();
 		this.pOperation = new OperationElements();
-		this.pRotateServoOperation = new RotateServoOperationElements();
+		this.pSolution = new SolutionElements();
+		this.pConditions = new ConditionsElements();
 		this.pOperationalArm = new OperationalArmElements();
-		this.pNotLaterThan = new NotLaterThanElements();
+		this.pRotateServoOperation = new RotateServoOperationElements();
+		this.pRotateAllServosOperation = new RotateAllServosOperationElements();
 		this.pResult = new ResultElements();
+		this.pNotLaterThan = new NotLaterThanElements();
+		this.pIsAtSingleOperation = new IsAtSingleOperationElements();
+		this.pIsAtOperation = new IsAtOperationElements();
+		this.pTime = new TimeElements();
+		this.pServo = new ServoElements();
+		this.pAngle = new AngleElements();
+		this.pAngle_res = new Angle_resElements();
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -257,8 +845,19 @@ public class OperationsGrammarAccess extends AbstractElementFinder.AbstractGramm
 	}
 
 	
+	//Initial:
+	//    OperationalArm
+	//;
+	public InitialElements getInitialAccess() {
+		return pInitial;
+	}
+	
+	public ParserRule getInitialRule() {
+		return getInitialAccess().getRule();
+	}
+	
 	//Operation:
-	//  rotateServoOperation | OperationalArm | NotLaterThan
+	//  rotateServoOperation | rotateAllServosOperation
 	//;
 	public OperationElements getOperationAccess() {
 		return pOperation;
@@ -268,19 +867,32 @@ public class OperationsGrammarAccess extends AbstractElementFinder.AbstractGramm
 		return getOperationAccess().getRule();
 	}
 	
-	//rotateServoOperation:
-	//    name = 'rotateServoOperation(' + INT + ',' + INT + ',' + INT + ')'
+	//Solution:
+	//    result
 	//;
-	public RotateServoOperationElements getRotateServoOperationAccess() {
-		return pRotateServoOperation;
+	public SolutionElements getSolutionAccess() {
+		return pSolution;
 	}
 	
-	public ParserRule getRotateServoOperationRule() {
-		return getRotateServoOperationAccess().getRule();
+	public ParserRule getSolutionRule() {
+		return getSolutionAccess().getRule();
+	}
+	
+	//Conditions:
+	//    NotLaterThan | isAtSingleOperation | isAtOperation
+	//;
+	public ConditionsElements getConditionsAccess() {
+		return pConditions;
+	}
+	
+	public ParserRule getConditionsRule() {
+		return getConditionsAccess().getRule();
 	}
 	
 	//OperationalArm:
-	//    name = 'OperationalArm(' + INT + ')'
+	//    name = 'OperationalArm('
+	//    TIME = time
+	//    END = ')'
 	//;
 	public OperationalArmElements getOperationalArmAccess() {
 		return pOperationalArm;
@@ -290,8 +902,65 @@ public class OperationsGrammarAccess extends AbstractElementFinder.AbstractGramm
 		return getOperationalArmAccess().getRule();
 	}
 	
+	//rotateServoOperation:
+	//    name = 'rotateServoOperation('
+	//    SERVO = servo
+	//    SEP1 = ','
+	//    ANGLE = angle
+	//    SEP2 = ','
+	//    TIME = time
+	//    END = ')'
+	//;
+	public RotateServoOperationElements getRotateServoOperationAccess() {
+		return pRotateServoOperation;
+	}
+	
+	public ParserRule getRotateServoOperationRule() {
+		return getRotateServoOperationAccess().getRule();
+	}
+	
+	//rotateAllServosOperation:
+	//    name = 'rotateAllServosOperation('
+	//    ANGLE1 = angle
+	//    SEP1 = ','
+	//    ANGLE2 = angle
+	//    SEP2 = ','
+	//    ANGLE3 = angle
+	//    SEP3 = ','
+	//    ANGLE4 = angle
+	//    SEP4 = ','
+	//    ANGLE5 = angle
+	//    SEP5 = ','
+	//    ANGLE6 = angle
+	//    SEP6 = ','
+	//    TIME = time
+	//    END = ')'
+	//;
+	public RotateAllServosOperationElements getRotateAllServosOperationAccess() {
+		return pRotateAllServosOperation;
+	}
+	
+	public ParserRule getRotateAllServosOperationRule() {
+		return getRotateAllServosOperationAccess().getRule();
+	}
+	
+	//result:
+	//    name= 'result='
+	//    TIME = time
+	//;
+	public ResultElements getResultAccess() {
+		return pResult;
+	}
+	
+	public ParserRule getResultRule() {
+		return getResultAccess().getRule();
+	}
+	
 	//NotLaterThan:
-	//    name = 'NotLaterThan(' + INT + ')' + ' Query ' + 'isAtSingleOperation(' + INT + ',' + INT + ',' + INT + ')=' + 'True'
+	//    name = 'NotLaterThan('
+	//    TIME = time
+	//    SEP = ')'
+	//    QUERY = 'Query'
 	//;
 	public NotLaterThanElements getNotLaterThanAccess() {
 		return pNotLaterThan;
@@ -301,15 +970,92 @@ public class OperationsGrammarAccess extends AbstractElementFinder.AbstractGramm
 		return getNotLaterThanAccess().getRule();
 	}
 	
-	//Result:
-	//    name= 'result=' + INT
+	//isAtSingleOperation:
+	//    name = 'isAtSingleOperation('
+	//    SERVO = servo
+	//    SEP1 = ','
+	//    ANGLE = angle
+	//    SEP2 = ','
+	//    ANGLE_RES = angle_res
+	//    END = ')='
+	//    VALUE = 'True'
 	//;
-	public ResultElements getResultAccess() {
-		return pResult;
+	public IsAtSingleOperationElements getIsAtSingleOperationAccess() {
+		return pIsAtSingleOperation;
 	}
 	
-	public ParserRule getResultRule() {
-		return getResultAccess().getRule();
+	public ParserRule getIsAtSingleOperationRule() {
+		return getIsAtSingleOperationAccess().getRule();
+	}
+	
+	//isAtOperation:
+	//    name = 'isAtOperation('
+	//    ANGLE1 = angle
+	//    SEP1 = ','
+	//    ANGLE2 = angle
+	//    SEP2 = ','
+	//    ANGLE3 = angle
+	//    SEP3 = ','
+	//    ANGLE4 = angle
+	//    SEP4 = ','
+	//    ANGLE5 = angle
+	//    SEP5 = ','
+	//    ANGLE6 = angle
+	//    SEP6 = ','
+	//    ANGLE_RES = angle_res
+	//    END = ')='
+	//    VALUE = 'True'
+	//;
+	public IsAtOperationElements getIsAtOperationAccess() {
+		return pIsAtOperation;
+	}
+	
+	public ParserRule getIsAtOperationRule() {
+		return getIsAtOperationAccess().getRule();
+	}
+	
+	//time:
+	//    TIME = INT
+	//;
+	public TimeElements getTimeAccess() {
+		return pTime;
+	}
+	
+	public ParserRule getTimeRule() {
+		return getTimeAccess().getRule();
+	}
+	
+	//servo:
+	//    SERVO = INT
+	//;
+	public ServoElements getServoAccess() {
+		return pServo;
+	}
+	
+	public ParserRule getServoRule() {
+		return getServoAccess().getRule();
+	}
+	
+	//angle:
+	//    ANGLE = INT
+	//;
+	public AngleElements getAngleAccess() {
+		return pAngle;
+	}
+	
+	public ParserRule getAngleRule() {
+		return getAngleAccess().getRule();
+	}
+	
+	//angle_res:
+	//    ANGLE_RES = INT
+	//;
+	public Angle_resElements getAngle_resAccess() {
+		return pAngle_res;
+	}
+	
+	public ParserRule getAngle_resRule() {
+		return getAngle_resAccess().getRule();
 	}
 	
 	//terminal ID: '^'?('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;

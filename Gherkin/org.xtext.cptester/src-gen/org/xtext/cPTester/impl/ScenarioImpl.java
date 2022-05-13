@@ -15,8 +15,10 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.xtext.cPTester.CPTesterPackage;
 import org.xtext.cPTester.Scenario;
 
+import org.xtext.operations.Conditions;
+import org.xtext.operations.Initial;
 import org.xtext.operations.Operation;
-import org.xtext.operations.Result;
+import org.xtext.operations.Solution;
 
 /**
  * <!-- begin-user-doc -->
@@ -65,7 +67,7 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
    * @generated
    * @ordered
    */
-  protected Operation when;
+  protected Initial when;
 
   /**
    * The cached value of the '{@link #getGiven() <em>Given</em>}' containment reference.
@@ -85,7 +87,7 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
    * @generated
    * @ordered
    */
-  protected Result then;
+  protected Solution then;
 
   /**
    * The cached value of the '{@link #getAnd1() <em>And1</em>}' containment reference.
@@ -95,7 +97,7 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
    * @generated
    * @ordered
    */
-  protected Operation and1;
+  protected Conditions and1;
 
   /**
    * <!-- begin-user-doc -->
@@ -149,7 +151,7 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
    * @generated
    */
   @Override
-  public Operation getWhen()
+  public Initial getWhen()
   {
     return when;
   }
@@ -159,9 +161,9 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetWhen(Operation newWhen, NotificationChain msgs)
+  public NotificationChain basicSetWhen(Initial newWhen, NotificationChain msgs)
   {
-    Operation oldWhen = when;
+    Initial oldWhen = when;
     when = newWhen;
     if (eNotificationRequired())
     {
@@ -177,7 +179,7 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
    * @generated
    */
   @Override
-  public void setWhen(Operation newWhen)
+  public void setWhen(Initial newWhen)
   {
     if (newWhen != when)
     {
@@ -249,7 +251,7 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
    * @generated
    */
   @Override
-  public Result getThen()
+  public Solution getThen()
   {
     return then;
   }
@@ -259,9 +261,9 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetThen(Result newThen, NotificationChain msgs)
+  public NotificationChain basicSetThen(Solution newThen, NotificationChain msgs)
   {
-    Result oldThen = then;
+    Solution oldThen = then;
     then = newThen;
     if (eNotificationRequired())
     {
@@ -277,7 +279,7 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
    * @generated
    */
   @Override
-  public void setThen(Result newThen)
+  public void setThen(Solution newThen)
   {
     if (newThen != then)
     {
@@ -299,7 +301,7 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
    * @generated
    */
   @Override
-  public Operation getAnd1()
+  public Conditions getAnd1()
   {
     return and1;
   }
@@ -309,9 +311,9 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetAnd1(Operation newAnd1, NotificationChain msgs)
+  public NotificationChain basicSetAnd1(Conditions newAnd1, NotificationChain msgs)
   {
-    Operation oldAnd1 = and1;
+    Conditions oldAnd1 = and1;
     and1 = newAnd1;
     if (eNotificationRequired())
     {
@@ -327,7 +329,7 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
    * @generated
    */
   @Override
-  public void setAnd1(Operation newAnd1)
+  public void setAnd1(Conditions newAnd1)
   {
     if (newAnd1 != and1)
     {
@@ -403,16 +405,16 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
         setName((String)newValue);
         return;
       case CPTesterPackage.SCENARIO__WHEN:
-        setWhen((Operation)newValue);
+        setWhen((Initial)newValue);
         return;
       case CPTesterPackage.SCENARIO__GIVEN:
         setGiven((Operation)newValue);
         return;
       case CPTesterPackage.SCENARIO__THEN:
-        setThen((Result)newValue);
+        setThen((Solution)newValue);
         return;
       case CPTesterPackage.SCENARIO__AND1:
-        setAnd1((Operation)newValue);
+        setAnd1((Conditions)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -432,16 +434,16 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
         setName(NAME_EDEFAULT);
         return;
       case CPTesterPackage.SCENARIO__WHEN:
-        setWhen((Operation)null);
+        setWhen((Initial)null);
         return;
       case CPTesterPackage.SCENARIO__GIVEN:
         setGiven((Operation)null);
         return;
       case CPTesterPackage.SCENARIO__THEN:
-        setThen((Result)null);
+        setThen((Solution)null);
         return;
       case CPTesterPackage.SCENARIO__AND1:
-        setAnd1((Operation)null);
+        setAnd1((Conditions)null);
         return;
     }
     super.eUnset(featureID);

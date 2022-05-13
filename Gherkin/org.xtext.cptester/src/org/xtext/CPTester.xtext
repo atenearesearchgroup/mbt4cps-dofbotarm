@@ -4,8 +4,8 @@ generate cPTester "http://www.xtext.org/CPTester"
 
 Scenario:
 	'SCENARIO' name=STRING
-	'WHEN' when=Operation
+	'WHEN' when=Initial
 	'GIVEN' given=Operation
-	'THEN' then=Result
-	'AND' and1=Operation
+	'THEN' then=Solution
+	'AND' and1=Conditions
 ;

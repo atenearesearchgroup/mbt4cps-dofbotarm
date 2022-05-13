@@ -3,20 +3,55 @@
  */
 package org.xtext.operations.impl;
 
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.xtext.operations.OperationsPackage;
+import org.xtext.operations.angle;
 import org.xtext.operations.rotateServoOperation;
+import org.xtext.operations.servo;
 
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>rotate Servo Operation</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link org.xtext.operations.impl.rotateServoOperationImpl#getSERVO <em>SERVO</em>}</li>
+ *   <li>{@link org.xtext.operations.impl.rotateServoOperationImpl#getANGLE <em>ANGLE</em>}</li>
+ * </ul>
  *
  * @generated
  */
 public class rotateServoOperationImpl extends OperationImpl implements rotateServoOperation
 {
+  /**
+   * The cached value of the '{@link #getSERVO() <em>SERVO</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSERVO()
+   * @generated
+   * @ordered
+   */
+  protected servo servo;
+
+  /**
+   * The cached value of the '{@link #getANGLE() <em>ANGLE</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getANGLE()
+   * @generated
+   * @ordered
+   */
+  protected angle angle;
+
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -36,6 +71,200 @@ public class rotateServoOperationImpl extends OperationImpl implements rotateSer
   protected EClass eStaticClass()
   {
     return OperationsPackage.Literals.ROTATE_SERVO_OPERATION;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public servo getSERVO()
+  {
+    return servo;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetSERVO(servo newSERVO, NotificationChain msgs)
+  {
+    servo oldSERVO = servo;
+    servo = newSERVO;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OperationsPackage.ROTATE_SERVO_OPERATION__SERVO, oldSERVO, newSERVO);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setSERVO(servo newSERVO)
+  {
+    if (newSERVO != servo)
+    {
+      NotificationChain msgs = null;
+      if (servo != null)
+        msgs = ((InternalEObject)servo).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OperationsPackage.ROTATE_SERVO_OPERATION__SERVO, null, msgs);
+      if (newSERVO != null)
+        msgs = ((InternalEObject)newSERVO).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OperationsPackage.ROTATE_SERVO_OPERATION__SERVO, null, msgs);
+      msgs = basicSetSERVO(newSERVO, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, OperationsPackage.ROTATE_SERVO_OPERATION__SERVO, newSERVO, newSERVO));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public angle getANGLE()
+  {
+    return angle;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetANGLE(angle newANGLE, NotificationChain msgs)
+  {
+    angle oldANGLE = angle;
+    angle = newANGLE;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OperationsPackage.ROTATE_SERVO_OPERATION__ANGLE, oldANGLE, newANGLE);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setANGLE(angle newANGLE)
+  {
+    if (newANGLE != angle)
+    {
+      NotificationChain msgs = null;
+      if (angle != null)
+        msgs = ((InternalEObject)angle).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OperationsPackage.ROTATE_SERVO_OPERATION__ANGLE, null, msgs);
+      if (newANGLE != null)
+        msgs = ((InternalEObject)newANGLE).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OperationsPackage.ROTATE_SERVO_OPERATION__ANGLE, null, msgs);
+      msgs = basicSetANGLE(newANGLE, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, OperationsPackage.ROTATE_SERVO_OPERATION__ANGLE, newANGLE, newANGLE));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case OperationsPackage.ROTATE_SERVO_OPERATION__SERVO:
+        return basicSetSERVO(null, msgs);
+      case OperationsPackage.ROTATE_SERVO_OPERATION__ANGLE:
+        return basicSetANGLE(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Object eGet(int featureID, boolean resolve, boolean coreType)
+  {
+    switch (featureID)
+    {
+      case OperationsPackage.ROTATE_SERVO_OPERATION__SERVO:
+        return getSERVO();
+      case OperationsPackage.ROTATE_SERVO_OPERATION__ANGLE:
+        return getANGLE();
+    }
+    return super.eGet(featureID, resolve, coreType);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void eSet(int featureID, Object newValue)
+  {
+    switch (featureID)
+    {
+      case OperationsPackage.ROTATE_SERVO_OPERATION__SERVO:
+        setSERVO((servo)newValue);
+        return;
+      case OperationsPackage.ROTATE_SERVO_OPERATION__ANGLE:
+        setANGLE((angle)newValue);
+        return;
+    }
+    super.eSet(featureID, newValue);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void eUnset(int featureID)
+  {
+    switch (featureID)
+    {
+      case OperationsPackage.ROTATE_SERVO_OPERATION__SERVO:
+        setSERVO((servo)null);
+        return;
+      case OperationsPackage.ROTATE_SERVO_OPERATION__ANGLE:
+        setANGLE((angle)null);
+        return;
+    }
+    super.eUnset(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public boolean eIsSet(int featureID)
+  {
+    switch (featureID)
+    {
+      case OperationsPackage.ROTATE_SERVO_OPERATION__SERVO:
+        return servo != null;
+      case OperationsPackage.ROTATE_SERVO_OPERATION__ANGLE:
+        return angle != null;
+    }
+    return super.eIsSet(featureID);
   }
 
 } //rotateServoOperationImpl

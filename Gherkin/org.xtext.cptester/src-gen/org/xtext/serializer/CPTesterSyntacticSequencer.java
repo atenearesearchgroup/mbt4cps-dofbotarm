@@ -10,8 +10,6 @@ import org.eclipse.xtext.IGrammarAccess;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.nodemodel.INode;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.AbstractElementAlias;
-import org.eclipse.xtext.serializer.analysis.GrammarAlias.TokenAlias;
-import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynNavigable;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynTransition;
 import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 import org.xtext.services.CPTesterGrammarAccess;
@@ -20,59 +18,17 @@ import org.xtext.services.CPTesterGrammarAccess;
 public class CPTesterSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected CPTesterGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_NotLaterThan_CommaKeyword_6_p;
-	protected AbstractElementAlias match_NotLaterThan_CommaKeyword_8_p;
-	protected AbstractElementAlias match_NotLaterThan_INTTerminalRuleCall_1_p;
-	protected AbstractElementAlias match_NotLaterThan_INTTerminalRuleCall_5_p;
-	protected AbstractElementAlias match_NotLaterThan_INTTerminalRuleCall_7_p;
-	protected AbstractElementAlias match_NotLaterThan_INTTerminalRuleCall_9_p;
-	protected AbstractElementAlias match_NotLaterThan_IsAtSingleOperationKeyword_4_p;
-	protected AbstractElementAlias match_NotLaterThan_QueryKeyword_3_p;
-	protected AbstractElementAlias match_NotLaterThan_RightParenthesisEqualsSignKeyword_10_p;
-	protected AbstractElementAlias match_NotLaterThan_RightParenthesisKeyword_2_p;
-	protected AbstractElementAlias match_OperationalArm_INTTerminalRuleCall_1_p;
-	protected AbstractElementAlias match_rotateServoOperation_CommaKeyword_2_p;
-	protected AbstractElementAlias match_rotateServoOperation_CommaKeyword_4_p;
-	protected AbstractElementAlias match_rotateServoOperation_INTTerminalRuleCall_1_p;
-	protected AbstractElementAlias match_rotateServoOperation_INTTerminalRuleCall_3_p;
-	protected AbstractElementAlias match_rotateServoOperation_INTTerminalRuleCall_5_p;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (CPTesterGrammarAccess) access;
-		match_NotLaterThan_CommaKeyword_6_p = new TokenAlias(true, false, grammarAccess.getNotLaterThanAccess().getCommaKeyword_6());
-		match_NotLaterThan_CommaKeyword_8_p = new TokenAlias(true, false, grammarAccess.getNotLaterThanAccess().getCommaKeyword_8());
-		match_NotLaterThan_INTTerminalRuleCall_1_p = new TokenAlias(true, false, grammarAccess.getNotLaterThanAccess().getINTTerminalRuleCall_1());
-		match_NotLaterThan_INTTerminalRuleCall_5_p = new TokenAlias(true, false, grammarAccess.getNotLaterThanAccess().getINTTerminalRuleCall_5());
-		match_NotLaterThan_INTTerminalRuleCall_7_p = new TokenAlias(true, false, grammarAccess.getNotLaterThanAccess().getINTTerminalRuleCall_7());
-		match_NotLaterThan_INTTerminalRuleCall_9_p = new TokenAlias(true, false, grammarAccess.getNotLaterThanAccess().getINTTerminalRuleCall_9());
-		match_NotLaterThan_IsAtSingleOperationKeyword_4_p = new TokenAlias(true, false, grammarAccess.getNotLaterThanAccess().getIsAtSingleOperationKeyword_4());
-		match_NotLaterThan_QueryKeyword_3_p = new TokenAlias(true, false, grammarAccess.getNotLaterThanAccess().getQueryKeyword_3());
-		match_NotLaterThan_RightParenthesisEqualsSignKeyword_10_p = new TokenAlias(true, false, grammarAccess.getNotLaterThanAccess().getRightParenthesisEqualsSignKeyword_10());
-		match_NotLaterThan_RightParenthesisKeyword_2_p = new TokenAlias(true, false, grammarAccess.getNotLaterThanAccess().getRightParenthesisKeyword_2());
-		match_OperationalArm_INTTerminalRuleCall_1_p = new TokenAlias(true, false, grammarAccess.getOperationalArmAccess().getINTTerminalRuleCall_1());
-		match_rotateServoOperation_CommaKeyword_2_p = new TokenAlias(true, false, grammarAccess.getRotateServoOperationAccess().getCommaKeyword_2());
-		match_rotateServoOperation_CommaKeyword_4_p = new TokenAlias(true, false, grammarAccess.getRotateServoOperationAccess().getCommaKeyword_4());
-		match_rotateServoOperation_INTTerminalRuleCall_1_p = new TokenAlias(true, false, grammarAccess.getRotateServoOperationAccess().getINTTerminalRuleCall_1());
-		match_rotateServoOperation_INTTerminalRuleCall_3_p = new TokenAlias(true, false, grammarAccess.getRotateServoOperationAccess().getINTTerminalRuleCall_3());
-		match_rotateServoOperation_INTTerminalRuleCall_5_p = new TokenAlias(true, false, grammarAccess.getRotateServoOperationAccess().getINTTerminalRuleCall_5());
 	}
 	
 	@Override
 	protected String getUnassignedRuleCallToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (ruleCall.getRule() == grammarAccess.getINTRule())
-			return getINTToken(semanticObject, ruleCall, node);
 		return "";
 	}
 	
-	/**
-	 * terminal INT returns ecore::EInt: ('0'..'9')+;
-	 */
-	protected String getINTToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (node != null)
-			return getTokenText(node);
-		return "";
-	}
 	
 	@Override
 	protected void emitUnassignedTokens(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
@@ -80,264 +36,8 @@ public class CPTesterSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_NotLaterThan_CommaKeyword_6_p.equals(syntax))
-				emit_NotLaterThan_CommaKeyword_6_p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_NotLaterThan_CommaKeyword_8_p.equals(syntax))
-				emit_NotLaterThan_CommaKeyword_8_p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_NotLaterThan_INTTerminalRuleCall_1_p.equals(syntax))
-				emit_NotLaterThan_INTTerminalRuleCall_1_p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_NotLaterThan_INTTerminalRuleCall_5_p.equals(syntax))
-				emit_NotLaterThan_INTTerminalRuleCall_5_p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_NotLaterThan_INTTerminalRuleCall_7_p.equals(syntax))
-				emit_NotLaterThan_INTTerminalRuleCall_7_p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_NotLaterThan_INTTerminalRuleCall_9_p.equals(syntax))
-				emit_NotLaterThan_INTTerminalRuleCall_9_p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_NotLaterThan_IsAtSingleOperationKeyword_4_p.equals(syntax))
-				emit_NotLaterThan_IsAtSingleOperationKeyword_4_p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_NotLaterThan_QueryKeyword_3_p.equals(syntax))
-				emit_NotLaterThan_QueryKeyword_3_p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_NotLaterThan_RightParenthesisEqualsSignKeyword_10_p.equals(syntax))
-				emit_NotLaterThan_RightParenthesisEqualsSignKeyword_10_p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_NotLaterThan_RightParenthesisKeyword_2_p.equals(syntax))
-				emit_NotLaterThan_RightParenthesisKeyword_2_p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_OperationalArm_INTTerminalRuleCall_1_p.equals(syntax))
-				emit_OperationalArm_INTTerminalRuleCall_1_p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_rotateServoOperation_CommaKeyword_2_p.equals(syntax))
-				emit_rotateServoOperation_CommaKeyword_2_p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_rotateServoOperation_CommaKeyword_4_p.equals(syntax))
-				emit_rotateServoOperation_CommaKeyword_4_p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_rotateServoOperation_INTTerminalRuleCall_1_p.equals(syntax))
-				emit_rotateServoOperation_INTTerminalRuleCall_1_p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_rotateServoOperation_INTTerminalRuleCall_3_p.equals(syntax))
-				emit_rotateServoOperation_INTTerminalRuleCall_3_p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_rotateServoOperation_INTTerminalRuleCall_5_p.equals(syntax))
-				emit_rotateServoOperation_INTTerminalRuleCall_5_p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else acceptNodes(getLastNavigableState(), syntaxNodes);
+			acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
 
-	/**
-	 * <pre>
-	 * Ambiguous syntax:
-	 *     ','+
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     name='NotLaterThan(' INT+ ')'+ ' Query '+ 'isAtSingleOperation('+ INT+ (ambiguity) INT+ ','+ INT+ ')='+ 'True' (rule end)
-	 
-	 * </pre>
-	 */
-	protected void emit_NotLaterThan_CommaKeyword_6_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * <pre>
-	 * Ambiguous syntax:
-	 *     ','+
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     name='NotLaterThan(' INT+ ')'+ ' Query '+ 'isAtSingleOperation('+ INT+ ','+ INT+ (ambiguity) INT+ ')='+ 'True' (rule end)
-	 
-	 * </pre>
-	 */
-	protected void emit_NotLaterThan_CommaKeyword_8_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * <pre>
-	 * Ambiguous syntax:
-	 *     INT+
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     name='NotLaterThan(' (ambiguity) ')'+ ' Query '+ 'isAtSingleOperation('+ INT+ ','+ INT+ ','+ INT+ ')='+ 'True' (rule end)
-	 
-	 * </pre>
-	 */
-	protected void emit_NotLaterThan_INTTerminalRuleCall_1_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * <pre>
-	 * Ambiguous syntax:
-	 *     INT+
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     name='NotLaterThan(' INT+ ')'+ ' Query '+ 'isAtSingleOperation('+ (ambiguity) ','+ INT+ ','+ INT+ ')='+ 'True' (rule end)
-	 
-	 * </pre>
-	 */
-	protected void emit_NotLaterThan_INTTerminalRuleCall_5_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * <pre>
-	 * Ambiguous syntax:
-	 *     INT+
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     name='NotLaterThan(' INT+ ')'+ ' Query '+ 'isAtSingleOperation('+ INT+ ','+ (ambiguity) ','+ INT+ ')='+ 'True' (rule end)
-	 
-	 * </pre>
-	 */
-	protected void emit_NotLaterThan_INTTerminalRuleCall_7_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * <pre>
-	 * Ambiguous syntax:
-	 *     INT+
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     name='NotLaterThan(' INT+ ')'+ ' Query '+ 'isAtSingleOperation('+ INT+ ','+ INT+ ','+ (ambiguity) ')='+ 'True' (rule end)
-	 
-	 * </pre>
-	 */
-	protected void emit_NotLaterThan_INTTerminalRuleCall_9_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * <pre>
-	 * Ambiguous syntax:
-	 *     'isAtSingleOperation('+
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     name='NotLaterThan(' INT+ ')'+ ' Query '+ (ambiguity) INT+ ','+ INT+ ','+ INT+ ')='+ 'True' (rule end)
-	 
-	 * </pre>
-	 */
-	protected void emit_NotLaterThan_IsAtSingleOperationKeyword_4_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * <pre>
-	 * Ambiguous syntax:
-	 *     ' Query '+
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     name='NotLaterThan(' INT+ ')'+ (ambiguity) 'isAtSingleOperation('+ INT+ ','+ INT+ ','+ INT+ ')='+ 'True' (rule end)
-	 
-	 * </pre>
-	 */
-	protected void emit_NotLaterThan_QueryKeyword_3_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * <pre>
-	 * Ambiguous syntax:
-	 *     ')='+
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     name='NotLaterThan(' INT+ ')'+ ' Query '+ 'isAtSingleOperation('+ INT+ ','+ INT+ ','+ INT+ (ambiguity) 'True' (rule end)
-	 
-	 * </pre>
-	 */
-	protected void emit_NotLaterThan_RightParenthesisEqualsSignKeyword_10_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * <pre>
-	 * Ambiguous syntax:
-	 *     ')'+
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     name='NotLaterThan(' INT+ (ambiguity) ' Query '+ 'isAtSingleOperation('+ INT+ ','+ INT+ ','+ INT+ ')='+ 'True' (rule end)
-	 
-	 * </pre>
-	 */
-	protected void emit_NotLaterThan_RightParenthesisKeyword_2_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * <pre>
-	 * Ambiguous syntax:
-	 *     INT+
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     name='OperationalArm(' (ambiguity) ')' (rule end)
-	 
-	 * </pre>
-	 */
-	protected void emit_OperationalArm_INTTerminalRuleCall_1_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * <pre>
-	 * Ambiguous syntax:
-	 *     ','+
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     name='rotateServoOperation(' INT+ (ambiguity) INT+ ','+ INT+ ')' (rule end)
-	 
-	 * </pre>
-	 */
-	protected void emit_rotateServoOperation_CommaKeyword_2_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * <pre>
-	 * Ambiguous syntax:
-	 *     ','+
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     name='rotateServoOperation(' INT+ ','+ INT+ (ambiguity) INT+ ')' (rule end)
-	 
-	 * </pre>
-	 */
-	protected void emit_rotateServoOperation_CommaKeyword_4_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * <pre>
-	 * Ambiguous syntax:
-	 *     INT+
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     name='rotateServoOperation(' (ambiguity) ','+ INT+ ','+ INT+ ')' (rule end)
-	 
-	 * </pre>
-	 */
-	protected void emit_rotateServoOperation_INTTerminalRuleCall_1_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * <pre>
-	 * Ambiguous syntax:
-	 *     INT+
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     name='rotateServoOperation(' INT+ ','+ (ambiguity) ','+ INT+ ')' (rule end)
-	 
-	 * </pre>
-	 */
-	protected void emit_rotateServoOperation_INTTerminalRuleCall_3_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * <pre>
-	 * Ambiguous syntax:
-	 *     INT+
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     name='rotateServoOperation(' INT+ ','+ INT+ ','+ (ambiguity) ')' (rule end)
-	 
-	 * </pre>
-	 */
-	protected void emit_rotateServoOperation_INTTerminalRuleCall_5_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
 }

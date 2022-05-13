@@ -11,6 +11,7 @@ import org.eclipse.xtext.generator.IFileSystemAccess2;
 import org.eclipse.xtext.generator.IGeneratorContext;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.xtext.cPTester.Scenario;
+import org.xtext.operations.time;
 
 /**
  * Generates code from your model files on save.
@@ -60,8 +61,10 @@ public class CPTesterGenerator extends AbstractGenerator {
     _builder.append("State: Given");
     _builder.newLine();
     _builder.append("\t\t\t\t\t");
-    _builder.append("Activity: Arm.BaseServo.ServosOperations.posInicial(1000);");
-    _builder.newLine();
+    _builder.append("Activity: Arm.BaseServo.ServosOperations.posInicial(");
+    _builder.append(scenario, "\t\t\t\t\t");
+    _builder.append(");");
+    _builder.newLineIfNotEmpty();
     _builder.append("\t\t\t\t\t");
     _builder.newLine();
     _builder.append("\t\t\t\t");
@@ -84,8 +87,11 @@ public class CPTesterGenerator extends AbstractGenerator {
     _builder.append("Transition: (Given->GivenWarning)");
     _builder.newLine();
     _builder.append("\t\t\t\t\t");
-    _builder.append("Guard: Arm.BaseServo.ServosOperations.Time(1000)");
-    _builder.newLine();
+    _builder.append("Guard: Arm.BaseServo.ServosOperations.Time(");
+    time _tIME = scenario.getGiven().getTIME();
+    _builder.append(_tIME, "\t\t\t\t\t");
+    _builder.append(")");
+    _builder.newLineIfNotEmpty();
     _builder.append("\t\t\t\t\t");
     _builder.newLine();
     _builder.append("\t\t\t\t");
@@ -103,7 +109,10 @@ public class CPTesterGenerator extends AbstractGenerator {
     _builder.append("Activity: Arm.BaseServo.ServosOperations.");
     String _name_1 = scenario.getGiven().getName();
     _builder.append(_name_1, "\t\t\t\t\t");
-    _builder.append("1, 90, 1000) ");
+    _builder.append(" ");
+    time _tIME_1 = scenario.getGiven().getTIME();
+    _builder.append(_tIME_1, "\t\t\t\t\t");
+    _builder.append(", 90, 1000) ");
     _builder.newLineIfNotEmpty();
     _builder.append("\t\t\t\t");
     _builder.newLine();

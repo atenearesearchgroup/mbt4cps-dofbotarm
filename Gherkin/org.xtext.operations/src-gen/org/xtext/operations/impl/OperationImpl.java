@@ -4,14 +4,17 @@
 package org.xtext.operations.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.operations.Operation;
 import org.xtext.operations.OperationsPackage;
+import org.xtext.operations.time;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,6 +25,10 @@ import org.xtext.operations.OperationsPackage;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.operations.impl.OperationImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.operations.impl.OperationImpl#getSEP1 <em>SEP1</em>}</li>
+ *   <li>{@link org.xtext.operations.impl.OperationImpl#getSEP2 <em>SEP2</em>}</li>
+ *   <li>{@link org.xtext.operations.impl.OperationImpl#getTIME <em>TIME</em>}</li>
+ *   <li>{@link org.xtext.operations.impl.OperationImpl#getEND <em>END</em>}</li>
  * </ul>
  *
  * @generated
@@ -47,6 +54,76 @@ public class OperationImpl extends MinimalEObjectImpl.Container implements Opera
    * @ordered
    */
   protected String name = NAME_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getSEP1() <em>SEP1</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSEP1()
+   * @generated
+   * @ordered
+   */
+  protected static final String SEP1_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getSEP1() <em>SEP1</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSEP1()
+   * @generated
+   * @ordered
+   */
+  protected String sep1 = SEP1_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getSEP2() <em>SEP2</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSEP2()
+   * @generated
+   * @ordered
+   */
+  protected static final String SEP2_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getSEP2() <em>SEP2</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSEP2()
+   * @generated
+   * @ordered
+   */
+  protected String sep2 = SEP2_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getTIME() <em>TIME</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTIME()
+   * @generated
+   * @ordered
+   */
+  protected time time;
+
+  /**
+   * The default value of the '{@link #getEND() <em>END</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getEND()
+   * @generated
+   * @ordered
+   */
+  protected static final String END_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getEND() <em>END</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getEND()
+   * @generated
+   * @ordered
+   */
+  protected String end = END_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -100,12 +177,161 @@ public class OperationImpl extends MinimalEObjectImpl.Container implements Opera
    * @generated
    */
   @Override
+  public String getSEP1()
+  {
+    return sep1;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setSEP1(String newSEP1)
+  {
+    String oldSEP1 = sep1;
+    sep1 = newSEP1;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, OperationsPackage.OPERATION__SEP1, oldSEP1, sep1));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getSEP2()
+  {
+    return sep2;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setSEP2(String newSEP2)
+  {
+    String oldSEP2 = sep2;
+    sep2 = newSEP2;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, OperationsPackage.OPERATION__SEP2, oldSEP2, sep2));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public time getTIME()
+  {
+    return time;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetTIME(time newTIME, NotificationChain msgs)
+  {
+    time oldTIME = time;
+    time = newTIME;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OperationsPackage.OPERATION__TIME, oldTIME, newTIME);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setTIME(time newTIME)
+  {
+    if (newTIME != time)
+    {
+      NotificationChain msgs = null;
+      if (time != null)
+        msgs = ((InternalEObject)time).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OperationsPackage.OPERATION__TIME, null, msgs);
+      if (newTIME != null)
+        msgs = ((InternalEObject)newTIME).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OperationsPackage.OPERATION__TIME, null, msgs);
+      msgs = basicSetTIME(newTIME, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, OperationsPackage.OPERATION__TIME, newTIME, newTIME));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getEND()
+  {
+    return end;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setEND(String newEND)
+  {
+    String oldEND = end;
+    end = newEND;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, OperationsPackage.OPERATION__END, oldEND, end));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case OperationsPackage.OPERATION__TIME:
+        return basicSetTIME(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
     switch (featureID)
     {
       case OperationsPackage.OPERATION__NAME:
         return getName();
+      case OperationsPackage.OPERATION__SEP1:
+        return getSEP1();
+      case OperationsPackage.OPERATION__SEP2:
+        return getSEP2();
+      case OperationsPackage.OPERATION__TIME:
+        return getTIME();
+      case OperationsPackage.OPERATION__END:
+        return getEND();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -122,6 +348,18 @@ public class OperationImpl extends MinimalEObjectImpl.Container implements Opera
     {
       case OperationsPackage.OPERATION__NAME:
         setName((String)newValue);
+        return;
+      case OperationsPackage.OPERATION__SEP1:
+        setSEP1((String)newValue);
+        return;
+      case OperationsPackage.OPERATION__SEP2:
+        setSEP2((String)newValue);
+        return;
+      case OperationsPackage.OPERATION__TIME:
+        setTIME((time)newValue);
+        return;
+      case OperationsPackage.OPERATION__END:
+        setEND((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -140,6 +378,18 @@ public class OperationImpl extends MinimalEObjectImpl.Container implements Opera
       case OperationsPackage.OPERATION__NAME:
         setName(NAME_EDEFAULT);
         return;
+      case OperationsPackage.OPERATION__SEP1:
+        setSEP1(SEP1_EDEFAULT);
+        return;
+      case OperationsPackage.OPERATION__SEP2:
+        setSEP2(SEP2_EDEFAULT);
+        return;
+      case OperationsPackage.OPERATION__TIME:
+        setTIME((time)null);
+        return;
+      case OperationsPackage.OPERATION__END:
+        setEND(END_EDEFAULT);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -156,6 +406,14 @@ public class OperationImpl extends MinimalEObjectImpl.Container implements Opera
     {
       case OperationsPackage.OPERATION__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case OperationsPackage.OPERATION__SEP1:
+        return SEP1_EDEFAULT == null ? sep1 != null : !SEP1_EDEFAULT.equals(sep1);
+      case OperationsPackage.OPERATION__SEP2:
+        return SEP2_EDEFAULT == null ? sep2 != null : !SEP2_EDEFAULT.equals(sep2);
+      case OperationsPackage.OPERATION__TIME:
+        return time != null;
+      case OperationsPackage.OPERATION__END:
+        return END_EDEFAULT == null ? end != null : !END_EDEFAULT.equals(end);
     }
     return super.eIsSet(featureID);
   }
@@ -173,6 +431,12 @@ public class OperationImpl extends MinimalEObjectImpl.Container implements Opera
     StringBuilder result = new StringBuilder(super.toString());
     result.append(" (name: ");
     result.append(name);
+    result.append(", SEP1: ");
+    result.append(sep1);
+    result.append(", SEP2: ");
+    result.append(sep2);
+    result.append(", END: ");
+    result.append(end);
     result.append(')');
     return result.toString();
   }
