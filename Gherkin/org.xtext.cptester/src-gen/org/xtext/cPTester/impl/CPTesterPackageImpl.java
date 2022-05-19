@@ -10,11 +10,27 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.xtext.cPTester.And;
+import org.xtext.cPTester.Angle;
+import org.xtext.cPTester.Angle_res;
 import org.xtext.cPTester.CPTesterFactory;
 import org.xtext.cPTester.CPTesterPackage;
+import org.xtext.cPTester.Command;
+import org.xtext.cPTester.Conditions;
+import org.xtext.cPTester.Given;
+import org.xtext.cPTester.Initial;
+import org.xtext.cPTester.NotLaterThan;
+import org.xtext.cPTester.Operation;
+import org.xtext.cPTester.Result;
 import org.xtext.cPTester.Scenario;
-
-import org.xtext.operations.OperationsPackage;
+import org.xtext.cPTester.Servo;
+import org.xtext.cPTester.Then;
+import org.xtext.cPTester.Time;
+import org.xtext.cPTester.When;
+import org.xtext.cPTester.isAt;
+import org.xtext.cPTester.isAtSingle;
+import org.xtext.cPTester.rotateAllServos;
+import org.xtext.cPTester.rotateServo;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,6 +46,132 @@ public class CPTesterPackageImpl extends EPackageImpl implements CPTesterPackage
    * @generated
    */
   private EClass scenarioEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass operationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass givenEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass initialEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass whenEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass commandEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass rotateServoEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass rotateAllServosEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass thenEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass resultEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass andEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass conditionsEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass notLaterThanEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass isAtSingleEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass isAtEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass angle_resEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass servoEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass angleEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass timeEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -80,9 +222,6 @@ public class CPTesterPackageImpl extends EPackageImpl implements CPTesterPackage
 
     isInited = true;
 
-    // Initialize simple dependencies
-    OperationsPackage.eINSTANCE.eClass();
-
     // Create package meta-data objects
     theCPTesterPackage.createPackageContents();
 
@@ -114,7 +253,7 @@ public class CPTesterPackageImpl extends EPackageImpl implements CPTesterPackage
    * @generated
    */
   @Override
-  public EAttribute getScenario_Name()
+  public EAttribute getScenario_Surname()
   {
     return (EAttribute)scenarioEClass.getEStructuralFeatures().get(0);
   }
@@ -125,7 +264,7 @@ public class CPTesterPackageImpl extends EPackageImpl implements CPTesterPackage
    * @generated
    */
   @Override
-  public EReference getScenario_When()
+  public EReference getScenario_Operations()
   {
     return (EReference)scenarioEClass.getEStructuralFeatures().get(1);
   }
@@ -136,9 +275,9 @@ public class CPTesterPackageImpl extends EPackageImpl implements CPTesterPackage
    * @generated
    */
   @Override
-  public EReference getScenario_Given()
+  public EClass getOperation()
   {
-    return (EReference)scenarioEClass.getEStructuralFeatures().get(2);
+    return operationEClass;
   }
 
   /**
@@ -147,9 +286,9 @@ public class CPTesterPackageImpl extends EPackageImpl implements CPTesterPackage
    * @generated
    */
   @Override
-  public EReference getScenario_Then()
+  public EAttribute getOperation_Name()
   {
-    return (EReference)scenarioEClass.getEStructuralFeatures().get(3);
+    return (EAttribute)operationEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -158,9 +297,438 @@ public class CPTesterPackageImpl extends EPackageImpl implements CPTesterPackage
    * @generated
    */
   @Override
-  public EReference getScenario_And1()
+  public EClass getGiven()
   {
-    return (EReference)scenarioEClass.getEStructuralFeatures().get(4);
+    return givenEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getGiven_Initial()
+  {
+    return (EReference)givenEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getInitial()
+  {
+    return initialEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getInitial_Name()
+  {
+    return (EAttribute)initialEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getInitial_Time()
+  {
+    return (EReference)initialEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getWhen()
+  {
+    return whenEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getWhen_Command()
+  {
+    return (EReference)whenEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getCommand()
+  {
+    return commandEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCommand_Name()
+  {
+    return (EAttribute)commandEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getCommand_Angle()
+  {
+    return (EReference)commandEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getCommand_Time()
+  {
+    return (EReference)commandEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getrotateServo()
+  {
+    return rotateServoEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getrotateServo_Servo()
+  {
+    return (EReference)rotateServoEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getrotateAllServos()
+  {
+    return rotateAllServosEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getThen()
+  {
+    return thenEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getThen_Result()
+  {
+    return (EReference)thenEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getResult()
+  {
+    return resultEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getResult_Name()
+  {
+    return (EAttribute)resultEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getResult_Time()
+  {
+    return (EReference)resultEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getAnd()
+  {
+    return andEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getAnd_Conditions()
+  {
+    return (EReference)andEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getConditions()
+  {
+    return conditionsEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getConditions_Name()
+  {
+    return (EAttribute)conditionsEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getNotLaterThan()
+  {
+    return notLaterThanEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getNotLaterThan_Time()
+  {
+    return (EReference)notLaterThanEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getisAtSingle()
+  {
+    return isAtSingleEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getisAtSingle_Servo()
+  {
+    return (EReference)isAtSingleEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getisAtSingle_Angle()
+  {
+    return (EReference)isAtSingleEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getisAtSingle_Angle_res()
+  {
+    return (EReference)isAtSingleEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getisAt()
+  {
+    return isAtEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getisAt_Angle()
+  {
+    return (EReference)isAtEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getisAt_Angle_res()
+  {
+    return (EReference)isAtEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getAngle_res()
+  {
+    return angle_resEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getAngle_res_Angle_res()
+  {
+    return (EAttribute)angle_resEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getServo()
+  {
+    return servoEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getServo_Servo()
+  {
+    return (EAttribute)servoEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getAngle()
+  {
+    return angleEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getAngle_Angle()
+  {
+    return (EAttribute)angleEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getTime()
+  {
+    return timeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getTime_Time()
+  {
+    return (EAttribute)timeEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -195,11 +763,68 @@ public class CPTesterPackageImpl extends EPackageImpl implements CPTesterPackage
 
     // Create classes and their features
     scenarioEClass = createEClass(SCENARIO);
-    createEAttribute(scenarioEClass, SCENARIO__NAME);
-    createEReference(scenarioEClass, SCENARIO__WHEN);
-    createEReference(scenarioEClass, SCENARIO__GIVEN);
-    createEReference(scenarioEClass, SCENARIO__THEN);
-    createEReference(scenarioEClass, SCENARIO__AND1);
+    createEAttribute(scenarioEClass, SCENARIO__SURNAME);
+    createEReference(scenarioEClass, SCENARIO__OPERATIONS);
+
+    operationEClass = createEClass(OPERATION);
+    createEAttribute(operationEClass, OPERATION__NAME);
+
+    givenEClass = createEClass(GIVEN);
+    createEReference(givenEClass, GIVEN__INITIAL);
+
+    initialEClass = createEClass(INITIAL);
+    createEAttribute(initialEClass, INITIAL__NAME);
+    createEReference(initialEClass, INITIAL__TIME);
+
+    whenEClass = createEClass(WHEN);
+    createEReference(whenEClass, WHEN__COMMAND);
+
+    commandEClass = createEClass(COMMAND);
+    createEAttribute(commandEClass, COMMAND__NAME);
+    createEReference(commandEClass, COMMAND__ANGLE);
+    createEReference(commandEClass, COMMAND__TIME);
+
+    rotateServoEClass = createEClass(ROTATE_SERVO);
+    createEReference(rotateServoEClass, ROTATE_SERVO__SERVO);
+
+    rotateAllServosEClass = createEClass(ROTATE_ALL_SERVOS);
+
+    thenEClass = createEClass(THEN);
+    createEReference(thenEClass, THEN__RESULT);
+
+    resultEClass = createEClass(RESULT);
+    createEAttribute(resultEClass, RESULT__NAME);
+    createEReference(resultEClass, RESULT__TIME);
+
+    andEClass = createEClass(AND);
+    createEReference(andEClass, AND__CONDITIONS);
+
+    conditionsEClass = createEClass(CONDITIONS);
+    createEAttribute(conditionsEClass, CONDITIONS__NAME);
+
+    notLaterThanEClass = createEClass(NOT_LATER_THAN);
+    createEReference(notLaterThanEClass, NOT_LATER_THAN__TIME);
+
+    isAtSingleEClass = createEClass(IS_AT_SINGLE);
+    createEReference(isAtSingleEClass, IS_AT_SINGLE__SERVO);
+    createEReference(isAtSingleEClass, IS_AT_SINGLE__ANGLE);
+    createEReference(isAtSingleEClass, IS_AT_SINGLE__ANGLE_RES);
+
+    isAtEClass = createEClass(IS_AT);
+    createEReference(isAtEClass, IS_AT__ANGLE);
+    createEReference(isAtEClass, IS_AT__ANGLE_RES);
+
+    angle_resEClass = createEClass(ANGLE_RES);
+    createEAttribute(angle_resEClass, ANGLE_RES__ANGLE_RES);
+
+    servoEClass = createEClass(SERVO);
+    createEAttribute(servoEClass, SERVO__SERVO);
+
+    angleEClass = createEClass(ANGLE);
+    createEAttribute(angleEClass, ANGLE__ANGLE);
+
+    timeEClass = createEClass(TIME);
+    createEAttribute(timeEClass, TIME__TIME);
   }
 
   /**
@@ -226,22 +851,85 @@ public class CPTesterPackageImpl extends EPackageImpl implements CPTesterPackage
     setNsPrefix(eNS_PREFIX);
     setNsURI(eNS_URI);
 
-    // Obtain other dependent packages
-    OperationsPackage theOperationsPackage = (OperationsPackage)EPackage.Registry.INSTANCE.getEPackage(OperationsPackage.eNS_URI);
-
     // Create type parameters
 
     // Set bounds for type parameters
 
     // Add supertypes to classes
+    givenEClass.getESuperTypes().add(this.getOperation());
+    whenEClass.getESuperTypes().add(this.getOperation());
+    rotateServoEClass.getESuperTypes().add(this.getCommand());
+    rotateAllServosEClass.getESuperTypes().add(this.getCommand());
+    thenEClass.getESuperTypes().add(this.getOperation());
+    andEClass.getESuperTypes().add(this.getOperation());
+    notLaterThanEClass.getESuperTypes().add(this.getConditions());
+    isAtSingleEClass.getESuperTypes().add(this.getConditions());
+    isAtEClass.getESuperTypes().add(this.getConditions());
 
     // Initialize classes and features; add operations and parameters
     initEClass(scenarioEClass, Scenario.class, "Scenario", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getScenario_Name(), ecorePackage.getEString(), "name", null, 0, 1, Scenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getScenario_When(), theOperationsPackage.getInitial(), null, "when", null, 0, 1, Scenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getScenario_Given(), theOperationsPackage.getOperation(), null, "given", null, 0, 1, Scenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getScenario_Then(), theOperationsPackage.getSolution(), null, "then", null, 0, 1, Scenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getScenario_And1(), theOperationsPackage.getConditions(), null, "and1", null, 0, 1, Scenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getScenario_Surname(), ecorePackage.getEString(), "surname", null, 0, 1, Scenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getScenario_Operations(), this.getOperation(), null, "operations", null, 0, -1, Scenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(operationEClass, Operation.class, "Operation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getOperation_Name(), ecorePackage.getEString(), "name", null, 0, 1, Operation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(givenEClass, Given.class, "Given", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getGiven_Initial(), this.getInitial(), null, "initial", null, 0, -1, Given.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(initialEClass, Initial.class, "Initial", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getInitial_Name(), ecorePackage.getEString(), "name", null, 0, 1, Initial.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getInitial_Time(), this.getTime(), null, "time", null, 0, -1, Initial.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(whenEClass, When.class, "When", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getWhen_Command(), this.getCommand(), null, "command", null, 0, -1, When.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(commandEClass, Command.class, "Command", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getCommand_Name(), ecorePackage.getEString(), "name", null, 0, 1, Command.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getCommand_Angle(), this.getAngle(), null, "angle", null, 0, -1, Command.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getCommand_Time(), this.getTime(), null, "time", null, 0, -1, Command.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(rotateServoEClass, rotateServo.class, "rotateServo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getrotateServo_Servo(), this.getServo(), null, "servo", null, 0, -1, rotateServo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(rotateAllServosEClass, rotateAllServos.class, "rotateAllServos", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(thenEClass, Then.class, "Then", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getThen_Result(), this.getResult(), null, "result", null, 0, -1, Then.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(resultEClass, Result.class, "Result", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getResult_Name(), ecorePackage.getEString(), "name", null, 0, 1, Result.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getResult_Time(), this.getTime(), null, "time", null, 0, -1, Result.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(andEClass, And.class, "And", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getAnd_Conditions(), this.getConditions(), null, "conditions", null, 0, -1, And.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(conditionsEClass, Conditions.class, "Conditions", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getConditions_Name(), ecorePackage.getEString(), "name", null, 0, 1, Conditions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(notLaterThanEClass, NotLaterThan.class, "NotLaterThan", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getNotLaterThan_Time(), this.getTime(), null, "time", null, 0, -1, NotLaterThan.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(isAtSingleEClass, isAtSingle.class, "isAtSingle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getisAtSingle_Servo(), this.getServo(), null, "servo", null, 0, -1, isAtSingle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getisAtSingle_Angle(), this.getAngle(), null, "angle", null, 0, -1, isAtSingle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getisAtSingle_Angle_res(), this.getAngle_res(), null, "angle_res", null, 0, -1, isAtSingle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(isAtEClass, isAt.class, "isAt", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getisAt_Angle(), this.getAngle(), null, "angle", null, 0, -1, isAt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getisAt_Angle_res(), this.getAngle_res(), null, "angle_res", null, 0, -1, isAt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(angle_resEClass, Angle_res.class, "Angle_res", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAngle_res_Angle_res(), ecorePackage.getEInt(), "angle_res", null, 0, 1, Angle_res.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(servoEClass, Servo.class, "Servo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getServo_Servo(), ecorePackage.getEInt(), "servo", null, 0, 1, Servo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(angleEClass, Angle.class, "Angle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAngle_Angle(), ecorePackage.getEInt(), "angle", null, 0, 1, Angle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(timeEClass, Time.class, "Time", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTime_Time(), ecorePackage.getEInt(), "time", null, 0, 1, Time.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

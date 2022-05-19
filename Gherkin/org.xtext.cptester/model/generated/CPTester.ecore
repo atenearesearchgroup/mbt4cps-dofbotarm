@@ -2,14 +2,82 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="cPTester" nsURI="http://www.xtext.org/CPTester" nsPrefix="cPTester">
   <eClassifiers xsi:type="ecore:EClass" name="Scenario">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="surname" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operations" upperBound="-1"
+        eType="#//Operation" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Operation">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="when" eType="ecore:EClass platform:/resource/org.xtext.operations/model/generated/Operations.ecore#//Initial"
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Given" eSuperTypes="#//Operation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="initial" upperBound="-1"
+        eType="#//Initial" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Initial">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="time" upperBound="-1" eType="#//Time"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="given" eType="ecore:EClass platform:/resource/org.xtext.operations/model/generated/Operations.ecore#//Operation"
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="When" eSuperTypes="#//Operation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="command" upperBound="-1"
+        eType="#//Command" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Command">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angle" upperBound="-1"
+        eType="#//Angle" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="time" upperBound="-1" eType="#//Time"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="then" eType="ecore:EClass platform:/resource/org.xtext.operations/model/generated/Operations.ecore#//Solution"
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="rotateServo" eSuperTypes="#//Command">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="servo" upperBound="-1"
+        eType="#//Servo" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="rotateAllServos" eSuperTypes="#//Command"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Then" eSuperTypes="#//Operation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="result" upperBound="-1"
+        eType="#//Result" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Result">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="time" upperBound="-1" eType="#//Time"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="and1" eType="ecore:EClass platform:/resource/org.xtext.operations/model/generated/Operations.ecore#//Conditions"
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="And" eSuperTypes="#//Operation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="conditions" upperBound="-1"
+        eType="#//Conditions" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Conditions">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NotLaterThan" eSuperTypes="#//Conditions">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="time" upperBound="-1" eType="#//Time"
         containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="isAtSingle" eSuperTypes="#//Conditions">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="servo" upperBound="-1"
+        eType="#//Servo" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angle" upperBound="-1"
+        eType="#//Angle" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angle_res" upperBound="-1"
+        eType="#//Angle_res" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="isAt" eSuperTypes="#//Conditions">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angle" upperBound="-1"
+        eType="#//Angle" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angle_res" upperBound="-1"
+        eType="#//Angle_res" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Angle_res">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="angle_res" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Servo">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="servo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Angle">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="angle" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Time">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="time" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
 </ecore:EPackage>

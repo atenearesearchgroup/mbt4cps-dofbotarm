@@ -8,6 +8,10 @@ import org.eclipse.xtext.generator.AbstractGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
 import org.xtext.cPTester.Scenario
+import org.xtext.cPTester.Given
+import org.xtext.cPTester.When
+import org.xtext.cPTester.rotateServo
+import org.xtext.cPTester.Servo
 
 /**
  * Generates code from your model files on save.
@@ -24,39 +28,32 @@ class CPTesterGenerator extends AbstractGenerator {
 }
 	
 	def toCode(Scenario scenario) {
-		'''Class: Machine
-			StateMachine: «scenario.name»
-				PseudoState: Initial
-				PseudoState: Final
-				PseudoState: Error
-			
-				Transition: (Initial->Given)
-					Guard: []
-					
-				State: Given
-					Activity: Arm.BaseServo.ServosOperations.posInicial(«scenario»);
-					
-				State: GivenWarning
-					Activity: MessReport(mWarning, Warning Time)
-					
-				Transition: (GivenWarning->Given)
-					Guard: []
-							
-				Transition: (Given->GivenWarning)
-					Guard: Arm.BaseServo.ServosOperations.Time(«scenario.given.TIME»)
-					
-				Transition: (Given->When1)
-					Guard: Arm.BaseServo.ServosOperations.isAtOperation(90,90,90,90,90,90,2)
-						
-				State: When1
-					Activity: Arm.BaseServo.ServosOperations.«scenario.given.name» «scenario.given.TIME», 90, 1000) 
-				
-				Transition: (When1->Error)
-					Guard: LaterThan(oRunTime, 1000)		
-					
-				Transition: (When1->Final)
-					Guard: Arm.BaseServo.ServosOperations.isAtSingleOperation(1, 90, 1000)
-					'''
+		'''«scenario.operations»
+		«scenario.operations.get(0).name»
+		«scenario.operations.get(1).name»
+		«scenario.operations.get(2).name»
+		«scenario.operations.get(3).name»
+		
+		«FOR op : scenario.operations»
+			«IF op.eClass.name.equals("When")»
+			«var when = op as When»
+				«when.name» 
+				«when.command.get(0).name»
+			«FOR cmd : when.command»
+				«IF cmd.eClass.name.equals("rotateServo")»
+				«var rot = cmd as rotateServo»
+					«rot.servo.get(0)»
+					«rot.angle.get(0)»
+					«rot.time»
+					«FOR ser : rot.servo»
+						«var valr = ser as Servo»
+							«valr.servo»
+							«ENDFOR»
+					«ENDIF»
+				«ENDFOR»
+			«ENDIF»
+		«ENDFOR»
+		''' 
 	}
 	
 	

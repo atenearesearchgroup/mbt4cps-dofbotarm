@@ -66,6 +66,24 @@ public class CPTesterFactoryImpl extends EFactoryImpl implements CPTesterFactory
     switch (eClass.getClassifierID())
     {
       case CPTesterPackage.SCENARIO: return createScenario();
+      case CPTesterPackage.OPERATION: return createOperation();
+      case CPTesterPackage.GIVEN: return createGiven();
+      case CPTesterPackage.INITIAL: return createInitial();
+      case CPTesterPackage.WHEN: return createWhen();
+      case CPTesterPackage.COMMAND: return createCommand();
+      case CPTesterPackage.ROTATE_SERVO: return createrotateServo();
+      case CPTesterPackage.ROTATE_ALL_SERVOS: return createrotateAllServos();
+      case CPTesterPackage.THEN: return createThen();
+      case CPTesterPackage.RESULT: return createResult();
+      case CPTesterPackage.AND: return createAnd();
+      case CPTesterPackage.CONDITIONS: return createConditions();
+      case CPTesterPackage.NOT_LATER_THAN: return createNotLaterThan();
+      case CPTesterPackage.IS_AT_SINGLE: return createisAtSingle();
+      case CPTesterPackage.IS_AT: return createisAt();
+      case CPTesterPackage.ANGLE_RES: return createAngle_res();
+      case CPTesterPackage.SERVO: return createServo();
+      case CPTesterPackage.ANGLE: return createAngle();
+      case CPTesterPackage.TIME: return createTime();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -81,6 +99,222 @@ public class CPTesterFactoryImpl extends EFactoryImpl implements CPTesterFactory
   {
     ScenarioImpl scenario = new ScenarioImpl();
     return scenario;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Operation createOperation()
+  {
+    OperationImpl operation = new OperationImpl();
+    return operation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Given createGiven()
+  {
+    GivenImpl given = new GivenImpl();
+    return given;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Initial createInitial()
+  {
+    InitialImpl initial = new InitialImpl();
+    return initial;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public When createWhen()
+  {
+    WhenImpl when = new WhenImpl();
+    return when;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Command createCommand()
+  {
+    CommandImpl command = new CommandImpl();
+    return command;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public rotateServo createrotateServo()
+  {
+    rotateServoImpl rotateServo = new rotateServoImpl();
+    return rotateServo;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public rotateAllServos createrotateAllServos()
+  {
+    rotateAllServosImpl rotateAllServos = new rotateAllServosImpl();
+    return rotateAllServos;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Then createThen()
+  {
+    ThenImpl then = new ThenImpl();
+    return then;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Result createResult()
+  {
+    ResultImpl result = new ResultImpl();
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public And createAnd()
+  {
+    AndImpl and = new AndImpl();
+    return and;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Conditions createConditions()
+  {
+    ConditionsImpl conditions = new ConditionsImpl();
+    return conditions;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotLaterThan createNotLaterThan()
+  {
+    NotLaterThanImpl notLaterThan = new NotLaterThanImpl();
+    return notLaterThan;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public isAtSingle createisAtSingle()
+  {
+    isAtSingleImpl isAtSingle = new isAtSingleImpl();
+    return isAtSingle;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public isAt createisAt()
+  {
+    isAtImpl isAt = new isAtImpl();
+    return isAt;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Angle_res createAngle_res()
+  {
+    Angle_resImpl angle_res = new Angle_resImpl();
+    return angle_res;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Servo createServo()
+  {
+    ServoImpl servo = new ServoImpl();
+    return servo;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Angle createAngle()
+  {
+    AngleImpl angle = new AngleImpl();
+    return angle;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Time createTime()
+  {
+    TimeImpl time = new TimeImpl();
+    return time;
   }
 
   /**

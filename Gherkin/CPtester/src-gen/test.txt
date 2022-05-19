@@ -1,32 +1,12 @@
-Class: Machine
-			StateMachine: RotateAllServos
-				PseudoState: Initial
-				PseudoState: Final
-				PseudoState: Error
-			
-				Transition: (Initial->Given)
-					Guard: []
-					
-				State: Given
-					Activity: Arm.BaseServo.ServosOperations.posInicial(org.xtext.cPTester.impl.ScenarioImpl@5924453d (name: RotateAllServos));
-					
-				State: GivenWarning
-					Activity: MessReport(mWarning, Warning Time)
-					
-				Transition: (GivenWarning->Given)
-					Guard: []
-							
-				Transition: (Given->GivenWarning)
-					Guard: Arm.BaseServo.ServosOperations.Time(org.xtext.operations.impl.timeImpl@59065cf (TIME: 200))
-					
-				Transition: (Given->When1)
-					Guard: Arm.BaseServo.ServosOperations.isAtOperation(90,90,90,90,90,90,2)
-						
-				State: When1
-					Activity: Arm.BaseServo.ServosOperations.rotateAllServosOperation( org.xtext.operations.impl.timeImpl@59065cf (TIME: 200), 90, 1000) 
-				
-				Transition: (When1->Error)
-					Guard: LaterThan(oRunTime, 1000)		
-					
-				Transition: (When1->Final)
-					Guard: Arm.BaseServo.ServosOperations.isAtSingleOperation(1, 90, 1000)
+[org.xtext.cPTester.impl.GivenImpl@859fc98 (name: GIVEN), org.xtext.cPTester.impl.WhenImpl@67f26c28 (name: WHEN), org.xtext.cPTester.impl.ThenImpl@22950bce (name: THEN), org.xtext.cPTester.impl.AndImpl@340e03ab (name: AND)]
+		GIVEN
+		WHEN
+		THEN
+		AND
+		
+			WHEN 
+			rotateServo
+			org.xtext.cPTester.impl.ServoImpl@45f16173 (servo: 1)
+			org.xtext.cPTester.impl.AngleImpl@7964d8fa (angle: 90)
+			[org.xtext.cPTester.impl.TimeImpl@3196d845 (time: 2000)]
+				1

@@ -13,20 +13,25 @@ import org.eclipse.xtext.ParserRule;
 import org.eclipse.xtext.serializer.ISerializationContext;
 import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
+import org.xtext.cPTester.And;
+import org.xtext.cPTester.Angle;
+import org.xtext.cPTester.Angle_res;
 import org.xtext.cPTester.CPTesterPackage;
+import org.xtext.cPTester.Given;
+import org.xtext.cPTester.Initial;
+import org.xtext.cPTester.NotLaterThan;
+import org.xtext.cPTester.Result;
 import org.xtext.cPTester.Scenario;
-import org.xtext.operations.NotLaterThan;
-import org.xtext.operations.OperationalArm;
+import org.xtext.cPTester.Servo;
+import org.xtext.cPTester.Then;
+import org.xtext.cPTester.Time;
+import org.xtext.cPTester.When;
+import org.xtext.cPTester.isAt;
+import org.xtext.cPTester.isAtSingle;
+import org.xtext.cPTester.rotateAllServos;
+import org.xtext.cPTester.rotateServo;
 import org.xtext.operations.OperationsPackage;
-import org.xtext.operations.angle;
-import org.xtext.operations.angle_res;
-import org.xtext.operations.isAtOperation;
-import org.xtext.operations.isAtSingleOperation;
-import org.xtext.operations.result;
-import org.xtext.operations.rotateAllServosOperation;
-import org.xtext.operations.rotateServoOperation;
-import org.xtext.operations.servo;
-import org.xtext.operations.time;
+import org.xtext.operations.Prueba;
 import org.xtext.services.CPTesterGrammarAccess;
 
 @SuppressWarnings("all")
@@ -43,44 +48,59 @@ public class CPTesterSemanticSequencer extends OperationsSemanticSequencer {
 		Set<Parameter> parameters = context.getEnabledBooleanParameters();
 		if (epackage == CPTesterPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
+			case CPTesterPackage.AND:
+				sequence_And(context, (And) semanticObject); 
+				return; 
+			case CPTesterPackage.ANGLE:
+				sequence_Angle(context, (Angle) semanticObject); 
+				return; 
+			case CPTesterPackage.ANGLE_RES:
+				sequence_Angle_res(context, (Angle_res) semanticObject); 
+				return; 
+			case CPTesterPackage.GIVEN:
+				sequence_Given(context, (Given) semanticObject); 
+				return; 
+			case CPTesterPackage.INITIAL:
+				sequence_Initial(context, (Initial) semanticObject); 
+				return; 
+			case CPTesterPackage.NOT_LATER_THAN:
+				sequence_NotLaterThan(context, (NotLaterThan) semanticObject); 
+				return; 
+			case CPTesterPackage.RESULT:
+				sequence_Result(context, (Result) semanticObject); 
+				return; 
 			case CPTesterPackage.SCENARIO:
 				sequence_Scenario(context, (Scenario) semanticObject); 
+				return; 
+			case CPTesterPackage.SERVO:
+				sequence_Servo(context, (Servo) semanticObject); 
+				return; 
+			case CPTesterPackage.THEN:
+				sequence_Then(context, (Then) semanticObject); 
+				return; 
+			case CPTesterPackage.TIME:
+				sequence_Time(context, (Time) semanticObject); 
+				return; 
+			case CPTesterPackage.WHEN:
+				sequence_When(context, (When) semanticObject); 
+				return; 
+			case CPTesterPackage.IS_AT:
+				sequence_isAt(context, (isAt) semanticObject); 
+				return; 
+			case CPTesterPackage.IS_AT_SINGLE:
+				sequence_isAtSingle(context, (isAtSingle) semanticObject); 
+				return; 
+			case CPTesterPackage.ROTATE_ALL_SERVOS:
+				sequence_rotateAllServos(context, (rotateAllServos) semanticObject); 
+				return; 
+			case CPTesterPackage.ROTATE_SERVO:
+				sequence_rotateServo(context, (rotateServo) semanticObject); 
 				return; 
 			}
 		else if (epackage == OperationsPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
-			case OperationsPackage.NOT_LATER_THAN:
-				sequence_NotLaterThan(context, (NotLaterThan) semanticObject); 
-				return; 
-			case OperationsPackage.OPERATIONAL_ARM:
-				sequence_OperationalArm(context, (OperationalArm) semanticObject); 
-				return; 
-			case OperationsPackage.ANGLE:
-				sequence_angle(context, (angle) semanticObject); 
-				return; 
-			case OperationsPackage.ANGLE_RES:
-				sequence_angle_res(context, (angle_res) semanticObject); 
-				return; 
-			case OperationsPackage.IS_AT_OPERATION:
-				sequence_isAtOperation(context, (isAtOperation) semanticObject); 
-				return; 
-			case OperationsPackage.IS_AT_SINGLE_OPERATION:
-				sequence_isAtSingleOperation(context, (isAtSingleOperation) semanticObject); 
-				return; 
-			case OperationsPackage.RESULT:
-				sequence_result(context, (result) semanticObject); 
-				return; 
-			case OperationsPackage.ROTATE_ALL_SERVOS_OPERATION:
-				sequence_rotateAllServosOperation(context, (rotateAllServosOperation) semanticObject); 
-				return; 
-			case OperationsPackage.ROTATE_SERVO_OPERATION:
-				sequence_rotateServoOperation(context, (rotateServoOperation) semanticObject); 
-				return; 
-			case OperationsPackage.SERVO:
-				sequence_servo(context, (servo) semanticObject); 
-				return; 
-			case OperationsPackage.TIME:
-				sequence_time(context, (time) semanticObject); 
+			case OperationsPackage.PRUEBA:
+				sequence_Prueba(context, (Prueba) semanticObject); 
 				return; 
 			}
 		if (errorAcceptor != null)
@@ -90,32 +110,257 @@ public class CPTesterSemanticSequencer extends OperationsSemanticSequencer {
 	/**
 	 * <pre>
 	 * Contexts:
+	 *     Operation returns And
+	 *     And returns And
+	 *
+	 * Constraint:
+	 *     (name='AND' conditions+=Conditions+)
+	 * </pre>
+	 */
+	protected void sequence_And(ISerializationContext context, And semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Angle returns Angle
+	 *
+	 * Constraint:
+	 *     angle=INT
+	 * </pre>
+	 */
+	protected void sequence_Angle(ISerializationContext context, Angle semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, CPTesterPackage.Literals.ANGLE__ANGLE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CPTesterPackage.Literals.ANGLE__ANGLE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getAngleAccess().getAngleINTTerminalRuleCall_0(), semanticObject.getAngle());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Angle_res returns Angle_res
+	 *
+	 * Constraint:
+	 *     angle_res=INT
+	 * </pre>
+	 */
+	protected void sequence_Angle_res(ISerializationContext context, Angle_res semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, CPTesterPackage.Literals.ANGLE_RES__ANGLE_RES) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CPTesterPackage.Literals.ANGLE_RES__ANGLE_RES));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getAngle_resAccess().getAngle_resINTTerminalRuleCall_0(), semanticObject.getAngle_res());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Operation returns Given
+	 *     Given returns Given
+	 *
+	 * Constraint:
+	 *     (name='GIVEN' initial+=Initial)
+	 * </pre>
+	 */
+	protected void sequence_Given(ISerializationContext context, Given semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Initial returns Initial
+	 *
+	 * Constraint:
+	 *     (name='posInicial' time+=Time)
+	 * </pre>
+	 */
+	protected void sequence_Initial(ISerializationContext context, Initial semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Conditions returns NotLaterThan
+	 *     NotLaterThan returns NotLaterThan
+	 *
+	 * Constraint:
+	 *     (name='NotLaterThan' time+=Time)
+	 * </pre>
+	 */
+	protected void sequence_NotLaterThan(ISerializationContext context, NotLaterThan semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Result returns Result
+	 *
+	 * Constraint:
+	 *     (name='result' time+=Time)
+	 * </pre>
+	 */
+	protected void sequence_Result(ISerializationContext context, Result semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
 	 *     Scenario returns Scenario
 	 *
 	 * Constraint:
-	 *     (name=STRING when=Initial given=Operation then=Solution and1=Conditions)
+	 *     (surname=STRING operations+=Operation+)
 	 * </pre>
 	 */
 	protected void sequence_Scenario(ISerializationContext context, Scenario semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Servo returns Servo
+	 *
+	 * Constraint:
+	 *     servo=INT
+	 * </pre>
+	 */
+	protected void sequence_Servo(ISerializationContext context, Servo semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, CPTesterPackage.Literals.SCENARIO__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CPTesterPackage.Literals.SCENARIO__NAME));
-			if (transientValues.isValueTransient(semanticObject, CPTesterPackage.Literals.SCENARIO__WHEN) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CPTesterPackage.Literals.SCENARIO__WHEN));
-			if (transientValues.isValueTransient(semanticObject, CPTesterPackage.Literals.SCENARIO__GIVEN) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CPTesterPackage.Literals.SCENARIO__GIVEN));
-			if (transientValues.isValueTransient(semanticObject, CPTesterPackage.Literals.SCENARIO__THEN) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CPTesterPackage.Literals.SCENARIO__THEN));
-			if (transientValues.isValueTransient(semanticObject, CPTesterPackage.Literals.SCENARIO__AND1) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CPTesterPackage.Literals.SCENARIO__AND1));
+			if (transientValues.isValueTransient(semanticObject, CPTesterPackage.Literals.SERVO__SERVO) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CPTesterPackage.Literals.SERVO__SERVO));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getScenarioAccess().getNameSTRINGTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getScenarioAccess().getWhenInitialParserRuleCall_3_0(), semanticObject.getWhen());
-		feeder.accept(grammarAccess.getScenarioAccess().getGivenOperationParserRuleCall_5_0(), semanticObject.getGiven());
-		feeder.accept(grammarAccess.getScenarioAccess().getThenSolutionParserRuleCall_7_0(), semanticObject.getThen());
-		feeder.accept(grammarAccess.getScenarioAccess().getAnd1ConditionsParserRuleCall_9_0(), semanticObject.getAnd1());
+		feeder.accept(grammarAccess.getServoAccess().getServoINTTerminalRuleCall_0(), semanticObject.getServo());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Operation returns Then
+	 *     Then returns Then
+	 *
+	 * Constraint:
+	 *     (name='THEN' result+=Result)
+	 * </pre>
+	 */
+	protected void sequence_Then(ISerializationContext context, Then semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Time returns Time
+	 *
+	 * Constraint:
+	 *     time=INT
+	 * </pre>
+	 */
+	protected void sequence_Time(ISerializationContext context, Time semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, CPTesterPackage.Literals.TIME__TIME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CPTesterPackage.Literals.TIME__TIME));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getTimeAccess().getTimeINTTerminalRuleCall_0(), semanticObject.getTime());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Operation returns When
+	 *     When returns When
+	 *
+	 * Constraint:
+	 *     (name='WHEN' command+=Command)
+	 * </pre>
+	 */
+	protected void sequence_When(ISerializationContext context, When semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Conditions returns isAtSingle
+	 *     isAtSingle returns isAtSingle
+	 *
+	 * Constraint:
+	 *     (name='isAtSingle' servo+=Servo angle+=Angle angle_res+=Angle_res)
+	 * </pre>
+	 */
+	protected void sequence_isAtSingle(ISerializationContext context, isAtSingle semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Conditions returns isAt
+	 *     isAt returns isAt
+	 *
+	 * Constraint:
+	 *     (name='isAt' angle+=Angle+ angle_res+=Angle_res)
+	 * </pre>
+	 */
+	protected void sequence_isAt(ISerializationContext context, isAt semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Command returns rotateAllServos
+	 *     rotateAllServos returns rotateAllServos
+	 *
+	 * Constraint:
+	 *     (name='rotateAllServos' angle+=Angle+ time+=Time)
+	 * </pre>
+	 */
+	protected void sequence_rotateAllServos(ISerializationContext context, rotateAllServos semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Command returns rotateServo
+	 *     rotateServo returns rotateServo
+	 *
+	 * Constraint:
+	 *     (name='rotateServo' servo+=Servo angle+=Angle time+=Time)
+	 * </pre>
+	 */
+	protected void sequence_rotateServo(ISerializationContext context, rotateServo semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

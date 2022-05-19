@@ -33,6 +33,168 @@ public interface CPTesterFactory extends EFactory
   Scenario createScenario();
 
   /**
+   * Returns a new object of class '<em>Operation</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Operation</em>'.
+   * @generated
+   */
+  Operation createOperation();
+
+  /**
+   * Returns a new object of class '<em>Given</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Given</em>'.
+   * @generated
+   */
+  Given createGiven();
+
+  /**
+   * Returns a new object of class '<em>Initial</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Initial</em>'.
+   * @generated
+   */
+  Initial createInitial();
+
+  /**
+   * Returns a new object of class '<em>When</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>When</em>'.
+   * @generated
+   */
+  When createWhen();
+
+  /**
+   * Returns a new object of class '<em>Command</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Command</em>'.
+   * @generated
+   */
+  Command createCommand();
+
+  /**
+   * Returns a new object of class '<em>rotate Servo</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>rotate Servo</em>'.
+   * @generated
+   */
+  rotateServo createrotateServo();
+
+  /**
+   * Returns a new object of class '<em>rotate All Servos</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>rotate All Servos</em>'.
+   * @generated
+   */
+  rotateAllServos createrotateAllServos();
+
+  /**
+   * Returns a new object of class '<em>Then</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Then</em>'.
+   * @generated
+   */
+  Then createThen();
+
+  /**
+   * Returns a new object of class '<em>Result</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Result</em>'.
+   * @generated
+   */
+  Result createResult();
+
+  /**
+   * Returns a new object of class '<em>And</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>And</em>'.
+   * @generated
+   */
+  And createAnd();
+
+  /**
+   * Returns a new object of class '<em>Conditions</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Conditions</em>'.
+   * @generated
+   */
+  Conditions createConditions();
+
+  /**
+   * Returns a new object of class '<em>Not Later Than</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Not Later Than</em>'.
+   * @generated
+   */
+  NotLaterThan createNotLaterThan();
+
+  /**
+   * Returns a new object of class '<em>is At Single</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>is At Single</em>'.
+   * @generated
+   */
+  isAtSingle createisAtSingle();
+
+  /**
+   * Returns a new object of class '<em>is At</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>is At</em>'.
+   * @generated
+   */
+  isAt createisAt();
+
+  /**
+   * Returns a new object of class '<em>Angle res</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Angle res</em>'.
+   * @generated
+   */
+  Angle_res createAngle_res();
+
+  /**
+   * Returns a new object of class '<em>Servo</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Servo</em>'.
+   * @generated
+   */
+  Servo createServo();
+
+  /**
+   * Returns a new object of class '<em>Angle</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Angle</em>'.
+   * @generated
+   */
+  Angle createAngle();
+
+  /**
+   * Returns a new object of class '<em>Time</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Time</em>'.
+   * @generated
+   */
+  Time createTime();
+
+  /**
    * Returns the package supported by this factory.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

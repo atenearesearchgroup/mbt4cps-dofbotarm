@@ -3,9 +3,135 @@ grammar org.xtext.CPTester with org.xtext.Operations
 generate cPTester "http://www.xtext.org/CPTester"
 
 Scenario:
-	'SCENARIO' name=STRING
-	'WHEN' when=Initial
-	'GIVEN' given=Operation
-	'THEN' then=Solution
-	'AND' and1=Conditions
+	'Scenario' surname=STRING
+	'{'
+		(operations+=Operation)+
+	'}'
 ;
+
+Operation:
+	Given | When | Then | And
+;
+
+//////////////////////////////////////////////////
+
+Given:
+	name='GIVEN'
+	(initial+=Initial)
+;
+
+Initial:
+	name='posInicial'
+	'('
+	(time+=Time)
+	')'
+;
+
+//////////////////////////////////////////////////
+
+When:
+	name='WHEN'
+	(command+=Command)
+;
+
+Command:
+	rotateServo | rotateAllServos
+;
+
+rotateServo:
+	name='rotateServo'
+	'('
+	(servo+=Servo)
+	','
+	(angle+=Angle)
+	','
+	(time+=Time)
+	')'
+;
+
+rotateAllServos:
+	name='rotateAllServos'
+	'('
+	(angle+=Angle)+
+	','
+	(time+=Time)
+	')'
+;
+
+
+//////////////////////////////////////////////////
+
+Then:
+	name='THEN'
+	(result+=Result)
+;
+
+Result:
+	name='result'
+	'('
+	(time+=Time)
+	')'
+;
+
+//////////////////////////////////////////////////
+
+And:
+	name='AND'
+	(conditions+=Conditions)+
+	
+;
+
+Conditions:
+	NotLaterThan | isAtSingle | isAt
+;
+
+NotLaterThan:
+	name='NotLaterThan'
+	'('
+	(time+=Time)
+	')'
+;
+
+isAtSingle:
+	name='isAtSingle'
+	'('
+	(servo+=Servo)
+	','
+	(angle+=Angle)
+	','
+	(angle_res+=Angle_res)
+	')'
+;
+
+isAt:
+	name='isAt'
+	'('
+	(angle+=Angle)+
+	','
+	(angle_res+=Angle_res)
+	')'
+;
+
+
+Angle_res:
+	angle_res=INT
+;
+
+Servo:
+	servo=INT
+;
+
+Angle:
+	angle=INT
+;
+
+Time:
+	time=INT
+;
+
+
+
+
+
+
+

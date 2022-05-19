@@ -68,49 +68,22 @@ public interface CPTesterPackage extends EPackage
   int SCENARIO = 0;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * The feature id for the '<em><b>Surname</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SCENARIO__NAME = 0;
+  int SCENARIO__SURNAME = 0;
 
   /**
-   * The feature id for the '<em><b>When</b></em>' containment reference.
+   * The feature id for the '<em><b>Operations</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SCENARIO__WHEN = 1;
-
-  /**
-   * The feature id for the '<em><b>Given</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SCENARIO__GIVEN = 2;
-
-  /**
-   * The feature id for the '<em><b>Then</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SCENARIO__THEN = 3;
-
-  /**
-   * The feature id for the '<em><b>And1</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SCENARIO__AND1 = 4;
+  int SCENARIO__OPERATIONS = 1;
 
   /**
    * The number of structural features of the '<em>Scenario</em>' class.
@@ -119,7 +92,682 @@ public interface CPTesterPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SCENARIO_FEATURE_COUNT = 5;
+  int SCENARIO_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.cPTester.impl.OperationImpl <em>Operation</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.cPTester.impl.OperationImpl
+   * @see org.xtext.cPTester.impl.CPTesterPackageImpl#getOperation()
+   * @generated
+   */
+  int OPERATION = 1;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OPERATION__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Operation</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OPERATION_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.cPTester.impl.GivenImpl <em>Given</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.cPTester.impl.GivenImpl
+   * @see org.xtext.cPTester.impl.CPTesterPackageImpl#getGiven()
+   * @generated
+   */
+  int GIVEN = 2;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GIVEN__NAME = OPERATION__NAME;
+
+  /**
+   * The feature id for the '<em><b>Initial</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GIVEN__INITIAL = OPERATION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Given</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GIVEN_FEATURE_COUNT = OPERATION_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.cPTester.impl.InitialImpl <em>Initial</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.cPTester.impl.InitialImpl
+   * @see org.xtext.cPTester.impl.CPTesterPackageImpl#getInitial()
+   * @generated
+   */
+  int INITIAL = 3;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INITIAL__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Time</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INITIAL__TIME = 1;
+
+  /**
+   * The number of structural features of the '<em>Initial</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INITIAL_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.cPTester.impl.WhenImpl <em>When</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.cPTester.impl.WhenImpl
+   * @see org.xtext.cPTester.impl.CPTesterPackageImpl#getWhen()
+   * @generated
+   */
+  int WHEN = 4;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int WHEN__NAME = OPERATION__NAME;
+
+  /**
+   * The feature id for the '<em><b>Command</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int WHEN__COMMAND = OPERATION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>When</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int WHEN_FEATURE_COUNT = OPERATION_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.cPTester.impl.CommandImpl <em>Command</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.cPTester.impl.CommandImpl
+   * @see org.xtext.cPTester.impl.CPTesterPackageImpl#getCommand()
+   * @generated
+   */
+  int COMMAND = 5;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMMAND__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Angle</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMMAND__ANGLE = 1;
+
+  /**
+   * The feature id for the '<em><b>Time</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMMAND__TIME = 2;
+
+  /**
+   * The number of structural features of the '<em>Command</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMMAND_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link org.xtext.cPTester.impl.rotateServoImpl <em>rotate Servo</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.cPTester.impl.rotateServoImpl
+   * @see org.xtext.cPTester.impl.CPTesterPackageImpl#getrotateServo()
+   * @generated
+   */
+  int ROTATE_SERVO = 6;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ROTATE_SERVO__NAME = COMMAND__NAME;
+
+  /**
+   * The feature id for the '<em><b>Angle</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ROTATE_SERVO__ANGLE = COMMAND__ANGLE;
+
+  /**
+   * The feature id for the '<em><b>Time</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ROTATE_SERVO__TIME = COMMAND__TIME;
+
+  /**
+   * The feature id for the '<em><b>Servo</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ROTATE_SERVO__SERVO = COMMAND_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>rotate Servo</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ROTATE_SERVO_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.cPTester.impl.rotateAllServosImpl <em>rotate All Servos</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.cPTester.impl.rotateAllServosImpl
+   * @see org.xtext.cPTester.impl.CPTesterPackageImpl#getrotateAllServos()
+   * @generated
+   */
+  int ROTATE_ALL_SERVOS = 7;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ROTATE_ALL_SERVOS__NAME = COMMAND__NAME;
+
+  /**
+   * The feature id for the '<em><b>Angle</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ROTATE_ALL_SERVOS__ANGLE = COMMAND__ANGLE;
+
+  /**
+   * The feature id for the '<em><b>Time</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ROTATE_ALL_SERVOS__TIME = COMMAND__TIME;
+
+  /**
+   * The number of structural features of the '<em>rotate All Servos</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ROTATE_ALL_SERVOS_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.cPTester.impl.ThenImpl <em>Then</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.cPTester.impl.ThenImpl
+   * @see org.xtext.cPTester.impl.CPTesterPackageImpl#getThen()
+   * @generated
+   */
+  int THEN = 8;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int THEN__NAME = OPERATION__NAME;
+
+  /**
+   * The feature id for the '<em><b>Result</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int THEN__RESULT = OPERATION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Then</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int THEN_FEATURE_COUNT = OPERATION_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.cPTester.impl.ResultImpl <em>Result</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.cPTester.impl.ResultImpl
+   * @see org.xtext.cPTester.impl.CPTesterPackageImpl#getResult()
+   * @generated
+   */
+  int RESULT = 9;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RESULT__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Time</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RESULT__TIME = 1;
+
+  /**
+   * The number of structural features of the '<em>Result</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RESULT_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.cPTester.impl.AndImpl <em>And</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.cPTester.impl.AndImpl
+   * @see org.xtext.cPTester.impl.CPTesterPackageImpl#getAnd()
+   * @generated
+   */
+  int AND = 10;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AND__NAME = OPERATION__NAME;
+
+  /**
+   * The feature id for the '<em><b>Conditions</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AND__CONDITIONS = OPERATION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>And</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AND_FEATURE_COUNT = OPERATION_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.cPTester.impl.ConditionsImpl <em>Conditions</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.cPTester.impl.ConditionsImpl
+   * @see org.xtext.cPTester.impl.CPTesterPackageImpl#getConditions()
+   * @generated
+   */
+  int CONDITIONS = 11;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONDITIONS__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Conditions</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONDITIONS_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.cPTester.impl.NotLaterThanImpl <em>Not Later Than</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.cPTester.impl.NotLaterThanImpl
+   * @see org.xtext.cPTester.impl.CPTesterPackageImpl#getNotLaterThan()
+   * @generated
+   */
+  int NOT_LATER_THAN = 12;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NOT_LATER_THAN__NAME = CONDITIONS__NAME;
+
+  /**
+   * The feature id for the '<em><b>Time</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NOT_LATER_THAN__TIME = CONDITIONS_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Not Later Than</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NOT_LATER_THAN_FEATURE_COUNT = CONDITIONS_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.cPTester.impl.isAtSingleImpl <em>is At Single</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.cPTester.impl.isAtSingleImpl
+   * @see org.xtext.cPTester.impl.CPTesterPackageImpl#getisAtSingle()
+   * @generated
+   */
+  int IS_AT_SINGLE = 13;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IS_AT_SINGLE__NAME = CONDITIONS__NAME;
+
+  /**
+   * The feature id for the '<em><b>Servo</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IS_AT_SINGLE__SERVO = CONDITIONS_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Angle</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IS_AT_SINGLE__ANGLE = CONDITIONS_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Angle res</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IS_AT_SINGLE__ANGLE_RES = CONDITIONS_FEATURE_COUNT + 2;
+
+  /**
+   * The number of structural features of the '<em>is At Single</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IS_AT_SINGLE_FEATURE_COUNT = CONDITIONS_FEATURE_COUNT + 3;
+
+  /**
+   * The meta object id for the '{@link org.xtext.cPTester.impl.isAtImpl <em>is At</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.cPTester.impl.isAtImpl
+   * @see org.xtext.cPTester.impl.CPTesterPackageImpl#getisAt()
+   * @generated
+   */
+  int IS_AT = 14;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IS_AT__NAME = CONDITIONS__NAME;
+
+  /**
+   * The feature id for the '<em><b>Angle</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IS_AT__ANGLE = CONDITIONS_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Angle res</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IS_AT__ANGLE_RES = CONDITIONS_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>is At</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IS_AT_FEATURE_COUNT = CONDITIONS_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.cPTester.impl.Angle_resImpl <em>Angle res</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.cPTester.impl.Angle_resImpl
+   * @see org.xtext.cPTester.impl.CPTesterPackageImpl#getAngle_res()
+   * @generated
+   */
+  int ANGLE_RES = 15;
+
+  /**
+   * The feature id for the '<em><b>Angle res</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ANGLE_RES__ANGLE_RES = 0;
+
+  /**
+   * The number of structural features of the '<em>Angle res</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ANGLE_RES_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.cPTester.impl.ServoImpl <em>Servo</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.cPTester.impl.ServoImpl
+   * @see org.xtext.cPTester.impl.CPTesterPackageImpl#getServo()
+   * @generated
+   */
+  int SERVO = 16;
+
+  /**
+   * The feature id for the '<em><b>Servo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SERVO__SERVO = 0;
+
+  /**
+   * The number of structural features of the '<em>Servo</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SERVO_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.cPTester.impl.AngleImpl <em>Angle</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.cPTester.impl.AngleImpl
+   * @see org.xtext.cPTester.impl.CPTesterPackageImpl#getAngle()
+   * @generated
+   */
+  int ANGLE = 17;
+
+  /**
+   * The feature id for the '<em><b>Angle</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ANGLE__ANGLE = 0;
+
+  /**
+   * The number of structural features of the '<em>Angle</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ANGLE_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.cPTester.impl.TimeImpl <em>Time</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.cPTester.impl.TimeImpl
+   * @see org.xtext.cPTester.impl.CPTesterPackageImpl#getTime()
+   * @generated
+   */
+  int TIME = 18;
+
+  /**
+   * The feature id for the '<em><b>Time</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TIME__TIME = 0;
+
+  /**
+   * The number of structural features of the '<em>Time</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TIME_FEATURE_COUNT = 1;
 
 
   /**
@@ -133,59 +781,470 @@ public interface CPTesterPackage extends EPackage
   EClass getScenario();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.cPTester.Scenario#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.cPTester.Scenario#getSurname <em>Surname</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Surname</em>'.
+   * @see org.xtext.cPTester.Scenario#getSurname()
+   * @see #getScenario()
+   * @generated
+   */
+  EAttribute getScenario_Surname();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.cPTester.Scenario#getOperations <em>Operations</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Operations</em>'.
+   * @see org.xtext.cPTester.Scenario#getOperations()
+   * @see #getScenario()
+   * @generated
+   */
+  EReference getScenario_Operations();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.cPTester.Operation <em>Operation</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Operation</em>'.
+   * @see org.xtext.cPTester.Operation
+   * @generated
+   */
+  EClass getOperation();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.cPTester.Operation#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.xtext.cPTester.Scenario#getName()
-   * @see #getScenario()
+   * @see org.xtext.cPTester.Operation#getName()
+   * @see #getOperation()
    * @generated
    */
-  EAttribute getScenario_Name();
+  EAttribute getOperation_Name();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.cPTester.Scenario#getWhen <em>When</em>}'.
+   * Returns the meta object for class '{@link org.xtext.cPTester.Given <em>Given</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>When</em>'.
-   * @see org.xtext.cPTester.Scenario#getWhen()
-   * @see #getScenario()
+   * @return the meta object for class '<em>Given</em>'.
+   * @see org.xtext.cPTester.Given
    * @generated
    */
-  EReference getScenario_When();
+  EClass getGiven();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.cPTester.Scenario#getGiven <em>Given</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.cPTester.Given#getInitial <em>Initial</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Given</em>'.
-   * @see org.xtext.cPTester.Scenario#getGiven()
-   * @see #getScenario()
+   * @return the meta object for the containment reference list '<em>Initial</em>'.
+   * @see org.xtext.cPTester.Given#getInitial()
+   * @see #getGiven()
    * @generated
    */
-  EReference getScenario_Given();
+  EReference getGiven_Initial();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.cPTester.Scenario#getThen <em>Then</em>}'.
+   * Returns the meta object for class '{@link org.xtext.cPTester.Initial <em>Initial</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Then</em>'.
-   * @see org.xtext.cPTester.Scenario#getThen()
-   * @see #getScenario()
+   * @return the meta object for class '<em>Initial</em>'.
+   * @see org.xtext.cPTester.Initial
    * @generated
    */
-  EReference getScenario_Then();
+  EClass getInitial();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.cPTester.Scenario#getAnd1 <em>And1</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.cPTester.Initial#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>And1</em>'.
-   * @see org.xtext.cPTester.Scenario#getAnd1()
-   * @see #getScenario()
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.xtext.cPTester.Initial#getName()
+   * @see #getInitial()
    * @generated
    */
-  EReference getScenario_And1();
+  EAttribute getInitial_Name();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.cPTester.Initial#getTime <em>Time</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Time</em>'.
+   * @see org.xtext.cPTester.Initial#getTime()
+   * @see #getInitial()
+   * @generated
+   */
+  EReference getInitial_Time();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.cPTester.When <em>When</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>When</em>'.
+   * @see org.xtext.cPTester.When
+   * @generated
+   */
+  EClass getWhen();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.cPTester.When#getCommand <em>Command</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Command</em>'.
+   * @see org.xtext.cPTester.When#getCommand()
+   * @see #getWhen()
+   * @generated
+   */
+  EReference getWhen_Command();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.cPTester.Command <em>Command</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Command</em>'.
+   * @see org.xtext.cPTester.Command
+   * @generated
+   */
+  EClass getCommand();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.cPTester.Command#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.xtext.cPTester.Command#getName()
+   * @see #getCommand()
+   * @generated
+   */
+  EAttribute getCommand_Name();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.cPTester.Command#getAngle <em>Angle</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Angle</em>'.
+   * @see org.xtext.cPTester.Command#getAngle()
+   * @see #getCommand()
+   * @generated
+   */
+  EReference getCommand_Angle();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.cPTester.Command#getTime <em>Time</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Time</em>'.
+   * @see org.xtext.cPTester.Command#getTime()
+   * @see #getCommand()
+   * @generated
+   */
+  EReference getCommand_Time();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.cPTester.rotateServo <em>rotate Servo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>rotate Servo</em>'.
+   * @see org.xtext.cPTester.rotateServo
+   * @generated
+   */
+  EClass getrotateServo();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.cPTester.rotateServo#getServo <em>Servo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Servo</em>'.
+   * @see org.xtext.cPTester.rotateServo#getServo()
+   * @see #getrotateServo()
+   * @generated
+   */
+  EReference getrotateServo_Servo();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.cPTester.rotateAllServos <em>rotate All Servos</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>rotate All Servos</em>'.
+   * @see org.xtext.cPTester.rotateAllServos
+   * @generated
+   */
+  EClass getrotateAllServos();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.cPTester.Then <em>Then</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Then</em>'.
+   * @see org.xtext.cPTester.Then
+   * @generated
+   */
+  EClass getThen();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.cPTester.Then#getResult <em>Result</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Result</em>'.
+   * @see org.xtext.cPTester.Then#getResult()
+   * @see #getThen()
+   * @generated
+   */
+  EReference getThen_Result();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.cPTester.Result <em>Result</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Result</em>'.
+   * @see org.xtext.cPTester.Result
+   * @generated
+   */
+  EClass getResult();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.cPTester.Result#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.xtext.cPTester.Result#getName()
+   * @see #getResult()
+   * @generated
+   */
+  EAttribute getResult_Name();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.cPTester.Result#getTime <em>Time</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Time</em>'.
+   * @see org.xtext.cPTester.Result#getTime()
+   * @see #getResult()
+   * @generated
+   */
+  EReference getResult_Time();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.cPTester.And <em>And</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>And</em>'.
+   * @see org.xtext.cPTester.And
+   * @generated
+   */
+  EClass getAnd();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.cPTester.And#getConditions <em>Conditions</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Conditions</em>'.
+   * @see org.xtext.cPTester.And#getConditions()
+   * @see #getAnd()
+   * @generated
+   */
+  EReference getAnd_Conditions();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.cPTester.Conditions <em>Conditions</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Conditions</em>'.
+   * @see org.xtext.cPTester.Conditions
+   * @generated
+   */
+  EClass getConditions();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.cPTester.Conditions#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.xtext.cPTester.Conditions#getName()
+   * @see #getConditions()
+   * @generated
+   */
+  EAttribute getConditions_Name();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.cPTester.NotLaterThan <em>Not Later Than</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Not Later Than</em>'.
+   * @see org.xtext.cPTester.NotLaterThan
+   * @generated
+   */
+  EClass getNotLaterThan();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.cPTester.NotLaterThan#getTime <em>Time</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Time</em>'.
+   * @see org.xtext.cPTester.NotLaterThan#getTime()
+   * @see #getNotLaterThan()
+   * @generated
+   */
+  EReference getNotLaterThan_Time();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.cPTester.isAtSingle <em>is At Single</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>is At Single</em>'.
+   * @see org.xtext.cPTester.isAtSingle
+   * @generated
+   */
+  EClass getisAtSingle();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.cPTester.isAtSingle#getServo <em>Servo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Servo</em>'.
+   * @see org.xtext.cPTester.isAtSingle#getServo()
+   * @see #getisAtSingle()
+   * @generated
+   */
+  EReference getisAtSingle_Servo();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.cPTester.isAtSingle#getAngle <em>Angle</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Angle</em>'.
+   * @see org.xtext.cPTester.isAtSingle#getAngle()
+   * @see #getisAtSingle()
+   * @generated
+   */
+  EReference getisAtSingle_Angle();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.cPTester.isAtSingle#getAngle_res <em>Angle res</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Angle res</em>'.
+   * @see org.xtext.cPTester.isAtSingle#getAngle_res()
+   * @see #getisAtSingle()
+   * @generated
+   */
+  EReference getisAtSingle_Angle_res();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.cPTester.isAt <em>is At</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>is At</em>'.
+   * @see org.xtext.cPTester.isAt
+   * @generated
+   */
+  EClass getisAt();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.cPTester.isAt#getAngle <em>Angle</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Angle</em>'.
+   * @see org.xtext.cPTester.isAt#getAngle()
+   * @see #getisAt()
+   * @generated
+   */
+  EReference getisAt_Angle();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.cPTester.isAt#getAngle_res <em>Angle res</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Angle res</em>'.
+   * @see org.xtext.cPTester.isAt#getAngle_res()
+   * @see #getisAt()
+   * @generated
+   */
+  EReference getisAt_Angle_res();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.cPTester.Angle_res <em>Angle res</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Angle res</em>'.
+   * @see org.xtext.cPTester.Angle_res
+   * @generated
+   */
+  EClass getAngle_res();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.cPTester.Angle_res#getAngle_res <em>Angle res</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Angle res</em>'.
+   * @see org.xtext.cPTester.Angle_res#getAngle_res()
+   * @see #getAngle_res()
+   * @generated
+   */
+  EAttribute getAngle_res_Angle_res();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.cPTester.Servo <em>Servo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Servo</em>'.
+   * @see org.xtext.cPTester.Servo
+   * @generated
+   */
+  EClass getServo();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.cPTester.Servo#getServo <em>Servo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Servo</em>'.
+   * @see org.xtext.cPTester.Servo#getServo()
+   * @see #getServo()
+   * @generated
+   */
+  EAttribute getServo_Servo();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.cPTester.Angle <em>Angle</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Angle</em>'.
+   * @see org.xtext.cPTester.Angle
+   * @generated
+   */
+  EClass getAngle();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.cPTester.Angle#getAngle <em>Angle</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Angle</em>'.
+   * @see org.xtext.cPTester.Angle#getAngle()
+   * @see #getAngle()
+   * @generated
+   */
+  EAttribute getAngle_Angle();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.cPTester.Time <em>Time</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Time</em>'.
+   * @see org.xtext.cPTester.Time
+   * @generated
+   */
+  EClass getTime();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.cPTester.Time#getTime <em>Time</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Time</em>'.
+   * @see org.xtext.cPTester.Time#getTime()
+   * @see #getTime()
+   * @generated
+   */
+  EAttribute getTime_Time();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -221,44 +1280,392 @@ public interface CPTesterPackage extends EPackage
     EClass SCENARIO = eINSTANCE.getScenario();
 
     /**
+     * The meta object literal for the '<em><b>Surname</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SCENARIO__SURNAME = eINSTANCE.getScenario_Surname();
+
+    /**
+     * The meta object literal for the '<em><b>Operations</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SCENARIO__OPERATIONS = eINSTANCE.getScenario_Operations();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.cPTester.impl.OperationImpl <em>Operation</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.cPTester.impl.OperationImpl
+     * @see org.xtext.cPTester.impl.CPTesterPackageImpl#getOperation()
+     * @generated
+     */
+    EClass OPERATION = eINSTANCE.getOperation();
+
+    /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute SCENARIO__NAME = eINSTANCE.getScenario_Name();
+    EAttribute OPERATION__NAME = eINSTANCE.getOperation_Name();
 
     /**
-     * The meta object literal for the '<em><b>When</b></em>' containment reference feature.
+     * The meta object literal for the '{@link org.xtext.cPTester.impl.GivenImpl <em>Given</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.cPTester.impl.GivenImpl
+     * @see org.xtext.cPTester.impl.CPTesterPackageImpl#getGiven()
+     * @generated
+     */
+    EClass GIVEN = eINSTANCE.getGiven();
+
+    /**
+     * The meta object literal for the '<em><b>Initial</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference SCENARIO__WHEN = eINSTANCE.getScenario_When();
+    EReference GIVEN__INITIAL = eINSTANCE.getGiven_Initial();
 
     /**
-     * The meta object literal for the '<em><b>Given</b></em>' containment reference feature.
+     * The meta object literal for the '{@link org.xtext.cPTester.impl.InitialImpl <em>Initial</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.cPTester.impl.InitialImpl
+     * @see org.xtext.cPTester.impl.CPTesterPackageImpl#getInitial()
+     * @generated
+     */
+    EClass INITIAL = eINSTANCE.getInitial();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference SCENARIO__GIVEN = eINSTANCE.getScenario_Given();
+    EAttribute INITIAL__NAME = eINSTANCE.getInitial_Name();
 
     /**
-     * The meta object literal for the '<em><b>Then</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Time</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference SCENARIO__THEN = eINSTANCE.getScenario_Then();
+    EReference INITIAL__TIME = eINSTANCE.getInitial_Time();
 
     /**
-     * The meta object literal for the '<em><b>And1</b></em>' containment reference feature.
+     * The meta object literal for the '{@link org.xtext.cPTester.impl.WhenImpl <em>When</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.cPTester.impl.WhenImpl
+     * @see org.xtext.cPTester.impl.CPTesterPackageImpl#getWhen()
+     * @generated
+     */
+    EClass WHEN = eINSTANCE.getWhen();
+
+    /**
+     * The meta object literal for the '<em><b>Command</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference SCENARIO__AND1 = eINSTANCE.getScenario_And1();
+    EReference WHEN__COMMAND = eINSTANCE.getWhen_Command();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.cPTester.impl.CommandImpl <em>Command</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.cPTester.impl.CommandImpl
+     * @see org.xtext.cPTester.impl.CPTesterPackageImpl#getCommand()
+     * @generated
+     */
+    EClass COMMAND = eINSTANCE.getCommand();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute COMMAND__NAME = eINSTANCE.getCommand_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Angle</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference COMMAND__ANGLE = eINSTANCE.getCommand_Angle();
+
+    /**
+     * The meta object literal for the '<em><b>Time</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference COMMAND__TIME = eINSTANCE.getCommand_Time();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.cPTester.impl.rotateServoImpl <em>rotate Servo</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.cPTester.impl.rotateServoImpl
+     * @see org.xtext.cPTester.impl.CPTesterPackageImpl#getrotateServo()
+     * @generated
+     */
+    EClass ROTATE_SERVO = eINSTANCE.getrotateServo();
+
+    /**
+     * The meta object literal for the '<em><b>Servo</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ROTATE_SERVO__SERVO = eINSTANCE.getrotateServo_Servo();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.cPTester.impl.rotateAllServosImpl <em>rotate All Servos</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.cPTester.impl.rotateAllServosImpl
+     * @see org.xtext.cPTester.impl.CPTesterPackageImpl#getrotateAllServos()
+     * @generated
+     */
+    EClass ROTATE_ALL_SERVOS = eINSTANCE.getrotateAllServos();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.cPTester.impl.ThenImpl <em>Then</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.cPTester.impl.ThenImpl
+     * @see org.xtext.cPTester.impl.CPTesterPackageImpl#getThen()
+     * @generated
+     */
+    EClass THEN = eINSTANCE.getThen();
+
+    /**
+     * The meta object literal for the '<em><b>Result</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference THEN__RESULT = eINSTANCE.getThen_Result();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.cPTester.impl.ResultImpl <em>Result</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.cPTester.impl.ResultImpl
+     * @see org.xtext.cPTester.impl.CPTesterPackageImpl#getResult()
+     * @generated
+     */
+    EClass RESULT = eINSTANCE.getResult();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute RESULT__NAME = eINSTANCE.getResult_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Time</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference RESULT__TIME = eINSTANCE.getResult_Time();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.cPTester.impl.AndImpl <em>And</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.cPTester.impl.AndImpl
+     * @see org.xtext.cPTester.impl.CPTesterPackageImpl#getAnd()
+     * @generated
+     */
+    EClass AND = eINSTANCE.getAnd();
+
+    /**
+     * The meta object literal for the '<em><b>Conditions</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference AND__CONDITIONS = eINSTANCE.getAnd_Conditions();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.cPTester.impl.ConditionsImpl <em>Conditions</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.cPTester.impl.ConditionsImpl
+     * @see org.xtext.cPTester.impl.CPTesterPackageImpl#getConditions()
+     * @generated
+     */
+    EClass CONDITIONS = eINSTANCE.getConditions();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CONDITIONS__NAME = eINSTANCE.getConditions_Name();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.cPTester.impl.NotLaterThanImpl <em>Not Later Than</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.cPTester.impl.NotLaterThanImpl
+     * @see org.xtext.cPTester.impl.CPTesterPackageImpl#getNotLaterThan()
+     * @generated
+     */
+    EClass NOT_LATER_THAN = eINSTANCE.getNotLaterThan();
+
+    /**
+     * The meta object literal for the '<em><b>Time</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference NOT_LATER_THAN__TIME = eINSTANCE.getNotLaterThan_Time();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.cPTester.impl.isAtSingleImpl <em>is At Single</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.cPTester.impl.isAtSingleImpl
+     * @see org.xtext.cPTester.impl.CPTesterPackageImpl#getisAtSingle()
+     * @generated
+     */
+    EClass IS_AT_SINGLE = eINSTANCE.getisAtSingle();
+
+    /**
+     * The meta object literal for the '<em><b>Servo</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference IS_AT_SINGLE__SERVO = eINSTANCE.getisAtSingle_Servo();
+
+    /**
+     * The meta object literal for the '<em><b>Angle</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference IS_AT_SINGLE__ANGLE = eINSTANCE.getisAtSingle_Angle();
+
+    /**
+     * The meta object literal for the '<em><b>Angle res</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference IS_AT_SINGLE__ANGLE_RES = eINSTANCE.getisAtSingle_Angle_res();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.cPTester.impl.isAtImpl <em>is At</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.cPTester.impl.isAtImpl
+     * @see org.xtext.cPTester.impl.CPTesterPackageImpl#getisAt()
+     * @generated
+     */
+    EClass IS_AT = eINSTANCE.getisAt();
+
+    /**
+     * The meta object literal for the '<em><b>Angle</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference IS_AT__ANGLE = eINSTANCE.getisAt_Angle();
+
+    /**
+     * The meta object literal for the '<em><b>Angle res</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference IS_AT__ANGLE_RES = eINSTANCE.getisAt_Angle_res();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.cPTester.impl.Angle_resImpl <em>Angle res</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.cPTester.impl.Angle_resImpl
+     * @see org.xtext.cPTester.impl.CPTesterPackageImpl#getAngle_res()
+     * @generated
+     */
+    EClass ANGLE_RES = eINSTANCE.getAngle_res();
+
+    /**
+     * The meta object literal for the '<em><b>Angle res</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ANGLE_RES__ANGLE_RES = eINSTANCE.getAngle_res_Angle_res();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.cPTester.impl.ServoImpl <em>Servo</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.cPTester.impl.ServoImpl
+     * @see org.xtext.cPTester.impl.CPTesterPackageImpl#getServo()
+     * @generated
+     */
+    EClass SERVO = eINSTANCE.getServo();
+
+    /**
+     * The meta object literal for the '<em><b>Servo</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SERVO__SERVO = eINSTANCE.getServo_Servo();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.cPTester.impl.AngleImpl <em>Angle</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.cPTester.impl.AngleImpl
+     * @see org.xtext.cPTester.impl.CPTesterPackageImpl#getAngle()
+     * @generated
+     */
+    EClass ANGLE = eINSTANCE.getAngle();
+
+    /**
+     * The meta object literal for the '<em><b>Angle</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ANGLE__ANGLE = eINSTANCE.getAngle_Angle();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.cPTester.impl.TimeImpl <em>Time</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.cPTester.impl.TimeImpl
+     * @see org.xtext.cPTester.impl.CPTesterPackageImpl#getTime()
+     * @generated
+     */
+    EClass TIME = eINSTANCE.getTime();
+
+    /**
+     * The meta object literal for the '<em><b>Time</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TIME__TIME = eINSTANCE.getTime_Time();
 
   }
 

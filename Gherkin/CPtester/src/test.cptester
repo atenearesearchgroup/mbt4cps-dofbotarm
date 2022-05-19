@@ -1,5 +1,7 @@
-SCENARIO "RotateAllServos" 
-WHEN OperationalArm(333)
-GIVEN rotateAllServosOperation(1,1,1,1,1,1,200)
-THEN result=1
-AND NotLaterThan(1)Query
+Scenario "rotate a single servo"
+{
+	GIVEN posInicial(1000)
+	WHEN rotateServo(1,90,2000)
+	THEN result(2000)
+	AND NotLaterThan(2000) isAtSingle(1,90,2)
+}
