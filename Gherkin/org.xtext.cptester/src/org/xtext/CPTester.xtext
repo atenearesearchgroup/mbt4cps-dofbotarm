@@ -5,13 +5,13 @@ generate cPTester "http://www.xtext.org/CPTester"
 Scenario:
 	'Scenario' surname=STRING
 	'{'
-		(operations+=Operation)+
+		given=Given
+		when=When
+		then=Then
+		and=And
 	'}'
 ;
 
-Operation:
-	Given | When | Then | And
-;
 
 //////////////////////////////////////////////////
 
@@ -52,7 +52,7 @@ rotateServo:
 rotateAllServos:
 	name='rotateAllServos'
 	'('
-	(angle+=Angle)+
+	(angle+=Angle)+ //Poner multiples atributos
 	','
 	(time+=Time)
 	')'
@@ -77,15 +77,16 @@ Result:
 
 And:
 	name='AND'
-	(conditions+=Conditions)+
+	(conditions+=Conditions)
+	(solution+=Solution)
 	
 ;
 
-Conditions:
-	NotLaterThan | isAtSingle | isAt
+Solution:
+	isAtSingle | isAt
 ;
 
-NotLaterThan:
+Conditions:
 	name='NotLaterThan'
 	'('
 	(time+=Time)

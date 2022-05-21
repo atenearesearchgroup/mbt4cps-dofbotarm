@@ -3,8 +3,6 @@
  */
 package org.xtext.cPTester;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -17,7 +15,10 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.cPTester.Scenario#getSurname <em>Surname</em>}</li>
- *   <li>{@link org.xtext.cPTester.Scenario#getOperations <em>Operations</em>}</li>
+ *   <li>{@link org.xtext.cPTester.Scenario#getGiven <em>Given</em>}</li>
+ *   <li>{@link org.xtext.cPTester.Scenario#getWhen <em>When</em>}</li>
+ *   <li>{@link org.xtext.cPTester.Scenario#getThen <em>Then</em>}</li>
+ *   <li>{@link org.xtext.cPTester.Scenario#getAnd <em>And</em>}</li>
  * </ul>
  *
  * @see org.xtext.cPTester.CPTesterPackage#getScenario()
@@ -49,15 +50,91 @@ public interface Scenario extends EObject
   void setSurname(String value);
 
   /**
-   * Returns the value of the '<em><b>Operations</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.cPTester.Operation}.
+   * Returns the value of the '<em><b>Given</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Operations</em>' containment reference list.
-   * @see org.xtext.cPTester.CPTesterPackage#getScenario_Operations()
+   * @return the value of the '<em>Given</em>' containment reference.
+   * @see #setGiven(Given)
+   * @see org.xtext.cPTester.CPTesterPackage#getScenario_Given()
    * @model containment="true"
    * @generated
    */
-  EList<Operation> getOperations();
+  Given getGiven();
+
+  /**
+   * Sets the value of the '{@link org.xtext.cPTester.Scenario#getGiven <em>Given</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Given</em>' containment reference.
+   * @see #getGiven()
+   * @generated
+   */
+  void setGiven(Given value);
+
+  /**
+   * Returns the value of the '<em><b>When</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>When</em>' containment reference.
+   * @see #setWhen(When)
+   * @see org.xtext.cPTester.CPTesterPackage#getScenario_When()
+   * @model containment="true"
+   * @generated
+   */
+  When getWhen();
+
+  /**
+   * Sets the value of the '{@link org.xtext.cPTester.Scenario#getWhen <em>When</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>When</em>' containment reference.
+   * @see #getWhen()
+   * @generated
+   */
+  void setWhen(When value);
+
+  /**
+   * Returns the value of the '<em><b>Then</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Then</em>' containment reference.
+   * @see #setThen(Then)
+   * @see org.xtext.cPTester.CPTesterPackage#getScenario_Then()
+   * @model containment="true"
+   * @generated
+   */
+  Then getThen();
+
+  /**
+   * Sets the value of the '{@link org.xtext.cPTester.Scenario#getThen <em>Then</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Then</em>' containment reference.
+   * @see #getThen()
+   * @generated
+   */
+  void setThen(Then value);
+
+  /**
+   * Returns the value of the '<em><b>And</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>And</em>' containment reference.
+   * @see #setAnd(And)
+   * @see org.xtext.cPTester.CPTesterPackage#getScenario_And()
+   * @model containment="true"
+   * @generated
+   */
+  And getAnd();
+
+  /**
+   * Sets the value of the '{@link org.xtext.cPTester.Scenario#getAnd <em>And</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>And</em>' containment reference.
+   * @see #getAnd()
+   * @generated
+   */
+  void setAnd(And value);
 
 } // Scenario

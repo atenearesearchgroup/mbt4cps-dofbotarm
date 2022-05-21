@@ -80,18 +80,10 @@ public class CPTesterSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case CPTesterPackage.OPERATION:
-      {
-        Operation operation = (Operation)theEObject;
-        T result = caseOperation(operation);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case CPTesterPackage.GIVEN:
       {
         Given given = (Given)theEObject;
         T result = caseGiven(given);
-        if (result == null) result = caseOperation(given);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -106,7 +98,6 @@ public class CPTesterSwitch<T> extends Switch<T>
       {
         When when = (When)theEObject;
         T result = caseWhen(when);
-        if (result == null) result = caseOperation(when);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -137,7 +128,6 @@ public class CPTesterSwitch<T> extends Switch<T>
       {
         Then then = (Then)theEObject;
         T result = caseThen(then);
-        if (result == null) result = caseOperation(then);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -152,7 +142,13 @@ public class CPTesterSwitch<T> extends Switch<T>
       {
         And and = (And)theEObject;
         T result = caseAnd(and);
-        if (result == null) result = caseOperation(and);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case CPTesterPackage.SOLUTION:
+      {
+        Solution solution = (Solution)theEObject;
+        T result = caseSolution(solution);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -163,19 +159,11 @@ public class CPTesterSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case CPTesterPackage.NOT_LATER_THAN:
-      {
-        NotLaterThan notLaterThan = (NotLaterThan)theEObject;
-        T result = caseNotLaterThan(notLaterThan);
-        if (result == null) result = caseConditions(notLaterThan);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case CPTesterPackage.IS_AT_SINGLE:
       {
         isAtSingle isAtSingle = (isAtSingle)theEObject;
         T result = caseisAtSingle(isAtSingle);
-        if (result == null) result = caseConditions(isAtSingle);
+        if (result == null) result = caseSolution(isAtSingle);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -183,7 +171,7 @@ public class CPTesterSwitch<T> extends Switch<T>
       {
         isAt isAt = (isAt)theEObject;
         T result = caseisAt(isAt);
-        if (result == null) result = caseConditions(isAt);
+        if (result == null) result = caseSolution(isAt);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -231,22 +219,6 @@ public class CPTesterSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseScenario(Scenario object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Operation</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Operation</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseOperation(Operation object)
   {
     return null;
   }
@@ -396,6 +368,22 @@ public class CPTesterSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Solution</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Solution</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSolution(Solution object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Conditions</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -407,22 +395,6 @@ public class CPTesterSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseConditions(Conditions object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Not Later Than</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Not Later Than</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseNotLaterThan(NotLaterThan object)
   {
     return null;
   }

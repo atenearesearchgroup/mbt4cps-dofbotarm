@@ -33,15 +33,6 @@ public interface CPTesterFactory extends EFactory
   Scenario createScenario();
 
   /**
-   * Returns a new object of class '<em>Operation</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Operation</em>'.
-   * @generated
-   */
-  Operation createOperation();
-
-  /**
    * Returns a new object of class '<em>Given</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -123,6 +114,15 @@ public interface CPTesterFactory extends EFactory
   And createAnd();
 
   /**
+   * Returns a new object of class '<em>Solution</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Solution</em>'.
+   * @generated
+   */
+  Solution createSolution();
+
+  /**
    * Returns a new object of class '<em>Conditions</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -130,15 +130,6 @@ public interface CPTesterFactory extends EFactory
    * @generated
    */
   Conditions createConditions();
-
-  /**
-   * Returns a new object of class '<em>Not Later Than</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Not Later Than</em>'.
-   * @generated
-   */
-  NotLaterThan createNotLaterThan();
 
   /**
    * Returns a new object of class '<em>is At Single</em>'.

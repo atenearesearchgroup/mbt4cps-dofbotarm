@@ -81,11 +81,6 @@ public class CPTesterAdapterFactory extends AdapterFactoryImpl
         return createScenarioAdapter();
       }
       @Override
-      public Adapter caseOperation(Operation object)
-      {
-        return createOperationAdapter();
-      }
-      @Override
       public Adapter caseGiven(Given object)
       {
         return createGivenAdapter();
@@ -131,14 +126,14 @@ public class CPTesterAdapterFactory extends AdapterFactoryImpl
         return createAndAdapter();
       }
       @Override
+      public Adapter caseSolution(Solution object)
+      {
+        return createSolutionAdapter();
+      }
+      @Override
       public Adapter caseConditions(Conditions object)
       {
         return createConditionsAdapter();
-      }
-      @Override
-      public Adapter caseNotLaterThan(NotLaterThan object)
-      {
-        return createNotLaterThanAdapter();
       }
       @Override
       public Adapter caseisAtSingle(isAtSingle object)
@@ -203,21 +198,6 @@ public class CPTesterAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createScenarioAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.cPTester.Operation <em>Operation</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.cPTester.Operation
-   * @generated
-   */
-  public Adapter createOperationAdapter()
   {
     return null;
   }
@@ -358,6 +338,21 @@ public class CPTesterAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.xtext.cPTester.Solution <em>Solution</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.cPTester.Solution
+   * @generated
+   */
+  public Adapter createSolutionAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.xtext.cPTester.Conditions <em>Conditions</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -368,21 +363,6 @@ public class CPTesterAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createConditionsAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.cPTester.NotLaterThan <em>Not Later Than</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.cPTester.NotLaterThan
-   * @generated
-   */
-  public Adapter createNotLaterThanAdapter()
   {
     return null;
   }

@@ -19,11 +19,10 @@ import org.xtext.cPTester.Command;
 import org.xtext.cPTester.Conditions;
 import org.xtext.cPTester.Given;
 import org.xtext.cPTester.Initial;
-import org.xtext.cPTester.NotLaterThan;
-import org.xtext.cPTester.Operation;
 import org.xtext.cPTester.Result;
 import org.xtext.cPTester.Scenario;
 import org.xtext.cPTester.Servo;
+import org.xtext.cPTester.Solution;
 import org.xtext.cPTester.Then;
 import org.xtext.cPTester.Time;
 import org.xtext.cPTester.When;
@@ -46,13 +45,6 @@ public class CPTesterPackageImpl extends EPackageImpl implements CPTesterPackage
    * @generated
    */
   private EClass scenarioEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass operationEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -122,14 +114,14 @@ public class CPTesterPackageImpl extends EPackageImpl implements CPTesterPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass conditionsEClass = null;
+  private EClass solutionEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass notLaterThanEClass = null;
+  private EClass conditionsEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -264,7 +256,7 @@ public class CPTesterPackageImpl extends EPackageImpl implements CPTesterPackage
    * @generated
    */
   @Override
-  public EReference getScenario_Operations()
+  public EReference getScenario_Given()
   {
     return (EReference)scenarioEClass.getEStructuralFeatures().get(1);
   }
@@ -275,9 +267,9 @@ public class CPTesterPackageImpl extends EPackageImpl implements CPTesterPackage
    * @generated
    */
   @Override
-  public EClass getOperation()
+  public EReference getScenario_When()
   {
-    return operationEClass;
+    return (EReference)scenarioEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -286,9 +278,20 @@ public class CPTesterPackageImpl extends EPackageImpl implements CPTesterPackage
    * @generated
    */
   @Override
-  public EAttribute getOperation_Name()
+  public EReference getScenario_Then()
   {
-    return (EAttribute)operationEClass.getEStructuralFeatures().get(0);
+    return (EReference)scenarioEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getScenario_And()
+  {
+    return (EReference)scenarioEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -308,9 +311,20 @@ public class CPTesterPackageImpl extends EPackageImpl implements CPTesterPackage
    * @generated
    */
   @Override
+  public EAttribute getGiven_Name()
+  {
+    return (EAttribute)givenEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EReference getGiven_Initial()
   {
-    return (EReference)givenEClass.getEStructuralFeatures().get(0);
+    return (EReference)givenEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -363,9 +377,20 @@ public class CPTesterPackageImpl extends EPackageImpl implements CPTesterPackage
    * @generated
    */
   @Override
+  public EAttribute getWhen_Name()
+  {
+    return (EAttribute)whenEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EReference getWhen_Command()
   {
-    return (EReference)whenEClass.getEStructuralFeatures().get(0);
+    return (EReference)whenEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -462,9 +487,20 @@ public class CPTesterPackageImpl extends EPackageImpl implements CPTesterPackage
    * @generated
    */
   @Override
+  public EAttribute getThen_Name()
+  {
+    return (EAttribute)thenEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EReference getThen_Result()
   {
-    return (EReference)thenEClass.getEStructuralFeatures().get(0);
+    return (EReference)thenEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -517,9 +553,75 @@ public class CPTesterPackageImpl extends EPackageImpl implements CPTesterPackage
    * @generated
    */
   @Override
+  public EAttribute getAnd_Name()
+  {
+    return (EAttribute)andEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EReference getAnd_Conditions()
   {
-    return (EReference)andEClass.getEStructuralFeatures().get(0);
+    return (EReference)andEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getAnd_Solution()
+  {
+    return (EReference)andEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getSolution()
+  {
+    return solutionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getSolution_Name()
+  {
+    return (EAttribute)solutionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getSolution_Angle()
+  {
+    return (EReference)solutionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getSolution_Angle_res()
+  {
+    return (EReference)solutionEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -550,20 +652,9 @@ public class CPTesterPackageImpl extends EPackageImpl implements CPTesterPackage
    * @generated
    */
   @Override
-  public EClass getNotLaterThan()
+  public EReference getConditions_Time()
   {
-    return notLaterThanEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getNotLaterThan_Time()
-  {
-    return (EReference)notLaterThanEClass.getEStructuralFeatures().get(0);
+    return (EReference)conditionsEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -594,53 +685,9 @@ public class CPTesterPackageImpl extends EPackageImpl implements CPTesterPackage
    * @generated
    */
   @Override
-  public EReference getisAtSingle_Angle()
-  {
-    return (EReference)isAtSingleEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getisAtSingle_Angle_res()
-  {
-    return (EReference)isAtSingleEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public EClass getisAt()
   {
     return isAtEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getisAt_Angle()
-  {
-    return (EReference)isAtEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getisAt_Angle_res()
-  {
-    return (EReference)isAtEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -764,12 +811,13 @@ public class CPTesterPackageImpl extends EPackageImpl implements CPTesterPackage
     // Create classes and their features
     scenarioEClass = createEClass(SCENARIO);
     createEAttribute(scenarioEClass, SCENARIO__SURNAME);
-    createEReference(scenarioEClass, SCENARIO__OPERATIONS);
-
-    operationEClass = createEClass(OPERATION);
-    createEAttribute(operationEClass, OPERATION__NAME);
+    createEReference(scenarioEClass, SCENARIO__GIVEN);
+    createEReference(scenarioEClass, SCENARIO__WHEN);
+    createEReference(scenarioEClass, SCENARIO__THEN);
+    createEReference(scenarioEClass, SCENARIO__AND);
 
     givenEClass = createEClass(GIVEN);
+    createEAttribute(givenEClass, GIVEN__NAME);
     createEReference(givenEClass, GIVEN__INITIAL);
 
     initialEClass = createEClass(INITIAL);
@@ -777,6 +825,7 @@ public class CPTesterPackageImpl extends EPackageImpl implements CPTesterPackage
     createEReference(initialEClass, INITIAL__TIME);
 
     whenEClass = createEClass(WHEN);
+    createEAttribute(whenEClass, WHEN__NAME);
     createEReference(whenEClass, WHEN__COMMAND);
 
     commandEClass = createEClass(COMMAND);
@@ -790,6 +839,7 @@ public class CPTesterPackageImpl extends EPackageImpl implements CPTesterPackage
     rotateAllServosEClass = createEClass(ROTATE_ALL_SERVOS);
 
     thenEClass = createEClass(THEN);
+    createEAttribute(thenEClass, THEN__NAME);
     createEReference(thenEClass, THEN__RESULT);
 
     resultEClass = createEClass(RESULT);
@@ -797,22 +847,23 @@ public class CPTesterPackageImpl extends EPackageImpl implements CPTesterPackage
     createEReference(resultEClass, RESULT__TIME);
 
     andEClass = createEClass(AND);
+    createEAttribute(andEClass, AND__NAME);
     createEReference(andEClass, AND__CONDITIONS);
+    createEReference(andEClass, AND__SOLUTION);
+
+    solutionEClass = createEClass(SOLUTION);
+    createEAttribute(solutionEClass, SOLUTION__NAME);
+    createEReference(solutionEClass, SOLUTION__ANGLE);
+    createEReference(solutionEClass, SOLUTION__ANGLE_RES);
 
     conditionsEClass = createEClass(CONDITIONS);
     createEAttribute(conditionsEClass, CONDITIONS__NAME);
-
-    notLaterThanEClass = createEClass(NOT_LATER_THAN);
-    createEReference(notLaterThanEClass, NOT_LATER_THAN__TIME);
+    createEReference(conditionsEClass, CONDITIONS__TIME);
 
     isAtSingleEClass = createEClass(IS_AT_SINGLE);
     createEReference(isAtSingleEClass, IS_AT_SINGLE__SERVO);
-    createEReference(isAtSingleEClass, IS_AT_SINGLE__ANGLE);
-    createEReference(isAtSingleEClass, IS_AT_SINGLE__ANGLE_RES);
 
     isAtEClass = createEClass(IS_AT);
-    createEReference(isAtEClass, IS_AT__ANGLE);
-    createEReference(isAtEClass, IS_AT__ANGLE_RES);
 
     angle_resEClass = createEClass(ANGLE_RES);
     createEAttribute(angle_resEClass, ANGLE_RES__ANGLE_RES);
@@ -856,25 +907,21 @@ public class CPTesterPackageImpl extends EPackageImpl implements CPTesterPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
-    givenEClass.getESuperTypes().add(this.getOperation());
-    whenEClass.getESuperTypes().add(this.getOperation());
     rotateServoEClass.getESuperTypes().add(this.getCommand());
     rotateAllServosEClass.getESuperTypes().add(this.getCommand());
-    thenEClass.getESuperTypes().add(this.getOperation());
-    andEClass.getESuperTypes().add(this.getOperation());
-    notLaterThanEClass.getESuperTypes().add(this.getConditions());
-    isAtSingleEClass.getESuperTypes().add(this.getConditions());
-    isAtEClass.getESuperTypes().add(this.getConditions());
+    isAtSingleEClass.getESuperTypes().add(this.getSolution());
+    isAtEClass.getESuperTypes().add(this.getSolution());
 
     // Initialize classes and features; add operations and parameters
     initEClass(scenarioEClass, Scenario.class, "Scenario", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getScenario_Surname(), ecorePackage.getEString(), "surname", null, 0, 1, Scenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getScenario_Operations(), this.getOperation(), null, "operations", null, 0, -1, Scenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(operationEClass, Operation.class, "Operation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getOperation_Name(), ecorePackage.getEString(), "name", null, 0, 1, Operation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getScenario_Given(), this.getGiven(), null, "given", null, 0, 1, Scenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getScenario_When(), this.getWhen(), null, "when", null, 0, 1, Scenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getScenario_Then(), this.getThen(), null, "then", null, 0, 1, Scenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getScenario_And(), this.getAnd(), null, "and", null, 0, 1, Scenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(givenEClass, Given.class, "Given", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getGiven_Name(), ecorePackage.getEString(), "name", null, 0, 1, Given.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getGiven_Initial(), this.getInitial(), null, "initial", null, 0, -1, Given.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(initialEClass, Initial.class, "Initial", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -882,6 +929,7 @@ public class CPTesterPackageImpl extends EPackageImpl implements CPTesterPackage
     initEReference(getInitial_Time(), this.getTime(), null, "time", null, 0, -1, Initial.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(whenEClass, When.class, "When", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getWhen_Name(), ecorePackage.getEString(), "name", null, 0, 1, When.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getWhen_Command(), this.getCommand(), null, "command", null, 0, -1, When.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(commandEClass, Command.class, "Command", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -895,6 +943,7 @@ public class CPTesterPackageImpl extends EPackageImpl implements CPTesterPackage
     initEClass(rotateAllServosEClass, rotateAllServos.class, "rotateAllServos", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(thenEClass, Then.class, "Then", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getThen_Name(), ecorePackage.getEString(), "name", null, 0, 1, Then.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getThen_Result(), this.getResult(), null, "result", null, 0, -1, Then.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(resultEClass, Result.class, "Result", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -902,22 +951,23 @@ public class CPTesterPackageImpl extends EPackageImpl implements CPTesterPackage
     initEReference(getResult_Time(), this.getTime(), null, "time", null, 0, -1, Result.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(andEClass, And.class, "And", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAnd_Name(), ecorePackage.getEString(), "name", null, 0, 1, And.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getAnd_Conditions(), this.getConditions(), null, "conditions", null, 0, -1, And.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAnd_Solution(), this.getSolution(), null, "solution", null, 0, -1, And.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(solutionEClass, Solution.class, "Solution", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getSolution_Name(), ecorePackage.getEString(), "name", null, 0, 1, Solution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSolution_Angle(), this.getAngle(), null, "angle", null, 0, -1, Solution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSolution_Angle_res(), this.getAngle_res(), null, "angle_res", null, 0, -1, Solution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(conditionsEClass, Conditions.class, "Conditions", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getConditions_Name(), ecorePackage.getEString(), "name", null, 0, 1, Conditions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(notLaterThanEClass, NotLaterThan.class, "NotLaterThan", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getNotLaterThan_Time(), this.getTime(), null, "time", null, 0, -1, NotLaterThan.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getConditions_Time(), this.getTime(), null, "time", null, 0, -1, Conditions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(isAtSingleEClass, isAtSingle.class, "isAtSingle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getisAtSingle_Servo(), this.getServo(), null, "servo", null, 0, -1, isAtSingle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getisAtSingle_Angle(), this.getAngle(), null, "angle", null, 0, -1, isAtSingle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getisAtSingle_Angle_res(), this.getAngle_res(), null, "angle_res", null, 0, -1, isAtSingle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(isAtEClass, isAt.class, "isAt", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getisAt_Angle(), this.getAngle(), null, "angle", null, 0, -1, isAt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getisAt_Angle_res(), this.getAngle_res(), null, "angle_res", null, 0, -1, isAt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(angle_resEClass, Angle_res.class, "Angle_res", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getAngle_res_Angle_res(), ecorePackage.getEInt(), "angle_res", null, 0, 1, Angle_res.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

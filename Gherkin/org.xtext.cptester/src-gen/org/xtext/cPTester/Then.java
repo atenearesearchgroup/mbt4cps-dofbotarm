@@ -5,6 +5,8 @@ package org.xtext.cPTester;
 
 import org.eclipse.emf.common.util.EList;
 
+import org.eclipse.emf.ecore.EObject;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Then</b></em>'.
@@ -14,6 +16,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link org.xtext.cPTester.Then#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.cPTester.Then#getResult <em>Result</em>}</li>
  * </ul>
  *
@@ -21,8 +24,30 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Then extends Operation
+public interface Then extends EObject
 {
+  /**
+   * Returns the value of the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Name</em>' attribute.
+   * @see #setName(String)
+   * @see org.xtext.cPTester.CPTesterPackage#getThen_Name()
+   * @model
+   * @generated
+   */
+  String getName();
+
+  /**
+   * Sets the value of the '{@link org.xtext.cPTester.Then#getName <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Name</em>' attribute.
+   * @see #getName()
+   * @generated
+   */
+  void setName(String value);
+
   /**
    * Returns the value of the '<em><b>Result</b></em>' containment reference list.
    * The list contents are of type {@link org.xtext.cPTester.Result}.

@@ -29,21 +29,33 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		private final Assignment cSurnameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cSurnameSTRINGTerminalRuleCall_1_0 = (RuleCall)cSurnameAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cOperationsAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cOperationsOperationParserRuleCall_3_0 = (RuleCall)cOperationsAssignment_3.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cGivenAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cGivenGivenParserRuleCall_3_0 = (RuleCall)cGivenAssignment_3.eContents().get(0);
+		private final Assignment cWhenAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cWhenWhenParserRuleCall_4_0 = (RuleCall)cWhenAssignment_4.eContents().get(0);
+		private final Assignment cThenAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cThenThenParserRuleCall_5_0 = (RuleCall)cThenAssignment_5.eContents().get(0);
+		private final Assignment cAndAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cAndAndParserRuleCall_6_0 = (RuleCall)cAndAssignment_6.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		//Scenario:
 		//    'Scenario' surname=STRING
 		//    '{'
-		//        (operations+=Operation)+
+		//        given=Given
+		//        when=When
+		//        then=Then
+		//        and=And
 		//    '}'
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'Scenario' surname=STRING
 		//'{'
-		//    (operations+=Operation)+
+		//    given=Given
+		//    when=When
+		//    then=Then
+		//    and=And
 		//'}'
 		public Group getGroup() { return cGroup; }
 		
@@ -59,42 +71,32 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 		
-		//(operations+=Operation)+
-		public Assignment getOperationsAssignment_3() { return cOperationsAssignment_3; }
-		
-		//Operation
-		public RuleCall getOperationsOperationParserRuleCall_3_0() { return cOperationsOperationParserRuleCall_3_0; }
-		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
-	}
-	public class OperationElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.CPTester.Operation");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cGivenParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cWhenParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cThenParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final RuleCall cAndParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
-		
-		//Operation:
-		//    Given | When | Then | And
-		//;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//Given | When | Then | And
-		public Alternatives getAlternatives() { return cAlternatives; }
+		//given=Given
+		public Assignment getGivenAssignment_3() { return cGivenAssignment_3; }
 		
 		//Given
-		public RuleCall getGivenParserRuleCall_0() { return cGivenParserRuleCall_0; }
+		public RuleCall getGivenGivenParserRuleCall_3_0() { return cGivenGivenParserRuleCall_3_0; }
+		
+		//when=When
+		public Assignment getWhenAssignment_4() { return cWhenAssignment_4; }
 		
 		//When
-		public RuleCall getWhenParserRuleCall_1() { return cWhenParserRuleCall_1; }
+		public RuleCall getWhenWhenParserRuleCall_4_0() { return cWhenWhenParserRuleCall_4_0; }
+		
+		//then=Then
+		public Assignment getThenAssignment_5() { return cThenAssignment_5; }
 		
 		//Then
-		public RuleCall getThenParserRuleCall_2() { return cThenParserRuleCall_2; }
+		public RuleCall getThenThenParserRuleCall_5_0() { return cThenThenParserRuleCall_5_0; }
+		
+		//and=And
+		public Assignment getAndAssignment_6() { return cAndAssignment_6; }
 		
 		//And
-		public RuleCall getAndParserRuleCall_3() { return cAndParserRuleCall_3; }
+		public RuleCall getAndAndParserRuleCall_6_0() { return cAndAndParserRuleCall_6_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
 	}
 	public class GivenElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.CPTester.Given");
@@ -310,7 +312,7 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//rotateAllServos:
 		//    name='rotateAllServos'
 		//    '('
-		//    (angle+=Angle)+
+		//    (angle+=Angle)+ //Poner multiples atributos
 		//    ','
 		//    (time+=Time)
 		//    ')'
@@ -319,7 +321,7 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		
 		//name='rotateAllServos'
 		//'('
-		//(angle+=Angle)+
+		//(angle+=Angle)+ //Poner multiples atributos
 		//','
 		//(time+=Time)
 		//')'
@@ -340,7 +342,8 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//Angle
 		public RuleCall getAngleAngleParserRuleCall_2_0() { return cAngleAngleParserRuleCall_2_0; }
 		
-		//','
+		////Poner multiples atributos
+		//   ','
 		public Keyword getCommaKeyword_3() { return cCommaKeyword_3; }
 		
 		//(time+=Time)
@@ -432,16 +435,20 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		private final Keyword cNameANDKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
 		private final Assignment cConditionsAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cConditionsConditionsParserRuleCall_1_0 = (RuleCall)cConditionsAssignment_1.eContents().get(0);
+		private final Assignment cSolutionAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cSolutionSolutionParserRuleCall_2_0 = (RuleCall)cSolutionAssignment_2.eContents().get(0);
 		
 		////////////////////////////////////////////////////
 		//And:
 		//    name='AND'
-		//    (conditions+=Conditions)+
+		//    (conditions+=Conditions)
+		//    (solution+=Solution)
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//name='AND'
-		//(conditions+=Conditions)+
+		//(conditions+=Conditions)
+		//(solution+=Solution)
 		public Group getGroup() { return cGroup; }
 		
 		//name='AND'
@@ -450,38 +457,40 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//'AND'
 		public Keyword getNameANDKeyword_0_0() { return cNameANDKeyword_0_0; }
 		
-		//(conditions+=Conditions)+
+		//(conditions+=Conditions)
 		public Assignment getConditionsAssignment_1() { return cConditionsAssignment_1; }
 		
 		//Conditions
 		public RuleCall getConditionsConditionsParserRuleCall_1_0() { return cConditionsConditionsParserRuleCall_1_0; }
-	}
-	public class ConditionsElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.CPTester.Conditions");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cNotLaterThanParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cIsAtSingleParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cIsAtParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		
-		//Conditions:
-		//    NotLaterThan | isAtSingle | isAt
+		//(solution+=Solution)
+		public Assignment getSolutionAssignment_2() { return cSolutionAssignment_2; }
+		
+		//Solution
+		public RuleCall getSolutionSolutionParserRuleCall_2_0() { return cSolutionSolutionParserRuleCall_2_0; }
+	}
+	public class SolutionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.CPTester.Solution");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cIsAtSingleParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cIsAtParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		
+		//Solution:
+		//    isAtSingle | isAt
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//NotLaterThan | isAtSingle | isAt
+		//isAtSingle | isAt
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//NotLaterThan
-		public RuleCall getNotLaterThanParserRuleCall_0() { return cNotLaterThanParserRuleCall_0; }
-		
 		//isAtSingle
-		public RuleCall getIsAtSingleParserRuleCall_1() { return cIsAtSingleParserRuleCall_1; }
+		public RuleCall getIsAtSingleParserRuleCall_0() { return cIsAtSingleParserRuleCall_0; }
 		
 		//isAt
-		public RuleCall getIsAtParserRuleCall_2() { return cIsAtParserRuleCall_2; }
+		public RuleCall getIsAtParserRuleCall_1() { return cIsAtParserRuleCall_1; }
 	}
-	public class NotLaterThanElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.CPTester.NotLaterThan");
+	public class ConditionsElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.CPTester.Conditions");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final Keyword cNameNotLaterThanKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
@@ -490,7 +499,7 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		private final RuleCall cTimeTimeParserRuleCall_2_0 = (RuleCall)cTimeAssignment_2.eContents().get(0);
 		private final Keyword cRightParenthesisKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
-		//NotLaterThan:
+		//Conditions:
 		//    name='NotLaterThan'
 		//    '('
 		//    (time+=Time)
@@ -721,7 +730,6 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	
 	
 	private final ScenarioElements pScenario;
-	private final OperationElements pOperation;
 	private final GivenElements pGiven;
 	private final InitialElements pInitial;
 	private final WhenElements pWhen;
@@ -731,8 +739,8 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	private final ThenElements pThen;
 	private final ResultElements pResult;
 	private final AndElements pAnd;
+	private final SolutionElements pSolution;
 	private final ConditionsElements pConditions;
-	private final NotLaterThanElements pNotLaterThan;
 	private final IsAtSingleElements pIsAtSingle;
 	private final IsAtElements pIsAt;
 	private final Angle_resElements pAngle_res;
@@ -754,7 +762,6 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		this.gaOperations = gaOperations;
 		this.gaTerminals = gaTerminals;
 		this.pScenario = new ScenarioElements();
-		this.pOperation = new OperationElements();
 		this.pGiven = new GivenElements();
 		this.pInitial = new InitialElements();
 		this.pWhen = new WhenElements();
@@ -764,8 +771,8 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		this.pThen = new ThenElements();
 		this.pResult = new ResultElements();
 		this.pAnd = new AndElements();
+		this.pSolution = new SolutionElements();
 		this.pConditions = new ConditionsElements();
-		this.pNotLaterThan = new NotLaterThanElements();
 		this.pIsAtSingle = new IsAtSingleElements();
 		this.pIsAt = new IsAtElements();
 		this.pAngle_res = new Angle_resElements();
@@ -808,7 +815,10 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	//Scenario:
 	//    'Scenario' surname=STRING
 	//    '{'
-	//        (operations+=Operation)+
+	//        given=Given
+	//        when=When
+	//        then=Then
+	//        and=And
 	//    '}'
 	//;
 	public ScenarioElements getScenarioAccess() {
@@ -817,17 +827,6 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	
 	public ParserRule getScenarioRule() {
 		return getScenarioAccess().getRule();
-	}
-	
-	//Operation:
-	//    Given | When | Then | And
-	//;
-	public OperationElements getOperationAccess() {
-		return pOperation;
-	}
-	
-	public ParserRule getOperationRule() {
-		return getOperationAccess().getRule();
 	}
 	
 	////////////////////////////////////////////////////
@@ -902,7 +901,7 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	//rotateAllServos:
 	//    name='rotateAllServos'
 	//    '('
-	//    (angle+=Angle)+
+	//    (angle+=Angle)+ //Poner multiples atributos
 	//    ','
 	//    (time+=Time)
 	//    ')'
@@ -945,7 +944,8 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	////////////////////////////////////////////////////
 	//And:
 	//    name='AND'
-	//    (conditions+=Conditions)+
+	//    (conditions+=Conditions)
+	//    (solution+=Solution)
 	//;
 	public AndElements getAndAccess() {
 		return pAnd;
@@ -955,8 +955,22 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		return getAndAccess().getRule();
 	}
 	
+	//Solution:
+	//    isAtSingle | isAt
+	//;
+	public SolutionElements getSolutionAccess() {
+		return pSolution;
+	}
+	
+	public ParserRule getSolutionRule() {
+		return getSolutionAccess().getRule();
+	}
+	
 	//Conditions:
-	//    NotLaterThan | isAtSingle | isAt
+	//    name='NotLaterThan'
+	//    '('
+	//    (time+=Time)
+	//    ')'
 	//;
 	public ConditionsElements getConditionsAccess() {
 		return pConditions;
@@ -964,20 +978,6 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	
 	public ParserRule getConditionsRule() {
 		return getConditionsAccess().getRule();
-	}
-	
-	//NotLaterThan:
-	//    name='NotLaterThan'
-	//    '('
-	//    (time+=Time)
-	//    ')'
-	//;
-	public NotLaterThanElements getNotLaterThanAccess() {
-		return pNotLaterThan;
-	}
-	
-	public ParserRule getNotLaterThanRule() {
-		return getNotLaterThanAccess().getRule();
 	}
 	
 	//isAtSingle:

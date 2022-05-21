@@ -5,12 +5,16 @@ package org.xtext.cPTester.impl;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -27,13 +31,34 @@ import org.xtext.cPTester.Then;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link org.xtext.cPTester.impl.ThenImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.cPTester.impl.ThenImpl#getResult <em>Result</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ThenImpl extends OperationImpl implements Then
+public class ThenImpl extends MinimalEObjectImpl.Container implements Then
 {
+  /**
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
+
   /**
    * The cached value of the '{@link #getResult() <em>Result</em>}' containment reference list.
    * <!-- begin-user-doc -->
@@ -63,6 +88,31 @@ public class ThenImpl extends OperationImpl implements Then
   protected EClass eStaticClass()
   {
     return CPTesterPackage.Literals.THEN;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getName()
+  {
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setName(String newName)
+  {
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, CPTesterPackage.THEN__NAME, oldName, name));
   }
 
   /**
@@ -106,6 +156,8 @@ public class ThenImpl extends OperationImpl implements Then
   {
     switch (featureID)
     {
+      case CPTesterPackage.THEN__NAME:
+        return getName();
       case CPTesterPackage.THEN__RESULT:
         return getResult();
     }
@@ -123,6 +175,9 @@ public class ThenImpl extends OperationImpl implements Then
   {
     switch (featureID)
     {
+      case CPTesterPackage.THEN__NAME:
+        setName((String)newValue);
+        return;
       case CPTesterPackage.THEN__RESULT:
         getResult().clear();
         getResult().addAll((Collection<? extends Result>)newValue);
@@ -141,6 +196,9 @@ public class ThenImpl extends OperationImpl implements Then
   {
     switch (featureID)
     {
+      case CPTesterPackage.THEN__NAME:
+        setName(NAME_EDEFAULT);
+        return;
       case CPTesterPackage.THEN__RESULT:
         getResult().clear();
         return;
@@ -158,10 +216,29 @@ public class ThenImpl extends OperationImpl implements Then
   {
     switch (featureID)
     {
+      case CPTesterPackage.THEN__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case CPTesterPackage.THEN__RESULT:
         return result != null && !result.isEmpty();
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuilder result = new StringBuilder(super.toString());
+    result.append(" (name: ");
+    result.append(name);
+    result.append(')');
+    return result.toString();
   }
 
 } //ThenImpl

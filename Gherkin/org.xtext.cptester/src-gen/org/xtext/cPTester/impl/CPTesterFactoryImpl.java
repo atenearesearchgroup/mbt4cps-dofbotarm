@@ -66,7 +66,6 @@ public class CPTesterFactoryImpl extends EFactoryImpl implements CPTesterFactory
     switch (eClass.getClassifierID())
     {
       case CPTesterPackage.SCENARIO: return createScenario();
-      case CPTesterPackage.OPERATION: return createOperation();
       case CPTesterPackage.GIVEN: return createGiven();
       case CPTesterPackage.INITIAL: return createInitial();
       case CPTesterPackage.WHEN: return createWhen();
@@ -76,8 +75,8 @@ public class CPTesterFactoryImpl extends EFactoryImpl implements CPTesterFactory
       case CPTesterPackage.THEN: return createThen();
       case CPTesterPackage.RESULT: return createResult();
       case CPTesterPackage.AND: return createAnd();
+      case CPTesterPackage.SOLUTION: return createSolution();
       case CPTesterPackage.CONDITIONS: return createConditions();
-      case CPTesterPackage.NOT_LATER_THAN: return createNotLaterThan();
       case CPTesterPackage.IS_AT_SINGLE: return createisAtSingle();
       case CPTesterPackage.IS_AT: return createisAt();
       case CPTesterPackage.ANGLE_RES: return createAngle_res();
@@ -99,18 +98,6 @@ public class CPTesterFactoryImpl extends EFactoryImpl implements CPTesterFactory
   {
     ScenarioImpl scenario = new ScenarioImpl();
     return scenario;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public Operation createOperation()
-  {
-    OperationImpl operation = new OperationImpl();
-    return operation;
   }
 
   /**
@@ -227,10 +214,10 @@ public class CPTesterFactoryImpl extends EFactoryImpl implements CPTesterFactory
    * @generated
    */
   @Override
-  public Conditions createConditions()
+  public Solution createSolution()
   {
-    ConditionsImpl conditions = new ConditionsImpl();
-    return conditions;
+    SolutionImpl solution = new SolutionImpl();
+    return solution;
   }
 
   /**
@@ -239,10 +226,10 @@ public class CPTesterFactoryImpl extends EFactoryImpl implements CPTesterFactory
    * @generated
    */
   @Override
-  public NotLaterThan createNotLaterThan()
+  public Conditions createConditions()
   {
-    NotLaterThanImpl notLaterThan = new NotLaterThanImpl();
-    return notLaterThan;
+    ConditionsImpl conditions = new ConditionsImpl();
+    return conditions;
   }
 
   /**

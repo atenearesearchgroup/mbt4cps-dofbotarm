@@ -5,12 +5,16 @@ package org.xtext.cPTester.impl;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -27,13 +31,34 @@ import org.xtext.cPTester.Initial;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link org.xtext.cPTester.impl.GivenImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.cPTester.impl.GivenImpl#getInitial <em>Initial</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class GivenImpl extends OperationImpl implements Given
+public class GivenImpl extends MinimalEObjectImpl.Container implements Given
 {
+  /**
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
+
   /**
    * The cached value of the '{@link #getInitial() <em>Initial</em>}' containment reference list.
    * <!-- begin-user-doc -->
@@ -63,6 +88,31 @@ public class GivenImpl extends OperationImpl implements Given
   protected EClass eStaticClass()
   {
     return CPTesterPackage.Literals.GIVEN;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getName()
+  {
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setName(String newName)
+  {
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, CPTesterPackage.GIVEN__NAME, oldName, name));
   }
 
   /**
@@ -106,6 +156,8 @@ public class GivenImpl extends OperationImpl implements Given
   {
     switch (featureID)
     {
+      case CPTesterPackage.GIVEN__NAME:
+        return getName();
       case CPTesterPackage.GIVEN__INITIAL:
         return getInitial();
     }
@@ -123,6 +175,9 @@ public class GivenImpl extends OperationImpl implements Given
   {
     switch (featureID)
     {
+      case CPTesterPackage.GIVEN__NAME:
+        setName((String)newValue);
+        return;
       case CPTesterPackage.GIVEN__INITIAL:
         getInitial().clear();
         getInitial().addAll((Collection<? extends Initial>)newValue);
@@ -141,6 +196,9 @@ public class GivenImpl extends OperationImpl implements Given
   {
     switch (featureID)
     {
+      case CPTesterPackage.GIVEN__NAME:
+        setName(NAME_EDEFAULT);
+        return;
       case CPTesterPackage.GIVEN__INITIAL:
         getInitial().clear();
         return;
@@ -158,10 +216,29 @@ public class GivenImpl extends OperationImpl implements Given
   {
     switch (featureID)
     {
+      case CPTesterPackage.GIVEN__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case CPTesterPackage.GIVEN__INITIAL:
         return initial != null && !initial.isEmpty();
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuilder result = new StringBuilder(super.toString());
+    result.append(" (name: ");
+    result.append(name);
+    result.append(')');
+    return result.toString();
   }
 
 } //GivenImpl

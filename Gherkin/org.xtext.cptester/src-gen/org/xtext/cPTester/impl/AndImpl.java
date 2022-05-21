@@ -5,6 +5,7 @@ package org.xtext.cPTester.impl;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -12,12 +13,16 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.cPTester.And;
 import org.xtext.cPTester.CPTesterPackage;
 import org.xtext.cPTester.Conditions;
+import org.xtext.cPTester.Solution;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,13 +32,35 @@ import org.xtext.cPTester.Conditions;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link org.xtext.cPTester.impl.AndImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.cPTester.impl.AndImpl#getConditions <em>Conditions</em>}</li>
+ *   <li>{@link org.xtext.cPTester.impl.AndImpl#getSolution <em>Solution</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class AndImpl extends OperationImpl implements And
+public class AndImpl extends MinimalEObjectImpl.Container implements And
 {
+  /**
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
+
   /**
    * The cached value of the '{@link #getConditions() <em>Conditions</em>}' containment reference list.
    * <!-- begin-user-doc -->
@@ -43,6 +70,16 @@ public class AndImpl extends OperationImpl implements And
    * @ordered
    */
   protected EList<Conditions> conditions;
+
+  /**
+   * The cached value of the '{@link #getSolution() <em>Solution</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSolution()
+   * @generated
+   * @ordered
+   */
+  protected EList<Solution> solution;
 
   /**
    * <!-- begin-user-doc -->
@@ -71,6 +108,31 @@ public class AndImpl extends OperationImpl implements And
    * @generated
    */
   @Override
+  public String getName()
+  {
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setName(String newName)
+  {
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, CPTesterPackage.AND__NAME, oldName, name));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EList<Conditions> getConditions()
   {
     if (conditions == null)
@@ -86,12 +148,29 @@ public class AndImpl extends OperationImpl implements And
    * @generated
    */
   @Override
+  public EList<Solution> getSolution()
+  {
+    if (solution == null)
+    {
+      solution = new EObjectContainmentEList<Solution>(Solution.class, this, CPTesterPackage.AND__SOLUTION);
+    }
+    return solution;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
     switch (featureID)
     {
       case CPTesterPackage.AND__CONDITIONS:
         return ((InternalEList<?>)getConditions()).basicRemove(otherEnd, msgs);
+      case CPTesterPackage.AND__SOLUTION:
+        return ((InternalEList<?>)getSolution()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -106,8 +185,12 @@ public class AndImpl extends OperationImpl implements And
   {
     switch (featureID)
     {
+      case CPTesterPackage.AND__NAME:
+        return getName();
       case CPTesterPackage.AND__CONDITIONS:
         return getConditions();
+      case CPTesterPackage.AND__SOLUTION:
+        return getSolution();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -123,9 +206,16 @@ public class AndImpl extends OperationImpl implements And
   {
     switch (featureID)
     {
+      case CPTesterPackage.AND__NAME:
+        setName((String)newValue);
+        return;
       case CPTesterPackage.AND__CONDITIONS:
         getConditions().clear();
         getConditions().addAll((Collection<? extends Conditions>)newValue);
+        return;
+      case CPTesterPackage.AND__SOLUTION:
+        getSolution().clear();
+        getSolution().addAll((Collection<? extends Solution>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -141,8 +231,14 @@ public class AndImpl extends OperationImpl implements And
   {
     switch (featureID)
     {
+      case CPTesterPackage.AND__NAME:
+        setName(NAME_EDEFAULT);
+        return;
       case CPTesterPackage.AND__CONDITIONS:
         getConditions().clear();
+        return;
+      case CPTesterPackage.AND__SOLUTION:
+        getSolution().clear();
         return;
     }
     super.eUnset(featureID);
@@ -158,10 +254,31 @@ public class AndImpl extends OperationImpl implements And
   {
     switch (featureID)
     {
+      case CPTesterPackage.AND__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case CPTesterPackage.AND__CONDITIONS:
         return conditions != null && !conditions.isEmpty();
+      case CPTesterPackage.AND__SOLUTION:
+        return solution != null && !solution.isEmpty();
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuilder result = new StringBuilder(super.toString());
+    result.append(" (name: ");
+    result.append(name);
+    result.append(')');
+    return result.toString();
   }
 
 } //AndImpl

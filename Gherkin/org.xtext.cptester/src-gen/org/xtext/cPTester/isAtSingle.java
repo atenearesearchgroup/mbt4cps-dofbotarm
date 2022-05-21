@@ -15,15 +15,13 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.cPTester.isAtSingle#getServo <em>Servo</em>}</li>
- *   <li>{@link org.xtext.cPTester.isAtSingle#getAngle <em>Angle</em>}</li>
- *   <li>{@link org.xtext.cPTester.isAtSingle#getAngle_res <em>Angle res</em>}</li>
  * </ul>
  *
  * @see org.xtext.cPTester.CPTesterPackage#getisAtSingle()
  * @model
  * @generated
  */
-public interface isAtSingle extends Conditions
+public interface isAtSingle extends Solution
 {
   /**
    * Returns the value of the '<em><b>Servo</b></em>' containment reference list.
@@ -36,29 +34,5 @@ public interface isAtSingle extends Conditions
    * @generated
    */
   EList<Servo> getServo();
-
-  /**
-   * Returns the value of the '<em><b>Angle</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.cPTester.Angle}.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Angle</em>' containment reference list.
-   * @see org.xtext.cPTester.CPTesterPackage#getisAtSingle_Angle()
-   * @model containment="true"
-   * @generated
-   */
-  EList<Angle> getAngle();
-
-  /**
-   * Returns the value of the '<em><b>Angle res</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.cPTester.Angle_res}.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Angle res</em>' containment reference list.
-   * @see org.xtext.cPTester.CPTesterPackage#getisAtSingle_Angle_res()
-   * @model containment="true"
-   * @generated
-   */
-  EList<Angle_res> getAngle_res();
 
 } // isAtSingle

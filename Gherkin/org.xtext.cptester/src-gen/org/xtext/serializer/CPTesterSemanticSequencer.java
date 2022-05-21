@@ -17,9 +17,9 @@ import org.xtext.cPTester.And;
 import org.xtext.cPTester.Angle;
 import org.xtext.cPTester.Angle_res;
 import org.xtext.cPTester.CPTesterPackage;
+import org.xtext.cPTester.Conditions;
 import org.xtext.cPTester.Given;
 import org.xtext.cPTester.Initial;
-import org.xtext.cPTester.NotLaterThan;
 import org.xtext.cPTester.Result;
 import org.xtext.cPTester.Scenario;
 import org.xtext.cPTester.Servo;
@@ -57,14 +57,14 @@ public class CPTesterSemanticSequencer extends OperationsSemanticSequencer {
 			case CPTesterPackage.ANGLE_RES:
 				sequence_Angle_res(context, (Angle_res) semanticObject); 
 				return; 
+			case CPTesterPackage.CONDITIONS:
+				sequence_Conditions(context, (Conditions) semanticObject); 
+				return; 
 			case CPTesterPackage.GIVEN:
 				sequence_Given(context, (Given) semanticObject); 
 				return; 
 			case CPTesterPackage.INITIAL:
 				sequence_Initial(context, (Initial) semanticObject); 
-				return; 
-			case CPTesterPackage.NOT_LATER_THAN:
-				sequence_NotLaterThan(context, (NotLaterThan) semanticObject); 
 				return; 
 			case CPTesterPackage.RESULT:
 				sequence_Result(context, (Result) semanticObject); 
@@ -110,11 +110,10 @@ public class CPTesterSemanticSequencer extends OperationsSemanticSequencer {
 	/**
 	 * <pre>
 	 * Contexts:
-	 *     Operation returns And
 	 *     And returns And
 	 *
 	 * Constraint:
-	 *     (name='AND' conditions+=Conditions+)
+	 *     (name='AND' conditions+=Conditions solution+=Solution)
 	 * </pre>
 	 */
 	protected void sequence_And(ISerializationContext context, And semanticObject) {
@@ -165,7 +164,20 @@ public class CPTesterSemanticSequencer extends OperationsSemanticSequencer {
 	/**
 	 * <pre>
 	 * Contexts:
-	 *     Operation returns Given
+	 *     Conditions returns Conditions
+	 *
+	 * Constraint:
+	 *     (name='NotLaterThan' time+=Time)
+	 * </pre>
+	 */
+	protected void sequence_Conditions(ISerializationContext context, Conditions semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
 	 *     Given returns Given
 	 *
 	 * Constraint:
@@ -194,21 +206,6 @@ public class CPTesterSemanticSequencer extends OperationsSemanticSequencer {
 	/**
 	 * <pre>
 	 * Contexts:
-	 *     Conditions returns NotLaterThan
-	 *     NotLaterThan returns NotLaterThan
-	 *
-	 * Constraint:
-	 *     (name='NotLaterThan' time+=Time)
-	 * </pre>
-	 */
-	protected void sequence_NotLaterThan(ISerializationContext context, NotLaterThan semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * <pre>
-	 * Contexts:
 	 *     Result returns Result
 	 *
 	 * Constraint:
@@ -226,11 +223,29 @@ public class CPTesterSemanticSequencer extends OperationsSemanticSequencer {
 	 *     Scenario returns Scenario
 	 *
 	 * Constraint:
-	 *     (surname=STRING operations+=Operation+)
+	 *     (surname=STRING given=Given when=When then=Then and=And)
 	 * </pre>
 	 */
 	protected void sequence_Scenario(ISerializationContext context, Scenario semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, CPTesterPackage.Literals.SCENARIO__SURNAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CPTesterPackage.Literals.SCENARIO__SURNAME));
+			if (transientValues.isValueTransient(semanticObject, CPTesterPackage.Literals.SCENARIO__GIVEN) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CPTesterPackage.Literals.SCENARIO__GIVEN));
+			if (transientValues.isValueTransient(semanticObject, CPTesterPackage.Literals.SCENARIO__WHEN) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CPTesterPackage.Literals.SCENARIO__WHEN));
+			if (transientValues.isValueTransient(semanticObject, CPTesterPackage.Literals.SCENARIO__THEN) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CPTesterPackage.Literals.SCENARIO__THEN));
+			if (transientValues.isValueTransient(semanticObject, CPTesterPackage.Literals.SCENARIO__AND) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CPTesterPackage.Literals.SCENARIO__AND));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getScenarioAccess().getSurnameSTRINGTerminalRuleCall_1_0(), semanticObject.getSurname());
+		feeder.accept(grammarAccess.getScenarioAccess().getGivenGivenParserRuleCall_3_0(), semanticObject.getGiven());
+		feeder.accept(grammarAccess.getScenarioAccess().getWhenWhenParserRuleCall_4_0(), semanticObject.getWhen());
+		feeder.accept(grammarAccess.getScenarioAccess().getThenThenParserRuleCall_5_0(), semanticObject.getThen());
+		feeder.accept(grammarAccess.getScenarioAccess().getAndAndParserRuleCall_6_0(), semanticObject.getAnd());
+		feeder.finish();
 	}
 	
 	
@@ -257,7 +272,6 @@ public class CPTesterSemanticSequencer extends OperationsSemanticSequencer {
 	/**
 	 * <pre>
 	 * Contexts:
-	 *     Operation returns Then
 	 *     Then returns Then
 	 *
 	 * Constraint:
@@ -292,7 +306,6 @@ public class CPTesterSemanticSequencer extends OperationsSemanticSequencer {
 	/**
 	 * <pre>
 	 * Contexts:
-	 *     Operation returns When
 	 *     When returns When
 	 *
 	 * Constraint:
@@ -307,7 +320,7 @@ public class CPTesterSemanticSequencer extends OperationsSemanticSequencer {
 	/**
 	 * <pre>
 	 * Contexts:
-	 *     Conditions returns isAtSingle
+	 *     Solution returns isAtSingle
 	 *     isAtSingle returns isAtSingle
 	 *
 	 * Constraint:
@@ -322,7 +335,7 @@ public class CPTesterSemanticSequencer extends OperationsSemanticSequencer {
 	/**
 	 * <pre>
 	 * Contexts:
-	 *     Conditions returns isAt
+	 *     Solution returns isAt
 	 *     isAt returns isAt
 	 *
 	 * Constraint:

@@ -43,7 +43,7 @@ class CPTesterGenerator extends AbstractGenerator {
 				«IF cmd.eClass.name.equals("rotateServo")»
 				«var rot = cmd as rotateServo»
 					«rot.servo.get(0)»
-					«rot.angle.get(0)»
+					«rot.angle.get(0)»2
 					«rot.time»
 					«FOR ser : rot.servo»
 						«var valr = ser as Servo»

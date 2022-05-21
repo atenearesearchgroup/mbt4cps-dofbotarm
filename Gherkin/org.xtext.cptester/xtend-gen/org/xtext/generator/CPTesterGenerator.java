@@ -3,22 +3,13 @@
  */
 package org.xtext.generator;
 
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.generator.AbstractGenerator;
 import org.eclipse.xtext.generator.IFileSystemAccess2;
 import org.eclipse.xtext.generator.IGeneratorContext;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
-import org.xtext.cPTester.Angle;
-import org.xtext.cPTester.Command;
-import org.xtext.cPTester.Operation;
 import org.xtext.cPTester.Scenario;
-import org.xtext.cPTester.Servo;
-import org.xtext.cPTester.Time;
-import org.xtext.cPTester.When;
-import org.xtext.cPTester.rotateServo;
 
 /**
  * Generates code from your model files on save.
@@ -37,96 +28,24 @@ public class CPTesterGenerator extends AbstractGenerator {
   }
   
   public CharSequence toCode(final Scenario scenario) {
-    StringConcatenation _builder = new StringConcatenation();
-    EList<Operation> _operations = scenario.getOperations();
-    _builder.append(_operations);
-    _builder.newLineIfNotEmpty();
-    _builder.append("\t\t");
-    String _name = scenario.getOperations().get(0).getName();
-    _builder.append(_name, "\t\t");
-    _builder.newLineIfNotEmpty();
-    _builder.append("\t\t");
-    String _name_1 = scenario.getOperations().get(1).getName();
-    _builder.append(_name_1, "\t\t");
-    _builder.newLineIfNotEmpty();
-    _builder.append("\t\t");
-    String _name_2 = scenario.getOperations().get(2).getName();
-    _builder.append(_name_2, "\t\t");
-    _builder.newLineIfNotEmpty();
-    _builder.append("\t\t");
-    String _name_3 = scenario.getOperations().get(3).getName();
-    _builder.append(_name_3, "\t\t");
-    _builder.newLineIfNotEmpty();
-    _builder.append("\t\t");
-    _builder.newLine();
-    {
-      EList<Operation> _operations_1 = scenario.getOperations();
-      for(final Operation op : _operations_1) {
-        {
-          boolean _equals = op.eClass().getName().equals("When");
-          if (_equals) {
-            _builder.append("\t\t");
-            When when = ((When) op);
-            _builder.newLineIfNotEmpty();
-            _builder.append("\t\t");
-            _builder.append("\t");
-            String _name_4 = when.getName();
-            _builder.append(_name_4, "\t\t\t");
-            _builder.append(" ");
-            _builder.newLineIfNotEmpty();
-            _builder.append("\t\t");
-            _builder.append("\t");
-            String _name_5 = when.getCommand().get(0).getName();
-            _builder.append(_name_5, "\t\t\t");
-            _builder.newLineIfNotEmpty();
-            {
-              EList<Command> _command = when.getCommand();
-              for(final Command cmd : _command) {
-                {
-                  boolean _equals_1 = cmd.eClass().getName().equals("rotateServo");
-                  if (_equals_1) {
-                    _builder.append("\t\t");
-                    rotateServo rot = ((rotateServo) cmd);
-                    _builder.newLineIfNotEmpty();
-                    _builder.append("\t\t");
-                    _builder.append("\t");
-                    Servo _get = rot.getServo().get(0);
-                    _builder.append(_get, "\t\t\t");
-                    _builder.newLineIfNotEmpty();
-                    _builder.append("\t\t");
-                    _builder.append("\t");
-                    Angle _get_1 = rot.getAngle().get(0);
-                    _builder.append(_get_1, "\t\t\t");
-                    _builder.newLineIfNotEmpty();
-                    _builder.append("\t\t");
-                    _builder.append("\t");
-                    EList<Time> _time = rot.getTime();
-                    _builder.append(_time, "\t\t\t");
-                    _builder.newLineIfNotEmpty();
-                    {
-                      EList<Servo> _servo = rot.getServo();
-                      for(final Servo ser : _servo) {
-                        _builder.append("\t\t");
-                        _builder.append("\t");
-                        Servo valr = ((Servo) ser);
-                        _builder.newLineIfNotEmpty();
-                        _builder.append("\t\t");
-                        _builder.append("\t");
-                        _builder.append("\t");
-                        int _servo_1 = valr.getServo();
-                        _builder.append(_servo_1, "\t\t\t\t");
-                        _builder.newLineIfNotEmpty();
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-    return _builder;
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method or field operations is undefined for the type Scenario"
+      + "\nThe method or field operations is undefined for the type Scenario"
+      + "\nThe method or field operations is undefined for the type Scenario"
+      + "\nThe method or field operations is undefined for the type Scenario"
+      + "\nThe method or field operations is undefined for the type Scenario"
+      + "\nThe method or field operations is undefined for the type Scenario"
+      + "\nget cannot be resolved"
+      + "\nname cannot be resolved"
+      + "\nget cannot be resolved"
+      + "\nname cannot be resolved"
+      + "\nget cannot be resolved"
+      + "\nname cannot be resolved"
+      + "\nget cannot be resolved"
+      + "\nname cannot be resolved"
+      + "\neClass cannot be resolved"
+      + "\nname cannot be resolved"
+      + "\nequals cannot be resolved");
   }
   
   public String className(final Resource res) {
