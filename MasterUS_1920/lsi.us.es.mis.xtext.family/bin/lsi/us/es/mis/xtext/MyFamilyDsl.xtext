@@ -1,0 +1,28 @@
+grammar lsi.us.es.mis.xtext.MyFamilyDsl with org.eclipse.xtext.common.Terminals
+
+generate myFamilyDsl "http://www.us.lsi/es/mis/xtext/MyFamilyDsl"
+
+Family:
+	'Family' surname=STRING
+	'{'
+		(persons+=Person)+
+	'}'
+;
+	
+Person:
+	Man | Woman
+;
+
+Man:
+	'Man' name=STRING
+	('parents:' (parents+=[Person])+)?
+	('children:' (children+=[Person])+)?
+;
+
+Woman:
+	'Woman' name=STRING
+	('parents:' (parents+=[Person])+)?
+	('children:' (children+=[Person])+)?
+;
+
+

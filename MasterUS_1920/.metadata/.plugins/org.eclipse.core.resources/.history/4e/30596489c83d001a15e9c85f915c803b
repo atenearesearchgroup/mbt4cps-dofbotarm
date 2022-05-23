@@ -1,0 +1,72 @@
+grammar lsi.us.es.mis.xtext.MyWorldDsl with org.eclipse.xtext.common.Terminals
+
+generate myWorldDsl "http://www.us.lsi/es/mis/xtext/MyWorldDsl"
+
+World:
+	(spaces+=Space)*
+;
+	
+Space:
+	Continent | Water
+;
+	
+Water:
+	Ocean | Lake | Sea
+;
+
+Ocean:
+	'Ocean' name=ID
+	'{'
+	'area:' area += DOUBLE
+	'cc:' cc += DOUBLE
+	'}'
+;
+
+Lake:
+	'Lake' name=ID
+	'{'
+	'area:' area += DOUBLE
+	'cc:' cc += DOUBLE
+	'}'
+;
+
+Sea:
+	'Sea' name=ID
+	'{'
+	'area:' area += DOUBLE
+	'cc:' cc += DOUBLE
+	'}'
+;
+	
+Continent:
+	'Continent' name=ID
+	'{'
+	'area:' area += DOUBLE
+	(countries+=Country)*
+	'}'
+;
+
+Country:
+	'Country' name=ID
+	'{'
+	'area:' area += DOUBLE
+	(peaceful?='peaceful')?
+	'population:' population += DOUBLE
+	('borders:' borders+=CountryReference)?
+	('borderos:' borderos+=[Country])?
+	('washedBy:' washedBy+=WaterReference)?
+	'}'
+;
+
+
+CountryReference:
+	(countries+=[Country])*
+;
+
+WaterReference:
+	(waters+=[Water])*
+;
+
+terminal DOUBLE:
+	('-'' '*)? INT ('.' INT)?
+;

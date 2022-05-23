@@ -1,0 +1,9 @@
+grammar lsi.us.es.mis.xtext.MyWorldDsl with org.eclipse.xtext.common.Terminals
+
+generate myWorldDsl "http://www.us.lsi/es/mis/xtext/MyWorldDsl"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	'Hello' name=ID '!';

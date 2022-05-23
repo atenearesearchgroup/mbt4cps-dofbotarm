@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<world:World
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:world="http://www.lsi.us.es/world"
+    xsi:schemaLocation="http://www.lsi.us.es/world ../metamodels/World.ecore">
+  <spaces xsi:type="world:Continent"
+      name="Europe"
+      area="1.018E7">
+    <countries
+        name="Spain"
+        area="505990.0"
+        population="46733038"
+        peaceful="true"/>
+    <countries
+        name="France"
+        area="640679.0"
+        population="67022000"
+        peaceful="true"/>
+    <countries
+        name="Portugal"
+        area="92212.0"
+        population="10276617"
+        borders="//@spaces.0/@countries.1 //@spaces.0/@countries.2"/>
+  </spaces>
+  <spaces xsi:type="world:Continent"
+      name="NorthAmerica"
+      area="2.4709E7">
+    <countries
+        name="USA"
+        area="9833520.0"
+        population="328239523"
+        borders="//@spaces.1/@countries.1"/>
+    <countries
+        name="Canada"
+        area="9984670.0"
+        population="37797496"
+        peaceful="true"
+        borders="//@spaces.1/@countries.0"/>
+  </spaces>
+  <spaces xsi:type="world:Sea"
+      name="Mediterranean"
+      area="2500000.0"
+      volume="3750000.0"/>
+  <spaces xsi:type="world:Ocean"
+      name="Atlantic"
+      area="1.0646E8"
+      volume="3.104109E8"/>
+  <spaces xsi:type="world:Lake"
+      name="Superior"
+      area="82000.0"
+      volume="12000.0"/>
+</world:World>
