@@ -9,8 +9,6 @@ import java.util.List;
 import org.eclipse.xtext.Assignment;
 import org.eclipse.xtext.Grammar;
 import org.eclipse.xtext.GrammarUtil;
-import org.eclipse.xtext.Group;
-import org.eclipse.xtext.Keyword;
 import org.eclipse.xtext.ParserRule;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.TerminalRule;
@@ -21,33 +19,25 @@ import org.eclipse.xtext.service.GrammarProvider;
 @Singleton
 public class OperationsGrammarAccess extends AbstractElementFinder.AbstractGrammarElementFinder {
 	
-	public class PruebaElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Operations.Prueba");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cPruebaKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameSTRINGTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+	public class ServoElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Operations.Servo");
+		private final Assignment cServoAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cServoINTTerminalRuleCall_0 = (RuleCall)cServoAssignment.eContents().get(0);
 		
-		//Prueba:
-		//    'prueba' name=STRING
+		//Servo:
+		//    servo=INT
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'prueba' name=STRING
-		public Group getGroup() { return cGroup; }
+		//servo=INT
+		public Assignment getServoAssignment() { return cServoAssignment; }
 		
-		//'prueba'
-		public Keyword getPruebaKeyword_0() { return cPruebaKeyword_0; }
-		
-		//name=STRING
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
-		
-		//STRING
-		public RuleCall getNameSTRINGTerminalRuleCall_1_0() { return cNameSTRINGTerminalRuleCall_1_0; }
+		//INT
+		public RuleCall getServoINTTerminalRuleCall_0() { return cServoINTTerminalRuleCall_0; }
 	}
 	
 	
-	private final PruebaElements pPrueba;
+	private final ServoElements pServo;
 	
 	private final Grammar grammar;
 	
@@ -58,7 +48,7 @@ public class OperationsGrammarAccess extends AbstractElementFinder.AbstractGramm
 			TerminalsGrammarAccess gaTerminals) {
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
-		this.pPrueba = new PruebaElements();
+		this.pServo = new ServoElements();
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -88,15 +78,15 @@ public class OperationsGrammarAccess extends AbstractElementFinder.AbstractGramm
 	}
 
 	
-	//Prueba:
-	//    'prueba' name=STRING
+	//Servo:
+	//    servo=INT
 	//;
-	public PruebaElements getPruebaAccess() {
-		return pPrueba;
+	public ServoElements getServoAccess() {
+		return pServo;
 	}
 	
-	public ParserRule getPruebaRule() {
-		return getPruebaAccess().getRule();
+	public ParserRule getServoRule() {
+		return getServoAccess().getRule();
 	}
 	
 	//terminal ID: '^'?('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;

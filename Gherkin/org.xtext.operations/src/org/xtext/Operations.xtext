@@ -3,6 +3,6 @@ grammar org.xtext.Operations with org.eclipse.xtext.common.Terminals
 generate operations "http://www.xtext.org/Operations"
 
 
-Operations:
-	'prueba' name=STRING
+Servo:
+	servo=INT
 ;

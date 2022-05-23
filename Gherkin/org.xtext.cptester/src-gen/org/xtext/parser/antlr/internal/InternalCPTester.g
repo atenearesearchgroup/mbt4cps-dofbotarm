@@ -433,7 +433,7 @@ rulerotateServo returns [EObject current=null]
 						$current,
 						"servo",
 						lv_servo_2_0,
-						"org.xtext.CPTester.Servo");
+						"org.xtext.Operations.Servo");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -901,7 +901,7 @@ ruleisAtSingle returns [EObject current=null]
 						$current,
 						"servo",
 						lv_servo_2_0,
-						"org.xtext.CPTester.Servo");
+						"org.xtext.Operations.Servo");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -1077,41 +1077,6 @@ ruleAngle_res returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuleServo
-entryRuleServo returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getServoRule()); }
-	iv_ruleServo=ruleServo
-	{ $current=$iv_ruleServo.current; }
-	EOF;
-
-// Rule Servo
-ruleServo returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			lv_servo_0_0=RULE_INT
-			{
-				newLeafNode(lv_servo_0_0, grammarAccess.getServoAccess().getServoINTTerminalRuleCall_0());
-			}
-			{
-				if ($current==null) {
-					$current = createModelElement(grammarAccess.getServoRule());
-				}
-				setWithLastConsumed(
-					$current,
-					"servo",
-					lv_servo_0_0,
-					"org.eclipse.xtext.common.Terminals.INT");
-			}
-		)
-	)
-;
-
 // Entry rule entryRuleAngle
 entryRuleAngle returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getAngleRule()); }
@@ -1176,6 +1141,41 @@ ruleTime returns [EObject current=null]
 					$current,
 					"time",
 					lv_time_0_0,
+					"org.eclipse.xtext.common.Terminals.INT");
+			}
+		)
+	)
+;
+
+// Entry rule entryRuleServo
+entryRuleServo returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getServoRule()); }
+	iv_ruleServo=ruleServo
+	{ $current=$iv_ruleServo.current; }
+	EOF;
+
+// Rule Servo
+ruleServo returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			lv_servo_0_0=RULE_INT
+			{
+				newLeafNode(lv_servo_0_0, grammarAccess.getServoAccess().getServoINTTerminalRuleCall_0());
+			}
+			{
+				if ($current==null) {
+					$current = createModelElement(grammarAccess.getServoRule());
+				}
+				setWithLastConsumed(
+					$current,
+					"servo",
+					lv_servo_0_0,
 					"org.eclipse.xtext.common.Terminals.INT");
 			}
 		)

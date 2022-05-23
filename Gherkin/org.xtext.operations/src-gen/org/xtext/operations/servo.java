@@ -7,42 +7,42 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>servo</b></em>'.
+ * A representation of the model object '<em><b>Servo</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.operations.servo#getSERVO <em>SERVO</em>}</li>
+ *   <li>{@link org.xtext.operations.Servo#getServo <em>Servo</em>}</li>
  * </ul>
  *
- * @see org.xtext.operations.OperationsPackage#getservo()
+ * @see org.xtext.operations.OperationsPackage#getServo()
  * @model
  * @generated
  */
-public interface servo extends EObject
+public interface Servo extends EObject
 {
   /**
-   * Returns the value of the '<em><b>SERVO</b></em>' attribute.
+   * Returns the value of the '<em><b>Servo</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>SERVO</em>' attribute.
-   * @see #setSERVO(int)
-   * @see org.xtext.operations.OperationsPackage#getservo_SERVO()
+   * @return the value of the '<em>Servo</em>' attribute.
+   * @see #setServo(int)
+   * @see org.xtext.operations.OperationsPackage#getServo_Servo()
    * @model
    * @generated
    */
-  int getSERVO();
+  int getServo();
 
   /**
-   * Sets the value of the '{@link org.xtext.operations.servo#getSERVO <em>SERVO</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.operations.Servo#getServo <em>Servo</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>SERVO</em>' attribute.
-   * @see #getSERVO()
+   * @param value the new value of the '<em>Servo</em>' attribute.
+   * @see #getServo()
    * @generated
    */
-  void setSERVO(int value);
+  void setServo(int value);
 
-} // servo
+} // Servo

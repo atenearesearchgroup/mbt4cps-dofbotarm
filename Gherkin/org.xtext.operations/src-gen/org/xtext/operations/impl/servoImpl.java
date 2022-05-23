@@ -11,38 +11,38 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.operations.OperationsPackage;
-import org.xtext.operations.servo;
+import org.xtext.operations.Servo;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>servo</b></em>'.
+ * An implementation of the model object '<em><b>Servo</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.operations.impl.servoImpl#getSERVO <em>SERVO</em>}</li>
+ *   <li>{@link org.xtext.operations.impl.ServoImpl#getServo <em>Servo</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class servoImpl extends MinimalEObjectImpl.Container implements servo
+public class ServoImpl extends MinimalEObjectImpl.Container implements Servo
 {
   /**
-   * The default value of the '{@link #getSERVO() <em>SERVO</em>}' attribute.
+   * The default value of the '{@link #getServo() <em>Servo</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSERVO()
+   * @see #getServo()
    * @generated
    * @ordered
    */
   protected static final int SERVO_EDEFAULT = 0;
 
   /**
-   * The cached value of the '{@link #getSERVO() <em>SERVO</em>}' attribute.
+   * The cached value of the '{@link #getServo() <em>Servo</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSERVO()
+   * @see #getServo()
    * @generated
    * @ordered
    */
@@ -53,7 +53,7 @@ public class servoImpl extends MinimalEObjectImpl.Container implements servo
    * <!-- end-user-doc -->
    * @generated
    */
-  protected servoImpl()
+  protected ServoImpl()
   {
     super();
   }
@@ -75,7 +75,7 @@ public class servoImpl extends MinimalEObjectImpl.Container implements servo
    * @generated
    */
   @Override
-  public int getSERVO()
+  public int getServo()
   {
     return servo;
   }
@@ -86,12 +86,12 @@ public class servoImpl extends MinimalEObjectImpl.Container implements servo
    * @generated
    */
   @Override
-  public void setSERVO(int newSERVO)
+  public void setServo(int newServo)
   {
-    int oldSERVO = servo;
-    servo = newSERVO;
+    int oldServo = servo;
+    servo = newServo;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OperationsPackage.SERVO__SERVO, oldSERVO, servo));
+      eNotify(new ENotificationImpl(this, Notification.SET, OperationsPackage.SERVO__SERVO, oldServo, servo));
   }
 
   /**
@@ -105,7 +105,7 @@ public class servoImpl extends MinimalEObjectImpl.Container implements servo
     switch (featureID)
     {
       case OperationsPackage.SERVO__SERVO:
-        return getSERVO();
+        return getServo();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -121,7 +121,7 @@ public class servoImpl extends MinimalEObjectImpl.Container implements servo
     switch (featureID)
     {
       case OperationsPackage.SERVO__SERVO:
-        setSERVO((Integer)newValue);
+        setServo((Integer)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -138,7 +138,7 @@ public class servoImpl extends MinimalEObjectImpl.Container implements servo
     switch (featureID)
     {
       case OperationsPackage.SERVO__SERVO:
-        setSERVO(SERVO_EDEFAULT);
+        setServo(SERVO_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -171,10 +171,10 @@ public class servoImpl extends MinimalEObjectImpl.Container implements servo
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (SERVO: ");
+    result.append(" (servo: ");
     result.append(servo);
     result.append(')');
     return result.toString();
   }
 
-} //servoImpl
+} //ServoImpl

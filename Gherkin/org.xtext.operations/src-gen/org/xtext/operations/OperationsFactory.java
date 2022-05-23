@@ -24,13 +24,13 @@ public interface OperationsFactory extends EFactory
   OperationsFactory eINSTANCE = org.xtext.operations.impl.OperationsFactoryImpl.init();
 
   /**
-   * Returns a new object of class '<em>Prueba</em>'.
+   * Returns a new object of class '<em>Servo</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Prueba</em>'.
+   * @return a new object of class '<em>Servo</em>'.
    * @generated
    */
-  Prueba createPrueba();
+  Servo createServo();
 
   /**
    * Returns the package supported by this factory.

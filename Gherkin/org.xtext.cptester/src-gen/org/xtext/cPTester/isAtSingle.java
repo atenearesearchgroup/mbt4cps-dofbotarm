@@ -5,6 +5,8 @@ package org.xtext.cPTester;
 
 import org.eclipse.emf.common.util.EList;
 
+import org.xtext.operations.Servo;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>is At Single</b></em>'.
@@ -25,7 +27,7 @@ public interface isAtSingle extends Solution
 {
   /**
    * Returns the value of the '<em><b>Servo</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.cPTester.Servo}.
+   * The list contents are of type {@link org.xtext.operations.Servo}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Servo</em>' containment reference list.

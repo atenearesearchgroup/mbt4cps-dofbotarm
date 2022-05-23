@@ -73,10 +73,10 @@ public class OperationsSwitch<T> extends Switch<T>
   {
     switch (classifierID)
     {
-      case OperationsPackage.PRUEBA:
+      case OperationsPackage.SERVO:
       {
-        Prueba prueba = (Prueba)theEObject;
-        T result = casePrueba(prueba);
+        Servo servo = (Servo)theEObject;
+        T result = caseServo(servo);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -85,17 +85,17 @@ public class OperationsSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Prueba</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Servo</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Prueba</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Servo</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casePrueba(Prueba object)
+  public T caseServo(Servo object)
   {
     return null;
   }

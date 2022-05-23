@@ -679,22 +679,6 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//INT
 		public RuleCall getAngle_resINTTerminalRuleCall_0() { return cAngle_resINTTerminalRuleCall_0; }
 	}
-	public class ServoElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.CPTester.Servo");
-		private final Assignment cServoAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cServoINTTerminalRuleCall_0 = (RuleCall)cServoAssignment.eContents().get(0);
-		
-		//Servo:
-		//    servo=INT
-		//;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//servo=INT
-		public Assignment getServoAssignment() { return cServoAssignment; }
-		
-		//INT
-		public RuleCall getServoINTTerminalRuleCall_0() { return cServoINTTerminalRuleCall_0; }
-	}
 	public class AngleElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.CPTester.Angle");
 		private final Assignment cAngleAssignment = (Assignment)rule.eContents().get(1);
@@ -744,7 +728,6 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	private final IsAtSingleElements pIsAtSingle;
 	private final IsAtElements pIsAt;
 	private final Angle_resElements pAngle_res;
-	private final ServoElements pServo;
 	private final AngleElements pAngle;
 	private final TimeElements pTime;
 	
@@ -776,7 +759,6 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		this.pIsAtSingle = new IsAtSingleElements();
 		this.pIsAt = new IsAtElements();
 		this.pAngle_res = new Angle_resElements();
-		this.pServo = new ServoElements();
 		this.pAngle = new AngleElements();
 		this.pTime = new TimeElements();
 	}
@@ -1025,17 +1007,6 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		return getAngle_resAccess().getRule();
 	}
 	
-	//Servo:
-	//    servo=INT
-	//;
-	public ServoElements getServoAccess() {
-		return pServo;
-	}
-	
-	public ParserRule getServoRule() {
-		return getServoAccess().getRule();
-	}
-	
 	//Angle:
 	//    angle=INT
 	//;
@@ -1058,15 +1029,15 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		return getTimeAccess().getRule();
 	}
 	
-	//Prueba:
-	//    'prueba' name=STRING
+	//Servo:
+	//    servo=INT
 	//;
-	public OperationsGrammarAccess.PruebaElements getPruebaAccess() {
-		return gaOperations.getPruebaAccess();
+	public OperationsGrammarAccess.ServoElements getServoAccess() {
+		return gaOperations.getServoAccess();
 	}
 	
-	public ParserRule getPruebaRule() {
-		return getPruebaAccess().getRule();
+	public ParserRule getServoRule() {
+		return getServoAccess().getRule();
 	}
 	
 	//terminal ID: '^'?('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;

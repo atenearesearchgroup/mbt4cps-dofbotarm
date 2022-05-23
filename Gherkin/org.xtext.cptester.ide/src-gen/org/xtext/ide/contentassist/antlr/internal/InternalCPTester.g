@@ -424,31 +424,6 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-// Entry rule entryRuleServo
-entryRuleServo
-:
-{ before(grammarAccess.getServoRule()); }
-	 ruleServo
-{ after(grammarAccess.getServoRule()); } 
-	 EOF 
-;
-
-// Rule Servo
-ruleServo 
-	@init {
-		int stackSize = keepStackSize();
-	}
-	:
-	(
-		{ before(grammarAccess.getServoAccess().getServoAssignment()); }
-		(rule__Servo__ServoAssignment)
-		{ after(grammarAccess.getServoAccess().getServoAssignment()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
 // Entry rule entryRuleAngle
 entryRuleAngle
 :
@@ -493,6 +468,31 @@ ruleTime
 		{ before(grammarAccess.getTimeAccess().getTimeAssignment()); }
 		(rule__Time__TimeAssignment)
 		{ after(grammarAccess.getTimeAccess().getTimeAssignment()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+// Entry rule entryRuleServo
+entryRuleServo
+:
+{ before(grammarAccess.getServoRule()); }
+	 ruleServo
+{ after(grammarAccess.getServoRule()); } 
+	 EOF 
+;
+
+// Rule Servo
+ruleServo 
+	@init {
+		int stackSize = keepStackSize();
+	}
+	:
+	(
+		{ before(grammarAccess.getServoAccess().getServoAssignment()); }
+		(rule__Servo__ServoAssignment)
+		{ after(grammarAccess.getServoAccess().getServoAssignment()); }
 	)
 ;
 finally {
@@ -2663,21 +2663,6 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Servo__ServoAssignment
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getServoAccess().getServoINTTerminalRuleCall_0()); }
-		RULE_INT
-		{ after(grammarAccess.getServoAccess().getServoINTTerminalRuleCall_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
 rule__Angle__AngleAssignment
 	@init {
 		int stackSize = keepStackSize();
@@ -2702,6 +2687,21 @@ rule__Time__TimeAssignment
 		{ before(grammarAccess.getTimeAccess().getTimeINTTerminalRuleCall_0()); }
 		RULE_INT
 		{ after(grammarAccess.getTimeAccess().getTimeINTTerminalRuleCall_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Servo__ServoAssignment
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getServoAccess().getServoINTTerminalRuleCall_0()); }
+		RULE_INT
+		{ after(grammarAccess.getServoAccess().getServoINTTerminalRuleCall_0()); }
 	)
 ;
 finally {

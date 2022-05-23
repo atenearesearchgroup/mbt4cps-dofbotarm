@@ -151,11 +151,6 @@ public class CPTesterAdapterFactory extends AdapterFactoryImpl
         return createAngle_resAdapter();
       }
       @Override
-      public Adapter caseServo(Servo object)
-      {
-        return createServoAdapter();
-      }
-      @Override
       public Adapter caseAngle(Angle object)
       {
         return createAngleAdapter();
@@ -408,21 +403,6 @@ public class CPTesterAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createAngle_resAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.cPTester.Servo <em>Servo</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.cPTester.Servo
-   * @generated
-   */
-  public Adapter createServoAdapter()
   {
     return null;
   }

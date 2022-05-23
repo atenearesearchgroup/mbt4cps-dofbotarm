@@ -76,9 +76,9 @@ public class OperationsAdapterFactory extends AdapterFactoryImpl
     new OperationsSwitch<Adapter>()
     {
       @Override
-      public Adapter casePrueba(Prueba object)
+      public Adapter caseServo(Servo object)
       {
-        return createPruebaAdapter();
+        return createServoAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -103,16 +103,16 @@ public class OperationsAdapterFactory extends AdapterFactoryImpl
 
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.operations.Prueba <em>Prueba</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.operations.Servo <em>Servo</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.operations.Prueba
+   * @see org.xtext.operations.Servo
    * @generated
    */
-  public Adapter createPruebaAdapter()
+  public Adapter createServoAdapter()
   {
     return null;
   }

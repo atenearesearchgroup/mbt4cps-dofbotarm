@@ -159,15 +159,6 @@ public interface CPTesterFactory extends EFactory
   Angle_res createAngle_res();
 
   /**
-   * Returns a new object of class '<em>Servo</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Servo</em>'.
-   * @generated
-   */
-  Servo createServo();
-
-  /**
    * Returns a new object of class '<em>Angle</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

@@ -65,7 +65,7 @@ public class OperationsFactoryImpl extends EFactoryImpl implements OperationsFac
   {
     switch (eClass.getClassifierID())
     {
-      case OperationsPackage.PRUEBA: return createPrueba();
+      case OperationsPackage.SERVO: return createServo();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -77,10 +77,10 @@ public class OperationsFactoryImpl extends EFactoryImpl implements OperationsFac
    * @generated
    */
   @Override
-  public Prueba createPrueba()
+  public Servo createServo()
   {
-    PruebaImpl prueba = new PruebaImpl();
-    return prueba;
+    ServoImpl servo = new ServoImpl();
+    return servo;
   }
 
   /**

@@ -22,7 +22,6 @@ import org.xtext.cPTester.Given;
 import org.xtext.cPTester.Initial;
 import org.xtext.cPTester.Result;
 import org.xtext.cPTester.Scenario;
-import org.xtext.cPTester.Servo;
 import org.xtext.cPTester.Then;
 import org.xtext.cPTester.Time;
 import org.xtext.cPTester.When;
@@ -31,7 +30,7 @@ import org.xtext.cPTester.isAtSingle;
 import org.xtext.cPTester.rotateAllServos;
 import org.xtext.cPTester.rotateServo;
 import org.xtext.operations.OperationsPackage;
-import org.xtext.operations.Prueba;
+import org.xtext.operations.Servo;
 import org.xtext.services.CPTesterGrammarAccess;
 
 @SuppressWarnings("all")
@@ -72,9 +71,6 @@ public class CPTesterSemanticSequencer extends OperationsSemanticSequencer {
 			case CPTesterPackage.SCENARIO:
 				sequence_Scenario(context, (Scenario) semanticObject); 
 				return; 
-			case CPTesterPackage.SERVO:
-				sequence_Servo(context, (Servo) semanticObject); 
-				return; 
 			case CPTesterPackage.THEN:
 				sequence_Then(context, (Then) semanticObject); 
 				return; 
@@ -99,8 +95,8 @@ public class CPTesterSemanticSequencer extends OperationsSemanticSequencer {
 			}
 		else if (epackage == OperationsPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
-			case OperationsPackage.PRUEBA:
-				sequence_Prueba(context, (Prueba) semanticObject); 
+			case OperationsPackage.SERVO:
+				sequence_Servo(context, (Servo) semanticObject); 
 				return; 
 			}
 		if (errorAcceptor != null)
@@ -245,26 +241,6 @@ public class CPTesterSemanticSequencer extends OperationsSemanticSequencer {
 		feeder.accept(grammarAccess.getScenarioAccess().getWhenWhenParserRuleCall_4_0(), semanticObject.getWhen());
 		feeder.accept(grammarAccess.getScenarioAccess().getThenThenParserRuleCall_5_0(), semanticObject.getThen());
 		feeder.accept(grammarAccess.getScenarioAccess().getAndAndParserRuleCall_6_0(), semanticObject.getAnd());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * <pre>
-	 * Contexts:
-	 *     Servo returns Servo
-	 *
-	 * Constraint:
-	 *     servo=INT
-	 * </pre>
-	 */
-	protected void sequence_Servo(ISerializationContext context, Servo semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, CPTesterPackage.Literals.SERVO__SERVO) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CPTesterPackage.Literals.SERVO__SERVO));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getServoAccess().getServoINTTerminalRuleCall_0(), semanticObject.getServo());
 		feeder.finish();
 	}
 	

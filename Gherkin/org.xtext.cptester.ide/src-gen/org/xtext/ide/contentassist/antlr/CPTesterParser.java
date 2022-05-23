@@ -45,7 +45,6 @@ public class CPTesterParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getConditionsAccess().getGroup(), "rule__Conditions__Group__0");
 			builder.put(grammarAccess.getIsAtSingleAccess().getGroup(), "rule__IsAtSingle__Group__0");
 			builder.put(grammarAccess.getIsAtAccess().getGroup(), "rule__IsAt__Group__0");
-			builder.put(grammarAccess.getPruebaAccess().getGroup(), "rule__Prueba__Group__0");
 			builder.put(grammarAccess.getScenarioAccess().getSurnameAssignment_1(), "rule__Scenario__SurnameAssignment_1");
 			builder.put(grammarAccess.getScenarioAccess().getGivenAssignment_3(), "rule__Scenario__GivenAssignment_3");
 			builder.put(grammarAccess.getScenarioAccess().getWhenAssignment_4(), "rule__Scenario__WhenAssignment_4");
@@ -81,10 +80,9 @@ public class CPTesterParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getIsAtAccess().getAngleAssignment_2(), "rule__IsAt__AngleAssignment_2");
 			builder.put(grammarAccess.getIsAtAccess().getAngle_resAssignment_4(), "rule__IsAt__Angle_resAssignment_4");
 			builder.put(grammarAccess.getAngle_resAccess().getAngle_resAssignment(), "rule__Angle_res__Angle_resAssignment");
-			builder.put(grammarAccess.getServoAccess().getServoAssignment(), "rule__Servo__ServoAssignment");
 			builder.put(grammarAccess.getAngleAccess().getAngleAssignment(), "rule__Angle__AngleAssignment");
 			builder.put(grammarAccess.getTimeAccess().getTimeAssignment(), "rule__Time__TimeAssignment");
-			builder.put(grammarAccess.getPruebaAccess().getNameAssignment_1(), "rule__Prueba__NameAssignment_1");
+			builder.put(grammarAccess.getServoAccess().getServoAssignment(), "rule__Servo__ServoAssignment");
 		}
 	}
 	

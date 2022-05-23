@@ -15,7 +15,7 @@ import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 import org.xtext.operations.OperationsPackage;
-import org.xtext.operations.Prueba;
+import org.xtext.operations.Servo;
 import org.xtext.services.OperationsGrammarAccess;
 
 @SuppressWarnings("all")
@@ -32,8 +32,8 @@ public class OperationsSemanticSequencer extends AbstractDelegatingSemanticSeque
 		Set<Parameter> parameters = context.getEnabledBooleanParameters();
 		if (epackage == OperationsPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
-			case OperationsPackage.PRUEBA:
-				sequence_Prueba(context, (Prueba) semanticObject); 
+			case OperationsPackage.SERVO:
+				sequence_Servo(context, (Servo) semanticObject); 
 				return; 
 			}
 		if (errorAcceptor != null)
@@ -43,19 +43,19 @@ public class OperationsSemanticSequencer extends AbstractDelegatingSemanticSeque
 	/**
 	 * <pre>
 	 * Contexts:
-	 *     Prueba returns Prueba
+	 *     Servo returns Servo
 	 *
 	 * Constraint:
-	 *     name=STRING
+	 *     servo=INT
 	 * </pre>
 	 */
-	protected void sequence_Prueba(ISerializationContext context, Prueba semanticObject) {
+	protected void sequence_Servo(ISerializationContext context, Servo semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.PRUEBA__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.PRUEBA__NAME));
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.SERVO__SERVO) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.SERVO__SERVO));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getPruebaAccess().getNameSTRINGTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getServoAccess().getServoINTTerminalRuleCall_0(), semanticObject.getServo());
 		feeder.finish();
 	}
 	

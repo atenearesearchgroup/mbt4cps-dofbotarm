@@ -6,8 +6,8 @@
     complianceLevel="8.0" copyrightFields="false" runtimeVersion="2.20">
   <genPackages prefix="Operations" basePackage="org.xtext" disposableProviderFactory="true"
       fileExtensions="operations" ecorePackage="Operations.ecore#/">
-    <genClasses ecoreClass="Operations.ecore#//Prueba">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Operations.ecore#//Prueba/name"/>
+    <genClasses ecoreClass="Operations.ecore#//Servo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Operations.ecore#//Servo/servo"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -118,9 +118,6 @@ Angle_res:
 	angle_res=INT
 ;
 
-Servo:
-	servo=INT
-;
 
 Angle:
 	angle=INT

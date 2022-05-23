@@ -57,54 +57,54 @@ public interface OperationsPackage extends EPackage
   OperationsPackage eINSTANCE = org.xtext.operations.impl.OperationsPackageImpl.init();
 
   /**
-   * The meta object id for the '{@link org.xtext.operations.impl.PruebaImpl <em>Prueba</em>}' class.
+   * The meta object id for the '{@link org.xtext.operations.impl.ServoImpl <em>Servo</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.operations.impl.PruebaImpl
-   * @see org.xtext.operations.impl.OperationsPackageImpl#getPrueba()
+   * @see org.xtext.operations.impl.ServoImpl
+   * @see org.xtext.operations.impl.OperationsPackageImpl#getServo()
    * @generated
    */
-  int PRUEBA = 0;
+  int SERVO = 0;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * The feature id for the '<em><b>Servo</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PRUEBA__NAME = 0;
+  int SERVO__SERVO = 0;
 
   /**
-   * The number of structural features of the '<em>Prueba</em>' class.
+   * The number of structural features of the '<em>Servo</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PRUEBA_FEATURE_COUNT = 1;
+  int SERVO_FEATURE_COUNT = 1;
 
 
   /**
-   * Returns the meta object for class '{@link org.xtext.operations.Prueba <em>Prueba</em>}'.
+   * Returns the meta object for class '{@link org.xtext.operations.Servo <em>Servo</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Prueba</em>'.
-   * @see org.xtext.operations.Prueba
+   * @return the meta object for class '<em>Servo</em>'.
+   * @see org.xtext.operations.Servo
    * @generated
    */
-  EClass getPrueba();
+  EClass getServo();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.operations.Prueba#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.operations.Servo#getServo <em>Servo</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.xtext.operations.Prueba#getName()
-   * @see #getPrueba()
+   * @return the meta object for the attribute '<em>Servo</em>'.
+   * @see org.xtext.operations.Servo#getServo()
+   * @see #getServo()
    * @generated
    */
-  EAttribute getPrueba_Name();
+  EAttribute getServo_Servo();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -130,22 +130,22 @@ public interface OperationsPackage extends EPackage
   interface Literals
   {
     /**
-     * The meta object literal for the '{@link org.xtext.operations.impl.PruebaImpl <em>Prueba</em>}' class.
+     * The meta object literal for the '{@link org.xtext.operations.impl.ServoImpl <em>Servo</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.xtext.operations.impl.PruebaImpl
-     * @see org.xtext.operations.impl.OperationsPackageImpl#getPrueba()
+     * @see org.xtext.operations.impl.ServoImpl
+     * @see org.xtext.operations.impl.OperationsPackageImpl#getServo()
      * @generated
      */
-    EClass PRUEBA = eINSTANCE.getPrueba();
+    EClass SERVO = eINSTANCE.getServo();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Servo</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute PRUEBA__NAME = eINSTANCE.getPrueba_Name();
+    EAttribute SERVO__SERVO = eINSTANCE.getServo_Servo();
 
   }
 

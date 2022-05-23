@@ -21,7 +21,6 @@ import org.xtext.cPTester.Given;
 import org.xtext.cPTester.Initial;
 import org.xtext.cPTester.Result;
 import org.xtext.cPTester.Scenario;
-import org.xtext.cPTester.Servo;
 import org.xtext.cPTester.Solution;
 import org.xtext.cPTester.Then;
 import org.xtext.cPTester.Time;
@@ -30,6 +29,8 @@ import org.xtext.cPTester.isAt;
 import org.xtext.cPTester.isAtSingle;
 import org.xtext.cPTester.rotateAllServos;
 import org.xtext.cPTester.rotateServo;
+
+import org.xtext.operations.OperationsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -149,13 +150,6 @@ public class CPTesterPackageImpl extends EPackageImpl implements CPTesterPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass servoEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   private EClass angleEClass = null;
 
   /**
@@ -213,6 +207,9 @@ public class CPTesterPackageImpl extends EPackageImpl implements CPTesterPackage
     CPTesterPackageImpl theCPTesterPackage = registeredCPTesterPackage instanceof CPTesterPackageImpl ? (CPTesterPackageImpl)registeredCPTesterPackage : new CPTesterPackageImpl();
 
     isInited = true;
+
+    // Initialize simple dependencies
+    OperationsPackage.eINSTANCE.eClass();
 
     // Create package meta-data objects
     theCPTesterPackage.createPackageContents();
@@ -718,28 +715,6 @@ public class CPTesterPackageImpl extends EPackageImpl implements CPTesterPackage
    * @generated
    */
   @Override
-  public EClass getServo()
-  {
-    return servoEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getServo_Servo()
-  {
-    return (EAttribute)servoEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public EClass getAngle()
   {
     return angleEClass;
@@ -868,9 +843,6 @@ public class CPTesterPackageImpl extends EPackageImpl implements CPTesterPackage
     angle_resEClass = createEClass(ANGLE_RES);
     createEAttribute(angle_resEClass, ANGLE_RES__ANGLE_RES);
 
-    servoEClass = createEClass(SERVO);
-    createEAttribute(servoEClass, SERVO__SERVO);
-
     angleEClass = createEClass(ANGLE);
     createEAttribute(angleEClass, ANGLE__ANGLE);
 
@@ -901,6 +873,9 @@ public class CPTesterPackageImpl extends EPackageImpl implements CPTesterPackage
     setName(eNAME);
     setNsPrefix(eNS_PREFIX);
     setNsURI(eNS_URI);
+
+    // Obtain other dependent packages
+    OperationsPackage theOperationsPackage = (OperationsPackage)EPackage.Registry.INSTANCE.getEPackage(OperationsPackage.eNS_URI);
 
     // Create type parameters
 
@@ -938,7 +913,7 @@ public class CPTesterPackageImpl extends EPackageImpl implements CPTesterPackage
     initEReference(getCommand_Time(), this.getTime(), null, "time", null, 0, -1, Command.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(rotateServoEClass, rotateServo.class, "rotateServo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getrotateServo_Servo(), this.getServo(), null, "servo", null, 0, -1, rotateServo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getrotateServo_Servo(), theOperationsPackage.getServo(), null, "servo", null, 0, -1, rotateServo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(rotateAllServosEClass, rotateAllServos.class, "rotateAllServos", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -965,15 +940,12 @@ public class CPTesterPackageImpl extends EPackageImpl implements CPTesterPackage
     initEReference(getConditions_Time(), this.getTime(), null, "time", null, 0, -1, Conditions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(isAtSingleEClass, isAtSingle.class, "isAtSingle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getisAtSingle_Servo(), this.getServo(), null, "servo", null, 0, -1, isAtSingle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getisAtSingle_Servo(), theOperationsPackage.getServo(), null, "servo", null, 0, -1, isAtSingle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(isAtEClass, isAt.class, "isAt", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(angle_resEClass, Angle_res.class, "Angle_res", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getAngle_res_Angle_res(), ecorePackage.getEInt(), "angle_res", null, 0, 1, Angle_res.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(servoEClass, Servo.class, "Servo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getServo_Servo(), ecorePackage.getEInt(), "servo", null, 0, 1, Servo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(angleEClass, Angle.class, "Angle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getAngle_Angle(), ecorePackage.getEInt(), "angle", null, 0, 1, Angle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

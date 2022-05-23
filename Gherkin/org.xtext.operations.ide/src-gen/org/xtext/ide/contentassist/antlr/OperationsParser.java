@@ -31,8 +31,7 @@ public class OperationsParser extends AbstractContentAssistParser {
 		}
 		
 		private static void init(ImmutableMap.Builder<AbstractElement, String> builder, OperationsGrammarAccess grammarAccess) {
-			builder.put(grammarAccess.getPruebaAccess().getGroup(), "rule__Prueba__Group__0");
-			builder.put(grammarAccess.getPruebaAccess().getNameAssignment_1(), "rule__Prueba__NameAssignment_1");
+			builder.put(grammarAccess.getServoAccess().getServoAssignment(), "rule__Servo__ServoAssignment");
 		}
 	}
 	

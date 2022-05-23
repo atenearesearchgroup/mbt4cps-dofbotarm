@@ -43,7 +43,7 @@ import org.xtext.services.OperationsGrammarAccess;
 
     @Override
     protected String getFirstRuleName() {
-    	return "Prueba";
+    	return "Servo";
    	}
 
    	@Override
@@ -60,15 +60,15 @@ import org.xtext.services.OperationsGrammarAccess;
     }
 }
 
-// Entry rule entryRulePrueba
-entryRulePrueba returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getPruebaRule()); }
-	iv_rulePrueba=rulePrueba
-	{ $current=$iv_rulePrueba.current; }
+// Entry rule entryRuleServo
+entryRuleServo returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getServoRule()); }
+	iv_ruleServo=ruleServo
+	{ $current=$iv_ruleServo.current; }
 	EOF;
 
-// Rule Prueba
-rulePrueba returns [EObject current=null]
+// Rule Servo
+ruleServo returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -76,27 +76,21 @@ rulePrueba returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='prueba'
-		{
-			newLeafNode(otherlv_0, grammarAccess.getPruebaAccess().getPruebaKeyword_0());
-		}
 		(
-			(
-				lv_name_1_0=RULE_STRING
-				{
-					newLeafNode(lv_name_1_0, grammarAccess.getPruebaAccess().getNameSTRINGTerminalRuleCall_1_0());
+			lv_servo_0_0=RULE_INT
+			{
+				newLeafNode(lv_servo_0_0, grammarAccess.getServoAccess().getServoINTTerminalRuleCall_0());
+			}
+			{
+				if ($current==null) {
+					$current = createModelElement(grammarAccess.getServoRule());
 				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getPruebaRule());
-					}
-					setWithLastConsumed(
-						$current,
-						"name",
-						lv_name_1_0,
-						"org.eclipse.xtext.common.Terminals.STRING");
-				}
-			)
+				setWithLastConsumed(
+					$current,
+					"servo",
+					lv_servo_0_0,
+					"org.eclipse.xtext.common.Terminals.INT");
+			}
 		)
 	)
 ;

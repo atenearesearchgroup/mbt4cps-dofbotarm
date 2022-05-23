@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.xtext.operations.OperationsFactory;
 import org.xtext.operations.OperationsPackage;
-import org.xtext.operations.Prueba;
+import org.xtext.operations.Servo;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,7 +26,7 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass pruebaEClass = null;
+  private EClass servoEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -97,9 +97,9 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
    * @generated
    */
   @Override
-  public EClass getPrueba()
+  public EClass getServo()
   {
-    return pruebaEClass;
+    return servoEClass;
   }
 
   /**
@@ -108,9 +108,9 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
    * @generated
    */
   @Override
-  public EAttribute getPrueba_Name()
+  public EAttribute getServo_Servo()
   {
-    return (EAttribute)pruebaEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)servoEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -144,8 +144,8 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
     isCreated = true;
 
     // Create classes and their features
-    pruebaEClass = createEClass(PRUEBA);
-    createEAttribute(pruebaEClass, PRUEBA__NAME);
+    servoEClass = createEClass(SERVO);
+    createEAttribute(servoEClass, SERVO__SERVO);
   }
 
   /**
@@ -179,8 +179,8 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
     // Add supertypes to classes
 
     // Initialize classes and features; add operations and parameters
-    initEClass(pruebaEClass, Prueba.class, "Prueba", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getPrueba_Name(), ecorePackage.getEString(), "name", null, 0, 1, Prueba.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(servoEClass, Servo.class, "Servo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getServo_Servo(), ecorePackage.getEInt(), "servo", null, 0, 1, Servo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

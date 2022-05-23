@@ -182,13 +182,6 @@ public class CPTesterSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case CPTesterPackage.SERVO:
-      {
-        Servo servo = (Servo)theEObject;
-        T result = caseServo(servo);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case CPTesterPackage.ANGLE:
       {
         Angle angle = (Angle)theEObject;
@@ -443,22 +436,6 @@ public class CPTesterSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseAngle_res(Angle_res object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Servo</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Servo</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseServo(Servo object)
   {
     return null;
   }

@@ -1240,89 +1240,12 @@ public class InternalCPTesterParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "ruleAngle_res"
 
 
-    // $ANTLR start "entryRuleServo"
-    // InternalCPTester.g:428:1: entryRuleServo : ruleServo EOF ;
-    public final void entryRuleServo() throws RecognitionException {
-        try {
-            // InternalCPTester.g:429:1: ( ruleServo EOF )
-            // InternalCPTester.g:430:1: ruleServo EOF
-            {
-             before(grammarAccess.getServoRule()); 
-            pushFollow(FOLLOW_1);
-            ruleServo();
-
-            state._fsp--;
-
-             after(grammarAccess.getServoRule()); 
-            match(input,EOF,FOLLOW_2); 
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-        }
-        return ;
-    }
-    // $ANTLR end "entryRuleServo"
-
-
-    // $ANTLR start "ruleServo"
-    // InternalCPTester.g:437:1: ruleServo : ( ( rule__Servo__ServoAssignment ) ) ;
-    public final void ruleServo() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalCPTester.g:441:2: ( ( ( rule__Servo__ServoAssignment ) ) )
-            // InternalCPTester.g:442:2: ( ( rule__Servo__ServoAssignment ) )
-            {
-            // InternalCPTester.g:442:2: ( ( rule__Servo__ServoAssignment ) )
-            // InternalCPTester.g:443:3: ( rule__Servo__ServoAssignment )
-            {
-             before(grammarAccess.getServoAccess().getServoAssignment()); 
-            // InternalCPTester.g:444:3: ( rule__Servo__ServoAssignment )
-            // InternalCPTester.g:444:4: rule__Servo__ServoAssignment
-            {
-            pushFollow(FOLLOW_2);
-            rule__Servo__ServoAssignment();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getServoAccess().getServoAssignment()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "ruleServo"
-
-
     // $ANTLR start "entryRuleAngle"
-    // InternalCPTester.g:453:1: entryRuleAngle : ruleAngle EOF ;
+    // InternalCPTester.g:428:1: entryRuleAngle : ruleAngle EOF ;
     public final void entryRuleAngle() throws RecognitionException {
         try {
-            // InternalCPTester.g:454:1: ( ruleAngle EOF )
-            // InternalCPTester.g:455:1: ruleAngle EOF
+            // InternalCPTester.g:429:1: ( ruleAngle EOF )
+            // InternalCPTester.g:430:1: ruleAngle EOF
             {
              before(grammarAccess.getAngleRule()); 
             pushFollow(FOLLOW_1);
@@ -1348,21 +1271,21 @@ public class InternalCPTesterParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "ruleAngle"
-    // InternalCPTester.g:462:1: ruleAngle : ( ( rule__Angle__AngleAssignment ) ) ;
+    // InternalCPTester.g:437:1: ruleAngle : ( ( rule__Angle__AngleAssignment ) ) ;
     public final void ruleAngle() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPTester.g:466:2: ( ( ( rule__Angle__AngleAssignment ) ) )
-            // InternalCPTester.g:467:2: ( ( rule__Angle__AngleAssignment ) )
+            // InternalCPTester.g:441:2: ( ( ( rule__Angle__AngleAssignment ) ) )
+            // InternalCPTester.g:442:2: ( ( rule__Angle__AngleAssignment ) )
             {
-            // InternalCPTester.g:467:2: ( ( rule__Angle__AngleAssignment ) )
-            // InternalCPTester.g:468:3: ( rule__Angle__AngleAssignment )
+            // InternalCPTester.g:442:2: ( ( rule__Angle__AngleAssignment ) )
+            // InternalCPTester.g:443:3: ( rule__Angle__AngleAssignment )
             {
              before(grammarAccess.getAngleAccess().getAngleAssignment()); 
-            // InternalCPTester.g:469:3: ( rule__Angle__AngleAssignment )
-            // InternalCPTester.g:469:4: rule__Angle__AngleAssignment
+            // InternalCPTester.g:444:3: ( rule__Angle__AngleAssignment )
+            // InternalCPTester.g:444:4: rule__Angle__AngleAssignment
             {
             pushFollow(FOLLOW_2);
             rule__Angle__AngleAssignment();
@@ -1395,11 +1318,11 @@ public class InternalCPTesterParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "entryRuleTime"
-    // InternalCPTester.g:478:1: entryRuleTime : ruleTime EOF ;
+    // InternalCPTester.g:453:1: entryRuleTime : ruleTime EOF ;
     public final void entryRuleTime() throws RecognitionException {
         try {
-            // InternalCPTester.g:479:1: ( ruleTime EOF )
-            // InternalCPTester.g:480:1: ruleTime EOF
+            // InternalCPTester.g:454:1: ( ruleTime EOF )
+            // InternalCPTester.g:455:1: ruleTime EOF
             {
              before(grammarAccess.getTimeRule()); 
             pushFollow(FOLLOW_1);
@@ -1425,21 +1348,21 @@ public class InternalCPTesterParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "ruleTime"
-    // InternalCPTester.g:487:1: ruleTime : ( ( rule__Time__TimeAssignment ) ) ;
+    // InternalCPTester.g:462:1: ruleTime : ( ( rule__Time__TimeAssignment ) ) ;
     public final void ruleTime() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPTester.g:491:2: ( ( ( rule__Time__TimeAssignment ) ) )
-            // InternalCPTester.g:492:2: ( ( rule__Time__TimeAssignment ) )
+            // InternalCPTester.g:466:2: ( ( ( rule__Time__TimeAssignment ) ) )
+            // InternalCPTester.g:467:2: ( ( rule__Time__TimeAssignment ) )
             {
-            // InternalCPTester.g:492:2: ( ( rule__Time__TimeAssignment ) )
-            // InternalCPTester.g:493:3: ( rule__Time__TimeAssignment )
+            // InternalCPTester.g:467:2: ( ( rule__Time__TimeAssignment ) )
+            // InternalCPTester.g:468:3: ( rule__Time__TimeAssignment )
             {
              before(grammarAccess.getTimeAccess().getTimeAssignment()); 
-            // InternalCPTester.g:494:3: ( rule__Time__TimeAssignment )
-            // InternalCPTester.g:494:4: rule__Time__TimeAssignment
+            // InternalCPTester.g:469:3: ( rule__Time__TimeAssignment )
+            // InternalCPTester.g:469:4: rule__Time__TimeAssignment
             {
             pushFollow(FOLLOW_2);
             rule__Time__TimeAssignment();
@@ -1469,6 +1392,83 @@ public class InternalCPTesterParser extends AbstractInternalContentAssistParser 
         return ;
     }
     // $ANTLR end "ruleTime"
+
+
+    // $ANTLR start "entryRuleServo"
+    // InternalCPTester.g:478:1: entryRuleServo : ruleServo EOF ;
+    public final void entryRuleServo() throws RecognitionException {
+        try {
+            // InternalCPTester.g:479:1: ( ruleServo EOF )
+            // InternalCPTester.g:480:1: ruleServo EOF
+            {
+             before(grammarAccess.getServoRule()); 
+            pushFollow(FOLLOW_1);
+            ruleServo();
+
+            state._fsp--;
+
+             after(grammarAccess.getServoRule()); 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "entryRuleServo"
+
+
+    // $ANTLR start "ruleServo"
+    // InternalCPTester.g:487:1: ruleServo : ( ( rule__Servo__ServoAssignment ) ) ;
+    public final void ruleServo() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalCPTester.g:491:2: ( ( ( rule__Servo__ServoAssignment ) ) )
+            // InternalCPTester.g:492:2: ( ( rule__Servo__ServoAssignment ) )
+            {
+            // InternalCPTester.g:492:2: ( ( rule__Servo__ServoAssignment ) )
+            // InternalCPTester.g:493:3: ( rule__Servo__ServoAssignment )
+            {
+             before(grammarAccess.getServoAccess().getServoAssignment()); 
+            // InternalCPTester.g:494:3: ( rule__Servo__ServoAssignment )
+            // InternalCPTester.g:494:4: rule__Servo__ServoAssignment
+            {
+            pushFollow(FOLLOW_2);
+            rule__Servo__ServoAssignment();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getServoAccess().getServoAssignment()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "ruleServo"
 
 
     // $ANTLR start "rule__Command__Alternatives"
@@ -7741,9 +7741,9 @@ public class InternalCPTesterParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__Angle_res__Angle_resAssignment"
 
 
-    // $ANTLR start "rule__Servo__ServoAssignment"
-    // InternalCPTester.g:2666:1: rule__Servo__ServoAssignment : ( RULE_INT ) ;
-    public final void rule__Servo__ServoAssignment() throws RecognitionException {
+    // $ANTLR start "rule__Angle__AngleAssignment"
+    // InternalCPTester.g:2666:1: rule__Angle__AngleAssignment : ( RULE_INT ) ;
+    public final void rule__Angle__AngleAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -7753,43 +7753,6 @@ public class InternalCPTesterParser extends AbstractInternalContentAssistParser 
             {
             // InternalCPTester.g:2671:2: ( RULE_INT )
             // InternalCPTester.g:2672:3: RULE_INT
-            {
-             before(grammarAccess.getServoAccess().getServoINTTerminalRuleCall_0()); 
-            match(input,RULE_INT,FOLLOW_2); 
-             after(grammarAccess.getServoAccess().getServoINTTerminalRuleCall_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Servo__ServoAssignment"
-
-
-    // $ANTLR start "rule__Angle__AngleAssignment"
-    // InternalCPTester.g:2681:1: rule__Angle__AngleAssignment : ( RULE_INT ) ;
-    public final void rule__Angle__AngleAssignment() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalCPTester.g:2685:1: ( ( RULE_INT ) )
-            // InternalCPTester.g:2686:2: ( RULE_INT )
-            {
-            // InternalCPTester.g:2686:2: ( RULE_INT )
-            // InternalCPTester.g:2687:3: RULE_INT
             {
              before(grammarAccess.getAngleAccess().getAngleINTTerminalRuleCall_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -7816,17 +7779,17 @@ public class InternalCPTesterParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Time__TimeAssignment"
-    // InternalCPTester.g:2696:1: rule__Time__TimeAssignment : ( RULE_INT ) ;
+    // InternalCPTester.g:2681:1: rule__Time__TimeAssignment : ( RULE_INT ) ;
     public final void rule__Time__TimeAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPTester.g:2700:1: ( ( RULE_INT ) )
-            // InternalCPTester.g:2701:2: ( RULE_INT )
+            // InternalCPTester.g:2685:1: ( ( RULE_INT ) )
+            // InternalCPTester.g:2686:2: ( RULE_INT )
             {
-            // InternalCPTester.g:2701:2: ( RULE_INT )
-            // InternalCPTester.g:2702:3: RULE_INT
+            // InternalCPTester.g:2686:2: ( RULE_INT )
+            // InternalCPTester.g:2687:3: RULE_INT
             {
              before(grammarAccess.getTimeAccess().getTimeINTTerminalRuleCall_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -7850,6 +7813,43 @@ public class InternalCPTesterParser extends AbstractInternalContentAssistParser 
         return ;
     }
     // $ANTLR end "rule__Time__TimeAssignment"
+
+
+    // $ANTLR start "rule__Servo__ServoAssignment"
+    // InternalCPTester.g:2696:1: rule__Servo__ServoAssignment : ( RULE_INT ) ;
+    public final void rule__Servo__ServoAssignment() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalCPTester.g:2700:1: ( ( RULE_INT ) )
+            // InternalCPTester.g:2701:2: ( RULE_INT )
+            {
+            // InternalCPTester.g:2701:2: ( RULE_INT )
+            // InternalCPTester.g:2702:3: RULE_INT
+            {
+             before(grammarAccess.getServoAccess().getServoINTTerminalRuleCall_0()); 
+            match(input,RULE_INT,FOLLOW_2); 
+             after(grammarAccess.getServoAccess().getServoINTTerminalRuleCall_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Servo__ServoAssignment"
 
     // Delegated rules
 

@@ -49,94 +49,40 @@ import org.xtext.services.OperationsGrammarAccess;
 	}
 }
 
-// Entry rule entryRulePrueba
-entryRulePrueba
+// Entry rule entryRuleServo
+entryRuleServo
 :
-{ before(grammarAccess.getPruebaRule()); }
-	 rulePrueba
-{ after(grammarAccess.getPruebaRule()); } 
+{ before(grammarAccess.getServoRule()); }
+	 ruleServo
+{ after(grammarAccess.getServoRule()); } 
 	 EOF 
 ;
 
-// Rule Prueba
-rulePrueba 
+// Rule Servo
+ruleServo 
 	@init {
 		int stackSize = keepStackSize();
 	}
 	:
 	(
-		{ before(grammarAccess.getPruebaAccess().getGroup()); }
-		(rule__Prueba__Group__0)
-		{ after(grammarAccess.getPruebaAccess().getGroup()); }
+		{ before(grammarAccess.getServoAccess().getServoAssignment()); }
+		(rule__Servo__ServoAssignment)
+		{ after(grammarAccess.getServoAccess().getServoAssignment()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Prueba__Group__0
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__Prueba__Group__0__Impl
-	rule__Prueba__Group__1
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Prueba__Group__0__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getPruebaAccess().getPruebaKeyword_0()); }
-	'prueba'
-	{ after(grammarAccess.getPruebaAccess().getPruebaKeyword_0()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Prueba__Group__1
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__Prueba__Group__1__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Prueba__Group__1__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getPruebaAccess().getNameAssignment_1()); }
-	(rule__Prueba__NameAssignment_1)
-	{ after(grammarAccess.getPruebaAccess().getNameAssignment_1()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__Prueba__NameAssignment_1
+rule__Servo__ServoAssignment
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getPruebaAccess().getNameSTRINGTerminalRuleCall_1_0()); }
-		RULE_STRING
-		{ after(grammarAccess.getPruebaAccess().getNameSTRINGTerminalRuleCall_1_0()); }
+		{ before(grammarAccess.getServoAccess().getServoINTTerminalRuleCall_0()); }
+		RULE_INT
+		{ after(grammarAccess.getServoAccess().getServoINTTerminalRuleCall_0()); }
 	)
 ;
 finally {

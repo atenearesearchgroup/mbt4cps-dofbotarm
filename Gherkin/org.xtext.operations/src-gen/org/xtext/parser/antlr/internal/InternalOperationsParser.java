@@ -21,15 +21,14 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalOperationsParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'prueba'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INT", "RULE_ID", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER"
     };
     public static final int RULE_ID=5;
     public static final int RULE_WS=9;
-    public static final int RULE_STRING=4;
+    public static final int RULE_STRING=6;
     public static final int RULE_ANY_OTHER=10;
     public static final int RULE_SL_COMMENT=8;
-    public static final int RULE_INT=6;
-    public static final int T__11=11;
+    public static final int RULE_INT=4;
     public static final int RULE_ML_COMMENT=7;
     public static final int EOF=-1;
 
@@ -61,7 +60,7 @@ public class InternalOperationsParser extends AbstractInternalAntlrParser {
 
         @Override
         protected String getFirstRuleName() {
-        	return "Prueba";
+        	return "Servo";
        	}
 
        	@Override
@@ -72,25 +71,25 @@ public class InternalOperationsParser extends AbstractInternalAntlrParser {
 
 
 
-    // $ANTLR start "entryRulePrueba"
-    // InternalOperations.g:64:1: entryRulePrueba returns [EObject current=null] : iv_rulePrueba= rulePrueba EOF ;
-    public final EObject entryRulePrueba() throws RecognitionException {
+    // $ANTLR start "entryRuleServo"
+    // InternalOperations.g:64:1: entryRuleServo returns [EObject current=null] : iv_ruleServo= ruleServo EOF ;
+    public final EObject entryRuleServo() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_rulePrueba = null;
+        EObject iv_ruleServo = null;
 
 
         try {
-            // InternalOperations.g:64:47: (iv_rulePrueba= rulePrueba EOF )
-            // InternalOperations.g:65:2: iv_rulePrueba= rulePrueba EOF
+            // InternalOperations.g:64:46: (iv_ruleServo= ruleServo EOF )
+            // InternalOperations.g:65:2: iv_ruleServo= ruleServo EOF
             {
-             newCompositeNode(grammarAccess.getPruebaRule()); 
+             newCompositeNode(grammarAccess.getServoRule()); 
             pushFollow(FOLLOW_1);
-            iv_rulePrueba=rulePrueba();
+            iv_ruleServo=ruleServo();
 
             state._fsp--;
 
-             current =iv_rulePrueba; 
+             current =iv_ruleServo; 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -105,54 +104,43 @@ public class InternalOperationsParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRulePrueba"
+    // $ANTLR end "entryRuleServo"
 
 
-    // $ANTLR start "rulePrueba"
-    // InternalOperations.g:71:1: rulePrueba returns [EObject current=null] : (otherlv_0= 'prueba' ( (lv_name_1_0= RULE_STRING ) ) ) ;
-    public final EObject rulePrueba() throws RecognitionException {
+    // $ANTLR start "ruleServo"
+    // InternalOperations.g:71:1: ruleServo returns [EObject current=null] : ( (lv_servo_0_0= RULE_INT ) ) ;
+    public final EObject ruleServo() throws RecognitionException {
         EObject current = null;
 
-        Token otherlv_0=null;
-        Token lv_name_1_0=null;
+        Token lv_servo_0_0=null;
 
 
         	enterRule();
 
         try {
-            // InternalOperations.g:77:2: ( (otherlv_0= 'prueba' ( (lv_name_1_0= RULE_STRING ) ) ) )
-            // InternalOperations.g:78:2: (otherlv_0= 'prueba' ( (lv_name_1_0= RULE_STRING ) ) )
+            // InternalOperations.g:77:2: ( ( (lv_servo_0_0= RULE_INT ) ) )
+            // InternalOperations.g:78:2: ( (lv_servo_0_0= RULE_INT ) )
             {
-            // InternalOperations.g:78:2: (otherlv_0= 'prueba' ( (lv_name_1_0= RULE_STRING ) ) )
-            // InternalOperations.g:79:3: otherlv_0= 'prueba' ( (lv_name_1_0= RULE_STRING ) )
+            // InternalOperations.g:78:2: ( (lv_servo_0_0= RULE_INT ) )
+            // InternalOperations.g:79:3: (lv_servo_0_0= RULE_INT )
             {
-            otherlv_0=(Token)match(input,11,FOLLOW_3); 
-
-            			newLeafNode(otherlv_0, grammarAccess.getPruebaAccess().getPruebaKeyword_0());
-            		
-            // InternalOperations.g:83:3: ( (lv_name_1_0= RULE_STRING ) )
-            // InternalOperations.g:84:4: (lv_name_1_0= RULE_STRING )
+            // InternalOperations.g:79:3: (lv_servo_0_0= RULE_INT )
+            // InternalOperations.g:80:4: lv_servo_0_0= RULE_INT
             {
-            // InternalOperations.g:84:4: (lv_name_1_0= RULE_STRING )
-            // InternalOperations.g:85:5: lv_name_1_0= RULE_STRING
-            {
-            lv_name_1_0=(Token)match(input,RULE_STRING,FOLLOW_2); 
+            lv_servo_0_0=(Token)match(input,RULE_INT,FOLLOW_2); 
 
-            					newLeafNode(lv_name_1_0, grammarAccess.getPruebaAccess().getNameSTRINGTerminalRuleCall_1_0());
-            				
+            				newLeafNode(lv_servo_0_0, grammarAccess.getServoAccess().getServoINTTerminalRuleCall_0());
+            			
 
-            					if (current==null) {
-            						current = createModelElement(grammarAccess.getPruebaRule());
-            					}
-            					setWithLastConsumed(
-            						current,
-            						"name",
-            						lv_name_1_0,
-            						"org.eclipse.xtext.common.Terminals.STRING");
-            				
-
-            }
-
+            				if (current==null) {
+            					current = createModelElement(grammarAccess.getServoRule());
+            				}
+            				setWithLastConsumed(
+            					current,
+            					"servo",
+            					lv_servo_0_0,
+            					"org.eclipse.xtext.common.Terminals.INT");
+            			
 
             }
 
@@ -175,7 +163,7 @@ public class InternalOperationsParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "rulePrueba"
+    // $ANTLR end "ruleServo"
 
     // Delegated rules
 
@@ -184,6 +172,5 @@ public class InternalOperationsParser extends AbstractInternalAntlrParser {
 
     public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000000010L});
 
 }

@@ -80,7 +80,6 @@ public class CPTesterFactoryImpl extends EFactoryImpl implements CPTesterFactory
       case CPTesterPackage.IS_AT_SINGLE: return createisAtSingle();
       case CPTesterPackage.IS_AT: return createisAt();
       case CPTesterPackage.ANGLE_RES: return createAngle_res();
-      case CPTesterPackage.SERVO: return createServo();
       case CPTesterPackage.ANGLE: return createAngle();
       case CPTesterPackage.TIME: return createTime();
       default:
@@ -266,18 +265,6 @@ public class CPTesterFactoryImpl extends EFactoryImpl implements CPTesterFactory
   {
     Angle_resImpl angle_res = new Angle_resImpl();
     return angle_res;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public Servo createServo()
-  {
-    ServoImpl servo = new ServoImpl();
-    return servo;
   }
 
   /**

@@ -975,7 +975,7 @@ public class InternalCPTesterParser extends AbstractInternalAntlrParser {
             						current,
             						"servo",
             						lv_servo_2_0,
-            						"org.xtext.CPTester.Servo");
+            						"org.xtext.Operations.Servo");
             					afterParserOrEnumRuleCall();
             				
 
@@ -2093,7 +2093,7 @@ public class InternalCPTesterParser extends AbstractInternalAntlrParser {
             						current,
             						"servo",
             						lv_servo_2_0,
-            						"org.xtext.CPTester.Servo");
+            						"org.xtext.Operations.Servo");
             					afterParserOrEnumRuleCall();
             				
 
@@ -2494,103 +2494,8 @@ public class InternalCPTesterParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleAngle_res"
 
 
-    // $ANTLR start "entryRuleServo"
-    // InternalCPTester.g:1081:1: entryRuleServo returns [EObject current=null] : iv_ruleServo= ruleServo EOF ;
-    public final EObject entryRuleServo() throws RecognitionException {
-        EObject current = null;
-
-        EObject iv_ruleServo = null;
-
-
-        try {
-            // InternalCPTester.g:1081:46: (iv_ruleServo= ruleServo EOF )
-            // InternalCPTester.g:1082:2: iv_ruleServo= ruleServo EOF
-            {
-             newCompositeNode(grammarAccess.getServoRule()); 
-            pushFollow(FOLLOW_1);
-            iv_ruleServo=ruleServo();
-
-            state._fsp--;
-
-             current =iv_ruleServo; 
-            match(input,EOF,FOLLOW_2); 
-
-            }
-
-        }
-
-            catch (RecognitionException re) {
-                recover(input,re);
-                appendSkippedTokens();
-            }
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "entryRuleServo"
-
-
-    // $ANTLR start "ruleServo"
-    // InternalCPTester.g:1088:1: ruleServo returns [EObject current=null] : ( (lv_servo_0_0= RULE_INT ) ) ;
-    public final EObject ruleServo() throws RecognitionException {
-        EObject current = null;
-
-        Token lv_servo_0_0=null;
-
-
-        	enterRule();
-
-        try {
-            // InternalCPTester.g:1094:2: ( ( (lv_servo_0_0= RULE_INT ) ) )
-            // InternalCPTester.g:1095:2: ( (lv_servo_0_0= RULE_INT ) )
-            {
-            // InternalCPTester.g:1095:2: ( (lv_servo_0_0= RULE_INT ) )
-            // InternalCPTester.g:1096:3: (lv_servo_0_0= RULE_INT )
-            {
-            // InternalCPTester.g:1096:3: (lv_servo_0_0= RULE_INT )
-            // InternalCPTester.g:1097:4: lv_servo_0_0= RULE_INT
-            {
-            lv_servo_0_0=(Token)match(input,RULE_INT,FOLLOW_2); 
-
-            				newLeafNode(lv_servo_0_0, grammarAccess.getServoAccess().getServoINTTerminalRuleCall_0());
-            			
-
-            				if (current==null) {
-            					current = createModelElement(grammarAccess.getServoRule());
-            				}
-            				setWithLastConsumed(
-            					current,
-            					"servo",
-            					lv_servo_0_0,
-            					"org.eclipse.xtext.common.Terminals.INT");
-            			
-
-            }
-
-
-            }
-
-
-            }
-
-
-            	leaveRule();
-
-        }
-
-            catch (RecognitionException re) {
-                recover(input,re);
-                appendSkippedTokens();
-            }
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "ruleServo"
-
-
     // $ANTLR start "entryRuleAngle"
-    // InternalCPTester.g:1116:1: entryRuleAngle returns [EObject current=null] : iv_ruleAngle= ruleAngle EOF ;
+    // InternalCPTester.g:1081:1: entryRuleAngle returns [EObject current=null] : iv_ruleAngle= ruleAngle EOF ;
     public final EObject entryRuleAngle() throws RecognitionException {
         EObject current = null;
 
@@ -2598,8 +2503,8 @@ public class InternalCPTesterParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalCPTester.g:1116:46: (iv_ruleAngle= ruleAngle EOF )
-            // InternalCPTester.g:1117:2: iv_ruleAngle= ruleAngle EOF
+            // InternalCPTester.g:1081:46: (iv_ruleAngle= ruleAngle EOF )
+            // InternalCPTester.g:1082:2: iv_ruleAngle= ruleAngle EOF
             {
              newCompositeNode(grammarAccess.getAngleRule()); 
             pushFollow(FOLLOW_1);
@@ -2626,7 +2531,7 @@ public class InternalCPTesterParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAngle"
-    // InternalCPTester.g:1123:1: ruleAngle returns [EObject current=null] : ( (lv_angle_0_0= RULE_INT ) ) ;
+    // InternalCPTester.g:1088:1: ruleAngle returns [EObject current=null] : ( (lv_angle_0_0= RULE_INT ) ) ;
     public final EObject ruleAngle() throws RecognitionException {
         EObject current = null;
 
@@ -2636,14 +2541,14 @@ public class InternalCPTesterParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCPTester.g:1129:2: ( ( (lv_angle_0_0= RULE_INT ) ) )
-            // InternalCPTester.g:1130:2: ( (lv_angle_0_0= RULE_INT ) )
+            // InternalCPTester.g:1094:2: ( ( (lv_angle_0_0= RULE_INT ) ) )
+            // InternalCPTester.g:1095:2: ( (lv_angle_0_0= RULE_INT ) )
             {
-            // InternalCPTester.g:1130:2: ( (lv_angle_0_0= RULE_INT ) )
-            // InternalCPTester.g:1131:3: (lv_angle_0_0= RULE_INT )
+            // InternalCPTester.g:1095:2: ( (lv_angle_0_0= RULE_INT ) )
+            // InternalCPTester.g:1096:3: (lv_angle_0_0= RULE_INT )
             {
-            // InternalCPTester.g:1131:3: (lv_angle_0_0= RULE_INT )
-            // InternalCPTester.g:1132:4: lv_angle_0_0= RULE_INT
+            // InternalCPTester.g:1096:3: (lv_angle_0_0= RULE_INT )
+            // InternalCPTester.g:1097:4: lv_angle_0_0= RULE_INT
             {
             lv_angle_0_0=(Token)match(input,RULE_INT,FOLLOW_2); 
 
@@ -2685,7 +2590,7 @@ public class InternalCPTesterParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTime"
-    // InternalCPTester.g:1151:1: entryRuleTime returns [EObject current=null] : iv_ruleTime= ruleTime EOF ;
+    // InternalCPTester.g:1116:1: entryRuleTime returns [EObject current=null] : iv_ruleTime= ruleTime EOF ;
     public final EObject entryRuleTime() throws RecognitionException {
         EObject current = null;
 
@@ -2693,8 +2598,8 @@ public class InternalCPTesterParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalCPTester.g:1151:45: (iv_ruleTime= ruleTime EOF )
-            // InternalCPTester.g:1152:2: iv_ruleTime= ruleTime EOF
+            // InternalCPTester.g:1116:45: (iv_ruleTime= ruleTime EOF )
+            // InternalCPTester.g:1117:2: iv_ruleTime= ruleTime EOF
             {
              newCompositeNode(grammarAccess.getTimeRule()); 
             pushFollow(FOLLOW_1);
@@ -2721,7 +2626,7 @@ public class InternalCPTesterParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTime"
-    // InternalCPTester.g:1158:1: ruleTime returns [EObject current=null] : ( (lv_time_0_0= RULE_INT ) ) ;
+    // InternalCPTester.g:1123:1: ruleTime returns [EObject current=null] : ( (lv_time_0_0= RULE_INT ) ) ;
     public final EObject ruleTime() throws RecognitionException {
         EObject current = null;
 
@@ -2731,14 +2636,14 @@ public class InternalCPTesterParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCPTester.g:1164:2: ( ( (lv_time_0_0= RULE_INT ) ) )
-            // InternalCPTester.g:1165:2: ( (lv_time_0_0= RULE_INT ) )
+            // InternalCPTester.g:1129:2: ( ( (lv_time_0_0= RULE_INT ) ) )
+            // InternalCPTester.g:1130:2: ( (lv_time_0_0= RULE_INT ) )
             {
-            // InternalCPTester.g:1165:2: ( (lv_time_0_0= RULE_INT ) )
-            // InternalCPTester.g:1166:3: (lv_time_0_0= RULE_INT )
+            // InternalCPTester.g:1130:2: ( (lv_time_0_0= RULE_INT ) )
+            // InternalCPTester.g:1131:3: (lv_time_0_0= RULE_INT )
             {
-            // InternalCPTester.g:1166:3: (lv_time_0_0= RULE_INT )
-            // InternalCPTester.g:1167:4: lv_time_0_0= RULE_INT
+            // InternalCPTester.g:1131:3: (lv_time_0_0= RULE_INT )
+            // InternalCPTester.g:1132:4: lv_time_0_0= RULE_INT
             {
             lv_time_0_0=(Token)match(input,RULE_INT,FOLLOW_2); 
 
@@ -2777,6 +2682,101 @@ public class InternalCPTesterParser extends AbstractInternalAntlrParser {
         return current;
     }
     // $ANTLR end "ruleTime"
+
+
+    // $ANTLR start "entryRuleServo"
+    // InternalCPTester.g:1151:1: entryRuleServo returns [EObject current=null] : iv_ruleServo= ruleServo EOF ;
+    public final EObject entryRuleServo() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleServo = null;
+
+
+        try {
+            // InternalCPTester.g:1151:46: (iv_ruleServo= ruleServo EOF )
+            // InternalCPTester.g:1152:2: iv_ruleServo= ruleServo EOF
+            {
+             newCompositeNode(grammarAccess.getServoRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleServo=ruleServo();
+
+            state._fsp--;
+
+             current =iv_ruleServo; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleServo"
+
+
+    // $ANTLR start "ruleServo"
+    // InternalCPTester.g:1158:1: ruleServo returns [EObject current=null] : ( (lv_servo_0_0= RULE_INT ) ) ;
+    public final EObject ruleServo() throws RecognitionException {
+        EObject current = null;
+
+        Token lv_servo_0_0=null;
+
+
+        	enterRule();
+
+        try {
+            // InternalCPTester.g:1164:2: ( ( (lv_servo_0_0= RULE_INT ) ) )
+            // InternalCPTester.g:1165:2: ( (lv_servo_0_0= RULE_INT ) )
+            {
+            // InternalCPTester.g:1165:2: ( (lv_servo_0_0= RULE_INT ) )
+            // InternalCPTester.g:1166:3: (lv_servo_0_0= RULE_INT )
+            {
+            // InternalCPTester.g:1166:3: (lv_servo_0_0= RULE_INT )
+            // InternalCPTester.g:1167:4: lv_servo_0_0= RULE_INT
+            {
+            lv_servo_0_0=(Token)match(input,RULE_INT,FOLLOW_2); 
+
+            				newLeafNode(lv_servo_0_0, grammarAccess.getServoAccess().getServoINTTerminalRuleCall_0());
+            			
+
+            				if (current==null) {
+            					current = createModelElement(grammarAccess.getServoRule());
+            				}
+            				setWithLastConsumed(
+            					current,
+            					"servo",
+            					lv_servo_0_0,
+            					"org.eclipse.xtext.common.Terminals.INT");
+            			
+
+            }
+
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleServo"
 
     // Delegated rules
 

@@ -16,8 +16,9 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.cPTester.CPTesterPackage;
-import org.xtext.cPTester.Servo;
 import org.xtext.cPTester.isAtSingle;
+
+import org.xtext.operations.Servo;
 
 /**
  * <!-- begin-user-doc -->

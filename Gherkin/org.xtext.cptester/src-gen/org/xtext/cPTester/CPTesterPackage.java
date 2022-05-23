@@ -712,34 +712,6 @@ public interface CPTesterPackage extends EPackage
   int ANGLE_RES_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link org.xtext.cPTester.impl.ServoImpl <em>Servo</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.cPTester.impl.ServoImpl
-   * @see org.xtext.cPTester.impl.CPTesterPackageImpl#getServo()
-   * @generated
-   */
-  int SERVO = 15;
-
-  /**
-   * The feature id for the '<em><b>Servo</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SERVO__SERVO = 0;
-
-  /**
-   * The number of structural features of the '<em>Servo</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SERVO_FEATURE_COUNT = 1;
-
-  /**
    * The meta object id for the '{@link org.xtext.cPTester.impl.AngleImpl <em>Angle</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -747,7 +719,7 @@ public interface CPTesterPackage extends EPackage
    * @see org.xtext.cPTester.impl.CPTesterPackageImpl#getAngle()
    * @generated
    */
-  int ANGLE = 16;
+  int ANGLE = 15;
 
   /**
    * The feature id for the '<em><b>Angle</b></em>' attribute.
@@ -775,7 +747,7 @@ public interface CPTesterPackage extends EPackage
    * @see org.xtext.cPTester.impl.CPTesterPackageImpl#getTime()
    * @generated
    */
-  int TIME = 17;
+  int TIME = 16;
 
   /**
    * The feature id for the '<em><b>Time</b></em>' attribute.
@@ -1266,27 +1238,6 @@ public interface CPTesterPackage extends EPackage
   EAttribute getAngle_res_Angle_res();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.cPTester.Servo <em>Servo</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Servo</em>'.
-   * @see org.xtext.cPTester.Servo
-   * @generated
-   */
-  EClass getServo();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.cPTester.Servo#getServo <em>Servo</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Servo</em>'.
-   * @see org.xtext.cPTester.Servo#getServo()
-   * @see #getServo()
-   * @generated
-   */
-  EAttribute getServo_Servo();
-
-  /**
    * Returns the meta object for class '{@link org.xtext.cPTester.Angle <em>Angle</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1732,24 +1683,6 @@ public interface CPTesterPackage extends EPackage
      * @generated
      */
     EAttribute ANGLE_RES__ANGLE_RES = eINSTANCE.getAngle_res_Angle_res();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.cPTester.impl.ServoImpl <em>Servo</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.cPTester.impl.ServoImpl
-     * @see org.xtext.cPTester.impl.CPTesterPackageImpl#getServo()
-     * @generated
-     */
-    EClass SERVO = eINSTANCE.getServo();
-
-    /**
-     * The meta object literal for the '<em><b>Servo</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute SERVO__SERVO = eINSTANCE.getServo_Servo();
 
     /**
      * The meta object literal for the '{@link org.xtext.cPTester.impl.AngleImpl <em>Angle</em>}' class.

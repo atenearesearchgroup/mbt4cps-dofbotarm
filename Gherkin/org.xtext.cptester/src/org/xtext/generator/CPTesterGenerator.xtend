@@ -9,9 +9,9 @@ import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
 import org.xtext.cPTester.Scenario
 import org.xtext.cPTester.Given
-import org.xtext.cPTester.When
+import org.xtext.cPTester.Initial
+import org.xtext.cPTester.Command
 import org.xtext.cPTester.rotateServo
-import org.xtext.cPTester.Servo
 
 /**
  * Generates code from your model files on save.
@@ -28,33 +28,23 @@ class CPTesterGenerator extends AbstractGenerator {
 }
 	
 	def toCode(Scenario scenario) {
-		'''«scenario.operations»
-		«scenario.operations.get(0).name»
-		«scenario.operations.get(1).name»
-		«scenario.operations.get(2).name»
-		«scenario.operations.get(3).name»
+		'''
 		
-		«FOR op : scenario.operations»
-			«IF op.eClass.name.equals("When")»
-			«var when = op as When»
-				«when.name» 
-				«when.command.get(0).name»
-			«FOR cmd : when.command»
-				«IF cmd.eClass.name.equals("rotateServo")»
+		«FOR cmd : scenario.when.command»
+			«IF cmd.eClass.name.equals('rotateServo')»
 				«var rot = cmd as rotateServo»
+					«rot.servo»
 					«rot.servo.get(0)»
-					«rot.angle.get(0)»2
-					«rot.time»
-					«FOR ser : rot.servo»
-						«var valr = ser as Servo»
-							«valr.servo»
-							«ENDFOR»
-					«ENDIF»
-				«ENDFOR»
+					«rot.angle.get(0)»
+					«rot.time.get(0)»
 			«ENDIF»
 		«ENDFOR»
+		
+		
+		
 		''' 
 	}
+
 	
 	
 //We define a function className that will be used to obtain the name of the file with extension 'wrld’

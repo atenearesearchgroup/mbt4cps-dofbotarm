@@ -3,13 +3,20 @@
  */
 package org.xtext.generator;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.generator.AbstractGenerator;
 import org.eclipse.xtext.generator.IFileSystemAccess2;
 import org.eclipse.xtext.generator.IGeneratorContext;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
+import org.xtext.cPTester.Angle;
+import org.xtext.cPTester.Command;
 import org.xtext.cPTester.Scenario;
+import org.xtext.cPTester.Time;
+import org.xtext.cPTester.rotateServo;
+import org.xtext.operations.Servo;
 
 /**
  * Generates code from your model files on save.
@@ -28,24 +35,40 @@ public class CPTesterGenerator extends AbstractGenerator {
   }
   
   public CharSequence toCode(final Scenario scenario) {
-    throw new Error("Unresolved compilation problems:"
-      + "\nThe method or field operations is undefined for the type Scenario"
-      + "\nThe method or field operations is undefined for the type Scenario"
-      + "\nThe method or field operations is undefined for the type Scenario"
-      + "\nThe method or field operations is undefined for the type Scenario"
-      + "\nThe method or field operations is undefined for the type Scenario"
-      + "\nThe method or field operations is undefined for the type Scenario"
-      + "\nget cannot be resolved"
-      + "\nname cannot be resolved"
-      + "\nget cannot be resolved"
-      + "\nname cannot be resolved"
-      + "\nget cannot be resolved"
-      + "\nname cannot be resolved"
-      + "\nget cannot be resolved"
-      + "\nname cannot be resolved"
-      + "\neClass cannot be resolved"
-      + "\nname cannot be resolved"
-      + "\nequals cannot be resolved");
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.newLine();
+    {
+      EList<Command> _command = scenario.getWhen().getCommand();
+      for(final Command cmd : _command) {
+        {
+          boolean _equals = cmd.eClass().getName().equals("rotateServo");
+          if (_equals) {
+            rotateServo rot = ((rotateServo) cmd);
+            _builder.newLineIfNotEmpty();
+            _builder.append("\t");
+            EList<Servo> _servo = rot.getServo();
+            _builder.append(_servo, "\t");
+            _builder.newLineIfNotEmpty();
+            _builder.append("\t");
+            Servo _get = rot.getServo().get(0);
+            _builder.append(_get, "\t");
+            _builder.newLineIfNotEmpty();
+            _builder.append("\t");
+            Angle _get_1 = rot.getAngle().get(0);
+            _builder.append(_get_1, "\t");
+            _builder.newLineIfNotEmpty();
+            _builder.append("\t");
+            Time _get_2 = rot.getTime().get(0);
+            _builder.append(_get_2, "\t");
+            _builder.newLineIfNotEmpty();
+          }
+        }
+      }
+    }
+    _builder.newLine();
+    _builder.newLine();
+    _builder.newLine();
+    return _builder;
   }
   
   public String className(final Resource res) {
