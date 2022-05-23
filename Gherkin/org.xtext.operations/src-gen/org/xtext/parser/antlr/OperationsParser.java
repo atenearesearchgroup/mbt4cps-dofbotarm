@@ -27,7 +27,7 @@ public class OperationsParser extends AbstractAntlrParser {
 
 	@Override 
 	protected String getDefaultRuleName() {
-		return "Servo";
+		return "Operaciones";
 	}
 
 	public OperationsGrammarAccess getGrammarAccess() {

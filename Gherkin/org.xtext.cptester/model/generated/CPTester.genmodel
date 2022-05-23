@@ -17,57 +17,18 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CPTester.ecore#//Given/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CPTester.ecore#//Given/initial"/>
     </genClasses>
-    <genClasses ecoreClass="CPTester.ecore#//Initial">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CPTester.ecore#//Initial/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CPTester.ecore#//Initial/time"/>
-    </genClasses>
     <genClasses ecoreClass="CPTester.ecore#//When">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CPTester.ecore#//When/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CPTester.ecore#//When/command"/>
     </genClasses>
-    <genClasses ecoreClass="CPTester.ecore#//Command">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CPTester.ecore#//Command/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CPTester.ecore#//Command/angle"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CPTester.ecore#//Command/time"/>
-    </genClasses>
-    <genClasses ecoreClass="CPTester.ecore#//rotateServo">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CPTester.ecore#//rotateServo/servo"/>
-    </genClasses>
-    <genClasses ecoreClass="CPTester.ecore#//rotateAllServos"/>
     <genClasses ecoreClass="CPTester.ecore#//Then">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CPTester.ecore#//Then/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CPTester.ecore#//Then/result"/>
-    </genClasses>
-    <genClasses ecoreClass="CPTester.ecore#//Result">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CPTester.ecore#//Result/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CPTester.ecore#//Result/time"/>
     </genClasses>
     <genClasses ecoreClass="CPTester.ecore#//And">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CPTester.ecore#//And/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CPTester.ecore#//And/conditions"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CPTester.ecore#//And/solution"/>
-    </genClasses>
-    <genClasses ecoreClass="CPTester.ecore#//Solution">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CPTester.ecore#//Solution/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CPTester.ecore#//Solution/angle"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CPTester.ecore#//Solution/angle_res"/>
-    </genClasses>
-    <genClasses ecoreClass="CPTester.ecore#//Conditions">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CPTester.ecore#//Conditions/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CPTester.ecore#//Conditions/time"/>
-    </genClasses>
-    <genClasses ecoreClass="CPTester.ecore#//isAtSingle">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CPTester.ecore#//isAtSingle/servo"/>
-    </genClasses>
-    <genClasses ecoreClass="CPTester.ecore#//isAt"/>
-    <genClasses ecoreClass="CPTester.ecore#//Angle_res">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CPTester.ecore#//Angle_res/angle_res"/>
-    </genClasses>
-    <genClasses ecoreClass="CPTester.ecore#//Angle">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CPTester.ecore#//Angle/angle"/>
-    </genClasses>
-    <genClasses ecoreClass="CPTester.ecore#//Time">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CPTester.ecore#//Time/time"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -17,45 +17,16 @@ Scenario:
 
 Given:
 	name='GIVEN'
-	(initial+=Initial)
+	(initial+=Operaciones)
 ;
 
-Initial:
-	name='posInicial'
-	'('
-	(time+=Time)
-	')'
-;
+
 
 //////////////////////////////////////////////////
 
 When:
 	name='WHEN'
-	(command+=Command)
-;
-
-Command:
-	rotateServo | rotateAllServos
-;
-
-rotateServo:
-	name='rotateServo'
-	'('
-	(servo+=Servo)
-	','
-	(angle+=Angle)
-	','
-	(time+=Time)
-	')'
-;
-
-rotateAllServos:
-	name='rotateAllServos'
-	'('
-	(angle+=Angle)+ //Poner multiples atributos
-	','
-	(time+=Time)
-	')'
+	(command+=Operaciones)
 ;
 
 
@@ -63,68 +34,16 @@ rotateAllServos:
 
 Then:
 	name='THEN'
-	(result+=Result)
-;
-
-Result:
-	name='result'
-	'('
-	(time+=Time)
-	')'
+	(result+=Operaciones)
 ;
 
 //////////////////////////////////////////////////
 
 And:
 	name='AND'
-	(conditions+=Conditions)
-	(solution+=Solution)
+	(conditions+=Operaciones)
+	(solution+=Operaciones)
 	
-;
-
-Solution:
-	isAtSingle | isAt
-;
-
-Conditions:
-	name='NotLaterThan'
-	'('
-	(time+=Time)
-	')'
-;
-
-isAtSingle:
-	name='isAtSingle'
-	'('
-	(servo+=Servo)
-	','
-	(angle+=Angle)
-	','
-	(angle_res+=Angle_res)
-	')'
-;
-
-isAt:
-	name='isAt'
-	'('
-	(angle+=Angle)+
-	','
-	(angle_res+=Angle_res)
-	')'
-;
-
-
-Angle_res:
-	angle_res=INT
-;
-
-
-Angle:
-	angle=INT
-;
-
-Time:
-	time=INT
 ;
 
 

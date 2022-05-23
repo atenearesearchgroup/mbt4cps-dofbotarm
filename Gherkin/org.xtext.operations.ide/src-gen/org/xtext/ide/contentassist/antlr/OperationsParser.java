@@ -31,6 +31,39 @@ public class OperationsParser extends AbstractContentAssistParser {
 		}
 		
 		private static void init(ImmutableMap.Builder<AbstractElement, String> builder, OperationsGrammarAccess grammarAccess) {
+			builder.put(grammarAccess.getOperacionesAccess().getAlternatives(), "rule__Operaciones__Alternatives");
+			builder.put(grammarAccess.getCommandAccess().getAlternatives(), "rule__Command__Alternatives");
+			builder.put(grammarAccess.getSolutionAccess().getAlternatives(), "rule__Solution__Alternatives");
+			builder.put(grammarAccess.getInitialAccess().getGroup(), "rule__Initial__Group__0");
+			builder.put(grammarAccess.getRotateServoAccess().getGroup(), "rule__RotateServo__Group__0");
+			builder.put(grammarAccess.getRotateAllServosAccess().getGroup(), "rule__RotateAllServos__Group__0");
+			builder.put(grammarAccess.getResultAccess().getGroup(), "rule__Result__Group__0");
+			builder.put(grammarAccess.getConditionsAccess().getGroup(), "rule__Conditions__Group__0");
+			builder.put(grammarAccess.getIsAtSingleAccess().getGroup(), "rule__IsAtSingle__Group__0");
+			builder.put(grammarAccess.getIsAtAccess().getGroup(), "rule__IsAt__Group__0");
+			builder.put(grammarAccess.getInitialAccess().getNameAssignment_0(), "rule__Initial__NameAssignment_0");
+			builder.put(grammarAccess.getInitialAccess().getTimeAssignment_2(), "rule__Initial__TimeAssignment_2");
+			builder.put(grammarAccess.getRotateServoAccess().getNameAssignment_0(), "rule__RotateServo__NameAssignment_0");
+			builder.put(grammarAccess.getRotateServoAccess().getServoAssignment_2(), "rule__RotateServo__ServoAssignment_2");
+			builder.put(grammarAccess.getRotateServoAccess().getAngleAssignment_4(), "rule__RotateServo__AngleAssignment_4");
+			builder.put(grammarAccess.getRotateServoAccess().getTimeAssignment_6(), "rule__RotateServo__TimeAssignment_6");
+			builder.put(grammarAccess.getRotateAllServosAccess().getNameAssignment_0(), "rule__RotateAllServos__NameAssignment_0");
+			builder.put(grammarAccess.getRotateAllServosAccess().getAngleAssignment_2(), "rule__RotateAllServos__AngleAssignment_2");
+			builder.put(grammarAccess.getRotateAllServosAccess().getTimeAssignment_4(), "rule__RotateAllServos__TimeAssignment_4");
+			builder.put(grammarAccess.getResultAccess().getNameAssignment_0(), "rule__Result__NameAssignment_0");
+			builder.put(grammarAccess.getResultAccess().getTimeAssignment_2(), "rule__Result__TimeAssignment_2");
+			builder.put(grammarAccess.getConditionsAccess().getNameAssignment_0(), "rule__Conditions__NameAssignment_0");
+			builder.put(grammarAccess.getConditionsAccess().getTimeAssignment_2(), "rule__Conditions__TimeAssignment_2");
+			builder.put(grammarAccess.getIsAtSingleAccess().getNameAssignment_0(), "rule__IsAtSingle__NameAssignment_0");
+			builder.put(grammarAccess.getIsAtSingleAccess().getServoAssignment_2(), "rule__IsAtSingle__ServoAssignment_2");
+			builder.put(grammarAccess.getIsAtSingleAccess().getAngleAssignment_4(), "rule__IsAtSingle__AngleAssignment_4");
+			builder.put(grammarAccess.getIsAtSingleAccess().getAngle_resAssignment_6(), "rule__IsAtSingle__Angle_resAssignment_6");
+			builder.put(grammarAccess.getIsAtAccess().getNameAssignment_0(), "rule__IsAt__NameAssignment_0");
+			builder.put(grammarAccess.getIsAtAccess().getAngleAssignment_2(), "rule__IsAt__AngleAssignment_2");
+			builder.put(grammarAccess.getIsAtAccess().getAngle_resAssignment_4(), "rule__IsAt__Angle_resAssignment_4");
+			builder.put(grammarAccess.getAngle_resAccess().getAngle_resAssignment(), "rule__Angle_res__Angle_resAssignment");
+			builder.put(grammarAccess.getAngleAccess().getAngleAssignment(), "rule__Angle__AngleAssignment");
+			builder.put(grammarAccess.getTimeAccess().getTimeAssignment(), "rule__Time__TimeAssignment");
 			builder.put(grammarAccess.getServoAccess().getServoAssignment(), "rule__Servo__ServoAssignment");
 		}
 	}

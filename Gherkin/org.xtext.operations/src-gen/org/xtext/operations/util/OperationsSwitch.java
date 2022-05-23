@@ -73,6 +73,110 @@ public class OperationsSwitch<T> extends Switch<T>
   {
     switch (classifierID)
     {
+      case OperationsPackage.OPERACIONES:
+      {
+        Operaciones operaciones = (Operaciones)theEObject;
+        T result = caseOperaciones(operaciones);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case OperationsPackage.INITIAL:
+      {
+        Initial initial = (Initial)theEObject;
+        T result = caseInitial(initial);
+        if (result == null) result = caseOperaciones(initial);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case OperationsPackage.COMMAND:
+      {
+        Command command = (Command)theEObject;
+        T result = caseCommand(command);
+        if (result == null) result = caseOperaciones(command);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case OperationsPackage.ROTATE_SERVO:
+      {
+        rotateServo rotateServo = (rotateServo)theEObject;
+        T result = caserotateServo(rotateServo);
+        if (result == null) result = caseCommand(rotateServo);
+        if (result == null) result = caseOperaciones(rotateServo);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case OperationsPackage.ROTATE_ALL_SERVOS:
+      {
+        rotateAllServos rotateAllServos = (rotateAllServos)theEObject;
+        T result = caserotateAllServos(rotateAllServos);
+        if (result == null) result = caseCommand(rotateAllServos);
+        if (result == null) result = caseOperaciones(rotateAllServos);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case OperationsPackage.RESULT:
+      {
+        Result result = (Result)theEObject;
+        T theResult = caseResult(result);
+        if (theResult == null) theResult = caseOperaciones(result);
+        if (theResult == null) theResult = defaultCase(theEObject);
+        return theResult;
+      }
+      case OperationsPackage.SOLUTION:
+      {
+        Solution solution = (Solution)theEObject;
+        T result = caseSolution(solution);
+        if (result == null) result = caseOperaciones(solution);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case OperationsPackage.CONDITIONS:
+      {
+        Conditions conditions = (Conditions)theEObject;
+        T result = caseConditions(conditions);
+        if (result == null) result = caseOperaciones(conditions);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case OperationsPackage.IS_AT_SINGLE:
+      {
+        isAtSingle isAtSingle = (isAtSingle)theEObject;
+        T result = caseisAtSingle(isAtSingle);
+        if (result == null) result = caseSolution(isAtSingle);
+        if (result == null) result = caseOperaciones(isAtSingle);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case OperationsPackage.IS_AT:
+      {
+        isAt isAt = (isAt)theEObject;
+        T result = caseisAt(isAt);
+        if (result == null) result = caseSolution(isAt);
+        if (result == null) result = caseOperaciones(isAt);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case OperationsPackage.ANGLE_RES:
+      {
+        Angle_res angle_res = (Angle_res)theEObject;
+        T result = caseAngle_res(angle_res);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case OperationsPackage.ANGLE:
+      {
+        Angle angle = (Angle)theEObject;
+        T result = caseAngle(angle);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case OperationsPackage.TIME:
+      {
+        Time time = (Time)theEObject;
+        T result = caseTime(time);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case OperationsPackage.SERVO:
       {
         Servo servo = (Servo)theEObject;
@@ -82,6 +186,214 @@ public class OperationsSwitch<T> extends Switch<T>
       }
       default: return defaultCase(theEObject);
     }
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Operaciones</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Operaciones</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseOperaciones(Operaciones object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Initial</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Initial</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseInitial(Initial object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Command</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Command</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCommand(Command object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>rotate Servo</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>rotate Servo</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caserotateServo(rotateServo object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>rotate All Servos</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>rotate All Servos</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caserotateAllServos(rotateAllServos object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Result</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Result</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseResult(Result object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Solution</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Solution</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSolution(Solution object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Conditions</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Conditions</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseConditions(Conditions object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>is At Single</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>is At Single</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseisAtSingle(isAtSingle object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>is At</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>is At</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseisAt(isAt object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Angle res</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Angle res</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAngle_res(Angle_res object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Angle</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Angle</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAngle(Angle object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Time</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Time</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTime(Time object)
+  {
+    return null;
   }
 
   /**

@@ -21,7 +21,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.cPTester.CPTesterPackage;
 import org.xtext.cPTester.Given;
-import org.xtext.cPTester.Initial;
+
+import org.xtext.operations.Operaciones;
 
 /**
  * <!-- begin-user-doc -->
@@ -67,7 +68,7 @@ public class GivenImpl extends MinimalEObjectImpl.Container implements Given
    * @generated
    * @ordered
    */
-  protected EList<Initial> initial;
+  protected EList<Operaciones> initial;
 
   /**
    * <!-- begin-user-doc -->
@@ -121,11 +122,11 @@ public class GivenImpl extends MinimalEObjectImpl.Container implements Given
    * @generated
    */
   @Override
-  public EList<Initial> getInitial()
+  public EList<Operaciones> getInitial()
   {
     if (initial == null)
     {
-      initial = new EObjectContainmentEList<Initial>(Initial.class, this, CPTesterPackage.GIVEN__INITIAL);
+      initial = new EObjectContainmentEList<Operaciones>(Operaciones.class, this, CPTesterPackage.GIVEN__INITIAL);
     }
     return initial;
   }
@@ -180,7 +181,7 @@ public class GivenImpl extends MinimalEObjectImpl.Container implements Given
         return;
       case CPTesterPackage.GIVEN__INITIAL:
         getInitial().clear();
-        getInitial().addAll((Collection<? extends Initial>)newValue);
+        getInitial().addAll((Collection<? extends Operaciones>)newValue);
         return;
     }
     super.eSet(featureID, newValue);

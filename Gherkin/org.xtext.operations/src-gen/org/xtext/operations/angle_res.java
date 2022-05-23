@@ -7,42 +7,42 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>angle res</b></em>'.
+ * A representation of the model object '<em><b>Angle res</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.operations.angle_res#getANGLE_RES <em>ANGLE RES</em>}</li>
+ *   <li>{@link org.xtext.operations.Angle_res#getAngle_res <em>Angle res</em>}</li>
  * </ul>
  *
- * @see org.xtext.operations.OperationsPackage#getangle_res()
+ * @see org.xtext.operations.OperationsPackage#getAngle_res()
  * @model
  * @generated
  */
-public interface angle_res extends EObject
+public interface Angle_res extends EObject
 {
   /**
-   * Returns the value of the '<em><b>ANGLE RES</b></em>' attribute.
+   * Returns the value of the '<em><b>Angle res</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>ANGLE RES</em>' attribute.
-   * @see #setANGLE_RES(int)
-   * @see org.xtext.operations.OperationsPackage#getangle_res_ANGLE_RES()
+   * @return the value of the '<em>Angle res</em>' attribute.
+   * @see #setAngle_res(int)
+   * @see org.xtext.operations.OperationsPackage#getAngle_res_Angle_res()
    * @model
    * @generated
    */
-  int getANGLE_RES();
+  int getAngle_res();
 
   /**
-   * Sets the value of the '{@link org.xtext.operations.angle_res#getANGLE_RES <em>ANGLE RES</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.operations.Angle_res#getAngle_res <em>Angle res</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>ANGLE RES</em>' attribute.
-   * @see #getANGLE_RES()
+   * @param value the new value of the '<em>Angle res</em>' attribute.
+   * @see #getAngle_res()
    * @generated
    */
-  void setANGLE_RES(int value);
+  void setAngle_res(int value);
 
-} // angle_res
+} // Angle_res

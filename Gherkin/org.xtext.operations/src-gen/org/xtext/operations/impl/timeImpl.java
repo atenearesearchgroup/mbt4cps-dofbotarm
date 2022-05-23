@@ -11,38 +11,38 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.operations.OperationsPackage;
-import org.xtext.operations.time;
+import org.xtext.operations.Time;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>time</b></em>'.
+ * An implementation of the model object '<em><b>Time</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.operations.impl.timeImpl#getTIME <em>TIME</em>}</li>
+ *   <li>{@link org.xtext.operations.impl.TimeImpl#getTime <em>Time</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class timeImpl extends MinimalEObjectImpl.Container implements time
+public class TimeImpl extends MinimalEObjectImpl.Container implements Time
 {
   /**
-   * The default value of the '{@link #getTIME() <em>TIME</em>}' attribute.
+   * The default value of the '{@link #getTime() <em>Time</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTIME()
+   * @see #getTime()
    * @generated
    * @ordered
    */
   protected static final int TIME_EDEFAULT = 0;
 
   /**
-   * The cached value of the '{@link #getTIME() <em>TIME</em>}' attribute.
+   * The cached value of the '{@link #getTime() <em>Time</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTIME()
+   * @see #getTime()
    * @generated
    * @ordered
    */
@@ -53,7 +53,7 @@ public class timeImpl extends MinimalEObjectImpl.Container implements time
    * <!-- end-user-doc -->
    * @generated
    */
-  protected timeImpl()
+  protected TimeImpl()
   {
     super();
   }
@@ -75,7 +75,7 @@ public class timeImpl extends MinimalEObjectImpl.Container implements time
    * @generated
    */
   @Override
-  public int getTIME()
+  public int getTime()
   {
     return time;
   }
@@ -86,12 +86,12 @@ public class timeImpl extends MinimalEObjectImpl.Container implements time
    * @generated
    */
   @Override
-  public void setTIME(int newTIME)
+  public void setTime(int newTime)
   {
-    int oldTIME = time;
-    time = newTIME;
+    int oldTime = time;
+    time = newTime;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OperationsPackage.TIME__TIME, oldTIME, time));
+      eNotify(new ENotificationImpl(this, Notification.SET, OperationsPackage.TIME__TIME, oldTime, time));
   }
 
   /**
@@ -105,7 +105,7 @@ public class timeImpl extends MinimalEObjectImpl.Container implements time
     switch (featureID)
     {
       case OperationsPackage.TIME__TIME:
-        return getTIME();
+        return getTime();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -121,7 +121,7 @@ public class timeImpl extends MinimalEObjectImpl.Container implements time
     switch (featureID)
     {
       case OperationsPackage.TIME__TIME:
-        setTIME((Integer)newValue);
+        setTime((Integer)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -138,7 +138,7 @@ public class timeImpl extends MinimalEObjectImpl.Container implements time
     switch (featureID)
     {
       case OperationsPackage.TIME__TIME:
-        setTIME(TIME_EDEFAULT);
+        setTime(TIME_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -171,10 +171,10 @@ public class timeImpl extends MinimalEObjectImpl.Container implements time
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (TIME: ");
+    result.append(" (time: ");
     result.append(time);
     result.append(')');
     return result.toString();
   }
 
-} //timeImpl
+} //TimeImpl

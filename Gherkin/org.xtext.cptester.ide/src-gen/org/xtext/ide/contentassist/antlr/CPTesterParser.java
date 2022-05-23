@@ -31,17 +31,18 @@ public class CPTesterParser extends AbstractContentAssistParser {
 		}
 		
 		private static void init(ImmutableMap.Builder<AbstractElement, String> builder, CPTesterGrammarAccess grammarAccess) {
+			builder.put(grammarAccess.getOperacionesAccess().getAlternatives(), "rule__Operaciones__Alternatives");
 			builder.put(grammarAccess.getCommandAccess().getAlternatives(), "rule__Command__Alternatives");
 			builder.put(grammarAccess.getSolutionAccess().getAlternatives(), "rule__Solution__Alternatives");
 			builder.put(grammarAccess.getScenarioAccess().getGroup(), "rule__Scenario__Group__0");
 			builder.put(grammarAccess.getGivenAccess().getGroup(), "rule__Given__Group__0");
-			builder.put(grammarAccess.getInitialAccess().getGroup(), "rule__Initial__Group__0");
 			builder.put(grammarAccess.getWhenAccess().getGroup(), "rule__When__Group__0");
+			builder.put(grammarAccess.getThenAccess().getGroup(), "rule__Then__Group__0");
+			builder.put(grammarAccess.getAndAccess().getGroup(), "rule__And__Group__0");
+			builder.put(grammarAccess.getInitialAccess().getGroup(), "rule__Initial__Group__0");
 			builder.put(grammarAccess.getRotateServoAccess().getGroup(), "rule__RotateServo__Group__0");
 			builder.put(grammarAccess.getRotateAllServosAccess().getGroup(), "rule__RotateAllServos__Group__0");
-			builder.put(grammarAccess.getThenAccess().getGroup(), "rule__Then__Group__0");
 			builder.put(grammarAccess.getResultAccess().getGroup(), "rule__Result__Group__0");
-			builder.put(grammarAccess.getAndAccess().getGroup(), "rule__And__Group__0");
 			builder.put(grammarAccess.getConditionsAccess().getGroup(), "rule__Conditions__Group__0");
 			builder.put(grammarAccess.getIsAtSingleAccess().getGroup(), "rule__IsAtSingle__Group__0");
 			builder.put(grammarAccess.getIsAtAccess().getGroup(), "rule__IsAt__Group__0");
@@ -52,10 +53,15 @@ public class CPTesterParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getScenarioAccess().getAndAssignment_6(), "rule__Scenario__AndAssignment_6");
 			builder.put(grammarAccess.getGivenAccess().getNameAssignment_0(), "rule__Given__NameAssignment_0");
 			builder.put(grammarAccess.getGivenAccess().getInitialAssignment_1(), "rule__Given__InitialAssignment_1");
-			builder.put(grammarAccess.getInitialAccess().getNameAssignment_0(), "rule__Initial__NameAssignment_0");
-			builder.put(grammarAccess.getInitialAccess().getTimeAssignment_2(), "rule__Initial__TimeAssignment_2");
 			builder.put(grammarAccess.getWhenAccess().getNameAssignment_0(), "rule__When__NameAssignment_0");
 			builder.put(grammarAccess.getWhenAccess().getCommandAssignment_1(), "rule__When__CommandAssignment_1");
+			builder.put(grammarAccess.getThenAccess().getNameAssignment_0(), "rule__Then__NameAssignment_0");
+			builder.put(grammarAccess.getThenAccess().getResultAssignment_1(), "rule__Then__ResultAssignment_1");
+			builder.put(grammarAccess.getAndAccess().getNameAssignment_0(), "rule__And__NameAssignment_0");
+			builder.put(grammarAccess.getAndAccess().getConditionsAssignment_1(), "rule__And__ConditionsAssignment_1");
+			builder.put(grammarAccess.getAndAccess().getSolutionAssignment_2(), "rule__And__SolutionAssignment_2");
+			builder.put(grammarAccess.getInitialAccess().getNameAssignment_0(), "rule__Initial__NameAssignment_0");
+			builder.put(grammarAccess.getInitialAccess().getTimeAssignment_2(), "rule__Initial__TimeAssignment_2");
 			builder.put(grammarAccess.getRotateServoAccess().getNameAssignment_0(), "rule__RotateServo__NameAssignment_0");
 			builder.put(grammarAccess.getRotateServoAccess().getServoAssignment_2(), "rule__RotateServo__ServoAssignment_2");
 			builder.put(grammarAccess.getRotateServoAccess().getAngleAssignment_4(), "rule__RotateServo__AngleAssignment_4");
@@ -63,13 +69,8 @@ public class CPTesterParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getRotateAllServosAccess().getNameAssignment_0(), "rule__RotateAllServos__NameAssignment_0");
 			builder.put(grammarAccess.getRotateAllServosAccess().getAngleAssignment_2(), "rule__RotateAllServos__AngleAssignment_2");
 			builder.put(grammarAccess.getRotateAllServosAccess().getTimeAssignment_4(), "rule__RotateAllServos__TimeAssignment_4");
-			builder.put(grammarAccess.getThenAccess().getNameAssignment_0(), "rule__Then__NameAssignment_0");
-			builder.put(grammarAccess.getThenAccess().getResultAssignment_1(), "rule__Then__ResultAssignment_1");
 			builder.put(grammarAccess.getResultAccess().getNameAssignment_0(), "rule__Result__NameAssignment_0");
 			builder.put(grammarAccess.getResultAccess().getTimeAssignment_2(), "rule__Result__TimeAssignment_2");
-			builder.put(grammarAccess.getAndAccess().getNameAssignment_0(), "rule__And__NameAssignment_0");
-			builder.put(grammarAccess.getAndAccess().getConditionsAssignment_1(), "rule__And__ConditionsAssignment_1");
-			builder.put(grammarAccess.getAndAccess().getSolutionAssignment_2(), "rule__And__SolutionAssignment_2");
 			builder.put(grammarAccess.getConditionsAccess().getNameAssignment_0(), "rule__Conditions__NameAssignment_0");
 			builder.put(grammarAccess.getConditionsAccess().getTimeAssignment_2(), "rule__Conditions__TimeAssignment_2");
 			builder.put(grammarAccess.getIsAtSingleAccess().getNameAssignment_0(), "rule__IsAtSingle__NameAssignment_0");

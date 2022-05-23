@@ -76,6 +76,71 @@ public class OperationsAdapterFactory extends AdapterFactoryImpl
     new OperationsSwitch<Adapter>()
     {
       @Override
+      public Adapter caseOperaciones(Operaciones object)
+      {
+        return createOperacionesAdapter();
+      }
+      @Override
+      public Adapter caseInitial(Initial object)
+      {
+        return createInitialAdapter();
+      }
+      @Override
+      public Adapter caseCommand(Command object)
+      {
+        return createCommandAdapter();
+      }
+      @Override
+      public Adapter caserotateServo(rotateServo object)
+      {
+        return createrotateServoAdapter();
+      }
+      @Override
+      public Adapter caserotateAllServos(rotateAllServos object)
+      {
+        return createrotateAllServosAdapter();
+      }
+      @Override
+      public Adapter caseResult(Result object)
+      {
+        return createResultAdapter();
+      }
+      @Override
+      public Adapter caseSolution(Solution object)
+      {
+        return createSolutionAdapter();
+      }
+      @Override
+      public Adapter caseConditions(Conditions object)
+      {
+        return createConditionsAdapter();
+      }
+      @Override
+      public Adapter caseisAtSingle(isAtSingle object)
+      {
+        return createisAtSingleAdapter();
+      }
+      @Override
+      public Adapter caseisAt(isAt object)
+      {
+        return createisAtAdapter();
+      }
+      @Override
+      public Adapter caseAngle_res(Angle_res object)
+      {
+        return createAngle_resAdapter();
+      }
+      @Override
+      public Adapter caseAngle(Angle object)
+      {
+        return createAngleAdapter();
+      }
+      @Override
+      public Adapter caseTime(Time object)
+      {
+        return createTimeAdapter();
+      }
+      @Override
       public Adapter caseServo(Servo object)
       {
         return createServoAdapter();
@@ -101,6 +166,201 @@ public class OperationsAdapterFactory extends AdapterFactoryImpl
     return modelSwitch.doSwitch((EObject)target);
   }
 
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.operations.Operaciones <em>Operaciones</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.operations.Operaciones
+   * @generated
+   */
+  public Adapter createOperacionesAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.operations.Initial <em>Initial</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.operations.Initial
+   * @generated
+   */
+  public Adapter createInitialAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.operations.Command <em>Command</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.operations.Command
+   * @generated
+   */
+  public Adapter createCommandAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.operations.rotateServo <em>rotate Servo</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.operations.rotateServo
+   * @generated
+   */
+  public Adapter createrotateServoAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.operations.rotateAllServos <em>rotate All Servos</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.operations.rotateAllServos
+   * @generated
+   */
+  public Adapter createrotateAllServosAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.operations.Result <em>Result</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.operations.Result
+   * @generated
+   */
+  public Adapter createResultAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.operations.Solution <em>Solution</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.operations.Solution
+   * @generated
+   */
+  public Adapter createSolutionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.operations.Conditions <em>Conditions</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.operations.Conditions
+   * @generated
+   */
+  public Adapter createConditionsAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.operations.isAtSingle <em>is At Single</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.operations.isAtSingle
+   * @generated
+   */
+  public Adapter createisAtSingleAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.operations.isAt <em>is At</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.operations.isAt
+   * @generated
+   */
+  public Adapter createisAtAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.operations.Angle_res <em>Angle res</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.operations.Angle_res
+   * @generated
+   */
+  public Adapter createAngle_resAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.operations.Angle <em>Angle</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.operations.Angle
+   * @generated
+   */
+  public Adapter createAngleAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.operations.Time <em>Time</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.operations.Time
+   * @generated
+   */
+  public Adapter createTimeAdapter()
+  {
+    return null;
+  }
 
   /**
    * Creates a new adapter for an object of class '{@link org.xtext.operations.Servo <em>Servo</em>}'.

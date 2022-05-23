@@ -7,42 +7,42 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>angle</b></em>'.
+ * A representation of the model object '<em><b>Angle</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.operations.angle#getANGLE <em>ANGLE</em>}</li>
+ *   <li>{@link org.xtext.operations.Angle#getAngle <em>Angle</em>}</li>
  * </ul>
  *
- * @see org.xtext.operations.OperationsPackage#getangle()
+ * @see org.xtext.operations.OperationsPackage#getAngle()
  * @model
  * @generated
  */
-public interface angle extends EObject
+public interface Angle extends EObject
 {
   /**
-   * Returns the value of the '<em><b>ANGLE</b></em>' attribute.
+   * Returns the value of the '<em><b>Angle</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>ANGLE</em>' attribute.
-   * @see #setANGLE(int)
-   * @see org.xtext.operations.OperationsPackage#getangle_ANGLE()
+   * @return the value of the '<em>Angle</em>' attribute.
+   * @see #setAngle(int)
+   * @see org.xtext.operations.OperationsPackage#getAngle_Angle()
    * @model
    * @generated
    */
-  int getANGLE();
+  int getAngle();
 
   /**
-   * Sets the value of the '{@link org.xtext.operations.angle#getANGLE <em>ANGLE</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.operations.Angle#getAngle <em>Angle</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>ANGLE</em>' attribute.
-   * @see #getANGLE()
+   * @param value the new value of the '<em>Angle</em>' attribute.
+   * @see #getAngle()
    * @generated
    */
-  void setANGLE(int value);
+  void setAngle(int value);
 
-} // angle
+} // Angle

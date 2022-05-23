@@ -6,7 +6,6 @@ package org.xtext.services;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import java.util.List;
-import org.eclipse.xtext.Alternatives;
 import org.eclipse.xtext.Assignment;
 import org.eclipse.xtext.Grammar;
 import org.eclipse.xtext.GrammarUtil;
@@ -104,17 +103,17 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final Keyword cNameGIVENKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
 		private final Assignment cInitialAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cInitialInitialParserRuleCall_1_0 = (RuleCall)cInitialAssignment_1.eContents().get(0);
+		private final RuleCall cInitialOperacionesParserRuleCall_1_0 = (RuleCall)cInitialAssignment_1.eContents().get(0);
 		
 		////////////////////////////////////////////////////
 		//Given:
 		//    name='GIVEN'
-		//    (initial+=Initial)
+		//    (initial+=Operaciones)
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//name='GIVEN'
-		//(initial+=Initial)
+		//(initial+=Operaciones)
 		public Group getGroup() { return cGroup; }
 		
 		//name='GIVEN'
@@ -123,53 +122,11 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//'GIVEN'
 		public Keyword getNameGIVENKeyword_0_0() { return cNameGIVENKeyword_0_0; }
 		
-		//(initial+=Initial)
+		//(initial+=Operaciones)
 		public Assignment getInitialAssignment_1() { return cInitialAssignment_1; }
 		
-		//Initial
-		public RuleCall getInitialInitialParserRuleCall_1_0() { return cInitialInitialParserRuleCall_1_0; }
-	}
-	public class InitialElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.CPTester.Initial");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cNamePosInicialKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
-		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cTimeAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cTimeTimeParserRuleCall_2_0 = (RuleCall)cTimeAssignment_2.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		
-		//Initial:
-		//    name='posInicial'
-		//    '('
-		//    (time+=Time)
-		//    ')'
-		//;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//name='posInicial'
-		//'('
-		//(time+=Time)
-		//')'
-		public Group getGroup() { return cGroup; }
-		
-		//name='posInicial'
-		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
-		
-		//'posInicial'
-		public Keyword getNamePosInicialKeyword_0_0() { return cNamePosInicialKeyword_0_0; }
-		
-		//'('
-		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
-		
-		//(time+=Time)
-		public Assignment getTimeAssignment_2() { return cTimeAssignment_2; }
-		
-		//Time
-		public RuleCall getTimeTimeParserRuleCall_2_0() { return cTimeTimeParserRuleCall_2_0; }
-		
-		//')'
-		public Keyword getRightParenthesisKeyword_3() { return cRightParenthesisKeyword_3; }
+		//Operaciones
+		public RuleCall getInitialOperacionesParserRuleCall_1_0() { return cInitialOperacionesParserRuleCall_1_0; }
 	}
 	public class WhenElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.CPTester.When");
@@ -177,17 +134,17 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final Keyword cNameWHENKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
 		private final Assignment cCommandAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cCommandCommandParserRuleCall_1_0 = (RuleCall)cCommandAssignment_1.eContents().get(0);
+		private final RuleCall cCommandOperacionesParserRuleCall_1_0 = (RuleCall)cCommandAssignment_1.eContents().get(0);
 		
 		////////////////////////////////////////////////////
 		//When:
 		//    name='WHEN'
-		//    (command+=Command)
+		//    (command+=Operaciones)
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//name='WHEN'
-		//(command+=Command)
+		//(command+=Operaciones)
 		public Group getGroup() { return cGroup; }
 		
 		//name='WHEN'
@@ -196,164 +153,11 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//'WHEN'
 		public Keyword getNameWHENKeyword_0_0() { return cNameWHENKeyword_0_0; }
 		
-		//(command+=Command)
+		//(command+=Operaciones)
 		public Assignment getCommandAssignment_1() { return cCommandAssignment_1; }
 		
-		//Command
-		public RuleCall getCommandCommandParserRuleCall_1_0() { return cCommandCommandParserRuleCall_1_0; }
-	}
-	public class CommandElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.CPTester.Command");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cRotateServoParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cRotateAllServosParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		
-		//Command:
-		//    rotateServo | rotateAllServos
-		//;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//rotateServo | rotateAllServos
-		public Alternatives getAlternatives() { return cAlternatives; }
-		
-		//rotateServo
-		public RuleCall getRotateServoParserRuleCall_0() { return cRotateServoParserRuleCall_0; }
-		
-		//rotateAllServos
-		public RuleCall getRotateAllServosParserRuleCall_1() { return cRotateAllServosParserRuleCall_1; }
-	}
-	public class RotateServoElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.CPTester.rotateServo");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cNameRotateServoKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
-		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cServoAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cServoServoParserRuleCall_2_0 = (RuleCall)cServoAssignment_2.eContents().get(0);
-		private final Keyword cCommaKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cAngleAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cAngleAngleParserRuleCall_4_0 = (RuleCall)cAngleAssignment_4.eContents().get(0);
-		private final Keyword cCommaKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cTimeAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cTimeTimeParserRuleCall_6_0 = (RuleCall)cTimeAssignment_6.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_7 = (Keyword)cGroup.eContents().get(7);
-		
-		//rotateServo:
-		//    name='rotateServo'
-		//    '('
-		//    (servo+=Servo)
-		//    ','
-		//    (angle+=Angle)
-		//    ','
-		//    (time+=Time)
-		//    ')'
-		//;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//name='rotateServo'
-		//'('
-		//(servo+=Servo)
-		//','
-		//(angle+=Angle)
-		//','
-		//(time+=Time)
-		//')'
-		public Group getGroup() { return cGroup; }
-		
-		//name='rotateServo'
-		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
-		
-		//'rotateServo'
-		public Keyword getNameRotateServoKeyword_0_0() { return cNameRotateServoKeyword_0_0; }
-		
-		//'('
-		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
-		
-		//(servo+=Servo)
-		public Assignment getServoAssignment_2() { return cServoAssignment_2; }
-		
-		//Servo
-		public RuleCall getServoServoParserRuleCall_2_0() { return cServoServoParserRuleCall_2_0; }
-		
-		//','
-		public Keyword getCommaKeyword_3() { return cCommaKeyword_3; }
-		
-		//(angle+=Angle)
-		public Assignment getAngleAssignment_4() { return cAngleAssignment_4; }
-		
-		//Angle
-		public RuleCall getAngleAngleParserRuleCall_4_0() { return cAngleAngleParserRuleCall_4_0; }
-		
-		//','
-		public Keyword getCommaKeyword_5() { return cCommaKeyword_5; }
-		
-		//(time+=Time)
-		public Assignment getTimeAssignment_6() { return cTimeAssignment_6; }
-		
-		//Time
-		public RuleCall getTimeTimeParserRuleCall_6_0() { return cTimeTimeParserRuleCall_6_0; }
-		
-		//')'
-		public Keyword getRightParenthesisKeyword_7() { return cRightParenthesisKeyword_7; }
-	}
-	public class RotateAllServosElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.CPTester.rotateAllServos");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cNameRotateAllServosKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
-		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cAngleAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cAngleAngleParserRuleCall_2_0 = (RuleCall)cAngleAssignment_2.eContents().get(0);
-		private final Keyword cCommaKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cTimeAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cTimeTimeParserRuleCall_4_0 = (RuleCall)cTimeAssignment_4.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		
-		//rotateAllServos:
-		//    name='rotateAllServos'
-		//    '('
-		//    (angle+=Angle)+ //Poner multiples atributos
-		//    ','
-		//    (time+=Time)
-		//    ')'
-		//;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//name='rotateAllServos'
-		//'('
-		//(angle+=Angle)+ //Poner multiples atributos
-		//','
-		//(time+=Time)
-		//')'
-		public Group getGroup() { return cGroup; }
-		
-		//name='rotateAllServos'
-		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
-		
-		//'rotateAllServos'
-		public Keyword getNameRotateAllServosKeyword_0_0() { return cNameRotateAllServosKeyword_0_0; }
-		
-		//'('
-		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
-		
-		//(angle+=Angle)+
-		public Assignment getAngleAssignment_2() { return cAngleAssignment_2; }
-		
-		//Angle
-		public RuleCall getAngleAngleParserRuleCall_2_0() { return cAngleAngleParserRuleCall_2_0; }
-		
-		////Poner multiples atributos
-		//   ','
-		public Keyword getCommaKeyword_3() { return cCommaKeyword_3; }
-		
-		//(time+=Time)
-		public Assignment getTimeAssignment_4() { return cTimeAssignment_4; }
-		
-		//Time
-		public RuleCall getTimeTimeParserRuleCall_4_0() { return cTimeTimeParserRuleCall_4_0; }
-		
-		//')'
-		public Keyword getRightParenthesisKeyword_5() { return cRightParenthesisKeyword_5; }
+		//Operaciones
+		public RuleCall getCommandOperacionesParserRuleCall_1_0() { return cCommandOperacionesParserRuleCall_1_0; }
 	}
 	public class ThenElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.CPTester.Then");
@@ -361,17 +165,17 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final Keyword cNameTHENKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
 		private final Assignment cResultAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cResultResultParserRuleCall_1_0 = (RuleCall)cResultAssignment_1.eContents().get(0);
+		private final RuleCall cResultOperacionesParserRuleCall_1_0 = (RuleCall)cResultAssignment_1.eContents().get(0);
 		
 		////////////////////////////////////////////////////
 		//Then:
 		//    name='THEN'
-		//    (result+=Result)
+		//    (result+=Operaciones)
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//name='THEN'
-		//(result+=Result)
+		//(result+=Operaciones)
 		public Group getGroup() { return cGroup; }
 		
 		//name='THEN'
@@ -380,53 +184,11 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//'THEN'
 		public Keyword getNameTHENKeyword_0_0() { return cNameTHENKeyword_0_0; }
 		
-		//(result+=Result)
+		//(result+=Operaciones)
 		public Assignment getResultAssignment_1() { return cResultAssignment_1; }
 		
-		//Result
-		public RuleCall getResultResultParserRuleCall_1_0() { return cResultResultParserRuleCall_1_0; }
-	}
-	public class ResultElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.CPTester.Result");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cNameResultKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
-		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cTimeAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cTimeTimeParserRuleCall_2_0 = (RuleCall)cTimeAssignment_2.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		
-		//Result:
-		//    name='result'
-		//    '('
-		//    (time+=Time)
-		//    ')'
-		//;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//name='result'
-		//'('
-		//(time+=Time)
-		//')'
-		public Group getGroup() { return cGroup; }
-		
-		//name='result'
-		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
-		
-		//'result'
-		public Keyword getNameResultKeyword_0_0() { return cNameResultKeyword_0_0; }
-		
-		//'('
-		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
-		
-		//(time+=Time)
-		public Assignment getTimeAssignment_2() { return cTimeAssignment_2; }
-		
-		//Time
-		public RuleCall getTimeTimeParserRuleCall_2_0() { return cTimeTimeParserRuleCall_2_0; }
-		
-		//')'
-		public Keyword getRightParenthesisKeyword_3() { return cRightParenthesisKeyword_3; }
+		//Operaciones
+		public RuleCall getResultOperacionesParserRuleCall_1_0() { return cResultOperacionesParserRuleCall_1_0; }
 	}
 	public class AndElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.CPTester.And");
@@ -434,21 +196,21 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final Keyword cNameANDKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
 		private final Assignment cConditionsAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cConditionsConditionsParserRuleCall_1_0 = (RuleCall)cConditionsAssignment_1.eContents().get(0);
+		private final RuleCall cConditionsOperacionesParserRuleCall_1_0 = (RuleCall)cConditionsAssignment_1.eContents().get(0);
 		private final Assignment cSolutionAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cSolutionSolutionParserRuleCall_2_0 = (RuleCall)cSolutionAssignment_2.eContents().get(0);
+		private final RuleCall cSolutionOperacionesParserRuleCall_2_0 = (RuleCall)cSolutionAssignment_2.eContents().get(0);
 		
 		////////////////////////////////////////////////////
 		//And:
 		//    name='AND'
-		//    (conditions+=Conditions)
-		//    (solution+=Solution)
+		//    (conditions+=Operaciones)
+		//    (solution+=Operaciones)
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//name='AND'
-		//(conditions+=Conditions)
-		//(solution+=Solution)
+		//(conditions+=Operaciones)
+		//(solution+=Operaciones)
 		public Group getGroup() { return cGroup; }
 		
 		//name='AND'
@@ -457,279 +219,25 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//'AND'
 		public Keyword getNameANDKeyword_0_0() { return cNameANDKeyword_0_0; }
 		
-		//(conditions+=Conditions)
+		//(conditions+=Operaciones)
 		public Assignment getConditionsAssignment_1() { return cConditionsAssignment_1; }
 		
-		//Conditions
-		public RuleCall getConditionsConditionsParserRuleCall_1_0() { return cConditionsConditionsParserRuleCall_1_0; }
+		//Operaciones
+		public RuleCall getConditionsOperacionesParserRuleCall_1_0() { return cConditionsOperacionesParserRuleCall_1_0; }
 		
-		//(solution+=Solution)
+		//(solution+=Operaciones)
 		public Assignment getSolutionAssignment_2() { return cSolutionAssignment_2; }
 		
-		//Solution
-		public RuleCall getSolutionSolutionParserRuleCall_2_0() { return cSolutionSolutionParserRuleCall_2_0; }
-	}
-	public class SolutionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.CPTester.Solution");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cIsAtSingleParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cIsAtParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		
-		//Solution:
-		//    isAtSingle | isAt
-		//;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//isAtSingle | isAt
-		public Alternatives getAlternatives() { return cAlternatives; }
-		
-		//isAtSingle
-		public RuleCall getIsAtSingleParserRuleCall_0() { return cIsAtSingleParserRuleCall_0; }
-		
-		//isAt
-		public RuleCall getIsAtParserRuleCall_1() { return cIsAtParserRuleCall_1; }
-	}
-	public class ConditionsElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.CPTester.Conditions");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cNameNotLaterThanKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
-		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cTimeAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cTimeTimeParserRuleCall_2_0 = (RuleCall)cTimeAssignment_2.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		
-		//Conditions:
-		//    name='NotLaterThan'
-		//    '('
-		//    (time+=Time)
-		//    ')'
-		//;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//name='NotLaterThan'
-		//'('
-		//(time+=Time)
-		//')'
-		public Group getGroup() { return cGroup; }
-		
-		//name='NotLaterThan'
-		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
-		
-		//'NotLaterThan'
-		public Keyword getNameNotLaterThanKeyword_0_0() { return cNameNotLaterThanKeyword_0_0; }
-		
-		//'('
-		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
-		
-		//(time+=Time)
-		public Assignment getTimeAssignment_2() { return cTimeAssignment_2; }
-		
-		//Time
-		public RuleCall getTimeTimeParserRuleCall_2_0() { return cTimeTimeParserRuleCall_2_0; }
-		
-		//')'
-		public Keyword getRightParenthesisKeyword_3() { return cRightParenthesisKeyword_3; }
-	}
-	public class IsAtSingleElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.CPTester.isAtSingle");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cNameIsAtSingleKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
-		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cServoAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cServoServoParserRuleCall_2_0 = (RuleCall)cServoAssignment_2.eContents().get(0);
-		private final Keyword cCommaKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cAngleAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cAngleAngleParserRuleCall_4_0 = (RuleCall)cAngleAssignment_4.eContents().get(0);
-		private final Keyword cCommaKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cAngle_resAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cAngle_resAngle_resParserRuleCall_6_0 = (RuleCall)cAngle_resAssignment_6.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_7 = (Keyword)cGroup.eContents().get(7);
-		
-		//isAtSingle:
-		//    name='isAtSingle'
-		//    '('
-		//    (servo+=Servo)
-		//    ','
-		//    (angle+=Angle)
-		//    ','
-		//    (angle_res+=Angle_res)
-		//    ')'
-		//;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//name='isAtSingle'
-		//'('
-		//(servo+=Servo)
-		//','
-		//(angle+=Angle)
-		//','
-		//(angle_res+=Angle_res)
-		//')'
-		public Group getGroup() { return cGroup; }
-		
-		//name='isAtSingle'
-		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
-		
-		//'isAtSingle'
-		public Keyword getNameIsAtSingleKeyword_0_0() { return cNameIsAtSingleKeyword_0_0; }
-		
-		//'('
-		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
-		
-		//(servo+=Servo)
-		public Assignment getServoAssignment_2() { return cServoAssignment_2; }
-		
-		//Servo
-		public RuleCall getServoServoParserRuleCall_2_0() { return cServoServoParserRuleCall_2_0; }
-		
-		//','
-		public Keyword getCommaKeyword_3() { return cCommaKeyword_3; }
-		
-		//(angle+=Angle)
-		public Assignment getAngleAssignment_4() { return cAngleAssignment_4; }
-		
-		//Angle
-		public RuleCall getAngleAngleParserRuleCall_4_0() { return cAngleAngleParserRuleCall_4_0; }
-		
-		//','
-		public Keyword getCommaKeyword_5() { return cCommaKeyword_5; }
-		
-		//(angle_res+=Angle_res)
-		public Assignment getAngle_resAssignment_6() { return cAngle_resAssignment_6; }
-		
-		//Angle_res
-		public RuleCall getAngle_resAngle_resParserRuleCall_6_0() { return cAngle_resAngle_resParserRuleCall_6_0; }
-		
-		//')'
-		public Keyword getRightParenthesisKeyword_7() { return cRightParenthesisKeyword_7; }
-	}
-	public class IsAtElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.CPTester.isAt");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cNameIsAtKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
-		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cAngleAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cAngleAngleParserRuleCall_2_0 = (RuleCall)cAngleAssignment_2.eContents().get(0);
-		private final Keyword cCommaKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cAngle_resAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cAngle_resAngle_resParserRuleCall_4_0 = (RuleCall)cAngle_resAssignment_4.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		
-		//isAt:
-		//    name='isAt'
-		//    '('
-		//    (angle+=Angle)+
-		//    ','
-		//    (angle_res+=Angle_res)
-		//    ')'
-		//;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//name='isAt'
-		//'('
-		//(angle+=Angle)+
-		//','
-		//(angle_res+=Angle_res)
-		//')'
-		public Group getGroup() { return cGroup; }
-		
-		//name='isAt'
-		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
-		
-		//'isAt'
-		public Keyword getNameIsAtKeyword_0_0() { return cNameIsAtKeyword_0_0; }
-		
-		//'('
-		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
-		
-		//(angle+=Angle)+
-		public Assignment getAngleAssignment_2() { return cAngleAssignment_2; }
-		
-		//Angle
-		public RuleCall getAngleAngleParserRuleCall_2_0() { return cAngleAngleParserRuleCall_2_0; }
-		
-		//','
-		public Keyword getCommaKeyword_3() { return cCommaKeyword_3; }
-		
-		//(angle_res+=Angle_res)
-		public Assignment getAngle_resAssignment_4() { return cAngle_resAssignment_4; }
-		
-		//Angle_res
-		public RuleCall getAngle_resAngle_resParserRuleCall_4_0() { return cAngle_resAngle_resParserRuleCall_4_0; }
-		
-		//')'
-		public Keyword getRightParenthesisKeyword_5() { return cRightParenthesisKeyword_5; }
-	}
-	public class Angle_resElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.CPTester.Angle_res");
-		private final Assignment cAngle_resAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cAngle_resINTTerminalRuleCall_0 = (RuleCall)cAngle_resAssignment.eContents().get(0);
-		
-		//Angle_res:
-		//    angle_res=INT
-		//;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//angle_res=INT
-		public Assignment getAngle_resAssignment() { return cAngle_resAssignment; }
-		
-		//INT
-		public RuleCall getAngle_resINTTerminalRuleCall_0() { return cAngle_resINTTerminalRuleCall_0; }
-	}
-	public class AngleElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.CPTester.Angle");
-		private final Assignment cAngleAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cAngleINTTerminalRuleCall_0 = (RuleCall)cAngleAssignment.eContents().get(0);
-		
-		//Angle:
-		//    angle=INT
-		//;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//angle=INT
-		public Assignment getAngleAssignment() { return cAngleAssignment; }
-		
-		//INT
-		public RuleCall getAngleINTTerminalRuleCall_0() { return cAngleINTTerminalRuleCall_0; }
-	}
-	public class TimeElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.CPTester.Time");
-		private final Assignment cTimeAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cTimeINTTerminalRuleCall_0 = (RuleCall)cTimeAssignment.eContents().get(0);
-		
-		//Time:
-		//    time=INT
-		//;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//time=INT
-		public Assignment getTimeAssignment() { return cTimeAssignment; }
-		
-		//INT
-		public RuleCall getTimeINTTerminalRuleCall_0() { return cTimeINTTerminalRuleCall_0; }
+		//Operaciones
+		public RuleCall getSolutionOperacionesParserRuleCall_2_0() { return cSolutionOperacionesParserRuleCall_2_0; }
 	}
 	
 	
 	private final ScenarioElements pScenario;
 	private final GivenElements pGiven;
-	private final InitialElements pInitial;
 	private final WhenElements pWhen;
-	private final CommandElements pCommand;
-	private final RotateServoElements pRotateServo;
-	private final RotateAllServosElements pRotateAllServos;
 	private final ThenElements pThen;
-	private final ResultElements pResult;
 	private final AndElements pAnd;
-	private final SolutionElements pSolution;
-	private final ConditionsElements pConditions;
-	private final IsAtSingleElements pIsAtSingle;
-	private final IsAtElements pIsAt;
-	private final Angle_resElements pAngle_res;
-	private final AngleElements pAngle;
-	private final TimeElements pTime;
 	
 	private final Grammar grammar;
 	
@@ -746,21 +254,9 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		this.gaTerminals = gaTerminals;
 		this.pScenario = new ScenarioElements();
 		this.pGiven = new GivenElements();
-		this.pInitial = new InitialElements();
 		this.pWhen = new WhenElements();
-		this.pCommand = new CommandElements();
-		this.pRotateServo = new RotateServoElements();
-		this.pRotateAllServos = new RotateAllServosElements();
 		this.pThen = new ThenElements();
-		this.pResult = new ResultElements();
 		this.pAnd = new AndElements();
-		this.pSolution = new SolutionElements();
-		this.pConditions = new ConditionsElements();
-		this.pIsAtSingle = new IsAtSingleElements();
-		this.pIsAt = new IsAtElements();
-		this.pAngle_res = new Angle_resElements();
-		this.pAngle = new AngleElements();
-		this.pTime = new TimeElements();
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -814,7 +310,7 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	////////////////////////////////////////////////////
 	//Given:
 	//    name='GIVEN'
-	//    (initial+=Initial)
+	//    (initial+=Operaciones)
 	//;
 	public GivenElements getGivenAccess() {
 		return pGiven;
@@ -824,24 +320,10 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		return getGivenAccess().getRule();
 	}
 	
-	//Initial:
-	//    name='posInicial'
-	//    '('
-	//    (time+=Time)
-	//    ')'
-	//;
-	public InitialElements getInitialAccess() {
-		return pInitial;
-	}
-	
-	public ParserRule getInitialRule() {
-		return getInitialAccess().getRule();
-	}
-	
 	////////////////////////////////////////////////////
 	//When:
 	//    name='WHEN'
-	//    (command+=Command)
+	//    (command+=Operaciones)
 	//;
 	public WhenElements getWhenAccess() {
 		return pWhen;
@@ -851,11 +333,65 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		return getWhenAccess().getRule();
 	}
 	
+	////////////////////////////////////////////////////
+	//Then:
+	//    name='THEN'
+	//    (result+=Operaciones)
+	//;
+	public ThenElements getThenAccess() {
+		return pThen;
+	}
+	
+	public ParserRule getThenRule() {
+		return getThenAccess().getRule();
+	}
+	
+	////////////////////////////////////////////////////
+	//And:
+	//    name='AND'
+	//    (conditions+=Operaciones)
+	//    (solution+=Operaciones)
+	//;
+	public AndElements getAndAccess() {
+		return pAnd;
+	}
+	
+	public ParserRule getAndRule() {
+		return getAndAccess().getRule();
+	}
+	
+	//Operaciones:
+	//    Initial | Command | Result | Solution | Conditions
+	//;
+	public OperationsGrammarAccess.OperacionesElements getOperacionesAccess() {
+		return gaOperations.getOperacionesAccess();
+	}
+	
+	public ParserRule getOperacionesRule() {
+		return getOperacionesAccess().getRule();
+	}
+	
+	////////////////////////////////////////////////////////////////////////////////////////////////////
+	//Initial:
+	//    name='posInicial'
+	//    '('
+	//    (time+=Time)
+	//    ')'
+	//;
+	public OperationsGrammarAccess.InitialElements getInitialAccess() {
+		return gaOperations.getInitialAccess();
+	}
+	
+	public ParserRule getInitialRule() {
+		return getInitialAccess().getRule();
+	}
+	
+	////////////////////////////////////////////////////////////////////////////////////////////////////
 	//Command:
 	//    rotateServo | rotateAllServos
 	//;
-	public CommandElements getCommandAccess() {
-		return pCommand;
+	public OperationsGrammarAccess.CommandElements getCommandAccess() {
+		return gaOperations.getCommandAccess();
 	}
 	
 	public ParserRule getCommandRule() {
@@ -872,8 +408,8 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	//    (time+=Time)
 	//    ')'
 	//;
-	public RotateServoElements getRotateServoAccess() {
-		return pRotateServo;
+	public OperationsGrammarAccess.RotateServoElements getRotateServoAccess() {
+		return gaOperations.getRotateServoAccess();
 	}
 	
 	public ParserRule getRotateServoRule() {
@@ -888,60 +424,35 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	//    (time+=Time)
 	//    ')'
 	//;
-	public RotateAllServosElements getRotateAllServosAccess() {
-		return pRotateAllServos;
+	public OperationsGrammarAccess.RotateAllServosElements getRotateAllServosAccess() {
+		return gaOperations.getRotateAllServosAccess();
 	}
 	
 	public ParserRule getRotateAllServosRule() {
 		return getRotateAllServosAccess().getRule();
 	}
 	
-	////////////////////////////////////////////////////
-	//Then:
-	//    name='THEN'
-	//    (result+=Result)
-	//;
-	public ThenElements getThenAccess() {
-		return pThen;
-	}
-	
-	public ParserRule getThenRule() {
-		return getThenAccess().getRule();
-	}
-	
+	////////////////////////////////////////////////////////////////////////////////////////////////////
 	//Result:
 	//    name='result'
 	//    '('
 	//    (time+=Time)
 	//    ')'
 	//;
-	public ResultElements getResultAccess() {
-		return pResult;
+	public OperationsGrammarAccess.ResultElements getResultAccess() {
+		return gaOperations.getResultAccess();
 	}
 	
 	public ParserRule getResultRule() {
 		return getResultAccess().getRule();
 	}
 	
-	////////////////////////////////////////////////////
-	//And:
-	//    name='AND'
-	//    (conditions+=Conditions)
-	//    (solution+=Solution)
-	//;
-	public AndElements getAndAccess() {
-		return pAnd;
-	}
-	
-	public ParserRule getAndRule() {
-		return getAndAccess().getRule();
-	}
-	
+	////////////////////////////////////////////////////////////////////////////////////////////////////
 	//Solution:
 	//    isAtSingle | isAt
 	//;
-	public SolutionElements getSolutionAccess() {
-		return pSolution;
+	public OperationsGrammarAccess.SolutionElements getSolutionAccess() {
+		return gaOperations.getSolutionAccess();
 	}
 	
 	public ParserRule getSolutionRule() {
@@ -954,8 +465,8 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	//    (time+=Time)
 	//    ')'
 	//;
-	public ConditionsElements getConditionsAccess() {
-		return pConditions;
+	public OperationsGrammarAccess.ConditionsElements getConditionsAccess() {
+		return gaOperations.getConditionsAccess();
 	}
 	
 	public ParserRule getConditionsRule() {
@@ -972,8 +483,8 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	//    (angle_res+=Angle_res)
 	//    ')'
 	//;
-	public IsAtSingleElements getIsAtSingleAccess() {
-		return pIsAtSingle;
+	public OperationsGrammarAccess.IsAtSingleElements getIsAtSingleAccess() {
+		return gaOperations.getIsAtSingleAccess();
 	}
 	
 	public ParserRule getIsAtSingleRule() {
@@ -988,19 +499,20 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	//    (angle_res+=Angle_res)
 	//    ')'
 	//;
-	public IsAtElements getIsAtAccess() {
-		return pIsAt;
+	public OperationsGrammarAccess.IsAtElements getIsAtAccess() {
+		return gaOperations.getIsAtAccess();
 	}
 	
 	public ParserRule getIsAtRule() {
 		return getIsAtAccess().getRule();
 	}
 	
+	////////////////////////////////////////////////////////////////////////////////////////////////////
 	//Angle_res:
 	//    angle_res=INT
 	//;
-	public Angle_resElements getAngle_resAccess() {
-		return pAngle_res;
+	public OperationsGrammarAccess.Angle_resElements getAngle_resAccess() {
+		return gaOperations.getAngle_resAccess();
 	}
 	
 	public ParserRule getAngle_resRule() {
@@ -1010,8 +522,8 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	//Angle:
 	//    angle=INT
 	//;
-	public AngleElements getAngleAccess() {
-		return pAngle;
+	public OperationsGrammarAccess.AngleElements getAngleAccess() {
+		return gaOperations.getAngleAccess();
 	}
 	
 	public ParserRule getAngleRule() {
@@ -1021,8 +533,8 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	//Time:
 	//    time=INT
 	//;
-	public TimeElements getTimeAccess() {
-		return pTime;
+	public OperationsGrammarAccess.TimeElements getTimeAccess() {
+		return gaOperations.getTimeAccess();
 	}
 	
 	public ParserRule getTimeRule() {

@@ -11,7 +11,7 @@ import org.xtext.cPTester.Scenario
 import org.xtext.cPTester.Given
 import org.xtext.cPTester.Initial
 import org.xtext.cPTester.Command
-import org.xtext.cPTester.rotateServo
+import org.xtext.operations.rotateServo
 
 /**
  * Generates code from your model files on save.
@@ -33,10 +33,10 @@ class CPTesterGenerator extends AbstractGenerator {
 		«FOR cmd : scenario.when.command»
 			«IF cmd.eClass.name.equals('rotateServo')»
 				«var rot = cmd as rotateServo»
-					«rot.servo»
 					«rot.servo.get(0)»
 					«rot.angle.get(0)»
 					«rot.time.get(0)»
+					7777
 			«ENDIF»
 		«ENDFOR»
 		

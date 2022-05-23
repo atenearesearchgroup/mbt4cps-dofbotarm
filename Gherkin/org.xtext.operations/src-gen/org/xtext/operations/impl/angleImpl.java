@@ -10,39 +10,39 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.xtext.operations.Angle;
 import org.xtext.operations.OperationsPackage;
-import org.xtext.operations.angle;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>angle</b></em>'.
+ * An implementation of the model object '<em><b>Angle</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.operations.impl.angleImpl#getANGLE <em>ANGLE</em>}</li>
+ *   <li>{@link org.xtext.operations.impl.AngleImpl#getAngle <em>Angle</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class angleImpl extends MinimalEObjectImpl.Container implements angle
+public class AngleImpl extends MinimalEObjectImpl.Container implements Angle
 {
   /**
-   * The default value of the '{@link #getANGLE() <em>ANGLE</em>}' attribute.
+   * The default value of the '{@link #getAngle() <em>Angle</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getANGLE()
+   * @see #getAngle()
    * @generated
    * @ordered
    */
   protected static final int ANGLE_EDEFAULT = 0;
 
   /**
-   * The cached value of the '{@link #getANGLE() <em>ANGLE</em>}' attribute.
+   * The cached value of the '{@link #getAngle() <em>Angle</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getANGLE()
+   * @see #getAngle()
    * @generated
    * @ordered
    */
@@ -53,7 +53,7 @@ public class angleImpl extends MinimalEObjectImpl.Container implements angle
    * <!-- end-user-doc -->
    * @generated
    */
-  protected angleImpl()
+  protected AngleImpl()
   {
     super();
   }
@@ -75,7 +75,7 @@ public class angleImpl extends MinimalEObjectImpl.Container implements angle
    * @generated
    */
   @Override
-  public int getANGLE()
+  public int getAngle()
   {
     return angle;
   }
@@ -86,12 +86,12 @@ public class angleImpl extends MinimalEObjectImpl.Container implements angle
    * @generated
    */
   @Override
-  public void setANGLE(int newANGLE)
+  public void setAngle(int newAngle)
   {
-    int oldANGLE = angle;
-    angle = newANGLE;
+    int oldAngle = angle;
+    angle = newAngle;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OperationsPackage.ANGLE__ANGLE, oldANGLE, angle));
+      eNotify(new ENotificationImpl(this, Notification.SET, OperationsPackage.ANGLE__ANGLE, oldAngle, angle));
   }
 
   /**
@@ -105,7 +105,7 @@ public class angleImpl extends MinimalEObjectImpl.Container implements angle
     switch (featureID)
     {
       case OperationsPackage.ANGLE__ANGLE:
-        return getANGLE();
+        return getAngle();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -121,7 +121,7 @@ public class angleImpl extends MinimalEObjectImpl.Container implements angle
     switch (featureID)
     {
       case OperationsPackage.ANGLE__ANGLE:
-        setANGLE((Integer)newValue);
+        setAngle((Integer)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -138,7 +138,7 @@ public class angleImpl extends MinimalEObjectImpl.Container implements angle
     switch (featureID)
     {
       case OperationsPackage.ANGLE__ANGLE:
-        setANGLE(ANGLE_EDEFAULT);
+        setAngle(ANGLE_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -171,10 +171,10 @@ public class angleImpl extends MinimalEObjectImpl.Container implements angle
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (ANGLE: ");
+    result.append(" (angle: ");
     result.append(angle);
     result.append(')');
     return result.toString();
   }
 
-} //angleImpl
+} //AngleImpl

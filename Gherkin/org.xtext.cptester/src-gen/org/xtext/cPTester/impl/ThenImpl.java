@@ -20,8 +20,9 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.cPTester.CPTesterPackage;
-import org.xtext.cPTester.Result;
 import org.xtext.cPTester.Then;
+
+import org.xtext.operations.Operaciones;
 
 /**
  * <!-- begin-user-doc -->
@@ -67,7 +68,7 @@ public class ThenImpl extends MinimalEObjectImpl.Container implements Then
    * @generated
    * @ordered
    */
-  protected EList<Result> result;
+  protected EList<Operaciones> result;
 
   /**
    * <!-- begin-user-doc -->
@@ -121,11 +122,11 @@ public class ThenImpl extends MinimalEObjectImpl.Container implements Then
    * @generated
    */
   @Override
-  public EList<Result> getResult()
+  public EList<Operaciones> getResult()
   {
     if (result == null)
     {
-      result = new EObjectContainmentEList<Result>(Result.class, this, CPTesterPackage.THEN__RESULT);
+      result = new EObjectContainmentEList<Operaciones>(Operaciones.class, this, CPTesterPackage.THEN__RESULT);
     }
     return result;
   }
@@ -180,7 +181,7 @@ public class ThenImpl extends MinimalEObjectImpl.Container implements Then
         return;
       case CPTesterPackage.THEN__RESULT:
         getResult().clear();
-        getResult().addAll((Collection<? extends Result>)newValue);
+        getResult().addAll((Collection<? extends Operaciones>)newValue);
         return;
     }
     super.eSet(featureID, newValue);

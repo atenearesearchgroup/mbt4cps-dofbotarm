@@ -3,68 +3,36 @@
  */
 package org.xtext.operations;
 
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>result</b></em>'.
+ * A representation of the model object '<em><b>Result</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.operations.result#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.operations.result#getTIME <em>TIME</em>}</li>
+ *   <li>{@link org.xtext.operations.Result#getTime <em>Time</em>}</li>
  * </ul>
  *
- * @see org.xtext.operations.OperationsPackage#getresult()
+ * @see org.xtext.operations.OperationsPackage#getResult()
  * @model
  * @generated
  */
-public interface result extends Solution
+public interface Result extends Operaciones
 {
   /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
+   * Returns the value of the '<em><b>Time</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.operations.Time}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Name</em>' attribute.
-   * @see #setName(String)
-   * @see org.xtext.operations.OperationsPackage#getresult_Name()
-   * @model
-   * @generated
-   */
-  String getName();
-
-  /**
-   * Sets the value of the '{@link org.xtext.operations.result#getName <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
-   * @see #getName()
-   * @generated
-   */
-  void setName(String value);
-
-  /**
-   * Returns the value of the '<em><b>TIME</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>TIME</em>' containment reference.
-   * @see #setTIME(time)
-   * @see org.xtext.operations.OperationsPackage#getresult_TIME()
+   * @return the value of the '<em>Time</em>' containment reference list.
+   * @see org.xtext.operations.OperationsPackage#getResult_Time()
    * @model containment="true"
    * @generated
    */
-  time getTIME();
+  EList<Time> getTime();
 
-  /**
-   * Sets the value of the '{@link org.xtext.operations.result#getTIME <em>TIME</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>TIME</em>' containment reference.
-   * @see #getTIME()
-   * @generated
-   */
-  void setTIME(time value);
-
-} // result
+} // Result

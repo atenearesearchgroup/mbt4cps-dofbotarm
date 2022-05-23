@@ -3,18 +3,49 @@
  */
 package org.xtext.operations;
 
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Solution</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link org.xtext.operations.Solution#getAngle <em>Angle</em>}</li>
+ *   <li>{@link org.xtext.operations.Solution#getAngle_res <em>Angle res</em>}</li>
+ * </ul>
  *
  * @see org.xtext.operations.OperationsPackage#getSolution()
  * @model
  * @generated
  */
-public interface Solution extends EObject
+public interface Solution extends Operaciones
 {
+  /**
+   * Returns the value of the '<em><b>Angle</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.operations.Angle}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Angle</em>' containment reference list.
+   * @see org.xtext.operations.OperationsPackage#getSolution_Angle()
+   * @model containment="true"
+   * @generated
+   */
+  EList<Angle> getAngle();
+
+  /**
+   * Returns the value of the '<em><b>Angle res</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.operations.Angle_res}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Angle res</em>' containment reference list.
+   * @see org.xtext.operations.OperationsPackage#getSolution_Angle_res()
+   * @model containment="true"
+   * @generated
+   */
+  EList<Angle_res> getAngle_res();
+
 } // Solution

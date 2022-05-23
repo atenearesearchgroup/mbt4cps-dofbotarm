@@ -7,42 +7,42 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>time</b></em>'.
+ * A representation of the model object '<em><b>Time</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.operations.time#getTIME <em>TIME</em>}</li>
+ *   <li>{@link org.xtext.operations.Time#getTime <em>Time</em>}</li>
  * </ul>
  *
- * @see org.xtext.operations.OperationsPackage#gettime()
+ * @see org.xtext.operations.OperationsPackage#getTime()
  * @model
  * @generated
  */
-public interface time extends EObject
+public interface Time extends EObject
 {
   /**
-   * Returns the value of the '<em><b>TIME</b></em>' attribute.
+   * Returns the value of the '<em><b>Time</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>TIME</em>' attribute.
-   * @see #setTIME(int)
-   * @see org.xtext.operations.OperationsPackage#gettime_TIME()
+   * @return the value of the '<em>Time</em>' attribute.
+   * @see #setTime(int)
+   * @see org.xtext.operations.OperationsPackage#getTime_Time()
    * @model
    * @generated
    */
-  int getTIME();
+  int getTime();
 
   /**
-   * Sets the value of the '{@link org.xtext.operations.time#getTIME <em>TIME</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.operations.Time#getTime <em>Time</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>TIME</em>' attribute.
-   * @see #getTIME()
+   * @param value the new value of the '<em>Time</em>' attribute.
+   * @see #getTime()
    * @generated
    */
-  void setTIME(int value);
+  void setTime(int value);
 
-} // time
+} // Time

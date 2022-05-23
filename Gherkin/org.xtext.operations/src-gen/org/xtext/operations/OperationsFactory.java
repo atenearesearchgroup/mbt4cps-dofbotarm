@@ -24,6 +24,123 @@ public interface OperationsFactory extends EFactory
   OperationsFactory eINSTANCE = org.xtext.operations.impl.OperationsFactoryImpl.init();
 
   /**
+   * Returns a new object of class '<em>Operaciones</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Operaciones</em>'.
+   * @generated
+   */
+  Operaciones createOperaciones();
+
+  /**
+   * Returns a new object of class '<em>Initial</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Initial</em>'.
+   * @generated
+   */
+  Initial createInitial();
+
+  /**
+   * Returns a new object of class '<em>Command</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Command</em>'.
+   * @generated
+   */
+  Command createCommand();
+
+  /**
+   * Returns a new object of class '<em>rotate Servo</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>rotate Servo</em>'.
+   * @generated
+   */
+  rotateServo createrotateServo();
+
+  /**
+   * Returns a new object of class '<em>rotate All Servos</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>rotate All Servos</em>'.
+   * @generated
+   */
+  rotateAllServos createrotateAllServos();
+
+  /**
+   * Returns a new object of class '<em>Result</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Result</em>'.
+   * @generated
+   */
+  Result createResult();
+
+  /**
+   * Returns a new object of class '<em>Solution</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Solution</em>'.
+   * @generated
+   */
+  Solution createSolution();
+
+  /**
+   * Returns a new object of class '<em>Conditions</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Conditions</em>'.
+   * @generated
+   */
+  Conditions createConditions();
+
+  /**
+   * Returns a new object of class '<em>is At Single</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>is At Single</em>'.
+   * @generated
+   */
+  isAtSingle createisAtSingle();
+
+  /**
+   * Returns a new object of class '<em>is At</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>is At</em>'.
+   * @generated
+   */
+  isAt createisAt();
+
+  /**
+   * Returns a new object of class '<em>Angle res</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Angle res</em>'.
+   * @generated
+   */
+  Angle_res createAngle_res();
+
+  /**
+   * Returns a new object of class '<em>Angle</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Angle</em>'.
+   * @generated
+   */
+  Angle createAngle();
+
+  /**
+   * Returns a new object of class '<em>Time</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Time</em>'.
+   * @generated
+   */
+  Time createTime();
+
+  /**
    * Returns a new object of class '<em>Servo</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

@@ -10,50 +10,50 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.xtext.operations.Angle_res;
 import org.xtext.operations.OperationsPackage;
-import org.xtext.operations.angle_res;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>angle res</b></em>'.
+ * An implementation of the model object '<em><b>Angle res</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.operations.impl.angle_resImpl#getANGLE_RES <em>ANGLE RES</em>}</li>
+ *   <li>{@link org.xtext.operations.impl.Angle_resImpl#getAngle_res <em>Angle res</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class angle_resImpl extends MinimalEObjectImpl.Container implements angle_res
+public class Angle_resImpl extends MinimalEObjectImpl.Container implements Angle_res
 {
   /**
-   * The default value of the '{@link #getANGLE_RES() <em>ANGLE RES</em>}' attribute.
+   * The default value of the '{@link #getAngle_res() <em>Angle res</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getANGLE_RES()
+   * @see #getAngle_res()
    * @generated
    * @ordered
    */
   protected static final int ANGLE_RES_EDEFAULT = 0;
 
   /**
-   * The cached value of the '{@link #getANGLE_RES() <em>ANGLE RES</em>}' attribute.
+   * The cached value of the '{@link #getAngle_res() <em>Angle res</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getANGLE_RES()
+   * @see #getAngle_res()
    * @generated
    * @ordered
    */
-  protected int anglE_RES = ANGLE_RES_EDEFAULT;
+  protected int angle_res = ANGLE_RES_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected angle_resImpl()
+  protected Angle_resImpl()
   {
     super();
   }
@@ -75,9 +75,9 @@ public class angle_resImpl extends MinimalEObjectImpl.Container implements angle
    * @generated
    */
   @Override
-  public int getANGLE_RES()
+  public int getAngle_res()
   {
-    return anglE_RES;
+    return angle_res;
   }
 
   /**
@@ -86,12 +86,12 @@ public class angle_resImpl extends MinimalEObjectImpl.Container implements angle
    * @generated
    */
   @Override
-  public void setANGLE_RES(int newANGLE_RES)
+  public void setAngle_res(int newAngle_res)
   {
-    int oldANGLE_RES = anglE_RES;
-    anglE_RES = newANGLE_RES;
+    int oldAngle_res = angle_res;
+    angle_res = newAngle_res;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OperationsPackage.ANGLE_RES__ANGLE_RES, oldANGLE_RES, anglE_RES));
+      eNotify(new ENotificationImpl(this, Notification.SET, OperationsPackage.ANGLE_RES__ANGLE_RES, oldAngle_res, angle_res));
   }
 
   /**
@@ -105,7 +105,7 @@ public class angle_resImpl extends MinimalEObjectImpl.Container implements angle
     switch (featureID)
     {
       case OperationsPackage.ANGLE_RES__ANGLE_RES:
-        return getANGLE_RES();
+        return getAngle_res();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -121,7 +121,7 @@ public class angle_resImpl extends MinimalEObjectImpl.Container implements angle
     switch (featureID)
     {
       case OperationsPackage.ANGLE_RES__ANGLE_RES:
-        setANGLE_RES((Integer)newValue);
+        setAngle_res((Integer)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -138,7 +138,7 @@ public class angle_resImpl extends MinimalEObjectImpl.Container implements angle
     switch (featureID)
     {
       case OperationsPackage.ANGLE_RES__ANGLE_RES:
-        setANGLE_RES(ANGLE_RES_EDEFAULT);
+        setAngle_res(ANGLE_RES_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -155,7 +155,7 @@ public class angle_resImpl extends MinimalEObjectImpl.Container implements angle
     switch (featureID)
     {
       case OperationsPackage.ANGLE_RES__ANGLE_RES:
-        return anglE_RES != ANGLE_RES_EDEFAULT;
+        return angle_res != ANGLE_RES_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }
@@ -171,10 +171,10 @@ public class angle_resImpl extends MinimalEObjectImpl.Container implements angle
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (ANGLE_RES: ");
-    result.append(anglE_RES);
+    result.append(" (angle_res: ");
+    result.append(angle_res);
     result.append(')');
     return result.toString();
   }
 
-} //angle_resImpl
+} //Angle_resImpl

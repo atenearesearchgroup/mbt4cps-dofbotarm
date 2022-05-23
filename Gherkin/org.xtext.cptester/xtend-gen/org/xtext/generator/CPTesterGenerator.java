@@ -11,12 +11,12 @@ import org.eclipse.xtext.generator.AbstractGenerator;
 import org.eclipse.xtext.generator.IFileSystemAccess2;
 import org.eclipse.xtext.generator.IGeneratorContext;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
-import org.xtext.cPTester.Angle;
-import org.xtext.cPTester.Command;
 import org.xtext.cPTester.Scenario;
-import org.xtext.cPTester.Time;
-import org.xtext.cPTester.rotateServo;
+import org.xtext.operations.Angle;
+import org.xtext.operations.Operaciones;
 import org.xtext.operations.Servo;
+import org.xtext.operations.Time;
+import org.xtext.operations.rotateServo;
 
 /**
  * Generates code from your model files on save.
@@ -38,16 +38,12 @@ public class CPTesterGenerator extends AbstractGenerator {
     StringConcatenation _builder = new StringConcatenation();
     _builder.newLine();
     {
-      EList<Command> _command = scenario.getWhen().getCommand();
-      for(final Command cmd : _command) {
+      EList<Operaciones> _command = scenario.getWhen().getCommand();
+      for(final Operaciones cmd : _command) {
         {
           boolean _equals = cmd.eClass().getName().equals("rotateServo");
           if (_equals) {
             rotateServo rot = ((rotateServo) cmd);
-            _builder.newLineIfNotEmpty();
-            _builder.append("\t");
-            EList<Servo> _servo = rot.getServo();
-            _builder.append(_servo, "\t");
             _builder.newLineIfNotEmpty();
             _builder.append("\t");
             Servo _get = rot.getServo().get(0);
@@ -61,6 +57,9 @@ public class CPTesterGenerator extends AbstractGenerator {
             Time _get_2 = rot.getTime().get(0);
             _builder.append(_get_2, "\t");
             _builder.newLineIfNotEmpty();
+            _builder.append("\t");
+            _builder.append("7777");
+            _builder.newLine();
           }
         }
       }

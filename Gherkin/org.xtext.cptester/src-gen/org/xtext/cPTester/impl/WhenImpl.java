@@ -20,8 +20,9 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.cPTester.CPTesterPackage;
-import org.xtext.cPTester.Command;
 import org.xtext.cPTester.When;
+
+import org.xtext.operations.Operaciones;
 
 /**
  * <!-- begin-user-doc -->
@@ -67,7 +68,7 @@ public class WhenImpl extends MinimalEObjectImpl.Container implements When
    * @generated
    * @ordered
    */
-  protected EList<Command> command;
+  protected EList<Operaciones> command;
 
   /**
    * <!-- begin-user-doc -->
@@ -121,11 +122,11 @@ public class WhenImpl extends MinimalEObjectImpl.Container implements When
    * @generated
    */
   @Override
-  public EList<Command> getCommand()
+  public EList<Operaciones> getCommand()
   {
     if (command == null)
     {
-      command = new EObjectContainmentEList<Command>(Command.class, this, CPTesterPackage.WHEN__COMMAND);
+      command = new EObjectContainmentEList<Operaciones>(Operaciones.class, this, CPTesterPackage.WHEN__COMMAND);
     }
     return command;
   }
@@ -180,7 +181,7 @@ public class WhenImpl extends MinimalEObjectImpl.Container implements When
         return;
       case CPTesterPackage.WHEN__COMMAND:
         getCommand().clear();
-        getCommand().addAll((Collection<? extends Command>)newValue);
+        getCommand().addAll((Collection<? extends Operaciones>)newValue);
         return;
     }
     super.eSet(featureID, newValue);

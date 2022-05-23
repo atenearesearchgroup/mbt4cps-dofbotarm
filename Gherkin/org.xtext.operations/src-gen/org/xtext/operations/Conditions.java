@@ -3,7 +3,7 @@
  */
 package org.xtext.operations;
 
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,35 +14,25 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.operations.Conditions#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.operations.Conditions#getTime <em>Time</em>}</li>
  * </ul>
  *
  * @see org.xtext.operations.OperationsPackage#getConditions()
  * @model
  * @generated
  */
-public interface Conditions extends EObject
+public interface Conditions extends Operaciones
 {
   /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
+   * Returns the value of the '<em><b>Time</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.operations.Time}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Name</em>' attribute.
-   * @see #setName(String)
-   * @see org.xtext.operations.OperationsPackage#getConditions_Name()
-   * @model
+   * @return the value of the '<em>Time</em>' containment reference list.
+   * @see org.xtext.operations.OperationsPackage#getConditions_Time()
+   * @model containment="true"
    * @generated
    */
-  String getName();
-
-  /**
-   * Sets the value of the '{@link org.xtext.operations.Conditions#getName <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
-   * @see #getName()
-   * @generated
-   */
-  void setName(String value);
+  EList<Time> getTime();
 
 } // Conditions

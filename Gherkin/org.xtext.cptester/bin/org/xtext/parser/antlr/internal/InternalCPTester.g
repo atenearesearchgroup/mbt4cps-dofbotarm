@@ -218,9 +218,9 @@ ruleGiven returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGivenAccess().getInitialInitialParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getGivenAccess().getInitialOperacionesParserRuleCall_1_0());
 				}
-				lv_initial_1_0=ruleInitial
+				lv_initial_1_0=ruleOperaciones
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGivenRule());
@@ -229,11 +229,249 @@ ruleGiven returns [EObject current=null]
 						$current,
 						"initial",
 						lv_initial_1_0,
-						"org.xtext.CPTester.Initial");
+						"org.xtext.Operations.Operaciones");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
+	)
+;
+
+// Entry rule entryRuleWhen
+entryRuleWhen returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getWhenRule()); }
+	iv_ruleWhen=ruleWhen
+	{ $current=$iv_ruleWhen.current; }
+	EOF;
+
+// Rule When
+ruleWhen returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_name_0_0='WHEN'
+				{
+					newLeafNode(lv_name_0_0, grammarAccess.getWhenAccess().getNameWHENKeyword_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getWhenRule());
+					}
+					setWithLastConsumed($current, "name", lv_name_0_0, "WHEN");
+				}
+			)
+		)
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getWhenAccess().getCommandOperacionesParserRuleCall_1_0());
+				}
+				lv_command_1_0=ruleOperaciones
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getWhenRule());
+					}
+					add(
+						$current,
+						"command",
+						lv_command_1_0,
+						"org.xtext.Operations.Operaciones");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+	)
+;
+
+// Entry rule entryRuleThen
+entryRuleThen returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getThenRule()); }
+	iv_ruleThen=ruleThen
+	{ $current=$iv_ruleThen.current; }
+	EOF;
+
+// Rule Then
+ruleThen returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_name_0_0='THEN'
+				{
+					newLeafNode(lv_name_0_0, grammarAccess.getThenAccess().getNameTHENKeyword_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getThenRule());
+					}
+					setWithLastConsumed($current, "name", lv_name_0_0, "THEN");
+				}
+			)
+		)
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getThenAccess().getResultOperacionesParserRuleCall_1_0());
+				}
+				lv_result_1_0=ruleOperaciones
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getThenRule());
+					}
+					add(
+						$current,
+						"result",
+						lv_result_1_0,
+						"org.xtext.Operations.Operaciones");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+	)
+;
+
+// Entry rule entryRuleAnd
+entryRuleAnd returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getAndRule()); }
+	iv_ruleAnd=ruleAnd
+	{ $current=$iv_ruleAnd.current; }
+	EOF;
+
+// Rule And
+ruleAnd returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_name_0_0='AND'
+				{
+					newLeafNode(lv_name_0_0, grammarAccess.getAndAccess().getNameANDKeyword_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getAndRule());
+					}
+					setWithLastConsumed($current, "name", lv_name_0_0, "AND");
+				}
+			)
+		)
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getAndAccess().getConditionsOperacionesParserRuleCall_1_0());
+				}
+				lv_conditions_1_0=ruleOperaciones
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getAndRule());
+					}
+					add(
+						$current,
+						"conditions",
+						lv_conditions_1_0,
+						"org.xtext.Operations.Operaciones");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getAndAccess().getSolutionOperacionesParserRuleCall_2_0());
+				}
+				lv_solution_2_0=ruleOperaciones
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getAndRule());
+					}
+					add(
+						$current,
+						"solution",
+						lv_solution_2_0,
+						"org.xtext.Operations.Operaciones");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+	)
+;
+
+// Entry rule entryRuleOperaciones
+entryRuleOperaciones returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getOperacionesRule()); }
+	iv_ruleOperaciones=ruleOperaciones
+	{ $current=$iv_ruleOperaciones.current; }
+	EOF;
+
+// Rule Operaciones
+ruleOperaciones returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		{
+			newCompositeNode(grammarAccess.getOperacionesAccess().getInitialParserRuleCall_0());
+		}
+		this_Initial_0=ruleInitial
+		{
+			$current = $this_Initial_0.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getOperacionesAccess().getCommandParserRuleCall_1());
+		}
+		this_Command_1=ruleCommand
+		{
+			$current = $this_Command_1.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getOperacionesAccess().getResultParserRuleCall_2());
+		}
+		this_Result_2=ruleResult
+		{
+			$current = $this_Result_2.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getOperacionesAccess().getSolutionParserRuleCall_3());
+		}
+		this_Solution_3=ruleSolution
+		{
+			$current = $this_Solution_3.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getOperacionesAccess().getConditionsParserRuleCall_4());
+		}
+		this_Conditions_4=ruleConditions
+		{
+			$current = $this_Conditions_4.current;
+			afterParserOrEnumRuleCall();
+		}
 	)
 ;
 
@@ -285,7 +523,7 @@ ruleInitial returns [EObject current=null]
 						$current,
 						"time",
 						lv_time_2_0,
-						"org.xtext.CPTester.Time");
+						"org.xtext.Operations.Time");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -294,58 +532,6 @@ ruleInitial returns [EObject current=null]
 		{
 			newLeafNode(otherlv_3, grammarAccess.getInitialAccess().getRightParenthesisKeyword_3());
 		}
-	)
-;
-
-// Entry rule entryRuleWhen
-entryRuleWhen returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getWhenRule()); }
-	iv_ruleWhen=ruleWhen
-	{ $current=$iv_ruleWhen.current; }
-	EOF;
-
-// Rule When
-ruleWhen returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			(
-				lv_name_0_0='WHEN'
-				{
-					newLeafNode(lv_name_0_0, grammarAccess.getWhenAccess().getNameWHENKeyword_0_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getWhenRule());
-					}
-					setWithLastConsumed($current, "name", lv_name_0_0, "WHEN");
-				}
-			)
-		)
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getWhenAccess().getCommandCommandParserRuleCall_1_0());
-				}
-				lv_command_1_0=ruleCommand
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getWhenRule());
-					}
-					add(
-						$current,
-						"command",
-						lv_command_1_0,
-						"org.xtext.CPTester.Command");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
 	)
 ;
 
@@ -456,7 +642,7 @@ rulerotateServo returns [EObject current=null]
 						$current,
 						"angle",
 						lv_angle_4_0,
-						"org.xtext.CPTester.Angle");
+						"org.xtext.Operations.Angle");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -479,7 +665,7 @@ rulerotateServo returns [EObject current=null]
 						$current,
 						"time",
 						lv_time_6_0,
-						"org.xtext.CPTester.Time");
+						"org.xtext.Operations.Time");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -539,7 +725,7 @@ rulerotateAllServos returns [EObject current=null]
 						$current,
 						"angle",
 						lv_angle_2_0,
-						"org.xtext.CPTester.Angle");
+						"org.xtext.Operations.Angle");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -562,7 +748,7 @@ rulerotateAllServos returns [EObject current=null]
 						$current,
 						"time",
 						lv_time_4_0,
-						"org.xtext.CPTester.Time");
+						"org.xtext.Operations.Time");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -571,58 +757,6 @@ rulerotateAllServos returns [EObject current=null]
 		{
 			newLeafNode(otherlv_5, grammarAccess.getRotateAllServosAccess().getRightParenthesisKeyword_5());
 		}
-	)
-;
-
-// Entry rule entryRuleThen
-entryRuleThen returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getThenRule()); }
-	iv_ruleThen=ruleThen
-	{ $current=$iv_ruleThen.current; }
-	EOF;
-
-// Rule Then
-ruleThen returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			(
-				lv_name_0_0='THEN'
-				{
-					newLeafNode(lv_name_0_0, grammarAccess.getThenAccess().getNameTHENKeyword_0_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getThenRule());
-					}
-					setWithLastConsumed($current, "name", lv_name_0_0, "THEN");
-				}
-			)
-		)
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getThenAccess().getResultResultParserRuleCall_1_0());
-				}
-				lv_result_1_0=ruleResult
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getThenRule());
-					}
-					add(
-						$current,
-						"result",
-						lv_result_1_0,
-						"org.xtext.CPTester.Result");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
 	)
 ;
 
@@ -674,7 +808,7 @@ ruleResult returns [EObject current=null]
 						$current,
 						"time",
 						lv_time_2_0,
-						"org.xtext.CPTester.Time");
+						"org.xtext.Operations.Time");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -683,77 +817,6 @@ ruleResult returns [EObject current=null]
 		{
 			newLeafNode(otherlv_3, grammarAccess.getResultAccess().getRightParenthesisKeyword_3());
 		}
-	)
-;
-
-// Entry rule entryRuleAnd
-entryRuleAnd returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getAndRule()); }
-	iv_ruleAnd=ruleAnd
-	{ $current=$iv_ruleAnd.current; }
-	EOF;
-
-// Rule And
-ruleAnd returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			(
-				lv_name_0_0='AND'
-				{
-					newLeafNode(lv_name_0_0, grammarAccess.getAndAccess().getNameANDKeyword_0_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getAndRule());
-					}
-					setWithLastConsumed($current, "name", lv_name_0_0, "AND");
-				}
-			)
-		)
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getAndAccess().getConditionsConditionsParserRuleCall_1_0());
-				}
-				lv_conditions_1_0=ruleConditions
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getAndRule());
-					}
-					add(
-						$current,
-						"conditions",
-						lv_conditions_1_0,
-						"org.xtext.CPTester.Conditions");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getAndAccess().getSolutionSolutionParserRuleCall_2_0());
-				}
-				lv_solution_2_0=ruleSolution
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getAndRule());
-					}
-					add(
-						$current,
-						"solution",
-						lv_solution_2_0,
-						"org.xtext.CPTester.Solution");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
 	)
 ;
 
@@ -841,7 +904,7 @@ ruleConditions returns [EObject current=null]
 						$current,
 						"time",
 						lv_time_2_0,
-						"org.xtext.CPTester.Time");
+						"org.xtext.Operations.Time");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -924,7 +987,7 @@ ruleisAtSingle returns [EObject current=null]
 						$current,
 						"angle",
 						lv_angle_4_0,
-						"org.xtext.CPTester.Angle");
+						"org.xtext.Operations.Angle");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -947,7 +1010,7 @@ ruleisAtSingle returns [EObject current=null]
 						$current,
 						"angle_res",
 						lv_angle_res_6_0,
-						"org.xtext.CPTester.Angle_res");
+						"org.xtext.Operations.Angle_res");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -1007,7 +1070,7 @@ ruleisAt returns [EObject current=null]
 						$current,
 						"angle",
 						lv_angle_2_0,
-						"org.xtext.CPTester.Angle");
+						"org.xtext.Operations.Angle");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -1030,7 +1093,7 @@ ruleisAt returns [EObject current=null]
 						$current,
 						"angle_res",
 						lv_angle_res_4_0,
-						"org.xtext.CPTester.Angle_res");
+						"org.xtext.Operations.Angle_res");
 					afterParserOrEnumRuleCall();
 				}
 			)

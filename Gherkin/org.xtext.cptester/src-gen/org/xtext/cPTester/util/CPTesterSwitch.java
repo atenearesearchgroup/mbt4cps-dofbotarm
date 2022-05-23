@@ -87,40 +87,10 @@ public class CPTesterSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case CPTesterPackage.INITIAL:
-      {
-        Initial initial = (Initial)theEObject;
-        T result = caseInitial(initial);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case CPTesterPackage.WHEN:
       {
         When when = (When)theEObject;
         T result = caseWhen(when);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case CPTesterPackage.COMMAND:
-      {
-        Command command = (Command)theEObject;
-        T result = caseCommand(command);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case CPTesterPackage.ROTATE_SERVO:
-      {
-        rotateServo rotateServo = (rotateServo)theEObject;
-        T result = caserotateServo(rotateServo);
-        if (result == null) result = caseCommand(rotateServo);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case CPTesterPackage.ROTATE_ALL_SERVOS:
-      {
-        rotateAllServos rotateAllServos = (rotateAllServos)theEObject;
-        T result = caserotateAllServos(rotateAllServos);
-        if (result == null) result = caseCommand(rotateAllServos);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -131,68 +101,10 @@ public class CPTesterSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case CPTesterPackage.RESULT:
-      {
-        Result result = (Result)theEObject;
-        T theResult = caseResult(result);
-        if (theResult == null) theResult = defaultCase(theEObject);
-        return theResult;
-      }
       case CPTesterPackage.AND:
       {
         And and = (And)theEObject;
         T result = caseAnd(and);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case CPTesterPackage.SOLUTION:
-      {
-        Solution solution = (Solution)theEObject;
-        T result = caseSolution(solution);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case CPTesterPackage.CONDITIONS:
-      {
-        Conditions conditions = (Conditions)theEObject;
-        T result = caseConditions(conditions);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case CPTesterPackage.IS_AT_SINGLE:
-      {
-        isAtSingle isAtSingle = (isAtSingle)theEObject;
-        T result = caseisAtSingle(isAtSingle);
-        if (result == null) result = caseSolution(isAtSingle);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case CPTesterPackage.IS_AT:
-      {
-        isAt isAt = (isAt)theEObject;
-        T result = caseisAt(isAt);
-        if (result == null) result = caseSolution(isAt);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case CPTesterPackage.ANGLE_RES:
-      {
-        Angle_res angle_res = (Angle_res)theEObject;
-        T result = caseAngle_res(angle_res);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case CPTesterPackage.ANGLE:
-      {
-        Angle angle = (Angle)theEObject;
-        T result = caseAngle(angle);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case CPTesterPackage.TIME:
-      {
-        Time time = (Time)theEObject;
-        T result = caseTime(time);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -233,22 +145,6 @@ public class CPTesterSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Initial</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Initial</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseInitial(Initial object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>When</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -260,54 +156,6 @@ public class CPTesterSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseWhen(When object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Command</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Command</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseCommand(Command object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>rotate Servo</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>rotate Servo</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caserotateServo(rotateServo object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>rotate All Servos</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>rotate All Servos</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caserotateAllServos(rotateAllServos object)
   {
     return null;
   }
@@ -329,22 +177,6 @@ public class CPTesterSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Result</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Result</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseResult(Result object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>And</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -356,118 +188,6 @@ public class CPTesterSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseAnd(And object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Solution</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Solution</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseSolution(Solution object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Conditions</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Conditions</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseConditions(Conditions object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>is At Single</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>is At Single</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseisAtSingle(isAtSingle object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>is At</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>is At</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseisAt(isAt object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Angle res</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Angle res</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseAngle_res(Angle_res object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Angle</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Angle</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseAngle(Angle object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Time</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Time</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseTime(Time object)
   {
     return null;
   }

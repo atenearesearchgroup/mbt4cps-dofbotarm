@@ -7,6 +7,8 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
 
+import org.xtext.operations.Operaciones;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Given</b></em>'.
@@ -50,7 +52,7 @@ public interface Given extends EObject
 
   /**
    * Returns the value of the '<em><b>Initial</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.cPTester.Initial}.
+   * The list contents are of type {@link org.xtext.operations.Operaciones}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Initial</em>' containment reference list.
@@ -58,6 +60,6 @@ public interface Given extends EObject
    * @model containment="true"
    * @generated
    */
-  EList<Initial> getInitial();
+  EList<Operaciones> getInitial();
 
 } // Given

@@ -3,70 +3,53 @@
  */
 package org.xtext.operations.impl;
 
-import org.eclipse.emf.common.notify.Notification;
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.operations.OperationsPackage;
-import org.xtext.operations.result;
-import org.xtext.operations.time;
+import org.xtext.operations.Result;
+import org.xtext.operations.Time;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>result</b></em>'.
+ * An implementation of the model object '<em><b>Result</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.operations.impl.resultImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.operations.impl.resultImpl#getTIME <em>TIME</em>}</li>
+ *   <li>{@link org.xtext.operations.impl.ResultImpl#getTime <em>Time</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class resultImpl extends SolutionImpl implements result
+public class ResultImpl extends OperacionesImpl implements Result
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The cached value of the '{@link #getTime() <em>Time</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getTime()
    * @generated
    * @ordered
    */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
-
-  /**
-   * The cached value of the '{@link #getTIME() <em>TIME</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getTIME()
-   * @generated
-   * @ordered
-   */
-  protected time time;
+  protected EList<Time> time;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected resultImpl()
+  protected ResultImpl()
   {
     super();
   }
@@ -88,73 +71,13 @@ public class resultImpl extends SolutionImpl implements result
    * @generated
    */
   @Override
-  public String getName()
+  public EList<Time> getTime()
   {
-    return name;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setName(String newName)
-  {
-    String oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OperationsPackage.RESULT__NAME, oldName, name));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public time getTIME()
-  {
+    if (time == null)
+    {
+      time = new EObjectContainmentEList<Time>(Time.class, this, OperationsPackage.RESULT__TIME);
+    }
     return time;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetTIME(time newTIME, NotificationChain msgs)
-  {
-    time oldTIME = time;
-    time = newTIME;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OperationsPackage.RESULT__TIME, oldTIME, newTIME);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setTIME(time newTIME)
-  {
-    if (newTIME != time)
-    {
-      NotificationChain msgs = null;
-      if (time != null)
-        msgs = ((InternalEObject)time).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OperationsPackage.RESULT__TIME, null, msgs);
-      if (newTIME != null)
-        msgs = ((InternalEObject)newTIME).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OperationsPackage.RESULT__TIME, null, msgs);
-      msgs = basicSetTIME(newTIME, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OperationsPackage.RESULT__TIME, newTIME, newTIME));
   }
 
   /**
@@ -168,7 +91,7 @@ public class resultImpl extends SolutionImpl implements result
     switch (featureID)
     {
       case OperationsPackage.RESULT__TIME:
-        return basicSetTIME(null, msgs);
+        return ((InternalEList<?>)getTime()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -183,10 +106,8 @@ public class resultImpl extends SolutionImpl implements result
   {
     switch (featureID)
     {
-      case OperationsPackage.RESULT__NAME:
-        return getName();
       case OperationsPackage.RESULT__TIME:
-        return getTIME();
+        return getTime();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -196,16 +117,15 @@ public class resultImpl extends SolutionImpl implements result
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case OperationsPackage.RESULT__NAME:
-        setName((String)newValue);
-        return;
       case OperationsPackage.RESULT__TIME:
-        setTIME((time)newValue);
+        getTime().clear();
+        getTime().addAll((Collection<? extends Time>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -221,11 +141,8 @@ public class resultImpl extends SolutionImpl implements result
   {
     switch (featureID)
     {
-      case OperationsPackage.RESULT__NAME:
-        setName(NAME_EDEFAULT);
-        return;
       case OperationsPackage.RESULT__TIME:
-        setTIME((time)null);
+        getTime().clear();
         return;
     }
     super.eUnset(featureID);
@@ -241,29 +158,10 @@ public class resultImpl extends SolutionImpl implements result
   {
     switch (featureID)
     {
-      case OperationsPackage.RESULT__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case OperationsPackage.RESULT__TIME:
-        return time != null;
+        return time != null && !time.isEmpty();
     }
     return super.eIsSet(featureID);
   }
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(')');
-    return result.toString();
-  }
-
-} //resultImpl
+} //ResultImpl

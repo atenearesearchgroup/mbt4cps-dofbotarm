@@ -21,8 +21,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.cPTester.And;
 import org.xtext.cPTester.CPTesterPackage;
-import org.xtext.cPTester.Conditions;
-import org.xtext.cPTester.Solution;
+
+import org.xtext.operations.Operaciones;
 
 /**
  * <!-- begin-user-doc -->
@@ -69,7 +69,7 @@ public class AndImpl extends MinimalEObjectImpl.Container implements And
    * @generated
    * @ordered
    */
-  protected EList<Conditions> conditions;
+  protected EList<Operaciones> conditions;
 
   /**
    * The cached value of the '{@link #getSolution() <em>Solution</em>}' containment reference list.
@@ -79,7 +79,7 @@ public class AndImpl extends MinimalEObjectImpl.Container implements And
    * @generated
    * @ordered
    */
-  protected EList<Solution> solution;
+  protected EList<Operaciones> solution;
 
   /**
    * <!-- begin-user-doc -->
@@ -133,11 +133,11 @@ public class AndImpl extends MinimalEObjectImpl.Container implements And
    * @generated
    */
   @Override
-  public EList<Conditions> getConditions()
+  public EList<Operaciones> getConditions()
   {
     if (conditions == null)
     {
-      conditions = new EObjectContainmentEList<Conditions>(Conditions.class, this, CPTesterPackage.AND__CONDITIONS);
+      conditions = new EObjectContainmentEList<Operaciones>(Operaciones.class, this, CPTesterPackage.AND__CONDITIONS);
     }
     return conditions;
   }
@@ -148,11 +148,11 @@ public class AndImpl extends MinimalEObjectImpl.Container implements And
    * @generated
    */
   @Override
-  public EList<Solution> getSolution()
+  public EList<Operaciones> getSolution()
   {
     if (solution == null)
     {
-      solution = new EObjectContainmentEList<Solution>(Solution.class, this, CPTesterPackage.AND__SOLUTION);
+      solution = new EObjectContainmentEList<Operaciones>(Operaciones.class, this, CPTesterPackage.AND__SOLUTION);
     }
     return solution;
   }
@@ -211,11 +211,11 @@ public class AndImpl extends MinimalEObjectImpl.Container implements And
         return;
       case CPTesterPackage.AND__CONDITIONS:
         getConditions().clear();
-        getConditions().addAll((Collection<? extends Conditions>)newValue);
+        getConditions().addAll((Collection<? extends Operaciones>)newValue);
         return;
       case CPTesterPackage.AND__SOLUTION:
         getSolution().clear();
-        getSolution().addAll((Collection<? extends Solution>)newValue);
+        getSolution().addAll((Collection<? extends Operaciones>)newValue);
         return;
     }
     super.eSet(featureID, newValue);

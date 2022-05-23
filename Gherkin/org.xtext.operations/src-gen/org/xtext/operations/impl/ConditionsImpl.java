@@ -3,15 +3,21 @@
  */
 package org.xtext.operations.impl;
 
-import org.eclipse.emf.common.notify.Notification;
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.operations.Conditions;
 import org.xtext.operations.OperationsPackage;
+import org.xtext.operations.Time;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,32 +27,22 @@ import org.xtext.operations.OperationsPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.operations.impl.ConditionsImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.operations.impl.ConditionsImpl#getTime <em>Time</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ConditionsImpl extends MinimalEObjectImpl.Container implements Conditions
+public class ConditionsImpl extends OperacionesImpl implements Conditions
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The cached value of the '{@link #getTime() <em>Time</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getTime()
    * @generated
    * @ordered
    */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
+  protected EList<Time> time;
 
   /**
    * <!-- begin-user-doc -->
@@ -75,9 +71,13 @@ public class ConditionsImpl extends MinimalEObjectImpl.Container implements Cond
    * @generated
    */
   @Override
-  public String getName()
+  public EList<Time> getTime()
   {
-    return name;
+    if (time == null)
+    {
+      time = new EObjectContainmentEList<Time>(Time.class, this, OperationsPackage.CONDITIONS__TIME);
+    }
+    return time;
   }
 
   /**
@@ -86,12 +86,14 @@ public class ConditionsImpl extends MinimalEObjectImpl.Container implements Cond
    * @generated
    */
   @Override
-  public void setName(String newName)
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-    String oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OperationsPackage.CONDITIONS__NAME, oldName, name));
+    switch (featureID)
+    {
+      case OperationsPackage.CONDITIONS__TIME:
+        return ((InternalEList<?>)getTime()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -104,8 +106,8 @@ public class ConditionsImpl extends MinimalEObjectImpl.Container implements Cond
   {
     switch (featureID)
     {
-      case OperationsPackage.CONDITIONS__NAME:
-        return getName();
+      case OperationsPackage.CONDITIONS__TIME:
+        return getTime();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -115,13 +117,15 @@ public class ConditionsImpl extends MinimalEObjectImpl.Container implements Cond
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case OperationsPackage.CONDITIONS__NAME:
-        setName((String)newValue);
+      case OperationsPackage.CONDITIONS__TIME:
+        getTime().clear();
+        getTime().addAll((Collection<? extends Time>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -137,8 +141,8 @@ public class ConditionsImpl extends MinimalEObjectImpl.Container implements Cond
   {
     switch (featureID)
     {
-      case OperationsPackage.CONDITIONS__NAME:
-        setName(NAME_EDEFAULT);
+      case OperationsPackage.CONDITIONS__TIME:
+        getTime().clear();
         return;
     }
     super.eUnset(featureID);
@@ -154,27 +158,10 @@ public class ConditionsImpl extends MinimalEObjectImpl.Container implements Cond
   {
     switch (featureID)
     {
-      case OperationsPackage.CONDITIONS__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case OperationsPackage.CONDITIONS__TIME:
+        return time != null && !time.isEmpty();
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(')');
-    return result.toString();
   }
 
 } //ConditionsImpl

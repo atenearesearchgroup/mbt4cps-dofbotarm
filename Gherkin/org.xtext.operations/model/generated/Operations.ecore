@@ -1,6 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="operations" nsURI="http://www.xtext.org/Operations" nsPrefix="operations">
+  <eClassifiers xsi:type="ecore:EClass" name="Operaciones">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Initial" eSuperTypes="#//Operaciones">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="time" upperBound="-1" eType="#//Time"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Command" eSuperTypes="#//Operaciones">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angle" upperBound="-1"
+        eType="#//Angle" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="time" upperBound="-1" eType="#//Time"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="rotateServo" eSuperTypes="#//Command">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="servo" upperBound="-1"
+        eType="#//Servo" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="rotateAllServos" eSuperTypes="#//Command"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Result" eSuperTypes="#//Operaciones">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="time" upperBound="-1" eType="#//Time"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Solution" eSuperTypes="#//Operaciones">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angle" upperBound="-1"
+        eType="#//Angle" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angle_res" upperBound="-1"
+        eType="#//Angle_res" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Conditions" eSuperTypes="#//Operaciones">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="time" upperBound="-1" eType="#//Time"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="isAtSingle" eSuperTypes="#//Solution">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="servo" upperBound="-1"
+        eType="#//Servo" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="isAt" eSuperTypes="#//Solution"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Angle_res">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="angle_res" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Angle">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="angle" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Time">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="time" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Servo">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="servo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
