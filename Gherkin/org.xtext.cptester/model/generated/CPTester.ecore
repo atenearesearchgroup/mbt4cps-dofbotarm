@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="cPTester" nsURI="http://www.xtext.org/CPTester" nsPrefix="cPTester">
+  <eClassifiers xsi:type="ecore:EClass" name="Scenario">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="surname" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="given" eType="#//Given"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="when" eType="#//When" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="then" eType="#//Then" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="and" eType="#//And" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Given">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="initial" upperBound="-1"
+        eType="ecore:EClass platform:/resource/org.xtext.initial/model/generated/Initial.ecore#//Initial"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="When">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="command" upperBound="-1"
+        eType="ecore:EClass platform:/resource/org.xtext.command/model/generated/Command.ecore#//Command"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Then">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="result" upperBound="-1"
+        eType="ecore:EClass platform:/resource/org.xtext.result/model/generated/Result.ecore#//Result"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="And">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="conditions" upperBound="-1"
+        eType="ecore:EClass platform:/resource/org.xtext.condition/model/generated/Condition.ecore#//Conditions"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="solution" upperBound="-1"
+        eType="ecore:EClass platform:/resource/org.xtext.solution/model/generated/Solution.ecore#//Solution"
+        containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>

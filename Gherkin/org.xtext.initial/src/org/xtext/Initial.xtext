@@ -1,0 +1,10 @@
+grammar org.xtext.Initial with org.xtext.Command
+
+generate initial "http://www.xtext.org/Initial"
+
+Initial:
+	name='posInicial'
+	'('
+	(time+=Time)
+	')'
+;

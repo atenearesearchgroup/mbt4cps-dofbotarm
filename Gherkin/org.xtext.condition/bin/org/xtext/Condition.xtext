@@ -1,0 +1,10 @@
+grammar org.xtext.Condition with org.xtext.Solution
+
+generate condition "http://www.xtext.org/Condition"
+
+Conditions:
+	name='NotLaterThan'
+	'('
+	(time+=Time)
+	')'
+;

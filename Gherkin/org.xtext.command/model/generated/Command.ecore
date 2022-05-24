@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="command" nsURI="http://www.xtext.org/Command" nsPrefix="command">
+  <eClassifiers xsi:type="ecore:EClass" name="Command">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="time" upperBound="-1" eType="ecore:EClass platform:/resource/org.xtext.solution/model/generated/Solution.ecore#//Time"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="rotateServo" eSuperTypes="#//Command">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="servo" upperBound="-1"
+        eType="ecore:EClass platform:/resource/org.xtext.solution/model/generated/Solution.ecore#//Servo"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angle" upperBound="-1"
+        eType="ecore:EClass platform:/resource/org.xtext.solution/model/generated/Solution.ecore#//Angle"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="rotateAllServos" eSuperTypes="#//Command">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angle1" upperBound="-1"
+        eType="ecore:EClass platform:/resource/org.xtext.solution/model/generated/Solution.ecore#//Angle"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angle2" upperBound="-1"
+        eType="ecore:EClass platform:/resource/org.xtext.solution/model/generated/Solution.ecore#//Angle"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angle3" upperBound="-1"
+        eType="ecore:EClass platform:/resource/org.xtext.solution/model/generated/Solution.ecore#//Angle"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angle4" upperBound="-1"
+        eType="ecore:EClass platform:/resource/org.xtext.solution/model/generated/Solution.ecore#//Angle"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angle5" upperBound="-1"
+        eType="ecore:EClass platform:/resource/org.xtext.solution/model/generated/Solution.ecore#//Angle"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angle6" upperBound="-1"
+        eType="ecore:EClass platform:/resource/org.xtext.solution/model/generated/Solution.ecore#//Angle"
+        containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>

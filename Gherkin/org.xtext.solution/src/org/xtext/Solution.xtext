@@ -1,0 +1,55 @@
+grammar org.xtext.Solution with org.eclipse.xtext.common.Terminals
+
+generate solution "http://www.xtext.org/Solution"
+
+Solution:
+	isAtSingle | isAt
+;
+
+isAtSingle:
+	name='isAtSingle'
+	'('
+	(servo+=Servo)
+	','
+	(angle+=Angle)
+	','
+	(angle_res+=Angle_res)
+	')'
+;
+
+isAt:
+	name='isAt'
+	'('
+	(angle1+=Angle)
+	','
+	(angle2+=Angle)
+	','
+	(angle3+=Angle)
+	','
+	(angle4+=Angle)
+	','
+	(angle5+=Angle)
+	','
+	(angle6+=Angle)
+	','
+	(angle_res+=Angle_res)
+	')'
+;
+
+Angle_res:
+	angle_res=INT
+;
+
+
+Angle:
+	angle=INT
+;
+
+Time:
+	time=INT
+;
+
+
+Servo:
+	servo=INT
+;

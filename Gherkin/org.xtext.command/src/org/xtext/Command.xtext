@@ -1,0 +1,37 @@
+grammar org.xtext.Command with org.xtext.Result
+
+generate command "http://www.xtext.org/Command"
+
+Command:
+	rotateServo | rotateAllServos
+;
+
+rotateServo:
+	name='rotateServo'
+	'('
+	(servo+=Servo)
+	','
+	(angle+=Angle)
+	','
+	(time+=Time)
+	')'
+;
+
+rotateAllServos:
+	name='rotateAllServos'
+	'('
+	(angle1+=Angle)
+	','
+	(angle2+=Angle)
+	','
+	(angle3+=Angle)
+	','
+	(angle4+=Angle)
+	','
+	(angle5+=Angle)
+	','
+	(angle6+=Angle)
+	','	
+	(time+=Time)
+	')'
+;

@@ -1,0 +1,10 @@
+grammar org.xtext.Result with org.xtext.Condition
+
+generate result "http://www.xtext.org/Result"
+
+Result:
+	name='result'
+	'('
+	(time+=Time)
+	')'
+;

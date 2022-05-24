@@ -1,0 +1,54 @@
+grammar org.xtext.CPTester with org.xtext.Initial
+
+generate cPTester "http://www.xtext.org/CPTester"
+
+Scenario:
+	'Scenario' surname=STRING
+	'{'
+		given=Given
+		when=When
+		then=Then
+		and=And
+	'}'
+;
+
+
+//////////////////////////////////////////////////
+
+Given:
+	name='GIVEN'
+	(initial+=Initial)
+;
+
+
+
+//////////////////////////////////////////////////
+
+When:
+	name='WHEN'
+	(command+=Command)
+;
+
+
+//////////////////////////////////////////////////
+
+Then:
+	name='THEN'
+	(result+=Result)
+;
+
+//////////////////////////////////////////////////
+
+And:
+	name='AND'
+	(conditions+=Conditions)
+	(solution+=Solution)
+	
+;
+
+
+
+
+
+
+
