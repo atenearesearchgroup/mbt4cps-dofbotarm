@@ -8,6 +8,8 @@ import com.google.inject.Singleton;
 import java.util.List;
 import org.eclipse.xtext.Alternatives;
 import org.eclipse.xtext.Assignment;
+import org.eclipse.xtext.EnumLiteralDeclaration;
+import org.eclipse.xtext.EnumRule;
 import org.eclipse.xtext.Grammar;
 import org.eclipse.xtext.GrammarUtil;
 import org.eclipse.xtext.Group;
@@ -319,6 +321,34 @@ public class SolutionGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		public RuleCall getServoINTTerminalRuleCall_0() { return cServoINTTerminalRuleCall_0; }
 	}
 	
+	public class StateElements extends AbstractElementFinder.AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Solution.State");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final EnumLiteralDeclaration cTRUEEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cTRUETrueKeyword_0_0 = (Keyword)cTRUEEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cFALSEEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cFALSEFalseKeyword_1_0 = (Keyword)cFALSEEnumLiteralDeclaration_1.eContents().get(0);
+		
+		//enum State:
+		//    TRUE='true' | FALSE='false'
+		//;
+		public EnumRule getRule() { return rule; }
+		
+		//TRUE='true' | FALSE='false'
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//TRUE='true'
+		public EnumLiteralDeclaration getTRUEEnumLiteralDeclaration_0() { return cTRUEEnumLiteralDeclaration_0; }
+		
+		//'true'
+		public Keyword getTRUETrueKeyword_0_0() { return cTRUETrueKeyword_0_0; }
+		
+		//FALSE='false'
+		public EnumLiteralDeclaration getFALSEEnumLiteralDeclaration_1() { return cFALSEEnumLiteralDeclaration_1; }
+		
+		//'false'
+		public Keyword getFALSEFalseKeyword_1_0() { return cFALSEFalseKeyword_1_0; }
+	}
 	
 	private final SolutionElements pSolution;
 	private final IsAtSingleElements pIsAtSingle;
@@ -327,6 +357,7 @@ public class SolutionGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	private final AngleElements pAngle;
 	private final TimeElements pTime;
 	private final ServoElements pServo;
+	private final StateElements eState;
 	
 	private final Grammar grammar;
 	
@@ -344,6 +375,7 @@ public class SolutionGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		this.pAngle = new AngleElements();
 		this.pTime = new TimeElements();
 		this.pServo = new ServoElements();
+		this.eState = new StateElements();
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -470,6 +502,17 @@ public class SolutionGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	
 	public ParserRule getServoRule() {
 		return getServoAccess().getRule();
+	}
+	
+	//enum State:
+	//    TRUE='true' | FALSE='false'
+	//;
+	public StateElements getStateAccess() {
+		return eState;
+	}
+	
+	public EnumRule getStateRule() {
+		return getStateAccess().getRule();
 	}
 	
 	//terminal ID: '^'?('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;

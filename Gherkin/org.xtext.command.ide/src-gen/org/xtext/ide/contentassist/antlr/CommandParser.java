@@ -33,6 +33,7 @@ public class CommandParser extends AbstractContentAssistParser {
 		private static void init(ImmutableMap.Builder<AbstractElement, String> builder, CommandGrammarAccess grammarAccess) {
 			builder.put(grammarAccess.getCommandAccess().getAlternatives(), "rule__Command__Alternatives");
 			builder.put(grammarAccess.getSolutionAccess().getAlternatives(), "rule__Solution__Alternatives");
+			builder.put(grammarAccess.getStateAccess().getAlternatives(), "rule__State__Alternatives");
 			builder.put(grammarAccess.getRotateServoAccess().getGroup(), "rule__RotateServo__Group__0");
 			builder.put(grammarAccess.getRotateAllServosAccess().getGroup(), "rule__RotateAllServos__Group__0");
 			builder.put(grammarAccess.getResultAccess().getGroup(), "rule__Result__Group__0");

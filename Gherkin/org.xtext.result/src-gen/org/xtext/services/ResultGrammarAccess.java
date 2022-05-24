@@ -7,6 +7,7 @@ import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import java.util.List;
 import org.eclipse.xtext.Assignment;
+import org.eclipse.xtext.EnumRule;
 import org.eclipse.xtext.Grammar;
 import org.eclipse.xtext.GrammarUtil;
 import org.eclipse.xtext.Group;
@@ -247,6 +248,17 @@ public class ResultGrammarAccess extends AbstractElementFinder.AbstractGrammarEl
 	
 	public ParserRule getServoRule() {
 		return getServoAccess().getRule();
+	}
+	
+	//enum State:
+	//    TRUE='true' | FALSE='false'
+	//;
+	public SolutionGrammarAccess.StateElements getStateAccess() {
+		return gaSolution.getStateAccess();
+	}
+	
+	public EnumRule getStateRule() {
+		return getStateAccess().getRule();
 	}
 	
 	//terminal ID: '^'?('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;

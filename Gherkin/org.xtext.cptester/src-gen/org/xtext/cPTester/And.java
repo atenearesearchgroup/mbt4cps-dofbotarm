@@ -10,6 +10,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.xtext.condition.Conditions;
 
 import org.xtext.solution.Solution;
+import org.xtext.solution.State;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,6 +24,7 @@ import org.xtext.solution.Solution;
  *   <li>{@link org.xtext.cPTester.And#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.cPTester.And#getConditions <em>Conditions</em>}</li>
  *   <li>{@link org.xtext.cPTester.And#getSolution <em>Solution</em>}</li>
+ *   <li>{@link org.xtext.cPTester.And#getState <em>State</em>}</li>
  * </ul>
  *
  * @see org.xtext.cPTester.CPTesterPackage#getAnd()
@@ -76,5 +78,30 @@ public interface And extends EObject
    * @generated
    */
   EList<Solution> getSolution();
+
+  /**
+   * Returns the value of the '<em><b>State</b></em>' attribute.
+   * The literals are from the enumeration {@link org.xtext.solution.State}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>State</em>' attribute.
+   * @see org.xtext.solution.State
+   * @see #setState(State)
+   * @see org.xtext.cPTester.CPTesterPackage#getAnd_State()
+   * @model
+   * @generated
+   */
+  State getState();
+
+  /**
+   * Sets the value of the '{@link org.xtext.cPTester.And#getState <em>State</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>State</em>' attribute.
+   * @see org.xtext.solution.State
+   * @see #getState()
+   * @generated
+   */
+  void setState(State value);
 
 } // And

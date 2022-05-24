@@ -9,6 +9,13 @@ import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
 import org.xtext.cPTester.Scenario
 import org.xtext.command.rotateServo
+import org.xtext.solution.Time
+import org.xtext.solution.Servo
+import org.xtext.solution.Angle
+import org.xtext.command.rotateAllServos
+import org.xtext.solution.isAtSingle
+import org.xtext.solution.Angle_res
+import org.xtext.solution.isAt
 
 /**
  * Generates code from your model files on save.
@@ -26,19 +33,48 @@ class CPTesterGenerator extends AbstractGenerator {
 	
 	def toCode(Scenario scenario) {
 		'''
-		
-		«FOR cmd : scenario.when.command»
-			«IF cmd.eClass.name.equals('rotateServo')»
-				«var rot = cmd as rotateServo»
-					«rot.servo.get(0)»
-					«rot.angle.get(0)»
-					«rot.time.get(0)»
-					7777
-			«ENDIF»
-		«ENDFOR»
-		
-		
-		
+		Class: Machine
+			StateMachine: «scenario.surname»
+				PseudoState: «FOR giv : scenario.given.initial»«giv.eClass.name»«ENDFOR»
+				PseudoState: Final
+				PseudoState: Error
+				
+				Transition: («FOR giv : scenario.given.initial»«giv.eClass.name»«ENDFOR»->«scenario.given.eClass.name»)
+						Guard: []
+				
+				State: «scenario.given.eClass.name»
+						Activity: Arm.BaseServo.ServosOperations.«FOR giv : scenario.given.initial»«giv.name»(«FOR tm : giv.time»«var value = tm as Time»«value.time»«ENDFOR»)«ENDFOR»
+							
+				State: «scenario.given.eClass.name»Warning
+						Activity: MessReport(mWarning, Warning Time)
+				
+				Transition: («scenario.given.eClass.name»Warning->«scenario.given.eClass.name»)
+						Guard: []			
+							
+				Transition: («scenario.given.eClass.name»->«scenario.given.eClass.name»Warning)
+						Guard: Arm.BaseServo.ServosOperations.«FOR giv : scenario.given.initial»«FOR tm : giv.time»«tm.eClass.name»(«var value = tm as Time»«value.time»«ENDFOR»)«ENDFOR»
+							
+				Transition: («scenario.given.eClass.name»->«scenario.when.eClass.name»)
+						Guard: Arm.BaseServo.ServosOperations.isAtOperation(90, 90, 90, 90, 90, 90, 1000)
+							
+				State: «scenario.when.eClass.name»
+					«FOR cmd : scenario.when.command»«IF cmd.eClass.name.equals('rotateServo')»«var rot = cmd as rotateServo»
+						Activity: Arm.BaseServo.ServosOperations.«cmd.eClass.name»(«FOR ser : rot.servo»«var value = ser as Servo»«value.servo»«ENDFOR», «FOR ang : rot.angle»«var value = ang as Angle»«value.angle»«ENDFOR», «FOR tmp : rot.time»«var value = tmp as Time»«value.time»«ENDFOR»)
+					«ELSEIF cmd.eClass.name.equals('rotateAllServos')»«var rot = cmd as rotateAllServos»
+						Activity: Arm.BaseServo.ServosOperations.«cmd.eClass.name»(«FOR ang1 : rot.angle1»«var value = ang1 as Angle»«value.angle»«ENDFOR», «FOR ang2 : rot.angle2»«var value = ang2 as Angle»«value.angle»«ENDFOR», «FOR ang3 : rot.angle3»«var value = ang3 as Angle»«value.angle»«ENDFOR», «FOR ang4 : rot.angle4»«var value = ang4 as Angle»«value.angle»«ENDFOR», «FOR ang5 : rot.angle5»«var value = ang5 as Angle»«value.angle»«ENDFOR», «FOR ang6 : rot.angle6»«var value = ang6 as Angle»«value.angle»«ENDFOR», «FOR tmp : rot.time»«var value = tmp as Time»«value.time»«ENDFOR»)
+					«ENDIF»
+				«ENDFOR»
+							
+				Transition: («scenario.when.eClass.name»->Error)
+						Guard: «FOR cond : scenario.and.conditions»«cond.name»«ENDFOR»(oRunTime, «FOR cond : scenario.and.conditions»«FOR tm : cond.time»«var value = tm as Time»«value.time»«ENDFOR»«ENDFOR»)
+							
+				Transition: («scenario.when.eClass.name»->Final)
+					«FOR sol : scenario.and.solution»«IF sol.eClass.name.equals('isAtSingle')»«var ias = sol as isAtSingle»
+						Guard: Arm.BaseServo.ServosOperations.«sol.eClass.name»(«FOR ser : ias.servo»«var value = ser as Servo»«value.servo»«ENDFOR», «FOR ang : ias.angle»«var value = ang as Angle»«value.angle»«ENDFOR», «FOR tmp : ias.angle_res»«var value = tmp as Angle_res»«value.angle_res»«ENDFOR»)
+					«ELSEIF sol.eClass.name.equals('isAt')»«var ia = sol as isAt»
+						Guard: Arm.BaseServo.ServosOperations.«sol.eClass.name»(«FOR ang : ia.angle1»«var value = ang as Angle»«value.angle»«ENDFOR», «FOR ang : ia.angle2»«var value = ang as Angle»«value.angle»«ENDFOR», «FOR ang : ia.angle2»«var value = ang as Angle»«value.angle»«ENDFOR», «FOR ang : ia.angle4»«var value = ang as Angle»«value.angle»«ENDFOR», «FOR ang : ia.angle5»«var value = ang as Angle»«value.angle»«ENDFOR», «FOR ang : ia.angle6»«var value = ang as Angle»«value.angle»«ENDFOR», «FOR ang : ia.angle_res»«var value = ang as Angle_res»«value.angle_res»«ENDFOR»)
+					«ENDIF»
+				«ENDFOR»
 		''' 
 	}
 

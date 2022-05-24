@@ -53,3 +53,7 @@ Time:
 Servo:
 	servo=INT
 ;
+
+enum State: 
+	TRUE='true' | FALSE='false'
+;

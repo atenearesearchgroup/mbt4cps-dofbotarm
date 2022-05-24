@@ -5,6 +5,7 @@ package org.xtext.solution;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -352,6 +353,16 @@ public interface SolutionPackage extends EPackage
    */
   int SERVO_FEATURE_COUNT = 1;
 
+  /**
+   * The meta object id for the '{@link org.xtext.solution.State <em>State</em>}' enum.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.solution.State
+   * @see org.xtext.solution.impl.SolutionPackageImpl#getState()
+   * @generated
+   */
+  int STATE = 7;
+
 
   /**
    * Returns the meta object for class '{@link org.xtext.solution.Solution <em>Solution</em>}'.
@@ -578,6 +589,16 @@ public interface SolutionPackage extends EPackage
   EAttribute getServo_Servo();
 
   /**
+   * Returns the meta object for enum '{@link org.xtext.solution.State <em>State</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for enum '<em>State</em>'.
+   * @see org.xtext.solution.State
+   * @generated
+   */
+  EEnum getState();
+
+  /**
    * Returns the factory that creates the instances of the model.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -781,6 +802,16 @@ public interface SolutionPackage extends EPackage
      * @generated
      */
     EAttribute SERVO__SERVO = eINSTANCE.getServo_Servo();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.solution.State <em>State</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.solution.State
+     * @see org.xtext.solution.impl.SolutionPackageImpl#getState()
+     * @generated
+     */
+    EEnum STATE = eINSTANCE.getState();
 
   }
 

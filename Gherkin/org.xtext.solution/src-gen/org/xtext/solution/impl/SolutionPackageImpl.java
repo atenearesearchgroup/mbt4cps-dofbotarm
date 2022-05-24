@@ -5,6 +5,7 @@ package org.xtext.solution.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -16,6 +17,7 @@ import org.xtext.solution.Servo;
 import org.xtext.solution.Solution;
 import org.xtext.solution.SolutionFactory;
 import org.xtext.solution.SolutionPackage;
+import org.xtext.solution.State;
 import org.xtext.solution.Time;
 import org.xtext.solution.isAt;
 import org.xtext.solution.isAtSingle;
@@ -76,6 +78,13 @@ public class SolutionPackageImpl extends EPackageImpl implements SolutionPackage
    * @generated
    */
   private EClass servoEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EEnum stateEEnum = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -377,6 +386,17 @@ public class SolutionPackageImpl extends EPackageImpl implements SolutionPackage
    * @generated
    */
   @Override
+  public EEnum getState()
+  {
+    return stateEEnum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public SolutionFactory getSolutionFactory()
   {
     return (SolutionFactory)getEFactoryInstance();
@@ -429,6 +449,9 @@ public class SolutionPackageImpl extends EPackageImpl implements SolutionPackage
 
     servoEClass = createEClass(SERVO);
     createEAttribute(servoEClass, SERVO__SERVO);
+
+    // Create enums
+    stateEEnum = createEEnum(STATE);
   }
 
   /**
@@ -491,6 +514,11 @@ public class SolutionPackageImpl extends EPackageImpl implements SolutionPackage
 
     initEClass(servoEClass, Servo.class, "Servo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getServo_Servo(), ecorePackage.getEInt(), "servo", null, 0, 1, Servo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    // Initialize enums and add enum literals
+    initEEnum(stateEEnum, State.class, "State");
+    addEEnumLiteral(stateEEnum, State.TRUE);
+    addEEnumLiteral(stateEEnum, State.FALSE);
 
     // Create resource
     createResource(eNS_URI);

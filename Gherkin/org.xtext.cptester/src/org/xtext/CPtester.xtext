@@ -42,8 +42,8 @@ Then:
 And:
 	name='AND'
 	(conditions+=Conditions)
-	(solution+=Solution)
-	
+	'Query' (solution+=Solution)
+	'returns' state=State
 ;
 
 

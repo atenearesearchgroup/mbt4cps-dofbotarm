@@ -356,6 +356,17 @@ public class CPTesterPackageImpl extends EPackageImpl implements CPTesterPackage
    * @generated
    */
   @Override
+  public EAttribute getAnd_State()
+  {
+    return (EAttribute)andEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public CPTesterFactory getCPTesterFactory()
   {
     return (CPTesterFactory)getEFactoryInstance();
@@ -404,6 +415,7 @@ public class CPTesterPackageImpl extends EPackageImpl implements CPTesterPackage
     createEAttribute(andEClass, AND__NAME);
     createEReference(andEClass, AND__CONDITIONS);
     createEReference(andEClass, AND__SOLUTION);
+    createEAttribute(andEClass, AND__STATE);
   }
 
   /**
@@ -467,6 +479,7 @@ public class CPTesterPackageImpl extends EPackageImpl implements CPTesterPackage
     initEAttribute(getAnd_Name(), ecorePackage.getEString(), "name", null, 0, 1, And.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getAnd_Conditions(), theConditionPackage.getConditions(), null, "conditions", null, 0, -1, And.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getAnd_Solution(), theSolutionPackage.getSolution(), null, "solution", null, 0, -1, And.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAnd_State(), theSolutionPackage.getState(), "state", null, 0, 1, And.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

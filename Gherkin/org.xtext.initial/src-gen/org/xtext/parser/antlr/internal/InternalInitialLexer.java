@@ -212,10 +212,10 @@ public class InternalInitialLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalInitial.g:871:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // InternalInitial.g:871:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalInitial.g:872:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // InternalInitial.g:872:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // InternalInitial.g:871:11: ( '^' )?
+            // InternalInitial.g:872:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -224,7 +224,7 @@ public class InternalInitialLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // InternalInitial.g:871:11: '^'
+                    // InternalInitial.g:872:11: '^'
                     {
                     match('^'); 
 
@@ -242,7 +242,7 @@ public class InternalInitialLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalInitial.g:871:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalInitial.g:872:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -291,10 +291,10 @@ public class InternalInitialLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalInitial.g:873:10: ( ( '0' .. '9' )+ )
-            // InternalInitial.g:873:12: ( '0' .. '9' )+
+            // InternalInitial.g:874:10: ( ( '0' .. '9' )+ )
+            // InternalInitial.g:874:12: ( '0' .. '9' )+
             {
-            // InternalInitial.g:873:12: ( '0' .. '9' )+
+            // InternalInitial.g:874:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -308,7 +308,7 @@ public class InternalInitialLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // InternalInitial.g:873:13: '0' .. '9'
+            	    // InternalInitial.g:874:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -340,10 +340,10 @@ public class InternalInitialLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalInitial.g:875:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // InternalInitial.g:875:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalInitial.g:876:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // InternalInitial.g:876:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // InternalInitial.g:875:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalInitial.g:876:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -361,10 +361,10 @@ public class InternalInitialLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // InternalInitial.g:875:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // InternalInitial.g:876:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // InternalInitial.g:875:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // InternalInitial.g:876:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -380,7 +380,7 @@ public class InternalInitialLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // InternalInitial.g:875:21: '\\\\' .
+                    	    // InternalInitial.g:876:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -388,7 +388,7 @@ public class InternalInitialLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalInitial.g:875:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalInitial.g:876:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -413,10 +413,10 @@ public class InternalInitialLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalInitial.g:875:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // InternalInitial.g:876:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // InternalInitial.g:875:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // InternalInitial.g:876:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -432,7 +432,7 @@ public class InternalInitialLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // InternalInitial.g:875:54: '\\\\' .
+                    	    // InternalInitial.g:876:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -440,7 +440,7 @@ public class InternalInitialLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalInitial.g:875:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // InternalInitial.g:876:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -483,12 +483,12 @@ public class InternalInitialLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalInitial.g:877:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // InternalInitial.g:877:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalInitial.g:878:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalInitial.g:878:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // InternalInitial.g:877:24: ( options {greedy=false; } : . )*
+            // InternalInitial.g:878:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -513,7 +513,7 @@ public class InternalInitialLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // InternalInitial.g:877:52: .
+            	    // InternalInitial.g:878:52: .
             	    {
             	    matchAny(); 
 
@@ -543,12 +543,12 @@ public class InternalInitialLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalInitial.g:879:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // InternalInitial.g:879:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalInitial.g:880:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalInitial.g:880:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // InternalInitial.g:879:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalInitial.g:880:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -561,7 +561,7 @@ public class InternalInitialLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // InternalInitial.g:879:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalInitial.g:880:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -581,7 +581,7 @@ public class InternalInitialLexer extends Lexer {
                 }
             } while (true);
 
-            // InternalInitial.g:879:40: ( ( '\\r' )? '\\n' )?
+            // InternalInitial.g:880:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -590,9 +590,9 @@ public class InternalInitialLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // InternalInitial.g:879:41: ( '\\r' )? '\\n'
+                    // InternalInitial.g:880:41: ( '\\r' )? '\\n'
                     {
-                    // InternalInitial.g:879:41: ( '\\r' )?
+                    // InternalInitial.g:880:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -601,7 +601,7 @@ public class InternalInitialLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // InternalInitial.g:879:41: '\\r'
+                            // InternalInitial.g:880:41: '\\r'
                             {
                             match('\r'); 
 
@@ -633,10 +633,10 @@ public class InternalInitialLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalInitial.g:881:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // InternalInitial.g:881:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalInitial.g:882:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // InternalInitial.g:882:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // InternalInitial.g:881:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalInitial.g:882:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -690,8 +690,8 @@ public class InternalInitialLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalInitial.g:883:16: ( . )
-            // InternalInitial.g:883:18: .
+            // InternalInitial.g:884:16: ( . )
+            // InternalInitial.g:884:18: .
             {
             matchAny(); 
 

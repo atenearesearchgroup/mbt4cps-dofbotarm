@@ -35,5 +35,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="solution" upperBound="-1"
         eType="ecore:EClass platform:/resource/org.xtext.solution/model/generated/Solution.ecore#//Solution"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" eType="ecore:EEnum platform:/resource/org.xtext.solution/model/generated/Solution.ecore#//State"/>
   </eClassifiers>
 </ecore:EPackage>

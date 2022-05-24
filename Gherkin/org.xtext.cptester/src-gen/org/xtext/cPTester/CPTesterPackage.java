@@ -270,13 +270,22 @@ public interface CPTesterPackage extends EPackage
   int AND__SOLUTION = 2;
 
   /**
+   * The feature id for the '<em><b>State</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AND__STATE = 3;
+
+  /**
    * The number of structural features of the '<em>And</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int AND_FEATURE_COUNT = 3;
+  int AND_FEATURE_COUNT = 4;
 
 
   /**
@@ -484,6 +493,17 @@ public interface CPTesterPackage extends EPackage
   EReference getAnd_Solution();
 
   /**
+   * Returns the meta object for the attribute '{@link org.xtext.cPTester.And#getState <em>State</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>State</em>'.
+   * @see org.xtext.cPTester.And#getState()
+   * @see #getAnd()
+   * @generated
+   */
+  EAttribute getAnd_State();
+
+  /**
    * Returns the factory that creates the instances of the model.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -667,6 +687,14 @@ public interface CPTesterPackage extends EPackage
      * @generated
      */
     EReference AND__SOLUTION = eINSTANCE.getAnd_Solution();
+
+    /**
+     * The meta object literal for the '<em><b>State</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute AND__STATE = eINSTANCE.getAnd_State();
 
   }
 

@@ -25,6 +25,7 @@ import org.xtext.cPTester.CPTesterPackage;
 import org.xtext.condition.Conditions;
 
 import org.xtext.solution.Solution;
+import org.xtext.solution.State;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,6 +38,7 @@ import org.xtext.solution.Solution;
  *   <li>{@link org.xtext.cPTester.impl.AndImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.cPTester.impl.AndImpl#getConditions <em>Conditions</em>}</li>
  *   <li>{@link org.xtext.cPTester.impl.AndImpl#getSolution <em>Solution</em>}</li>
+ *   <li>{@link org.xtext.cPTester.impl.AndImpl#getState <em>State</em>}</li>
  * </ul>
  *
  * @generated
@@ -82,6 +84,26 @@ public class AndImpl extends MinimalEObjectImpl.Container implements And
    * @ordered
    */
   protected EList<Solution> solution;
+
+  /**
+   * The default value of the '{@link #getState() <em>State</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getState()
+   * @generated
+   * @ordered
+   */
+  protected static final State STATE_EDEFAULT = State.TRUE;
+
+  /**
+   * The cached value of the '{@link #getState() <em>State</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getState()
+   * @generated
+   * @ordered
+   */
+  protected State state = STATE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -165,6 +187,31 @@ public class AndImpl extends MinimalEObjectImpl.Container implements And
    * @generated
    */
   @Override
+  public State getState()
+  {
+    return state;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setState(State newState)
+  {
+    State oldState = state;
+    state = newState == null ? STATE_EDEFAULT : newState;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, CPTesterPackage.AND__STATE, oldState, state));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
     switch (featureID)
@@ -193,6 +240,8 @@ public class AndImpl extends MinimalEObjectImpl.Container implements And
         return getConditions();
       case CPTesterPackage.AND__SOLUTION:
         return getSolution();
+      case CPTesterPackage.AND__STATE:
+        return getState();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -219,6 +268,9 @@ public class AndImpl extends MinimalEObjectImpl.Container implements And
         getSolution().clear();
         getSolution().addAll((Collection<? extends Solution>)newValue);
         return;
+      case CPTesterPackage.AND__STATE:
+        setState((State)newValue);
+        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -242,6 +294,9 @@ public class AndImpl extends MinimalEObjectImpl.Container implements And
       case CPTesterPackage.AND__SOLUTION:
         getSolution().clear();
         return;
+      case CPTesterPackage.AND__STATE:
+        setState(STATE_EDEFAULT);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -262,6 +317,8 @@ public class AndImpl extends MinimalEObjectImpl.Container implements And
         return conditions != null && !conditions.isEmpty();
       case CPTesterPackage.AND__SOLUTION:
         return solution != null && !solution.isEmpty();
+      case CPTesterPackage.AND__STATE:
+        return state != STATE_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }
@@ -279,6 +336,8 @@ public class AndImpl extends MinimalEObjectImpl.Container implements And
     StringBuilder result = new StringBuilder(super.toString());
     result.append(" (name: ");
     result.append(name);
+    result.append(", state: ");
+    result.append(state);
     result.append(')');
     return result.toString();
   }

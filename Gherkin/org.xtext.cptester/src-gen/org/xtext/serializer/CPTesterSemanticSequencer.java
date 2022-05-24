@@ -125,7 +125,7 @@ public class CPTesterSemanticSequencer extends InitialSemanticSequencer {
 	 *     And returns And
 	 *
 	 * Constraint:
-	 *     (name='AND' conditions+=Conditions solution+=Solution)
+	 *     (name='AND' conditions+=Conditions solution+=Solution state=State)
 	 * </pre>
 	 */
 	protected void sequence_And(ISerializationContext context, And semanticObject) {

@@ -29,6 +29,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CPTester.ecore#//And/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CPTester.ecore#//And/conditions"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CPTester.ecore#//And/solution"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CPTester.ecore#//And/state"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

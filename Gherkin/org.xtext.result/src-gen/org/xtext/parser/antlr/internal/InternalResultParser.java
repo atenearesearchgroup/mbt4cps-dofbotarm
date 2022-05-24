@@ -5,6 +5,7 @@ import org.eclipse.xtext.parser.*;
 import org.eclipse.xtext.parser.impl.*;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.common.util.Enumerator;
 import org.eclipse.xtext.parser.antlr.AbstractInternalAntlrParser;
 import org.eclipse.xtext.parser.antlr.XtextTokenStream;
 import org.eclipse.xtext.parser.antlr.XtextTokenStream.HiddenTokens;
@@ -78,7 +79,7 @@ public class InternalResultParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleResult"
-    // InternalResult.g:64:1: entryRuleResult returns [EObject current=null] : iv_ruleResult= ruleResult EOF ;
+    // InternalResult.g:65:1: entryRuleResult returns [EObject current=null] : iv_ruleResult= ruleResult EOF ;
     public final EObject entryRuleResult() throws RecognitionException {
         EObject current = null;
 
@@ -86,8 +87,8 @@ public class InternalResultParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalResult.g:64:47: (iv_ruleResult= ruleResult EOF )
-            // InternalResult.g:65:2: iv_ruleResult= ruleResult EOF
+            // InternalResult.g:65:47: (iv_ruleResult= ruleResult EOF )
+            // InternalResult.g:66:2: iv_ruleResult= ruleResult EOF
             {
              newCompositeNode(grammarAccess.getResultRule()); 
             pushFollow(FOLLOW_1);
@@ -114,7 +115,7 @@ public class InternalResultParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleResult"
-    // InternalResult.g:71:1: ruleResult returns [EObject current=null] : ( ( (lv_name_0_0= 'result' ) ) otherlv_1= '(' ( (lv_time_2_0= ruleTime ) ) otherlv_3= ')' ) ;
+    // InternalResult.g:72:1: ruleResult returns [EObject current=null] : ( ( (lv_name_0_0= 'result' ) ) otherlv_1= '(' ( (lv_time_2_0= ruleTime ) ) otherlv_3= ')' ) ;
     public final EObject ruleResult() throws RecognitionException {
         EObject current = null;
 
@@ -128,17 +129,17 @@ public class InternalResultParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalResult.g:77:2: ( ( ( (lv_name_0_0= 'result' ) ) otherlv_1= '(' ( (lv_time_2_0= ruleTime ) ) otherlv_3= ')' ) )
-            // InternalResult.g:78:2: ( ( (lv_name_0_0= 'result' ) ) otherlv_1= '(' ( (lv_time_2_0= ruleTime ) ) otherlv_3= ')' )
+            // InternalResult.g:78:2: ( ( ( (lv_name_0_0= 'result' ) ) otherlv_1= '(' ( (lv_time_2_0= ruleTime ) ) otherlv_3= ')' ) )
+            // InternalResult.g:79:2: ( ( (lv_name_0_0= 'result' ) ) otherlv_1= '(' ( (lv_time_2_0= ruleTime ) ) otherlv_3= ')' )
             {
-            // InternalResult.g:78:2: ( ( (lv_name_0_0= 'result' ) ) otherlv_1= '(' ( (lv_time_2_0= ruleTime ) ) otherlv_3= ')' )
-            // InternalResult.g:79:3: ( (lv_name_0_0= 'result' ) ) otherlv_1= '(' ( (lv_time_2_0= ruleTime ) ) otherlv_3= ')'
+            // InternalResult.g:79:2: ( ( (lv_name_0_0= 'result' ) ) otherlv_1= '(' ( (lv_time_2_0= ruleTime ) ) otherlv_3= ')' )
+            // InternalResult.g:80:3: ( (lv_name_0_0= 'result' ) ) otherlv_1= '(' ( (lv_time_2_0= ruleTime ) ) otherlv_3= ')'
             {
-            // InternalResult.g:79:3: ( (lv_name_0_0= 'result' ) )
-            // InternalResult.g:80:4: (lv_name_0_0= 'result' )
+            // InternalResult.g:80:3: ( (lv_name_0_0= 'result' ) )
+            // InternalResult.g:81:4: (lv_name_0_0= 'result' )
             {
-            // InternalResult.g:80:4: (lv_name_0_0= 'result' )
-            // InternalResult.g:81:5: lv_name_0_0= 'result'
+            // InternalResult.g:81:4: (lv_name_0_0= 'result' )
+            // InternalResult.g:82:5: lv_name_0_0= 'result'
             {
             lv_name_0_0=(Token)match(input,11,FOLLOW_3); 
 
@@ -160,11 +161,11 @@ public class InternalResultParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getResultAccess().getLeftParenthesisKeyword_1());
             		
-            // InternalResult.g:97:3: ( (lv_time_2_0= ruleTime ) )
-            // InternalResult.g:98:4: (lv_time_2_0= ruleTime )
+            // InternalResult.g:98:3: ( (lv_time_2_0= ruleTime ) )
+            // InternalResult.g:99:4: (lv_time_2_0= ruleTime )
             {
-            // InternalResult.g:98:4: (lv_time_2_0= ruleTime )
-            // InternalResult.g:99:5: lv_time_2_0= ruleTime
+            // InternalResult.g:99:4: (lv_time_2_0= ruleTime )
+            // InternalResult.g:100:5: lv_time_2_0= ruleTime
             {
 
             					newCompositeNode(grammarAccess.getResultAccess().getTimeTimeParserRuleCall_2_0());
@@ -218,7 +219,7 @@ public class InternalResultParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleisAtSingle"
-    // InternalResult.g:124:1: entryRuleisAtSingle returns [EObject current=null] : iv_ruleisAtSingle= ruleisAtSingle EOF ;
+    // InternalResult.g:125:1: entryRuleisAtSingle returns [EObject current=null] : iv_ruleisAtSingle= ruleisAtSingle EOF ;
     public final EObject entryRuleisAtSingle() throws RecognitionException {
         EObject current = null;
 
@@ -226,8 +227,8 @@ public class InternalResultParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalResult.g:124:51: (iv_ruleisAtSingle= ruleisAtSingle EOF )
-            // InternalResult.g:125:2: iv_ruleisAtSingle= ruleisAtSingle EOF
+            // InternalResult.g:125:51: (iv_ruleisAtSingle= ruleisAtSingle EOF )
+            // InternalResult.g:126:2: iv_ruleisAtSingle= ruleisAtSingle EOF
             {
              newCompositeNode(grammarAccess.getIsAtSingleRule()); 
             pushFollow(FOLLOW_1);
@@ -254,7 +255,7 @@ public class InternalResultParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleisAtSingle"
-    // InternalResult.g:131:1: ruleisAtSingle returns [EObject current=null] : ( ( (lv_name_0_0= 'isAtSingle' ) ) otherlv_1= '(' ( (lv_servo_2_0= ruleServo ) ) otherlv_3= ',' ( (lv_angle_4_0= ruleAngle ) ) otherlv_5= ',' ( (lv_angle_res_6_0= ruleAngle_res ) ) otherlv_7= ')' ) ;
+    // InternalResult.g:132:1: ruleisAtSingle returns [EObject current=null] : ( ( (lv_name_0_0= 'isAtSingle' ) ) otherlv_1= '(' ( (lv_servo_2_0= ruleServo ) ) otherlv_3= ',' ( (lv_angle_4_0= ruleAngle ) ) otherlv_5= ',' ( (lv_angle_res_6_0= ruleAngle_res ) ) otherlv_7= ')' ) ;
     public final EObject ruleisAtSingle() throws RecognitionException {
         EObject current = null;
 
@@ -274,17 +275,17 @@ public class InternalResultParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalResult.g:137:2: ( ( ( (lv_name_0_0= 'isAtSingle' ) ) otherlv_1= '(' ( (lv_servo_2_0= ruleServo ) ) otherlv_3= ',' ( (lv_angle_4_0= ruleAngle ) ) otherlv_5= ',' ( (lv_angle_res_6_0= ruleAngle_res ) ) otherlv_7= ')' ) )
-            // InternalResult.g:138:2: ( ( (lv_name_0_0= 'isAtSingle' ) ) otherlv_1= '(' ( (lv_servo_2_0= ruleServo ) ) otherlv_3= ',' ( (lv_angle_4_0= ruleAngle ) ) otherlv_5= ',' ( (lv_angle_res_6_0= ruleAngle_res ) ) otherlv_7= ')' )
+            // InternalResult.g:138:2: ( ( ( (lv_name_0_0= 'isAtSingle' ) ) otherlv_1= '(' ( (lv_servo_2_0= ruleServo ) ) otherlv_3= ',' ( (lv_angle_4_0= ruleAngle ) ) otherlv_5= ',' ( (lv_angle_res_6_0= ruleAngle_res ) ) otherlv_7= ')' ) )
+            // InternalResult.g:139:2: ( ( (lv_name_0_0= 'isAtSingle' ) ) otherlv_1= '(' ( (lv_servo_2_0= ruleServo ) ) otherlv_3= ',' ( (lv_angle_4_0= ruleAngle ) ) otherlv_5= ',' ( (lv_angle_res_6_0= ruleAngle_res ) ) otherlv_7= ')' )
             {
-            // InternalResult.g:138:2: ( ( (lv_name_0_0= 'isAtSingle' ) ) otherlv_1= '(' ( (lv_servo_2_0= ruleServo ) ) otherlv_3= ',' ( (lv_angle_4_0= ruleAngle ) ) otherlv_5= ',' ( (lv_angle_res_6_0= ruleAngle_res ) ) otherlv_7= ')' )
-            // InternalResult.g:139:3: ( (lv_name_0_0= 'isAtSingle' ) ) otherlv_1= '(' ( (lv_servo_2_0= ruleServo ) ) otherlv_3= ',' ( (lv_angle_4_0= ruleAngle ) ) otherlv_5= ',' ( (lv_angle_res_6_0= ruleAngle_res ) ) otherlv_7= ')'
+            // InternalResult.g:139:2: ( ( (lv_name_0_0= 'isAtSingle' ) ) otherlv_1= '(' ( (lv_servo_2_0= ruleServo ) ) otherlv_3= ',' ( (lv_angle_4_0= ruleAngle ) ) otherlv_5= ',' ( (lv_angle_res_6_0= ruleAngle_res ) ) otherlv_7= ')' )
+            // InternalResult.g:140:3: ( (lv_name_0_0= 'isAtSingle' ) ) otherlv_1= '(' ( (lv_servo_2_0= ruleServo ) ) otherlv_3= ',' ( (lv_angle_4_0= ruleAngle ) ) otherlv_5= ',' ( (lv_angle_res_6_0= ruleAngle_res ) ) otherlv_7= ')'
             {
-            // InternalResult.g:139:3: ( (lv_name_0_0= 'isAtSingle' ) )
-            // InternalResult.g:140:4: (lv_name_0_0= 'isAtSingle' )
+            // InternalResult.g:140:3: ( (lv_name_0_0= 'isAtSingle' ) )
+            // InternalResult.g:141:4: (lv_name_0_0= 'isAtSingle' )
             {
-            // InternalResult.g:140:4: (lv_name_0_0= 'isAtSingle' )
-            // InternalResult.g:141:5: lv_name_0_0= 'isAtSingle'
+            // InternalResult.g:141:4: (lv_name_0_0= 'isAtSingle' )
+            // InternalResult.g:142:5: lv_name_0_0= 'isAtSingle'
             {
             lv_name_0_0=(Token)match(input,14,FOLLOW_3); 
 
@@ -306,11 +307,11 @@ public class InternalResultParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getIsAtSingleAccess().getLeftParenthesisKeyword_1());
             		
-            // InternalResult.g:157:3: ( (lv_servo_2_0= ruleServo ) )
-            // InternalResult.g:158:4: (lv_servo_2_0= ruleServo )
+            // InternalResult.g:158:3: ( (lv_servo_2_0= ruleServo ) )
+            // InternalResult.g:159:4: (lv_servo_2_0= ruleServo )
             {
-            // InternalResult.g:158:4: (lv_servo_2_0= ruleServo )
-            // InternalResult.g:159:5: lv_servo_2_0= ruleServo
+            // InternalResult.g:159:4: (lv_servo_2_0= ruleServo )
+            // InternalResult.g:160:5: lv_servo_2_0= ruleServo
             {
 
             					newCompositeNode(grammarAccess.getIsAtSingleAccess().getServoServoParserRuleCall_2_0());
@@ -341,11 +342,11 @@ public class InternalResultParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_3, grammarAccess.getIsAtSingleAccess().getCommaKeyword_3());
             		
-            // InternalResult.g:180:3: ( (lv_angle_4_0= ruleAngle ) )
-            // InternalResult.g:181:4: (lv_angle_4_0= ruleAngle )
+            // InternalResult.g:181:3: ( (lv_angle_4_0= ruleAngle ) )
+            // InternalResult.g:182:4: (lv_angle_4_0= ruleAngle )
             {
-            // InternalResult.g:181:4: (lv_angle_4_0= ruleAngle )
-            // InternalResult.g:182:5: lv_angle_4_0= ruleAngle
+            // InternalResult.g:182:4: (lv_angle_4_0= ruleAngle )
+            // InternalResult.g:183:5: lv_angle_4_0= ruleAngle
             {
 
             					newCompositeNode(grammarAccess.getIsAtSingleAccess().getAngleAngleParserRuleCall_4_0());
@@ -376,11 +377,11 @@ public class InternalResultParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_5, grammarAccess.getIsAtSingleAccess().getCommaKeyword_5());
             		
-            // InternalResult.g:203:3: ( (lv_angle_res_6_0= ruleAngle_res ) )
-            // InternalResult.g:204:4: (lv_angle_res_6_0= ruleAngle_res )
+            // InternalResult.g:204:3: ( (lv_angle_res_6_0= ruleAngle_res ) )
+            // InternalResult.g:205:4: (lv_angle_res_6_0= ruleAngle_res )
             {
-            // InternalResult.g:204:4: (lv_angle_res_6_0= ruleAngle_res )
-            // InternalResult.g:205:5: lv_angle_res_6_0= ruleAngle_res
+            // InternalResult.g:205:4: (lv_angle_res_6_0= ruleAngle_res )
+            // InternalResult.g:206:5: lv_angle_res_6_0= ruleAngle_res
             {
 
             					newCompositeNode(grammarAccess.getIsAtSingleAccess().getAngle_resAngle_resParserRuleCall_6_0());
@@ -434,7 +435,7 @@ public class InternalResultParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleisAt"
-    // InternalResult.g:230:1: entryRuleisAt returns [EObject current=null] : iv_ruleisAt= ruleisAt EOF ;
+    // InternalResult.g:231:1: entryRuleisAt returns [EObject current=null] : iv_ruleisAt= ruleisAt EOF ;
     public final EObject entryRuleisAt() throws RecognitionException {
         EObject current = null;
 
@@ -442,8 +443,8 @@ public class InternalResultParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalResult.g:230:45: (iv_ruleisAt= ruleisAt EOF )
-            // InternalResult.g:231:2: iv_ruleisAt= ruleisAt EOF
+            // InternalResult.g:231:45: (iv_ruleisAt= ruleisAt EOF )
+            // InternalResult.g:232:2: iv_ruleisAt= ruleisAt EOF
             {
              newCompositeNode(grammarAccess.getIsAtRule()); 
             pushFollow(FOLLOW_1);
@@ -470,7 +471,7 @@ public class InternalResultParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleisAt"
-    // InternalResult.g:237:1: ruleisAt returns [EObject current=null] : ( ( (lv_name_0_0= 'isAt' ) ) otherlv_1= '(' ( (lv_angle1_2_0= ruleAngle ) ) otherlv_3= ',' ( (lv_angle2_4_0= ruleAngle ) ) otherlv_5= ',' ( (lv_angle3_6_0= ruleAngle ) ) otherlv_7= ',' ( (lv_angle4_8_0= ruleAngle ) ) otherlv_9= ',' ( (lv_angle5_10_0= ruleAngle ) ) otherlv_11= ',' ( (lv_angle6_12_0= ruleAngle ) ) otherlv_13= ',' ( (lv_angle_res_14_0= ruleAngle_res ) ) otherlv_15= ')' ) ;
+    // InternalResult.g:238:1: ruleisAt returns [EObject current=null] : ( ( (lv_name_0_0= 'isAt' ) ) otherlv_1= '(' ( (lv_angle1_2_0= ruleAngle ) ) otherlv_3= ',' ( (lv_angle2_4_0= ruleAngle ) ) otherlv_5= ',' ( (lv_angle3_6_0= ruleAngle ) ) otherlv_7= ',' ( (lv_angle4_8_0= ruleAngle ) ) otherlv_9= ',' ( (lv_angle5_10_0= ruleAngle ) ) otherlv_11= ',' ( (lv_angle6_12_0= ruleAngle ) ) otherlv_13= ',' ( (lv_angle_res_14_0= ruleAngle_res ) ) otherlv_15= ')' ) ;
     public final EObject ruleisAt() throws RecognitionException {
         EObject current = null;
 
@@ -502,17 +503,17 @@ public class InternalResultParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalResult.g:243:2: ( ( ( (lv_name_0_0= 'isAt' ) ) otherlv_1= '(' ( (lv_angle1_2_0= ruleAngle ) ) otherlv_3= ',' ( (lv_angle2_4_0= ruleAngle ) ) otherlv_5= ',' ( (lv_angle3_6_0= ruleAngle ) ) otherlv_7= ',' ( (lv_angle4_8_0= ruleAngle ) ) otherlv_9= ',' ( (lv_angle5_10_0= ruleAngle ) ) otherlv_11= ',' ( (lv_angle6_12_0= ruleAngle ) ) otherlv_13= ',' ( (lv_angle_res_14_0= ruleAngle_res ) ) otherlv_15= ')' ) )
-            // InternalResult.g:244:2: ( ( (lv_name_0_0= 'isAt' ) ) otherlv_1= '(' ( (lv_angle1_2_0= ruleAngle ) ) otherlv_3= ',' ( (lv_angle2_4_0= ruleAngle ) ) otherlv_5= ',' ( (lv_angle3_6_0= ruleAngle ) ) otherlv_7= ',' ( (lv_angle4_8_0= ruleAngle ) ) otherlv_9= ',' ( (lv_angle5_10_0= ruleAngle ) ) otherlv_11= ',' ( (lv_angle6_12_0= ruleAngle ) ) otherlv_13= ',' ( (lv_angle_res_14_0= ruleAngle_res ) ) otherlv_15= ')' )
+            // InternalResult.g:244:2: ( ( ( (lv_name_0_0= 'isAt' ) ) otherlv_1= '(' ( (lv_angle1_2_0= ruleAngle ) ) otherlv_3= ',' ( (lv_angle2_4_0= ruleAngle ) ) otherlv_5= ',' ( (lv_angle3_6_0= ruleAngle ) ) otherlv_7= ',' ( (lv_angle4_8_0= ruleAngle ) ) otherlv_9= ',' ( (lv_angle5_10_0= ruleAngle ) ) otherlv_11= ',' ( (lv_angle6_12_0= ruleAngle ) ) otherlv_13= ',' ( (lv_angle_res_14_0= ruleAngle_res ) ) otherlv_15= ')' ) )
+            // InternalResult.g:245:2: ( ( (lv_name_0_0= 'isAt' ) ) otherlv_1= '(' ( (lv_angle1_2_0= ruleAngle ) ) otherlv_3= ',' ( (lv_angle2_4_0= ruleAngle ) ) otherlv_5= ',' ( (lv_angle3_6_0= ruleAngle ) ) otherlv_7= ',' ( (lv_angle4_8_0= ruleAngle ) ) otherlv_9= ',' ( (lv_angle5_10_0= ruleAngle ) ) otherlv_11= ',' ( (lv_angle6_12_0= ruleAngle ) ) otherlv_13= ',' ( (lv_angle_res_14_0= ruleAngle_res ) ) otherlv_15= ')' )
             {
-            // InternalResult.g:244:2: ( ( (lv_name_0_0= 'isAt' ) ) otherlv_1= '(' ( (lv_angle1_2_0= ruleAngle ) ) otherlv_3= ',' ( (lv_angle2_4_0= ruleAngle ) ) otherlv_5= ',' ( (lv_angle3_6_0= ruleAngle ) ) otherlv_7= ',' ( (lv_angle4_8_0= ruleAngle ) ) otherlv_9= ',' ( (lv_angle5_10_0= ruleAngle ) ) otherlv_11= ',' ( (lv_angle6_12_0= ruleAngle ) ) otherlv_13= ',' ( (lv_angle_res_14_0= ruleAngle_res ) ) otherlv_15= ')' )
-            // InternalResult.g:245:3: ( (lv_name_0_0= 'isAt' ) ) otherlv_1= '(' ( (lv_angle1_2_0= ruleAngle ) ) otherlv_3= ',' ( (lv_angle2_4_0= ruleAngle ) ) otherlv_5= ',' ( (lv_angle3_6_0= ruleAngle ) ) otherlv_7= ',' ( (lv_angle4_8_0= ruleAngle ) ) otherlv_9= ',' ( (lv_angle5_10_0= ruleAngle ) ) otherlv_11= ',' ( (lv_angle6_12_0= ruleAngle ) ) otherlv_13= ',' ( (lv_angle_res_14_0= ruleAngle_res ) ) otherlv_15= ')'
+            // InternalResult.g:245:2: ( ( (lv_name_0_0= 'isAt' ) ) otherlv_1= '(' ( (lv_angle1_2_0= ruleAngle ) ) otherlv_3= ',' ( (lv_angle2_4_0= ruleAngle ) ) otherlv_5= ',' ( (lv_angle3_6_0= ruleAngle ) ) otherlv_7= ',' ( (lv_angle4_8_0= ruleAngle ) ) otherlv_9= ',' ( (lv_angle5_10_0= ruleAngle ) ) otherlv_11= ',' ( (lv_angle6_12_0= ruleAngle ) ) otherlv_13= ',' ( (lv_angle_res_14_0= ruleAngle_res ) ) otherlv_15= ')' )
+            // InternalResult.g:246:3: ( (lv_name_0_0= 'isAt' ) ) otherlv_1= '(' ( (lv_angle1_2_0= ruleAngle ) ) otherlv_3= ',' ( (lv_angle2_4_0= ruleAngle ) ) otherlv_5= ',' ( (lv_angle3_6_0= ruleAngle ) ) otherlv_7= ',' ( (lv_angle4_8_0= ruleAngle ) ) otherlv_9= ',' ( (lv_angle5_10_0= ruleAngle ) ) otherlv_11= ',' ( (lv_angle6_12_0= ruleAngle ) ) otherlv_13= ',' ( (lv_angle_res_14_0= ruleAngle_res ) ) otherlv_15= ')'
             {
-            // InternalResult.g:245:3: ( (lv_name_0_0= 'isAt' ) )
-            // InternalResult.g:246:4: (lv_name_0_0= 'isAt' )
+            // InternalResult.g:246:3: ( (lv_name_0_0= 'isAt' ) )
+            // InternalResult.g:247:4: (lv_name_0_0= 'isAt' )
             {
-            // InternalResult.g:246:4: (lv_name_0_0= 'isAt' )
-            // InternalResult.g:247:5: lv_name_0_0= 'isAt'
+            // InternalResult.g:247:4: (lv_name_0_0= 'isAt' )
+            // InternalResult.g:248:5: lv_name_0_0= 'isAt'
             {
             lv_name_0_0=(Token)match(input,16,FOLLOW_3); 
 
@@ -534,11 +535,11 @@ public class InternalResultParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getIsAtAccess().getLeftParenthesisKeyword_1());
             		
-            // InternalResult.g:263:3: ( (lv_angle1_2_0= ruleAngle ) )
-            // InternalResult.g:264:4: (lv_angle1_2_0= ruleAngle )
+            // InternalResult.g:264:3: ( (lv_angle1_2_0= ruleAngle ) )
+            // InternalResult.g:265:4: (lv_angle1_2_0= ruleAngle )
             {
-            // InternalResult.g:264:4: (lv_angle1_2_0= ruleAngle )
-            // InternalResult.g:265:5: lv_angle1_2_0= ruleAngle
+            // InternalResult.g:265:4: (lv_angle1_2_0= ruleAngle )
+            // InternalResult.g:266:5: lv_angle1_2_0= ruleAngle
             {
 
             					newCompositeNode(grammarAccess.getIsAtAccess().getAngle1AngleParserRuleCall_2_0());
@@ -569,11 +570,11 @@ public class InternalResultParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_3, grammarAccess.getIsAtAccess().getCommaKeyword_3());
             		
-            // InternalResult.g:286:3: ( (lv_angle2_4_0= ruleAngle ) )
-            // InternalResult.g:287:4: (lv_angle2_4_0= ruleAngle )
+            // InternalResult.g:287:3: ( (lv_angle2_4_0= ruleAngle ) )
+            // InternalResult.g:288:4: (lv_angle2_4_0= ruleAngle )
             {
-            // InternalResult.g:287:4: (lv_angle2_4_0= ruleAngle )
-            // InternalResult.g:288:5: lv_angle2_4_0= ruleAngle
+            // InternalResult.g:288:4: (lv_angle2_4_0= ruleAngle )
+            // InternalResult.g:289:5: lv_angle2_4_0= ruleAngle
             {
 
             					newCompositeNode(grammarAccess.getIsAtAccess().getAngle2AngleParserRuleCall_4_0());
@@ -604,11 +605,11 @@ public class InternalResultParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_5, grammarAccess.getIsAtAccess().getCommaKeyword_5());
             		
-            // InternalResult.g:309:3: ( (lv_angle3_6_0= ruleAngle ) )
-            // InternalResult.g:310:4: (lv_angle3_6_0= ruleAngle )
+            // InternalResult.g:310:3: ( (lv_angle3_6_0= ruleAngle ) )
+            // InternalResult.g:311:4: (lv_angle3_6_0= ruleAngle )
             {
-            // InternalResult.g:310:4: (lv_angle3_6_0= ruleAngle )
-            // InternalResult.g:311:5: lv_angle3_6_0= ruleAngle
+            // InternalResult.g:311:4: (lv_angle3_6_0= ruleAngle )
+            // InternalResult.g:312:5: lv_angle3_6_0= ruleAngle
             {
 
             					newCompositeNode(grammarAccess.getIsAtAccess().getAngle3AngleParserRuleCall_6_0());
@@ -639,11 +640,11 @@ public class InternalResultParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_7, grammarAccess.getIsAtAccess().getCommaKeyword_7());
             		
-            // InternalResult.g:332:3: ( (lv_angle4_8_0= ruleAngle ) )
-            // InternalResult.g:333:4: (lv_angle4_8_0= ruleAngle )
+            // InternalResult.g:333:3: ( (lv_angle4_8_0= ruleAngle ) )
+            // InternalResult.g:334:4: (lv_angle4_8_0= ruleAngle )
             {
-            // InternalResult.g:333:4: (lv_angle4_8_0= ruleAngle )
-            // InternalResult.g:334:5: lv_angle4_8_0= ruleAngle
+            // InternalResult.g:334:4: (lv_angle4_8_0= ruleAngle )
+            // InternalResult.g:335:5: lv_angle4_8_0= ruleAngle
             {
 
             					newCompositeNode(grammarAccess.getIsAtAccess().getAngle4AngleParserRuleCall_8_0());
@@ -674,11 +675,11 @@ public class InternalResultParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_9, grammarAccess.getIsAtAccess().getCommaKeyword_9());
             		
-            // InternalResult.g:355:3: ( (lv_angle5_10_0= ruleAngle ) )
-            // InternalResult.g:356:4: (lv_angle5_10_0= ruleAngle )
+            // InternalResult.g:356:3: ( (lv_angle5_10_0= ruleAngle ) )
+            // InternalResult.g:357:4: (lv_angle5_10_0= ruleAngle )
             {
-            // InternalResult.g:356:4: (lv_angle5_10_0= ruleAngle )
-            // InternalResult.g:357:5: lv_angle5_10_0= ruleAngle
+            // InternalResult.g:357:4: (lv_angle5_10_0= ruleAngle )
+            // InternalResult.g:358:5: lv_angle5_10_0= ruleAngle
             {
 
             					newCompositeNode(grammarAccess.getIsAtAccess().getAngle5AngleParserRuleCall_10_0());
@@ -709,11 +710,11 @@ public class InternalResultParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_11, grammarAccess.getIsAtAccess().getCommaKeyword_11());
             		
-            // InternalResult.g:378:3: ( (lv_angle6_12_0= ruleAngle ) )
-            // InternalResult.g:379:4: (lv_angle6_12_0= ruleAngle )
+            // InternalResult.g:379:3: ( (lv_angle6_12_0= ruleAngle ) )
+            // InternalResult.g:380:4: (lv_angle6_12_0= ruleAngle )
             {
-            // InternalResult.g:379:4: (lv_angle6_12_0= ruleAngle )
-            // InternalResult.g:380:5: lv_angle6_12_0= ruleAngle
+            // InternalResult.g:380:4: (lv_angle6_12_0= ruleAngle )
+            // InternalResult.g:381:5: lv_angle6_12_0= ruleAngle
             {
 
             					newCompositeNode(grammarAccess.getIsAtAccess().getAngle6AngleParserRuleCall_12_0());
@@ -744,11 +745,11 @@ public class InternalResultParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_13, grammarAccess.getIsAtAccess().getCommaKeyword_13());
             		
-            // InternalResult.g:401:3: ( (lv_angle_res_14_0= ruleAngle_res ) )
-            // InternalResult.g:402:4: (lv_angle_res_14_0= ruleAngle_res )
+            // InternalResult.g:402:3: ( (lv_angle_res_14_0= ruleAngle_res ) )
+            // InternalResult.g:403:4: (lv_angle_res_14_0= ruleAngle_res )
             {
-            // InternalResult.g:402:4: (lv_angle_res_14_0= ruleAngle_res )
-            // InternalResult.g:403:5: lv_angle_res_14_0= ruleAngle_res
+            // InternalResult.g:403:4: (lv_angle_res_14_0= ruleAngle_res )
+            // InternalResult.g:404:5: lv_angle_res_14_0= ruleAngle_res
             {
 
             					newCompositeNode(grammarAccess.getIsAtAccess().getAngle_resAngle_resParserRuleCall_14_0());
@@ -802,7 +803,7 @@ public class InternalResultParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAngle_res"
-    // InternalResult.g:428:1: entryRuleAngle_res returns [EObject current=null] : iv_ruleAngle_res= ruleAngle_res EOF ;
+    // InternalResult.g:429:1: entryRuleAngle_res returns [EObject current=null] : iv_ruleAngle_res= ruleAngle_res EOF ;
     public final EObject entryRuleAngle_res() throws RecognitionException {
         EObject current = null;
 
@@ -810,8 +811,8 @@ public class InternalResultParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalResult.g:428:50: (iv_ruleAngle_res= ruleAngle_res EOF )
-            // InternalResult.g:429:2: iv_ruleAngle_res= ruleAngle_res EOF
+            // InternalResult.g:429:50: (iv_ruleAngle_res= ruleAngle_res EOF )
+            // InternalResult.g:430:2: iv_ruleAngle_res= ruleAngle_res EOF
             {
              newCompositeNode(grammarAccess.getAngle_resRule()); 
             pushFollow(FOLLOW_1);
@@ -838,7 +839,7 @@ public class InternalResultParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAngle_res"
-    // InternalResult.g:435:1: ruleAngle_res returns [EObject current=null] : ( (lv_angle_res_0_0= RULE_INT ) ) ;
+    // InternalResult.g:436:1: ruleAngle_res returns [EObject current=null] : ( (lv_angle_res_0_0= RULE_INT ) ) ;
     public final EObject ruleAngle_res() throws RecognitionException {
         EObject current = null;
 
@@ -848,14 +849,14 @@ public class InternalResultParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalResult.g:441:2: ( ( (lv_angle_res_0_0= RULE_INT ) ) )
-            // InternalResult.g:442:2: ( (lv_angle_res_0_0= RULE_INT ) )
+            // InternalResult.g:442:2: ( ( (lv_angle_res_0_0= RULE_INT ) ) )
+            // InternalResult.g:443:2: ( (lv_angle_res_0_0= RULE_INT ) )
             {
-            // InternalResult.g:442:2: ( (lv_angle_res_0_0= RULE_INT ) )
-            // InternalResult.g:443:3: (lv_angle_res_0_0= RULE_INT )
+            // InternalResult.g:443:2: ( (lv_angle_res_0_0= RULE_INT ) )
+            // InternalResult.g:444:3: (lv_angle_res_0_0= RULE_INT )
             {
-            // InternalResult.g:443:3: (lv_angle_res_0_0= RULE_INT )
-            // InternalResult.g:444:4: lv_angle_res_0_0= RULE_INT
+            // InternalResult.g:444:3: (lv_angle_res_0_0= RULE_INT )
+            // InternalResult.g:445:4: lv_angle_res_0_0= RULE_INT
             {
             lv_angle_res_0_0=(Token)match(input,RULE_INT,FOLLOW_2); 
 
@@ -897,7 +898,7 @@ public class InternalResultParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAngle"
-    // InternalResult.g:463:1: entryRuleAngle returns [EObject current=null] : iv_ruleAngle= ruleAngle EOF ;
+    // InternalResult.g:464:1: entryRuleAngle returns [EObject current=null] : iv_ruleAngle= ruleAngle EOF ;
     public final EObject entryRuleAngle() throws RecognitionException {
         EObject current = null;
 
@@ -905,8 +906,8 @@ public class InternalResultParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalResult.g:463:46: (iv_ruleAngle= ruleAngle EOF )
-            // InternalResult.g:464:2: iv_ruleAngle= ruleAngle EOF
+            // InternalResult.g:464:46: (iv_ruleAngle= ruleAngle EOF )
+            // InternalResult.g:465:2: iv_ruleAngle= ruleAngle EOF
             {
              newCompositeNode(grammarAccess.getAngleRule()); 
             pushFollow(FOLLOW_1);
@@ -933,7 +934,7 @@ public class InternalResultParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAngle"
-    // InternalResult.g:470:1: ruleAngle returns [EObject current=null] : ( (lv_angle_0_0= RULE_INT ) ) ;
+    // InternalResult.g:471:1: ruleAngle returns [EObject current=null] : ( (lv_angle_0_0= RULE_INT ) ) ;
     public final EObject ruleAngle() throws RecognitionException {
         EObject current = null;
 
@@ -943,14 +944,14 @@ public class InternalResultParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalResult.g:476:2: ( ( (lv_angle_0_0= RULE_INT ) ) )
-            // InternalResult.g:477:2: ( (lv_angle_0_0= RULE_INT ) )
+            // InternalResult.g:477:2: ( ( (lv_angle_0_0= RULE_INT ) ) )
+            // InternalResult.g:478:2: ( (lv_angle_0_0= RULE_INT ) )
             {
-            // InternalResult.g:477:2: ( (lv_angle_0_0= RULE_INT ) )
-            // InternalResult.g:478:3: (lv_angle_0_0= RULE_INT )
+            // InternalResult.g:478:2: ( (lv_angle_0_0= RULE_INT ) )
+            // InternalResult.g:479:3: (lv_angle_0_0= RULE_INT )
             {
-            // InternalResult.g:478:3: (lv_angle_0_0= RULE_INT )
-            // InternalResult.g:479:4: lv_angle_0_0= RULE_INT
+            // InternalResult.g:479:3: (lv_angle_0_0= RULE_INT )
+            // InternalResult.g:480:4: lv_angle_0_0= RULE_INT
             {
             lv_angle_0_0=(Token)match(input,RULE_INT,FOLLOW_2); 
 
@@ -992,7 +993,7 @@ public class InternalResultParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTime"
-    // InternalResult.g:498:1: entryRuleTime returns [EObject current=null] : iv_ruleTime= ruleTime EOF ;
+    // InternalResult.g:499:1: entryRuleTime returns [EObject current=null] : iv_ruleTime= ruleTime EOF ;
     public final EObject entryRuleTime() throws RecognitionException {
         EObject current = null;
 
@@ -1000,8 +1001,8 @@ public class InternalResultParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalResult.g:498:45: (iv_ruleTime= ruleTime EOF )
-            // InternalResult.g:499:2: iv_ruleTime= ruleTime EOF
+            // InternalResult.g:499:45: (iv_ruleTime= ruleTime EOF )
+            // InternalResult.g:500:2: iv_ruleTime= ruleTime EOF
             {
              newCompositeNode(grammarAccess.getTimeRule()); 
             pushFollow(FOLLOW_1);
@@ -1028,7 +1029,7 @@ public class InternalResultParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTime"
-    // InternalResult.g:505:1: ruleTime returns [EObject current=null] : ( (lv_time_0_0= RULE_INT ) ) ;
+    // InternalResult.g:506:1: ruleTime returns [EObject current=null] : ( (lv_time_0_0= RULE_INT ) ) ;
     public final EObject ruleTime() throws RecognitionException {
         EObject current = null;
 
@@ -1038,14 +1039,14 @@ public class InternalResultParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalResult.g:511:2: ( ( (lv_time_0_0= RULE_INT ) ) )
-            // InternalResult.g:512:2: ( (lv_time_0_0= RULE_INT ) )
+            // InternalResult.g:512:2: ( ( (lv_time_0_0= RULE_INT ) ) )
+            // InternalResult.g:513:2: ( (lv_time_0_0= RULE_INT ) )
             {
-            // InternalResult.g:512:2: ( (lv_time_0_0= RULE_INT ) )
-            // InternalResult.g:513:3: (lv_time_0_0= RULE_INT )
+            // InternalResult.g:513:2: ( (lv_time_0_0= RULE_INT ) )
+            // InternalResult.g:514:3: (lv_time_0_0= RULE_INT )
             {
-            // InternalResult.g:513:3: (lv_time_0_0= RULE_INT )
-            // InternalResult.g:514:4: lv_time_0_0= RULE_INT
+            // InternalResult.g:514:3: (lv_time_0_0= RULE_INT )
+            // InternalResult.g:515:4: lv_time_0_0= RULE_INT
             {
             lv_time_0_0=(Token)match(input,RULE_INT,FOLLOW_2); 
 
@@ -1087,7 +1088,7 @@ public class InternalResultParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleServo"
-    // InternalResult.g:533:1: entryRuleServo returns [EObject current=null] : iv_ruleServo= ruleServo EOF ;
+    // InternalResult.g:534:1: entryRuleServo returns [EObject current=null] : iv_ruleServo= ruleServo EOF ;
     public final EObject entryRuleServo() throws RecognitionException {
         EObject current = null;
 
@@ -1095,8 +1096,8 @@ public class InternalResultParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalResult.g:533:46: (iv_ruleServo= ruleServo EOF )
-            // InternalResult.g:534:2: iv_ruleServo= ruleServo EOF
+            // InternalResult.g:534:46: (iv_ruleServo= ruleServo EOF )
+            // InternalResult.g:535:2: iv_ruleServo= ruleServo EOF
             {
              newCompositeNode(grammarAccess.getServoRule()); 
             pushFollow(FOLLOW_1);
@@ -1123,7 +1124,7 @@ public class InternalResultParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleServo"
-    // InternalResult.g:540:1: ruleServo returns [EObject current=null] : ( (lv_servo_0_0= RULE_INT ) ) ;
+    // InternalResult.g:541:1: ruleServo returns [EObject current=null] : ( (lv_servo_0_0= RULE_INT ) ) ;
     public final EObject ruleServo() throws RecognitionException {
         EObject current = null;
 
@@ -1133,14 +1134,14 @@ public class InternalResultParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalResult.g:546:2: ( ( (lv_servo_0_0= RULE_INT ) ) )
-            // InternalResult.g:547:2: ( (lv_servo_0_0= RULE_INT ) )
+            // InternalResult.g:547:2: ( ( (lv_servo_0_0= RULE_INT ) ) )
+            // InternalResult.g:548:2: ( (lv_servo_0_0= RULE_INT ) )
             {
-            // InternalResult.g:547:2: ( (lv_servo_0_0= RULE_INT ) )
-            // InternalResult.g:548:3: (lv_servo_0_0= RULE_INT )
+            // InternalResult.g:548:2: ( (lv_servo_0_0= RULE_INT ) )
+            // InternalResult.g:549:3: (lv_servo_0_0= RULE_INT )
             {
-            // InternalResult.g:548:3: (lv_servo_0_0= RULE_INT )
-            // InternalResult.g:549:4: lv_servo_0_0= RULE_INT
+            // InternalResult.g:549:3: (lv_servo_0_0= RULE_INT )
+            // InternalResult.g:550:4: lv_servo_0_0= RULE_INT
             {
             lv_servo_0_0=(Token)match(input,RULE_INT,FOLLOW_2); 
 

@@ -38,4 +38,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="Servo">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="servo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="State">
+    <eLiterals name="TRUE" literal="true"/>
+    <eLiterals name="FALSE" value="1" literal="false"/>
+  </eClassifiers>
 </ecore:EPackage>

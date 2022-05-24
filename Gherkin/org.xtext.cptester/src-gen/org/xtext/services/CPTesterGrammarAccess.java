@@ -7,6 +7,7 @@ import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import java.util.List;
 import org.eclipse.xtext.Assignment;
+import org.eclipse.xtext.EnumRule;
 import org.eclipse.xtext.Grammar;
 import org.eclipse.xtext.GrammarUtil;
 import org.eclipse.xtext.Group;
@@ -197,20 +198,26 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		private final Keyword cNameANDKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
 		private final Assignment cConditionsAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cConditionsConditionsParserRuleCall_1_0 = (RuleCall)cConditionsAssignment_1.eContents().get(0);
-		private final Assignment cSolutionAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cSolutionSolutionParserRuleCall_2_0 = (RuleCall)cSolutionAssignment_2.eContents().get(0);
+		private final Keyword cQueryKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cSolutionAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cSolutionSolutionParserRuleCall_3_0 = (RuleCall)cSolutionAssignment_3.eContents().get(0);
+		private final Keyword cReturnsKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cStateAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cStateStateEnumRuleCall_5_0 = (RuleCall)cStateAssignment_5.eContents().get(0);
 		
 		////////////////////////////////////////////////////
 		//And:
 		//    name='AND'
 		//    (conditions+=Conditions)
-		//    (solution+=Solution)
+		//    'Query' (solution+=Solution)
+		//    'returns' state=State
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//name='AND'
 		//(conditions+=Conditions)
-		//(solution+=Solution)
+		//'Query' (solution+=Solution)
+		//'returns' state=State
 		public Group getGroup() { return cGroup; }
 		
 		//name='AND'
@@ -225,11 +232,23 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//Conditions
 		public RuleCall getConditionsConditionsParserRuleCall_1_0() { return cConditionsConditionsParserRuleCall_1_0; }
 		
+		//'Query'
+		public Keyword getQueryKeyword_2() { return cQueryKeyword_2; }
+		
 		//(solution+=Solution)
-		public Assignment getSolutionAssignment_2() { return cSolutionAssignment_2; }
+		public Assignment getSolutionAssignment_3() { return cSolutionAssignment_3; }
 		
 		//Solution
-		public RuleCall getSolutionSolutionParserRuleCall_2_0() { return cSolutionSolutionParserRuleCall_2_0; }
+		public RuleCall getSolutionSolutionParserRuleCall_3_0() { return cSolutionSolutionParserRuleCall_3_0; }
+		
+		//'returns'
+		public Keyword getReturnsKeyword_4() { return cReturnsKeyword_4; }
+		
+		//state=State
+		public Assignment getStateAssignment_5() { return cStateAssignment_5; }
+		
+		//State
+		public RuleCall getStateStateEnumRuleCall_5_0() { return cStateStateEnumRuleCall_5_0; }
 	}
 	
 	
@@ -382,7 +401,8 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	//And:
 	//    name='AND'
 	//    (conditions+=Conditions)
-	//    (solution+=Solution)
+	//    'Query' (solution+=Solution)
+	//    'returns' state=State
 	//;
 	public AndElements getAndAccess() {
 		return pAnd;
@@ -586,6 +606,17 @@ public class CPTesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	
 	public ParserRule getServoRule() {
 		return getServoAccess().getRule();
+	}
+	
+	//enum State:
+	//    TRUE='true' | FALSE='false'
+	//;
+	public SolutionGrammarAccess.StateElements getStateAccess() {
+		return gaSolution.getStateAccess();
+	}
+	
+	public EnumRule getStateRule() {
+		return getStateAccess().getRule();
 	}
 	
 	//terminal ID: '^'?('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;

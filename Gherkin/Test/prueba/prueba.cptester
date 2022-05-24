@@ -1,0 +1,7 @@
+Scenario "MoveASingleServo"
+{
+	GIVEN posInicial(1000)
+	WHEN rotateAllServos(90,45,90,30,20,10,2000)
+	THEN result(2000)
+	AND NotLaterThan(2000) Query isAt(90,45,90,30,20,10,2) returns true
+} 

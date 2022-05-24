@@ -33,6 +33,7 @@ public class CPTesterParser extends AbstractContentAssistParser {
 		private static void init(ImmutableMap.Builder<AbstractElement, String> builder, CPTesterGrammarAccess grammarAccess) {
 			builder.put(grammarAccess.getCommandAccess().getAlternatives(), "rule__Command__Alternatives");
 			builder.put(grammarAccess.getSolutionAccess().getAlternatives(), "rule__Solution__Alternatives");
+			builder.put(grammarAccess.getStateAccess().getAlternatives(), "rule__State__Alternatives");
 			builder.put(grammarAccess.getScenarioAccess().getGroup(), "rule__Scenario__Group__0");
 			builder.put(grammarAccess.getGivenAccess().getGroup(), "rule__Given__Group__0");
 			builder.put(grammarAccess.getWhenAccess().getGroup(), "rule__When__Group__0");
@@ -58,7 +59,8 @@ public class CPTesterParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getThenAccess().getResultAssignment_1(), "rule__Then__ResultAssignment_1");
 			builder.put(grammarAccess.getAndAccess().getNameAssignment_0(), "rule__And__NameAssignment_0");
 			builder.put(grammarAccess.getAndAccess().getConditionsAssignment_1(), "rule__And__ConditionsAssignment_1");
-			builder.put(grammarAccess.getAndAccess().getSolutionAssignment_2(), "rule__And__SolutionAssignment_2");
+			builder.put(grammarAccess.getAndAccess().getSolutionAssignment_3(), "rule__And__SolutionAssignment_3");
+			builder.put(grammarAccess.getAndAccess().getStateAssignment_5(), "rule__And__StateAssignment_5");
 			builder.put(grammarAccess.getInitialAccess().getNameAssignment_0(), "rule__Initial__NameAssignment_0");
 			builder.put(grammarAccess.getInitialAccess().getTimeAssignment_2(), "rule__Initial__TimeAssignment_2");
 			builder.put(grammarAccess.getRotateServoAccess().getNameAssignment_0(), "rule__RotateServo__NameAssignment_0");

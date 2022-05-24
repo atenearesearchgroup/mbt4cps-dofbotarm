@@ -32,6 +32,7 @@ public class SolutionParser extends AbstractContentAssistParser {
 		
 		private static void init(ImmutableMap.Builder<AbstractElement, String> builder, SolutionGrammarAccess grammarAccess) {
 			builder.put(grammarAccess.getSolutionAccess().getAlternatives(), "rule__Solution__Alternatives");
+			builder.put(grammarAccess.getStateAccess().getAlternatives(), "rule__State__Alternatives");
 			builder.put(grammarAccess.getIsAtSingleAccess().getGroup(), "rule__IsAtSingle__Group__0");
 			builder.put(grammarAccess.getIsAtAccess().getGroup(), "rule__IsAt__Group__0");
 			builder.put(grammarAccess.getIsAtSingleAccess().getNameAssignment_0(), "rule__IsAtSingle__NameAssignment_0");

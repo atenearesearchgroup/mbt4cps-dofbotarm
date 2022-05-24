@@ -6,6 +6,10 @@
     complianceLevel="8.0" copyrightFields="false" runtimeVersion="2.20">
   <genPackages prefix="Solution" basePackage="org.xtext" disposableProviderFactory="true"
       fileExtensions="solution" ecorePackage="Solution.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Solution.ecore#//State">
+      <genEnumLiterals ecoreEnumLiteral="Solution.ecore#//State/TRUE"/>
+      <genEnumLiterals ecoreEnumLiteral="Solution.ecore#//State/FALSE"/>
+    </genEnums>
     <genClasses ecoreClass="Solution.ecore#//Solution">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Solution.ecore#//Solution/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Solution.ecore#//Solution/angle_res"/>
