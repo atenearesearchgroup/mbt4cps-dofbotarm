@@ -1,7 +1,0 @@
-Scenario "rotate a single servo"
-{
-	GIVEN posInicial(1000)
-	WHEN rotateServo(1,90,2000)
-	THEN result(2000)
-	AND NotLaterThan(2000) isAtSingle(1,90,2)
-}
