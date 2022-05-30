@@ -1,0 +1,12 @@
+Scenario "TestingOperations"
+{
+	GIVEN posInicial(1000)
+	AND rotateAllServos(45,45,45,45,45,45,1000)
+	AND rotateServo(1,45,2000)
+	AND rotateServo(2,90,2000)
+	AND rotateAllServos(20,20,20,20,20,20,1000)
+ 	WHEN rotateServo(1,45,2000)
+	THEN result(1000)
+	AND NotLaterThan(2000) Query isAtSingle(1,45,2)
+	AND NotLaterThan(3000) Query isAtSingle(1,60,2)
+}    

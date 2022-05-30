@@ -1,0 +1,936 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="hellocucumber.RunCucumberTest" time="0.37" tests="18" errors="18" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="D:\eclipse-workspace\hellocucumber\target\test-classes;D:\eclipse-workspace\hellocucumber\target\classes;C:\Users\Migue\.m2\repository\io\cucumber\cucumber-java\7.0.0\cucumber-java-7.0.0.jar;C:\Users\Migue\.m2\repository\io\cucumber\cucumber-core\7.0.0\cucumber-core-7.0.0.jar;C:\Users\Migue\.m2\repository\io\cucumber\cucumber-gherkin\7.0.0\cucumber-gherkin-7.0.0.jar;C:\Users\Migue\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.0.0\cucumber-gherkin-messages-7.0.0.jar;C:\Users\Migue\.m2\repository\io\cucumber\messages\17.1.1\messages-17.1.1.jar;C:\Users\Migue\.m2\repository\io\cucumber\tag-expressions\4.0.2\tag-expressions-4.0.2.jar;C:\Users\Migue\.m2\repository\io\cucumber\cucumber-expressions\13.0.1\cucumber-expressions-13.0.1.jar;C:\Users\Migue\.m2\repository\io\cucumber\datatable\7.0.0\datatable-7.0.0.jar;C:\Users\Migue\.m2\repository\io\cucumber\cucumber-plugin\7.0.0\cucumber-plugin-7.0.0.jar;C:\Users\Migue\.m2\repository\io\cucumber\docstring\7.0.0\docstring-7.0.0.jar;C:\Users\Migue\.m2\repository\io\cucumber\html-formatter\17.0.0\html-formatter-17.0.0.jar;C:\Users\Migue\.m2\repository\io\cucumber\create-meta\6.0.1\create-meta-6.0.1.jar;C:\Users\Migue\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Migue\.m2\repository\io\cucumber\cucumber-junit-platform-engine\7.0.0\cucumber-junit-platform-engine-7.0.0.jar;C:\Users\Migue\.m2\repository\org\junit\platform\junit-platform-engine\1.8.1\junit-platform-engine-1.8.1.jar;C:\Users\Migue\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Migue\.m2\repository\org\junit\platform\junit-platform-commons\1.8.1\junit-platform-commons-1.8.1.jar;C:\Users\Migue\.m2\repository\org\junit\platform\junit-platform-suite\1.8.1\junit-platform-suite-1.8.1.jar;C:\Users\Migue\.m2\repository\org\junit\platform\junit-platform-suite-api\1.8.1\junit-platform-suite-api-1.8.1.jar;C:\Users\Migue\.m2\repository\org\junit\platform\junit-platform-suite-engine\1.8.1\junit-platform-suite-engine-1.8.1.jar;C:\Users\Migue\.m2\repository\org\junit\platform\junit-platform-suite-commons\1.8.1\junit-platform-suite-commons-1.8.1.jar;C:\Users\Migue\.m2\repository\org\junit\platform\junit-platform-launcher\1.8.1\junit-platform-launcher-1.8.1.jar;C:\Users\Migue\.m2\repository\org\junit\jupiter\junit-jupiter\5.8.1\junit-jupiter-5.8.1.jar;C:\Users\Migue\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.1\junit-jupiter-api-5.8.1.jar;C:\Users\Migue\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.8.1\junit-jupiter-params-5.8.1.jar;C:\Users\Migue\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.1\junit-jupiter-engine-5.8.1.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value="Europe/Paris"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_202\jre\bin"/>
+    <property name="sun.java.command" value="C:\Users\Migue\AppData\Local\Temp\surefire1985193406287938544\surefirebooter2059481917280168447.jar C:\Users\Migue\AppData\Local\Temp\surefire1985193406287938544 2022-03-15T09-46-27_445-jvmRun1 surefire6935007271736822898tmp surefire_07179885643729152152tmp"/>
+    <property name="surefire.test.class.path" value="D:\eclipse-workspace\hellocucumber\target\test-classes;D:\eclipse-workspace\hellocucumber\target\classes;C:\Users\Migue\.m2\repository\io\cucumber\cucumber-java\7.0.0\cucumber-java-7.0.0.jar;C:\Users\Migue\.m2\repository\io\cucumber\cucumber-core\7.0.0\cucumber-core-7.0.0.jar;C:\Users\Migue\.m2\repository\io\cucumber\cucumber-gherkin\7.0.0\cucumber-gherkin-7.0.0.jar;C:\Users\Migue\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.0.0\cucumber-gherkin-messages-7.0.0.jar;C:\Users\Migue\.m2\repository\io\cucumber\messages\17.1.1\messages-17.1.1.jar;C:\Users\Migue\.m2\repository\io\cucumber\tag-expressions\4.0.2\tag-expressions-4.0.2.jar;C:\Users\Migue\.m2\repository\io\cucumber\cucumber-expressions\13.0.1\cucumber-expressions-13.0.1.jar;C:\Users\Migue\.m2\repository\io\cucumber\datatable\7.0.0\datatable-7.0.0.jar;C:\Users\Migue\.m2\repository\io\cucumber\cucumber-plugin\7.0.0\cucumber-plugin-7.0.0.jar;C:\Users\Migue\.m2\repository\io\cucumber\docstring\7.0.0\docstring-7.0.0.jar;C:\Users\Migue\.m2\repository\io\cucumber\html-formatter\17.0.0\html-formatter-17.0.0.jar;C:\Users\Migue\.m2\repository\io\cucumber\create-meta\6.0.1\create-meta-6.0.1.jar;C:\Users\Migue\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Migue\.m2\repository\io\cucumber\cucumber-junit-platform-engine\7.0.0\cucumber-junit-platform-engine-7.0.0.jar;C:\Users\Migue\.m2\repository\org\junit\platform\junit-platform-engine\1.8.1\junit-platform-engine-1.8.1.jar;C:\Users\Migue\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Migue\.m2\repository\org\junit\platform\junit-platform-commons\1.8.1\junit-platform-commons-1.8.1.jar;C:\Users\Migue\.m2\repository\org\junit\platform\junit-platform-suite\1.8.1\junit-platform-suite-1.8.1.jar;C:\Users\Migue\.m2\repository\org\junit\platform\junit-platform-suite-api\1.8.1\junit-platform-suite-api-1.8.1.jar;C:\Users\Migue\.m2\repository\org\junit\platform\junit-platform-suite-engine\1.8.1\junit-platform-suite-engine-1.8.1.jar;C:\Users\Migue\.m2\repository\org\junit\platform\junit-platform-suite-commons\1.8.1\junit-platform-suite-commons-1.8.1.jar;C:\Users\Migue\.m2\repository\org\junit\platform\junit-platform-launcher\1.8.1\junit-platform-launcher-1.8.1.jar;C:\Users\Migue\.m2\repository\org\junit\jupiter\junit-jupiter\5.8.1\junit-jupiter-5.8.1.jar;C:\Users\Migue\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.1\junit-jupiter-api-5.8.1.jar;C:\Users\Migue\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.8.1\junit-jupiter-params-5.8.1.jar;C:\Users\Migue\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.1\junit-jupiter-engine-5.8.1.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\Migue"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_202\jre"/>
+    <property name="basedir" value="D:\eclipse-workspace\hellocucumber"/>
+    <property name="file.separator" value="\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\Migue\AppData\Local\Temp\surefire1985193406287938544\surefirebooter2059481917280168447.jar"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_202\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_202\jre\classes"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="1.8.0_202-b08"/>
+    <property name="user.name" value="Migue"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_202\jre\lib\endorsed"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\Migue\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\Migue\AppData\Local\Temp\"/>
+    <property name="java.version" value="1.8.0_202"/>
+    <property name="user.dir" value="D:\eclipse-workspace\hellocucumber"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_202\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Users\Migue\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Migue\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\PuTTY;C:\Program Files\Git\cmd;C:\Program Files\AutoFirma\AutoFirma;C:\Program Files\Python310;C:\spark-3.0.3-bin-hadoop2.7\bin;C:\Program Files\dotnet;C:\Windows\Microsoft.NET\Framework\v4.0.30319;C:\Users\Migue\AppData\Local\Microsoft\WindowsApps;C:\Users\Migue\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\Python310;C:\spark-3.0.3-bin-hadoop2.7\bin;C:\Users\Migue\.dotnet\tools;C:\Users\Migue\Downloads\apache-maven-3.8.5-bin\apache-maven-3.8.5\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.202-b08"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="52.0"/>
+  </properties>
+  <testcase name="Example #1" classname="Examples" time="0.088">
+    <error type="io.cucumber.junit.platform.engine.UndefinedStepException"><![CDATA[io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'A call to the operation' and 6 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("A call to the operation")
+public void a_call_to_the_operation() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("We will receive the value of the angle for {int}")
+public void we_will_receive_the_value_of_the_angle_for(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+]]></error>
+    <system-out><![CDATA[
+@tag @tag1
+Scenario: Read all the angles                        &amp#27;[90m# hellocucumber/read.feature:36&amp#27;[0m
+  &amp#27;[33mGiven &amp#27;[0m&amp#27;[33mA call to the operation&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mWe will receive the value of the angle for 90&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mWe will receive the value of the angle for 90&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mWe will receive the value of the angle for 90&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mWe will receive the value of the angle for 90&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mWe will receive the value of the angle for 90&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mWe will receive the value of the angle for 90&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1" classname="Examples" time="0.006">
+    <error type="io.cucumber.junit.platform.engine.UndefinedStepException"><![CDATA[io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'An 1 indicating the servo' and 2 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("An {int} indicating the servo")
+public void an_indicating_the_servo(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is equals to one of the servos")
+public void the_is_equals_to_one_of_the_servos(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The system will print the {int} of the servo")
+public void the_system_will_print_the_of_the_servo(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+]]></error>
+    <system-out><![CDATA[
+@tag @tag2
+Scenario: Read a single servo                    &amp#27;[90m# hellocucumber/read.feature:48&amp#27;[0m
+  &amp#27;[33mGiven &amp#27;[0m&amp#27;[33mAn 1 indicating the servo&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mThe 1 is equals to one of the servos&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mThe system will print the 90 of the servo&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1" classname="Examples" time="0.012">
+    <error type="io.cucumber.junit.platform.engine.UndefinedStepException"><![CDATA[io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'An 1 indicating the servo' and 7 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("An {int} indicating the servo")
+public void an_indicating_the_servo(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("An {int} for the rotation")
+public void an_for_the_rotation(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("A {int} for the completion of the move")
+public void a_for_the_completion_of_the_move(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is equals to one of the servos")
+public void the_is_equals_to_one_of_the_servos(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is in the range of movement")
+public void the_is_in_the_range_of_movement(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is acceptable")
+public void the_is_acceptable(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo with the {int} given will rotate to the {int}")
+public void the_servo_with_the_given_will_rotate_to_the(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("It will complete the movement in the {int} given")
+public void it_will_complete_the_movement_in_the_given(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+]]></error>
+    <system-out><![CDATA[
+@tag @tag1
+Scenario: Rotate a single servo                         &amp#27;[90m# hellocucumber/rotate.feature:36&amp#27;[0m
+  &amp#27;[33mGiven &amp#27;[0m&amp#27;[33mAn 1 indicating the servo&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mAn 90 for the rotation&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mA 1000 for the completion of the move&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mThe 1 is equals to one of the servos&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mThe 90 is in the range of movement&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mThe 1000 is acceptable&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mThe servo with the 1 given will rotate to the 90&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mIt will complete the movement in the 1000 given&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1" classname="Examples" time="0.025">
+    <error type="io.cucumber.junit.platform.engine.UndefinedStepException"><![CDATA[io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'A angle value for 90' and 19 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("A angle value for {int}")
+public void a_angle_value_for(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("A {int} value for the movement")
+public void a_value_for_the_movement(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The value for {int} is in range")
+public void the_value_for_is_in_range(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} value is acceptable")
+public void the_value_is_acceptable(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo1 will rotate to the value for {int} in the given {int}")
+public void the_servo1_will_rotate_to_the_value_for_in_the_given(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo2 will rotate to the value for {int} in the given {int}")
+public void the_servo2_will_rotate_to_the_value_for_in_the_given(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo3 will rotate to the value for {int} in the given {int}")
+public void the_servo3_will_rotate_to_the_value_for_in_the_given(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo4 will rotate to the value for {int} in the given {int}")
+public void the_servo4_will_rotate_to_the_value_for_in_the_given(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo5 will rotate to the value for {int} in the given {int}")
+public void the_servo5_will_rotate_to_the_value_for_in_the_given(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo6 will rotate to the value for {int} in the given {int}")
+public void the_servo6_will_rotate_to_the_value_for_in_the_given(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+]]></error>
+    <system-out><![CDATA[
+@tag @tag2
+Scenario: Rotate multiple servos                                    &amp#27;[90m# hellocucumber/rotate.feature:68&amp#27;[0m
+  &amp#27;[33mGiven &amp#27;[0m&amp#27;[33mA angle value for 90&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mA angle value for 90&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mA angle value for 90&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mA angle value for 90&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mA angle value for 90&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mA angle value for 90&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mA 1000 value for the movement&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mThe value for 90 is in range&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mThe value for 90 is in range&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mThe value for 90 is in range&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mThe value for 90 is in range&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mThe value for 90 is in range&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mThe value for 90 is in range&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mThe 1000 value is acceptable&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mThe servo1 will rotate to the value for 90 in the given 1000&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mThe servo2 will rotate to the value for 90 in the given 1000&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mThe servo3 will rotate to the value for 90 in the given 1000&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mThe servo4 will rotate to the value for 90 in the given 1000&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mThe servo5 will rotate to the value for 90 in the given 1000&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mThe servo6 will rotate to the value for 90 in the given 1000&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #2" classname="Examples" time="0.008">
+    <error type="io.cucumber.junit.platform.engine.UndefinedStepException"><![CDATA[io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'A call to the operation' and 6 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("A call to the operation")
+public void a_call_to_the_operation() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("We will receive the value of the angle for {int}")
+public void we_will_receive_the_value_of_the_angle_for(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+]]></error>
+    <system-out><![CDATA[
+@tag @tag1
+Scenario: Read all the angles                        &amp#27;[90m# hellocucumber/read.feature:37&amp#27;[0m
+  &amp#27;[33mGiven &amp#27;[0m&amp#27;[33mA call to the operation&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mWe will receive the value of the angle for 45&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mWe will receive the value of the angle for 45&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mWe will receive the value of the angle for 45&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mWe will receive the value of the angle for 45&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mWe will receive the value of the angle for 45&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mWe will receive the value of the angle for 45&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #2" classname="Examples" time="0.004">
+    <error type="io.cucumber.junit.platform.engine.UndefinedStepException"><![CDATA[io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'An 2 indicating the servo' and 2 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("An {int} indicating the servo")
+public void an_indicating_the_servo(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is equals to one of the servos")
+public void the_is_equals_to_one_of_the_servos(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The system will print the {int} of the servo")
+public void the_system_will_print_the_of_the_servo(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+]]></error>
+    <system-out><![CDATA[
+@tag @tag2
+Scenario: Read a single servo                    &amp#27;[90m# hellocucumber/read.feature:49&amp#27;[0m
+  &amp#27;[33mGiven &amp#27;[0m&amp#27;[33mAn 2 indicating the servo&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mThe 2 is equals to one of the servos&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mThe system will print the 90 of the servo&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #2" classname="Examples" time="0.009">
+    <error type="io.cucumber.junit.platform.engine.UndefinedStepException"><![CDATA[io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'An 2 indicating the servo' and 7 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("An {int} indicating the servo")
+public void an_indicating_the_servo(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("An {int} for the rotation")
+public void an_for_the_rotation(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("A {int} for the completion of the move")
+public void a_for_the_completion_of_the_move(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is equals to one of the servos")
+public void the_is_equals_to_one_of_the_servos(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is in the range of movement")
+public void the_is_in_the_range_of_movement(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is acceptable")
+public void the_is_acceptable(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo with the {int} given will rotate to the {int}")
+public void the_servo_with_the_given_will_rotate_to_the(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("It will complete the movement in the {int} given")
+public void it_will_complete_the_movement_in_the_given(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+]]></error>
+    <system-out><![CDATA[
+@tag @tag1
+Scenario: Rotate a single servo                         &amp#27;[90m# hellocucumber/rotate.feature:37&amp#27;[0m
+  &amp#27;[33mGiven &amp#27;[0m&amp#27;[33mAn 2 indicating the servo&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mAn 90 for the rotation&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mA 1000 for the completion of the move&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mThe 2 is equals to one of the servos&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mThe 90 is in the range of movement&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mThe 1000 is acceptable&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mThe servo with the 2 given will rotate to the 90&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mIt will complete the movement in the 1000 given&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #2" classname="Examples" time="0.026">
+    <error type="io.cucumber.junit.platform.engine.UndefinedStepException"><![CDATA[io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'A angle value for 45' and 19 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("A angle value for {int}")
+public void a_angle_value_for(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("A {int} value for the movement")
+public void a_value_for_the_movement(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The value for {int} is in range")
+public void the_value_for_is_in_range(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} value is acceptable")
+public void the_value_is_acceptable(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo1 will rotate to the value for {int} in the given {int}")
+public void the_servo1_will_rotate_to_the_value_for_in_the_given(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo2 will rotate to the value for {int} in the given {int}")
+public void the_servo2_will_rotate_to_the_value_for_in_the_given(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo3 will rotate to the value for {int} in the given {int}")
+public void the_servo3_will_rotate_to_the_value_for_in_the_given(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo4 will rotate to the value for {int} in the given {int}")
+public void the_servo4_will_rotate_to_the_value_for_in_the_given(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo5 will rotate to the value for {int} in the given {int}")
+public void the_servo5_will_rotate_to_the_value_for_in_the_given(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo6 will rotate to the value for {int} in the given {int}")
+public void the_servo6_will_rotate_to_the_value_for_in_the_given(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+]]></error>
+    <system-out><![CDATA[
+@tag @tag2
+Scenario: Rotate multiple servos                                    &amp#27;[90m# hellocucumber/rotate.feature:69&amp#27;[0m
+  &amp#27;[33mGiven &amp#27;[0m&amp#27;[33mA angle value for 45&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mA angle value for 45&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mA angle value for 45&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mA angle value for 45&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mA angle value for 45&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mA angle value for 45&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mA 1000 value for the movement&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mThe value for 45 is in range&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mThe value for 45 is in range&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mThe value for 45 is in range&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mThe value for 45 is in range&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mThe value for 45 is in range&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mThe value for 45 is in range&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mThe 1000 value is acceptable&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mThe servo1 will rotate to the value for 45 in the given 1000&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mThe servo2 will rotate to the value for 45 in the given 1000&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mThe servo3 will rotate to the value for 45 in the given 1000&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mThe servo4 will rotate to the value for 45 in the given 1000&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mThe servo5 will rotate to the value for 45 in the given 1000&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mThe servo6 will rotate to the value for 45 in the given 1000&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #3" classname="Examples" time="0.009">
+    <error type="io.cucumber.junit.platform.engine.UndefinedStepException"><![CDATA[io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'A call to the operation' and 6 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("A call to the operation")
+public void a_call_to_the_operation() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("We will receive the value of the angle for {int}")
+public void we_will_receive_the_value_of_the_angle_for(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+]]></error>
+    <system-out><![CDATA[
+@tag @tag1
+Scenario: Read all the angles                        &amp#27;[90m# hellocucumber/read.feature:38&amp#27;[0m
+  &amp#27;[33mGiven &amp#27;[0m&amp#27;[33mA call to the operation&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mWe will receive the value of the angle for 90&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mWe will receive the value of the angle for 130&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mWe will receive the value of the angle for 0&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mWe will receive the value of the angle for 0&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mWe will receive the value of the angle for 270&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mWe will receive the value of the angle for 60&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #3" classname="Examples" time="0.007">
+    <error type="io.cucumber.junit.platform.engine.UndefinedStepException"><![CDATA[io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'An 3 indicating the servo' and 2 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("An {int} indicating the servo")
+public void an_indicating_the_servo(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is equals to one of the servos")
+public void the_is_equals_to_one_of_the_servos(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The system will print the {int} of the servo")
+public void the_system_will_print_the_of_the_servo(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+]]></error>
+    <system-out><![CDATA[
+@tag @tag2
+Scenario: Read a single servo                    &amp#27;[90m# hellocucumber/read.feature:50&amp#27;[0m
+  &amp#27;[33mGiven &amp#27;[0m&amp#27;[33mAn 3 indicating the servo&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mThe 3 is equals to one of the servos&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mThe system will print the 90 of the servo&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #3" classname="Examples" time="0.012">
+    <error type="io.cucumber.junit.platform.engine.UndefinedStepException"><![CDATA[io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'An 3 indicating the servo' and 7 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("An {int} indicating the servo")
+public void an_indicating_the_servo(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("An {int} for the rotation")
+public void an_for_the_rotation(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("A {int} for the completion of the move")
+public void a_for_the_completion_of_the_move(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is equals to one of the servos")
+public void the_is_equals_to_one_of_the_servos(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is in the range of movement")
+public void the_is_in_the_range_of_movement(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is acceptable")
+public void the_is_acceptable(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo with the {int} given will rotate to the {int}")
+public void the_servo_with_the_given_will_rotate_to_the(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("It will complete the movement in the {int} given")
+public void it_will_complete_the_movement_in_the_given(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+]]></error>
+    <system-out><![CDATA[
+@tag @tag1
+Scenario: Rotate a single servo                         &amp#27;[90m# hellocucumber/rotate.feature:38&amp#27;[0m
+  &amp#27;[33mGiven &amp#27;[0m&amp#27;[33mAn 3 indicating the servo&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mAn 90 for the rotation&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mA 1000 for the completion of the move&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mThe 3 is equals to one of the servos&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mThe 90 is in the range of movement&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mThe 1000 is acceptable&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mThe servo with the 3 given will rotate to the 90&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mIt will complete the movement in the 1000 given&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #3" classname="Examples" time="0.02">
+    <error type="io.cucumber.junit.platform.engine.UndefinedStepException"><![CDATA[io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'A angle value for 90' and 19 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("A angle value for {int}")
+public void a_angle_value_for(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("A {int} value for the movement")
+public void a_value_for_the_movement(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The value for {int} is in range")
+public void the_value_for_is_in_range(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} value is acceptable")
+public void the_value_is_acceptable(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo1 will rotate to the value for {int} in the given {int}")
+public void the_servo1_will_rotate_to_the_value_for_in_the_given(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo2 will rotate to the value for {int} in the given {int}")
+public void the_servo2_will_rotate_to_the_value_for_in_the_given(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo3 will rotate to the value for {int} in the given {int}")
+public void the_servo3_will_rotate_to_the_value_for_in_the_given(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo4 will rotate to the value for {int} in the given {int}")
+public void the_servo4_will_rotate_to_the_value_for_in_the_given(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo5 will rotate to the value for {int} in the given {int}")
+public void the_servo5_will_rotate_to_the_value_for_in_the_given(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo6 will rotate to the value for {int} in the given {int}")
+public void the_servo6_will_rotate_to_the_value_for_in_the_given(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+]]></error>
+    <system-out><![CDATA[
+@tag @tag2
+Scenario: Rotate multiple servos                                    &amp#27;[90m# hellocucumber/rotate.feature:70&amp#27;[0m
+  &amp#27;[33mGiven &amp#27;[0m&amp#27;[33mA angle value for 90&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mA angle value for 130&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mA angle value for 0&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mA angle value for 0&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mA angle value for 270&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mA angle value for 60&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mA 1000 value for the movement&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mThe value for 90 is in range&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mThe value for 130 is in range&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mThe value for 0 is in range&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mThe value for 0 is in range&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mThe value for 270 is in range&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mThe value for 60 is in range&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mThe 1000 value is acceptable&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mThe servo1 will rotate to the value for 90 in the given 1000&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mThe servo2 will rotate to the value for 130 in the given 1000&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mThe servo3 will rotate to the value for 0 in the given 1000&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mThe servo4 will rotate to the value for 0 in the given 1000&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mThe servo5 will rotate to the value for 270 in the given 1000&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mThe servo6 will rotate to the value for 60 in the given 1000&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #4" classname="Examples" time="0.003">
+    <error type="io.cucumber.junit.platform.engine.UndefinedStepException"><![CDATA[io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'An 4 indicating the servo' and 2 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("An {int} indicating the servo")
+public void an_indicating_the_servo(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is equals to one of the servos")
+public void the_is_equals_to_one_of_the_servos(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The system will print the {int} of the servo")
+public void the_system_will_print_the_of_the_servo(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+]]></error>
+    <system-out><![CDATA[
+@tag @tag2
+Scenario: Read a single servo                    &amp#27;[90m# hellocucumber/read.feature:51&amp#27;[0m
+  &amp#27;[33mGiven &amp#27;[0m&amp#27;[33mAn 4 indicating the servo&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mThe 4 is equals to one of the servos&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mThe system will print the 90 of the servo&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #4" classname="Examples" time="0.013">
+    <error type="io.cucumber.junit.platform.engine.UndefinedStepException"><![CDATA[io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'An 4 indicating the servo' and 7 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("An {int} indicating the servo")
+public void an_indicating_the_servo(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("An {int} for the rotation")
+public void an_for_the_rotation(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("A {int} for the completion of the move")
+public void a_for_the_completion_of_the_move(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is equals to one of the servos")
+public void the_is_equals_to_one_of_the_servos(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is in the range of movement")
+public void the_is_in_the_range_of_movement(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is acceptable")
+public void the_is_acceptable(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo with the {int} given will rotate to the {int}")
+public void the_servo_with_the_given_will_rotate_to_the(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("It will complete the movement in the {int} given")
+public void it_will_complete_the_movement_in_the_given(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+]]></error>
+    <system-out><![CDATA[
+@tag @tag1
+Scenario: Rotate a single servo                         &amp#27;[90m# hellocucumber/rotate.feature:39&amp#27;[0m
+  &amp#27;[33mGiven &amp#27;[0m&amp#27;[33mAn 4 indicating the servo&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mAn 90 for the rotation&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mA 1000 for the completion of the move&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mThe 4 is equals to one of the servos&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mThe 90 is in the range of movement&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mThe 1000 is acceptable&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mThe servo with the 4 given will rotate to the 90&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mIt will complete the movement in the 1000 given&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #5" classname="Examples" time="0.004">
+    <error type="io.cucumber.junit.platform.engine.UndefinedStepException"><![CDATA[io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'An 5 indicating the servo' and 2 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("An {int} indicating the servo")
+public void an_indicating_the_servo(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is equals to one of the servos")
+public void the_is_equals_to_one_of_the_servos(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The system will print the {int} of the servo")
+public void the_system_will_print_the_of_the_servo(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+]]></error>
+    <system-out><![CDATA[
+@tag @tag2
+Scenario: Read a single servo                    &amp#27;[90m# hellocucumber/read.feature:52&amp#27;[0m
+  &amp#27;[33mGiven &amp#27;[0m&amp#27;[33mAn 5 indicating the servo&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mThe 5 is equals to one of the servos&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mThe system will print the 90 of the servo&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #5" classname="Examples" time="0.009">
+    <error type="io.cucumber.junit.platform.engine.UndefinedStepException"><![CDATA[io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'An 5 indicating the servo' and 7 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("An {int} indicating the servo")
+public void an_indicating_the_servo(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("An {int} for the rotation")
+public void an_for_the_rotation(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("A {int} for the completion of the move")
+public void a_for_the_completion_of_the_move(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is equals to one of the servos")
+public void the_is_equals_to_one_of_the_servos(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is in the range of movement")
+public void the_is_in_the_range_of_movement(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is acceptable")
+public void the_is_acceptable(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo with the {int} given will rotate to the {int}")
+public void the_servo_with_the_given_will_rotate_to_the(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("It will complete the movement in the {int} given")
+public void it_will_complete_the_movement_in_the_given(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+]]></error>
+    <system-out><![CDATA[
+@tag @tag1
+Scenario: Rotate a single servo                         &amp#27;[90m# hellocucumber/rotate.feature:40&amp#27;[0m
+  &amp#27;[33mGiven &amp#27;[0m&amp#27;[33mAn 5 indicating the servo&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mAn 90 for the rotation&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mA 1000 for the completion of the move&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mThe 5 is equals to one of the servos&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mThe 90 is in the range of movement&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mThe 1000 is acceptable&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mThe servo with the 5 given will rotate to the 90&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mIt will complete the movement in the 1000 given&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #6" classname="Examples" time="0.007">
+    <error type="io.cucumber.junit.platform.engine.UndefinedStepException"><![CDATA[io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'An 6 indicating the servo' and 2 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("An {int} indicating the servo")
+public void an_indicating_the_servo(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is equals to one of the servos")
+public void the_is_equals_to_one_of_the_servos(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The system will print the {int} of the servo")
+public void the_system_will_print_the_of_the_servo(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+]]></error>
+    <system-out><![CDATA[
+@tag @tag2
+Scenario: Read a single servo                    &amp#27;[90m# hellocucumber/read.feature:53&amp#27;[0m
+  &amp#27;[33mGiven &amp#27;[0m&amp#27;[33mAn 6 indicating the servo&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mThe 6 is equals to one of the servos&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mThe system will print the 90 of the servo&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #6" classname="Examples" time="0.012">
+    <error type="io.cucumber.junit.platform.engine.UndefinedStepException"><![CDATA[io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'An 6 indicating the servo' and 7 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("An {int} indicating the servo")
+public void an_indicating_the_servo(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("An {int} for the rotation")
+public void an_for_the_rotation(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("A {int} for the completion of the move")
+public void a_for_the_completion_of_the_move(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is equals to one of the servos")
+public void the_is_equals_to_one_of_the_servos(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is in the range of movement")
+public void the_is_in_the_range_of_movement(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is acceptable")
+public void the_is_acceptable(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo with the {int} given will rotate to the {int}")
+public void the_servo_with_the_given_will_rotate_to_the(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("It will complete the movement in the {int} given")
+public void it_will_complete_the_movement_in_the_given(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+]]></error>
+    <system-out><![CDATA[
+@tag @tag1
+Scenario: Rotate a single servo                         &amp#27;[90m# hellocucumber/rotate.feature:41&amp#27;[0m
+  &amp#27;[33mGiven &amp#27;[0m&amp#27;[33mAn 6 indicating the servo&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mAn 90 for the rotation&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mA 1000 for the completion of the move&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mThe 6 is equals to one of the servos&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mThe 90 is in the range of movement&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mThe 1000 is acceptable&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mThe servo with the 6 given will rotate to the 90&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mIt will complete the movement in the 1000 given&amp#27;[0m
+]]></system-out>
+  </testcase>
+</testsuite>
