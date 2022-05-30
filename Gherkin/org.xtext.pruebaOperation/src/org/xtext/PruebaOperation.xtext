@@ -1,0 +1,115 @@
+grammar org.xtext.PruebaOperation with org.eclipse.xtext.common.Terminals
+
+generate pruebaOperation "http://www.xtext.org/PruebaOperation"
+
+Initial:
+	name='posInicial'
+	'('
+	(time+=Time)
+	')'
+;
+
+Command:
+	rotateServo | rotateAllServos
+;
+
+rotateServo:
+	name='rotateServo'
+	'('
+	(servo+=Servo)
+	','
+	(angle+=Angle)
+	','
+	(time+=Time)
+	')'
+;
+
+rotateAllServos:
+	name='rotateAllServos'
+	'('
+	(angle1+=Angle)
+	','
+	(angle2+=Angle)
+	','
+	(angle3+=Angle)
+	','
+	(angle4+=Angle)
+	','
+	(angle5+=Angle)
+	','
+	(angle6+=Angle)
+	','	
+	(time+=Time)
+	')'
+;
+
+Result:
+	name='result'
+	'('
+	(time+=Time)
+	')'
+;
+
+
+Conditions:
+	name='NotLaterThan'
+	'('
+	(time+=Time)
+	')'
+;
+
+Solution:
+	isAtSingle | isAt
+;
+
+isAtSingle:
+	name='isAtSingle'
+	'('
+	(servo+=Servo)
+	','
+	(angle+=Angle)
+	','
+	(angle_res+=Angle_res)
+	')'
+;
+
+isAt:
+	name='isAt'
+	'('
+	(angle1+=Angle)
+	','
+	(angle2+=Angle)
+	','
+	(angle3+=Angle)
+	','
+	(angle4+=Angle)
+	','
+	(angle5+=Angle)
+	','
+	(angle6+=Angle)
+	','
+	(angle_res+=Angle_res)
+	')'
+;
+
+Angle_res:
+	angle_res=INT
+;
+
+
+Angle:
+	angle=INT
+;
+
+Time:
+	time=INT
+;
+
+
+Servo:
+	servo=INT
+;
+
+enum State: 
+	TRUE='true' | FALSE='false'
+;
