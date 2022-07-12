@@ -111,7 +111,7 @@ class CPtesterGenerator extends AbstractGenerator {
 						Guard: Arm.ArmOperations.isAtOperation(«FOR ang : ia.angle1»«var value = ang as Angle»«value.angle»«ENDFOR», «FOR ang : ia.angle2»«var value = ang as Angle»«value.angle»«ENDFOR», «FOR ang : ia.angle3»«var value = ang as Angle»«value.angle»«ENDFOR», «FOR ang : ia.angle4»«var value = ang as Angle»«value.angle»«ENDFOR», «FOR ang : ia.angle5»«var value = ang as Angle»«value.angle»«ENDFOR», «FOR ang : ia.angle6»«var value = ang as Angle»«value.angle»«ENDFOR», 2);
 						«ENDIF»«ENDIF»«ENDFOR»«ENDFOR»«ENDIF»
 						
-				State:  «scenario.when.eClass.name»
+				State: «scenario.when.eClass.name»
 						«FOR cmd : scenario.when.command»«IF cmd.eClass.name.equals('rotateServoOperation')»«var rot = cmd as rotateServoOperation»
 						Activity: Arm.BaseServo.ServosOperations.«cmd.eClass.name»(«FOR ser : rot.servo»«var value = ser as Servo»«value.servo»«ENDFOR», «FOR ang : rot.angle»«var value = ang as Angle»«value.angle»«ENDFOR», «FOR tmp : rot.time»«var value = tmp as Time»«value.time»«ENDFOR»);
 						«ELSEIF cmd.eClass.name.equals('rotateAllServosOperation')»«var rot = cmd as rotateAllServosOperation»

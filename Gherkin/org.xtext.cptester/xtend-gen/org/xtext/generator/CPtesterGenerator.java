@@ -710,7 +710,7 @@ public class CPtesterGenerator extends AbstractGenerator {
     _builder.append("\t\t\t\t");
     _builder.newLine();
     _builder.append("\t\t");
-    _builder.append("State:  ");
+    _builder.append("State: ");
     String _name_21 = scenario.getWhen().eClass().getName();
     _builder.append(_name_21, "\t\t");
     _builder.newLineIfNotEmpty();
