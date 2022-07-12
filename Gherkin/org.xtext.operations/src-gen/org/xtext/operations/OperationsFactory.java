@@ -42,85 +42,85 @@ public interface OperationsFactory extends EFactory
   Command createCommand();
 
   /**
-   * Returns a new object of class '<em>light RGB Operation</em>'.
+   * Returns a new object of class '<em>light RGB</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>light RGB Operation</em>'.
+   * @return a new object of class '<em>light RGB</em>'.
    * @generated
    */
-  lightRGBOperation createlightRGBOperation();
+  lightRGB createlightRGB();
 
   /**
-   * Returns a new object of class '<em>buzzer Off Operation</em>'.
+   * Returns a new object of class '<em>buzzer Off</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>buzzer Off Operation</em>'.
+   * @return a new object of class '<em>buzzer Off</em>'.
    * @generated
    */
-  buzzerOffOperation createbuzzerOffOperation();
+  buzzerOff createbuzzerOff();
 
   /**
-   * Returns a new object of class '<em>buzzer On Operation</em>'.
+   * Returns a new object of class '<em>buzzer On</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>buzzer On Operation</em>'.
+   * @return a new object of class '<em>buzzer On</em>'.
    * @generated
    */
-  buzzerOnOperation createbuzzerOnOperation();
+  buzzerOn createbuzzerOn();
 
   /**
-   * Returns a new object of class '<em>calibration Operation</em>'.
+   * Returns a new object of class '<em>calibration</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>calibration Operation</em>'.
+   * @return a new object of class '<em>calibration</em>'.
    * @generated
    */
-  calibrationOperation createcalibrationOperation();
+  calibration createcalibration();
 
   /**
-   * Returns a new object of class '<em>camera Color Operation</em>'.
+   * Returns a new object of class '<em>camera Color</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>camera Color Operation</em>'.
+   * @return a new object of class '<em>camera Color</em>'.
    * @generated
    */
-  cameraColorOperation createcameraColorOperation();
+  cameraColor createcameraColor();
 
   /**
-   * Returns a new object of class '<em>read All Servos Operation</em>'.
+   * Returns a new object of class '<em>read All Servos</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>read All Servos Operation</em>'.
+   * @return a new object of class '<em>read All Servos</em>'.
    * @generated
    */
-  readAllServosOperation createreadAllServosOperation();
+  readAllServos createreadAllServos();
 
   /**
-   * Returns a new object of class '<em>read Servo Operation</em>'.
+   * Returns a new object of class '<em>read Servo</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>read Servo Operation</em>'.
+   * @return a new object of class '<em>read Servo</em>'.
    * @generated
    */
-  readServoOperation createreadServoOperation();
+  readServo createreadServo();
 
   /**
-   * Returns a new object of class '<em>rotate Servo Operation</em>'.
+   * Returns a new object of class '<em>rotate Servo</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>rotate Servo Operation</em>'.
+   * @return a new object of class '<em>rotate Servo</em>'.
    * @generated
    */
-  rotateServoOperation createrotateServoOperation();
+  rotateServo createrotateServo();
 
   /**
-   * Returns a new object of class '<em>rotate All Servos Operation</em>'.
+   * Returns a new object of class '<em>rotate All Servos</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>rotate All Servos Operation</em>'.
+   * @return a new object of class '<em>rotate All Servos</em>'.
    * @generated
    */
-  rotateAllServosOperation createrotateAllServosOperation();
+  rotateAllServos createrotateAllServos();
 
   /**
    * Returns a new object of class '<em>Result</em>'.
@@ -150,22 +150,22 @@ public interface OperationsFactory extends EFactory
   Solution createSolution();
 
   /**
-   * Returns a new object of class '<em>is At Single Operation</em>'.
+   * Returns a new object of class '<em>is At Single</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>is At Single Operation</em>'.
+   * @return a new object of class '<em>is At Single</em>'.
    * @generated
    */
-  isAtSingleOperation createisAtSingleOperation();
+  isAtSingle createisAtSingle();
 
   /**
-   * Returns a new object of class '<em>is At Operation</em>'.
+   * Returns a new object of class '<em>is At</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>is At Operation</em>'.
+   * @return a new object of class '<em>is At</em>'.
    * @generated
    */
-  isAtOperation createisAtOperation();
+  isAt createisAt();
 
   /**
    * Returns a new object of class '<em>Angle res</em>'.

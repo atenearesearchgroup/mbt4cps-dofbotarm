@@ -423,7 +423,7 @@ public class CPtesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	}
 	
 	//Initial:
-	//    name='posInicialOperation'
+	//    name='posInicial'
 	//    '('
 	//    (time+=Time)
 	//    ')'
@@ -437,7 +437,7 @@ public class CPtesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	}
 	
 	//Command:
-	//    rotateServoOperation | rotateAllServosOperation | readServoOperation | readAllServosOperation | cameraColorOperation | calibrationOperation | buzzerOnOperation | buzzerOffOperation | lightRGBOperation
+	//    rotateServo | rotateAllServos | readServo | readAllServos | cameraColor | calibration | buzzerOn | buzzerOff | lightRGB
 	//;
 	public OperationsGrammarAccess.CommandElements getCommandAccess() {
 		return gaOperations.getCommandAccess();
@@ -447,8 +447,8 @@ public class CPtesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		return getCommandAccess().getRule();
 	}
 	
-	//lightRGBOperation:
-	//    name='lightRGBOperation'
+	//lightRGB:
+	//    name='lightRGB'
 	//    '('
 	//    (r+=R)
 	//    ','
@@ -457,43 +457,43 @@ public class CPtesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	//    (b+=B)
 	//    ')'
 	//;
-	public OperationsGrammarAccess.LightRGBOperationElements getLightRGBOperationAccess() {
-		return gaOperations.getLightRGBOperationAccess();
+	public OperationsGrammarAccess.LightRGBElements getLightRGBAccess() {
+		return gaOperations.getLightRGBAccess();
 	}
 	
-	public ParserRule getLightRGBOperationRule() {
-		return getLightRGBOperationAccess().getRule();
+	public ParserRule getLightRGBRule() {
+		return getLightRGBAccess().getRule();
 	}
 	
-	//buzzerOffOperation:
-	//    name='buzzerOffOperation'
+	//buzzerOff:
+	//    name='buzzerOff'
 	//    '('
 	//    ')'
 	//;
-	public OperationsGrammarAccess.BuzzerOffOperationElements getBuzzerOffOperationAccess() {
-		return gaOperations.getBuzzerOffOperationAccess();
+	public OperationsGrammarAccess.BuzzerOffElements getBuzzerOffAccess() {
+		return gaOperations.getBuzzerOffAccess();
 	}
 	
-	public ParserRule getBuzzerOffOperationRule() {
-		return getBuzzerOffOperationAccess().getRule();
+	public ParserRule getBuzzerOffRule() {
+		return getBuzzerOffAccess().getRule();
 	}
 	
-	//buzzerOnOperation:
-	//    name='buzzerOnOperation'
+	//buzzerOn:
+	//    name='buzzerOn'
 	//    '('
 	//    (time+=Time)
 	//    ')'
 	//;
-	public OperationsGrammarAccess.BuzzerOnOperationElements getBuzzerOnOperationAccess() {
-		return gaOperations.getBuzzerOnOperationAccess();
+	public OperationsGrammarAccess.BuzzerOnElements getBuzzerOnAccess() {
+		return gaOperations.getBuzzerOnAccess();
 	}
 	
-	public ParserRule getBuzzerOnOperationRule() {
-		return getBuzzerOnOperationAccess().getRule();
+	public ParserRule getBuzzerOnRule() {
+		return getBuzzerOnAccess().getRule();
 	}
 	
-	//calibrationOperation:
-	//    name='calibrationOperation'
+	//calibration:
+	//    name='calibration'
 	//    '('
 	//    (color+=Color)
 	//    ','
@@ -510,57 +510,57 @@ public class CPtesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	//    (v_max+=V_max)
 	//    ')'
 	//;
-	public OperationsGrammarAccess.CalibrationOperationElements getCalibrationOperationAccess() {
-		return gaOperations.getCalibrationOperationAccess();
+	public OperationsGrammarAccess.CalibrationElements getCalibrationAccess() {
+		return gaOperations.getCalibrationAccess();
 	}
 	
-	public ParserRule getCalibrationOperationRule() {
-		return getCalibrationOperationAccess().getRule();
+	public ParserRule getCalibrationRule() {
+		return getCalibrationAccess().getRule();
 	}
 	
-	//cameraColorOperation:
-	//    name='cameraColorOperation'
+	//cameraColor:
+	//    name='cameraColor'
 	//    '('
 	//    (time+=Time)
 	//    ')'
 	//;
-	public OperationsGrammarAccess.CameraColorOperationElements getCameraColorOperationAccess() {
-		return gaOperations.getCameraColorOperationAccess();
+	public OperationsGrammarAccess.CameraColorElements getCameraColorAccess() {
+		return gaOperations.getCameraColorAccess();
 	}
 	
-	public ParserRule getCameraColorOperationRule() {
-		return getCameraColorOperationAccess().getRule();
+	public ParserRule getCameraColorRule() {
+		return getCameraColorAccess().getRule();
 	}
 	
-	//readAllServosOperation:
-	//    name='readAllServosOperation'
+	//readAllServos:
+	//    name='readAllServos'
 	//    '('
 	//    ')'
 	//;
-	public OperationsGrammarAccess.ReadAllServosOperationElements getReadAllServosOperationAccess() {
-		return gaOperations.getReadAllServosOperationAccess();
+	public OperationsGrammarAccess.ReadAllServosElements getReadAllServosAccess() {
+		return gaOperations.getReadAllServosAccess();
 	}
 	
-	public ParserRule getReadAllServosOperationRule() {
-		return getReadAllServosOperationAccess().getRule();
+	public ParserRule getReadAllServosRule() {
+		return getReadAllServosAccess().getRule();
 	}
 	
-	//readServoOperation:
-	//    name='readServoOperation'
+	//readServo:
+	//    name='readServo'
 	//    '('
 	//    (servo+=Servo)
 	//    ')'
 	//;
-	public OperationsGrammarAccess.ReadServoOperationElements getReadServoOperationAccess() {
-		return gaOperations.getReadServoOperationAccess();
+	public OperationsGrammarAccess.ReadServoElements getReadServoAccess() {
+		return gaOperations.getReadServoAccess();
 	}
 	
-	public ParserRule getReadServoOperationRule() {
-		return getReadServoOperationAccess().getRule();
+	public ParserRule getReadServoRule() {
+		return getReadServoAccess().getRule();
 	}
 	
-	//rotateServoOperation:
-	//    name='rotateServoOperation'
+	//rotateServo:
+	//    name='rotateServo'
 	//    '('
 	//    (servo+=Servo)
 	//    ','
@@ -569,16 +569,16 @@ public class CPtesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	//    (time+=Time)
 	//    ')'
 	//;
-	public OperationsGrammarAccess.RotateServoOperationElements getRotateServoOperationAccess() {
-		return gaOperations.getRotateServoOperationAccess();
+	public OperationsGrammarAccess.RotateServoElements getRotateServoAccess() {
+		return gaOperations.getRotateServoAccess();
 	}
 	
-	public ParserRule getRotateServoOperationRule() {
-		return getRotateServoOperationAccess().getRule();
+	public ParserRule getRotateServoRule() {
+		return getRotateServoAccess().getRule();
 	}
 	
-	//rotateAllServosOperation:
-	//    name='rotateAllServosOperation'
+	//rotateAllServos:
+	//    name='rotateAllServos'
 	//    '('
 	//    (angle1+=Angle)
 	//    ','
@@ -595,12 +595,12 @@ public class CPtesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	//    (time+=Time)
 	//    ')'
 	//;
-	public OperationsGrammarAccess.RotateAllServosOperationElements getRotateAllServosOperationAccess() {
-		return gaOperations.getRotateAllServosOperationAccess();
+	public OperationsGrammarAccess.RotateAllServosElements getRotateAllServosAccess() {
+		return gaOperations.getRotateAllServosAccess();
 	}
 	
-	public ParserRule getRotateAllServosOperationRule() {
-		return getRotateAllServosOperationAccess().getRule();
+	public ParserRule getRotateAllServosRule() {
+		return getRotateAllServosAccess().getRule();
 	}
 	
 	//Result:
@@ -632,7 +632,7 @@ public class CPtesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	}
 	
 	//Solution:
-	//    isAtSingleOperation | isAtOperation
+	//    isAtSingle | isAt
 	//;
 	public OperationsGrammarAccess.SolutionElements getSolutionAccess() {
 		return gaOperations.getSolutionAccess();
@@ -642,8 +642,8 @@ public class CPtesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		return getSolutionAccess().getRule();
 	}
 	
-	//isAtSingleOperation:
-	//    name='isAtSingleOperation'
+	//isAtSingle:
+	//    name='isAtSingle'
 	//    '('
 	//    (servo+=Servo)
 	//    ','
@@ -652,16 +652,16 @@ public class CPtesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	//    (angle_res+=Angle_res)
 	//    ')'
 	//;
-	public OperationsGrammarAccess.IsAtSingleOperationElements getIsAtSingleOperationAccess() {
-		return gaOperations.getIsAtSingleOperationAccess();
+	public OperationsGrammarAccess.IsAtSingleElements getIsAtSingleAccess() {
+		return gaOperations.getIsAtSingleAccess();
 	}
 	
-	public ParserRule getIsAtSingleOperationRule() {
-		return getIsAtSingleOperationAccess().getRule();
+	public ParserRule getIsAtSingleRule() {
+		return getIsAtSingleAccess().getRule();
 	}
 	
-	//isAtOperation:
-	//    name='isAtOperation'
+	//isAt:
+	//    name='isAt'
 	//    '('
 	//    (angle1+=Angle)
 	//    ','
@@ -678,12 +678,12 @@ public class CPtesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	//    (angle_res+=Angle_res)
 	//    ')'
 	//;
-	public OperationsGrammarAccess.IsAtOperationElements getIsAtOperationAccess() {
-		return gaOperations.getIsAtOperationAccess();
+	public OperationsGrammarAccess.IsAtElements getIsAtAccess() {
+		return gaOperations.getIsAtAccess();
 	}
 	
-	public ParserRule getIsAtOperationRule() {
-		return getIsAtOperationAccess().getRule();
+	public ParserRule getIsAtRule() {
+		return getIsAtAccess().getRule();
 	}
 	
 	//Angle_res:

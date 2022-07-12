@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.xtext.operations.Angle;
 import org.xtext.operations.OperationsPackage;
 import org.xtext.operations.Servo;
+import org.xtext.operations.Time;
 import org.xtext.operations.rotateServo;
 
 /**
@@ -30,6 +31,7 @@ import org.xtext.operations.rotateServo;
  * <ul>
  *   <li>{@link org.xtext.operations.impl.rotateServoImpl#getServo <em>Servo</em>}</li>
  *   <li>{@link org.xtext.operations.impl.rotateServoImpl#getAngle <em>Angle</em>}</li>
+ *   <li>{@link org.xtext.operations.impl.rotateServoImpl#getTime <em>Time</em>}</li>
  * </ul>
  *
  * @generated
@@ -55,6 +57,16 @@ public class rotateServoImpl extends CommandImpl implements rotateServo
    * @ordered
    */
   protected EList<Angle> angle;
+
+  /**
+   * The cached value of the '{@link #getTime() <em>Time</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTime()
+   * @generated
+   * @ordered
+   */
+  protected EList<Time> time;
 
   /**
    * <!-- begin-user-doc -->
@@ -113,6 +125,21 @@ public class rotateServoImpl extends CommandImpl implements rotateServo
    * @generated
    */
   @Override
+  public EList<Time> getTime()
+  {
+    if (time == null)
+    {
+      time = new EObjectContainmentEList<Time>(Time.class, this, OperationsPackage.ROTATE_SERVO__TIME);
+    }
+    return time;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
     switch (featureID)
@@ -121,6 +148,8 @@ public class rotateServoImpl extends CommandImpl implements rotateServo
         return ((InternalEList<?>)getServo()).basicRemove(otherEnd, msgs);
       case OperationsPackage.ROTATE_SERVO__ANGLE:
         return ((InternalEList<?>)getAngle()).basicRemove(otherEnd, msgs);
+      case OperationsPackage.ROTATE_SERVO__TIME:
+        return ((InternalEList<?>)getTime()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -139,6 +168,8 @@ public class rotateServoImpl extends CommandImpl implements rotateServo
         return getServo();
       case OperationsPackage.ROTATE_SERVO__ANGLE:
         return getAngle();
+      case OperationsPackage.ROTATE_SERVO__TIME:
+        return getTime();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -162,6 +193,10 @@ public class rotateServoImpl extends CommandImpl implements rotateServo
         getAngle().clear();
         getAngle().addAll((Collection<? extends Angle>)newValue);
         return;
+      case OperationsPackage.ROTATE_SERVO__TIME:
+        getTime().clear();
+        getTime().addAll((Collection<? extends Time>)newValue);
+        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -182,6 +217,9 @@ public class rotateServoImpl extends CommandImpl implements rotateServo
       case OperationsPackage.ROTATE_SERVO__ANGLE:
         getAngle().clear();
         return;
+      case OperationsPackage.ROTATE_SERVO__TIME:
+        getTime().clear();
+        return;
     }
     super.eUnset(featureID);
   }
@@ -200,6 +238,8 @@ public class rotateServoImpl extends CommandImpl implements rotateServo
         return servo != null && !servo.isEmpty();
       case OperationsPackage.ROTATE_SERVO__ANGLE:
         return angle != null && !angle.isEmpty();
+      case OperationsPackage.ROTATE_SERVO__TIME:
+        return time != null && !time.isEmpty();
     }
     return super.eIsSet(featureID);
   }

@@ -36,17 +36,17 @@ import org.xtext.operations.Servo;
 import org.xtext.operations.Time;
 import org.xtext.operations.V_max;
 import org.xtext.operations.V_min;
-import org.xtext.operations.buzzerOffOperation;
-import org.xtext.operations.buzzerOnOperation;
-import org.xtext.operations.calibrationOperation;
-import org.xtext.operations.cameraColorOperation;
-import org.xtext.operations.isAtOperation;
-import org.xtext.operations.isAtSingleOperation;
-import org.xtext.operations.lightRGBOperation;
-import org.xtext.operations.readAllServosOperation;
-import org.xtext.operations.readServoOperation;
-import org.xtext.operations.rotateAllServosOperation;
-import org.xtext.operations.rotateServoOperation;
+import org.xtext.operations.buzzerOff;
+import org.xtext.operations.buzzerOn;
+import org.xtext.operations.calibration;
+import org.xtext.operations.cameraColor;
+import org.xtext.operations.isAt;
+import org.xtext.operations.isAtSingle;
+import org.xtext.operations.lightRGB;
+import org.xtext.operations.readAllServos;
+import org.xtext.operations.readServo;
+import org.xtext.operations.rotateAllServos;
+import org.xtext.operations.rotateServo;
 import org.xtext.services.CPtesterGrammarAccess;
 
 @SuppressWarnings("all")
@@ -135,38 +135,38 @@ public class CPtesterSemanticSequencer extends OperationsSemanticSequencer {
 			case OperationsPackage.VMIN:
 				sequence_V_min(context, (V_min) semanticObject); 
 				return; 
-			case OperationsPackage.BUZZER_OFF_OPERATION:
-				sequence_buzzerOffOperation(context, (buzzerOffOperation) semanticObject); 
+			case OperationsPackage.BUZZER_OFF:
+				sequence_buzzerOff(context, (buzzerOff) semanticObject); 
 				return; 
-			case OperationsPackage.BUZZER_ON_OPERATION:
-				sequence_buzzerOnOperation(context, (buzzerOnOperation) semanticObject); 
+			case OperationsPackage.BUZZER_ON:
+				sequence_buzzerOn(context, (buzzerOn) semanticObject); 
 				return; 
-			case OperationsPackage.CALIBRATION_OPERATION:
-				sequence_calibrationOperation(context, (calibrationOperation) semanticObject); 
+			case OperationsPackage.CALIBRATION:
+				sequence_calibration(context, (calibration) semanticObject); 
 				return; 
-			case OperationsPackage.CAMERA_COLOR_OPERATION:
-				sequence_cameraColorOperation(context, (cameraColorOperation) semanticObject); 
+			case OperationsPackage.CAMERA_COLOR:
+				sequence_cameraColor(context, (cameraColor) semanticObject); 
 				return; 
-			case OperationsPackage.IS_AT_OPERATION:
-				sequence_isAtOperation(context, (isAtOperation) semanticObject); 
+			case OperationsPackage.IS_AT:
+				sequence_isAt(context, (isAt) semanticObject); 
 				return; 
-			case OperationsPackage.IS_AT_SINGLE_OPERATION:
-				sequence_isAtSingleOperation(context, (isAtSingleOperation) semanticObject); 
+			case OperationsPackage.IS_AT_SINGLE:
+				sequence_isAtSingle(context, (isAtSingle) semanticObject); 
 				return; 
-			case OperationsPackage.LIGHT_RGB_OPERATION:
-				sequence_lightRGBOperation(context, (lightRGBOperation) semanticObject); 
+			case OperationsPackage.LIGHT_RGB:
+				sequence_lightRGB(context, (lightRGB) semanticObject); 
 				return; 
-			case OperationsPackage.READ_ALL_SERVOS_OPERATION:
-				sequence_readAllServosOperation(context, (readAllServosOperation) semanticObject); 
+			case OperationsPackage.READ_ALL_SERVOS:
+				sequence_readAllServos(context, (readAllServos) semanticObject); 
 				return; 
-			case OperationsPackage.READ_SERVO_OPERATION:
-				sequence_readServoOperation(context, (readServoOperation) semanticObject); 
+			case OperationsPackage.READ_SERVO:
+				sequence_readServo(context, (readServo) semanticObject); 
 				return; 
-			case OperationsPackage.ROTATE_ALL_SERVOS_OPERATION:
-				sequence_rotateAllServosOperation(context, (rotateAllServosOperation) semanticObject); 
+			case OperationsPackage.ROTATE_ALL_SERVOS:
+				sequence_rotateAllServos(context, (rotateAllServos) semanticObject); 
 				return; 
-			case OperationsPackage.ROTATE_SERVO_OPERATION:
-				sequence_rotateServoOperation(context, (rotateServoOperation) semanticObject); 
+			case OperationsPackage.ROTATE_SERVO:
+				sequence_rotateServo(context, (rotateServo) semanticObject); 
 				return; 
 			}
 		if (errorAcceptor != null)

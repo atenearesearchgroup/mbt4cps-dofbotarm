@@ -9,7 +9,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Command">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="lightRGBOperation" eSuperTypes="#//Command">
+  <eClassifiers xsi:type="ecore:EClass" name="lightRGB" eSuperTypes="#//Command">
     <eStructuralFeatures xsi:type="ecore:EReference" name="r" upperBound="-1" eType="#//R"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="g" upperBound="-1" eType="#//G"
@@ -17,12 +17,12 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="b" upperBound="-1" eType="#//B"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="buzzerOffOperation" eSuperTypes="#//Command"/>
-  <eClassifiers xsi:type="ecore:EClass" name="buzzerOnOperation" eSuperTypes="#//Command">
+  <eClassifiers xsi:type="ecore:EClass" name="buzzerOff" eSuperTypes="#//Command"/>
+  <eClassifiers xsi:type="ecore:EClass" name="buzzerOn" eSuperTypes="#//Command">
     <eStructuralFeatures xsi:type="ecore:EReference" name="time" upperBound="-1" eType="#//Time"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="calibrationOperation" eSuperTypes="#//Command">
+  <eClassifiers xsi:type="ecore:EClass" name="calibration" eSuperTypes="#//Command">
     <eStructuralFeatures xsi:type="ecore:EReference" name="color" upperBound="-1"
         eType="#//Color" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="h_min" upperBound="-1"
@@ -38,16 +38,16 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="v_max" upperBound="-1"
         eType="#//V_max" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="cameraColorOperation" eSuperTypes="#//Command">
+  <eClassifiers xsi:type="ecore:EClass" name="cameraColor" eSuperTypes="#//Command">
     <eStructuralFeatures xsi:type="ecore:EReference" name="time" upperBound="-1" eType="#//Time"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="readAllServosOperation" eSuperTypes="#//Command"/>
-  <eClassifiers xsi:type="ecore:EClass" name="readServoOperation" eSuperTypes="#//Command">
+  <eClassifiers xsi:type="ecore:EClass" name="readAllServos" eSuperTypes="#//Command"/>
+  <eClassifiers xsi:type="ecore:EClass" name="readServo" eSuperTypes="#//Command">
     <eStructuralFeatures xsi:type="ecore:EReference" name="servo" upperBound="-1"
         eType="#//Servo" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="rotateServoOperation" eSuperTypes="#//Command">
+  <eClassifiers xsi:type="ecore:EClass" name="rotateServo" eSuperTypes="#//Command">
     <eStructuralFeatures xsi:type="ecore:EReference" name="servo" upperBound="-1"
         eType="#//Servo" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="angle" upperBound="-1"
@@ -55,7 +55,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="time" upperBound="-1" eType="#//Time"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="rotateAllServosOperation" eSuperTypes="#//Command">
+  <eClassifiers xsi:type="ecore:EClass" name="rotateAllServos" eSuperTypes="#//Command">
     <eStructuralFeatures xsi:type="ecore:EReference" name="angle1" upperBound="-1"
         eType="#//Angle" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="angle2" upperBound="-1"
@@ -86,13 +86,13 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="angle_res" upperBound="-1"
         eType="#//Angle_res" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="isAtSingleOperation" eSuperTypes="#//Solution">
+  <eClassifiers xsi:type="ecore:EClass" name="isAtSingle" eSuperTypes="#//Solution">
     <eStructuralFeatures xsi:type="ecore:EReference" name="servo" upperBound="-1"
         eType="#//Servo" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="angle" upperBound="-1"
         eType="#//Angle" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="isAtOperation" eSuperTypes="#//Solution">
+  <eClassifiers xsi:type="ecore:EClass" name="isAt" eSuperTypes="#//Solution">
     <eStructuralFeatures xsi:type="ecore:EReference" name="angle1" upperBound="-1"
         eType="#//Angle" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="angle2" upperBound="-1"

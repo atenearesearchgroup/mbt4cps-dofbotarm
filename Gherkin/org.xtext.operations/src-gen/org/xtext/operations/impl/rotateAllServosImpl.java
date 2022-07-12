@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.operations.Angle;
 import org.xtext.operations.OperationsPackage;
+import org.xtext.operations.Time;
 import org.xtext.operations.rotateAllServos;
 
 /**
@@ -33,6 +34,7 @@ import org.xtext.operations.rotateAllServos;
  *   <li>{@link org.xtext.operations.impl.rotateAllServosImpl#getAngle4 <em>Angle4</em>}</li>
  *   <li>{@link org.xtext.operations.impl.rotateAllServosImpl#getAngle5 <em>Angle5</em>}</li>
  *   <li>{@link org.xtext.operations.impl.rotateAllServosImpl#getAngle6 <em>Angle6</em>}</li>
+ *   <li>{@link org.xtext.operations.impl.rotateAllServosImpl#getTime <em>Time</em>}</li>
  * </ul>
  *
  * @generated
@@ -98,6 +100,16 @@ public class rotateAllServosImpl extends CommandImpl implements rotateAllServos
    * @ordered
    */
   protected EList<Angle> angle6;
+
+  /**
+   * The cached value of the '{@link #getTime() <em>Time</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTime()
+   * @generated
+   * @ordered
+   */
+  protected EList<Time> time;
 
   /**
    * <!-- begin-user-doc -->
@@ -216,6 +228,21 @@ public class rotateAllServosImpl extends CommandImpl implements rotateAllServos
    * @generated
    */
   @Override
+  public EList<Time> getTime()
+  {
+    if (time == null)
+    {
+      time = new EObjectContainmentEList<Time>(Time.class, this, OperationsPackage.ROTATE_ALL_SERVOS__TIME);
+    }
+    return time;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
     switch (featureID)
@@ -232,6 +259,8 @@ public class rotateAllServosImpl extends CommandImpl implements rotateAllServos
         return ((InternalEList<?>)getAngle5()).basicRemove(otherEnd, msgs);
       case OperationsPackage.ROTATE_ALL_SERVOS__ANGLE6:
         return ((InternalEList<?>)getAngle6()).basicRemove(otherEnd, msgs);
+      case OperationsPackage.ROTATE_ALL_SERVOS__TIME:
+        return ((InternalEList<?>)getTime()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -258,6 +287,8 @@ public class rotateAllServosImpl extends CommandImpl implements rotateAllServos
         return getAngle5();
       case OperationsPackage.ROTATE_ALL_SERVOS__ANGLE6:
         return getAngle6();
+      case OperationsPackage.ROTATE_ALL_SERVOS__TIME:
+        return getTime();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -297,6 +328,10 @@ public class rotateAllServosImpl extends CommandImpl implements rotateAllServos
         getAngle6().clear();
         getAngle6().addAll((Collection<? extends Angle>)newValue);
         return;
+      case OperationsPackage.ROTATE_ALL_SERVOS__TIME:
+        getTime().clear();
+        getTime().addAll((Collection<? extends Time>)newValue);
+        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -329,6 +364,9 @@ public class rotateAllServosImpl extends CommandImpl implements rotateAllServos
       case OperationsPackage.ROTATE_ALL_SERVOS__ANGLE6:
         getAngle6().clear();
         return;
+      case OperationsPackage.ROTATE_ALL_SERVOS__TIME:
+        getTime().clear();
+        return;
     }
     super.eUnset(featureID);
   }
@@ -355,6 +393,8 @@ public class rotateAllServosImpl extends CommandImpl implements rotateAllServos
         return angle5 != null && !angle5.isEmpty();
       case OperationsPackage.ROTATE_ALL_SERVOS__ANGLE6:
         return angle6 != null && !angle6.isEmpty();
+      case OperationsPackage.ROTATE_ALL_SERVOS__TIME:
+        return time != null && !time.isEmpty();
     }
     return super.eIsSet(featureID);
   }

@@ -4,18 +4,18 @@ generate operations "http://www.xtext.org/Operations"
 
 
 Initial:
-	name='posInicialOperation'
+	name='posInicial'
 	'('
 	(time+=Time)
 	')'
 ;
 
 Command:
-	rotateServoOperation | rotateAllServosOperation | readServoOperation | readAllServosOperation | cameraColorOperation | calibrationOperation | buzzerOnOperation | buzzerOffOperation | lightRGBOperation
+	rotateServo | rotateAllServos | readServo | readAllServos | cameraColor | calibration | buzzerOn | buzzerOff | lightRGB
 ;
 
-lightRGBOperation:
-	name='lightRGBOperation'
+lightRGB:
+	name='lightRGB'
 	'('
 	(r+=R)
 	','
@@ -26,21 +26,21 @@ lightRGBOperation:
 ;
 
 
-buzzerOffOperation:
-	name='buzzerOffOperation'
+buzzerOff:
+	name='buzzerOff'
 	'('
 	')'	
 ;
 
-buzzerOnOperation:
-	name='buzzerOnOperation'
+buzzerOn:
+	name='buzzerOn'
 	'('
 	(time+=Time)
 	')'
 ;
 
-calibrationOperation:
-	name='calibrationOperation'
+calibration:
+	name='calibration'
 	'('
 	(color+=Color)
 	','
@@ -58,28 +58,28 @@ calibrationOperation:
 	')'
 ;
 
-cameraColorOperation:
-	name='cameraColorOperation'
+cameraColor:
+	name='cameraColor'
 	'('
 	(time+=Time)
 	')'
 ;
 
-readAllServosOperation:
-	name='readAllServosOperation'
+readAllServos:
+	name='readAllServos'
 	'('
 	')'
 ;
 
-readServoOperation:
-	name='readServoOperation'
+readServo:
+	name='readServo'
 	'('
 	(servo+=Servo)
 	')'
 ;
 
-rotateServoOperation:
-	name='rotateServoOperation'
+rotateServo:
+	name='rotateServo'
 	'('
 	(servo+=Servo)
 	','
@@ -89,8 +89,8 @@ rotateServoOperation:
 	')'
 ;
 
-rotateAllServosOperation:
-	name='rotateAllServosOperation'
+rotateAllServos:
+	name='rotateAllServos'
 	'('
 	(angle1+=Angle)
 	','
@@ -124,11 +124,11 @@ Conditions:
 ;
 
 Solution:
-	isAtSingleOperation | isAtOperation
+	isAtSingle | isAt
 ;
 
-isAtSingleOperation:
-	name='isAtSingleOperation'
+isAtSingle:
+	name='isAtSingle'
 	'('
 	(servo+=Servo)
 	','
@@ -138,8 +138,8 @@ isAtSingleOperation:
 	')'
 ;
 
-isAtOperation:
-	name='isAtOperation'
+isAt:
+	name='isAt'
 	'('
 	(angle1+=Angle)
 	','

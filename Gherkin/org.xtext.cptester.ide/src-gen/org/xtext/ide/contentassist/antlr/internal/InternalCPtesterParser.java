@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalCPtesterParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_INT", "RULE_ID", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Scenario'", "'{'", "'}'", "'Query'", "'('", "')'", "','", "'GIVEN'", "'AND'", "'WHEN'", "'THEN'", "'posInicialOperation'", "'lightRGBOperation'", "'buzzerOffOperation'", "'buzzerOnOperation'", "'calibrationOperation'", "'cameraColorOperation'", "'readAllServosOperation'", "'readServoOperation'", "'rotateServoOperation'", "'rotateAllServosOperation'", "'result'", "'NotLaterThan'", "'isAtSingleOperation'", "'isAtOperation'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_INT", "RULE_ID", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Scenario'", "'{'", "'}'", "'Query'", "'('", "')'", "','", "'GIVEN'", "'AND'", "'WHEN'", "'THEN'", "'posInicial'", "'lightRGB'", "'buzzerOff'", "'buzzerOn'", "'calibration'", "'cameraColor'", "'readAllServos'", "'readServo'", "'rotateServo'", "'rotateAllServos'", "'result'", "'NotLaterThan'", "'isAtSingle'", "'isAt'"
     };
     public static final int RULE_STRING=4;
     public static final int RULE_SL_COMMENT=8;
@@ -709,20 +709,20 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "ruleCommand"
 
 
-    // $ANTLR start "entryRulelightRGBOperation"
-    // InternalCPtester.g:253:1: entryRulelightRGBOperation : rulelightRGBOperation EOF ;
-    public final void entryRulelightRGBOperation() throws RecognitionException {
+    // $ANTLR start "entryRulelightRGB"
+    // InternalCPtester.g:253:1: entryRulelightRGB : rulelightRGB EOF ;
+    public final void entryRulelightRGB() throws RecognitionException {
         try {
-            // InternalCPtester.g:254:1: ( rulelightRGBOperation EOF )
-            // InternalCPtester.g:255:1: rulelightRGBOperation EOF
+            // InternalCPtester.g:254:1: ( rulelightRGB EOF )
+            // InternalCPtester.g:255:1: rulelightRGB EOF
             {
-             before(grammarAccess.getLightRGBOperationRule()); 
+             before(grammarAccess.getLightRGBRule()); 
             pushFollow(FOLLOW_1);
-            rulelightRGBOperation();
+            rulelightRGB();
 
             state._fsp--;
 
-             after(grammarAccess.getLightRGBOperationRule()); 
+             after(grammarAccess.getLightRGBRule()); 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -736,35 +736,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "entryRulelightRGBOperation"
+    // $ANTLR end "entryRulelightRGB"
 
 
-    // $ANTLR start "rulelightRGBOperation"
-    // InternalCPtester.g:262:1: rulelightRGBOperation : ( ( rule__LightRGBOperation__Group__0 ) ) ;
-    public final void rulelightRGBOperation() throws RecognitionException {
+    // $ANTLR start "rulelightRGB"
+    // InternalCPtester.g:262:1: rulelightRGB : ( ( rule__LightRGB__Group__0 ) ) ;
+    public final void rulelightRGB() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:266:2: ( ( ( rule__LightRGBOperation__Group__0 ) ) )
-            // InternalCPtester.g:267:2: ( ( rule__LightRGBOperation__Group__0 ) )
+            // InternalCPtester.g:266:2: ( ( ( rule__LightRGB__Group__0 ) ) )
+            // InternalCPtester.g:267:2: ( ( rule__LightRGB__Group__0 ) )
             {
-            // InternalCPtester.g:267:2: ( ( rule__LightRGBOperation__Group__0 ) )
-            // InternalCPtester.g:268:3: ( rule__LightRGBOperation__Group__0 )
+            // InternalCPtester.g:267:2: ( ( rule__LightRGB__Group__0 ) )
+            // InternalCPtester.g:268:3: ( rule__LightRGB__Group__0 )
             {
-             before(grammarAccess.getLightRGBOperationAccess().getGroup()); 
-            // InternalCPtester.g:269:3: ( rule__LightRGBOperation__Group__0 )
-            // InternalCPtester.g:269:4: rule__LightRGBOperation__Group__0
+             before(grammarAccess.getLightRGBAccess().getGroup()); 
+            // InternalCPtester.g:269:3: ( rule__LightRGB__Group__0 )
+            // InternalCPtester.g:269:4: rule__LightRGB__Group__0
             {
             pushFollow(FOLLOW_2);
-            rule__LightRGBOperation__Group__0();
+            rule__LightRGB__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getLightRGBOperationAccess().getGroup()); 
+             after(grammarAccess.getLightRGBAccess().getGroup()); 
 
             }
 
@@ -783,23 +783,23 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rulelightRGBOperation"
+    // $ANTLR end "rulelightRGB"
 
 
-    // $ANTLR start "entryRulebuzzerOffOperation"
-    // InternalCPtester.g:278:1: entryRulebuzzerOffOperation : rulebuzzerOffOperation EOF ;
-    public final void entryRulebuzzerOffOperation() throws RecognitionException {
+    // $ANTLR start "entryRulebuzzerOff"
+    // InternalCPtester.g:278:1: entryRulebuzzerOff : rulebuzzerOff EOF ;
+    public final void entryRulebuzzerOff() throws RecognitionException {
         try {
-            // InternalCPtester.g:279:1: ( rulebuzzerOffOperation EOF )
-            // InternalCPtester.g:280:1: rulebuzzerOffOperation EOF
+            // InternalCPtester.g:279:1: ( rulebuzzerOff EOF )
+            // InternalCPtester.g:280:1: rulebuzzerOff EOF
             {
-             before(grammarAccess.getBuzzerOffOperationRule()); 
+             before(grammarAccess.getBuzzerOffRule()); 
             pushFollow(FOLLOW_1);
-            rulebuzzerOffOperation();
+            rulebuzzerOff();
 
             state._fsp--;
 
-             after(grammarAccess.getBuzzerOffOperationRule()); 
+             after(grammarAccess.getBuzzerOffRule()); 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -813,35 +813,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "entryRulebuzzerOffOperation"
+    // $ANTLR end "entryRulebuzzerOff"
 
 
-    // $ANTLR start "rulebuzzerOffOperation"
-    // InternalCPtester.g:287:1: rulebuzzerOffOperation : ( ( rule__BuzzerOffOperation__Group__0 ) ) ;
-    public final void rulebuzzerOffOperation() throws RecognitionException {
+    // $ANTLR start "rulebuzzerOff"
+    // InternalCPtester.g:287:1: rulebuzzerOff : ( ( rule__BuzzerOff__Group__0 ) ) ;
+    public final void rulebuzzerOff() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:291:2: ( ( ( rule__BuzzerOffOperation__Group__0 ) ) )
-            // InternalCPtester.g:292:2: ( ( rule__BuzzerOffOperation__Group__0 ) )
+            // InternalCPtester.g:291:2: ( ( ( rule__BuzzerOff__Group__0 ) ) )
+            // InternalCPtester.g:292:2: ( ( rule__BuzzerOff__Group__0 ) )
             {
-            // InternalCPtester.g:292:2: ( ( rule__BuzzerOffOperation__Group__0 ) )
-            // InternalCPtester.g:293:3: ( rule__BuzzerOffOperation__Group__0 )
+            // InternalCPtester.g:292:2: ( ( rule__BuzzerOff__Group__0 ) )
+            // InternalCPtester.g:293:3: ( rule__BuzzerOff__Group__0 )
             {
-             before(grammarAccess.getBuzzerOffOperationAccess().getGroup()); 
-            // InternalCPtester.g:294:3: ( rule__BuzzerOffOperation__Group__0 )
-            // InternalCPtester.g:294:4: rule__BuzzerOffOperation__Group__0
+             before(grammarAccess.getBuzzerOffAccess().getGroup()); 
+            // InternalCPtester.g:294:3: ( rule__BuzzerOff__Group__0 )
+            // InternalCPtester.g:294:4: rule__BuzzerOff__Group__0
             {
             pushFollow(FOLLOW_2);
-            rule__BuzzerOffOperation__Group__0();
+            rule__BuzzerOff__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getBuzzerOffOperationAccess().getGroup()); 
+             after(grammarAccess.getBuzzerOffAccess().getGroup()); 
 
             }
 
@@ -860,23 +860,23 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rulebuzzerOffOperation"
+    // $ANTLR end "rulebuzzerOff"
 
 
-    // $ANTLR start "entryRulebuzzerOnOperation"
-    // InternalCPtester.g:303:1: entryRulebuzzerOnOperation : rulebuzzerOnOperation EOF ;
-    public final void entryRulebuzzerOnOperation() throws RecognitionException {
+    // $ANTLR start "entryRulebuzzerOn"
+    // InternalCPtester.g:303:1: entryRulebuzzerOn : rulebuzzerOn EOF ;
+    public final void entryRulebuzzerOn() throws RecognitionException {
         try {
-            // InternalCPtester.g:304:1: ( rulebuzzerOnOperation EOF )
-            // InternalCPtester.g:305:1: rulebuzzerOnOperation EOF
+            // InternalCPtester.g:304:1: ( rulebuzzerOn EOF )
+            // InternalCPtester.g:305:1: rulebuzzerOn EOF
             {
-             before(grammarAccess.getBuzzerOnOperationRule()); 
+             before(grammarAccess.getBuzzerOnRule()); 
             pushFollow(FOLLOW_1);
-            rulebuzzerOnOperation();
+            rulebuzzerOn();
 
             state._fsp--;
 
-             after(grammarAccess.getBuzzerOnOperationRule()); 
+             after(grammarAccess.getBuzzerOnRule()); 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -890,35 +890,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "entryRulebuzzerOnOperation"
+    // $ANTLR end "entryRulebuzzerOn"
 
 
-    // $ANTLR start "rulebuzzerOnOperation"
-    // InternalCPtester.g:312:1: rulebuzzerOnOperation : ( ( rule__BuzzerOnOperation__Group__0 ) ) ;
-    public final void rulebuzzerOnOperation() throws RecognitionException {
+    // $ANTLR start "rulebuzzerOn"
+    // InternalCPtester.g:312:1: rulebuzzerOn : ( ( rule__BuzzerOn__Group__0 ) ) ;
+    public final void rulebuzzerOn() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:316:2: ( ( ( rule__BuzzerOnOperation__Group__0 ) ) )
-            // InternalCPtester.g:317:2: ( ( rule__BuzzerOnOperation__Group__0 ) )
+            // InternalCPtester.g:316:2: ( ( ( rule__BuzzerOn__Group__0 ) ) )
+            // InternalCPtester.g:317:2: ( ( rule__BuzzerOn__Group__0 ) )
             {
-            // InternalCPtester.g:317:2: ( ( rule__BuzzerOnOperation__Group__0 ) )
-            // InternalCPtester.g:318:3: ( rule__BuzzerOnOperation__Group__0 )
+            // InternalCPtester.g:317:2: ( ( rule__BuzzerOn__Group__0 ) )
+            // InternalCPtester.g:318:3: ( rule__BuzzerOn__Group__0 )
             {
-             before(grammarAccess.getBuzzerOnOperationAccess().getGroup()); 
-            // InternalCPtester.g:319:3: ( rule__BuzzerOnOperation__Group__0 )
-            // InternalCPtester.g:319:4: rule__BuzzerOnOperation__Group__0
+             before(grammarAccess.getBuzzerOnAccess().getGroup()); 
+            // InternalCPtester.g:319:3: ( rule__BuzzerOn__Group__0 )
+            // InternalCPtester.g:319:4: rule__BuzzerOn__Group__0
             {
             pushFollow(FOLLOW_2);
-            rule__BuzzerOnOperation__Group__0();
+            rule__BuzzerOn__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getBuzzerOnOperationAccess().getGroup()); 
+             after(grammarAccess.getBuzzerOnAccess().getGroup()); 
 
             }
 
@@ -937,23 +937,23 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rulebuzzerOnOperation"
+    // $ANTLR end "rulebuzzerOn"
 
 
-    // $ANTLR start "entryRulecalibrationOperation"
-    // InternalCPtester.g:328:1: entryRulecalibrationOperation : rulecalibrationOperation EOF ;
-    public final void entryRulecalibrationOperation() throws RecognitionException {
+    // $ANTLR start "entryRulecalibration"
+    // InternalCPtester.g:328:1: entryRulecalibration : rulecalibration EOF ;
+    public final void entryRulecalibration() throws RecognitionException {
         try {
-            // InternalCPtester.g:329:1: ( rulecalibrationOperation EOF )
-            // InternalCPtester.g:330:1: rulecalibrationOperation EOF
+            // InternalCPtester.g:329:1: ( rulecalibration EOF )
+            // InternalCPtester.g:330:1: rulecalibration EOF
             {
-             before(grammarAccess.getCalibrationOperationRule()); 
+             before(grammarAccess.getCalibrationRule()); 
             pushFollow(FOLLOW_1);
-            rulecalibrationOperation();
+            rulecalibration();
 
             state._fsp--;
 
-             after(grammarAccess.getCalibrationOperationRule()); 
+             after(grammarAccess.getCalibrationRule()); 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -967,35 +967,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "entryRulecalibrationOperation"
+    // $ANTLR end "entryRulecalibration"
 
 
-    // $ANTLR start "rulecalibrationOperation"
-    // InternalCPtester.g:337:1: rulecalibrationOperation : ( ( rule__CalibrationOperation__Group__0 ) ) ;
-    public final void rulecalibrationOperation() throws RecognitionException {
+    // $ANTLR start "rulecalibration"
+    // InternalCPtester.g:337:1: rulecalibration : ( ( rule__Calibration__Group__0 ) ) ;
+    public final void rulecalibration() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:341:2: ( ( ( rule__CalibrationOperation__Group__0 ) ) )
-            // InternalCPtester.g:342:2: ( ( rule__CalibrationOperation__Group__0 ) )
+            // InternalCPtester.g:341:2: ( ( ( rule__Calibration__Group__0 ) ) )
+            // InternalCPtester.g:342:2: ( ( rule__Calibration__Group__0 ) )
             {
-            // InternalCPtester.g:342:2: ( ( rule__CalibrationOperation__Group__0 ) )
-            // InternalCPtester.g:343:3: ( rule__CalibrationOperation__Group__0 )
+            // InternalCPtester.g:342:2: ( ( rule__Calibration__Group__0 ) )
+            // InternalCPtester.g:343:3: ( rule__Calibration__Group__0 )
             {
-             before(grammarAccess.getCalibrationOperationAccess().getGroup()); 
-            // InternalCPtester.g:344:3: ( rule__CalibrationOperation__Group__0 )
-            // InternalCPtester.g:344:4: rule__CalibrationOperation__Group__0
+             before(grammarAccess.getCalibrationAccess().getGroup()); 
+            // InternalCPtester.g:344:3: ( rule__Calibration__Group__0 )
+            // InternalCPtester.g:344:4: rule__Calibration__Group__0
             {
             pushFollow(FOLLOW_2);
-            rule__CalibrationOperation__Group__0();
+            rule__Calibration__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getCalibrationOperationAccess().getGroup()); 
+             after(grammarAccess.getCalibrationAccess().getGroup()); 
 
             }
 
@@ -1014,23 +1014,23 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rulecalibrationOperation"
+    // $ANTLR end "rulecalibration"
 
 
-    // $ANTLR start "entryRulecameraColorOperation"
-    // InternalCPtester.g:353:1: entryRulecameraColorOperation : rulecameraColorOperation EOF ;
-    public final void entryRulecameraColorOperation() throws RecognitionException {
+    // $ANTLR start "entryRulecameraColor"
+    // InternalCPtester.g:353:1: entryRulecameraColor : rulecameraColor EOF ;
+    public final void entryRulecameraColor() throws RecognitionException {
         try {
-            // InternalCPtester.g:354:1: ( rulecameraColorOperation EOF )
-            // InternalCPtester.g:355:1: rulecameraColorOperation EOF
+            // InternalCPtester.g:354:1: ( rulecameraColor EOF )
+            // InternalCPtester.g:355:1: rulecameraColor EOF
             {
-             before(grammarAccess.getCameraColorOperationRule()); 
+             before(grammarAccess.getCameraColorRule()); 
             pushFollow(FOLLOW_1);
-            rulecameraColorOperation();
+            rulecameraColor();
 
             state._fsp--;
 
-             after(grammarAccess.getCameraColorOperationRule()); 
+             after(grammarAccess.getCameraColorRule()); 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -1044,35 +1044,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "entryRulecameraColorOperation"
+    // $ANTLR end "entryRulecameraColor"
 
 
-    // $ANTLR start "rulecameraColorOperation"
-    // InternalCPtester.g:362:1: rulecameraColorOperation : ( ( rule__CameraColorOperation__Group__0 ) ) ;
-    public final void rulecameraColorOperation() throws RecognitionException {
+    // $ANTLR start "rulecameraColor"
+    // InternalCPtester.g:362:1: rulecameraColor : ( ( rule__CameraColor__Group__0 ) ) ;
+    public final void rulecameraColor() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:366:2: ( ( ( rule__CameraColorOperation__Group__0 ) ) )
-            // InternalCPtester.g:367:2: ( ( rule__CameraColorOperation__Group__0 ) )
+            // InternalCPtester.g:366:2: ( ( ( rule__CameraColor__Group__0 ) ) )
+            // InternalCPtester.g:367:2: ( ( rule__CameraColor__Group__0 ) )
             {
-            // InternalCPtester.g:367:2: ( ( rule__CameraColorOperation__Group__0 ) )
-            // InternalCPtester.g:368:3: ( rule__CameraColorOperation__Group__0 )
+            // InternalCPtester.g:367:2: ( ( rule__CameraColor__Group__0 ) )
+            // InternalCPtester.g:368:3: ( rule__CameraColor__Group__0 )
             {
-             before(grammarAccess.getCameraColorOperationAccess().getGroup()); 
-            // InternalCPtester.g:369:3: ( rule__CameraColorOperation__Group__0 )
-            // InternalCPtester.g:369:4: rule__CameraColorOperation__Group__0
+             before(grammarAccess.getCameraColorAccess().getGroup()); 
+            // InternalCPtester.g:369:3: ( rule__CameraColor__Group__0 )
+            // InternalCPtester.g:369:4: rule__CameraColor__Group__0
             {
             pushFollow(FOLLOW_2);
-            rule__CameraColorOperation__Group__0();
+            rule__CameraColor__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getCameraColorOperationAccess().getGroup()); 
+             after(grammarAccess.getCameraColorAccess().getGroup()); 
 
             }
 
@@ -1091,23 +1091,23 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rulecameraColorOperation"
+    // $ANTLR end "rulecameraColor"
 
 
-    // $ANTLR start "entryRulereadAllServosOperation"
-    // InternalCPtester.g:378:1: entryRulereadAllServosOperation : rulereadAllServosOperation EOF ;
-    public final void entryRulereadAllServosOperation() throws RecognitionException {
+    // $ANTLR start "entryRulereadAllServos"
+    // InternalCPtester.g:378:1: entryRulereadAllServos : rulereadAllServos EOF ;
+    public final void entryRulereadAllServos() throws RecognitionException {
         try {
-            // InternalCPtester.g:379:1: ( rulereadAllServosOperation EOF )
-            // InternalCPtester.g:380:1: rulereadAllServosOperation EOF
+            // InternalCPtester.g:379:1: ( rulereadAllServos EOF )
+            // InternalCPtester.g:380:1: rulereadAllServos EOF
             {
-             before(grammarAccess.getReadAllServosOperationRule()); 
+             before(grammarAccess.getReadAllServosRule()); 
             pushFollow(FOLLOW_1);
-            rulereadAllServosOperation();
+            rulereadAllServos();
 
             state._fsp--;
 
-             after(grammarAccess.getReadAllServosOperationRule()); 
+             after(grammarAccess.getReadAllServosRule()); 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -1121,35 +1121,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "entryRulereadAllServosOperation"
+    // $ANTLR end "entryRulereadAllServos"
 
 
-    // $ANTLR start "rulereadAllServosOperation"
-    // InternalCPtester.g:387:1: rulereadAllServosOperation : ( ( rule__ReadAllServosOperation__Group__0 ) ) ;
-    public final void rulereadAllServosOperation() throws RecognitionException {
+    // $ANTLR start "rulereadAllServos"
+    // InternalCPtester.g:387:1: rulereadAllServos : ( ( rule__ReadAllServos__Group__0 ) ) ;
+    public final void rulereadAllServos() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:391:2: ( ( ( rule__ReadAllServosOperation__Group__0 ) ) )
-            // InternalCPtester.g:392:2: ( ( rule__ReadAllServosOperation__Group__0 ) )
+            // InternalCPtester.g:391:2: ( ( ( rule__ReadAllServos__Group__0 ) ) )
+            // InternalCPtester.g:392:2: ( ( rule__ReadAllServos__Group__0 ) )
             {
-            // InternalCPtester.g:392:2: ( ( rule__ReadAllServosOperation__Group__0 ) )
-            // InternalCPtester.g:393:3: ( rule__ReadAllServosOperation__Group__0 )
+            // InternalCPtester.g:392:2: ( ( rule__ReadAllServos__Group__0 ) )
+            // InternalCPtester.g:393:3: ( rule__ReadAllServos__Group__0 )
             {
-             before(grammarAccess.getReadAllServosOperationAccess().getGroup()); 
-            // InternalCPtester.g:394:3: ( rule__ReadAllServosOperation__Group__0 )
-            // InternalCPtester.g:394:4: rule__ReadAllServosOperation__Group__0
+             before(grammarAccess.getReadAllServosAccess().getGroup()); 
+            // InternalCPtester.g:394:3: ( rule__ReadAllServos__Group__0 )
+            // InternalCPtester.g:394:4: rule__ReadAllServos__Group__0
             {
             pushFollow(FOLLOW_2);
-            rule__ReadAllServosOperation__Group__0();
+            rule__ReadAllServos__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getReadAllServosOperationAccess().getGroup()); 
+             after(grammarAccess.getReadAllServosAccess().getGroup()); 
 
             }
 
@@ -1168,23 +1168,23 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rulereadAllServosOperation"
+    // $ANTLR end "rulereadAllServos"
 
 
-    // $ANTLR start "entryRulereadServoOperation"
-    // InternalCPtester.g:403:1: entryRulereadServoOperation : rulereadServoOperation EOF ;
-    public final void entryRulereadServoOperation() throws RecognitionException {
+    // $ANTLR start "entryRulereadServo"
+    // InternalCPtester.g:403:1: entryRulereadServo : rulereadServo EOF ;
+    public final void entryRulereadServo() throws RecognitionException {
         try {
-            // InternalCPtester.g:404:1: ( rulereadServoOperation EOF )
-            // InternalCPtester.g:405:1: rulereadServoOperation EOF
+            // InternalCPtester.g:404:1: ( rulereadServo EOF )
+            // InternalCPtester.g:405:1: rulereadServo EOF
             {
-             before(grammarAccess.getReadServoOperationRule()); 
+             before(grammarAccess.getReadServoRule()); 
             pushFollow(FOLLOW_1);
-            rulereadServoOperation();
+            rulereadServo();
 
             state._fsp--;
 
-             after(grammarAccess.getReadServoOperationRule()); 
+             after(grammarAccess.getReadServoRule()); 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -1198,35 +1198,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "entryRulereadServoOperation"
+    // $ANTLR end "entryRulereadServo"
 
 
-    // $ANTLR start "rulereadServoOperation"
-    // InternalCPtester.g:412:1: rulereadServoOperation : ( ( rule__ReadServoOperation__Group__0 ) ) ;
-    public final void rulereadServoOperation() throws RecognitionException {
+    // $ANTLR start "rulereadServo"
+    // InternalCPtester.g:412:1: rulereadServo : ( ( rule__ReadServo__Group__0 ) ) ;
+    public final void rulereadServo() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:416:2: ( ( ( rule__ReadServoOperation__Group__0 ) ) )
-            // InternalCPtester.g:417:2: ( ( rule__ReadServoOperation__Group__0 ) )
+            // InternalCPtester.g:416:2: ( ( ( rule__ReadServo__Group__0 ) ) )
+            // InternalCPtester.g:417:2: ( ( rule__ReadServo__Group__0 ) )
             {
-            // InternalCPtester.g:417:2: ( ( rule__ReadServoOperation__Group__0 ) )
-            // InternalCPtester.g:418:3: ( rule__ReadServoOperation__Group__0 )
+            // InternalCPtester.g:417:2: ( ( rule__ReadServo__Group__0 ) )
+            // InternalCPtester.g:418:3: ( rule__ReadServo__Group__0 )
             {
-             before(grammarAccess.getReadServoOperationAccess().getGroup()); 
-            // InternalCPtester.g:419:3: ( rule__ReadServoOperation__Group__0 )
-            // InternalCPtester.g:419:4: rule__ReadServoOperation__Group__0
+             before(grammarAccess.getReadServoAccess().getGroup()); 
+            // InternalCPtester.g:419:3: ( rule__ReadServo__Group__0 )
+            // InternalCPtester.g:419:4: rule__ReadServo__Group__0
             {
             pushFollow(FOLLOW_2);
-            rule__ReadServoOperation__Group__0();
+            rule__ReadServo__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getReadServoOperationAccess().getGroup()); 
+             after(grammarAccess.getReadServoAccess().getGroup()); 
 
             }
 
@@ -1245,23 +1245,23 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rulereadServoOperation"
+    // $ANTLR end "rulereadServo"
 
 
-    // $ANTLR start "entryRulerotateServoOperation"
-    // InternalCPtester.g:428:1: entryRulerotateServoOperation : rulerotateServoOperation EOF ;
-    public final void entryRulerotateServoOperation() throws RecognitionException {
+    // $ANTLR start "entryRulerotateServo"
+    // InternalCPtester.g:428:1: entryRulerotateServo : rulerotateServo EOF ;
+    public final void entryRulerotateServo() throws RecognitionException {
         try {
-            // InternalCPtester.g:429:1: ( rulerotateServoOperation EOF )
-            // InternalCPtester.g:430:1: rulerotateServoOperation EOF
+            // InternalCPtester.g:429:1: ( rulerotateServo EOF )
+            // InternalCPtester.g:430:1: rulerotateServo EOF
             {
-             before(grammarAccess.getRotateServoOperationRule()); 
+             before(grammarAccess.getRotateServoRule()); 
             pushFollow(FOLLOW_1);
-            rulerotateServoOperation();
+            rulerotateServo();
 
             state._fsp--;
 
-             after(grammarAccess.getRotateServoOperationRule()); 
+             after(grammarAccess.getRotateServoRule()); 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -1275,35 +1275,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "entryRulerotateServoOperation"
+    // $ANTLR end "entryRulerotateServo"
 
 
-    // $ANTLR start "rulerotateServoOperation"
-    // InternalCPtester.g:437:1: rulerotateServoOperation : ( ( rule__RotateServoOperation__Group__0 ) ) ;
-    public final void rulerotateServoOperation() throws RecognitionException {
+    // $ANTLR start "rulerotateServo"
+    // InternalCPtester.g:437:1: rulerotateServo : ( ( rule__RotateServo__Group__0 ) ) ;
+    public final void rulerotateServo() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:441:2: ( ( ( rule__RotateServoOperation__Group__0 ) ) )
-            // InternalCPtester.g:442:2: ( ( rule__RotateServoOperation__Group__0 ) )
+            // InternalCPtester.g:441:2: ( ( ( rule__RotateServo__Group__0 ) ) )
+            // InternalCPtester.g:442:2: ( ( rule__RotateServo__Group__0 ) )
             {
-            // InternalCPtester.g:442:2: ( ( rule__RotateServoOperation__Group__0 ) )
-            // InternalCPtester.g:443:3: ( rule__RotateServoOperation__Group__0 )
+            // InternalCPtester.g:442:2: ( ( rule__RotateServo__Group__0 ) )
+            // InternalCPtester.g:443:3: ( rule__RotateServo__Group__0 )
             {
-             before(grammarAccess.getRotateServoOperationAccess().getGroup()); 
-            // InternalCPtester.g:444:3: ( rule__RotateServoOperation__Group__0 )
-            // InternalCPtester.g:444:4: rule__RotateServoOperation__Group__0
+             before(grammarAccess.getRotateServoAccess().getGroup()); 
+            // InternalCPtester.g:444:3: ( rule__RotateServo__Group__0 )
+            // InternalCPtester.g:444:4: rule__RotateServo__Group__0
             {
             pushFollow(FOLLOW_2);
-            rule__RotateServoOperation__Group__0();
+            rule__RotateServo__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getRotateServoOperationAccess().getGroup()); 
+             after(grammarAccess.getRotateServoAccess().getGroup()); 
 
             }
 
@@ -1322,23 +1322,23 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rulerotateServoOperation"
+    // $ANTLR end "rulerotateServo"
 
 
-    // $ANTLR start "entryRulerotateAllServosOperation"
-    // InternalCPtester.g:453:1: entryRulerotateAllServosOperation : rulerotateAllServosOperation EOF ;
-    public final void entryRulerotateAllServosOperation() throws RecognitionException {
+    // $ANTLR start "entryRulerotateAllServos"
+    // InternalCPtester.g:453:1: entryRulerotateAllServos : rulerotateAllServos EOF ;
+    public final void entryRulerotateAllServos() throws RecognitionException {
         try {
-            // InternalCPtester.g:454:1: ( rulerotateAllServosOperation EOF )
-            // InternalCPtester.g:455:1: rulerotateAllServosOperation EOF
+            // InternalCPtester.g:454:1: ( rulerotateAllServos EOF )
+            // InternalCPtester.g:455:1: rulerotateAllServos EOF
             {
-             before(grammarAccess.getRotateAllServosOperationRule()); 
+             before(grammarAccess.getRotateAllServosRule()); 
             pushFollow(FOLLOW_1);
-            rulerotateAllServosOperation();
+            rulerotateAllServos();
 
             state._fsp--;
 
-             after(grammarAccess.getRotateAllServosOperationRule()); 
+             after(grammarAccess.getRotateAllServosRule()); 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -1352,35 +1352,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "entryRulerotateAllServosOperation"
+    // $ANTLR end "entryRulerotateAllServos"
 
 
-    // $ANTLR start "rulerotateAllServosOperation"
-    // InternalCPtester.g:462:1: rulerotateAllServosOperation : ( ( rule__RotateAllServosOperation__Group__0 ) ) ;
-    public final void rulerotateAllServosOperation() throws RecognitionException {
+    // $ANTLR start "rulerotateAllServos"
+    // InternalCPtester.g:462:1: rulerotateAllServos : ( ( rule__RotateAllServos__Group__0 ) ) ;
+    public final void rulerotateAllServos() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:466:2: ( ( ( rule__RotateAllServosOperation__Group__0 ) ) )
-            // InternalCPtester.g:467:2: ( ( rule__RotateAllServosOperation__Group__0 ) )
+            // InternalCPtester.g:466:2: ( ( ( rule__RotateAllServos__Group__0 ) ) )
+            // InternalCPtester.g:467:2: ( ( rule__RotateAllServos__Group__0 ) )
             {
-            // InternalCPtester.g:467:2: ( ( rule__RotateAllServosOperation__Group__0 ) )
-            // InternalCPtester.g:468:3: ( rule__RotateAllServosOperation__Group__0 )
+            // InternalCPtester.g:467:2: ( ( rule__RotateAllServos__Group__0 ) )
+            // InternalCPtester.g:468:3: ( rule__RotateAllServos__Group__0 )
             {
-             before(grammarAccess.getRotateAllServosOperationAccess().getGroup()); 
-            // InternalCPtester.g:469:3: ( rule__RotateAllServosOperation__Group__0 )
-            // InternalCPtester.g:469:4: rule__RotateAllServosOperation__Group__0
+             before(grammarAccess.getRotateAllServosAccess().getGroup()); 
+            // InternalCPtester.g:469:3: ( rule__RotateAllServos__Group__0 )
+            // InternalCPtester.g:469:4: rule__RotateAllServos__Group__0
             {
             pushFollow(FOLLOW_2);
-            rule__RotateAllServosOperation__Group__0();
+            rule__RotateAllServos__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getRotateAllServosOperationAccess().getGroup()); 
+             after(grammarAccess.getRotateAllServosAccess().getGroup()); 
 
             }
 
@@ -1399,7 +1399,7 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rulerotateAllServosOperation"
+    // $ANTLR end "rulerotateAllServos"
 
 
     // $ANTLR start "entryRuleResult"
@@ -1633,20 +1633,20 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "ruleSolution"
 
 
-    // $ANTLR start "entryRuleisAtSingleOperation"
-    // InternalCPtester.g:553:1: entryRuleisAtSingleOperation : ruleisAtSingleOperation EOF ;
-    public final void entryRuleisAtSingleOperation() throws RecognitionException {
+    // $ANTLR start "entryRuleisAtSingle"
+    // InternalCPtester.g:553:1: entryRuleisAtSingle : ruleisAtSingle EOF ;
+    public final void entryRuleisAtSingle() throws RecognitionException {
         try {
-            // InternalCPtester.g:554:1: ( ruleisAtSingleOperation EOF )
-            // InternalCPtester.g:555:1: ruleisAtSingleOperation EOF
+            // InternalCPtester.g:554:1: ( ruleisAtSingle EOF )
+            // InternalCPtester.g:555:1: ruleisAtSingle EOF
             {
-             before(grammarAccess.getIsAtSingleOperationRule()); 
+             before(grammarAccess.getIsAtSingleRule()); 
             pushFollow(FOLLOW_1);
-            ruleisAtSingleOperation();
+            ruleisAtSingle();
 
             state._fsp--;
 
-             after(grammarAccess.getIsAtSingleOperationRule()); 
+             after(grammarAccess.getIsAtSingleRule()); 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -1660,35 +1660,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "entryRuleisAtSingleOperation"
+    // $ANTLR end "entryRuleisAtSingle"
 
 
-    // $ANTLR start "ruleisAtSingleOperation"
-    // InternalCPtester.g:562:1: ruleisAtSingleOperation : ( ( rule__IsAtSingleOperation__Group__0 ) ) ;
-    public final void ruleisAtSingleOperation() throws RecognitionException {
+    // $ANTLR start "ruleisAtSingle"
+    // InternalCPtester.g:562:1: ruleisAtSingle : ( ( rule__IsAtSingle__Group__0 ) ) ;
+    public final void ruleisAtSingle() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:566:2: ( ( ( rule__IsAtSingleOperation__Group__0 ) ) )
-            // InternalCPtester.g:567:2: ( ( rule__IsAtSingleOperation__Group__0 ) )
+            // InternalCPtester.g:566:2: ( ( ( rule__IsAtSingle__Group__0 ) ) )
+            // InternalCPtester.g:567:2: ( ( rule__IsAtSingle__Group__0 ) )
             {
-            // InternalCPtester.g:567:2: ( ( rule__IsAtSingleOperation__Group__0 ) )
-            // InternalCPtester.g:568:3: ( rule__IsAtSingleOperation__Group__0 )
+            // InternalCPtester.g:567:2: ( ( rule__IsAtSingle__Group__0 ) )
+            // InternalCPtester.g:568:3: ( rule__IsAtSingle__Group__0 )
             {
-             before(grammarAccess.getIsAtSingleOperationAccess().getGroup()); 
-            // InternalCPtester.g:569:3: ( rule__IsAtSingleOperation__Group__0 )
-            // InternalCPtester.g:569:4: rule__IsAtSingleOperation__Group__0
+             before(grammarAccess.getIsAtSingleAccess().getGroup()); 
+            // InternalCPtester.g:569:3: ( rule__IsAtSingle__Group__0 )
+            // InternalCPtester.g:569:4: rule__IsAtSingle__Group__0
             {
             pushFollow(FOLLOW_2);
-            rule__IsAtSingleOperation__Group__0();
+            rule__IsAtSingle__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getIsAtSingleOperationAccess().getGroup()); 
+             after(grammarAccess.getIsAtSingleAccess().getGroup()); 
 
             }
 
@@ -1707,23 +1707,23 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "ruleisAtSingleOperation"
+    // $ANTLR end "ruleisAtSingle"
 
 
-    // $ANTLR start "entryRuleisAtOperation"
-    // InternalCPtester.g:578:1: entryRuleisAtOperation : ruleisAtOperation EOF ;
-    public final void entryRuleisAtOperation() throws RecognitionException {
+    // $ANTLR start "entryRuleisAt"
+    // InternalCPtester.g:578:1: entryRuleisAt : ruleisAt EOF ;
+    public final void entryRuleisAt() throws RecognitionException {
         try {
-            // InternalCPtester.g:579:1: ( ruleisAtOperation EOF )
-            // InternalCPtester.g:580:1: ruleisAtOperation EOF
+            // InternalCPtester.g:579:1: ( ruleisAt EOF )
+            // InternalCPtester.g:580:1: ruleisAt EOF
             {
-             before(grammarAccess.getIsAtOperationRule()); 
+             before(grammarAccess.getIsAtRule()); 
             pushFollow(FOLLOW_1);
-            ruleisAtOperation();
+            ruleisAt();
 
             state._fsp--;
 
-             after(grammarAccess.getIsAtOperationRule()); 
+             after(grammarAccess.getIsAtRule()); 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -1737,35 +1737,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "entryRuleisAtOperation"
+    // $ANTLR end "entryRuleisAt"
 
 
-    // $ANTLR start "ruleisAtOperation"
-    // InternalCPtester.g:587:1: ruleisAtOperation : ( ( rule__IsAtOperation__Group__0 ) ) ;
-    public final void ruleisAtOperation() throws RecognitionException {
+    // $ANTLR start "ruleisAt"
+    // InternalCPtester.g:587:1: ruleisAt : ( ( rule__IsAt__Group__0 ) ) ;
+    public final void ruleisAt() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:591:2: ( ( ( rule__IsAtOperation__Group__0 ) ) )
-            // InternalCPtester.g:592:2: ( ( rule__IsAtOperation__Group__0 ) )
+            // InternalCPtester.g:591:2: ( ( ( rule__IsAt__Group__0 ) ) )
+            // InternalCPtester.g:592:2: ( ( rule__IsAt__Group__0 ) )
             {
-            // InternalCPtester.g:592:2: ( ( rule__IsAtOperation__Group__0 ) )
-            // InternalCPtester.g:593:3: ( rule__IsAtOperation__Group__0 )
+            // InternalCPtester.g:592:2: ( ( rule__IsAt__Group__0 ) )
+            // InternalCPtester.g:593:3: ( rule__IsAt__Group__0 )
             {
-             before(grammarAccess.getIsAtOperationAccess().getGroup()); 
-            // InternalCPtester.g:594:3: ( rule__IsAtOperation__Group__0 )
-            // InternalCPtester.g:594:4: rule__IsAtOperation__Group__0
+             before(grammarAccess.getIsAtAccess().getGroup()); 
+            // InternalCPtester.g:594:3: ( rule__IsAt__Group__0 )
+            // InternalCPtester.g:594:4: rule__IsAt__Group__0
             {
             pushFollow(FOLLOW_2);
-            rule__IsAtOperation__Group__0();
+            rule__IsAt__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getIsAtOperationAccess().getGroup()); 
+             after(grammarAccess.getIsAtAccess().getGroup()); 
 
             }
 
@@ -1784,7 +1784,7 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "ruleisAtOperation"
+    // $ANTLR end "ruleisAt"
 
 
     // $ANTLR start "entryRuleAngle_res"
@@ -2866,13 +2866,13 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Command__Alternatives"
-    // InternalCPtester.g:952:1: rule__Command__Alternatives : ( ( rulerotateServoOperation ) | ( rulerotateAllServosOperation ) | ( rulereadServoOperation ) | ( rulereadAllServosOperation ) | ( rulecameraColorOperation ) | ( rulecalibrationOperation ) | ( rulebuzzerOnOperation ) | ( rulebuzzerOffOperation ) | ( rulelightRGBOperation ) );
+    // InternalCPtester.g:952:1: rule__Command__Alternatives : ( ( rulerotateServo ) | ( rulerotateAllServos ) | ( rulereadServo ) | ( rulereadAllServos ) | ( rulecameraColor ) | ( rulecalibration ) | ( rulebuzzerOn ) | ( rulebuzzerOff ) | ( rulelightRGB ) );
     public final void rule__Command__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:956:1: ( ( rulerotateServoOperation ) | ( rulerotateAllServosOperation ) | ( rulereadServoOperation ) | ( rulereadAllServosOperation ) | ( rulecameraColorOperation ) | ( rulecalibrationOperation ) | ( rulebuzzerOnOperation ) | ( rulebuzzerOffOperation ) | ( rulelightRGBOperation ) )
+            // InternalCPtester.g:956:1: ( ( rulerotateServo ) | ( rulerotateAllServos ) | ( rulereadServo ) | ( rulereadAllServos ) | ( rulecameraColor ) | ( rulecalibration ) | ( rulebuzzerOn ) | ( rulebuzzerOff ) | ( rulelightRGB ) )
             int alt1=9;
             switch ( input.LA(1) ) {
             case 30:
@@ -2929,18 +2929,18 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
 
             switch (alt1) {
                 case 1 :
-                    // InternalCPtester.g:957:2: ( rulerotateServoOperation )
+                    // InternalCPtester.g:957:2: ( rulerotateServo )
                     {
-                    // InternalCPtester.g:957:2: ( rulerotateServoOperation )
-                    // InternalCPtester.g:958:3: rulerotateServoOperation
+                    // InternalCPtester.g:957:2: ( rulerotateServo )
+                    // InternalCPtester.g:958:3: rulerotateServo
                     {
-                     before(grammarAccess.getCommandAccess().getRotateServoOperationParserRuleCall_0()); 
+                     before(grammarAccess.getCommandAccess().getRotateServoParserRuleCall_0()); 
                     pushFollow(FOLLOW_2);
-                    rulerotateServoOperation();
+                    rulerotateServo();
 
                     state._fsp--;
 
-                     after(grammarAccess.getCommandAccess().getRotateServoOperationParserRuleCall_0()); 
+                     after(grammarAccess.getCommandAccess().getRotateServoParserRuleCall_0()); 
 
                     }
 
@@ -2948,18 +2948,18 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 2 :
-                    // InternalCPtester.g:963:2: ( rulerotateAllServosOperation )
+                    // InternalCPtester.g:963:2: ( rulerotateAllServos )
                     {
-                    // InternalCPtester.g:963:2: ( rulerotateAllServosOperation )
-                    // InternalCPtester.g:964:3: rulerotateAllServosOperation
+                    // InternalCPtester.g:963:2: ( rulerotateAllServos )
+                    // InternalCPtester.g:964:3: rulerotateAllServos
                     {
-                     before(grammarAccess.getCommandAccess().getRotateAllServosOperationParserRuleCall_1()); 
+                     before(grammarAccess.getCommandAccess().getRotateAllServosParserRuleCall_1()); 
                     pushFollow(FOLLOW_2);
-                    rulerotateAllServosOperation();
+                    rulerotateAllServos();
 
                     state._fsp--;
 
-                     after(grammarAccess.getCommandAccess().getRotateAllServosOperationParserRuleCall_1()); 
+                     after(grammarAccess.getCommandAccess().getRotateAllServosParserRuleCall_1()); 
 
                     }
 
@@ -2967,18 +2967,18 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 3 :
-                    // InternalCPtester.g:969:2: ( rulereadServoOperation )
+                    // InternalCPtester.g:969:2: ( rulereadServo )
                     {
-                    // InternalCPtester.g:969:2: ( rulereadServoOperation )
-                    // InternalCPtester.g:970:3: rulereadServoOperation
+                    // InternalCPtester.g:969:2: ( rulereadServo )
+                    // InternalCPtester.g:970:3: rulereadServo
                     {
-                     before(grammarAccess.getCommandAccess().getReadServoOperationParserRuleCall_2()); 
+                     before(grammarAccess.getCommandAccess().getReadServoParserRuleCall_2()); 
                     pushFollow(FOLLOW_2);
-                    rulereadServoOperation();
+                    rulereadServo();
 
                     state._fsp--;
 
-                     after(grammarAccess.getCommandAccess().getReadServoOperationParserRuleCall_2()); 
+                     after(grammarAccess.getCommandAccess().getReadServoParserRuleCall_2()); 
 
                     }
 
@@ -2986,18 +2986,18 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 4 :
-                    // InternalCPtester.g:975:2: ( rulereadAllServosOperation )
+                    // InternalCPtester.g:975:2: ( rulereadAllServos )
                     {
-                    // InternalCPtester.g:975:2: ( rulereadAllServosOperation )
-                    // InternalCPtester.g:976:3: rulereadAllServosOperation
+                    // InternalCPtester.g:975:2: ( rulereadAllServos )
+                    // InternalCPtester.g:976:3: rulereadAllServos
                     {
-                     before(grammarAccess.getCommandAccess().getReadAllServosOperationParserRuleCall_3()); 
+                     before(grammarAccess.getCommandAccess().getReadAllServosParserRuleCall_3()); 
                     pushFollow(FOLLOW_2);
-                    rulereadAllServosOperation();
+                    rulereadAllServos();
 
                     state._fsp--;
 
-                     after(grammarAccess.getCommandAccess().getReadAllServosOperationParserRuleCall_3()); 
+                     after(grammarAccess.getCommandAccess().getReadAllServosParserRuleCall_3()); 
 
                     }
 
@@ -3005,18 +3005,18 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 5 :
-                    // InternalCPtester.g:981:2: ( rulecameraColorOperation )
+                    // InternalCPtester.g:981:2: ( rulecameraColor )
                     {
-                    // InternalCPtester.g:981:2: ( rulecameraColorOperation )
-                    // InternalCPtester.g:982:3: rulecameraColorOperation
+                    // InternalCPtester.g:981:2: ( rulecameraColor )
+                    // InternalCPtester.g:982:3: rulecameraColor
                     {
-                     before(grammarAccess.getCommandAccess().getCameraColorOperationParserRuleCall_4()); 
+                     before(grammarAccess.getCommandAccess().getCameraColorParserRuleCall_4()); 
                     pushFollow(FOLLOW_2);
-                    rulecameraColorOperation();
+                    rulecameraColor();
 
                     state._fsp--;
 
-                     after(grammarAccess.getCommandAccess().getCameraColorOperationParserRuleCall_4()); 
+                     after(grammarAccess.getCommandAccess().getCameraColorParserRuleCall_4()); 
 
                     }
 
@@ -3024,18 +3024,18 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 6 :
-                    // InternalCPtester.g:987:2: ( rulecalibrationOperation )
+                    // InternalCPtester.g:987:2: ( rulecalibration )
                     {
-                    // InternalCPtester.g:987:2: ( rulecalibrationOperation )
-                    // InternalCPtester.g:988:3: rulecalibrationOperation
+                    // InternalCPtester.g:987:2: ( rulecalibration )
+                    // InternalCPtester.g:988:3: rulecalibration
                     {
-                     before(grammarAccess.getCommandAccess().getCalibrationOperationParserRuleCall_5()); 
+                     before(grammarAccess.getCommandAccess().getCalibrationParserRuleCall_5()); 
                     pushFollow(FOLLOW_2);
-                    rulecalibrationOperation();
+                    rulecalibration();
 
                     state._fsp--;
 
-                     after(grammarAccess.getCommandAccess().getCalibrationOperationParserRuleCall_5()); 
+                     after(grammarAccess.getCommandAccess().getCalibrationParserRuleCall_5()); 
 
                     }
 
@@ -3043,18 +3043,18 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 7 :
-                    // InternalCPtester.g:993:2: ( rulebuzzerOnOperation )
+                    // InternalCPtester.g:993:2: ( rulebuzzerOn )
                     {
-                    // InternalCPtester.g:993:2: ( rulebuzzerOnOperation )
-                    // InternalCPtester.g:994:3: rulebuzzerOnOperation
+                    // InternalCPtester.g:993:2: ( rulebuzzerOn )
+                    // InternalCPtester.g:994:3: rulebuzzerOn
                     {
-                     before(grammarAccess.getCommandAccess().getBuzzerOnOperationParserRuleCall_6()); 
+                     before(grammarAccess.getCommandAccess().getBuzzerOnParserRuleCall_6()); 
                     pushFollow(FOLLOW_2);
-                    rulebuzzerOnOperation();
+                    rulebuzzerOn();
 
                     state._fsp--;
 
-                     after(grammarAccess.getCommandAccess().getBuzzerOnOperationParserRuleCall_6()); 
+                     after(grammarAccess.getCommandAccess().getBuzzerOnParserRuleCall_6()); 
 
                     }
 
@@ -3062,18 +3062,18 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 8 :
-                    // InternalCPtester.g:999:2: ( rulebuzzerOffOperation )
+                    // InternalCPtester.g:999:2: ( rulebuzzerOff )
                     {
-                    // InternalCPtester.g:999:2: ( rulebuzzerOffOperation )
-                    // InternalCPtester.g:1000:3: rulebuzzerOffOperation
+                    // InternalCPtester.g:999:2: ( rulebuzzerOff )
+                    // InternalCPtester.g:1000:3: rulebuzzerOff
                     {
-                     before(grammarAccess.getCommandAccess().getBuzzerOffOperationParserRuleCall_7()); 
+                     before(grammarAccess.getCommandAccess().getBuzzerOffParserRuleCall_7()); 
                     pushFollow(FOLLOW_2);
-                    rulebuzzerOffOperation();
+                    rulebuzzerOff();
 
                     state._fsp--;
 
-                     after(grammarAccess.getCommandAccess().getBuzzerOffOperationParserRuleCall_7()); 
+                     after(grammarAccess.getCommandAccess().getBuzzerOffParserRuleCall_7()); 
 
                     }
 
@@ -3081,18 +3081,18 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 9 :
-                    // InternalCPtester.g:1005:2: ( rulelightRGBOperation )
+                    // InternalCPtester.g:1005:2: ( rulelightRGB )
                     {
-                    // InternalCPtester.g:1005:2: ( rulelightRGBOperation )
-                    // InternalCPtester.g:1006:3: rulelightRGBOperation
+                    // InternalCPtester.g:1005:2: ( rulelightRGB )
+                    // InternalCPtester.g:1006:3: rulelightRGB
                     {
-                     before(grammarAccess.getCommandAccess().getLightRGBOperationParserRuleCall_8()); 
+                     before(grammarAccess.getCommandAccess().getLightRGBParserRuleCall_8()); 
                     pushFollow(FOLLOW_2);
-                    rulelightRGBOperation();
+                    rulelightRGB();
 
                     state._fsp--;
 
-                     after(grammarAccess.getCommandAccess().getLightRGBOperationParserRuleCall_8()); 
+                     after(grammarAccess.getCommandAccess().getLightRGBParserRuleCall_8()); 
 
                     }
 
@@ -3117,13 +3117,13 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Solution__Alternatives"
-    // InternalCPtester.g:1015:1: rule__Solution__Alternatives : ( ( ruleisAtSingleOperation ) | ( ruleisAtOperation ) );
+    // InternalCPtester.g:1015:1: rule__Solution__Alternatives : ( ( ruleisAtSingle ) | ( ruleisAt ) );
     public final void rule__Solution__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:1019:1: ( ( ruleisAtSingleOperation ) | ( ruleisAtOperation ) )
+            // InternalCPtester.g:1019:1: ( ( ruleisAtSingle ) | ( ruleisAt ) )
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -3141,18 +3141,18 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             }
             switch (alt2) {
                 case 1 :
-                    // InternalCPtester.g:1020:2: ( ruleisAtSingleOperation )
+                    // InternalCPtester.g:1020:2: ( ruleisAtSingle )
                     {
-                    // InternalCPtester.g:1020:2: ( ruleisAtSingleOperation )
-                    // InternalCPtester.g:1021:3: ruleisAtSingleOperation
+                    // InternalCPtester.g:1020:2: ( ruleisAtSingle )
+                    // InternalCPtester.g:1021:3: ruleisAtSingle
                     {
-                     before(grammarAccess.getSolutionAccess().getIsAtSingleOperationParserRuleCall_0()); 
+                     before(grammarAccess.getSolutionAccess().getIsAtSingleParserRuleCall_0()); 
                     pushFollow(FOLLOW_2);
-                    ruleisAtSingleOperation();
+                    ruleisAtSingle();
 
                     state._fsp--;
 
-                     after(grammarAccess.getSolutionAccess().getIsAtSingleOperationParserRuleCall_0()); 
+                     after(grammarAccess.getSolutionAccess().getIsAtSingleParserRuleCall_0()); 
 
                     }
 
@@ -3160,18 +3160,18 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 2 :
-                    // InternalCPtester.g:1026:2: ( ruleisAtOperation )
+                    // InternalCPtester.g:1026:2: ( ruleisAt )
                     {
-                    // InternalCPtester.g:1026:2: ( ruleisAtOperation )
-                    // InternalCPtester.g:1027:3: ruleisAtOperation
+                    // InternalCPtester.g:1026:2: ( ruleisAt )
+                    // InternalCPtester.g:1027:3: ruleisAt
                     {
-                     before(grammarAccess.getSolutionAccess().getIsAtOperationParserRuleCall_1()); 
+                     before(grammarAccess.getSolutionAccess().getIsAtParserRuleCall_1()); 
                     pushFollow(FOLLOW_2);
-                    ruleisAtOperation();
+                    ruleisAt();
 
                     state._fsp--;
 
-                     after(grammarAccess.getSolutionAccess().getIsAtOperationParserRuleCall_1()); 
+                     after(grammarAccess.getSolutionAccess().getIsAtParserRuleCall_1()); 
 
                     }
 
@@ -5286,23 +5286,23 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__Initial__Group__3__Impl"
 
 
-    // $ANTLR start "rule__LightRGBOperation__Group__0"
-    // InternalCPtester.g:1718:1: rule__LightRGBOperation__Group__0 : rule__LightRGBOperation__Group__0__Impl rule__LightRGBOperation__Group__1 ;
-    public final void rule__LightRGBOperation__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__LightRGB__Group__0"
+    // InternalCPtester.g:1718:1: rule__LightRGB__Group__0 : rule__LightRGB__Group__0__Impl rule__LightRGB__Group__1 ;
+    public final void rule__LightRGB__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:1722:1: ( rule__LightRGBOperation__Group__0__Impl rule__LightRGBOperation__Group__1 )
-            // InternalCPtester.g:1723:2: rule__LightRGBOperation__Group__0__Impl rule__LightRGBOperation__Group__1
+            // InternalCPtester.g:1722:1: ( rule__LightRGB__Group__0__Impl rule__LightRGB__Group__1 )
+            // InternalCPtester.g:1723:2: rule__LightRGB__Group__0__Impl rule__LightRGB__Group__1
             {
             pushFollow(FOLLOW_17);
-            rule__LightRGBOperation__Group__0__Impl();
+            rule__LightRGB__Group__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__LightRGBOperation__Group__1();
+            rule__LightRGB__Group__1();
 
             state._fsp--;
 
@@ -5321,35 +5321,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__LightRGBOperation__Group__0"
+    // $ANTLR end "rule__LightRGB__Group__0"
 
 
-    // $ANTLR start "rule__LightRGBOperation__Group__0__Impl"
-    // InternalCPtester.g:1730:1: rule__LightRGBOperation__Group__0__Impl : ( ( rule__LightRGBOperation__NameAssignment_0 ) ) ;
-    public final void rule__LightRGBOperation__Group__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__LightRGB__Group__0__Impl"
+    // InternalCPtester.g:1730:1: rule__LightRGB__Group__0__Impl : ( ( rule__LightRGB__NameAssignment_0 ) ) ;
+    public final void rule__LightRGB__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:1734:1: ( ( ( rule__LightRGBOperation__NameAssignment_0 ) ) )
-            // InternalCPtester.g:1735:1: ( ( rule__LightRGBOperation__NameAssignment_0 ) )
+            // InternalCPtester.g:1734:1: ( ( ( rule__LightRGB__NameAssignment_0 ) ) )
+            // InternalCPtester.g:1735:1: ( ( rule__LightRGB__NameAssignment_0 ) )
             {
-            // InternalCPtester.g:1735:1: ( ( rule__LightRGBOperation__NameAssignment_0 ) )
-            // InternalCPtester.g:1736:2: ( rule__LightRGBOperation__NameAssignment_0 )
+            // InternalCPtester.g:1735:1: ( ( rule__LightRGB__NameAssignment_0 ) )
+            // InternalCPtester.g:1736:2: ( rule__LightRGB__NameAssignment_0 )
             {
-             before(grammarAccess.getLightRGBOperationAccess().getNameAssignment_0()); 
-            // InternalCPtester.g:1737:2: ( rule__LightRGBOperation__NameAssignment_0 )
-            // InternalCPtester.g:1737:3: rule__LightRGBOperation__NameAssignment_0
+             before(grammarAccess.getLightRGBAccess().getNameAssignment_0()); 
+            // InternalCPtester.g:1737:2: ( rule__LightRGB__NameAssignment_0 )
+            // InternalCPtester.g:1737:3: rule__LightRGB__NameAssignment_0
             {
             pushFollow(FOLLOW_2);
-            rule__LightRGBOperation__NameAssignment_0();
+            rule__LightRGB__NameAssignment_0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getLightRGBOperationAccess().getNameAssignment_0()); 
+             after(grammarAccess.getLightRGBAccess().getNameAssignment_0()); 
 
             }
 
@@ -5368,26 +5368,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__LightRGBOperation__Group__0__Impl"
+    // $ANTLR end "rule__LightRGB__Group__0__Impl"
 
 
-    // $ANTLR start "rule__LightRGBOperation__Group__1"
-    // InternalCPtester.g:1745:1: rule__LightRGBOperation__Group__1 : rule__LightRGBOperation__Group__1__Impl rule__LightRGBOperation__Group__2 ;
-    public final void rule__LightRGBOperation__Group__1() throws RecognitionException {
+    // $ANTLR start "rule__LightRGB__Group__1"
+    // InternalCPtester.g:1745:1: rule__LightRGB__Group__1 : rule__LightRGB__Group__1__Impl rule__LightRGB__Group__2 ;
+    public final void rule__LightRGB__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:1749:1: ( rule__LightRGBOperation__Group__1__Impl rule__LightRGBOperation__Group__2 )
-            // InternalCPtester.g:1750:2: rule__LightRGBOperation__Group__1__Impl rule__LightRGBOperation__Group__2
+            // InternalCPtester.g:1749:1: ( rule__LightRGB__Group__1__Impl rule__LightRGB__Group__2 )
+            // InternalCPtester.g:1750:2: rule__LightRGB__Group__1__Impl rule__LightRGB__Group__2
             {
             pushFollow(FOLLOW_18);
-            rule__LightRGBOperation__Group__1__Impl();
+            rule__LightRGB__Group__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__LightRGBOperation__Group__2();
+            rule__LightRGB__Group__2();
 
             state._fsp--;
 
@@ -5406,12 +5406,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__LightRGBOperation__Group__1"
+    // $ANTLR end "rule__LightRGB__Group__1"
 
 
-    // $ANTLR start "rule__LightRGBOperation__Group__1__Impl"
-    // InternalCPtester.g:1757:1: rule__LightRGBOperation__Group__1__Impl : ( '(' ) ;
-    public final void rule__LightRGBOperation__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__LightRGB__Group__1__Impl"
+    // InternalCPtester.g:1757:1: rule__LightRGB__Group__1__Impl : ( '(' ) ;
+    public final void rule__LightRGB__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -5422,9 +5422,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:1762:1: ( '(' )
             // InternalCPtester.g:1763:2: '('
             {
-             before(grammarAccess.getLightRGBOperationAccess().getLeftParenthesisKeyword_1()); 
+             before(grammarAccess.getLightRGBAccess().getLeftParenthesisKeyword_1()); 
             match(input,15,FOLLOW_2); 
-             after(grammarAccess.getLightRGBOperationAccess().getLeftParenthesisKeyword_1()); 
+             after(grammarAccess.getLightRGBAccess().getLeftParenthesisKeyword_1()); 
 
             }
 
@@ -5443,26 +5443,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__LightRGBOperation__Group__1__Impl"
+    // $ANTLR end "rule__LightRGB__Group__1__Impl"
 
 
-    // $ANTLR start "rule__LightRGBOperation__Group__2"
-    // InternalCPtester.g:1772:1: rule__LightRGBOperation__Group__2 : rule__LightRGBOperation__Group__2__Impl rule__LightRGBOperation__Group__3 ;
-    public final void rule__LightRGBOperation__Group__2() throws RecognitionException {
+    // $ANTLR start "rule__LightRGB__Group__2"
+    // InternalCPtester.g:1772:1: rule__LightRGB__Group__2 : rule__LightRGB__Group__2__Impl rule__LightRGB__Group__3 ;
+    public final void rule__LightRGB__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:1776:1: ( rule__LightRGBOperation__Group__2__Impl rule__LightRGBOperation__Group__3 )
-            // InternalCPtester.g:1777:2: rule__LightRGBOperation__Group__2__Impl rule__LightRGBOperation__Group__3
+            // InternalCPtester.g:1776:1: ( rule__LightRGB__Group__2__Impl rule__LightRGB__Group__3 )
+            // InternalCPtester.g:1777:2: rule__LightRGB__Group__2__Impl rule__LightRGB__Group__3
             {
             pushFollow(FOLLOW_20);
-            rule__LightRGBOperation__Group__2__Impl();
+            rule__LightRGB__Group__2__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__LightRGBOperation__Group__3();
+            rule__LightRGB__Group__3();
 
             state._fsp--;
 
@@ -5481,35 +5481,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__LightRGBOperation__Group__2"
+    // $ANTLR end "rule__LightRGB__Group__2"
 
 
-    // $ANTLR start "rule__LightRGBOperation__Group__2__Impl"
-    // InternalCPtester.g:1784:1: rule__LightRGBOperation__Group__2__Impl : ( ( rule__LightRGBOperation__RAssignment_2 ) ) ;
-    public final void rule__LightRGBOperation__Group__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__LightRGB__Group__2__Impl"
+    // InternalCPtester.g:1784:1: rule__LightRGB__Group__2__Impl : ( ( rule__LightRGB__RAssignment_2 ) ) ;
+    public final void rule__LightRGB__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:1788:1: ( ( ( rule__LightRGBOperation__RAssignment_2 ) ) )
-            // InternalCPtester.g:1789:1: ( ( rule__LightRGBOperation__RAssignment_2 ) )
+            // InternalCPtester.g:1788:1: ( ( ( rule__LightRGB__RAssignment_2 ) ) )
+            // InternalCPtester.g:1789:1: ( ( rule__LightRGB__RAssignment_2 ) )
             {
-            // InternalCPtester.g:1789:1: ( ( rule__LightRGBOperation__RAssignment_2 ) )
-            // InternalCPtester.g:1790:2: ( rule__LightRGBOperation__RAssignment_2 )
+            // InternalCPtester.g:1789:1: ( ( rule__LightRGB__RAssignment_2 ) )
+            // InternalCPtester.g:1790:2: ( rule__LightRGB__RAssignment_2 )
             {
-             before(grammarAccess.getLightRGBOperationAccess().getRAssignment_2()); 
-            // InternalCPtester.g:1791:2: ( rule__LightRGBOperation__RAssignment_2 )
-            // InternalCPtester.g:1791:3: rule__LightRGBOperation__RAssignment_2
+             before(grammarAccess.getLightRGBAccess().getRAssignment_2()); 
+            // InternalCPtester.g:1791:2: ( rule__LightRGB__RAssignment_2 )
+            // InternalCPtester.g:1791:3: rule__LightRGB__RAssignment_2
             {
             pushFollow(FOLLOW_2);
-            rule__LightRGBOperation__RAssignment_2();
+            rule__LightRGB__RAssignment_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getLightRGBOperationAccess().getRAssignment_2()); 
+             after(grammarAccess.getLightRGBAccess().getRAssignment_2()); 
 
             }
 
@@ -5528,26 +5528,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__LightRGBOperation__Group__2__Impl"
+    // $ANTLR end "rule__LightRGB__Group__2__Impl"
 
 
-    // $ANTLR start "rule__LightRGBOperation__Group__3"
-    // InternalCPtester.g:1799:1: rule__LightRGBOperation__Group__3 : rule__LightRGBOperation__Group__3__Impl rule__LightRGBOperation__Group__4 ;
-    public final void rule__LightRGBOperation__Group__3() throws RecognitionException {
+    // $ANTLR start "rule__LightRGB__Group__3"
+    // InternalCPtester.g:1799:1: rule__LightRGB__Group__3 : rule__LightRGB__Group__3__Impl rule__LightRGB__Group__4 ;
+    public final void rule__LightRGB__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:1803:1: ( rule__LightRGBOperation__Group__3__Impl rule__LightRGBOperation__Group__4 )
-            // InternalCPtester.g:1804:2: rule__LightRGBOperation__Group__3__Impl rule__LightRGBOperation__Group__4
+            // InternalCPtester.g:1803:1: ( rule__LightRGB__Group__3__Impl rule__LightRGB__Group__4 )
+            // InternalCPtester.g:1804:2: rule__LightRGB__Group__3__Impl rule__LightRGB__Group__4
             {
             pushFollow(FOLLOW_18);
-            rule__LightRGBOperation__Group__3__Impl();
+            rule__LightRGB__Group__3__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__LightRGBOperation__Group__4();
+            rule__LightRGB__Group__4();
 
             state._fsp--;
 
@@ -5566,12 +5566,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__LightRGBOperation__Group__3"
+    // $ANTLR end "rule__LightRGB__Group__3"
 
 
-    // $ANTLR start "rule__LightRGBOperation__Group__3__Impl"
-    // InternalCPtester.g:1811:1: rule__LightRGBOperation__Group__3__Impl : ( ',' ) ;
-    public final void rule__LightRGBOperation__Group__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__LightRGB__Group__3__Impl"
+    // InternalCPtester.g:1811:1: rule__LightRGB__Group__3__Impl : ( ',' ) ;
+    public final void rule__LightRGB__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -5582,9 +5582,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:1816:1: ( ',' )
             // InternalCPtester.g:1817:2: ','
             {
-             before(grammarAccess.getLightRGBOperationAccess().getCommaKeyword_3()); 
+             before(grammarAccess.getLightRGBAccess().getCommaKeyword_3()); 
             match(input,17,FOLLOW_2); 
-             after(grammarAccess.getLightRGBOperationAccess().getCommaKeyword_3()); 
+             after(grammarAccess.getLightRGBAccess().getCommaKeyword_3()); 
 
             }
 
@@ -5603,26 +5603,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__LightRGBOperation__Group__3__Impl"
+    // $ANTLR end "rule__LightRGB__Group__3__Impl"
 
 
-    // $ANTLR start "rule__LightRGBOperation__Group__4"
-    // InternalCPtester.g:1826:1: rule__LightRGBOperation__Group__4 : rule__LightRGBOperation__Group__4__Impl rule__LightRGBOperation__Group__5 ;
-    public final void rule__LightRGBOperation__Group__4() throws RecognitionException {
+    // $ANTLR start "rule__LightRGB__Group__4"
+    // InternalCPtester.g:1826:1: rule__LightRGB__Group__4 : rule__LightRGB__Group__4__Impl rule__LightRGB__Group__5 ;
+    public final void rule__LightRGB__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:1830:1: ( rule__LightRGBOperation__Group__4__Impl rule__LightRGBOperation__Group__5 )
-            // InternalCPtester.g:1831:2: rule__LightRGBOperation__Group__4__Impl rule__LightRGBOperation__Group__5
+            // InternalCPtester.g:1830:1: ( rule__LightRGB__Group__4__Impl rule__LightRGB__Group__5 )
+            // InternalCPtester.g:1831:2: rule__LightRGB__Group__4__Impl rule__LightRGB__Group__5
             {
             pushFollow(FOLLOW_20);
-            rule__LightRGBOperation__Group__4__Impl();
+            rule__LightRGB__Group__4__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__LightRGBOperation__Group__5();
+            rule__LightRGB__Group__5();
 
             state._fsp--;
 
@@ -5641,35 +5641,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__LightRGBOperation__Group__4"
+    // $ANTLR end "rule__LightRGB__Group__4"
 
 
-    // $ANTLR start "rule__LightRGBOperation__Group__4__Impl"
-    // InternalCPtester.g:1838:1: rule__LightRGBOperation__Group__4__Impl : ( ( rule__LightRGBOperation__GAssignment_4 ) ) ;
-    public final void rule__LightRGBOperation__Group__4__Impl() throws RecognitionException {
+    // $ANTLR start "rule__LightRGB__Group__4__Impl"
+    // InternalCPtester.g:1838:1: rule__LightRGB__Group__4__Impl : ( ( rule__LightRGB__GAssignment_4 ) ) ;
+    public final void rule__LightRGB__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:1842:1: ( ( ( rule__LightRGBOperation__GAssignment_4 ) ) )
-            // InternalCPtester.g:1843:1: ( ( rule__LightRGBOperation__GAssignment_4 ) )
+            // InternalCPtester.g:1842:1: ( ( ( rule__LightRGB__GAssignment_4 ) ) )
+            // InternalCPtester.g:1843:1: ( ( rule__LightRGB__GAssignment_4 ) )
             {
-            // InternalCPtester.g:1843:1: ( ( rule__LightRGBOperation__GAssignment_4 ) )
-            // InternalCPtester.g:1844:2: ( rule__LightRGBOperation__GAssignment_4 )
+            // InternalCPtester.g:1843:1: ( ( rule__LightRGB__GAssignment_4 ) )
+            // InternalCPtester.g:1844:2: ( rule__LightRGB__GAssignment_4 )
             {
-             before(grammarAccess.getLightRGBOperationAccess().getGAssignment_4()); 
-            // InternalCPtester.g:1845:2: ( rule__LightRGBOperation__GAssignment_4 )
-            // InternalCPtester.g:1845:3: rule__LightRGBOperation__GAssignment_4
+             before(grammarAccess.getLightRGBAccess().getGAssignment_4()); 
+            // InternalCPtester.g:1845:2: ( rule__LightRGB__GAssignment_4 )
+            // InternalCPtester.g:1845:3: rule__LightRGB__GAssignment_4
             {
             pushFollow(FOLLOW_2);
-            rule__LightRGBOperation__GAssignment_4();
+            rule__LightRGB__GAssignment_4();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getLightRGBOperationAccess().getGAssignment_4()); 
+             after(grammarAccess.getLightRGBAccess().getGAssignment_4()); 
 
             }
 
@@ -5688,26 +5688,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__LightRGBOperation__Group__4__Impl"
+    // $ANTLR end "rule__LightRGB__Group__4__Impl"
 
 
-    // $ANTLR start "rule__LightRGBOperation__Group__5"
-    // InternalCPtester.g:1853:1: rule__LightRGBOperation__Group__5 : rule__LightRGBOperation__Group__5__Impl rule__LightRGBOperation__Group__6 ;
-    public final void rule__LightRGBOperation__Group__5() throws RecognitionException {
+    // $ANTLR start "rule__LightRGB__Group__5"
+    // InternalCPtester.g:1853:1: rule__LightRGB__Group__5 : rule__LightRGB__Group__5__Impl rule__LightRGB__Group__6 ;
+    public final void rule__LightRGB__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:1857:1: ( rule__LightRGBOperation__Group__5__Impl rule__LightRGBOperation__Group__6 )
-            // InternalCPtester.g:1858:2: rule__LightRGBOperation__Group__5__Impl rule__LightRGBOperation__Group__6
+            // InternalCPtester.g:1857:1: ( rule__LightRGB__Group__5__Impl rule__LightRGB__Group__6 )
+            // InternalCPtester.g:1858:2: rule__LightRGB__Group__5__Impl rule__LightRGB__Group__6
             {
             pushFollow(FOLLOW_18);
-            rule__LightRGBOperation__Group__5__Impl();
+            rule__LightRGB__Group__5__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__LightRGBOperation__Group__6();
+            rule__LightRGB__Group__6();
 
             state._fsp--;
 
@@ -5726,12 +5726,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__LightRGBOperation__Group__5"
+    // $ANTLR end "rule__LightRGB__Group__5"
 
 
-    // $ANTLR start "rule__LightRGBOperation__Group__5__Impl"
-    // InternalCPtester.g:1865:1: rule__LightRGBOperation__Group__5__Impl : ( ',' ) ;
-    public final void rule__LightRGBOperation__Group__5__Impl() throws RecognitionException {
+    // $ANTLR start "rule__LightRGB__Group__5__Impl"
+    // InternalCPtester.g:1865:1: rule__LightRGB__Group__5__Impl : ( ',' ) ;
+    public final void rule__LightRGB__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -5742,9 +5742,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:1870:1: ( ',' )
             // InternalCPtester.g:1871:2: ','
             {
-             before(grammarAccess.getLightRGBOperationAccess().getCommaKeyword_5()); 
+             before(grammarAccess.getLightRGBAccess().getCommaKeyword_5()); 
             match(input,17,FOLLOW_2); 
-             after(grammarAccess.getLightRGBOperationAccess().getCommaKeyword_5()); 
+             after(grammarAccess.getLightRGBAccess().getCommaKeyword_5()); 
 
             }
 
@@ -5763,26 +5763,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__LightRGBOperation__Group__5__Impl"
+    // $ANTLR end "rule__LightRGB__Group__5__Impl"
 
 
-    // $ANTLR start "rule__LightRGBOperation__Group__6"
-    // InternalCPtester.g:1880:1: rule__LightRGBOperation__Group__6 : rule__LightRGBOperation__Group__6__Impl rule__LightRGBOperation__Group__7 ;
-    public final void rule__LightRGBOperation__Group__6() throws RecognitionException {
+    // $ANTLR start "rule__LightRGB__Group__6"
+    // InternalCPtester.g:1880:1: rule__LightRGB__Group__6 : rule__LightRGB__Group__6__Impl rule__LightRGB__Group__7 ;
+    public final void rule__LightRGB__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:1884:1: ( rule__LightRGBOperation__Group__6__Impl rule__LightRGBOperation__Group__7 )
-            // InternalCPtester.g:1885:2: rule__LightRGBOperation__Group__6__Impl rule__LightRGBOperation__Group__7
+            // InternalCPtester.g:1884:1: ( rule__LightRGB__Group__6__Impl rule__LightRGB__Group__7 )
+            // InternalCPtester.g:1885:2: rule__LightRGB__Group__6__Impl rule__LightRGB__Group__7
             {
             pushFollow(FOLLOW_19);
-            rule__LightRGBOperation__Group__6__Impl();
+            rule__LightRGB__Group__6__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__LightRGBOperation__Group__7();
+            rule__LightRGB__Group__7();
 
             state._fsp--;
 
@@ -5801,35 +5801,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__LightRGBOperation__Group__6"
+    // $ANTLR end "rule__LightRGB__Group__6"
 
 
-    // $ANTLR start "rule__LightRGBOperation__Group__6__Impl"
-    // InternalCPtester.g:1892:1: rule__LightRGBOperation__Group__6__Impl : ( ( rule__LightRGBOperation__BAssignment_6 ) ) ;
-    public final void rule__LightRGBOperation__Group__6__Impl() throws RecognitionException {
+    // $ANTLR start "rule__LightRGB__Group__6__Impl"
+    // InternalCPtester.g:1892:1: rule__LightRGB__Group__6__Impl : ( ( rule__LightRGB__BAssignment_6 ) ) ;
+    public final void rule__LightRGB__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:1896:1: ( ( ( rule__LightRGBOperation__BAssignment_6 ) ) )
-            // InternalCPtester.g:1897:1: ( ( rule__LightRGBOperation__BAssignment_6 ) )
+            // InternalCPtester.g:1896:1: ( ( ( rule__LightRGB__BAssignment_6 ) ) )
+            // InternalCPtester.g:1897:1: ( ( rule__LightRGB__BAssignment_6 ) )
             {
-            // InternalCPtester.g:1897:1: ( ( rule__LightRGBOperation__BAssignment_6 ) )
-            // InternalCPtester.g:1898:2: ( rule__LightRGBOperation__BAssignment_6 )
+            // InternalCPtester.g:1897:1: ( ( rule__LightRGB__BAssignment_6 ) )
+            // InternalCPtester.g:1898:2: ( rule__LightRGB__BAssignment_6 )
             {
-             before(grammarAccess.getLightRGBOperationAccess().getBAssignment_6()); 
-            // InternalCPtester.g:1899:2: ( rule__LightRGBOperation__BAssignment_6 )
-            // InternalCPtester.g:1899:3: rule__LightRGBOperation__BAssignment_6
+             before(grammarAccess.getLightRGBAccess().getBAssignment_6()); 
+            // InternalCPtester.g:1899:2: ( rule__LightRGB__BAssignment_6 )
+            // InternalCPtester.g:1899:3: rule__LightRGB__BAssignment_6
             {
             pushFollow(FOLLOW_2);
-            rule__LightRGBOperation__BAssignment_6();
+            rule__LightRGB__BAssignment_6();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getLightRGBOperationAccess().getBAssignment_6()); 
+             after(grammarAccess.getLightRGBAccess().getBAssignment_6()); 
 
             }
 
@@ -5848,21 +5848,21 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__LightRGBOperation__Group__6__Impl"
+    // $ANTLR end "rule__LightRGB__Group__6__Impl"
 
 
-    // $ANTLR start "rule__LightRGBOperation__Group__7"
-    // InternalCPtester.g:1907:1: rule__LightRGBOperation__Group__7 : rule__LightRGBOperation__Group__7__Impl ;
-    public final void rule__LightRGBOperation__Group__7() throws RecognitionException {
+    // $ANTLR start "rule__LightRGB__Group__7"
+    // InternalCPtester.g:1907:1: rule__LightRGB__Group__7 : rule__LightRGB__Group__7__Impl ;
+    public final void rule__LightRGB__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:1911:1: ( rule__LightRGBOperation__Group__7__Impl )
-            // InternalCPtester.g:1912:2: rule__LightRGBOperation__Group__7__Impl
+            // InternalCPtester.g:1911:1: ( rule__LightRGB__Group__7__Impl )
+            // InternalCPtester.g:1912:2: rule__LightRGB__Group__7__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__LightRGBOperation__Group__7__Impl();
+            rule__LightRGB__Group__7__Impl();
 
             state._fsp--;
 
@@ -5881,12 +5881,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__LightRGBOperation__Group__7"
+    // $ANTLR end "rule__LightRGB__Group__7"
 
 
-    // $ANTLR start "rule__LightRGBOperation__Group__7__Impl"
-    // InternalCPtester.g:1918:1: rule__LightRGBOperation__Group__7__Impl : ( ')' ) ;
-    public final void rule__LightRGBOperation__Group__7__Impl() throws RecognitionException {
+    // $ANTLR start "rule__LightRGB__Group__7__Impl"
+    // InternalCPtester.g:1918:1: rule__LightRGB__Group__7__Impl : ( ')' ) ;
+    public final void rule__LightRGB__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -5897,9 +5897,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:1923:1: ( ')' )
             // InternalCPtester.g:1924:2: ')'
             {
-             before(grammarAccess.getLightRGBOperationAccess().getRightParenthesisKeyword_7()); 
+             before(grammarAccess.getLightRGBAccess().getRightParenthesisKeyword_7()); 
             match(input,16,FOLLOW_2); 
-             after(grammarAccess.getLightRGBOperationAccess().getRightParenthesisKeyword_7()); 
+             after(grammarAccess.getLightRGBAccess().getRightParenthesisKeyword_7()); 
 
             }
 
@@ -5918,26 +5918,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__LightRGBOperation__Group__7__Impl"
+    // $ANTLR end "rule__LightRGB__Group__7__Impl"
 
 
-    // $ANTLR start "rule__BuzzerOffOperation__Group__0"
-    // InternalCPtester.g:1934:1: rule__BuzzerOffOperation__Group__0 : rule__BuzzerOffOperation__Group__0__Impl rule__BuzzerOffOperation__Group__1 ;
-    public final void rule__BuzzerOffOperation__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__BuzzerOff__Group__0"
+    // InternalCPtester.g:1934:1: rule__BuzzerOff__Group__0 : rule__BuzzerOff__Group__0__Impl rule__BuzzerOff__Group__1 ;
+    public final void rule__BuzzerOff__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:1938:1: ( rule__BuzzerOffOperation__Group__0__Impl rule__BuzzerOffOperation__Group__1 )
-            // InternalCPtester.g:1939:2: rule__BuzzerOffOperation__Group__0__Impl rule__BuzzerOffOperation__Group__1
+            // InternalCPtester.g:1938:1: ( rule__BuzzerOff__Group__0__Impl rule__BuzzerOff__Group__1 )
+            // InternalCPtester.g:1939:2: rule__BuzzerOff__Group__0__Impl rule__BuzzerOff__Group__1
             {
             pushFollow(FOLLOW_17);
-            rule__BuzzerOffOperation__Group__0__Impl();
+            rule__BuzzerOff__Group__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__BuzzerOffOperation__Group__1();
+            rule__BuzzerOff__Group__1();
 
             state._fsp--;
 
@@ -5956,35 +5956,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__BuzzerOffOperation__Group__0"
+    // $ANTLR end "rule__BuzzerOff__Group__0"
 
 
-    // $ANTLR start "rule__BuzzerOffOperation__Group__0__Impl"
-    // InternalCPtester.g:1946:1: rule__BuzzerOffOperation__Group__0__Impl : ( ( rule__BuzzerOffOperation__NameAssignment_0 ) ) ;
-    public final void rule__BuzzerOffOperation__Group__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__BuzzerOff__Group__0__Impl"
+    // InternalCPtester.g:1946:1: rule__BuzzerOff__Group__0__Impl : ( ( rule__BuzzerOff__NameAssignment_0 ) ) ;
+    public final void rule__BuzzerOff__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:1950:1: ( ( ( rule__BuzzerOffOperation__NameAssignment_0 ) ) )
-            // InternalCPtester.g:1951:1: ( ( rule__BuzzerOffOperation__NameAssignment_0 ) )
+            // InternalCPtester.g:1950:1: ( ( ( rule__BuzzerOff__NameAssignment_0 ) ) )
+            // InternalCPtester.g:1951:1: ( ( rule__BuzzerOff__NameAssignment_0 ) )
             {
-            // InternalCPtester.g:1951:1: ( ( rule__BuzzerOffOperation__NameAssignment_0 ) )
-            // InternalCPtester.g:1952:2: ( rule__BuzzerOffOperation__NameAssignment_0 )
+            // InternalCPtester.g:1951:1: ( ( rule__BuzzerOff__NameAssignment_0 ) )
+            // InternalCPtester.g:1952:2: ( rule__BuzzerOff__NameAssignment_0 )
             {
-             before(grammarAccess.getBuzzerOffOperationAccess().getNameAssignment_0()); 
-            // InternalCPtester.g:1953:2: ( rule__BuzzerOffOperation__NameAssignment_0 )
-            // InternalCPtester.g:1953:3: rule__BuzzerOffOperation__NameAssignment_0
+             before(grammarAccess.getBuzzerOffAccess().getNameAssignment_0()); 
+            // InternalCPtester.g:1953:2: ( rule__BuzzerOff__NameAssignment_0 )
+            // InternalCPtester.g:1953:3: rule__BuzzerOff__NameAssignment_0
             {
             pushFollow(FOLLOW_2);
-            rule__BuzzerOffOperation__NameAssignment_0();
+            rule__BuzzerOff__NameAssignment_0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getBuzzerOffOperationAccess().getNameAssignment_0()); 
+             after(grammarAccess.getBuzzerOffAccess().getNameAssignment_0()); 
 
             }
 
@@ -6003,26 +6003,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__BuzzerOffOperation__Group__0__Impl"
+    // $ANTLR end "rule__BuzzerOff__Group__0__Impl"
 
 
-    // $ANTLR start "rule__BuzzerOffOperation__Group__1"
-    // InternalCPtester.g:1961:1: rule__BuzzerOffOperation__Group__1 : rule__BuzzerOffOperation__Group__1__Impl rule__BuzzerOffOperation__Group__2 ;
-    public final void rule__BuzzerOffOperation__Group__1() throws RecognitionException {
+    // $ANTLR start "rule__BuzzerOff__Group__1"
+    // InternalCPtester.g:1961:1: rule__BuzzerOff__Group__1 : rule__BuzzerOff__Group__1__Impl rule__BuzzerOff__Group__2 ;
+    public final void rule__BuzzerOff__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:1965:1: ( rule__BuzzerOffOperation__Group__1__Impl rule__BuzzerOffOperation__Group__2 )
-            // InternalCPtester.g:1966:2: rule__BuzzerOffOperation__Group__1__Impl rule__BuzzerOffOperation__Group__2
+            // InternalCPtester.g:1965:1: ( rule__BuzzerOff__Group__1__Impl rule__BuzzerOff__Group__2 )
+            // InternalCPtester.g:1966:2: rule__BuzzerOff__Group__1__Impl rule__BuzzerOff__Group__2
             {
             pushFollow(FOLLOW_19);
-            rule__BuzzerOffOperation__Group__1__Impl();
+            rule__BuzzerOff__Group__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__BuzzerOffOperation__Group__2();
+            rule__BuzzerOff__Group__2();
 
             state._fsp--;
 
@@ -6041,12 +6041,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__BuzzerOffOperation__Group__1"
+    // $ANTLR end "rule__BuzzerOff__Group__1"
 
 
-    // $ANTLR start "rule__BuzzerOffOperation__Group__1__Impl"
-    // InternalCPtester.g:1973:1: rule__BuzzerOffOperation__Group__1__Impl : ( '(' ) ;
-    public final void rule__BuzzerOffOperation__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__BuzzerOff__Group__1__Impl"
+    // InternalCPtester.g:1973:1: rule__BuzzerOff__Group__1__Impl : ( '(' ) ;
+    public final void rule__BuzzerOff__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -6057,9 +6057,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:1978:1: ( '(' )
             // InternalCPtester.g:1979:2: '('
             {
-             before(grammarAccess.getBuzzerOffOperationAccess().getLeftParenthesisKeyword_1()); 
+             before(grammarAccess.getBuzzerOffAccess().getLeftParenthesisKeyword_1()); 
             match(input,15,FOLLOW_2); 
-             after(grammarAccess.getBuzzerOffOperationAccess().getLeftParenthesisKeyword_1()); 
+             after(grammarAccess.getBuzzerOffAccess().getLeftParenthesisKeyword_1()); 
 
             }
 
@@ -6078,21 +6078,21 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__BuzzerOffOperation__Group__1__Impl"
+    // $ANTLR end "rule__BuzzerOff__Group__1__Impl"
 
 
-    // $ANTLR start "rule__BuzzerOffOperation__Group__2"
-    // InternalCPtester.g:1988:1: rule__BuzzerOffOperation__Group__2 : rule__BuzzerOffOperation__Group__2__Impl ;
-    public final void rule__BuzzerOffOperation__Group__2() throws RecognitionException {
+    // $ANTLR start "rule__BuzzerOff__Group__2"
+    // InternalCPtester.g:1988:1: rule__BuzzerOff__Group__2 : rule__BuzzerOff__Group__2__Impl ;
+    public final void rule__BuzzerOff__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:1992:1: ( rule__BuzzerOffOperation__Group__2__Impl )
-            // InternalCPtester.g:1993:2: rule__BuzzerOffOperation__Group__2__Impl
+            // InternalCPtester.g:1992:1: ( rule__BuzzerOff__Group__2__Impl )
+            // InternalCPtester.g:1993:2: rule__BuzzerOff__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__BuzzerOffOperation__Group__2__Impl();
+            rule__BuzzerOff__Group__2__Impl();
 
             state._fsp--;
 
@@ -6111,12 +6111,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__BuzzerOffOperation__Group__2"
+    // $ANTLR end "rule__BuzzerOff__Group__2"
 
 
-    // $ANTLR start "rule__BuzzerOffOperation__Group__2__Impl"
-    // InternalCPtester.g:1999:1: rule__BuzzerOffOperation__Group__2__Impl : ( ')' ) ;
-    public final void rule__BuzzerOffOperation__Group__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__BuzzerOff__Group__2__Impl"
+    // InternalCPtester.g:1999:1: rule__BuzzerOff__Group__2__Impl : ( ')' ) ;
+    public final void rule__BuzzerOff__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -6127,9 +6127,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:2004:1: ( ')' )
             // InternalCPtester.g:2005:2: ')'
             {
-             before(grammarAccess.getBuzzerOffOperationAccess().getRightParenthesisKeyword_2()); 
+             before(grammarAccess.getBuzzerOffAccess().getRightParenthesisKeyword_2()); 
             match(input,16,FOLLOW_2); 
-             after(grammarAccess.getBuzzerOffOperationAccess().getRightParenthesisKeyword_2()); 
+             after(grammarAccess.getBuzzerOffAccess().getRightParenthesisKeyword_2()); 
 
             }
 
@@ -6148,26 +6148,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__BuzzerOffOperation__Group__2__Impl"
+    // $ANTLR end "rule__BuzzerOff__Group__2__Impl"
 
 
-    // $ANTLR start "rule__BuzzerOnOperation__Group__0"
-    // InternalCPtester.g:2015:1: rule__BuzzerOnOperation__Group__0 : rule__BuzzerOnOperation__Group__0__Impl rule__BuzzerOnOperation__Group__1 ;
-    public final void rule__BuzzerOnOperation__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__BuzzerOn__Group__0"
+    // InternalCPtester.g:2015:1: rule__BuzzerOn__Group__0 : rule__BuzzerOn__Group__0__Impl rule__BuzzerOn__Group__1 ;
+    public final void rule__BuzzerOn__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2019:1: ( rule__BuzzerOnOperation__Group__0__Impl rule__BuzzerOnOperation__Group__1 )
-            // InternalCPtester.g:2020:2: rule__BuzzerOnOperation__Group__0__Impl rule__BuzzerOnOperation__Group__1
+            // InternalCPtester.g:2019:1: ( rule__BuzzerOn__Group__0__Impl rule__BuzzerOn__Group__1 )
+            // InternalCPtester.g:2020:2: rule__BuzzerOn__Group__0__Impl rule__BuzzerOn__Group__1
             {
             pushFollow(FOLLOW_17);
-            rule__BuzzerOnOperation__Group__0__Impl();
+            rule__BuzzerOn__Group__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__BuzzerOnOperation__Group__1();
+            rule__BuzzerOn__Group__1();
 
             state._fsp--;
 
@@ -6186,35 +6186,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__BuzzerOnOperation__Group__0"
+    // $ANTLR end "rule__BuzzerOn__Group__0"
 
 
-    // $ANTLR start "rule__BuzzerOnOperation__Group__0__Impl"
-    // InternalCPtester.g:2027:1: rule__BuzzerOnOperation__Group__0__Impl : ( ( rule__BuzzerOnOperation__NameAssignment_0 ) ) ;
-    public final void rule__BuzzerOnOperation__Group__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__BuzzerOn__Group__0__Impl"
+    // InternalCPtester.g:2027:1: rule__BuzzerOn__Group__0__Impl : ( ( rule__BuzzerOn__NameAssignment_0 ) ) ;
+    public final void rule__BuzzerOn__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2031:1: ( ( ( rule__BuzzerOnOperation__NameAssignment_0 ) ) )
-            // InternalCPtester.g:2032:1: ( ( rule__BuzzerOnOperation__NameAssignment_0 ) )
+            // InternalCPtester.g:2031:1: ( ( ( rule__BuzzerOn__NameAssignment_0 ) ) )
+            // InternalCPtester.g:2032:1: ( ( rule__BuzzerOn__NameAssignment_0 ) )
             {
-            // InternalCPtester.g:2032:1: ( ( rule__BuzzerOnOperation__NameAssignment_0 ) )
-            // InternalCPtester.g:2033:2: ( rule__BuzzerOnOperation__NameAssignment_0 )
+            // InternalCPtester.g:2032:1: ( ( rule__BuzzerOn__NameAssignment_0 ) )
+            // InternalCPtester.g:2033:2: ( rule__BuzzerOn__NameAssignment_0 )
             {
-             before(grammarAccess.getBuzzerOnOperationAccess().getNameAssignment_0()); 
-            // InternalCPtester.g:2034:2: ( rule__BuzzerOnOperation__NameAssignment_0 )
-            // InternalCPtester.g:2034:3: rule__BuzzerOnOperation__NameAssignment_0
+             before(grammarAccess.getBuzzerOnAccess().getNameAssignment_0()); 
+            // InternalCPtester.g:2034:2: ( rule__BuzzerOn__NameAssignment_0 )
+            // InternalCPtester.g:2034:3: rule__BuzzerOn__NameAssignment_0
             {
             pushFollow(FOLLOW_2);
-            rule__BuzzerOnOperation__NameAssignment_0();
+            rule__BuzzerOn__NameAssignment_0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getBuzzerOnOperationAccess().getNameAssignment_0()); 
+             after(grammarAccess.getBuzzerOnAccess().getNameAssignment_0()); 
 
             }
 
@@ -6233,26 +6233,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__BuzzerOnOperation__Group__0__Impl"
+    // $ANTLR end "rule__BuzzerOn__Group__0__Impl"
 
 
-    // $ANTLR start "rule__BuzzerOnOperation__Group__1"
-    // InternalCPtester.g:2042:1: rule__BuzzerOnOperation__Group__1 : rule__BuzzerOnOperation__Group__1__Impl rule__BuzzerOnOperation__Group__2 ;
-    public final void rule__BuzzerOnOperation__Group__1() throws RecognitionException {
+    // $ANTLR start "rule__BuzzerOn__Group__1"
+    // InternalCPtester.g:2042:1: rule__BuzzerOn__Group__1 : rule__BuzzerOn__Group__1__Impl rule__BuzzerOn__Group__2 ;
+    public final void rule__BuzzerOn__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2046:1: ( rule__BuzzerOnOperation__Group__1__Impl rule__BuzzerOnOperation__Group__2 )
-            // InternalCPtester.g:2047:2: rule__BuzzerOnOperation__Group__1__Impl rule__BuzzerOnOperation__Group__2
+            // InternalCPtester.g:2046:1: ( rule__BuzzerOn__Group__1__Impl rule__BuzzerOn__Group__2 )
+            // InternalCPtester.g:2047:2: rule__BuzzerOn__Group__1__Impl rule__BuzzerOn__Group__2
             {
             pushFollow(FOLLOW_18);
-            rule__BuzzerOnOperation__Group__1__Impl();
+            rule__BuzzerOn__Group__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__BuzzerOnOperation__Group__2();
+            rule__BuzzerOn__Group__2();
 
             state._fsp--;
 
@@ -6271,12 +6271,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__BuzzerOnOperation__Group__1"
+    // $ANTLR end "rule__BuzzerOn__Group__1"
 
 
-    // $ANTLR start "rule__BuzzerOnOperation__Group__1__Impl"
-    // InternalCPtester.g:2054:1: rule__BuzzerOnOperation__Group__1__Impl : ( '(' ) ;
-    public final void rule__BuzzerOnOperation__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__BuzzerOn__Group__1__Impl"
+    // InternalCPtester.g:2054:1: rule__BuzzerOn__Group__1__Impl : ( '(' ) ;
+    public final void rule__BuzzerOn__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -6287,9 +6287,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:2059:1: ( '(' )
             // InternalCPtester.g:2060:2: '('
             {
-             before(grammarAccess.getBuzzerOnOperationAccess().getLeftParenthesisKeyword_1()); 
+             before(grammarAccess.getBuzzerOnAccess().getLeftParenthesisKeyword_1()); 
             match(input,15,FOLLOW_2); 
-             after(grammarAccess.getBuzzerOnOperationAccess().getLeftParenthesisKeyword_1()); 
+             after(grammarAccess.getBuzzerOnAccess().getLeftParenthesisKeyword_1()); 
 
             }
 
@@ -6308,26 +6308,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__BuzzerOnOperation__Group__1__Impl"
+    // $ANTLR end "rule__BuzzerOn__Group__1__Impl"
 
 
-    // $ANTLR start "rule__BuzzerOnOperation__Group__2"
-    // InternalCPtester.g:2069:1: rule__BuzzerOnOperation__Group__2 : rule__BuzzerOnOperation__Group__2__Impl rule__BuzzerOnOperation__Group__3 ;
-    public final void rule__BuzzerOnOperation__Group__2() throws RecognitionException {
+    // $ANTLR start "rule__BuzzerOn__Group__2"
+    // InternalCPtester.g:2069:1: rule__BuzzerOn__Group__2 : rule__BuzzerOn__Group__2__Impl rule__BuzzerOn__Group__3 ;
+    public final void rule__BuzzerOn__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2073:1: ( rule__BuzzerOnOperation__Group__2__Impl rule__BuzzerOnOperation__Group__3 )
-            // InternalCPtester.g:2074:2: rule__BuzzerOnOperation__Group__2__Impl rule__BuzzerOnOperation__Group__3
+            // InternalCPtester.g:2073:1: ( rule__BuzzerOn__Group__2__Impl rule__BuzzerOn__Group__3 )
+            // InternalCPtester.g:2074:2: rule__BuzzerOn__Group__2__Impl rule__BuzzerOn__Group__3
             {
             pushFollow(FOLLOW_19);
-            rule__BuzzerOnOperation__Group__2__Impl();
+            rule__BuzzerOn__Group__2__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__BuzzerOnOperation__Group__3();
+            rule__BuzzerOn__Group__3();
 
             state._fsp--;
 
@@ -6346,35 +6346,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__BuzzerOnOperation__Group__2"
+    // $ANTLR end "rule__BuzzerOn__Group__2"
 
 
-    // $ANTLR start "rule__BuzzerOnOperation__Group__2__Impl"
-    // InternalCPtester.g:2081:1: rule__BuzzerOnOperation__Group__2__Impl : ( ( rule__BuzzerOnOperation__TimeAssignment_2 ) ) ;
-    public final void rule__BuzzerOnOperation__Group__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__BuzzerOn__Group__2__Impl"
+    // InternalCPtester.g:2081:1: rule__BuzzerOn__Group__2__Impl : ( ( rule__BuzzerOn__TimeAssignment_2 ) ) ;
+    public final void rule__BuzzerOn__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2085:1: ( ( ( rule__BuzzerOnOperation__TimeAssignment_2 ) ) )
-            // InternalCPtester.g:2086:1: ( ( rule__BuzzerOnOperation__TimeAssignment_2 ) )
+            // InternalCPtester.g:2085:1: ( ( ( rule__BuzzerOn__TimeAssignment_2 ) ) )
+            // InternalCPtester.g:2086:1: ( ( rule__BuzzerOn__TimeAssignment_2 ) )
             {
-            // InternalCPtester.g:2086:1: ( ( rule__BuzzerOnOperation__TimeAssignment_2 ) )
-            // InternalCPtester.g:2087:2: ( rule__BuzzerOnOperation__TimeAssignment_2 )
+            // InternalCPtester.g:2086:1: ( ( rule__BuzzerOn__TimeAssignment_2 ) )
+            // InternalCPtester.g:2087:2: ( rule__BuzzerOn__TimeAssignment_2 )
             {
-             before(grammarAccess.getBuzzerOnOperationAccess().getTimeAssignment_2()); 
-            // InternalCPtester.g:2088:2: ( rule__BuzzerOnOperation__TimeAssignment_2 )
-            // InternalCPtester.g:2088:3: rule__BuzzerOnOperation__TimeAssignment_2
+             before(grammarAccess.getBuzzerOnAccess().getTimeAssignment_2()); 
+            // InternalCPtester.g:2088:2: ( rule__BuzzerOn__TimeAssignment_2 )
+            // InternalCPtester.g:2088:3: rule__BuzzerOn__TimeAssignment_2
             {
             pushFollow(FOLLOW_2);
-            rule__BuzzerOnOperation__TimeAssignment_2();
+            rule__BuzzerOn__TimeAssignment_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getBuzzerOnOperationAccess().getTimeAssignment_2()); 
+             after(grammarAccess.getBuzzerOnAccess().getTimeAssignment_2()); 
 
             }
 
@@ -6393,21 +6393,21 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__BuzzerOnOperation__Group__2__Impl"
+    // $ANTLR end "rule__BuzzerOn__Group__2__Impl"
 
 
-    // $ANTLR start "rule__BuzzerOnOperation__Group__3"
-    // InternalCPtester.g:2096:1: rule__BuzzerOnOperation__Group__3 : rule__BuzzerOnOperation__Group__3__Impl ;
-    public final void rule__BuzzerOnOperation__Group__3() throws RecognitionException {
+    // $ANTLR start "rule__BuzzerOn__Group__3"
+    // InternalCPtester.g:2096:1: rule__BuzzerOn__Group__3 : rule__BuzzerOn__Group__3__Impl ;
+    public final void rule__BuzzerOn__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2100:1: ( rule__BuzzerOnOperation__Group__3__Impl )
-            // InternalCPtester.g:2101:2: rule__BuzzerOnOperation__Group__3__Impl
+            // InternalCPtester.g:2100:1: ( rule__BuzzerOn__Group__3__Impl )
+            // InternalCPtester.g:2101:2: rule__BuzzerOn__Group__3__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__BuzzerOnOperation__Group__3__Impl();
+            rule__BuzzerOn__Group__3__Impl();
 
             state._fsp--;
 
@@ -6426,12 +6426,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__BuzzerOnOperation__Group__3"
+    // $ANTLR end "rule__BuzzerOn__Group__3"
 
 
-    // $ANTLR start "rule__BuzzerOnOperation__Group__3__Impl"
-    // InternalCPtester.g:2107:1: rule__BuzzerOnOperation__Group__3__Impl : ( ')' ) ;
-    public final void rule__BuzzerOnOperation__Group__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__BuzzerOn__Group__3__Impl"
+    // InternalCPtester.g:2107:1: rule__BuzzerOn__Group__3__Impl : ( ')' ) ;
+    public final void rule__BuzzerOn__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -6442,9 +6442,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:2112:1: ( ')' )
             // InternalCPtester.g:2113:2: ')'
             {
-             before(grammarAccess.getBuzzerOnOperationAccess().getRightParenthesisKeyword_3()); 
+             before(grammarAccess.getBuzzerOnAccess().getRightParenthesisKeyword_3()); 
             match(input,16,FOLLOW_2); 
-             after(grammarAccess.getBuzzerOnOperationAccess().getRightParenthesisKeyword_3()); 
+             after(grammarAccess.getBuzzerOnAccess().getRightParenthesisKeyword_3()); 
 
             }
 
@@ -6463,26 +6463,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__BuzzerOnOperation__Group__3__Impl"
+    // $ANTLR end "rule__BuzzerOn__Group__3__Impl"
 
 
-    // $ANTLR start "rule__CalibrationOperation__Group__0"
-    // InternalCPtester.g:2123:1: rule__CalibrationOperation__Group__0 : rule__CalibrationOperation__Group__0__Impl rule__CalibrationOperation__Group__1 ;
-    public final void rule__CalibrationOperation__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__Calibration__Group__0"
+    // InternalCPtester.g:2123:1: rule__Calibration__Group__0 : rule__Calibration__Group__0__Impl rule__Calibration__Group__1 ;
+    public final void rule__Calibration__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2127:1: ( rule__CalibrationOperation__Group__0__Impl rule__CalibrationOperation__Group__1 )
-            // InternalCPtester.g:2128:2: rule__CalibrationOperation__Group__0__Impl rule__CalibrationOperation__Group__1
+            // InternalCPtester.g:2127:1: ( rule__Calibration__Group__0__Impl rule__Calibration__Group__1 )
+            // InternalCPtester.g:2128:2: rule__Calibration__Group__0__Impl rule__Calibration__Group__1
             {
             pushFollow(FOLLOW_17);
-            rule__CalibrationOperation__Group__0__Impl();
+            rule__Calibration__Group__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__CalibrationOperation__Group__1();
+            rule__Calibration__Group__1();
 
             state._fsp--;
 
@@ -6501,35 +6501,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CalibrationOperation__Group__0"
+    // $ANTLR end "rule__Calibration__Group__0"
 
 
-    // $ANTLR start "rule__CalibrationOperation__Group__0__Impl"
-    // InternalCPtester.g:2135:1: rule__CalibrationOperation__Group__0__Impl : ( ( rule__CalibrationOperation__NameAssignment_0 ) ) ;
-    public final void rule__CalibrationOperation__Group__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Calibration__Group__0__Impl"
+    // InternalCPtester.g:2135:1: rule__Calibration__Group__0__Impl : ( ( rule__Calibration__NameAssignment_0 ) ) ;
+    public final void rule__Calibration__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2139:1: ( ( ( rule__CalibrationOperation__NameAssignment_0 ) ) )
-            // InternalCPtester.g:2140:1: ( ( rule__CalibrationOperation__NameAssignment_0 ) )
+            // InternalCPtester.g:2139:1: ( ( ( rule__Calibration__NameAssignment_0 ) ) )
+            // InternalCPtester.g:2140:1: ( ( rule__Calibration__NameAssignment_0 ) )
             {
-            // InternalCPtester.g:2140:1: ( ( rule__CalibrationOperation__NameAssignment_0 ) )
-            // InternalCPtester.g:2141:2: ( rule__CalibrationOperation__NameAssignment_0 )
+            // InternalCPtester.g:2140:1: ( ( rule__Calibration__NameAssignment_0 ) )
+            // InternalCPtester.g:2141:2: ( rule__Calibration__NameAssignment_0 )
             {
-             before(grammarAccess.getCalibrationOperationAccess().getNameAssignment_0()); 
-            // InternalCPtester.g:2142:2: ( rule__CalibrationOperation__NameAssignment_0 )
-            // InternalCPtester.g:2142:3: rule__CalibrationOperation__NameAssignment_0
+             before(grammarAccess.getCalibrationAccess().getNameAssignment_0()); 
+            // InternalCPtester.g:2142:2: ( rule__Calibration__NameAssignment_0 )
+            // InternalCPtester.g:2142:3: rule__Calibration__NameAssignment_0
             {
             pushFollow(FOLLOW_2);
-            rule__CalibrationOperation__NameAssignment_0();
+            rule__Calibration__NameAssignment_0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getCalibrationOperationAccess().getNameAssignment_0()); 
+             after(grammarAccess.getCalibrationAccess().getNameAssignment_0()); 
 
             }
 
@@ -6548,26 +6548,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CalibrationOperation__Group__0__Impl"
+    // $ANTLR end "rule__Calibration__Group__0__Impl"
 
 
-    // $ANTLR start "rule__CalibrationOperation__Group__1"
-    // InternalCPtester.g:2150:1: rule__CalibrationOperation__Group__1 : rule__CalibrationOperation__Group__1__Impl rule__CalibrationOperation__Group__2 ;
-    public final void rule__CalibrationOperation__Group__1() throws RecognitionException {
+    // $ANTLR start "rule__Calibration__Group__1"
+    // InternalCPtester.g:2150:1: rule__Calibration__Group__1 : rule__Calibration__Group__1__Impl rule__Calibration__Group__2 ;
+    public final void rule__Calibration__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2154:1: ( rule__CalibrationOperation__Group__1__Impl rule__CalibrationOperation__Group__2 )
-            // InternalCPtester.g:2155:2: rule__CalibrationOperation__Group__1__Impl rule__CalibrationOperation__Group__2
+            // InternalCPtester.g:2154:1: ( rule__Calibration__Group__1__Impl rule__Calibration__Group__2 )
+            // InternalCPtester.g:2155:2: rule__Calibration__Group__1__Impl rule__Calibration__Group__2
             {
             pushFollow(FOLLOW_3);
-            rule__CalibrationOperation__Group__1__Impl();
+            rule__Calibration__Group__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__CalibrationOperation__Group__2();
+            rule__Calibration__Group__2();
 
             state._fsp--;
 
@@ -6586,12 +6586,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CalibrationOperation__Group__1"
+    // $ANTLR end "rule__Calibration__Group__1"
 
 
-    // $ANTLR start "rule__CalibrationOperation__Group__1__Impl"
-    // InternalCPtester.g:2162:1: rule__CalibrationOperation__Group__1__Impl : ( '(' ) ;
-    public final void rule__CalibrationOperation__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Calibration__Group__1__Impl"
+    // InternalCPtester.g:2162:1: rule__Calibration__Group__1__Impl : ( '(' ) ;
+    public final void rule__Calibration__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -6602,9 +6602,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:2167:1: ( '(' )
             // InternalCPtester.g:2168:2: '('
             {
-             before(grammarAccess.getCalibrationOperationAccess().getLeftParenthesisKeyword_1()); 
+             before(grammarAccess.getCalibrationAccess().getLeftParenthesisKeyword_1()); 
             match(input,15,FOLLOW_2); 
-             after(grammarAccess.getCalibrationOperationAccess().getLeftParenthesisKeyword_1()); 
+             after(grammarAccess.getCalibrationAccess().getLeftParenthesisKeyword_1()); 
 
             }
 
@@ -6623,26 +6623,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CalibrationOperation__Group__1__Impl"
+    // $ANTLR end "rule__Calibration__Group__1__Impl"
 
 
-    // $ANTLR start "rule__CalibrationOperation__Group__2"
-    // InternalCPtester.g:2177:1: rule__CalibrationOperation__Group__2 : rule__CalibrationOperation__Group__2__Impl rule__CalibrationOperation__Group__3 ;
-    public final void rule__CalibrationOperation__Group__2() throws RecognitionException {
+    // $ANTLR start "rule__Calibration__Group__2"
+    // InternalCPtester.g:2177:1: rule__Calibration__Group__2 : rule__Calibration__Group__2__Impl rule__Calibration__Group__3 ;
+    public final void rule__Calibration__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2181:1: ( rule__CalibrationOperation__Group__2__Impl rule__CalibrationOperation__Group__3 )
-            // InternalCPtester.g:2182:2: rule__CalibrationOperation__Group__2__Impl rule__CalibrationOperation__Group__3
+            // InternalCPtester.g:2181:1: ( rule__Calibration__Group__2__Impl rule__Calibration__Group__3 )
+            // InternalCPtester.g:2182:2: rule__Calibration__Group__2__Impl rule__Calibration__Group__3
             {
             pushFollow(FOLLOW_20);
-            rule__CalibrationOperation__Group__2__Impl();
+            rule__Calibration__Group__2__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__CalibrationOperation__Group__3();
+            rule__Calibration__Group__3();
 
             state._fsp--;
 
@@ -6661,35 +6661,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CalibrationOperation__Group__2"
+    // $ANTLR end "rule__Calibration__Group__2"
 
 
-    // $ANTLR start "rule__CalibrationOperation__Group__2__Impl"
-    // InternalCPtester.g:2189:1: rule__CalibrationOperation__Group__2__Impl : ( ( rule__CalibrationOperation__ColorAssignment_2 ) ) ;
-    public final void rule__CalibrationOperation__Group__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Calibration__Group__2__Impl"
+    // InternalCPtester.g:2189:1: rule__Calibration__Group__2__Impl : ( ( rule__Calibration__ColorAssignment_2 ) ) ;
+    public final void rule__Calibration__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2193:1: ( ( ( rule__CalibrationOperation__ColorAssignment_2 ) ) )
-            // InternalCPtester.g:2194:1: ( ( rule__CalibrationOperation__ColorAssignment_2 ) )
+            // InternalCPtester.g:2193:1: ( ( ( rule__Calibration__ColorAssignment_2 ) ) )
+            // InternalCPtester.g:2194:1: ( ( rule__Calibration__ColorAssignment_2 ) )
             {
-            // InternalCPtester.g:2194:1: ( ( rule__CalibrationOperation__ColorAssignment_2 ) )
-            // InternalCPtester.g:2195:2: ( rule__CalibrationOperation__ColorAssignment_2 )
+            // InternalCPtester.g:2194:1: ( ( rule__Calibration__ColorAssignment_2 ) )
+            // InternalCPtester.g:2195:2: ( rule__Calibration__ColorAssignment_2 )
             {
-             before(grammarAccess.getCalibrationOperationAccess().getColorAssignment_2()); 
-            // InternalCPtester.g:2196:2: ( rule__CalibrationOperation__ColorAssignment_2 )
-            // InternalCPtester.g:2196:3: rule__CalibrationOperation__ColorAssignment_2
+             before(grammarAccess.getCalibrationAccess().getColorAssignment_2()); 
+            // InternalCPtester.g:2196:2: ( rule__Calibration__ColorAssignment_2 )
+            // InternalCPtester.g:2196:3: rule__Calibration__ColorAssignment_2
             {
             pushFollow(FOLLOW_2);
-            rule__CalibrationOperation__ColorAssignment_2();
+            rule__Calibration__ColorAssignment_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getCalibrationOperationAccess().getColorAssignment_2()); 
+             after(grammarAccess.getCalibrationAccess().getColorAssignment_2()); 
 
             }
 
@@ -6708,26 +6708,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CalibrationOperation__Group__2__Impl"
+    // $ANTLR end "rule__Calibration__Group__2__Impl"
 
 
-    // $ANTLR start "rule__CalibrationOperation__Group__3"
-    // InternalCPtester.g:2204:1: rule__CalibrationOperation__Group__3 : rule__CalibrationOperation__Group__3__Impl rule__CalibrationOperation__Group__4 ;
-    public final void rule__CalibrationOperation__Group__3() throws RecognitionException {
+    // $ANTLR start "rule__Calibration__Group__3"
+    // InternalCPtester.g:2204:1: rule__Calibration__Group__3 : rule__Calibration__Group__3__Impl rule__Calibration__Group__4 ;
+    public final void rule__Calibration__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2208:1: ( rule__CalibrationOperation__Group__3__Impl rule__CalibrationOperation__Group__4 )
-            // InternalCPtester.g:2209:2: rule__CalibrationOperation__Group__3__Impl rule__CalibrationOperation__Group__4
+            // InternalCPtester.g:2208:1: ( rule__Calibration__Group__3__Impl rule__Calibration__Group__4 )
+            // InternalCPtester.g:2209:2: rule__Calibration__Group__3__Impl rule__Calibration__Group__4
             {
             pushFollow(FOLLOW_18);
-            rule__CalibrationOperation__Group__3__Impl();
+            rule__Calibration__Group__3__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__CalibrationOperation__Group__4();
+            rule__Calibration__Group__4();
 
             state._fsp--;
 
@@ -6746,12 +6746,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CalibrationOperation__Group__3"
+    // $ANTLR end "rule__Calibration__Group__3"
 
 
-    // $ANTLR start "rule__CalibrationOperation__Group__3__Impl"
-    // InternalCPtester.g:2216:1: rule__CalibrationOperation__Group__3__Impl : ( ',' ) ;
-    public final void rule__CalibrationOperation__Group__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Calibration__Group__3__Impl"
+    // InternalCPtester.g:2216:1: rule__Calibration__Group__3__Impl : ( ',' ) ;
+    public final void rule__Calibration__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -6762,9 +6762,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:2221:1: ( ',' )
             // InternalCPtester.g:2222:2: ','
             {
-             before(grammarAccess.getCalibrationOperationAccess().getCommaKeyword_3()); 
+             before(grammarAccess.getCalibrationAccess().getCommaKeyword_3()); 
             match(input,17,FOLLOW_2); 
-             after(grammarAccess.getCalibrationOperationAccess().getCommaKeyword_3()); 
+             after(grammarAccess.getCalibrationAccess().getCommaKeyword_3()); 
 
             }
 
@@ -6783,26 +6783,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CalibrationOperation__Group__3__Impl"
+    // $ANTLR end "rule__Calibration__Group__3__Impl"
 
 
-    // $ANTLR start "rule__CalibrationOperation__Group__4"
-    // InternalCPtester.g:2231:1: rule__CalibrationOperation__Group__4 : rule__CalibrationOperation__Group__4__Impl rule__CalibrationOperation__Group__5 ;
-    public final void rule__CalibrationOperation__Group__4() throws RecognitionException {
+    // $ANTLR start "rule__Calibration__Group__4"
+    // InternalCPtester.g:2231:1: rule__Calibration__Group__4 : rule__Calibration__Group__4__Impl rule__Calibration__Group__5 ;
+    public final void rule__Calibration__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2235:1: ( rule__CalibrationOperation__Group__4__Impl rule__CalibrationOperation__Group__5 )
-            // InternalCPtester.g:2236:2: rule__CalibrationOperation__Group__4__Impl rule__CalibrationOperation__Group__5
+            // InternalCPtester.g:2235:1: ( rule__Calibration__Group__4__Impl rule__Calibration__Group__5 )
+            // InternalCPtester.g:2236:2: rule__Calibration__Group__4__Impl rule__Calibration__Group__5
             {
             pushFollow(FOLLOW_20);
-            rule__CalibrationOperation__Group__4__Impl();
+            rule__Calibration__Group__4__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__CalibrationOperation__Group__5();
+            rule__Calibration__Group__5();
 
             state._fsp--;
 
@@ -6821,35 +6821,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CalibrationOperation__Group__4"
+    // $ANTLR end "rule__Calibration__Group__4"
 
 
-    // $ANTLR start "rule__CalibrationOperation__Group__4__Impl"
-    // InternalCPtester.g:2243:1: rule__CalibrationOperation__Group__4__Impl : ( ( rule__CalibrationOperation__H_minAssignment_4 ) ) ;
-    public final void rule__CalibrationOperation__Group__4__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Calibration__Group__4__Impl"
+    // InternalCPtester.g:2243:1: rule__Calibration__Group__4__Impl : ( ( rule__Calibration__H_minAssignment_4 ) ) ;
+    public final void rule__Calibration__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2247:1: ( ( ( rule__CalibrationOperation__H_minAssignment_4 ) ) )
-            // InternalCPtester.g:2248:1: ( ( rule__CalibrationOperation__H_minAssignment_4 ) )
+            // InternalCPtester.g:2247:1: ( ( ( rule__Calibration__H_minAssignment_4 ) ) )
+            // InternalCPtester.g:2248:1: ( ( rule__Calibration__H_minAssignment_4 ) )
             {
-            // InternalCPtester.g:2248:1: ( ( rule__CalibrationOperation__H_minAssignment_4 ) )
-            // InternalCPtester.g:2249:2: ( rule__CalibrationOperation__H_minAssignment_4 )
+            // InternalCPtester.g:2248:1: ( ( rule__Calibration__H_minAssignment_4 ) )
+            // InternalCPtester.g:2249:2: ( rule__Calibration__H_minAssignment_4 )
             {
-             before(grammarAccess.getCalibrationOperationAccess().getH_minAssignment_4()); 
-            // InternalCPtester.g:2250:2: ( rule__CalibrationOperation__H_minAssignment_4 )
-            // InternalCPtester.g:2250:3: rule__CalibrationOperation__H_minAssignment_4
+             before(grammarAccess.getCalibrationAccess().getH_minAssignment_4()); 
+            // InternalCPtester.g:2250:2: ( rule__Calibration__H_minAssignment_4 )
+            // InternalCPtester.g:2250:3: rule__Calibration__H_minAssignment_4
             {
             pushFollow(FOLLOW_2);
-            rule__CalibrationOperation__H_minAssignment_4();
+            rule__Calibration__H_minAssignment_4();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getCalibrationOperationAccess().getH_minAssignment_4()); 
+             after(grammarAccess.getCalibrationAccess().getH_minAssignment_4()); 
 
             }
 
@@ -6868,26 +6868,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CalibrationOperation__Group__4__Impl"
+    // $ANTLR end "rule__Calibration__Group__4__Impl"
 
 
-    // $ANTLR start "rule__CalibrationOperation__Group__5"
-    // InternalCPtester.g:2258:1: rule__CalibrationOperation__Group__5 : rule__CalibrationOperation__Group__5__Impl rule__CalibrationOperation__Group__6 ;
-    public final void rule__CalibrationOperation__Group__5() throws RecognitionException {
+    // $ANTLR start "rule__Calibration__Group__5"
+    // InternalCPtester.g:2258:1: rule__Calibration__Group__5 : rule__Calibration__Group__5__Impl rule__Calibration__Group__6 ;
+    public final void rule__Calibration__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2262:1: ( rule__CalibrationOperation__Group__5__Impl rule__CalibrationOperation__Group__6 )
-            // InternalCPtester.g:2263:2: rule__CalibrationOperation__Group__5__Impl rule__CalibrationOperation__Group__6
+            // InternalCPtester.g:2262:1: ( rule__Calibration__Group__5__Impl rule__Calibration__Group__6 )
+            // InternalCPtester.g:2263:2: rule__Calibration__Group__5__Impl rule__Calibration__Group__6
             {
             pushFollow(FOLLOW_18);
-            rule__CalibrationOperation__Group__5__Impl();
+            rule__Calibration__Group__5__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__CalibrationOperation__Group__6();
+            rule__Calibration__Group__6();
 
             state._fsp--;
 
@@ -6906,12 +6906,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CalibrationOperation__Group__5"
+    // $ANTLR end "rule__Calibration__Group__5"
 
 
-    // $ANTLR start "rule__CalibrationOperation__Group__5__Impl"
-    // InternalCPtester.g:2270:1: rule__CalibrationOperation__Group__5__Impl : ( ',' ) ;
-    public final void rule__CalibrationOperation__Group__5__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Calibration__Group__5__Impl"
+    // InternalCPtester.g:2270:1: rule__Calibration__Group__5__Impl : ( ',' ) ;
+    public final void rule__Calibration__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -6922,9 +6922,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:2275:1: ( ',' )
             // InternalCPtester.g:2276:2: ','
             {
-             before(grammarAccess.getCalibrationOperationAccess().getCommaKeyword_5()); 
+             before(grammarAccess.getCalibrationAccess().getCommaKeyword_5()); 
             match(input,17,FOLLOW_2); 
-             after(grammarAccess.getCalibrationOperationAccess().getCommaKeyword_5()); 
+             after(grammarAccess.getCalibrationAccess().getCommaKeyword_5()); 
 
             }
 
@@ -6943,26 +6943,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CalibrationOperation__Group__5__Impl"
+    // $ANTLR end "rule__Calibration__Group__5__Impl"
 
 
-    // $ANTLR start "rule__CalibrationOperation__Group__6"
-    // InternalCPtester.g:2285:1: rule__CalibrationOperation__Group__6 : rule__CalibrationOperation__Group__6__Impl rule__CalibrationOperation__Group__7 ;
-    public final void rule__CalibrationOperation__Group__6() throws RecognitionException {
+    // $ANTLR start "rule__Calibration__Group__6"
+    // InternalCPtester.g:2285:1: rule__Calibration__Group__6 : rule__Calibration__Group__6__Impl rule__Calibration__Group__7 ;
+    public final void rule__Calibration__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2289:1: ( rule__CalibrationOperation__Group__6__Impl rule__CalibrationOperation__Group__7 )
-            // InternalCPtester.g:2290:2: rule__CalibrationOperation__Group__6__Impl rule__CalibrationOperation__Group__7
+            // InternalCPtester.g:2289:1: ( rule__Calibration__Group__6__Impl rule__Calibration__Group__7 )
+            // InternalCPtester.g:2290:2: rule__Calibration__Group__6__Impl rule__Calibration__Group__7
             {
             pushFollow(FOLLOW_20);
-            rule__CalibrationOperation__Group__6__Impl();
+            rule__Calibration__Group__6__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__CalibrationOperation__Group__7();
+            rule__Calibration__Group__7();
 
             state._fsp--;
 
@@ -6981,35 +6981,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CalibrationOperation__Group__6"
+    // $ANTLR end "rule__Calibration__Group__6"
 
 
-    // $ANTLR start "rule__CalibrationOperation__Group__6__Impl"
-    // InternalCPtester.g:2297:1: rule__CalibrationOperation__Group__6__Impl : ( ( rule__CalibrationOperation__S_minAssignment_6 ) ) ;
-    public final void rule__CalibrationOperation__Group__6__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Calibration__Group__6__Impl"
+    // InternalCPtester.g:2297:1: rule__Calibration__Group__6__Impl : ( ( rule__Calibration__S_minAssignment_6 ) ) ;
+    public final void rule__Calibration__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2301:1: ( ( ( rule__CalibrationOperation__S_minAssignment_6 ) ) )
-            // InternalCPtester.g:2302:1: ( ( rule__CalibrationOperation__S_minAssignment_6 ) )
+            // InternalCPtester.g:2301:1: ( ( ( rule__Calibration__S_minAssignment_6 ) ) )
+            // InternalCPtester.g:2302:1: ( ( rule__Calibration__S_minAssignment_6 ) )
             {
-            // InternalCPtester.g:2302:1: ( ( rule__CalibrationOperation__S_minAssignment_6 ) )
-            // InternalCPtester.g:2303:2: ( rule__CalibrationOperation__S_minAssignment_6 )
+            // InternalCPtester.g:2302:1: ( ( rule__Calibration__S_minAssignment_6 ) )
+            // InternalCPtester.g:2303:2: ( rule__Calibration__S_minAssignment_6 )
             {
-             before(grammarAccess.getCalibrationOperationAccess().getS_minAssignment_6()); 
-            // InternalCPtester.g:2304:2: ( rule__CalibrationOperation__S_minAssignment_6 )
-            // InternalCPtester.g:2304:3: rule__CalibrationOperation__S_minAssignment_6
+             before(grammarAccess.getCalibrationAccess().getS_minAssignment_6()); 
+            // InternalCPtester.g:2304:2: ( rule__Calibration__S_minAssignment_6 )
+            // InternalCPtester.g:2304:3: rule__Calibration__S_minAssignment_6
             {
             pushFollow(FOLLOW_2);
-            rule__CalibrationOperation__S_minAssignment_6();
+            rule__Calibration__S_minAssignment_6();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getCalibrationOperationAccess().getS_minAssignment_6()); 
+             after(grammarAccess.getCalibrationAccess().getS_minAssignment_6()); 
 
             }
 
@@ -7028,26 +7028,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CalibrationOperation__Group__6__Impl"
+    // $ANTLR end "rule__Calibration__Group__6__Impl"
 
 
-    // $ANTLR start "rule__CalibrationOperation__Group__7"
-    // InternalCPtester.g:2312:1: rule__CalibrationOperation__Group__7 : rule__CalibrationOperation__Group__7__Impl rule__CalibrationOperation__Group__8 ;
-    public final void rule__CalibrationOperation__Group__7() throws RecognitionException {
+    // $ANTLR start "rule__Calibration__Group__7"
+    // InternalCPtester.g:2312:1: rule__Calibration__Group__7 : rule__Calibration__Group__7__Impl rule__Calibration__Group__8 ;
+    public final void rule__Calibration__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2316:1: ( rule__CalibrationOperation__Group__7__Impl rule__CalibrationOperation__Group__8 )
-            // InternalCPtester.g:2317:2: rule__CalibrationOperation__Group__7__Impl rule__CalibrationOperation__Group__8
+            // InternalCPtester.g:2316:1: ( rule__Calibration__Group__7__Impl rule__Calibration__Group__8 )
+            // InternalCPtester.g:2317:2: rule__Calibration__Group__7__Impl rule__Calibration__Group__8
             {
             pushFollow(FOLLOW_18);
-            rule__CalibrationOperation__Group__7__Impl();
+            rule__Calibration__Group__7__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__CalibrationOperation__Group__8();
+            rule__Calibration__Group__8();
 
             state._fsp--;
 
@@ -7066,12 +7066,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CalibrationOperation__Group__7"
+    // $ANTLR end "rule__Calibration__Group__7"
 
 
-    // $ANTLR start "rule__CalibrationOperation__Group__7__Impl"
-    // InternalCPtester.g:2324:1: rule__CalibrationOperation__Group__7__Impl : ( ',' ) ;
-    public final void rule__CalibrationOperation__Group__7__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Calibration__Group__7__Impl"
+    // InternalCPtester.g:2324:1: rule__Calibration__Group__7__Impl : ( ',' ) ;
+    public final void rule__Calibration__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -7082,9 +7082,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:2329:1: ( ',' )
             // InternalCPtester.g:2330:2: ','
             {
-             before(grammarAccess.getCalibrationOperationAccess().getCommaKeyword_7()); 
+             before(grammarAccess.getCalibrationAccess().getCommaKeyword_7()); 
             match(input,17,FOLLOW_2); 
-             after(grammarAccess.getCalibrationOperationAccess().getCommaKeyword_7()); 
+             after(grammarAccess.getCalibrationAccess().getCommaKeyword_7()); 
 
             }
 
@@ -7103,26 +7103,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CalibrationOperation__Group__7__Impl"
+    // $ANTLR end "rule__Calibration__Group__7__Impl"
 
 
-    // $ANTLR start "rule__CalibrationOperation__Group__8"
-    // InternalCPtester.g:2339:1: rule__CalibrationOperation__Group__8 : rule__CalibrationOperation__Group__8__Impl rule__CalibrationOperation__Group__9 ;
-    public final void rule__CalibrationOperation__Group__8() throws RecognitionException {
+    // $ANTLR start "rule__Calibration__Group__8"
+    // InternalCPtester.g:2339:1: rule__Calibration__Group__8 : rule__Calibration__Group__8__Impl rule__Calibration__Group__9 ;
+    public final void rule__Calibration__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2343:1: ( rule__CalibrationOperation__Group__8__Impl rule__CalibrationOperation__Group__9 )
-            // InternalCPtester.g:2344:2: rule__CalibrationOperation__Group__8__Impl rule__CalibrationOperation__Group__9
+            // InternalCPtester.g:2343:1: ( rule__Calibration__Group__8__Impl rule__Calibration__Group__9 )
+            // InternalCPtester.g:2344:2: rule__Calibration__Group__8__Impl rule__Calibration__Group__9
             {
             pushFollow(FOLLOW_20);
-            rule__CalibrationOperation__Group__8__Impl();
+            rule__Calibration__Group__8__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__CalibrationOperation__Group__9();
+            rule__Calibration__Group__9();
 
             state._fsp--;
 
@@ -7141,35 +7141,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CalibrationOperation__Group__8"
+    // $ANTLR end "rule__Calibration__Group__8"
 
 
-    // $ANTLR start "rule__CalibrationOperation__Group__8__Impl"
-    // InternalCPtester.g:2351:1: rule__CalibrationOperation__Group__8__Impl : ( ( rule__CalibrationOperation__V_minAssignment_8 ) ) ;
-    public final void rule__CalibrationOperation__Group__8__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Calibration__Group__8__Impl"
+    // InternalCPtester.g:2351:1: rule__Calibration__Group__8__Impl : ( ( rule__Calibration__V_minAssignment_8 ) ) ;
+    public final void rule__Calibration__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2355:1: ( ( ( rule__CalibrationOperation__V_minAssignment_8 ) ) )
-            // InternalCPtester.g:2356:1: ( ( rule__CalibrationOperation__V_minAssignment_8 ) )
+            // InternalCPtester.g:2355:1: ( ( ( rule__Calibration__V_minAssignment_8 ) ) )
+            // InternalCPtester.g:2356:1: ( ( rule__Calibration__V_minAssignment_8 ) )
             {
-            // InternalCPtester.g:2356:1: ( ( rule__CalibrationOperation__V_minAssignment_8 ) )
-            // InternalCPtester.g:2357:2: ( rule__CalibrationOperation__V_minAssignment_8 )
+            // InternalCPtester.g:2356:1: ( ( rule__Calibration__V_minAssignment_8 ) )
+            // InternalCPtester.g:2357:2: ( rule__Calibration__V_minAssignment_8 )
             {
-             before(grammarAccess.getCalibrationOperationAccess().getV_minAssignment_8()); 
-            // InternalCPtester.g:2358:2: ( rule__CalibrationOperation__V_minAssignment_8 )
-            // InternalCPtester.g:2358:3: rule__CalibrationOperation__V_minAssignment_8
+             before(grammarAccess.getCalibrationAccess().getV_minAssignment_8()); 
+            // InternalCPtester.g:2358:2: ( rule__Calibration__V_minAssignment_8 )
+            // InternalCPtester.g:2358:3: rule__Calibration__V_minAssignment_8
             {
             pushFollow(FOLLOW_2);
-            rule__CalibrationOperation__V_minAssignment_8();
+            rule__Calibration__V_minAssignment_8();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getCalibrationOperationAccess().getV_minAssignment_8()); 
+             after(grammarAccess.getCalibrationAccess().getV_minAssignment_8()); 
 
             }
 
@@ -7188,26 +7188,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CalibrationOperation__Group__8__Impl"
+    // $ANTLR end "rule__Calibration__Group__8__Impl"
 
 
-    // $ANTLR start "rule__CalibrationOperation__Group__9"
-    // InternalCPtester.g:2366:1: rule__CalibrationOperation__Group__9 : rule__CalibrationOperation__Group__9__Impl rule__CalibrationOperation__Group__10 ;
-    public final void rule__CalibrationOperation__Group__9() throws RecognitionException {
+    // $ANTLR start "rule__Calibration__Group__9"
+    // InternalCPtester.g:2366:1: rule__Calibration__Group__9 : rule__Calibration__Group__9__Impl rule__Calibration__Group__10 ;
+    public final void rule__Calibration__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2370:1: ( rule__CalibrationOperation__Group__9__Impl rule__CalibrationOperation__Group__10 )
-            // InternalCPtester.g:2371:2: rule__CalibrationOperation__Group__9__Impl rule__CalibrationOperation__Group__10
+            // InternalCPtester.g:2370:1: ( rule__Calibration__Group__9__Impl rule__Calibration__Group__10 )
+            // InternalCPtester.g:2371:2: rule__Calibration__Group__9__Impl rule__Calibration__Group__10
             {
             pushFollow(FOLLOW_18);
-            rule__CalibrationOperation__Group__9__Impl();
+            rule__Calibration__Group__9__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__CalibrationOperation__Group__10();
+            rule__Calibration__Group__10();
 
             state._fsp--;
 
@@ -7226,12 +7226,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CalibrationOperation__Group__9"
+    // $ANTLR end "rule__Calibration__Group__9"
 
 
-    // $ANTLR start "rule__CalibrationOperation__Group__9__Impl"
-    // InternalCPtester.g:2378:1: rule__CalibrationOperation__Group__9__Impl : ( ',' ) ;
-    public final void rule__CalibrationOperation__Group__9__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Calibration__Group__9__Impl"
+    // InternalCPtester.g:2378:1: rule__Calibration__Group__9__Impl : ( ',' ) ;
+    public final void rule__Calibration__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -7242,9 +7242,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:2383:1: ( ',' )
             // InternalCPtester.g:2384:2: ','
             {
-             before(grammarAccess.getCalibrationOperationAccess().getCommaKeyword_9()); 
+             before(grammarAccess.getCalibrationAccess().getCommaKeyword_9()); 
             match(input,17,FOLLOW_2); 
-             after(grammarAccess.getCalibrationOperationAccess().getCommaKeyword_9()); 
+             after(grammarAccess.getCalibrationAccess().getCommaKeyword_9()); 
 
             }
 
@@ -7263,26 +7263,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CalibrationOperation__Group__9__Impl"
+    // $ANTLR end "rule__Calibration__Group__9__Impl"
 
 
-    // $ANTLR start "rule__CalibrationOperation__Group__10"
-    // InternalCPtester.g:2393:1: rule__CalibrationOperation__Group__10 : rule__CalibrationOperation__Group__10__Impl rule__CalibrationOperation__Group__11 ;
-    public final void rule__CalibrationOperation__Group__10() throws RecognitionException {
+    // $ANTLR start "rule__Calibration__Group__10"
+    // InternalCPtester.g:2393:1: rule__Calibration__Group__10 : rule__Calibration__Group__10__Impl rule__Calibration__Group__11 ;
+    public final void rule__Calibration__Group__10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2397:1: ( rule__CalibrationOperation__Group__10__Impl rule__CalibrationOperation__Group__11 )
-            // InternalCPtester.g:2398:2: rule__CalibrationOperation__Group__10__Impl rule__CalibrationOperation__Group__11
+            // InternalCPtester.g:2397:1: ( rule__Calibration__Group__10__Impl rule__Calibration__Group__11 )
+            // InternalCPtester.g:2398:2: rule__Calibration__Group__10__Impl rule__Calibration__Group__11
             {
             pushFollow(FOLLOW_20);
-            rule__CalibrationOperation__Group__10__Impl();
+            rule__Calibration__Group__10__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__CalibrationOperation__Group__11();
+            rule__Calibration__Group__11();
 
             state._fsp--;
 
@@ -7301,35 +7301,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CalibrationOperation__Group__10"
+    // $ANTLR end "rule__Calibration__Group__10"
 
 
-    // $ANTLR start "rule__CalibrationOperation__Group__10__Impl"
-    // InternalCPtester.g:2405:1: rule__CalibrationOperation__Group__10__Impl : ( ( rule__CalibrationOperation__H_maxAssignment_10 ) ) ;
-    public final void rule__CalibrationOperation__Group__10__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Calibration__Group__10__Impl"
+    // InternalCPtester.g:2405:1: rule__Calibration__Group__10__Impl : ( ( rule__Calibration__H_maxAssignment_10 ) ) ;
+    public final void rule__Calibration__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2409:1: ( ( ( rule__CalibrationOperation__H_maxAssignment_10 ) ) )
-            // InternalCPtester.g:2410:1: ( ( rule__CalibrationOperation__H_maxAssignment_10 ) )
+            // InternalCPtester.g:2409:1: ( ( ( rule__Calibration__H_maxAssignment_10 ) ) )
+            // InternalCPtester.g:2410:1: ( ( rule__Calibration__H_maxAssignment_10 ) )
             {
-            // InternalCPtester.g:2410:1: ( ( rule__CalibrationOperation__H_maxAssignment_10 ) )
-            // InternalCPtester.g:2411:2: ( rule__CalibrationOperation__H_maxAssignment_10 )
+            // InternalCPtester.g:2410:1: ( ( rule__Calibration__H_maxAssignment_10 ) )
+            // InternalCPtester.g:2411:2: ( rule__Calibration__H_maxAssignment_10 )
             {
-             before(grammarAccess.getCalibrationOperationAccess().getH_maxAssignment_10()); 
-            // InternalCPtester.g:2412:2: ( rule__CalibrationOperation__H_maxAssignment_10 )
-            // InternalCPtester.g:2412:3: rule__CalibrationOperation__H_maxAssignment_10
+             before(grammarAccess.getCalibrationAccess().getH_maxAssignment_10()); 
+            // InternalCPtester.g:2412:2: ( rule__Calibration__H_maxAssignment_10 )
+            // InternalCPtester.g:2412:3: rule__Calibration__H_maxAssignment_10
             {
             pushFollow(FOLLOW_2);
-            rule__CalibrationOperation__H_maxAssignment_10();
+            rule__Calibration__H_maxAssignment_10();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getCalibrationOperationAccess().getH_maxAssignment_10()); 
+             after(grammarAccess.getCalibrationAccess().getH_maxAssignment_10()); 
 
             }
 
@@ -7348,26 +7348,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CalibrationOperation__Group__10__Impl"
+    // $ANTLR end "rule__Calibration__Group__10__Impl"
 
 
-    // $ANTLR start "rule__CalibrationOperation__Group__11"
-    // InternalCPtester.g:2420:1: rule__CalibrationOperation__Group__11 : rule__CalibrationOperation__Group__11__Impl rule__CalibrationOperation__Group__12 ;
-    public final void rule__CalibrationOperation__Group__11() throws RecognitionException {
+    // $ANTLR start "rule__Calibration__Group__11"
+    // InternalCPtester.g:2420:1: rule__Calibration__Group__11 : rule__Calibration__Group__11__Impl rule__Calibration__Group__12 ;
+    public final void rule__Calibration__Group__11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2424:1: ( rule__CalibrationOperation__Group__11__Impl rule__CalibrationOperation__Group__12 )
-            // InternalCPtester.g:2425:2: rule__CalibrationOperation__Group__11__Impl rule__CalibrationOperation__Group__12
+            // InternalCPtester.g:2424:1: ( rule__Calibration__Group__11__Impl rule__Calibration__Group__12 )
+            // InternalCPtester.g:2425:2: rule__Calibration__Group__11__Impl rule__Calibration__Group__12
             {
             pushFollow(FOLLOW_18);
-            rule__CalibrationOperation__Group__11__Impl();
+            rule__Calibration__Group__11__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__CalibrationOperation__Group__12();
+            rule__Calibration__Group__12();
 
             state._fsp--;
 
@@ -7386,12 +7386,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CalibrationOperation__Group__11"
+    // $ANTLR end "rule__Calibration__Group__11"
 
 
-    // $ANTLR start "rule__CalibrationOperation__Group__11__Impl"
-    // InternalCPtester.g:2432:1: rule__CalibrationOperation__Group__11__Impl : ( ',' ) ;
-    public final void rule__CalibrationOperation__Group__11__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Calibration__Group__11__Impl"
+    // InternalCPtester.g:2432:1: rule__Calibration__Group__11__Impl : ( ',' ) ;
+    public final void rule__Calibration__Group__11__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -7402,9 +7402,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:2437:1: ( ',' )
             // InternalCPtester.g:2438:2: ','
             {
-             before(grammarAccess.getCalibrationOperationAccess().getCommaKeyword_11()); 
+             before(grammarAccess.getCalibrationAccess().getCommaKeyword_11()); 
             match(input,17,FOLLOW_2); 
-             after(grammarAccess.getCalibrationOperationAccess().getCommaKeyword_11()); 
+             after(grammarAccess.getCalibrationAccess().getCommaKeyword_11()); 
 
             }
 
@@ -7423,26 +7423,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CalibrationOperation__Group__11__Impl"
+    // $ANTLR end "rule__Calibration__Group__11__Impl"
 
 
-    // $ANTLR start "rule__CalibrationOperation__Group__12"
-    // InternalCPtester.g:2447:1: rule__CalibrationOperation__Group__12 : rule__CalibrationOperation__Group__12__Impl rule__CalibrationOperation__Group__13 ;
-    public final void rule__CalibrationOperation__Group__12() throws RecognitionException {
+    // $ANTLR start "rule__Calibration__Group__12"
+    // InternalCPtester.g:2447:1: rule__Calibration__Group__12 : rule__Calibration__Group__12__Impl rule__Calibration__Group__13 ;
+    public final void rule__Calibration__Group__12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2451:1: ( rule__CalibrationOperation__Group__12__Impl rule__CalibrationOperation__Group__13 )
-            // InternalCPtester.g:2452:2: rule__CalibrationOperation__Group__12__Impl rule__CalibrationOperation__Group__13
+            // InternalCPtester.g:2451:1: ( rule__Calibration__Group__12__Impl rule__Calibration__Group__13 )
+            // InternalCPtester.g:2452:2: rule__Calibration__Group__12__Impl rule__Calibration__Group__13
             {
             pushFollow(FOLLOW_20);
-            rule__CalibrationOperation__Group__12__Impl();
+            rule__Calibration__Group__12__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__CalibrationOperation__Group__13();
+            rule__Calibration__Group__13();
 
             state._fsp--;
 
@@ -7461,35 +7461,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CalibrationOperation__Group__12"
+    // $ANTLR end "rule__Calibration__Group__12"
 
 
-    // $ANTLR start "rule__CalibrationOperation__Group__12__Impl"
-    // InternalCPtester.g:2459:1: rule__CalibrationOperation__Group__12__Impl : ( ( rule__CalibrationOperation__S_maxAssignment_12 ) ) ;
-    public final void rule__CalibrationOperation__Group__12__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Calibration__Group__12__Impl"
+    // InternalCPtester.g:2459:1: rule__Calibration__Group__12__Impl : ( ( rule__Calibration__S_maxAssignment_12 ) ) ;
+    public final void rule__Calibration__Group__12__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2463:1: ( ( ( rule__CalibrationOperation__S_maxAssignment_12 ) ) )
-            // InternalCPtester.g:2464:1: ( ( rule__CalibrationOperation__S_maxAssignment_12 ) )
+            // InternalCPtester.g:2463:1: ( ( ( rule__Calibration__S_maxAssignment_12 ) ) )
+            // InternalCPtester.g:2464:1: ( ( rule__Calibration__S_maxAssignment_12 ) )
             {
-            // InternalCPtester.g:2464:1: ( ( rule__CalibrationOperation__S_maxAssignment_12 ) )
-            // InternalCPtester.g:2465:2: ( rule__CalibrationOperation__S_maxAssignment_12 )
+            // InternalCPtester.g:2464:1: ( ( rule__Calibration__S_maxAssignment_12 ) )
+            // InternalCPtester.g:2465:2: ( rule__Calibration__S_maxAssignment_12 )
             {
-             before(grammarAccess.getCalibrationOperationAccess().getS_maxAssignment_12()); 
-            // InternalCPtester.g:2466:2: ( rule__CalibrationOperation__S_maxAssignment_12 )
-            // InternalCPtester.g:2466:3: rule__CalibrationOperation__S_maxAssignment_12
+             before(grammarAccess.getCalibrationAccess().getS_maxAssignment_12()); 
+            // InternalCPtester.g:2466:2: ( rule__Calibration__S_maxAssignment_12 )
+            // InternalCPtester.g:2466:3: rule__Calibration__S_maxAssignment_12
             {
             pushFollow(FOLLOW_2);
-            rule__CalibrationOperation__S_maxAssignment_12();
+            rule__Calibration__S_maxAssignment_12();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getCalibrationOperationAccess().getS_maxAssignment_12()); 
+             after(grammarAccess.getCalibrationAccess().getS_maxAssignment_12()); 
 
             }
 
@@ -7508,26 +7508,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CalibrationOperation__Group__12__Impl"
+    // $ANTLR end "rule__Calibration__Group__12__Impl"
 
 
-    // $ANTLR start "rule__CalibrationOperation__Group__13"
-    // InternalCPtester.g:2474:1: rule__CalibrationOperation__Group__13 : rule__CalibrationOperation__Group__13__Impl rule__CalibrationOperation__Group__14 ;
-    public final void rule__CalibrationOperation__Group__13() throws RecognitionException {
+    // $ANTLR start "rule__Calibration__Group__13"
+    // InternalCPtester.g:2474:1: rule__Calibration__Group__13 : rule__Calibration__Group__13__Impl rule__Calibration__Group__14 ;
+    public final void rule__Calibration__Group__13() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2478:1: ( rule__CalibrationOperation__Group__13__Impl rule__CalibrationOperation__Group__14 )
-            // InternalCPtester.g:2479:2: rule__CalibrationOperation__Group__13__Impl rule__CalibrationOperation__Group__14
+            // InternalCPtester.g:2478:1: ( rule__Calibration__Group__13__Impl rule__Calibration__Group__14 )
+            // InternalCPtester.g:2479:2: rule__Calibration__Group__13__Impl rule__Calibration__Group__14
             {
             pushFollow(FOLLOW_18);
-            rule__CalibrationOperation__Group__13__Impl();
+            rule__Calibration__Group__13__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__CalibrationOperation__Group__14();
+            rule__Calibration__Group__14();
 
             state._fsp--;
 
@@ -7546,12 +7546,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CalibrationOperation__Group__13"
+    // $ANTLR end "rule__Calibration__Group__13"
 
 
-    // $ANTLR start "rule__CalibrationOperation__Group__13__Impl"
-    // InternalCPtester.g:2486:1: rule__CalibrationOperation__Group__13__Impl : ( ',' ) ;
-    public final void rule__CalibrationOperation__Group__13__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Calibration__Group__13__Impl"
+    // InternalCPtester.g:2486:1: rule__Calibration__Group__13__Impl : ( ',' ) ;
+    public final void rule__Calibration__Group__13__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -7562,9 +7562,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:2491:1: ( ',' )
             // InternalCPtester.g:2492:2: ','
             {
-             before(grammarAccess.getCalibrationOperationAccess().getCommaKeyword_13()); 
+             before(grammarAccess.getCalibrationAccess().getCommaKeyword_13()); 
             match(input,17,FOLLOW_2); 
-             after(grammarAccess.getCalibrationOperationAccess().getCommaKeyword_13()); 
+             after(grammarAccess.getCalibrationAccess().getCommaKeyword_13()); 
 
             }
 
@@ -7583,26 +7583,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CalibrationOperation__Group__13__Impl"
+    // $ANTLR end "rule__Calibration__Group__13__Impl"
 
 
-    // $ANTLR start "rule__CalibrationOperation__Group__14"
-    // InternalCPtester.g:2501:1: rule__CalibrationOperation__Group__14 : rule__CalibrationOperation__Group__14__Impl rule__CalibrationOperation__Group__15 ;
-    public final void rule__CalibrationOperation__Group__14() throws RecognitionException {
+    // $ANTLR start "rule__Calibration__Group__14"
+    // InternalCPtester.g:2501:1: rule__Calibration__Group__14 : rule__Calibration__Group__14__Impl rule__Calibration__Group__15 ;
+    public final void rule__Calibration__Group__14() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2505:1: ( rule__CalibrationOperation__Group__14__Impl rule__CalibrationOperation__Group__15 )
-            // InternalCPtester.g:2506:2: rule__CalibrationOperation__Group__14__Impl rule__CalibrationOperation__Group__15
+            // InternalCPtester.g:2505:1: ( rule__Calibration__Group__14__Impl rule__Calibration__Group__15 )
+            // InternalCPtester.g:2506:2: rule__Calibration__Group__14__Impl rule__Calibration__Group__15
             {
             pushFollow(FOLLOW_19);
-            rule__CalibrationOperation__Group__14__Impl();
+            rule__Calibration__Group__14__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__CalibrationOperation__Group__15();
+            rule__Calibration__Group__15();
 
             state._fsp--;
 
@@ -7621,35 +7621,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CalibrationOperation__Group__14"
+    // $ANTLR end "rule__Calibration__Group__14"
 
 
-    // $ANTLR start "rule__CalibrationOperation__Group__14__Impl"
-    // InternalCPtester.g:2513:1: rule__CalibrationOperation__Group__14__Impl : ( ( rule__CalibrationOperation__V_maxAssignment_14 ) ) ;
-    public final void rule__CalibrationOperation__Group__14__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Calibration__Group__14__Impl"
+    // InternalCPtester.g:2513:1: rule__Calibration__Group__14__Impl : ( ( rule__Calibration__V_maxAssignment_14 ) ) ;
+    public final void rule__Calibration__Group__14__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2517:1: ( ( ( rule__CalibrationOperation__V_maxAssignment_14 ) ) )
-            // InternalCPtester.g:2518:1: ( ( rule__CalibrationOperation__V_maxAssignment_14 ) )
+            // InternalCPtester.g:2517:1: ( ( ( rule__Calibration__V_maxAssignment_14 ) ) )
+            // InternalCPtester.g:2518:1: ( ( rule__Calibration__V_maxAssignment_14 ) )
             {
-            // InternalCPtester.g:2518:1: ( ( rule__CalibrationOperation__V_maxAssignment_14 ) )
-            // InternalCPtester.g:2519:2: ( rule__CalibrationOperation__V_maxAssignment_14 )
+            // InternalCPtester.g:2518:1: ( ( rule__Calibration__V_maxAssignment_14 ) )
+            // InternalCPtester.g:2519:2: ( rule__Calibration__V_maxAssignment_14 )
             {
-             before(grammarAccess.getCalibrationOperationAccess().getV_maxAssignment_14()); 
-            // InternalCPtester.g:2520:2: ( rule__CalibrationOperation__V_maxAssignment_14 )
-            // InternalCPtester.g:2520:3: rule__CalibrationOperation__V_maxAssignment_14
+             before(grammarAccess.getCalibrationAccess().getV_maxAssignment_14()); 
+            // InternalCPtester.g:2520:2: ( rule__Calibration__V_maxAssignment_14 )
+            // InternalCPtester.g:2520:3: rule__Calibration__V_maxAssignment_14
             {
             pushFollow(FOLLOW_2);
-            rule__CalibrationOperation__V_maxAssignment_14();
+            rule__Calibration__V_maxAssignment_14();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getCalibrationOperationAccess().getV_maxAssignment_14()); 
+             after(grammarAccess.getCalibrationAccess().getV_maxAssignment_14()); 
 
             }
 
@@ -7668,21 +7668,21 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CalibrationOperation__Group__14__Impl"
+    // $ANTLR end "rule__Calibration__Group__14__Impl"
 
 
-    // $ANTLR start "rule__CalibrationOperation__Group__15"
-    // InternalCPtester.g:2528:1: rule__CalibrationOperation__Group__15 : rule__CalibrationOperation__Group__15__Impl ;
-    public final void rule__CalibrationOperation__Group__15() throws RecognitionException {
+    // $ANTLR start "rule__Calibration__Group__15"
+    // InternalCPtester.g:2528:1: rule__Calibration__Group__15 : rule__Calibration__Group__15__Impl ;
+    public final void rule__Calibration__Group__15() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2532:1: ( rule__CalibrationOperation__Group__15__Impl )
-            // InternalCPtester.g:2533:2: rule__CalibrationOperation__Group__15__Impl
+            // InternalCPtester.g:2532:1: ( rule__Calibration__Group__15__Impl )
+            // InternalCPtester.g:2533:2: rule__Calibration__Group__15__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__CalibrationOperation__Group__15__Impl();
+            rule__Calibration__Group__15__Impl();
 
             state._fsp--;
 
@@ -7701,12 +7701,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CalibrationOperation__Group__15"
+    // $ANTLR end "rule__Calibration__Group__15"
 
 
-    // $ANTLR start "rule__CalibrationOperation__Group__15__Impl"
-    // InternalCPtester.g:2539:1: rule__CalibrationOperation__Group__15__Impl : ( ')' ) ;
-    public final void rule__CalibrationOperation__Group__15__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Calibration__Group__15__Impl"
+    // InternalCPtester.g:2539:1: rule__Calibration__Group__15__Impl : ( ')' ) ;
+    public final void rule__Calibration__Group__15__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -7717,9 +7717,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:2544:1: ( ')' )
             // InternalCPtester.g:2545:2: ')'
             {
-             before(grammarAccess.getCalibrationOperationAccess().getRightParenthesisKeyword_15()); 
+             before(grammarAccess.getCalibrationAccess().getRightParenthesisKeyword_15()); 
             match(input,16,FOLLOW_2); 
-             after(grammarAccess.getCalibrationOperationAccess().getRightParenthesisKeyword_15()); 
+             after(grammarAccess.getCalibrationAccess().getRightParenthesisKeyword_15()); 
 
             }
 
@@ -7738,26 +7738,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CalibrationOperation__Group__15__Impl"
+    // $ANTLR end "rule__Calibration__Group__15__Impl"
 
 
-    // $ANTLR start "rule__CameraColorOperation__Group__0"
-    // InternalCPtester.g:2555:1: rule__CameraColorOperation__Group__0 : rule__CameraColorOperation__Group__0__Impl rule__CameraColorOperation__Group__1 ;
-    public final void rule__CameraColorOperation__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__CameraColor__Group__0"
+    // InternalCPtester.g:2555:1: rule__CameraColor__Group__0 : rule__CameraColor__Group__0__Impl rule__CameraColor__Group__1 ;
+    public final void rule__CameraColor__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2559:1: ( rule__CameraColorOperation__Group__0__Impl rule__CameraColorOperation__Group__1 )
-            // InternalCPtester.g:2560:2: rule__CameraColorOperation__Group__0__Impl rule__CameraColorOperation__Group__1
+            // InternalCPtester.g:2559:1: ( rule__CameraColor__Group__0__Impl rule__CameraColor__Group__1 )
+            // InternalCPtester.g:2560:2: rule__CameraColor__Group__0__Impl rule__CameraColor__Group__1
             {
             pushFollow(FOLLOW_17);
-            rule__CameraColorOperation__Group__0__Impl();
+            rule__CameraColor__Group__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__CameraColorOperation__Group__1();
+            rule__CameraColor__Group__1();
 
             state._fsp--;
 
@@ -7776,35 +7776,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CameraColorOperation__Group__0"
+    // $ANTLR end "rule__CameraColor__Group__0"
 
 
-    // $ANTLR start "rule__CameraColorOperation__Group__0__Impl"
-    // InternalCPtester.g:2567:1: rule__CameraColorOperation__Group__0__Impl : ( ( rule__CameraColorOperation__NameAssignment_0 ) ) ;
-    public final void rule__CameraColorOperation__Group__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__CameraColor__Group__0__Impl"
+    // InternalCPtester.g:2567:1: rule__CameraColor__Group__0__Impl : ( ( rule__CameraColor__NameAssignment_0 ) ) ;
+    public final void rule__CameraColor__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2571:1: ( ( ( rule__CameraColorOperation__NameAssignment_0 ) ) )
-            // InternalCPtester.g:2572:1: ( ( rule__CameraColorOperation__NameAssignment_0 ) )
+            // InternalCPtester.g:2571:1: ( ( ( rule__CameraColor__NameAssignment_0 ) ) )
+            // InternalCPtester.g:2572:1: ( ( rule__CameraColor__NameAssignment_0 ) )
             {
-            // InternalCPtester.g:2572:1: ( ( rule__CameraColorOperation__NameAssignment_0 ) )
-            // InternalCPtester.g:2573:2: ( rule__CameraColorOperation__NameAssignment_0 )
+            // InternalCPtester.g:2572:1: ( ( rule__CameraColor__NameAssignment_0 ) )
+            // InternalCPtester.g:2573:2: ( rule__CameraColor__NameAssignment_0 )
             {
-             before(grammarAccess.getCameraColorOperationAccess().getNameAssignment_0()); 
-            // InternalCPtester.g:2574:2: ( rule__CameraColorOperation__NameAssignment_0 )
-            // InternalCPtester.g:2574:3: rule__CameraColorOperation__NameAssignment_0
+             before(grammarAccess.getCameraColorAccess().getNameAssignment_0()); 
+            // InternalCPtester.g:2574:2: ( rule__CameraColor__NameAssignment_0 )
+            // InternalCPtester.g:2574:3: rule__CameraColor__NameAssignment_0
             {
             pushFollow(FOLLOW_2);
-            rule__CameraColorOperation__NameAssignment_0();
+            rule__CameraColor__NameAssignment_0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getCameraColorOperationAccess().getNameAssignment_0()); 
+             after(grammarAccess.getCameraColorAccess().getNameAssignment_0()); 
 
             }
 
@@ -7823,26 +7823,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CameraColorOperation__Group__0__Impl"
+    // $ANTLR end "rule__CameraColor__Group__0__Impl"
 
 
-    // $ANTLR start "rule__CameraColorOperation__Group__1"
-    // InternalCPtester.g:2582:1: rule__CameraColorOperation__Group__1 : rule__CameraColorOperation__Group__1__Impl rule__CameraColorOperation__Group__2 ;
-    public final void rule__CameraColorOperation__Group__1() throws RecognitionException {
+    // $ANTLR start "rule__CameraColor__Group__1"
+    // InternalCPtester.g:2582:1: rule__CameraColor__Group__1 : rule__CameraColor__Group__1__Impl rule__CameraColor__Group__2 ;
+    public final void rule__CameraColor__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2586:1: ( rule__CameraColorOperation__Group__1__Impl rule__CameraColorOperation__Group__2 )
-            // InternalCPtester.g:2587:2: rule__CameraColorOperation__Group__1__Impl rule__CameraColorOperation__Group__2
+            // InternalCPtester.g:2586:1: ( rule__CameraColor__Group__1__Impl rule__CameraColor__Group__2 )
+            // InternalCPtester.g:2587:2: rule__CameraColor__Group__1__Impl rule__CameraColor__Group__2
             {
             pushFollow(FOLLOW_18);
-            rule__CameraColorOperation__Group__1__Impl();
+            rule__CameraColor__Group__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__CameraColorOperation__Group__2();
+            rule__CameraColor__Group__2();
 
             state._fsp--;
 
@@ -7861,12 +7861,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CameraColorOperation__Group__1"
+    // $ANTLR end "rule__CameraColor__Group__1"
 
 
-    // $ANTLR start "rule__CameraColorOperation__Group__1__Impl"
-    // InternalCPtester.g:2594:1: rule__CameraColorOperation__Group__1__Impl : ( '(' ) ;
-    public final void rule__CameraColorOperation__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__CameraColor__Group__1__Impl"
+    // InternalCPtester.g:2594:1: rule__CameraColor__Group__1__Impl : ( '(' ) ;
+    public final void rule__CameraColor__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -7877,9 +7877,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:2599:1: ( '(' )
             // InternalCPtester.g:2600:2: '('
             {
-             before(grammarAccess.getCameraColorOperationAccess().getLeftParenthesisKeyword_1()); 
+             before(grammarAccess.getCameraColorAccess().getLeftParenthesisKeyword_1()); 
             match(input,15,FOLLOW_2); 
-             after(grammarAccess.getCameraColorOperationAccess().getLeftParenthesisKeyword_1()); 
+             after(grammarAccess.getCameraColorAccess().getLeftParenthesisKeyword_1()); 
 
             }
 
@@ -7898,26 +7898,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CameraColorOperation__Group__1__Impl"
+    // $ANTLR end "rule__CameraColor__Group__1__Impl"
 
 
-    // $ANTLR start "rule__CameraColorOperation__Group__2"
-    // InternalCPtester.g:2609:1: rule__CameraColorOperation__Group__2 : rule__CameraColorOperation__Group__2__Impl rule__CameraColorOperation__Group__3 ;
-    public final void rule__CameraColorOperation__Group__2() throws RecognitionException {
+    // $ANTLR start "rule__CameraColor__Group__2"
+    // InternalCPtester.g:2609:1: rule__CameraColor__Group__2 : rule__CameraColor__Group__2__Impl rule__CameraColor__Group__3 ;
+    public final void rule__CameraColor__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2613:1: ( rule__CameraColorOperation__Group__2__Impl rule__CameraColorOperation__Group__3 )
-            // InternalCPtester.g:2614:2: rule__CameraColorOperation__Group__2__Impl rule__CameraColorOperation__Group__3
+            // InternalCPtester.g:2613:1: ( rule__CameraColor__Group__2__Impl rule__CameraColor__Group__3 )
+            // InternalCPtester.g:2614:2: rule__CameraColor__Group__2__Impl rule__CameraColor__Group__3
             {
             pushFollow(FOLLOW_19);
-            rule__CameraColorOperation__Group__2__Impl();
+            rule__CameraColor__Group__2__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__CameraColorOperation__Group__3();
+            rule__CameraColor__Group__3();
 
             state._fsp--;
 
@@ -7936,35 +7936,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CameraColorOperation__Group__2"
+    // $ANTLR end "rule__CameraColor__Group__2"
 
 
-    // $ANTLR start "rule__CameraColorOperation__Group__2__Impl"
-    // InternalCPtester.g:2621:1: rule__CameraColorOperation__Group__2__Impl : ( ( rule__CameraColorOperation__TimeAssignment_2 ) ) ;
-    public final void rule__CameraColorOperation__Group__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__CameraColor__Group__2__Impl"
+    // InternalCPtester.g:2621:1: rule__CameraColor__Group__2__Impl : ( ( rule__CameraColor__TimeAssignment_2 ) ) ;
+    public final void rule__CameraColor__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2625:1: ( ( ( rule__CameraColorOperation__TimeAssignment_2 ) ) )
-            // InternalCPtester.g:2626:1: ( ( rule__CameraColorOperation__TimeAssignment_2 ) )
+            // InternalCPtester.g:2625:1: ( ( ( rule__CameraColor__TimeAssignment_2 ) ) )
+            // InternalCPtester.g:2626:1: ( ( rule__CameraColor__TimeAssignment_2 ) )
             {
-            // InternalCPtester.g:2626:1: ( ( rule__CameraColorOperation__TimeAssignment_2 ) )
-            // InternalCPtester.g:2627:2: ( rule__CameraColorOperation__TimeAssignment_2 )
+            // InternalCPtester.g:2626:1: ( ( rule__CameraColor__TimeAssignment_2 ) )
+            // InternalCPtester.g:2627:2: ( rule__CameraColor__TimeAssignment_2 )
             {
-             before(grammarAccess.getCameraColorOperationAccess().getTimeAssignment_2()); 
-            // InternalCPtester.g:2628:2: ( rule__CameraColorOperation__TimeAssignment_2 )
-            // InternalCPtester.g:2628:3: rule__CameraColorOperation__TimeAssignment_2
+             before(grammarAccess.getCameraColorAccess().getTimeAssignment_2()); 
+            // InternalCPtester.g:2628:2: ( rule__CameraColor__TimeAssignment_2 )
+            // InternalCPtester.g:2628:3: rule__CameraColor__TimeAssignment_2
             {
             pushFollow(FOLLOW_2);
-            rule__CameraColorOperation__TimeAssignment_2();
+            rule__CameraColor__TimeAssignment_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getCameraColorOperationAccess().getTimeAssignment_2()); 
+             after(grammarAccess.getCameraColorAccess().getTimeAssignment_2()); 
 
             }
 
@@ -7983,21 +7983,21 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CameraColorOperation__Group__2__Impl"
+    // $ANTLR end "rule__CameraColor__Group__2__Impl"
 
 
-    // $ANTLR start "rule__CameraColorOperation__Group__3"
-    // InternalCPtester.g:2636:1: rule__CameraColorOperation__Group__3 : rule__CameraColorOperation__Group__3__Impl ;
-    public final void rule__CameraColorOperation__Group__3() throws RecognitionException {
+    // $ANTLR start "rule__CameraColor__Group__3"
+    // InternalCPtester.g:2636:1: rule__CameraColor__Group__3 : rule__CameraColor__Group__3__Impl ;
+    public final void rule__CameraColor__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2640:1: ( rule__CameraColorOperation__Group__3__Impl )
-            // InternalCPtester.g:2641:2: rule__CameraColorOperation__Group__3__Impl
+            // InternalCPtester.g:2640:1: ( rule__CameraColor__Group__3__Impl )
+            // InternalCPtester.g:2641:2: rule__CameraColor__Group__3__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__CameraColorOperation__Group__3__Impl();
+            rule__CameraColor__Group__3__Impl();
 
             state._fsp--;
 
@@ -8016,12 +8016,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CameraColorOperation__Group__3"
+    // $ANTLR end "rule__CameraColor__Group__3"
 
 
-    // $ANTLR start "rule__CameraColorOperation__Group__3__Impl"
-    // InternalCPtester.g:2647:1: rule__CameraColorOperation__Group__3__Impl : ( ')' ) ;
-    public final void rule__CameraColorOperation__Group__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__CameraColor__Group__3__Impl"
+    // InternalCPtester.g:2647:1: rule__CameraColor__Group__3__Impl : ( ')' ) ;
+    public final void rule__CameraColor__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -8032,9 +8032,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:2652:1: ( ')' )
             // InternalCPtester.g:2653:2: ')'
             {
-             before(grammarAccess.getCameraColorOperationAccess().getRightParenthesisKeyword_3()); 
+             before(grammarAccess.getCameraColorAccess().getRightParenthesisKeyword_3()); 
             match(input,16,FOLLOW_2); 
-             after(grammarAccess.getCameraColorOperationAccess().getRightParenthesisKeyword_3()); 
+             after(grammarAccess.getCameraColorAccess().getRightParenthesisKeyword_3()); 
 
             }
 
@@ -8053,26 +8053,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CameraColorOperation__Group__3__Impl"
+    // $ANTLR end "rule__CameraColor__Group__3__Impl"
 
 
-    // $ANTLR start "rule__ReadAllServosOperation__Group__0"
-    // InternalCPtester.g:2663:1: rule__ReadAllServosOperation__Group__0 : rule__ReadAllServosOperation__Group__0__Impl rule__ReadAllServosOperation__Group__1 ;
-    public final void rule__ReadAllServosOperation__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__ReadAllServos__Group__0"
+    // InternalCPtester.g:2663:1: rule__ReadAllServos__Group__0 : rule__ReadAllServos__Group__0__Impl rule__ReadAllServos__Group__1 ;
+    public final void rule__ReadAllServos__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2667:1: ( rule__ReadAllServosOperation__Group__0__Impl rule__ReadAllServosOperation__Group__1 )
-            // InternalCPtester.g:2668:2: rule__ReadAllServosOperation__Group__0__Impl rule__ReadAllServosOperation__Group__1
+            // InternalCPtester.g:2667:1: ( rule__ReadAllServos__Group__0__Impl rule__ReadAllServos__Group__1 )
+            // InternalCPtester.g:2668:2: rule__ReadAllServos__Group__0__Impl rule__ReadAllServos__Group__1
             {
             pushFollow(FOLLOW_17);
-            rule__ReadAllServosOperation__Group__0__Impl();
+            rule__ReadAllServos__Group__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__ReadAllServosOperation__Group__1();
+            rule__ReadAllServos__Group__1();
 
             state._fsp--;
 
@@ -8091,35 +8091,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__ReadAllServosOperation__Group__0"
+    // $ANTLR end "rule__ReadAllServos__Group__0"
 
 
-    // $ANTLR start "rule__ReadAllServosOperation__Group__0__Impl"
-    // InternalCPtester.g:2675:1: rule__ReadAllServosOperation__Group__0__Impl : ( ( rule__ReadAllServosOperation__NameAssignment_0 ) ) ;
-    public final void rule__ReadAllServosOperation__Group__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__ReadAllServos__Group__0__Impl"
+    // InternalCPtester.g:2675:1: rule__ReadAllServos__Group__0__Impl : ( ( rule__ReadAllServos__NameAssignment_0 ) ) ;
+    public final void rule__ReadAllServos__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2679:1: ( ( ( rule__ReadAllServosOperation__NameAssignment_0 ) ) )
-            // InternalCPtester.g:2680:1: ( ( rule__ReadAllServosOperation__NameAssignment_0 ) )
+            // InternalCPtester.g:2679:1: ( ( ( rule__ReadAllServos__NameAssignment_0 ) ) )
+            // InternalCPtester.g:2680:1: ( ( rule__ReadAllServos__NameAssignment_0 ) )
             {
-            // InternalCPtester.g:2680:1: ( ( rule__ReadAllServosOperation__NameAssignment_0 ) )
-            // InternalCPtester.g:2681:2: ( rule__ReadAllServosOperation__NameAssignment_0 )
+            // InternalCPtester.g:2680:1: ( ( rule__ReadAllServos__NameAssignment_0 ) )
+            // InternalCPtester.g:2681:2: ( rule__ReadAllServos__NameAssignment_0 )
             {
-             before(grammarAccess.getReadAllServosOperationAccess().getNameAssignment_0()); 
-            // InternalCPtester.g:2682:2: ( rule__ReadAllServosOperation__NameAssignment_0 )
-            // InternalCPtester.g:2682:3: rule__ReadAllServosOperation__NameAssignment_0
+             before(grammarAccess.getReadAllServosAccess().getNameAssignment_0()); 
+            // InternalCPtester.g:2682:2: ( rule__ReadAllServos__NameAssignment_0 )
+            // InternalCPtester.g:2682:3: rule__ReadAllServos__NameAssignment_0
             {
             pushFollow(FOLLOW_2);
-            rule__ReadAllServosOperation__NameAssignment_0();
+            rule__ReadAllServos__NameAssignment_0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getReadAllServosOperationAccess().getNameAssignment_0()); 
+             after(grammarAccess.getReadAllServosAccess().getNameAssignment_0()); 
 
             }
 
@@ -8138,26 +8138,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__ReadAllServosOperation__Group__0__Impl"
+    // $ANTLR end "rule__ReadAllServos__Group__0__Impl"
 
 
-    // $ANTLR start "rule__ReadAllServosOperation__Group__1"
-    // InternalCPtester.g:2690:1: rule__ReadAllServosOperation__Group__1 : rule__ReadAllServosOperation__Group__1__Impl rule__ReadAllServosOperation__Group__2 ;
-    public final void rule__ReadAllServosOperation__Group__1() throws RecognitionException {
+    // $ANTLR start "rule__ReadAllServos__Group__1"
+    // InternalCPtester.g:2690:1: rule__ReadAllServos__Group__1 : rule__ReadAllServos__Group__1__Impl rule__ReadAllServos__Group__2 ;
+    public final void rule__ReadAllServos__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2694:1: ( rule__ReadAllServosOperation__Group__1__Impl rule__ReadAllServosOperation__Group__2 )
-            // InternalCPtester.g:2695:2: rule__ReadAllServosOperation__Group__1__Impl rule__ReadAllServosOperation__Group__2
+            // InternalCPtester.g:2694:1: ( rule__ReadAllServos__Group__1__Impl rule__ReadAllServos__Group__2 )
+            // InternalCPtester.g:2695:2: rule__ReadAllServos__Group__1__Impl rule__ReadAllServos__Group__2
             {
             pushFollow(FOLLOW_19);
-            rule__ReadAllServosOperation__Group__1__Impl();
+            rule__ReadAllServos__Group__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__ReadAllServosOperation__Group__2();
+            rule__ReadAllServos__Group__2();
 
             state._fsp--;
 
@@ -8176,12 +8176,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__ReadAllServosOperation__Group__1"
+    // $ANTLR end "rule__ReadAllServos__Group__1"
 
 
-    // $ANTLR start "rule__ReadAllServosOperation__Group__1__Impl"
-    // InternalCPtester.g:2702:1: rule__ReadAllServosOperation__Group__1__Impl : ( '(' ) ;
-    public final void rule__ReadAllServosOperation__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__ReadAllServos__Group__1__Impl"
+    // InternalCPtester.g:2702:1: rule__ReadAllServos__Group__1__Impl : ( '(' ) ;
+    public final void rule__ReadAllServos__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -8192,9 +8192,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:2707:1: ( '(' )
             // InternalCPtester.g:2708:2: '('
             {
-             before(grammarAccess.getReadAllServosOperationAccess().getLeftParenthesisKeyword_1()); 
+             before(grammarAccess.getReadAllServosAccess().getLeftParenthesisKeyword_1()); 
             match(input,15,FOLLOW_2); 
-             after(grammarAccess.getReadAllServosOperationAccess().getLeftParenthesisKeyword_1()); 
+             after(grammarAccess.getReadAllServosAccess().getLeftParenthesisKeyword_1()); 
 
             }
 
@@ -8213,21 +8213,21 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__ReadAllServosOperation__Group__1__Impl"
+    // $ANTLR end "rule__ReadAllServos__Group__1__Impl"
 
 
-    // $ANTLR start "rule__ReadAllServosOperation__Group__2"
-    // InternalCPtester.g:2717:1: rule__ReadAllServosOperation__Group__2 : rule__ReadAllServosOperation__Group__2__Impl ;
-    public final void rule__ReadAllServosOperation__Group__2() throws RecognitionException {
+    // $ANTLR start "rule__ReadAllServos__Group__2"
+    // InternalCPtester.g:2717:1: rule__ReadAllServos__Group__2 : rule__ReadAllServos__Group__2__Impl ;
+    public final void rule__ReadAllServos__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2721:1: ( rule__ReadAllServosOperation__Group__2__Impl )
-            // InternalCPtester.g:2722:2: rule__ReadAllServosOperation__Group__2__Impl
+            // InternalCPtester.g:2721:1: ( rule__ReadAllServos__Group__2__Impl )
+            // InternalCPtester.g:2722:2: rule__ReadAllServos__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__ReadAllServosOperation__Group__2__Impl();
+            rule__ReadAllServos__Group__2__Impl();
 
             state._fsp--;
 
@@ -8246,12 +8246,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__ReadAllServosOperation__Group__2"
+    // $ANTLR end "rule__ReadAllServos__Group__2"
 
 
-    // $ANTLR start "rule__ReadAllServosOperation__Group__2__Impl"
-    // InternalCPtester.g:2728:1: rule__ReadAllServosOperation__Group__2__Impl : ( ')' ) ;
-    public final void rule__ReadAllServosOperation__Group__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__ReadAllServos__Group__2__Impl"
+    // InternalCPtester.g:2728:1: rule__ReadAllServos__Group__2__Impl : ( ')' ) ;
+    public final void rule__ReadAllServos__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -8262,9 +8262,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:2733:1: ( ')' )
             // InternalCPtester.g:2734:2: ')'
             {
-             before(grammarAccess.getReadAllServosOperationAccess().getRightParenthesisKeyword_2()); 
+             before(grammarAccess.getReadAllServosAccess().getRightParenthesisKeyword_2()); 
             match(input,16,FOLLOW_2); 
-             after(grammarAccess.getReadAllServosOperationAccess().getRightParenthesisKeyword_2()); 
+             after(grammarAccess.getReadAllServosAccess().getRightParenthesisKeyword_2()); 
 
             }
 
@@ -8283,26 +8283,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__ReadAllServosOperation__Group__2__Impl"
+    // $ANTLR end "rule__ReadAllServos__Group__2__Impl"
 
 
-    // $ANTLR start "rule__ReadServoOperation__Group__0"
-    // InternalCPtester.g:2744:1: rule__ReadServoOperation__Group__0 : rule__ReadServoOperation__Group__0__Impl rule__ReadServoOperation__Group__1 ;
-    public final void rule__ReadServoOperation__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__ReadServo__Group__0"
+    // InternalCPtester.g:2744:1: rule__ReadServo__Group__0 : rule__ReadServo__Group__0__Impl rule__ReadServo__Group__1 ;
+    public final void rule__ReadServo__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2748:1: ( rule__ReadServoOperation__Group__0__Impl rule__ReadServoOperation__Group__1 )
-            // InternalCPtester.g:2749:2: rule__ReadServoOperation__Group__0__Impl rule__ReadServoOperation__Group__1
+            // InternalCPtester.g:2748:1: ( rule__ReadServo__Group__0__Impl rule__ReadServo__Group__1 )
+            // InternalCPtester.g:2749:2: rule__ReadServo__Group__0__Impl rule__ReadServo__Group__1
             {
             pushFollow(FOLLOW_17);
-            rule__ReadServoOperation__Group__0__Impl();
+            rule__ReadServo__Group__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__ReadServoOperation__Group__1();
+            rule__ReadServo__Group__1();
 
             state._fsp--;
 
@@ -8321,35 +8321,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__ReadServoOperation__Group__0"
+    // $ANTLR end "rule__ReadServo__Group__0"
 
 
-    // $ANTLR start "rule__ReadServoOperation__Group__0__Impl"
-    // InternalCPtester.g:2756:1: rule__ReadServoOperation__Group__0__Impl : ( ( rule__ReadServoOperation__NameAssignment_0 ) ) ;
-    public final void rule__ReadServoOperation__Group__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__ReadServo__Group__0__Impl"
+    // InternalCPtester.g:2756:1: rule__ReadServo__Group__0__Impl : ( ( rule__ReadServo__NameAssignment_0 ) ) ;
+    public final void rule__ReadServo__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2760:1: ( ( ( rule__ReadServoOperation__NameAssignment_0 ) ) )
-            // InternalCPtester.g:2761:1: ( ( rule__ReadServoOperation__NameAssignment_0 ) )
+            // InternalCPtester.g:2760:1: ( ( ( rule__ReadServo__NameAssignment_0 ) ) )
+            // InternalCPtester.g:2761:1: ( ( rule__ReadServo__NameAssignment_0 ) )
             {
-            // InternalCPtester.g:2761:1: ( ( rule__ReadServoOperation__NameAssignment_0 ) )
-            // InternalCPtester.g:2762:2: ( rule__ReadServoOperation__NameAssignment_0 )
+            // InternalCPtester.g:2761:1: ( ( rule__ReadServo__NameAssignment_0 ) )
+            // InternalCPtester.g:2762:2: ( rule__ReadServo__NameAssignment_0 )
             {
-             before(grammarAccess.getReadServoOperationAccess().getNameAssignment_0()); 
-            // InternalCPtester.g:2763:2: ( rule__ReadServoOperation__NameAssignment_0 )
-            // InternalCPtester.g:2763:3: rule__ReadServoOperation__NameAssignment_0
+             before(grammarAccess.getReadServoAccess().getNameAssignment_0()); 
+            // InternalCPtester.g:2763:2: ( rule__ReadServo__NameAssignment_0 )
+            // InternalCPtester.g:2763:3: rule__ReadServo__NameAssignment_0
             {
             pushFollow(FOLLOW_2);
-            rule__ReadServoOperation__NameAssignment_0();
+            rule__ReadServo__NameAssignment_0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getReadServoOperationAccess().getNameAssignment_0()); 
+             after(grammarAccess.getReadServoAccess().getNameAssignment_0()); 
 
             }
 
@@ -8368,26 +8368,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__ReadServoOperation__Group__0__Impl"
+    // $ANTLR end "rule__ReadServo__Group__0__Impl"
 
 
-    // $ANTLR start "rule__ReadServoOperation__Group__1"
-    // InternalCPtester.g:2771:1: rule__ReadServoOperation__Group__1 : rule__ReadServoOperation__Group__1__Impl rule__ReadServoOperation__Group__2 ;
-    public final void rule__ReadServoOperation__Group__1() throws RecognitionException {
+    // $ANTLR start "rule__ReadServo__Group__1"
+    // InternalCPtester.g:2771:1: rule__ReadServo__Group__1 : rule__ReadServo__Group__1__Impl rule__ReadServo__Group__2 ;
+    public final void rule__ReadServo__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2775:1: ( rule__ReadServoOperation__Group__1__Impl rule__ReadServoOperation__Group__2 )
-            // InternalCPtester.g:2776:2: rule__ReadServoOperation__Group__1__Impl rule__ReadServoOperation__Group__2
+            // InternalCPtester.g:2775:1: ( rule__ReadServo__Group__1__Impl rule__ReadServo__Group__2 )
+            // InternalCPtester.g:2776:2: rule__ReadServo__Group__1__Impl rule__ReadServo__Group__2
             {
             pushFollow(FOLLOW_18);
-            rule__ReadServoOperation__Group__1__Impl();
+            rule__ReadServo__Group__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__ReadServoOperation__Group__2();
+            rule__ReadServo__Group__2();
 
             state._fsp--;
 
@@ -8406,12 +8406,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__ReadServoOperation__Group__1"
+    // $ANTLR end "rule__ReadServo__Group__1"
 
 
-    // $ANTLR start "rule__ReadServoOperation__Group__1__Impl"
-    // InternalCPtester.g:2783:1: rule__ReadServoOperation__Group__1__Impl : ( '(' ) ;
-    public final void rule__ReadServoOperation__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__ReadServo__Group__1__Impl"
+    // InternalCPtester.g:2783:1: rule__ReadServo__Group__1__Impl : ( '(' ) ;
+    public final void rule__ReadServo__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -8422,9 +8422,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:2788:1: ( '(' )
             // InternalCPtester.g:2789:2: '('
             {
-             before(grammarAccess.getReadServoOperationAccess().getLeftParenthesisKeyword_1()); 
+             before(grammarAccess.getReadServoAccess().getLeftParenthesisKeyword_1()); 
             match(input,15,FOLLOW_2); 
-             after(grammarAccess.getReadServoOperationAccess().getLeftParenthesisKeyword_1()); 
+             after(grammarAccess.getReadServoAccess().getLeftParenthesisKeyword_1()); 
 
             }
 
@@ -8443,26 +8443,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__ReadServoOperation__Group__1__Impl"
+    // $ANTLR end "rule__ReadServo__Group__1__Impl"
 
 
-    // $ANTLR start "rule__ReadServoOperation__Group__2"
-    // InternalCPtester.g:2798:1: rule__ReadServoOperation__Group__2 : rule__ReadServoOperation__Group__2__Impl rule__ReadServoOperation__Group__3 ;
-    public final void rule__ReadServoOperation__Group__2() throws RecognitionException {
+    // $ANTLR start "rule__ReadServo__Group__2"
+    // InternalCPtester.g:2798:1: rule__ReadServo__Group__2 : rule__ReadServo__Group__2__Impl rule__ReadServo__Group__3 ;
+    public final void rule__ReadServo__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2802:1: ( rule__ReadServoOperation__Group__2__Impl rule__ReadServoOperation__Group__3 )
-            // InternalCPtester.g:2803:2: rule__ReadServoOperation__Group__2__Impl rule__ReadServoOperation__Group__3
+            // InternalCPtester.g:2802:1: ( rule__ReadServo__Group__2__Impl rule__ReadServo__Group__3 )
+            // InternalCPtester.g:2803:2: rule__ReadServo__Group__2__Impl rule__ReadServo__Group__3
             {
             pushFollow(FOLLOW_19);
-            rule__ReadServoOperation__Group__2__Impl();
+            rule__ReadServo__Group__2__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__ReadServoOperation__Group__3();
+            rule__ReadServo__Group__3();
 
             state._fsp--;
 
@@ -8481,35 +8481,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__ReadServoOperation__Group__2"
+    // $ANTLR end "rule__ReadServo__Group__2"
 
 
-    // $ANTLR start "rule__ReadServoOperation__Group__2__Impl"
-    // InternalCPtester.g:2810:1: rule__ReadServoOperation__Group__2__Impl : ( ( rule__ReadServoOperation__ServoAssignment_2 ) ) ;
-    public final void rule__ReadServoOperation__Group__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__ReadServo__Group__2__Impl"
+    // InternalCPtester.g:2810:1: rule__ReadServo__Group__2__Impl : ( ( rule__ReadServo__ServoAssignment_2 ) ) ;
+    public final void rule__ReadServo__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2814:1: ( ( ( rule__ReadServoOperation__ServoAssignment_2 ) ) )
-            // InternalCPtester.g:2815:1: ( ( rule__ReadServoOperation__ServoAssignment_2 ) )
+            // InternalCPtester.g:2814:1: ( ( ( rule__ReadServo__ServoAssignment_2 ) ) )
+            // InternalCPtester.g:2815:1: ( ( rule__ReadServo__ServoAssignment_2 ) )
             {
-            // InternalCPtester.g:2815:1: ( ( rule__ReadServoOperation__ServoAssignment_2 ) )
-            // InternalCPtester.g:2816:2: ( rule__ReadServoOperation__ServoAssignment_2 )
+            // InternalCPtester.g:2815:1: ( ( rule__ReadServo__ServoAssignment_2 ) )
+            // InternalCPtester.g:2816:2: ( rule__ReadServo__ServoAssignment_2 )
             {
-             before(grammarAccess.getReadServoOperationAccess().getServoAssignment_2()); 
-            // InternalCPtester.g:2817:2: ( rule__ReadServoOperation__ServoAssignment_2 )
-            // InternalCPtester.g:2817:3: rule__ReadServoOperation__ServoAssignment_2
+             before(grammarAccess.getReadServoAccess().getServoAssignment_2()); 
+            // InternalCPtester.g:2817:2: ( rule__ReadServo__ServoAssignment_2 )
+            // InternalCPtester.g:2817:3: rule__ReadServo__ServoAssignment_2
             {
             pushFollow(FOLLOW_2);
-            rule__ReadServoOperation__ServoAssignment_2();
+            rule__ReadServo__ServoAssignment_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getReadServoOperationAccess().getServoAssignment_2()); 
+             after(grammarAccess.getReadServoAccess().getServoAssignment_2()); 
 
             }
 
@@ -8528,21 +8528,21 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__ReadServoOperation__Group__2__Impl"
+    // $ANTLR end "rule__ReadServo__Group__2__Impl"
 
 
-    // $ANTLR start "rule__ReadServoOperation__Group__3"
-    // InternalCPtester.g:2825:1: rule__ReadServoOperation__Group__3 : rule__ReadServoOperation__Group__3__Impl ;
-    public final void rule__ReadServoOperation__Group__3() throws RecognitionException {
+    // $ANTLR start "rule__ReadServo__Group__3"
+    // InternalCPtester.g:2825:1: rule__ReadServo__Group__3 : rule__ReadServo__Group__3__Impl ;
+    public final void rule__ReadServo__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2829:1: ( rule__ReadServoOperation__Group__3__Impl )
-            // InternalCPtester.g:2830:2: rule__ReadServoOperation__Group__3__Impl
+            // InternalCPtester.g:2829:1: ( rule__ReadServo__Group__3__Impl )
+            // InternalCPtester.g:2830:2: rule__ReadServo__Group__3__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__ReadServoOperation__Group__3__Impl();
+            rule__ReadServo__Group__3__Impl();
 
             state._fsp--;
 
@@ -8561,12 +8561,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__ReadServoOperation__Group__3"
+    // $ANTLR end "rule__ReadServo__Group__3"
 
 
-    // $ANTLR start "rule__ReadServoOperation__Group__3__Impl"
-    // InternalCPtester.g:2836:1: rule__ReadServoOperation__Group__3__Impl : ( ')' ) ;
-    public final void rule__ReadServoOperation__Group__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__ReadServo__Group__3__Impl"
+    // InternalCPtester.g:2836:1: rule__ReadServo__Group__3__Impl : ( ')' ) ;
+    public final void rule__ReadServo__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -8577,9 +8577,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:2841:1: ( ')' )
             // InternalCPtester.g:2842:2: ')'
             {
-             before(grammarAccess.getReadServoOperationAccess().getRightParenthesisKeyword_3()); 
+             before(grammarAccess.getReadServoAccess().getRightParenthesisKeyword_3()); 
             match(input,16,FOLLOW_2); 
-             after(grammarAccess.getReadServoOperationAccess().getRightParenthesisKeyword_3()); 
+             after(grammarAccess.getReadServoAccess().getRightParenthesisKeyword_3()); 
 
             }
 
@@ -8598,26 +8598,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__ReadServoOperation__Group__3__Impl"
+    // $ANTLR end "rule__ReadServo__Group__3__Impl"
 
 
-    // $ANTLR start "rule__RotateServoOperation__Group__0"
-    // InternalCPtester.g:2852:1: rule__RotateServoOperation__Group__0 : rule__RotateServoOperation__Group__0__Impl rule__RotateServoOperation__Group__1 ;
-    public final void rule__RotateServoOperation__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__RotateServo__Group__0"
+    // InternalCPtester.g:2852:1: rule__RotateServo__Group__0 : rule__RotateServo__Group__0__Impl rule__RotateServo__Group__1 ;
+    public final void rule__RotateServo__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2856:1: ( rule__RotateServoOperation__Group__0__Impl rule__RotateServoOperation__Group__1 )
-            // InternalCPtester.g:2857:2: rule__RotateServoOperation__Group__0__Impl rule__RotateServoOperation__Group__1
+            // InternalCPtester.g:2856:1: ( rule__RotateServo__Group__0__Impl rule__RotateServo__Group__1 )
+            // InternalCPtester.g:2857:2: rule__RotateServo__Group__0__Impl rule__RotateServo__Group__1
             {
             pushFollow(FOLLOW_17);
-            rule__RotateServoOperation__Group__0__Impl();
+            rule__RotateServo__Group__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__RotateServoOperation__Group__1();
+            rule__RotateServo__Group__1();
 
             state._fsp--;
 
@@ -8636,35 +8636,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateServoOperation__Group__0"
+    // $ANTLR end "rule__RotateServo__Group__0"
 
 
-    // $ANTLR start "rule__RotateServoOperation__Group__0__Impl"
-    // InternalCPtester.g:2864:1: rule__RotateServoOperation__Group__0__Impl : ( ( rule__RotateServoOperation__NameAssignment_0 ) ) ;
-    public final void rule__RotateServoOperation__Group__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__RotateServo__Group__0__Impl"
+    // InternalCPtester.g:2864:1: rule__RotateServo__Group__0__Impl : ( ( rule__RotateServo__NameAssignment_0 ) ) ;
+    public final void rule__RotateServo__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2868:1: ( ( ( rule__RotateServoOperation__NameAssignment_0 ) ) )
-            // InternalCPtester.g:2869:1: ( ( rule__RotateServoOperation__NameAssignment_0 ) )
+            // InternalCPtester.g:2868:1: ( ( ( rule__RotateServo__NameAssignment_0 ) ) )
+            // InternalCPtester.g:2869:1: ( ( rule__RotateServo__NameAssignment_0 ) )
             {
-            // InternalCPtester.g:2869:1: ( ( rule__RotateServoOperation__NameAssignment_0 ) )
-            // InternalCPtester.g:2870:2: ( rule__RotateServoOperation__NameAssignment_0 )
+            // InternalCPtester.g:2869:1: ( ( rule__RotateServo__NameAssignment_0 ) )
+            // InternalCPtester.g:2870:2: ( rule__RotateServo__NameAssignment_0 )
             {
-             before(grammarAccess.getRotateServoOperationAccess().getNameAssignment_0()); 
-            // InternalCPtester.g:2871:2: ( rule__RotateServoOperation__NameAssignment_0 )
-            // InternalCPtester.g:2871:3: rule__RotateServoOperation__NameAssignment_0
+             before(grammarAccess.getRotateServoAccess().getNameAssignment_0()); 
+            // InternalCPtester.g:2871:2: ( rule__RotateServo__NameAssignment_0 )
+            // InternalCPtester.g:2871:3: rule__RotateServo__NameAssignment_0
             {
             pushFollow(FOLLOW_2);
-            rule__RotateServoOperation__NameAssignment_0();
+            rule__RotateServo__NameAssignment_0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getRotateServoOperationAccess().getNameAssignment_0()); 
+             after(grammarAccess.getRotateServoAccess().getNameAssignment_0()); 
 
             }
 
@@ -8683,26 +8683,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateServoOperation__Group__0__Impl"
+    // $ANTLR end "rule__RotateServo__Group__0__Impl"
 
 
-    // $ANTLR start "rule__RotateServoOperation__Group__1"
-    // InternalCPtester.g:2879:1: rule__RotateServoOperation__Group__1 : rule__RotateServoOperation__Group__1__Impl rule__RotateServoOperation__Group__2 ;
-    public final void rule__RotateServoOperation__Group__1() throws RecognitionException {
+    // $ANTLR start "rule__RotateServo__Group__1"
+    // InternalCPtester.g:2879:1: rule__RotateServo__Group__1 : rule__RotateServo__Group__1__Impl rule__RotateServo__Group__2 ;
+    public final void rule__RotateServo__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2883:1: ( rule__RotateServoOperation__Group__1__Impl rule__RotateServoOperation__Group__2 )
-            // InternalCPtester.g:2884:2: rule__RotateServoOperation__Group__1__Impl rule__RotateServoOperation__Group__2
+            // InternalCPtester.g:2883:1: ( rule__RotateServo__Group__1__Impl rule__RotateServo__Group__2 )
+            // InternalCPtester.g:2884:2: rule__RotateServo__Group__1__Impl rule__RotateServo__Group__2
             {
             pushFollow(FOLLOW_18);
-            rule__RotateServoOperation__Group__1__Impl();
+            rule__RotateServo__Group__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__RotateServoOperation__Group__2();
+            rule__RotateServo__Group__2();
 
             state._fsp--;
 
@@ -8721,12 +8721,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateServoOperation__Group__1"
+    // $ANTLR end "rule__RotateServo__Group__1"
 
 
-    // $ANTLR start "rule__RotateServoOperation__Group__1__Impl"
-    // InternalCPtester.g:2891:1: rule__RotateServoOperation__Group__1__Impl : ( '(' ) ;
-    public final void rule__RotateServoOperation__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__RotateServo__Group__1__Impl"
+    // InternalCPtester.g:2891:1: rule__RotateServo__Group__1__Impl : ( '(' ) ;
+    public final void rule__RotateServo__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -8737,9 +8737,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:2896:1: ( '(' )
             // InternalCPtester.g:2897:2: '('
             {
-             before(grammarAccess.getRotateServoOperationAccess().getLeftParenthesisKeyword_1()); 
+             before(grammarAccess.getRotateServoAccess().getLeftParenthesisKeyword_1()); 
             match(input,15,FOLLOW_2); 
-             after(grammarAccess.getRotateServoOperationAccess().getLeftParenthesisKeyword_1()); 
+             after(grammarAccess.getRotateServoAccess().getLeftParenthesisKeyword_1()); 
 
             }
 
@@ -8758,26 +8758,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateServoOperation__Group__1__Impl"
+    // $ANTLR end "rule__RotateServo__Group__1__Impl"
 
 
-    // $ANTLR start "rule__RotateServoOperation__Group__2"
-    // InternalCPtester.g:2906:1: rule__RotateServoOperation__Group__2 : rule__RotateServoOperation__Group__2__Impl rule__RotateServoOperation__Group__3 ;
-    public final void rule__RotateServoOperation__Group__2() throws RecognitionException {
+    // $ANTLR start "rule__RotateServo__Group__2"
+    // InternalCPtester.g:2906:1: rule__RotateServo__Group__2 : rule__RotateServo__Group__2__Impl rule__RotateServo__Group__3 ;
+    public final void rule__RotateServo__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2910:1: ( rule__RotateServoOperation__Group__2__Impl rule__RotateServoOperation__Group__3 )
-            // InternalCPtester.g:2911:2: rule__RotateServoOperation__Group__2__Impl rule__RotateServoOperation__Group__3
+            // InternalCPtester.g:2910:1: ( rule__RotateServo__Group__2__Impl rule__RotateServo__Group__3 )
+            // InternalCPtester.g:2911:2: rule__RotateServo__Group__2__Impl rule__RotateServo__Group__3
             {
             pushFollow(FOLLOW_20);
-            rule__RotateServoOperation__Group__2__Impl();
+            rule__RotateServo__Group__2__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__RotateServoOperation__Group__3();
+            rule__RotateServo__Group__3();
 
             state._fsp--;
 
@@ -8796,35 +8796,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateServoOperation__Group__2"
+    // $ANTLR end "rule__RotateServo__Group__2"
 
 
-    // $ANTLR start "rule__RotateServoOperation__Group__2__Impl"
-    // InternalCPtester.g:2918:1: rule__RotateServoOperation__Group__2__Impl : ( ( rule__RotateServoOperation__ServoAssignment_2 ) ) ;
-    public final void rule__RotateServoOperation__Group__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__RotateServo__Group__2__Impl"
+    // InternalCPtester.g:2918:1: rule__RotateServo__Group__2__Impl : ( ( rule__RotateServo__ServoAssignment_2 ) ) ;
+    public final void rule__RotateServo__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2922:1: ( ( ( rule__RotateServoOperation__ServoAssignment_2 ) ) )
-            // InternalCPtester.g:2923:1: ( ( rule__RotateServoOperation__ServoAssignment_2 ) )
+            // InternalCPtester.g:2922:1: ( ( ( rule__RotateServo__ServoAssignment_2 ) ) )
+            // InternalCPtester.g:2923:1: ( ( rule__RotateServo__ServoAssignment_2 ) )
             {
-            // InternalCPtester.g:2923:1: ( ( rule__RotateServoOperation__ServoAssignment_2 ) )
-            // InternalCPtester.g:2924:2: ( rule__RotateServoOperation__ServoAssignment_2 )
+            // InternalCPtester.g:2923:1: ( ( rule__RotateServo__ServoAssignment_2 ) )
+            // InternalCPtester.g:2924:2: ( rule__RotateServo__ServoAssignment_2 )
             {
-             before(grammarAccess.getRotateServoOperationAccess().getServoAssignment_2()); 
-            // InternalCPtester.g:2925:2: ( rule__RotateServoOperation__ServoAssignment_2 )
-            // InternalCPtester.g:2925:3: rule__RotateServoOperation__ServoAssignment_2
+             before(grammarAccess.getRotateServoAccess().getServoAssignment_2()); 
+            // InternalCPtester.g:2925:2: ( rule__RotateServo__ServoAssignment_2 )
+            // InternalCPtester.g:2925:3: rule__RotateServo__ServoAssignment_2
             {
             pushFollow(FOLLOW_2);
-            rule__RotateServoOperation__ServoAssignment_2();
+            rule__RotateServo__ServoAssignment_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getRotateServoOperationAccess().getServoAssignment_2()); 
+             after(grammarAccess.getRotateServoAccess().getServoAssignment_2()); 
 
             }
 
@@ -8843,26 +8843,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateServoOperation__Group__2__Impl"
+    // $ANTLR end "rule__RotateServo__Group__2__Impl"
 
 
-    // $ANTLR start "rule__RotateServoOperation__Group__3"
-    // InternalCPtester.g:2933:1: rule__RotateServoOperation__Group__3 : rule__RotateServoOperation__Group__3__Impl rule__RotateServoOperation__Group__4 ;
-    public final void rule__RotateServoOperation__Group__3() throws RecognitionException {
+    // $ANTLR start "rule__RotateServo__Group__3"
+    // InternalCPtester.g:2933:1: rule__RotateServo__Group__3 : rule__RotateServo__Group__3__Impl rule__RotateServo__Group__4 ;
+    public final void rule__RotateServo__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2937:1: ( rule__RotateServoOperation__Group__3__Impl rule__RotateServoOperation__Group__4 )
-            // InternalCPtester.g:2938:2: rule__RotateServoOperation__Group__3__Impl rule__RotateServoOperation__Group__4
+            // InternalCPtester.g:2937:1: ( rule__RotateServo__Group__3__Impl rule__RotateServo__Group__4 )
+            // InternalCPtester.g:2938:2: rule__RotateServo__Group__3__Impl rule__RotateServo__Group__4
             {
             pushFollow(FOLLOW_18);
-            rule__RotateServoOperation__Group__3__Impl();
+            rule__RotateServo__Group__3__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__RotateServoOperation__Group__4();
+            rule__RotateServo__Group__4();
 
             state._fsp--;
 
@@ -8881,12 +8881,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateServoOperation__Group__3"
+    // $ANTLR end "rule__RotateServo__Group__3"
 
 
-    // $ANTLR start "rule__RotateServoOperation__Group__3__Impl"
-    // InternalCPtester.g:2945:1: rule__RotateServoOperation__Group__3__Impl : ( ',' ) ;
-    public final void rule__RotateServoOperation__Group__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__RotateServo__Group__3__Impl"
+    // InternalCPtester.g:2945:1: rule__RotateServo__Group__3__Impl : ( ',' ) ;
+    public final void rule__RotateServo__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -8897,9 +8897,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:2950:1: ( ',' )
             // InternalCPtester.g:2951:2: ','
             {
-             before(grammarAccess.getRotateServoOperationAccess().getCommaKeyword_3()); 
+             before(grammarAccess.getRotateServoAccess().getCommaKeyword_3()); 
             match(input,17,FOLLOW_2); 
-             after(grammarAccess.getRotateServoOperationAccess().getCommaKeyword_3()); 
+             after(grammarAccess.getRotateServoAccess().getCommaKeyword_3()); 
 
             }
 
@@ -8918,26 +8918,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateServoOperation__Group__3__Impl"
+    // $ANTLR end "rule__RotateServo__Group__3__Impl"
 
 
-    // $ANTLR start "rule__RotateServoOperation__Group__4"
-    // InternalCPtester.g:2960:1: rule__RotateServoOperation__Group__4 : rule__RotateServoOperation__Group__4__Impl rule__RotateServoOperation__Group__5 ;
-    public final void rule__RotateServoOperation__Group__4() throws RecognitionException {
+    // $ANTLR start "rule__RotateServo__Group__4"
+    // InternalCPtester.g:2960:1: rule__RotateServo__Group__4 : rule__RotateServo__Group__4__Impl rule__RotateServo__Group__5 ;
+    public final void rule__RotateServo__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2964:1: ( rule__RotateServoOperation__Group__4__Impl rule__RotateServoOperation__Group__5 )
-            // InternalCPtester.g:2965:2: rule__RotateServoOperation__Group__4__Impl rule__RotateServoOperation__Group__5
+            // InternalCPtester.g:2964:1: ( rule__RotateServo__Group__4__Impl rule__RotateServo__Group__5 )
+            // InternalCPtester.g:2965:2: rule__RotateServo__Group__4__Impl rule__RotateServo__Group__5
             {
             pushFollow(FOLLOW_20);
-            rule__RotateServoOperation__Group__4__Impl();
+            rule__RotateServo__Group__4__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__RotateServoOperation__Group__5();
+            rule__RotateServo__Group__5();
 
             state._fsp--;
 
@@ -8956,35 +8956,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateServoOperation__Group__4"
+    // $ANTLR end "rule__RotateServo__Group__4"
 
 
-    // $ANTLR start "rule__RotateServoOperation__Group__4__Impl"
-    // InternalCPtester.g:2972:1: rule__RotateServoOperation__Group__4__Impl : ( ( rule__RotateServoOperation__AngleAssignment_4 ) ) ;
-    public final void rule__RotateServoOperation__Group__4__Impl() throws RecognitionException {
+    // $ANTLR start "rule__RotateServo__Group__4__Impl"
+    // InternalCPtester.g:2972:1: rule__RotateServo__Group__4__Impl : ( ( rule__RotateServo__AngleAssignment_4 ) ) ;
+    public final void rule__RotateServo__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2976:1: ( ( ( rule__RotateServoOperation__AngleAssignment_4 ) ) )
-            // InternalCPtester.g:2977:1: ( ( rule__RotateServoOperation__AngleAssignment_4 ) )
+            // InternalCPtester.g:2976:1: ( ( ( rule__RotateServo__AngleAssignment_4 ) ) )
+            // InternalCPtester.g:2977:1: ( ( rule__RotateServo__AngleAssignment_4 ) )
             {
-            // InternalCPtester.g:2977:1: ( ( rule__RotateServoOperation__AngleAssignment_4 ) )
-            // InternalCPtester.g:2978:2: ( rule__RotateServoOperation__AngleAssignment_4 )
+            // InternalCPtester.g:2977:1: ( ( rule__RotateServo__AngleAssignment_4 ) )
+            // InternalCPtester.g:2978:2: ( rule__RotateServo__AngleAssignment_4 )
             {
-             before(grammarAccess.getRotateServoOperationAccess().getAngleAssignment_4()); 
-            // InternalCPtester.g:2979:2: ( rule__RotateServoOperation__AngleAssignment_4 )
-            // InternalCPtester.g:2979:3: rule__RotateServoOperation__AngleAssignment_4
+             before(grammarAccess.getRotateServoAccess().getAngleAssignment_4()); 
+            // InternalCPtester.g:2979:2: ( rule__RotateServo__AngleAssignment_4 )
+            // InternalCPtester.g:2979:3: rule__RotateServo__AngleAssignment_4
             {
             pushFollow(FOLLOW_2);
-            rule__RotateServoOperation__AngleAssignment_4();
+            rule__RotateServo__AngleAssignment_4();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getRotateServoOperationAccess().getAngleAssignment_4()); 
+             after(grammarAccess.getRotateServoAccess().getAngleAssignment_4()); 
 
             }
 
@@ -9003,26 +9003,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateServoOperation__Group__4__Impl"
+    // $ANTLR end "rule__RotateServo__Group__4__Impl"
 
 
-    // $ANTLR start "rule__RotateServoOperation__Group__5"
-    // InternalCPtester.g:2987:1: rule__RotateServoOperation__Group__5 : rule__RotateServoOperation__Group__5__Impl rule__RotateServoOperation__Group__6 ;
-    public final void rule__RotateServoOperation__Group__5() throws RecognitionException {
+    // $ANTLR start "rule__RotateServo__Group__5"
+    // InternalCPtester.g:2987:1: rule__RotateServo__Group__5 : rule__RotateServo__Group__5__Impl rule__RotateServo__Group__6 ;
+    public final void rule__RotateServo__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:2991:1: ( rule__RotateServoOperation__Group__5__Impl rule__RotateServoOperation__Group__6 )
-            // InternalCPtester.g:2992:2: rule__RotateServoOperation__Group__5__Impl rule__RotateServoOperation__Group__6
+            // InternalCPtester.g:2991:1: ( rule__RotateServo__Group__5__Impl rule__RotateServo__Group__6 )
+            // InternalCPtester.g:2992:2: rule__RotateServo__Group__5__Impl rule__RotateServo__Group__6
             {
             pushFollow(FOLLOW_18);
-            rule__RotateServoOperation__Group__5__Impl();
+            rule__RotateServo__Group__5__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__RotateServoOperation__Group__6();
+            rule__RotateServo__Group__6();
 
             state._fsp--;
 
@@ -9041,12 +9041,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateServoOperation__Group__5"
+    // $ANTLR end "rule__RotateServo__Group__5"
 
 
-    // $ANTLR start "rule__RotateServoOperation__Group__5__Impl"
-    // InternalCPtester.g:2999:1: rule__RotateServoOperation__Group__5__Impl : ( ',' ) ;
-    public final void rule__RotateServoOperation__Group__5__Impl() throws RecognitionException {
+    // $ANTLR start "rule__RotateServo__Group__5__Impl"
+    // InternalCPtester.g:2999:1: rule__RotateServo__Group__5__Impl : ( ',' ) ;
+    public final void rule__RotateServo__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -9057,9 +9057,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:3004:1: ( ',' )
             // InternalCPtester.g:3005:2: ','
             {
-             before(grammarAccess.getRotateServoOperationAccess().getCommaKeyword_5()); 
+             before(grammarAccess.getRotateServoAccess().getCommaKeyword_5()); 
             match(input,17,FOLLOW_2); 
-             after(grammarAccess.getRotateServoOperationAccess().getCommaKeyword_5()); 
+             after(grammarAccess.getRotateServoAccess().getCommaKeyword_5()); 
 
             }
 
@@ -9078,26 +9078,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateServoOperation__Group__5__Impl"
+    // $ANTLR end "rule__RotateServo__Group__5__Impl"
 
 
-    // $ANTLR start "rule__RotateServoOperation__Group__6"
-    // InternalCPtester.g:3014:1: rule__RotateServoOperation__Group__6 : rule__RotateServoOperation__Group__6__Impl rule__RotateServoOperation__Group__7 ;
-    public final void rule__RotateServoOperation__Group__6() throws RecognitionException {
+    // $ANTLR start "rule__RotateServo__Group__6"
+    // InternalCPtester.g:3014:1: rule__RotateServo__Group__6 : rule__RotateServo__Group__6__Impl rule__RotateServo__Group__7 ;
+    public final void rule__RotateServo__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:3018:1: ( rule__RotateServoOperation__Group__6__Impl rule__RotateServoOperation__Group__7 )
-            // InternalCPtester.g:3019:2: rule__RotateServoOperation__Group__6__Impl rule__RotateServoOperation__Group__7
+            // InternalCPtester.g:3018:1: ( rule__RotateServo__Group__6__Impl rule__RotateServo__Group__7 )
+            // InternalCPtester.g:3019:2: rule__RotateServo__Group__6__Impl rule__RotateServo__Group__7
             {
             pushFollow(FOLLOW_19);
-            rule__RotateServoOperation__Group__6__Impl();
+            rule__RotateServo__Group__6__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__RotateServoOperation__Group__7();
+            rule__RotateServo__Group__7();
 
             state._fsp--;
 
@@ -9116,35 +9116,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateServoOperation__Group__6"
+    // $ANTLR end "rule__RotateServo__Group__6"
 
 
-    // $ANTLR start "rule__RotateServoOperation__Group__6__Impl"
-    // InternalCPtester.g:3026:1: rule__RotateServoOperation__Group__6__Impl : ( ( rule__RotateServoOperation__TimeAssignment_6 ) ) ;
-    public final void rule__RotateServoOperation__Group__6__Impl() throws RecognitionException {
+    // $ANTLR start "rule__RotateServo__Group__6__Impl"
+    // InternalCPtester.g:3026:1: rule__RotateServo__Group__6__Impl : ( ( rule__RotateServo__TimeAssignment_6 ) ) ;
+    public final void rule__RotateServo__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:3030:1: ( ( ( rule__RotateServoOperation__TimeAssignment_6 ) ) )
-            // InternalCPtester.g:3031:1: ( ( rule__RotateServoOperation__TimeAssignment_6 ) )
+            // InternalCPtester.g:3030:1: ( ( ( rule__RotateServo__TimeAssignment_6 ) ) )
+            // InternalCPtester.g:3031:1: ( ( rule__RotateServo__TimeAssignment_6 ) )
             {
-            // InternalCPtester.g:3031:1: ( ( rule__RotateServoOperation__TimeAssignment_6 ) )
-            // InternalCPtester.g:3032:2: ( rule__RotateServoOperation__TimeAssignment_6 )
+            // InternalCPtester.g:3031:1: ( ( rule__RotateServo__TimeAssignment_6 ) )
+            // InternalCPtester.g:3032:2: ( rule__RotateServo__TimeAssignment_6 )
             {
-             before(grammarAccess.getRotateServoOperationAccess().getTimeAssignment_6()); 
-            // InternalCPtester.g:3033:2: ( rule__RotateServoOperation__TimeAssignment_6 )
-            // InternalCPtester.g:3033:3: rule__RotateServoOperation__TimeAssignment_6
+             before(grammarAccess.getRotateServoAccess().getTimeAssignment_6()); 
+            // InternalCPtester.g:3033:2: ( rule__RotateServo__TimeAssignment_6 )
+            // InternalCPtester.g:3033:3: rule__RotateServo__TimeAssignment_6
             {
             pushFollow(FOLLOW_2);
-            rule__RotateServoOperation__TimeAssignment_6();
+            rule__RotateServo__TimeAssignment_6();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getRotateServoOperationAccess().getTimeAssignment_6()); 
+             after(grammarAccess.getRotateServoAccess().getTimeAssignment_6()); 
 
             }
 
@@ -9163,21 +9163,21 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateServoOperation__Group__6__Impl"
+    // $ANTLR end "rule__RotateServo__Group__6__Impl"
 
 
-    // $ANTLR start "rule__RotateServoOperation__Group__7"
-    // InternalCPtester.g:3041:1: rule__RotateServoOperation__Group__7 : rule__RotateServoOperation__Group__7__Impl ;
-    public final void rule__RotateServoOperation__Group__7() throws RecognitionException {
+    // $ANTLR start "rule__RotateServo__Group__7"
+    // InternalCPtester.g:3041:1: rule__RotateServo__Group__7 : rule__RotateServo__Group__7__Impl ;
+    public final void rule__RotateServo__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:3045:1: ( rule__RotateServoOperation__Group__7__Impl )
-            // InternalCPtester.g:3046:2: rule__RotateServoOperation__Group__7__Impl
+            // InternalCPtester.g:3045:1: ( rule__RotateServo__Group__7__Impl )
+            // InternalCPtester.g:3046:2: rule__RotateServo__Group__7__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__RotateServoOperation__Group__7__Impl();
+            rule__RotateServo__Group__7__Impl();
 
             state._fsp--;
 
@@ -9196,12 +9196,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateServoOperation__Group__7"
+    // $ANTLR end "rule__RotateServo__Group__7"
 
 
-    // $ANTLR start "rule__RotateServoOperation__Group__7__Impl"
-    // InternalCPtester.g:3052:1: rule__RotateServoOperation__Group__7__Impl : ( ')' ) ;
-    public final void rule__RotateServoOperation__Group__7__Impl() throws RecognitionException {
+    // $ANTLR start "rule__RotateServo__Group__7__Impl"
+    // InternalCPtester.g:3052:1: rule__RotateServo__Group__7__Impl : ( ')' ) ;
+    public final void rule__RotateServo__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -9212,9 +9212,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:3057:1: ( ')' )
             // InternalCPtester.g:3058:2: ')'
             {
-             before(grammarAccess.getRotateServoOperationAccess().getRightParenthesisKeyword_7()); 
+             before(grammarAccess.getRotateServoAccess().getRightParenthesisKeyword_7()); 
             match(input,16,FOLLOW_2); 
-             after(grammarAccess.getRotateServoOperationAccess().getRightParenthesisKeyword_7()); 
+             after(grammarAccess.getRotateServoAccess().getRightParenthesisKeyword_7()); 
 
             }
 
@@ -9233,26 +9233,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateServoOperation__Group__7__Impl"
+    // $ANTLR end "rule__RotateServo__Group__7__Impl"
 
 
-    // $ANTLR start "rule__RotateAllServosOperation__Group__0"
-    // InternalCPtester.g:3068:1: rule__RotateAllServosOperation__Group__0 : rule__RotateAllServosOperation__Group__0__Impl rule__RotateAllServosOperation__Group__1 ;
-    public final void rule__RotateAllServosOperation__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__RotateAllServos__Group__0"
+    // InternalCPtester.g:3068:1: rule__RotateAllServos__Group__0 : rule__RotateAllServos__Group__0__Impl rule__RotateAllServos__Group__1 ;
+    public final void rule__RotateAllServos__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:3072:1: ( rule__RotateAllServosOperation__Group__0__Impl rule__RotateAllServosOperation__Group__1 )
-            // InternalCPtester.g:3073:2: rule__RotateAllServosOperation__Group__0__Impl rule__RotateAllServosOperation__Group__1
+            // InternalCPtester.g:3072:1: ( rule__RotateAllServos__Group__0__Impl rule__RotateAllServos__Group__1 )
+            // InternalCPtester.g:3073:2: rule__RotateAllServos__Group__0__Impl rule__RotateAllServos__Group__1
             {
             pushFollow(FOLLOW_17);
-            rule__RotateAllServosOperation__Group__0__Impl();
+            rule__RotateAllServos__Group__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__RotateAllServosOperation__Group__1();
+            rule__RotateAllServos__Group__1();
 
             state._fsp--;
 
@@ -9271,35 +9271,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateAllServosOperation__Group__0"
+    // $ANTLR end "rule__RotateAllServos__Group__0"
 
 
-    // $ANTLR start "rule__RotateAllServosOperation__Group__0__Impl"
-    // InternalCPtester.g:3080:1: rule__RotateAllServosOperation__Group__0__Impl : ( ( rule__RotateAllServosOperation__NameAssignment_0 ) ) ;
-    public final void rule__RotateAllServosOperation__Group__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__RotateAllServos__Group__0__Impl"
+    // InternalCPtester.g:3080:1: rule__RotateAllServos__Group__0__Impl : ( ( rule__RotateAllServos__NameAssignment_0 ) ) ;
+    public final void rule__RotateAllServos__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:3084:1: ( ( ( rule__RotateAllServosOperation__NameAssignment_0 ) ) )
-            // InternalCPtester.g:3085:1: ( ( rule__RotateAllServosOperation__NameAssignment_0 ) )
+            // InternalCPtester.g:3084:1: ( ( ( rule__RotateAllServos__NameAssignment_0 ) ) )
+            // InternalCPtester.g:3085:1: ( ( rule__RotateAllServos__NameAssignment_0 ) )
             {
-            // InternalCPtester.g:3085:1: ( ( rule__RotateAllServosOperation__NameAssignment_0 ) )
-            // InternalCPtester.g:3086:2: ( rule__RotateAllServosOperation__NameAssignment_0 )
+            // InternalCPtester.g:3085:1: ( ( rule__RotateAllServos__NameAssignment_0 ) )
+            // InternalCPtester.g:3086:2: ( rule__RotateAllServos__NameAssignment_0 )
             {
-             before(grammarAccess.getRotateAllServosOperationAccess().getNameAssignment_0()); 
-            // InternalCPtester.g:3087:2: ( rule__RotateAllServosOperation__NameAssignment_0 )
-            // InternalCPtester.g:3087:3: rule__RotateAllServosOperation__NameAssignment_0
+             before(grammarAccess.getRotateAllServosAccess().getNameAssignment_0()); 
+            // InternalCPtester.g:3087:2: ( rule__RotateAllServos__NameAssignment_0 )
+            // InternalCPtester.g:3087:3: rule__RotateAllServos__NameAssignment_0
             {
             pushFollow(FOLLOW_2);
-            rule__RotateAllServosOperation__NameAssignment_0();
+            rule__RotateAllServos__NameAssignment_0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getRotateAllServosOperationAccess().getNameAssignment_0()); 
+             after(grammarAccess.getRotateAllServosAccess().getNameAssignment_0()); 
 
             }
 
@@ -9318,26 +9318,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateAllServosOperation__Group__0__Impl"
+    // $ANTLR end "rule__RotateAllServos__Group__0__Impl"
 
 
-    // $ANTLR start "rule__RotateAllServosOperation__Group__1"
-    // InternalCPtester.g:3095:1: rule__RotateAllServosOperation__Group__1 : rule__RotateAllServosOperation__Group__1__Impl rule__RotateAllServosOperation__Group__2 ;
-    public final void rule__RotateAllServosOperation__Group__1() throws RecognitionException {
+    // $ANTLR start "rule__RotateAllServos__Group__1"
+    // InternalCPtester.g:3095:1: rule__RotateAllServos__Group__1 : rule__RotateAllServos__Group__1__Impl rule__RotateAllServos__Group__2 ;
+    public final void rule__RotateAllServos__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:3099:1: ( rule__RotateAllServosOperation__Group__1__Impl rule__RotateAllServosOperation__Group__2 )
-            // InternalCPtester.g:3100:2: rule__RotateAllServosOperation__Group__1__Impl rule__RotateAllServosOperation__Group__2
+            // InternalCPtester.g:3099:1: ( rule__RotateAllServos__Group__1__Impl rule__RotateAllServos__Group__2 )
+            // InternalCPtester.g:3100:2: rule__RotateAllServos__Group__1__Impl rule__RotateAllServos__Group__2
             {
             pushFollow(FOLLOW_18);
-            rule__RotateAllServosOperation__Group__1__Impl();
+            rule__RotateAllServos__Group__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__RotateAllServosOperation__Group__2();
+            rule__RotateAllServos__Group__2();
 
             state._fsp--;
 
@@ -9356,12 +9356,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateAllServosOperation__Group__1"
+    // $ANTLR end "rule__RotateAllServos__Group__1"
 
 
-    // $ANTLR start "rule__RotateAllServosOperation__Group__1__Impl"
-    // InternalCPtester.g:3107:1: rule__RotateAllServosOperation__Group__1__Impl : ( '(' ) ;
-    public final void rule__RotateAllServosOperation__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__RotateAllServos__Group__1__Impl"
+    // InternalCPtester.g:3107:1: rule__RotateAllServos__Group__1__Impl : ( '(' ) ;
+    public final void rule__RotateAllServos__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -9372,9 +9372,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:3112:1: ( '(' )
             // InternalCPtester.g:3113:2: '('
             {
-             before(grammarAccess.getRotateAllServosOperationAccess().getLeftParenthesisKeyword_1()); 
+             before(grammarAccess.getRotateAllServosAccess().getLeftParenthesisKeyword_1()); 
             match(input,15,FOLLOW_2); 
-             after(grammarAccess.getRotateAllServosOperationAccess().getLeftParenthesisKeyword_1()); 
+             after(grammarAccess.getRotateAllServosAccess().getLeftParenthesisKeyword_1()); 
 
             }
 
@@ -9393,26 +9393,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateAllServosOperation__Group__1__Impl"
+    // $ANTLR end "rule__RotateAllServos__Group__1__Impl"
 
 
-    // $ANTLR start "rule__RotateAllServosOperation__Group__2"
-    // InternalCPtester.g:3122:1: rule__RotateAllServosOperation__Group__2 : rule__RotateAllServosOperation__Group__2__Impl rule__RotateAllServosOperation__Group__3 ;
-    public final void rule__RotateAllServosOperation__Group__2() throws RecognitionException {
+    // $ANTLR start "rule__RotateAllServos__Group__2"
+    // InternalCPtester.g:3122:1: rule__RotateAllServos__Group__2 : rule__RotateAllServos__Group__2__Impl rule__RotateAllServos__Group__3 ;
+    public final void rule__RotateAllServos__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:3126:1: ( rule__RotateAllServosOperation__Group__2__Impl rule__RotateAllServosOperation__Group__3 )
-            // InternalCPtester.g:3127:2: rule__RotateAllServosOperation__Group__2__Impl rule__RotateAllServosOperation__Group__3
+            // InternalCPtester.g:3126:1: ( rule__RotateAllServos__Group__2__Impl rule__RotateAllServos__Group__3 )
+            // InternalCPtester.g:3127:2: rule__RotateAllServos__Group__2__Impl rule__RotateAllServos__Group__3
             {
             pushFollow(FOLLOW_20);
-            rule__RotateAllServosOperation__Group__2__Impl();
+            rule__RotateAllServos__Group__2__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__RotateAllServosOperation__Group__3();
+            rule__RotateAllServos__Group__3();
 
             state._fsp--;
 
@@ -9431,35 +9431,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateAllServosOperation__Group__2"
+    // $ANTLR end "rule__RotateAllServos__Group__2"
 
 
-    // $ANTLR start "rule__RotateAllServosOperation__Group__2__Impl"
-    // InternalCPtester.g:3134:1: rule__RotateAllServosOperation__Group__2__Impl : ( ( rule__RotateAllServosOperation__Angle1Assignment_2 ) ) ;
-    public final void rule__RotateAllServosOperation__Group__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__RotateAllServos__Group__2__Impl"
+    // InternalCPtester.g:3134:1: rule__RotateAllServos__Group__2__Impl : ( ( rule__RotateAllServos__Angle1Assignment_2 ) ) ;
+    public final void rule__RotateAllServos__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:3138:1: ( ( ( rule__RotateAllServosOperation__Angle1Assignment_2 ) ) )
-            // InternalCPtester.g:3139:1: ( ( rule__RotateAllServosOperation__Angle1Assignment_2 ) )
+            // InternalCPtester.g:3138:1: ( ( ( rule__RotateAllServos__Angle1Assignment_2 ) ) )
+            // InternalCPtester.g:3139:1: ( ( rule__RotateAllServos__Angle1Assignment_2 ) )
             {
-            // InternalCPtester.g:3139:1: ( ( rule__RotateAllServosOperation__Angle1Assignment_2 ) )
-            // InternalCPtester.g:3140:2: ( rule__RotateAllServosOperation__Angle1Assignment_2 )
+            // InternalCPtester.g:3139:1: ( ( rule__RotateAllServos__Angle1Assignment_2 ) )
+            // InternalCPtester.g:3140:2: ( rule__RotateAllServos__Angle1Assignment_2 )
             {
-             before(grammarAccess.getRotateAllServosOperationAccess().getAngle1Assignment_2()); 
-            // InternalCPtester.g:3141:2: ( rule__RotateAllServosOperation__Angle1Assignment_2 )
-            // InternalCPtester.g:3141:3: rule__RotateAllServosOperation__Angle1Assignment_2
+             before(grammarAccess.getRotateAllServosAccess().getAngle1Assignment_2()); 
+            // InternalCPtester.g:3141:2: ( rule__RotateAllServos__Angle1Assignment_2 )
+            // InternalCPtester.g:3141:3: rule__RotateAllServos__Angle1Assignment_2
             {
             pushFollow(FOLLOW_2);
-            rule__RotateAllServosOperation__Angle1Assignment_2();
+            rule__RotateAllServos__Angle1Assignment_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getRotateAllServosOperationAccess().getAngle1Assignment_2()); 
+             after(grammarAccess.getRotateAllServosAccess().getAngle1Assignment_2()); 
 
             }
 
@@ -9478,26 +9478,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateAllServosOperation__Group__2__Impl"
+    // $ANTLR end "rule__RotateAllServos__Group__2__Impl"
 
 
-    // $ANTLR start "rule__RotateAllServosOperation__Group__3"
-    // InternalCPtester.g:3149:1: rule__RotateAllServosOperation__Group__3 : rule__RotateAllServosOperation__Group__3__Impl rule__RotateAllServosOperation__Group__4 ;
-    public final void rule__RotateAllServosOperation__Group__3() throws RecognitionException {
+    // $ANTLR start "rule__RotateAllServos__Group__3"
+    // InternalCPtester.g:3149:1: rule__RotateAllServos__Group__3 : rule__RotateAllServos__Group__3__Impl rule__RotateAllServos__Group__4 ;
+    public final void rule__RotateAllServos__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:3153:1: ( rule__RotateAllServosOperation__Group__3__Impl rule__RotateAllServosOperation__Group__4 )
-            // InternalCPtester.g:3154:2: rule__RotateAllServosOperation__Group__3__Impl rule__RotateAllServosOperation__Group__4
+            // InternalCPtester.g:3153:1: ( rule__RotateAllServos__Group__3__Impl rule__RotateAllServos__Group__4 )
+            // InternalCPtester.g:3154:2: rule__RotateAllServos__Group__3__Impl rule__RotateAllServos__Group__4
             {
             pushFollow(FOLLOW_18);
-            rule__RotateAllServosOperation__Group__3__Impl();
+            rule__RotateAllServos__Group__3__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__RotateAllServosOperation__Group__4();
+            rule__RotateAllServos__Group__4();
 
             state._fsp--;
 
@@ -9516,12 +9516,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateAllServosOperation__Group__3"
+    // $ANTLR end "rule__RotateAllServos__Group__3"
 
 
-    // $ANTLR start "rule__RotateAllServosOperation__Group__3__Impl"
-    // InternalCPtester.g:3161:1: rule__RotateAllServosOperation__Group__3__Impl : ( ',' ) ;
-    public final void rule__RotateAllServosOperation__Group__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__RotateAllServos__Group__3__Impl"
+    // InternalCPtester.g:3161:1: rule__RotateAllServos__Group__3__Impl : ( ',' ) ;
+    public final void rule__RotateAllServos__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -9532,9 +9532,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:3166:1: ( ',' )
             // InternalCPtester.g:3167:2: ','
             {
-             before(grammarAccess.getRotateAllServosOperationAccess().getCommaKeyword_3()); 
+             before(grammarAccess.getRotateAllServosAccess().getCommaKeyword_3()); 
             match(input,17,FOLLOW_2); 
-             after(grammarAccess.getRotateAllServosOperationAccess().getCommaKeyword_3()); 
+             after(grammarAccess.getRotateAllServosAccess().getCommaKeyword_3()); 
 
             }
 
@@ -9553,26 +9553,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateAllServosOperation__Group__3__Impl"
+    // $ANTLR end "rule__RotateAllServos__Group__3__Impl"
 
 
-    // $ANTLR start "rule__RotateAllServosOperation__Group__4"
-    // InternalCPtester.g:3176:1: rule__RotateAllServosOperation__Group__4 : rule__RotateAllServosOperation__Group__4__Impl rule__RotateAllServosOperation__Group__5 ;
-    public final void rule__RotateAllServosOperation__Group__4() throws RecognitionException {
+    // $ANTLR start "rule__RotateAllServos__Group__4"
+    // InternalCPtester.g:3176:1: rule__RotateAllServos__Group__4 : rule__RotateAllServos__Group__4__Impl rule__RotateAllServos__Group__5 ;
+    public final void rule__RotateAllServos__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:3180:1: ( rule__RotateAllServosOperation__Group__4__Impl rule__RotateAllServosOperation__Group__5 )
-            // InternalCPtester.g:3181:2: rule__RotateAllServosOperation__Group__4__Impl rule__RotateAllServosOperation__Group__5
+            // InternalCPtester.g:3180:1: ( rule__RotateAllServos__Group__4__Impl rule__RotateAllServos__Group__5 )
+            // InternalCPtester.g:3181:2: rule__RotateAllServos__Group__4__Impl rule__RotateAllServos__Group__5
             {
             pushFollow(FOLLOW_20);
-            rule__RotateAllServosOperation__Group__4__Impl();
+            rule__RotateAllServos__Group__4__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__RotateAllServosOperation__Group__5();
+            rule__RotateAllServos__Group__5();
 
             state._fsp--;
 
@@ -9591,35 +9591,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateAllServosOperation__Group__4"
+    // $ANTLR end "rule__RotateAllServos__Group__4"
 
 
-    // $ANTLR start "rule__RotateAllServosOperation__Group__4__Impl"
-    // InternalCPtester.g:3188:1: rule__RotateAllServosOperation__Group__4__Impl : ( ( rule__RotateAllServosOperation__Angle2Assignment_4 ) ) ;
-    public final void rule__RotateAllServosOperation__Group__4__Impl() throws RecognitionException {
+    // $ANTLR start "rule__RotateAllServos__Group__4__Impl"
+    // InternalCPtester.g:3188:1: rule__RotateAllServos__Group__4__Impl : ( ( rule__RotateAllServos__Angle2Assignment_4 ) ) ;
+    public final void rule__RotateAllServos__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:3192:1: ( ( ( rule__RotateAllServosOperation__Angle2Assignment_4 ) ) )
-            // InternalCPtester.g:3193:1: ( ( rule__RotateAllServosOperation__Angle2Assignment_4 ) )
+            // InternalCPtester.g:3192:1: ( ( ( rule__RotateAllServos__Angle2Assignment_4 ) ) )
+            // InternalCPtester.g:3193:1: ( ( rule__RotateAllServos__Angle2Assignment_4 ) )
             {
-            // InternalCPtester.g:3193:1: ( ( rule__RotateAllServosOperation__Angle2Assignment_4 ) )
-            // InternalCPtester.g:3194:2: ( rule__RotateAllServosOperation__Angle2Assignment_4 )
+            // InternalCPtester.g:3193:1: ( ( rule__RotateAllServos__Angle2Assignment_4 ) )
+            // InternalCPtester.g:3194:2: ( rule__RotateAllServos__Angle2Assignment_4 )
             {
-             before(grammarAccess.getRotateAllServosOperationAccess().getAngle2Assignment_4()); 
-            // InternalCPtester.g:3195:2: ( rule__RotateAllServosOperation__Angle2Assignment_4 )
-            // InternalCPtester.g:3195:3: rule__RotateAllServosOperation__Angle2Assignment_4
+             before(grammarAccess.getRotateAllServosAccess().getAngle2Assignment_4()); 
+            // InternalCPtester.g:3195:2: ( rule__RotateAllServos__Angle2Assignment_4 )
+            // InternalCPtester.g:3195:3: rule__RotateAllServos__Angle2Assignment_4
             {
             pushFollow(FOLLOW_2);
-            rule__RotateAllServosOperation__Angle2Assignment_4();
+            rule__RotateAllServos__Angle2Assignment_4();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getRotateAllServosOperationAccess().getAngle2Assignment_4()); 
+             after(grammarAccess.getRotateAllServosAccess().getAngle2Assignment_4()); 
 
             }
 
@@ -9638,26 +9638,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateAllServosOperation__Group__4__Impl"
+    // $ANTLR end "rule__RotateAllServos__Group__4__Impl"
 
 
-    // $ANTLR start "rule__RotateAllServosOperation__Group__5"
-    // InternalCPtester.g:3203:1: rule__RotateAllServosOperation__Group__5 : rule__RotateAllServosOperation__Group__5__Impl rule__RotateAllServosOperation__Group__6 ;
-    public final void rule__RotateAllServosOperation__Group__5() throws RecognitionException {
+    // $ANTLR start "rule__RotateAllServos__Group__5"
+    // InternalCPtester.g:3203:1: rule__RotateAllServos__Group__5 : rule__RotateAllServos__Group__5__Impl rule__RotateAllServos__Group__6 ;
+    public final void rule__RotateAllServos__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:3207:1: ( rule__RotateAllServosOperation__Group__5__Impl rule__RotateAllServosOperation__Group__6 )
-            // InternalCPtester.g:3208:2: rule__RotateAllServosOperation__Group__5__Impl rule__RotateAllServosOperation__Group__6
+            // InternalCPtester.g:3207:1: ( rule__RotateAllServos__Group__5__Impl rule__RotateAllServos__Group__6 )
+            // InternalCPtester.g:3208:2: rule__RotateAllServos__Group__5__Impl rule__RotateAllServos__Group__6
             {
             pushFollow(FOLLOW_18);
-            rule__RotateAllServosOperation__Group__5__Impl();
+            rule__RotateAllServos__Group__5__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__RotateAllServosOperation__Group__6();
+            rule__RotateAllServos__Group__6();
 
             state._fsp--;
 
@@ -9676,12 +9676,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateAllServosOperation__Group__5"
+    // $ANTLR end "rule__RotateAllServos__Group__5"
 
 
-    // $ANTLR start "rule__RotateAllServosOperation__Group__5__Impl"
-    // InternalCPtester.g:3215:1: rule__RotateAllServosOperation__Group__5__Impl : ( ',' ) ;
-    public final void rule__RotateAllServosOperation__Group__5__Impl() throws RecognitionException {
+    // $ANTLR start "rule__RotateAllServos__Group__5__Impl"
+    // InternalCPtester.g:3215:1: rule__RotateAllServos__Group__5__Impl : ( ',' ) ;
+    public final void rule__RotateAllServos__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -9692,9 +9692,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:3220:1: ( ',' )
             // InternalCPtester.g:3221:2: ','
             {
-             before(grammarAccess.getRotateAllServosOperationAccess().getCommaKeyword_5()); 
+             before(grammarAccess.getRotateAllServosAccess().getCommaKeyword_5()); 
             match(input,17,FOLLOW_2); 
-             after(grammarAccess.getRotateAllServosOperationAccess().getCommaKeyword_5()); 
+             after(grammarAccess.getRotateAllServosAccess().getCommaKeyword_5()); 
 
             }
 
@@ -9713,26 +9713,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateAllServosOperation__Group__5__Impl"
+    // $ANTLR end "rule__RotateAllServos__Group__5__Impl"
 
 
-    // $ANTLR start "rule__RotateAllServosOperation__Group__6"
-    // InternalCPtester.g:3230:1: rule__RotateAllServosOperation__Group__6 : rule__RotateAllServosOperation__Group__6__Impl rule__RotateAllServosOperation__Group__7 ;
-    public final void rule__RotateAllServosOperation__Group__6() throws RecognitionException {
+    // $ANTLR start "rule__RotateAllServos__Group__6"
+    // InternalCPtester.g:3230:1: rule__RotateAllServos__Group__6 : rule__RotateAllServos__Group__6__Impl rule__RotateAllServos__Group__7 ;
+    public final void rule__RotateAllServos__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:3234:1: ( rule__RotateAllServosOperation__Group__6__Impl rule__RotateAllServosOperation__Group__7 )
-            // InternalCPtester.g:3235:2: rule__RotateAllServosOperation__Group__6__Impl rule__RotateAllServosOperation__Group__7
+            // InternalCPtester.g:3234:1: ( rule__RotateAllServos__Group__6__Impl rule__RotateAllServos__Group__7 )
+            // InternalCPtester.g:3235:2: rule__RotateAllServos__Group__6__Impl rule__RotateAllServos__Group__7
             {
             pushFollow(FOLLOW_20);
-            rule__RotateAllServosOperation__Group__6__Impl();
+            rule__RotateAllServos__Group__6__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__RotateAllServosOperation__Group__7();
+            rule__RotateAllServos__Group__7();
 
             state._fsp--;
 
@@ -9751,35 +9751,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateAllServosOperation__Group__6"
+    // $ANTLR end "rule__RotateAllServos__Group__6"
 
 
-    // $ANTLR start "rule__RotateAllServosOperation__Group__6__Impl"
-    // InternalCPtester.g:3242:1: rule__RotateAllServosOperation__Group__6__Impl : ( ( rule__RotateAllServosOperation__Angle3Assignment_6 ) ) ;
-    public final void rule__RotateAllServosOperation__Group__6__Impl() throws RecognitionException {
+    // $ANTLR start "rule__RotateAllServos__Group__6__Impl"
+    // InternalCPtester.g:3242:1: rule__RotateAllServos__Group__6__Impl : ( ( rule__RotateAllServos__Angle3Assignment_6 ) ) ;
+    public final void rule__RotateAllServos__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:3246:1: ( ( ( rule__RotateAllServosOperation__Angle3Assignment_6 ) ) )
-            // InternalCPtester.g:3247:1: ( ( rule__RotateAllServosOperation__Angle3Assignment_6 ) )
+            // InternalCPtester.g:3246:1: ( ( ( rule__RotateAllServos__Angle3Assignment_6 ) ) )
+            // InternalCPtester.g:3247:1: ( ( rule__RotateAllServos__Angle3Assignment_6 ) )
             {
-            // InternalCPtester.g:3247:1: ( ( rule__RotateAllServosOperation__Angle3Assignment_6 ) )
-            // InternalCPtester.g:3248:2: ( rule__RotateAllServosOperation__Angle3Assignment_6 )
+            // InternalCPtester.g:3247:1: ( ( rule__RotateAllServos__Angle3Assignment_6 ) )
+            // InternalCPtester.g:3248:2: ( rule__RotateAllServos__Angle3Assignment_6 )
             {
-             before(grammarAccess.getRotateAllServosOperationAccess().getAngle3Assignment_6()); 
-            // InternalCPtester.g:3249:2: ( rule__RotateAllServosOperation__Angle3Assignment_6 )
-            // InternalCPtester.g:3249:3: rule__RotateAllServosOperation__Angle3Assignment_6
+             before(grammarAccess.getRotateAllServosAccess().getAngle3Assignment_6()); 
+            // InternalCPtester.g:3249:2: ( rule__RotateAllServos__Angle3Assignment_6 )
+            // InternalCPtester.g:3249:3: rule__RotateAllServos__Angle3Assignment_6
             {
             pushFollow(FOLLOW_2);
-            rule__RotateAllServosOperation__Angle3Assignment_6();
+            rule__RotateAllServos__Angle3Assignment_6();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getRotateAllServosOperationAccess().getAngle3Assignment_6()); 
+             after(grammarAccess.getRotateAllServosAccess().getAngle3Assignment_6()); 
 
             }
 
@@ -9798,26 +9798,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateAllServosOperation__Group__6__Impl"
+    // $ANTLR end "rule__RotateAllServos__Group__6__Impl"
 
 
-    // $ANTLR start "rule__RotateAllServosOperation__Group__7"
-    // InternalCPtester.g:3257:1: rule__RotateAllServosOperation__Group__7 : rule__RotateAllServosOperation__Group__7__Impl rule__RotateAllServosOperation__Group__8 ;
-    public final void rule__RotateAllServosOperation__Group__7() throws RecognitionException {
+    // $ANTLR start "rule__RotateAllServos__Group__7"
+    // InternalCPtester.g:3257:1: rule__RotateAllServos__Group__7 : rule__RotateAllServos__Group__7__Impl rule__RotateAllServos__Group__8 ;
+    public final void rule__RotateAllServos__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:3261:1: ( rule__RotateAllServosOperation__Group__7__Impl rule__RotateAllServosOperation__Group__8 )
-            // InternalCPtester.g:3262:2: rule__RotateAllServosOperation__Group__7__Impl rule__RotateAllServosOperation__Group__8
+            // InternalCPtester.g:3261:1: ( rule__RotateAllServos__Group__7__Impl rule__RotateAllServos__Group__8 )
+            // InternalCPtester.g:3262:2: rule__RotateAllServos__Group__7__Impl rule__RotateAllServos__Group__8
             {
             pushFollow(FOLLOW_18);
-            rule__RotateAllServosOperation__Group__7__Impl();
+            rule__RotateAllServos__Group__7__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__RotateAllServosOperation__Group__8();
+            rule__RotateAllServos__Group__8();
 
             state._fsp--;
 
@@ -9836,12 +9836,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateAllServosOperation__Group__7"
+    // $ANTLR end "rule__RotateAllServos__Group__7"
 
 
-    // $ANTLR start "rule__RotateAllServosOperation__Group__7__Impl"
-    // InternalCPtester.g:3269:1: rule__RotateAllServosOperation__Group__7__Impl : ( ',' ) ;
-    public final void rule__RotateAllServosOperation__Group__7__Impl() throws RecognitionException {
+    // $ANTLR start "rule__RotateAllServos__Group__7__Impl"
+    // InternalCPtester.g:3269:1: rule__RotateAllServos__Group__7__Impl : ( ',' ) ;
+    public final void rule__RotateAllServos__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -9852,9 +9852,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:3274:1: ( ',' )
             // InternalCPtester.g:3275:2: ','
             {
-             before(grammarAccess.getRotateAllServosOperationAccess().getCommaKeyword_7()); 
+             before(grammarAccess.getRotateAllServosAccess().getCommaKeyword_7()); 
             match(input,17,FOLLOW_2); 
-             after(grammarAccess.getRotateAllServosOperationAccess().getCommaKeyword_7()); 
+             after(grammarAccess.getRotateAllServosAccess().getCommaKeyword_7()); 
 
             }
 
@@ -9873,26 +9873,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateAllServosOperation__Group__7__Impl"
+    // $ANTLR end "rule__RotateAllServos__Group__7__Impl"
 
 
-    // $ANTLR start "rule__RotateAllServosOperation__Group__8"
-    // InternalCPtester.g:3284:1: rule__RotateAllServosOperation__Group__8 : rule__RotateAllServosOperation__Group__8__Impl rule__RotateAllServosOperation__Group__9 ;
-    public final void rule__RotateAllServosOperation__Group__8() throws RecognitionException {
+    // $ANTLR start "rule__RotateAllServos__Group__8"
+    // InternalCPtester.g:3284:1: rule__RotateAllServos__Group__8 : rule__RotateAllServos__Group__8__Impl rule__RotateAllServos__Group__9 ;
+    public final void rule__RotateAllServos__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:3288:1: ( rule__RotateAllServosOperation__Group__8__Impl rule__RotateAllServosOperation__Group__9 )
-            // InternalCPtester.g:3289:2: rule__RotateAllServosOperation__Group__8__Impl rule__RotateAllServosOperation__Group__9
+            // InternalCPtester.g:3288:1: ( rule__RotateAllServos__Group__8__Impl rule__RotateAllServos__Group__9 )
+            // InternalCPtester.g:3289:2: rule__RotateAllServos__Group__8__Impl rule__RotateAllServos__Group__9
             {
             pushFollow(FOLLOW_20);
-            rule__RotateAllServosOperation__Group__8__Impl();
+            rule__RotateAllServos__Group__8__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__RotateAllServosOperation__Group__9();
+            rule__RotateAllServos__Group__9();
 
             state._fsp--;
 
@@ -9911,35 +9911,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateAllServosOperation__Group__8"
+    // $ANTLR end "rule__RotateAllServos__Group__8"
 
 
-    // $ANTLR start "rule__RotateAllServosOperation__Group__8__Impl"
-    // InternalCPtester.g:3296:1: rule__RotateAllServosOperation__Group__8__Impl : ( ( rule__RotateAllServosOperation__Angle4Assignment_8 ) ) ;
-    public final void rule__RotateAllServosOperation__Group__8__Impl() throws RecognitionException {
+    // $ANTLR start "rule__RotateAllServos__Group__8__Impl"
+    // InternalCPtester.g:3296:1: rule__RotateAllServos__Group__8__Impl : ( ( rule__RotateAllServos__Angle4Assignment_8 ) ) ;
+    public final void rule__RotateAllServos__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:3300:1: ( ( ( rule__RotateAllServosOperation__Angle4Assignment_8 ) ) )
-            // InternalCPtester.g:3301:1: ( ( rule__RotateAllServosOperation__Angle4Assignment_8 ) )
+            // InternalCPtester.g:3300:1: ( ( ( rule__RotateAllServos__Angle4Assignment_8 ) ) )
+            // InternalCPtester.g:3301:1: ( ( rule__RotateAllServos__Angle4Assignment_8 ) )
             {
-            // InternalCPtester.g:3301:1: ( ( rule__RotateAllServosOperation__Angle4Assignment_8 ) )
-            // InternalCPtester.g:3302:2: ( rule__RotateAllServosOperation__Angle4Assignment_8 )
+            // InternalCPtester.g:3301:1: ( ( rule__RotateAllServos__Angle4Assignment_8 ) )
+            // InternalCPtester.g:3302:2: ( rule__RotateAllServos__Angle4Assignment_8 )
             {
-             before(grammarAccess.getRotateAllServosOperationAccess().getAngle4Assignment_8()); 
-            // InternalCPtester.g:3303:2: ( rule__RotateAllServosOperation__Angle4Assignment_8 )
-            // InternalCPtester.g:3303:3: rule__RotateAllServosOperation__Angle4Assignment_8
+             before(grammarAccess.getRotateAllServosAccess().getAngle4Assignment_8()); 
+            // InternalCPtester.g:3303:2: ( rule__RotateAllServos__Angle4Assignment_8 )
+            // InternalCPtester.g:3303:3: rule__RotateAllServos__Angle4Assignment_8
             {
             pushFollow(FOLLOW_2);
-            rule__RotateAllServosOperation__Angle4Assignment_8();
+            rule__RotateAllServos__Angle4Assignment_8();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getRotateAllServosOperationAccess().getAngle4Assignment_8()); 
+             after(grammarAccess.getRotateAllServosAccess().getAngle4Assignment_8()); 
 
             }
 
@@ -9958,26 +9958,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateAllServosOperation__Group__8__Impl"
+    // $ANTLR end "rule__RotateAllServos__Group__8__Impl"
 
 
-    // $ANTLR start "rule__RotateAllServosOperation__Group__9"
-    // InternalCPtester.g:3311:1: rule__RotateAllServosOperation__Group__9 : rule__RotateAllServosOperation__Group__9__Impl rule__RotateAllServosOperation__Group__10 ;
-    public final void rule__RotateAllServosOperation__Group__9() throws RecognitionException {
+    // $ANTLR start "rule__RotateAllServos__Group__9"
+    // InternalCPtester.g:3311:1: rule__RotateAllServos__Group__9 : rule__RotateAllServos__Group__9__Impl rule__RotateAllServos__Group__10 ;
+    public final void rule__RotateAllServos__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:3315:1: ( rule__RotateAllServosOperation__Group__9__Impl rule__RotateAllServosOperation__Group__10 )
-            // InternalCPtester.g:3316:2: rule__RotateAllServosOperation__Group__9__Impl rule__RotateAllServosOperation__Group__10
+            // InternalCPtester.g:3315:1: ( rule__RotateAllServos__Group__9__Impl rule__RotateAllServos__Group__10 )
+            // InternalCPtester.g:3316:2: rule__RotateAllServos__Group__9__Impl rule__RotateAllServos__Group__10
             {
             pushFollow(FOLLOW_18);
-            rule__RotateAllServosOperation__Group__9__Impl();
+            rule__RotateAllServos__Group__9__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__RotateAllServosOperation__Group__10();
+            rule__RotateAllServos__Group__10();
 
             state._fsp--;
 
@@ -9996,12 +9996,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateAllServosOperation__Group__9"
+    // $ANTLR end "rule__RotateAllServos__Group__9"
 
 
-    // $ANTLR start "rule__RotateAllServosOperation__Group__9__Impl"
-    // InternalCPtester.g:3323:1: rule__RotateAllServosOperation__Group__9__Impl : ( ',' ) ;
-    public final void rule__RotateAllServosOperation__Group__9__Impl() throws RecognitionException {
+    // $ANTLR start "rule__RotateAllServos__Group__9__Impl"
+    // InternalCPtester.g:3323:1: rule__RotateAllServos__Group__9__Impl : ( ',' ) ;
+    public final void rule__RotateAllServos__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -10012,9 +10012,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:3328:1: ( ',' )
             // InternalCPtester.g:3329:2: ','
             {
-             before(grammarAccess.getRotateAllServosOperationAccess().getCommaKeyword_9()); 
+             before(grammarAccess.getRotateAllServosAccess().getCommaKeyword_9()); 
             match(input,17,FOLLOW_2); 
-             after(grammarAccess.getRotateAllServosOperationAccess().getCommaKeyword_9()); 
+             after(grammarAccess.getRotateAllServosAccess().getCommaKeyword_9()); 
 
             }
 
@@ -10033,26 +10033,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateAllServosOperation__Group__9__Impl"
+    // $ANTLR end "rule__RotateAllServos__Group__9__Impl"
 
 
-    // $ANTLR start "rule__RotateAllServosOperation__Group__10"
-    // InternalCPtester.g:3338:1: rule__RotateAllServosOperation__Group__10 : rule__RotateAllServosOperation__Group__10__Impl rule__RotateAllServosOperation__Group__11 ;
-    public final void rule__RotateAllServosOperation__Group__10() throws RecognitionException {
+    // $ANTLR start "rule__RotateAllServos__Group__10"
+    // InternalCPtester.g:3338:1: rule__RotateAllServos__Group__10 : rule__RotateAllServos__Group__10__Impl rule__RotateAllServos__Group__11 ;
+    public final void rule__RotateAllServos__Group__10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:3342:1: ( rule__RotateAllServosOperation__Group__10__Impl rule__RotateAllServosOperation__Group__11 )
-            // InternalCPtester.g:3343:2: rule__RotateAllServosOperation__Group__10__Impl rule__RotateAllServosOperation__Group__11
+            // InternalCPtester.g:3342:1: ( rule__RotateAllServos__Group__10__Impl rule__RotateAllServos__Group__11 )
+            // InternalCPtester.g:3343:2: rule__RotateAllServos__Group__10__Impl rule__RotateAllServos__Group__11
             {
             pushFollow(FOLLOW_20);
-            rule__RotateAllServosOperation__Group__10__Impl();
+            rule__RotateAllServos__Group__10__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__RotateAllServosOperation__Group__11();
+            rule__RotateAllServos__Group__11();
 
             state._fsp--;
 
@@ -10071,35 +10071,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateAllServosOperation__Group__10"
+    // $ANTLR end "rule__RotateAllServos__Group__10"
 
 
-    // $ANTLR start "rule__RotateAllServosOperation__Group__10__Impl"
-    // InternalCPtester.g:3350:1: rule__RotateAllServosOperation__Group__10__Impl : ( ( rule__RotateAllServosOperation__Angle5Assignment_10 ) ) ;
-    public final void rule__RotateAllServosOperation__Group__10__Impl() throws RecognitionException {
+    // $ANTLR start "rule__RotateAllServos__Group__10__Impl"
+    // InternalCPtester.g:3350:1: rule__RotateAllServos__Group__10__Impl : ( ( rule__RotateAllServos__Angle5Assignment_10 ) ) ;
+    public final void rule__RotateAllServos__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:3354:1: ( ( ( rule__RotateAllServosOperation__Angle5Assignment_10 ) ) )
-            // InternalCPtester.g:3355:1: ( ( rule__RotateAllServosOperation__Angle5Assignment_10 ) )
+            // InternalCPtester.g:3354:1: ( ( ( rule__RotateAllServos__Angle5Assignment_10 ) ) )
+            // InternalCPtester.g:3355:1: ( ( rule__RotateAllServos__Angle5Assignment_10 ) )
             {
-            // InternalCPtester.g:3355:1: ( ( rule__RotateAllServosOperation__Angle5Assignment_10 ) )
-            // InternalCPtester.g:3356:2: ( rule__RotateAllServosOperation__Angle5Assignment_10 )
+            // InternalCPtester.g:3355:1: ( ( rule__RotateAllServos__Angle5Assignment_10 ) )
+            // InternalCPtester.g:3356:2: ( rule__RotateAllServos__Angle5Assignment_10 )
             {
-             before(grammarAccess.getRotateAllServosOperationAccess().getAngle5Assignment_10()); 
-            // InternalCPtester.g:3357:2: ( rule__RotateAllServosOperation__Angle5Assignment_10 )
-            // InternalCPtester.g:3357:3: rule__RotateAllServosOperation__Angle5Assignment_10
+             before(grammarAccess.getRotateAllServosAccess().getAngle5Assignment_10()); 
+            // InternalCPtester.g:3357:2: ( rule__RotateAllServos__Angle5Assignment_10 )
+            // InternalCPtester.g:3357:3: rule__RotateAllServos__Angle5Assignment_10
             {
             pushFollow(FOLLOW_2);
-            rule__RotateAllServosOperation__Angle5Assignment_10();
+            rule__RotateAllServos__Angle5Assignment_10();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getRotateAllServosOperationAccess().getAngle5Assignment_10()); 
+             after(grammarAccess.getRotateAllServosAccess().getAngle5Assignment_10()); 
 
             }
 
@@ -10118,26 +10118,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateAllServosOperation__Group__10__Impl"
+    // $ANTLR end "rule__RotateAllServos__Group__10__Impl"
 
 
-    // $ANTLR start "rule__RotateAllServosOperation__Group__11"
-    // InternalCPtester.g:3365:1: rule__RotateAllServosOperation__Group__11 : rule__RotateAllServosOperation__Group__11__Impl rule__RotateAllServosOperation__Group__12 ;
-    public final void rule__RotateAllServosOperation__Group__11() throws RecognitionException {
+    // $ANTLR start "rule__RotateAllServos__Group__11"
+    // InternalCPtester.g:3365:1: rule__RotateAllServos__Group__11 : rule__RotateAllServos__Group__11__Impl rule__RotateAllServos__Group__12 ;
+    public final void rule__RotateAllServos__Group__11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:3369:1: ( rule__RotateAllServosOperation__Group__11__Impl rule__RotateAllServosOperation__Group__12 )
-            // InternalCPtester.g:3370:2: rule__RotateAllServosOperation__Group__11__Impl rule__RotateAllServosOperation__Group__12
+            // InternalCPtester.g:3369:1: ( rule__RotateAllServos__Group__11__Impl rule__RotateAllServos__Group__12 )
+            // InternalCPtester.g:3370:2: rule__RotateAllServos__Group__11__Impl rule__RotateAllServos__Group__12
             {
             pushFollow(FOLLOW_18);
-            rule__RotateAllServosOperation__Group__11__Impl();
+            rule__RotateAllServos__Group__11__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__RotateAllServosOperation__Group__12();
+            rule__RotateAllServos__Group__12();
 
             state._fsp--;
 
@@ -10156,12 +10156,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateAllServosOperation__Group__11"
+    // $ANTLR end "rule__RotateAllServos__Group__11"
 
 
-    // $ANTLR start "rule__RotateAllServosOperation__Group__11__Impl"
-    // InternalCPtester.g:3377:1: rule__RotateAllServosOperation__Group__11__Impl : ( ',' ) ;
-    public final void rule__RotateAllServosOperation__Group__11__Impl() throws RecognitionException {
+    // $ANTLR start "rule__RotateAllServos__Group__11__Impl"
+    // InternalCPtester.g:3377:1: rule__RotateAllServos__Group__11__Impl : ( ',' ) ;
+    public final void rule__RotateAllServos__Group__11__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -10172,9 +10172,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:3382:1: ( ',' )
             // InternalCPtester.g:3383:2: ','
             {
-             before(grammarAccess.getRotateAllServosOperationAccess().getCommaKeyword_11()); 
+             before(grammarAccess.getRotateAllServosAccess().getCommaKeyword_11()); 
             match(input,17,FOLLOW_2); 
-             after(grammarAccess.getRotateAllServosOperationAccess().getCommaKeyword_11()); 
+             after(grammarAccess.getRotateAllServosAccess().getCommaKeyword_11()); 
 
             }
 
@@ -10193,26 +10193,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateAllServosOperation__Group__11__Impl"
+    // $ANTLR end "rule__RotateAllServos__Group__11__Impl"
 
 
-    // $ANTLR start "rule__RotateAllServosOperation__Group__12"
-    // InternalCPtester.g:3392:1: rule__RotateAllServosOperation__Group__12 : rule__RotateAllServosOperation__Group__12__Impl rule__RotateAllServosOperation__Group__13 ;
-    public final void rule__RotateAllServosOperation__Group__12() throws RecognitionException {
+    // $ANTLR start "rule__RotateAllServos__Group__12"
+    // InternalCPtester.g:3392:1: rule__RotateAllServos__Group__12 : rule__RotateAllServos__Group__12__Impl rule__RotateAllServos__Group__13 ;
+    public final void rule__RotateAllServos__Group__12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:3396:1: ( rule__RotateAllServosOperation__Group__12__Impl rule__RotateAllServosOperation__Group__13 )
-            // InternalCPtester.g:3397:2: rule__RotateAllServosOperation__Group__12__Impl rule__RotateAllServosOperation__Group__13
+            // InternalCPtester.g:3396:1: ( rule__RotateAllServos__Group__12__Impl rule__RotateAllServos__Group__13 )
+            // InternalCPtester.g:3397:2: rule__RotateAllServos__Group__12__Impl rule__RotateAllServos__Group__13
             {
             pushFollow(FOLLOW_20);
-            rule__RotateAllServosOperation__Group__12__Impl();
+            rule__RotateAllServos__Group__12__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__RotateAllServosOperation__Group__13();
+            rule__RotateAllServos__Group__13();
 
             state._fsp--;
 
@@ -10231,35 +10231,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateAllServosOperation__Group__12"
+    // $ANTLR end "rule__RotateAllServos__Group__12"
 
 
-    // $ANTLR start "rule__RotateAllServosOperation__Group__12__Impl"
-    // InternalCPtester.g:3404:1: rule__RotateAllServosOperation__Group__12__Impl : ( ( rule__RotateAllServosOperation__Angle6Assignment_12 ) ) ;
-    public final void rule__RotateAllServosOperation__Group__12__Impl() throws RecognitionException {
+    // $ANTLR start "rule__RotateAllServos__Group__12__Impl"
+    // InternalCPtester.g:3404:1: rule__RotateAllServos__Group__12__Impl : ( ( rule__RotateAllServos__Angle6Assignment_12 ) ) ;
+    public final void rule__RotateAllServos__Group__12__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:3408:1: ( ( ( rule__RotateAllServosOperation__Angle6Assignment_12 ) ) )
-            // InternalCPtester.g:3409:1: ( ( rule__RotateAllServosOperation__Angle6Assignment_12 ) )
+            // InternalCPtester.g:3408:1: ( ( ( rule__RotateAllServos__Angle6Assignment_12 ) ) )
+            // InternalCPtester.g:3409:1: ( ( rule__RotateAllServos__Angle6Assignment_12 ) )
             {
-            // InternalCPtester.g:3409:1: ( ( rule__RotateAllServosOperation__Angle6Assignment_12 ) )
-            // InternalCPtester.g:3410:2: ( rule__RotateAllServosOperation__Angle6Assignment_12 )
+            // InternalCPtester.g:3409:1: ( ( rule__RotateAllServos__Angle6Assignment_12 ) )
+            // InternalCPtester.g:3410:2: ( rule__RotateAllServos__Angle6Assignment_12 )
             {
-             before(grammarAccess.getRotateAllServosOperationAccess().getAngle6Assignment_12()); 
-            // InternalCPtester.g:3411:2: ( rule__RotateAllServosOperation__Angle6Assignment_12 )
-            // InternalCPtester.g:3411:3: rule__RotateAllServosOperation__Angle6Assignment_12
+             before(grammarAccess.getRotateAllServosAccess().getAngle6Assignment_12()); 
+            // InternalCPtester.g:3411:2: ( rule__RotateAllServos__Angle6Assignment_12 )
+            // InternalCPtester.g:3411:3: rule__RotateAllServos__Angle6Assignment_12
             {
             pushFollow(FOLLOW_2);
-            rule__RotateAllServosOperation__Angle6Assignment_12();
+            rule__RotateAllServos__Angle6Assignment_12();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getRotateAllServosOperationAccess().getAngle6Assignment_12()); 
+             after(grammarAccess.getRotateAllServosAccess().getAngle6Assignment_12()); 
 
             }
 
@@ -10278,26 +10278,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateAllServosOperation__Group__12__Impl"
+    // $ANTLR end "rule__RotateAllServos__Group__12__Impl"
 
 
-    // $ANTLR start "rule__RotateAllServosOperation__Group__13"
-    // InternalCPtester.g:3419:1: rule__RotateAllServosOperation__Group__13 : rule__RotateAllServosOperation__Group__13__Impl rule__RotateAllServosOperation__Group__14 ;
-    public final void rule__RotateAllServosOperation__Group__13() throws RecognitionException {
+    // $ANTLR start "rule__RotateAllServos__Group__13"
+    // InternalCPtester.g:3419:1: rule__RotateAllServos__Group__13 : rule__RotateAllServos__Group__13__Impl rule__RotateAllServos__Group__14 ;
+    public final void rule__RotateAllServos__Group__13() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:3423:1: ( rule__RotateAllServosOperation__Group__13__Impl rule__RotateAllServosOperation__Group__14 )
-            // InternalCPtester.g:3424:2: rule__RotateAllServosOperation__Group__13__Impl rule__RotateAllServosOperation__Group__14
+            // InternalCPtester.g:3423:1: ( rule__RotateAllServos__Group__13__Impl rule__RotateAllServos__Group__14 )
+            // InternalCPtester.g:3424:2: rule__RotateAllServos__Group__13__Impl rule__RotateAllServos__Group__14
             {
             pushFollow(FOLLOW_18);
-            rule__RotateAllServosOperation__Group__13__Impl();
+            rule__RotateAllServos__Group__13__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__RotateAllServosOperation__Group__14();
+            rule__RotateAllServos__Group__14();
 
             state._fsp--;
 
@@ -10316,12 +10316,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateAllServosOperation__Group__13"
+    // $ANTLR end "rule__RotateAllServos__Group__13"
 
 
-    // $ANTLR start "rule__RotateAllServosOperation__Group__13__Impl"
-    // InternalCPtester.g:3431:1: rule__RotateAllServosOperation__Group__13__Impl : ( ',' ) ;
-    public final void rule__RotateAllServosOperation__Group__13__Impl() throws RecognitionException {
+    // $ANTLR start "rule__RotateAllServos__Group__13__Impl"
+    // InternalCPtester.g:3431:1: rule__RotateAllServos__Group__13__Impl : ( ',' ) ;
+    public final void rule__RotateAllServos__Group__13__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -10332,9 +10332,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:3436:1: ( ',' )
             // InternalCPtester.g:3437:2: ','
             {
-             before(grammarAccess.getRotateAllServosOperationAccess().getCommaKeyword_13()); 
+             before(grammarAccess.getRotateAllServosAccess().getCommaKeyword_13()); 
             match(input,17,FOLLOW_2); 
-             after(grammarAccess.getRotateAllServosOperationAccess().getCommaKeyword_13()); 
+             after(grammarAccess.getRotateAllServosAccess().getCommaKeyword_13()); 
 
             }
 
@@ -10353,26 +10353,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateAllServosOperation__Group__13__Impl"
+    // $ANTLR end "rule__RotateAllServos__Group__13__Impl"
 
 
-    // $ANTLR start "rule__RotateAllServosOperation__Group__14"
-    // InternalCPtester.g:3446:1: rule__RotateAllServosOperation__Group__14 : rule__RotateAllServosOperation__Group__14__Impl rule__RotateAllServosOperation__Group__15 ;
-    public final void rule__RotateAllServosOperation__Group__14() throws RecognitionException {
+    // $ANTLR start "rule__RotateAllServos__Group__14"
+    // InternalCPtester.g:3446:1: rule__RotateAllServos__Group__14 : rule__RotateAllServos__Group__14__Impl rule__RotateAllServos__Group__15 ;
+    public final void rule__RotateAllServos__Group__14() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:3450:1: ( rule__RotateAllServosOperation__Group__14__Impl rule__RotateAllServosOperation__Group__15 )
-            // InternalCPtester.g:3451:2: rule__RotateAllServosOperation__Group__14__Impl rule__RotateAllServosOperation__Group__15
+            // InternalCPtester.g:3450:1: ( rule__RotateAllServos__Group__14__Impl rule__RotateAllServos__Group__15 )
+            // InternalCPtester.g:3451:2: rule__RotateAllServos__Group__14__Impl rule__RotateAllServos__Group__15
             {
             pushFollow(FOLLOW_19);
-            rule__RotateAllServosOperation__Group__14__Impl();
+            rule__RotateAllServos__Group__14__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__RotateAllServosOperation__Group__15();
+            rule__RotateAllServos__Group__15();
 
             state._fsp--;
 
@@ -10391,35 +10391,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateAllServosOperation__Group__14"
+    // $ANTLR end "rule__RotateAllServos__Group__14"
 
 
-    // $ANTLR start "rule__RotateAllServosOperation__Group__14__Impl"
-    // InternalCPtester.g:3458:1: rule__RotateAllServosOperation__Group__14__Impl : ( ( rule__RotateAllServosOperation__TimeAssignment_14 ) ) ;
-    public final void rule__RotateAllServosOperation__Group__14__Impl() throws RecognitionException {
+    // $ANTLR start "rule__RotateAllServos__Group__14__Impl"
+    // InternalCPtester.g:3458:1: rule__RotateAllServos__Group__14__Impl : ( ( rule__RotateAllServos__TimeAssignment_14 ) ) ;
+    public final void rule__RotateAllServos__Group__14__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:3462:1: ( ( ( rule__RotateAllServosOperation__TimeAssignment_14 ) ) )
-            // InternalCPtester.g:3463:1: ( ( rule__RotateAllServosOperation__TimeAssignment_14 ) )
+            // InternalCPtester.g:3462:1: ( ( ( rule__RotateAllServos__TimeAssignment_14 ) ) )
+            // InternalCPtester.g:3463:1: ( ( rule__RotateAllServos__TimeAssignment_14 ) )
             {
-            // InternalCPtester.g:3463:1: ( ( rule__RotateAllServosOperation__TimeAssignment_14 ) )
-            // InternalCPtester.g:3464:2: ( rule__RotateAllServosOperation__TimeAssignment_14 )
+            // InternalCPtester.g:3463:1: ( ( rule__RotateAllServos__TimeAssignment_14 ) )
+            // InternalCPtester.g:3464:2: ( rule__RotateAllServos__TimeAssignment_14 )
             {
-             before(grammarAccess.getRotateAllServosOperationAccess().getTimeAssignment_14()); 
-            // InternalCPtester.g:3465:2: ( rule__RotateAllServosOperation__TimeAssignment_14 )
-            // InternalCPtester.g:3465:3: rule__RotateAllServosOperation__TimeAssignment_14
+             before(grammarAccess.getRotateAllServosAccess().getTimeAssignment_14()); 
+            // InternalCPtester.g:3465:2: ( rule__RotateAllServos__TimeAssignment_14 )
+            // InternalCPtester.g:3465:3: rule__RotateAllServos__TimeAssignment_14
             {
             pushFollow(FOLLOW_2);
-            rule__RotateAllServosOperation__TimeAssignment_14();
+            rule__RotateAllServos__TimeAssignment_14();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getRotateAllServosOperationAccess().getTimeAssignment_14()); 
+             after(grammarAccess.getRotateAllServosAccess().getTimeAssignment_14()); 
 
             }
 
@@ -10438,21 +10438,21 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateAllServosOperation__Group__14__Impl"
+    // $ANTLR end "rule__RotateAllServos__Group__14__Impl"
 
 
-    // $ANTLR start "rule__RotateAllServosOperation__Group__15"
-    // InternalCPtester.g:3473:1: rule__RotateAllServosOperation__Group__15 : rule__RotateAllServosOperation__Group__15__Impl ;
-    public final void rule__RotateAllServosOperation__Group__15() throws RecognitionException {
+    // $ANTLR start "rule__RotateAllServos__Group__15"
+    // InternalCPtester.g:3473:1: rule__RotateAllServos__Group__15 : rule__RotateAllServos__Group__15__Impl ;
+    public final void rule__RotateAllServos__Group__15() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:3477:1: ( rule__RotateAllServosOperation__Group__15__Impl )
-            // InternalCPtester.g:3478:2: rule__RotateAllServosOperation__Group__15__Impl
+            // InternalCPtester.g:3477:1: ( rule__RotateAllServos__Group__15__Impl )
+            // InternalCPtester.g:3478:2: rule__RotateAllServos__Group__15__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__RotateAllServosOperation__Group__15__Impl();
+            rule__RotateAllServos__Group__15__Impl();
 
             state._fsp--;
 
@@ -10471,12 +10471,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateAllServosOperation__Group__15"
+    // $ANTLR end "rule__RotateAllServos__Group__15"
 
 
-    // $ANTLR start "rule__RotateAllServosOperation__Group__15__Impl"
-    // InternalCPtester.g:3484:1: rule__RotateAllServosOperation__Group__15__Impl : ( ')' ) ;
-    public final void rule__RotateAllServosOperation__Group__15__Impl() throws RecognitionException {
+    // $ANTLR start "rule__RotateAllServos__Group__15__Impl"
+    // InternalCPtester.g:3484:1: rule__RotateAllServos__Group__15__Impl : ( ')' ) ;
+    public final void rule__RotateAllServos__Group__15__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -10487,9 +10487,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:3489:1: ( ')' )
             // InternalCPtester.g:3490:2: ')'
             {
-             before(grammarAccess.getRotateAllServosOperationAccess().getRightParenthesisKeyword_15()); 
+             before(grammarAccess.getRotateAllServosAccess().getRightParenthesisKeyword_15()); 
             match(input,16,FOLLOW_2); 
-             after(grammarAccess.getRotateAllServosOperationAccess().getRightParenthesisKeyword_15()); 
+             after(grammarAccess.getRotateAllServosAccess().getRightParenthesisKeyword_15()); 
 
             }
 
@@ -10508,7 +10508,7 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateAllServosOperation__Group__15__Impl"
+    // $ANTLR end "rule__RotateAllServos__Group__15__Impl"
 
 
     // $ANTLR start "rule__Result__Group__0"
@@ -11141,23 +11141,23 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__Conditions__Group__3__Impl"
 
 
-    // $ANTLR start "rule__IsAtSingleOperation__Group__0"
-    // InternalCPtester.g:3716:1: rule__IsAtSingleOperation__Group__0 : rule__IsAtSingleOperation__Group__0__Impl rule__IsAtSingleOperation__Group__1 ;
-    public final void rule__IsAtSingleOperation__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__IsAtSingle__Group__0"
+    // InternalCPtester.g:3716:1: rule__IsAtSingle__Group__0 : rule__IsAtSingle__Group__0__Impl rule__IsAtSingle__Group__1 ;
+    public final void rule__IsAtSingle__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:3720:1: ( rule__IsAtSingleOperation__Group__0__Impl rule__IsAtSingleOperation__Group__1 )
-            // InternalCPtester.g:3721:2: rule__IsAtSingleOperation__Group__0__Impl rule__IsAtSingleOperation__Group__1
+            // InternalCPtester.g:3720:1: ( rule__IsAtSingle__Group__0__Impl rule__IsAtSingle__Group__1 )
+            // InternalCPtester.g:3721:2: rule__IsAtSingle__Group__0__Impl rule__IsAtSingle__Group__1
             {
             pushFollow(FOLLOW_17);
-            rule__IsAtSingleOperation__Group__0__Impl();
+            rule__IsAtSingle__Group__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__IsAtSingleOperation__Group__1();
+            rule__IsAtSingle__Group__1();
 
             state._fsp--;
 
@@ -11176,35 +11176,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtSingleOperation__Group__0"
+    // $ANTLR end "rule__IsAtSingle__Group__0"
 
 
-    // $ANTLR start "rule__IsAtSingleOperation__Group__0__Impl"
-    // InternalCPtester.g:3728:1: rule__IsAtSingleOperation__Group__0__Impl : ( ( rule__IsAtSingleOperation__NameAssignment_0 ) ) ;
-    public final void rule__IsAtSingleOperation__Group__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__IsAtSingle__Group__0__Impl"
+    // InternalCPtester.g:3728:1: rule__IsAtSingle__Group__0__Impl : ( ( rule__IsAtSingle__NameAssignment_0 ) ) ;
+    public final void rule__IsAtSingle__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:3732:1: ( ( ( rule__IsAtSingleOperation__NameAssignment_0 ) ) )
-            // InternalCPtester.g:3733:1: ( ( rule__IsAtSingleOperation__NameAssignment_0 ) )
+            // InternalCPtester.g:3732:1: ( ( ( rule__IsAtSingle__NameAssignment_0 ) ) )
+            // InternalCPtester.g:3733:1: ( ( rule__IsAtSingle__NameAssignment_0 ) )
             {
-            // InternalCPtester.g:3733:1: ( ( rule__IsAtSingleOperation__NameAssignment_0 ) )
-            // InternalCPtester.g:3734:2: ( rule__IsAtSingleOperation__NameAssignment_0 )
+            // InternalCPtester.g:3733:1: ( ( rule__IsAtSingle__NameAssignment_0 ) )
+            // InternalCPtester.g:3734:2: ( rule__IsAtSingle__NameAssignment_0 )
             {
-             before(grammarAccess.getIsAtSingleOperationAccess().getNameAssignment_0()); 
-            // InternalCPtester.g:3735:2: ( rule__IsAtSingleOperation__NameAssignment_0 )
-            // InternalCPtester.g:3735:3: rule__IsAtSingleOperation__NameAssignment_0
+             before(grammarAccess.getIsAtSingleAccess().getNameAssignment_0()); 
+            // InternalCPtester.g:3735:2: ( rule__IsAtSingle__NameAssignment_0 )
+            // InternalCPtester.g:3735:3: rule__IsAtSingle__NameAssignment_0
             {
             pushFollow(FOLLOW_2);
-            rule__IsAtSingleOperation__NameAssignment_0();
+            rule__IsAtSingle__NameAssignment_0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getIsAtSingleOperationAccess().getNameAssignment_0()); 
+             after(grammarAccess.getIsAtSingleAccess().getNameAssignment_0()); 
 
             }
 
@@ -11223,26 +11223,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtSingleOperation__Group__0__Impl"
+    // $ANTLR end "rule__IsAtSingle__Group__0__Impl"
 
 
-    // $ANTLR start "rule__IsAtSingleOperation__Group__1"
-    // InternalCPtester.g:3743:1: rule__IsAtSingleOperation__Group__1 : rule__IsAtSingleOperation__Group__1__Impl rule__IsAtSingleOperation__Group__2 ;
-    public final void rule__IsAtSingleOperation__Group__1() throws RecognitionException {
+    // $ANTLR start "rule__IsAtSingle__Group__1"
+    // InternalCPtester.g:3743:1: rule__IsAtSingle__Group__1 : rule__IsAtSingle__Group__1__Impl rule__IsAtSingle__Group__2 ;
+    public final void rule__IsAtSingle__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:3747:1: ( rule__IsAtSingleOperation__Group__1__Impl rule__IsAtSingleOperation__Group__2 )
-            // InternalCPtester.g:3748:2: rule__IsAtSingleOperation__Group__1__Impl rule__IsAtSingleOperation__Group__2
+            // InternalCPtester.g:3747:1: ( rule__IsAtSingle__Group__1__Impl rule__IsAtSingle__Group__2 )
+            // InternalCPtester.g:3748:2: rule__IsAtSingle__Group__1__Impl rule__IsAtSingle__Group__2
             {
             pushFollow(FOLLOW_18);
-            rule__IsAtSingleOperation__Group__1__Impl();
+            rule__IsAtSingle__Group__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__IsAtSingleOperation__Group__2();
+            rule__IsAtSingle__Group__2();
 
             state._fsp--;
 
@@ -11261,12 +11261,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtSingleOperation__Group__1"
+    // $ANTLR end "rule__IsAtSingle__Group__1"
 
 
-    // $ANTLR start "rule__IsAtSingleOperation__Group__1__Impl"
-    // InternalCPtester.g:3755:1: rule__IsAtSingleOperation__Group__1__Impl : ( '(' ) ;
-    public final void rule__IsAtSingleOperation__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__IsAtSingle__Group__1__Impl"
+    // InternalCPtester.g:3755:1: rule__IsAtSingle__Group__1__Impl : ( '(' ) ;
+    public final void rule__IsAtSingle__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -11277,9 +11277,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:3760:1: ( '(' )
             // InternalCPtester.g:3761:2: '('
             {
-             before(grammarAccess.getIsAtSingleOperationAccess().getLeftParenthesisKeyword_1()); 
+             before(grammarAccess.getIsAtSingleAccess().getLeftParenthesisKeyword_1()); 
             match(input,15,FOLLOW_2); 
-             after(grammarAccess.getIsAtSingleOperationAccess().getLeftParenthesisKeyword_1()); 
+             after(grammarAccess.getIsAtSingleAccess().getLeftParenthesisKeyword_1()); 
 
             }
 
@@ -11298,26 +11298,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtSingleOperation__Group__1__Impl"
+    // $ANTLR end "rule__IsAtSingle__Group__1__Impl"
 
 
-    // $ANTLR start "rule__IsAtSingleOperation__Group__2"
-    // InternalCPtester.g:3770:1: rule__IsAtSingleOperation__Group__2 : rule__IsAtSingleOperation__Group__2__Impl rule__IsAtSingleOperation__Group__3 ;
-    public final void rule__IsAtSingleOperation__Group__2() throws RecognitionException {
+    // $ANTLR start "rule__IsAtSingle__Group__2"
+    // InternalCPtester.g:3770:1: rule__IsAtSingle__Group__2 : rule__IsAtSingle__Group__2__Impl rule__IsAtSingle__Group__3 ;
+    public final void rule__IsAtSingle__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:3774:1: ( rule__IsAtSingleOperation__Group__2__Impl rule__IsAtSingleOperation__Group__3 )
-            // InternalCPtester.g:3775:2: rule__IsAtSingleOperation__Group__2__Impl rule__IsAtSingleOperation__Group__3
+            // InternalCPtester.g:3774:1: ( rule__IsAtSingle__Group__2__Impl rule__IsAtSingle__Group__3 )
+            // InternalCPtester.g:3775:2: rule__IsAtSingle__Group__2__Impl rule__IsAtSingle__Group__3
             {
             pushFollow(FOLLOW_20);
-            rule__IsAtSingleOperation__Group__2__Impl();
+            rule__IsAtSingle__Group__2__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__IsAtSingleOperation__Group__3();
+            rule__IsAtSingle__Group__3();
 
             state._fsp--;
 
@@ -11336,35 +11336,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtSingleOperation__Group__2"
+    // $ANTLR end "rule__IsAtSingle__Group__2"
 
 
-    // $ANTLR start "rule__IsAtSingleOperation__Group__2__Impl"
-    // InternalCPtester.g:3782:1: rule__IsAtSingleOperation__Group__2__Impl : ( ( rule__IsAtSingleOperation__ServoAssignment_2 ) ) ;
-    public final void rule__IsAtSingleOperation__Group__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__IsAtSingle__Group__2__Impl"
+    // InternalCPtester.g:3782:1: rule__IsAtSingle__Group__2__Impl : ( ( rule__IsAtSingle__ServoAssignment_2 ) ) ;
+    public final void rule__IsAtSingle__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:3786:1: ( ( ( rule__IsAtSingleOperation__ServoAssignment_2 ) ) )
-            // InternalCPtester.g:3787:1: ( ( rule__IsAtSingleOperation__ServoAssignment_2 ) )
+            // InternalCPtester.g:3786:1: ( ( ( rule__IsAtSingle__ServoAssignment_2 ) ) )
+            // InternalCPtester.g:3787:1: ( ( rule__IsAtSingle__ServoAssignment_2 ) )
             {
-            // InternalCPtester.g:3787:1: ( ( rule__IsAtSingleOperation__ServoAssignment_2 ) )
-            // InternalCPtester.g:3788:2: ( rule__IsAtSingleOperation__ServoAssignment_2 )
+            // InternalCPtester.g:3787:1: ( ( rule__IsAtSingle__ServoAssignment_2 ) )
+            // InternalCPtester.g:3788:2: ( rule__IsAtSingle__ServoAssignment_2 )
             {
-             before(grammarAccess.getIsAtSingleOperationAccess().getServoAssignment_2()); 
-            // InternalCPtester.g:3789:2: ( rule__IsAtSingleOperation__ServoAssignment_2 )
-            // InternalCPtester.g:3789:3: rule__IsAtSingleOperation__ServoAssignment_2
+             before(grammarAccess.getIsAtSingleAccess().getServoAssignment_2()); 
+            // InternalCPtester.g:3789:2: ( rule__IsAtSingle__ServoAssignment_2 )
+            // InternalCPtester.g:3789:3: rule__IsAtSingle__ServoAssignment_2
             {
             pushFollow(FOLLOW_2);
-            rule__IsAtSingleOperation__ServoAssignment_2();
+            rule__IsAtSingle__ServoAssignment_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getIsAtSingleOperationAccess().getServoAssignment_2()); 
+             after(grammarAccess.getIsAtSingleAccess().getServoAssignment_2()); 
 
             }
 
@@ -11383,26 +11383,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtSingleOperation__Group__2__Impl"
+    // $ANTLR end "rule__IsAtSingle__Group__2__Impl"
 
 
-    // $ANTLR start "rule__IsAtSingleOperation__Group__3"
-    // InternalCPtester.g:3797:1: rule__IsAtSingleOperation__Group__3 : rule__IsAtSingleOperation__Group__3__Impl rule__IsAtSingleOperation__Group__4 ;
-    public final void rule__IsAtSingleOperation__Group__3() throws RecognitionException {
+    // $ANTLR start "rule__IsAtSingle__Group__3"
+    // InternalCPtester.g:3797:1: rule__IsAtSingle__Group__3 : rule__IsAtSingle__Group__3__Impl rule__IsAtSingle__Group__4 ;
+    public final void rule__IsAtSingle__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:3801:1: ( rule__IsAtSingleOperation__Group__3__Impl rule__IsAtSingleOperation__Group__4 )
-            // InternalCPtester.g:3802:2: rule__IsAtSingleOperation__Group__3__Impl rule__IsAtSingleOperation__Group__4
+            // InternalCPtester.g:3801:1: ( rule__IsAtSingle__Group__3__Impl rule__IsAtSingle__Group__4 )
+            // InternalCPtester.g:3802:2: rule__IsAtSingle__Group__3__Impl rule__IsAtSingle__Group__4
             {
             pushFollow(FOLLOW_18);
-            rule__IsAtSingleOperation__Group__3__Impl();
+            rule__IsAtSingle__Group__3__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__IsAtSingleOperation__Group__4();
+            rule__IsAtSingle__Group__4();
 
             state._fsp--;
 
@@ -11421,12 +11421,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtSingleOperation__Group__3"
+    // $ANTLR end "rule__IsAtSingle__Group__3"
 
 
-    // $ANTLR start "rule__IsAtSingleOperation__Group__3__Impl"
-    // InternalCPtester.g:3809:1: rule__IsAtSingleOperation__Group__3__Impl : ( ',' ) ;
-    public final void rule__IsAtSingleOperation__Group__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__IsAtSingle__Group__3__Impl"
+    // InternalCPtester.g:3809:1: rule__IsAtSingle__Group__3__Impl : ( ',' ) ;
+    public final void rule__IsAtSingle__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -11437,9 +11437,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:3814:1: ( ',' )
             // InternalCPtester.g:3815:2: ','
             {
-             before(grammarAccess.getIsAtSingleOperationAccess().getCommaKeyword_3()); 
+             before(grammarAccess.getIsAtSingleAccess().getCommaKeyword_3()); 
             match(input,17,FOLLOW_2); 
-             after(grammarAccess.getIsAtSingleOperationAccess().getCommaKeyword_3()); 
+             after(grammarAccess.getIsAtSingleAccess().getCommaKeyword_3()); 
 
             }
 
@@ -11458,26 +11458,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtSingleOperation__Group__3__Impl"
+    // $ANTLR end "rule__IsAtSingle__Group__3__Impl"
 
 
-    // $ANTLR start "rule__IsAtSingleOperation__Group__4"
-    // InternalCPtester.g:3824:1: rule__IsAtSingleOperation__Group__4 : rule__IsAtSingleOperation__Group__4__Impl rule__IsAtSingleOperation__Group__5 ;
-    public final void rule__IsAtSingleOperation__Group__4() throws RecognitionException {
+    // $ANTLR start "rule__IsAtSingle__Group__4"
+    // InternalCPtester.g:3824:1: rule__IsAtSingle__Group__4 : rule__IsAtSingle__Group__4__Impl rule__IsAtSingle__Group__5 ;
+    public final void rule__IsAtSingle__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:3828:1: ( rule__IsAtSingleOperation__Group__4__Impl rule__IsAtSingleOperation__Group__5 )
-            // InternalCPtester.g:3829:2: rule__IsAtSingleOperation__Group__4__Impl rule__IsAtSingleOperation__Group__5
+            // InternalCPtester.g:3828:1: ( rule__IsAtSingle__Group__4__Impl rule__IsAtSingle__Group__5 )
+            // InternalCPtester.g:3829:2: rule__IsAtSingle__Group__4__Impl rule__IsAtSingle__Group__5
             {
             pushFollow(FOLLOW_20);
-            rule__IsAtSingleOperation__Group__4__Impl();
+            rule__IsAtSingle__Group__4__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__IsAtSingleOperation__Group__5();
+            rule__IsAtSingle__Group__5();
 
             state._fsp--;
 
@@ -11496,35 +11496,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtSingleOperation__Group__4"
+    // $ANTLR end "rule__IsAtSingle__Group__4"
 
 
-    // $ANTLR start "rule__IsAtSingleOperation__Group__4__Impl"
-    // InternalCPtester.g:3836:1: rule__IsAtSingleOperation__Group__4__Impl : ( ( rule__IsAtSingleOperation__AngleAssignment_4 ) ) ;
-    public final void rule__IsAtSingleOperation__Group__4__Impl() throws RecognitionException {
+    // $ANTLR start "rule__IsAtSingle__Group__4__Impl"
+    // InternalCPtester.g:3836:1: rule__IsAtSingle__Group__4__Impl : ( ( rule__IsAtSingle__AngleAssignment_4 ) ) ;
+    public final void rule__IsAtSingle__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:3840:1: ( ( ( rule__IsAtSingleOperation__AngleAssignment_4 ) ) )
-            // InternalCPtester.g:3841:1: ( ( rule__IsAtSingleOperation__AngleAssignment_4 ) )
+            // InternalCPtester.g:3840:1: ( ( ( rule__IsAtSingle__AngleAssignment_4 ) ) )
+            // InternalCPtester.g:3841:1: ( ( rule__IsAtSingle__AngleAssignment_4 ) )
             {
-            // InternalCPtester.g:3841:1: ( ( rule__IsAtSingleOperation__AngleAssignment_4 ) )
-            // InternalCPtester.g:3842:2: ( rule__IsAtSingleOperation__AngleAssignment_4 )
+            // InternalCPtester.g:3841:1: ( ( rule__IsAtSingle__AngleAssignment_4 ) )
+            // InternalCPtester.g:3842:2: ( rule__IsAtSingle__AngleAssignment_4 )
             {
-             before(grammarAccess.getIsAtSingleOperationAccess().getAngleAssignment_4()); 
-            // InternalCPtester.g:3843:2: ( rule__IsAtSingleOperation__AngleAssignment_4 )
-            // InternalCPtester.g:3843:3: rule__IsAtSingleOperation__AngleAssignment_4
+             before(grammarAccess.getIsAtSingleAccess().getAngleAssignment_4()); 
+            // InternalCPtester.g:3843:2: ( rule__IsAtSingle__AngleAssignment_4 )
+            // InternalCPtester.g:3843:3: rule__IsAtSingle__AngleAssignment_4
             {
             pushFollow(FOLLOW_2);
-            rule__IsAtSingleOperation__AngleAssignment_4();
+            rule__IsAtSingle__AngleAssignment_4();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getIsAtSingleOperationAccess().getAngleAssignment_4()); 
+             after(grammarAccess.getIsAtSingleAccess().getAngleAssignment_4()); 
 
             }
 
@@ -11543,26 +11543,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtSingleOperation__Group__4__Impl"
+    // $ANTLR end "rule__IsAtSingle__Group__4__Impl"
 
 
-    // $ANTLR start "rule__IsAtSingleOperation__Group__5"
-    // InternalCPtester.g:3851:1: rule__IsAtSingleOperation__Group__5 : rule__IsAtSingleOperation__Group__5__Impl rule__IsAtSingleOperation__Group__6 ;
-    public final void rule__IsAtSingleOperation__Group__5() throws RecognitionException {
+    // $ANTLR start "rule__IsAtSingle__Group__5"
+    // InternalCPtester.g:3851:1: rule__IsAtSingle__Group__5 : rule__IsAtSingle__Group__5__Impl rule__IsAtSingle__Group__6 ;
+    public final void rule__IsAtSingle__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:3855:1: ( rule__IsAtSingleOperation__Group__5__Impl rule__IsAtSingleOperation__Group__6 )
-            // InternalCPtester.g:3856:2: rule__IsAtSingleOperation__Group__5__Impl rule__IsAtSingleOperation__Group__6
+            // InternalCPtester.g:3855:1: ( rule__IsAtSingle__Group__5__Impl rule__IsAtSingle__Group__6 )
+            // InternalCPtester.g:3856:2: rule__IsAtSingle__Group__5__Impl rule__IsAtSingle__Group__6
             {
             pushFollow(FOLLOW_18);
-            rule__IsAtSingleOperation__Group__5__Impl();
+            rule__IsAtSingle__Group__5__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__IsAtSingleOperation__Group__6();
+            rule__IsAtSingle__Group__6();
 
             state._fsp--;
 
@@ -11581,12 +11581,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtSingleOperation__Group__5"
+    // $ANTLR end "rule__IsAtSingle__Group__5"
 
 
-    // $ANTLR start "rule__IsAtSingleOperation__Group__5__Impl"
-    // InternalCPtester.g:3863:1: rule__IsAtSingleOperation__Group__5__Impl : ( ',' ) ;
-    public final void rule__IsAtSingleOperation__Group__5__Impl() throws RecognitionException {
+    // $ANTLR start "rule__IsAtSingle__Group__5__Impl"
+    // InternalCPtester.g:3863:1: rule__IsAtSingle__Group__5__Impl : ( ',' ) ;
+    public final void rule__IsAtSingle__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -11597,9 +11597,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:3868:1: ( ',' )
             // InternalCPtester.g:3869:2: ','
             {
-             before(grammarAccess.getIsAtSingleOperationAccess().getCommaKeyword_5()); 
+             before(grammarAccess.getIsAtSingleAccess().getCommaKeyword_5()); 
             match(input,17,FOLLOW_2); 
-             after(grammarAccess.getIsAtSingleOperationAccess().getCommaKeyword_5()); 
+             after(grammarAccess.getIsAtSingleAccess().getCommaKeyword_5()); 
 
             }
 
@@ -11618,26 +11618,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtSingleOperation__Group__5__Impl"
+    // $ANTLR end "rule__IsAtSingle__Group__5__Impl"
 
 
-    // $ANTLR start "rule__IsAtSingleOperation__Group__6"
-    // InternalCPtester.g:3878:1: rule__IsAtSingleOperation__Group__6 : rule__IsAtSingleOperation__Group__6__Impl rule__IsAtSingleOperation__Group__7 ;
-    public final void rule__IsAtSingleOperation__Group__6() throws RecognitionException {
+    // $ANTLR start "rule__IsAtSingle__Group__6"
+    // InternalCPtester.g:3878:1: rule__IsAtSingle__Group__6 : rule__IsAtSingle__Group__6__Impl rule__IsAtSingle__Group__7 ;
+    public final void rule__IsAtSingle__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:3882:1: ( rule__IsAtSingleOperation__Group__6__Impl rule__IsAtSingleOperation__Group__7 )
-            // InternalCPtester.g:3883:2: rule__IsAtSingleOperation__Group__6__Impl rule__IsAtSingleOperation__Group__7
+            // InternalCPtester.g:3882:1: ( rule__IsAtSingle__Group__6__Impl rule__IsAtSingle__Group__7 )
+            // InternalCPtester.g:3883:2: rule__IsAtSingle__Group__6__Impl rule__IsAtSingle__Group__7
             {
             pushFollow(FOLLOW_19);
-            rule__IsAtSingleOperation__Group__6__Impl();
+            rule__IsAtSingle__Group__6__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__IsAtSingleOperation__Group__7();
+            rule__IsAtSingle__Group__7();
 
             state._fsp--;
 
@@ -11656,35 +11656,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtSingleOperation__Group__6"
+    // $ANTLR end "rule__IsAtSingle__Group__6"
 
 
-    // $ANTLR start "rule__IsAtSingleOperation__Group__6__Impl"
-    // InternalCPtester.g:3890:1: rule__IsAtSingleOperation__Group__6__Impl : ( ( rule__IsAtSingleOperation__Angle_resAssignment_6 ) ) ;
-    public final void rule__IsAtSingleOperation__Group__6__Impl() throws RecognitionException {
+    // $ANTLR start "rule__IsAtSingle__Group__6__Impl"
+    // InternalCPtester.g:3890:1: rule__IsAtSingle__Group__6__Impl : ( ( rule__IsAtSingle__Angle_resAssignment_6 ) ) ;
+    public final void rule__IsAtSingle__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:3894:1: ( ( ( rule__IsAtSingleOperation__Angle_resAssignment_6 ) ) )
-            // InternalCPtester.g:3895:1: ( ( rule__IsAtSingleOperation__Angle_resAssignment_6 ) )
+            // InternalCPtester.g:3894:1: ( ( ( rule__IsAtSingle__Angle_resAssignment_6 ) ) )
+            // InternalCPtester.g:3895:1: ( ( rule__IsAtSingle__Angle_resAssignment_6 ) )
             {
-            // InternalCPtester.g:3895:1: ( ( rule__IsAtSingleOperation__Angle_resAssignment_6 ) )
-            // InternalCPtester.g:3896:2: ( rule__IsAtSingleOperation__Angle_resAssignment_6 )
+            // InternalCPtester.g:3895:1: ( ( rule__IsAtSingle__Angle_resAssignment_6 ) )
+            // InternalCPtester.g:3896:2: ( rule__IsAtSingle__Angle_resAssignment_6 )
             {
-             before(grammarAccess.getIsAtSingleOperationAccess().getAngle_resAssignment_6()); 
-            // InternalCPtester.g:3897:2: ( rule__IsAtSingleOperation__Angle_resAssignment_6 )
-            // InternalCPtester.g:3897:3: rule__IsAtSingleOperation__Angle_resAssignment_6
+             before(grammarAccess.getIsAtSingleAccess().getAngle_resAssignment_6()); 
+            // InternalCPtester.g:3897:2: ( rule__IsAtSingle__Angle_resAssignment_6 )
+            // InternalCPtester.g:3897:3: rule__IsAtSingle__Angle_resAssignment_6
             {
             pushFollow(FOLLOW_2);
-            rule__IsAtSingleOperation__Angle_resAssignment_6();
+            rule__IsAtSingle__Angle_resAssignment_6();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getIsAtSingleOperationAccess().getAngle_resAssignment_6()); 
+             after(grammarAccess.getIsAtSingleAccess().getAngle_resAssignment_6()); 
 
             }
 
@@ -11703,21 +11703,21 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtSingleOperation__Group__6__Impl"
+    // $ANTLR end "rule__IsAtSingle__Group__6__Impl"
 
 
-    // $ANTLR start "rule__IsAtSingleOperation__Group__7"
-    // InternalCPtester.g:3905:1: rule__IsAtSingleOperation__Group__7 : rule__IsAtSingleOperation__Group__7__Impl ;
-    public final void rule__IsAtSingleOperation__Group__7() throws RecognitionException {
+    // $ANTLR start "rule__IsAtSingle__Group__7"
+    // InternalCPtester.g:3905:1: rule__IsAtSingle__Group__7 : rule__IsAtSingle__Group__7__Impl ;
+    public final void rule__IsAtSingle__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:3909:1: ( rule__IsAtSingleOperation__Group__7__Impl )
-            // InternalCPtester.g:3910:2: rule__IsAtSingleOperation__Group__7__Impl
+            // InternalCPtester.g:3909:1: ( rule__IsAtSingle__Group__7__Impl )
+            // InternalCPtester.g:3910:2: rule__IsAtSingle__Group__7__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__IsAtSingleOperation__Group__7__Impl();
+            rule__IsAtSingle__Group__7__Impl();
 
             state._fsp--;
 
@@ -11736,12 +11736,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtSingleOperation__Group__7"
+    // $ANTLR end "rule__IsAtSingle__Group__7"
 
 
-    // $ANTLR start "rule__IsAtSingleOperation__Group__7__Impl"
-    // InternalCPtester.g:3916:1: rule__IsAtSingleOperation__Group__7__Impl : ( ')' ) ;
-    public final void rule__IsAtSingleOperation__Group__7__Impl() throws RecognitionException {
+    // $ANTLR start "rule__IsAtSingle__Group__7__Impl"
+    // InternalCPtester.g:3916:1: rule__IsAtSingle__Group__7__Impl : ( ')' ) ;
+    public final void rule__IsAtSingle__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -11752,9 +11752,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:3921:1: ( ')' )
             // InternalCPtester.g:3922:2: ')'
             {
-             before(grammarAccess.getIsAtSingleOperationAccess().getRightParenthesisKeyword_7()); 
+             before(grammarAccess.getIsAtSingleAccess().getRightParenthesisKeyword_7()); 
             match(input,16,FOLLOW_2); 
-             after(grammarAccess.getIsAtSingleOperationAccess().getRightParenthesisKeyword_7()); 
+             after(grammarAccess.getIsAtSingleAccess().getRightParenthesisKeyword_7()); 
 
             }
 
@@ -11773,26 +11773,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtSingleOperation__Group__7__Impl"
+    // $ANTLR end "rule__IsAtSingle__Group__7__Impl"
 
 
-    // $ANTLR start "rule__IsAtOperation__Group__0"
-    // InternalCPtester.g:3932:1: rule__IsAtOperation__Group__0 : rule__IsAtOperation__Group__0__Impl rule__IsAtOperation__Group__1 ;
-    public final void rule__IsAtOperation__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__IsAt__Group__0"
+    // InternalCPtester.g:3932:1: rule__IsAt__Group__0 : rule__IsAt__Group__0__Impl rule__IsAt__Group__1 ;
+    public final void rule__IsAt__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:3936:1: ( rule__IsAtOperation__Group__0__Impl rule__IsAtOperation__Group__1 )
-            // InternalCPtester.g:3937:2: rule__IsAtOperation__Group__0__Impl rule__IsAtOperation__Group__1
+            // InternalCPtester.g:3936:1: ( rule__IsAt__Group__0__Impl rule__IsAt__Group__1 )
+            // InternalCPtester.g:3937:2: rule__IsAt__Group__0__Impl rule__IsAt__Group__1
             {
             pushFollow(FOLLOW_17);
-            rule__IsAtOperation__Group__0__Impl();
+            rule__IsAt__Group__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__IsAtOperation__Group__1();
+            rule__IsAt__Group__1();
 
             state._fsp--;
 
@@ -11811,35 +11811,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtOperation__Group__0"
+    // $ANTLR end "rule__IsAt__Group__0"
 
 
-    // $ANTLR start "rule__IsAtOperation__Group__0__Impl"
-    // InternalCPtester.g:3944:1: rule__IsAtOperation__Group__0__Impl : ( ( rule__IsAtOperation__NameAssignment_0 ) ) ;
-    public final void rule__IsAtOperation__Group__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__IsAt__Group__0__Impl"
+    // InternalCPtester.g:3944:1: rule__IsAt__Group__0__Impl : ( ( rule__IsAt__NameAssignment_0 ) ) ;
+    public final void rule__IsAt__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:3948:1: ( ( ( rule__IsAtOperation__NameAssignment_0 ) ) )
-            // InternalCPtester.g:3949:1: ( ( rule__IsAtOperation__NameAssignment_0 ) )
+            // InternalCPtester.g:3948:1: ( ( ( rule__IsAt__NameAssignment_0 ) ) )
+            // InternalCPtester.g:3949:1: ( ( rule__IsAt__NameAssignment_0 ) )
             {
-            // InternalCPtester.g:3949:1: ( ( rule__IsAtOperation__NameAssignment_0 ) )
-            // InternalCPtester.g:3950:2: ( rule__IsAtOperation__NameAssignment_0 )
+            // InternalCPtester.g:3949:1: ( ( rule__IsAt__NameAssignment_0 ) )
+            // InternalCPtester.g:3950:2: ( rule__IsAt__NameAssignment_0 )
             {
-             before(grammarAccess.getIsAtOperationAccess().getNameAssignment_0()); 
-            // InternalCPtester.g:3951:2: ( rule__IsAtOperation__NameAssignment_0 )
-            // InternalCPtester.g:3951:3: rule__IsAtOperation__NameAssignment_0
+             before(grammarAccess.getIsAtAccess().getNameAssignment_0()); 
+            // InternalCPtester.g:3951:2: ( rule__IsAt__NameAssignment_0 )
+            // InternalCPtester.g:3951:3: rule__IsAt__NameAssignment_0
             {
             pushFollow(FOLLOW_2);
-            rule__IsAtOperation__NameAssignment_0();
+            rule__IsAt__NameAssignment_0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getIsAtOperationAccess().getNameAssignment_0()); 
+             after(grammarAccess.getIsAtAccess().getNameAssignment_0()); 
 
             }
 
@@ -11858,26 +11858,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtOperation__Group__0__Impl"
+    // $ANTLR end "rule__IsAt__Group__0__Impl"
 
 
-    // $ANTLR start "rule__IsAtOperation__Group__1"
-    // InternalCPtester.g:3959:1: rule__IsAtOperation__Group__1 : rule__IsAtOperation__Group__1__Impl rule__IsAtOperation__Group__2 ;
-    public final void rule__IsAtOperation__Group__1() throws RecognitionException {
+    // $ANTLR start "rule__IsAt__Group__1"
+    // InternalCPtester.g:3959:1: rule__IsAt__Group__1 : rule__IsAt__Group__1__Impl rule__IsAt__Group__2 ;
+    public final void rule__IsAt__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:3963:1: ( rule__IsAtOperation__Group__1__Impl rule__IsAtOperation__Group__2 )
-            // InternalCPtester.g:3964:2: rule__IsAtOperation__Group__1__Impl rule__IsAtOperation__Group__2
+            // InternalCPtester.g:3963:1: ( rule__IsAt__Group__1__Impl rule__IsAt__Group__2 )
+            // InternalCPtester.g:3964:2: rule__IsAt__Group__1__Impl rule__IsAt__Group__2
             {
             pushFollow(FOLLOW_18);
-            rule__IsAtOperation__Group__1__Impl();
+            rule__IsAt__Group__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__IsAtOperation__Group__2();
+            rule__IsAt__Group__2();
 
             state._fsp--;
 
@@ -11896,12 +11896,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtOperation__Group__1"
+    // $ANTLR end "rule__IsAt__Group__1"
 
 
-    // $ANTLR start "rule__IsAtOperation__Group__1__Impl"
-    // InternalCPtester.g:3971:1: rule__IsAtOperation__Group__1__Impl : ( '(' ) ;
-    public final void rule__IsAtOperation__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__IsAt__Group__1__Impl"
+    // InternalCPtester.g:3971:1: rule__IsAt__Group__1__Impl : ( '(' ) ;
+    public final void rule__IsAt__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -11912,9 +11912,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:3976:1: ( '(' )
             // InternalCPtester.g:3977:2: '('
             {
-             before(grammarAccess.getIsAtOperationAccess().getLeftParenthesisKeyword_1()); 
+             before(grammarAccess.getIsAtAccess().getLeftParenthesisKeyword_1()); 
             match(input,15,FOLLOW_2); 
-             after(grammarAccess.getIsAtOperationAccess().getLeftParenthesisKeyword_1()); 
+             after(grammarAccess.getIsAtAccess().getLeftParenthesisKeyword_1()); 
 
             }
 
@@ -11933,26 +11933,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtOperation__Group__1__Impl"
+    // $ANTLR end "rule__IsAt__Group__1__Impl"
 
 
-    // $ANTLR start "rule__IsAtOperation__Group__2"
-    // InternalCPtester.g:3986:1: rule__IsAtOperation__Group__2 : rule__IsAtOperation__Group__2__Impl rule__IsAtOperation__Group__3 ;
-    public final void rule__IsAtOperation__Group__2() throws RecognitionException {
+    // $ANTLR start "rule__IsAt__Group__2"
+    // InternalCPtester.g:3986:1: rule__IsAt__Group__2 : rule__IsAt__Group__2__Impl rule__IsAt__Group__3 ;
+    public final void rule__IsAt__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:3990:1: ( rule__IsAtOperation__Group__2__Impl rule__IsAtOperation__Group__3 )
-            // InternalCPtester.g:3991:2: rule__IsAtOperation__Group__2__Impl rule__IsAtOperation__Group__3
+            // InternalCPtester.g:3990:1: ( rule__IsAt__Group__2__Impl rule__IsAt__Group__3 )
+            // InternalCPtester.g:3991:2: rule__IsAt__Group__2__Impl rule__IsAt__Group__3
             {
             pushFollow(FOLLOW_20);
-            rule__IsAtOperation__Group__2__Impl();
+            rule__IsAt__Group__2__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__IsAtOperation__Group__3();
+            rule__IsAt__Group__3();
 
             state._fsp--;
 
@@ -11971,35 +11971,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtOperation__Group__2"
+    // $ANTLR end "rule__IsAt__Group__2"
 
 
-    // $ANTLR start "rule__IsAtOperation__Group__2__Impl"
-    // InternalCPtester.g:3998:1: rule__IsAtOperation__Group__2__Impl : ( ( rule__IsAtOperation__Angle1Assignment_2 ) ) ;
-    public final void rule__IsAtOperation__Group__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__IsAt__Group__2__Impl"
+    // InternalCPtester.g:3998:1: rule__IsAt__Group__2__Impl : ( ( rule__IsAt__Angle1Assignment_2 ) ) ;
+    public final void rule__IsAt__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:4002:1: ( ( ( rule__IsAtOperation__Angle1Assignment_2 ) ) )
-            // InternalCPtester.g:4003:1: ( ( rule__IsAtOperation__Angle1Assignment_2 ) )
+            // InternalCPtester.g:4002:1: ( ( ( rule__IsAt__Angle1Assignment_2 ) ) )
+            // InternalCPtester.g:4003:1: ( ( rule__IsAt__Angle1Assignment_2 ) )
             {
-            // InternalCPtester.g:4003:1: ( ( rule__IsAtOperation__Angle1Assignment_2 ) )
-            // InternalCPtester.g:4004:2: ( rule__IsAtOperation__Angle1Assignment_2 )
+            // InternalCPtester.g:4003:1: ( ( rule__IsAt__Angle1Assignment_2 ) )
+            // InternalCPtester.g:4004:2: ( rule__IsAt__Angle1Assignment_2 )
             {
-             before(grammarAccess.getIsAtOperationAccess().getAngle1Assignment_2()); 
-            // InternalCPtester.g:4005:2: ( rule__IsAtOperation__Angle1Assignment_2 )
-            // InternalCPtester.g:4005:3: rule__IsAtOperation__Angle1Assignment_2
+             before(grammarAccess.getIsAtAccess().getAngle1Assignment_2()); 
+            // InternalCPtester.g:4005:2: ( rule__IsAt__Angle1Assignment_2 )
+            // InternalCPtester.g:4005:3: rule__IsAt__Angle1Assignment_2
             {
             pushFollow(FOLLOW_2);
-            rule__IsAtOperation__Angle1Assignment_2();
+            rule__IsAt__Angle1Assignment_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getIsAtOperationAccess().getAngle1Assignment_2()); 
+             after(grammarAccess.getIsAtAccess().getAngle1Assignment_2()); 
 
             }
 
@@ -12018,26 +12018,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtOperation__Group__2__Impl"
+    // $ANTLR end "rule__IsAt__Group__2__Impl"
 
 
-    // $ANTLR start "rule__IsAtOperation__Group__3"
-    // InternalCPtester.g:4013:1: rule__IsAtOperation__Group__3 : rule__IsAtOperation__Group__3__Impl rule__IsAtOperation__Group__4 ;
-    public final void rule__IsAtOperation__Group__3() throws RecognitionException {
+    // $ANTLR start "rule__IsAt__Group__3"
+    // InternalCPtester.g:4013:1: rule__IsAt__Group__3 : rule__IsAt__Group__3__Impl rule__IsAt__Group__4 ;
+    public final void rule__IsAt__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:4017:1: ( rule__IsAtOperation__Group__3__Impl rule__IsAtOperation__Group__4 )
-            // InternalCPtester.g:4018:2: rule__IsAtOperation__Group__3__Impl rule__IsAtOperation__Group__4
+            // InternalCPtester.g:4017:1: ( rule__IsAt__Group__3__Impl rule__IsAt__Group__4 )
+            // InternalCPtester.g:4018:2: rule__IsAt__Group__3__Impl rule__IsAt__Group__4
             {
             pushFollow(FOLLOW_18);
-            rule__IsAtOperation__Group__3__Impl();
+            rule__IsAt__Group__3__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__IsAtOperation__Group__4();
+            rule__IsAt__Group__4();
 
             state._fsp--;
 
@@ -12056,12 +12056,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtOperation__Group__3"
+    // $ANTLR end "rule__IsAt__Group__3"
 
 
-    // $ANTLR start "rule__IsAtOperation__Group__3__Impl"
-    // InternalCPtester.g:4025:1: rule__IsAtOperation__Group__3__Impl : ( ',' ) ;
-    public final void rule__IsAtOperation__Group__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__IsAt__Group__3__Impl"
+    // InternalCPtester.g:4025:1: rule__IsAt__Group__3__Impl : ( ',' ) ;
+    public final void rule__IsAt__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -12072,9 +12072,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:4030:1: ( ',' )
             // InternalCPtester.g:4031:2: ','
             {
-             before(grammarAccess.getIsAtOperationAccess().getCommaKeyword_3()); 
+             before(grammarAccess.getIsAtAccess().getCommaKeyword_3()); 
             match(input,17,FOLLOW_2); 
-             after(grammarAccess.getIsAtOperationAccess().getCommaKeyword_3()); 
+             after(grammarAccess.getIsAtAccess().getCommaKeyword_3()); 
 
             }
 
@@ -12093,26 +12093,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtOperation__Group__3__Impl"
+    // $ANTLR end "rule__IsAt__Group__3__Impl"
 
 
-    // $ANTLR start "rule__IsAtOperation__Group__4"
-    // InternalCPtester.g:4040:1: rule__IsAtOperation__Group__4 : rule__IsAtOperation__Group__4__Impl rule__IsAtOperation__Group__5 ;
-    public final void rule__IsAtOperation__Group__4() throws RecognitionException {
+    // $ANTLR start "rule__IsAt__Group__4"
+    // InternalCPtester.g:4040:1: rule__IsAt__Group__4 : rule__IsAt__Group__4__Impl rule__IsAt__Group__5 ;
+    public final void rule__IsAt__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:4044:1: ( rule__IsAtOperation__Group__4__Impl rule__IsAtOperation__Group__5 )
-            // InternalCPtester.g:4045:2: rule__IsAtOperation__Group__4__Impl rule__IsAtOperation__Group__5
+            // InternalCPtester.g:4044:1: ( rule__IsAt__Group__4__Impl rule__IsAt__Group__5 )
+            // InternalCPtester.g:4045:2: rule__IsAt__Group__4__Impl rule__IsAt__Group__5
             {
             pushFollow(FOLLOW_20);
-            rule__IsAtOperation__Group__4__Impl();
+            rule__IsAt__Group__4__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__IsAtOperation__Group__5();
+            rule__IsAt__Group__5();
 
             state._fsp--;
 
@@ -12131,35 +12131,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtOperation__Group__4"
+    // $ANTLR end "rule__IsAt__Group__4"
 
 
-    // $ANTLR start "rule__IsAtOperation__Group__4__Impl"
-    // InternalCPtester.g:4052:1: rule__IsAtOperation__Group__4__Impl : ( ( rule__IsAtOperation__Angle2Assignment_4 ) ) ;
-    public final void rule__IsAtOperation__Group__4__Impl() throws RecognitionException {
+    // $ANTLR start "rule__IsAt__Group__4__Impl"
+    // InternalCPtester.g:4052:1: rule__IsAt__Group__4__Impl : ( ( rule__IsAt__Angle2Assignment_4 ) ) ;
+    public final void rule__IsAt__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:4056:1: ( ( ( rule__IsAtOperation__Angle2Assignment_4 ) ) )
-            // InternalCPtester.g:4057:1: ( ( rule__IsAtOperation__Angle2Assignment_4 ) )
+            // InternalCPtester.g:4056:1: ( ( ( rule__IsAt__Angle2Assignment_4 ) ) )
+            // InternalCPtester.g:4057:1: ( ( rule__IsAt__Angle2Assignment_4 ) )
             {
-            // InternalCPtester.g:4057:1: ( ( rule__IsAtOperation__Angle2Assignment_4 ) )
-            // InternalCPtester.g:4058:2: ( rule__IsAtOperation__Angle2Assignment_4 )
+            // InternalCPtester.g:4057:1: ( ( rule__IsAt__Angle2Assignment_4 ) )
+            // InternalCPtester.g:4058:2: ( rule__IsAt__Angle2Assignment_4 )
             {
-             before(grammarAccess.getIsAtOperationAccess().getAngle2Assignment_4()); 
-            // InternalCPtester.g:4059:2: ( rule__IsAtOperation__Angle2Assignment_4 )
-            // InternalCPtester.g:4059:3: rule__IsAtOperation__Angle2Assignment_4
+             before(grammarAccess.getIsAtAccess().getAngle2Assignment_4()); 
+            // InternalCPtester.g:4059:2: ( rule__IsAt__Angle2Assignment_4 )
+            // InternalCPtester.g:4059:3: rule__IsAt__Angle2Assignment_4
             {
             pushFollow(FOLLOW_2);
-            rule__IsAtOperation__Angle2Assignment_4();
+            rule__IsAt__Angle2Assignment_4();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getIsAtOperationAccess().getAngle2Assignment_4()); 
+             after(grammarAccess.getIsAtAccess().getAngle2Assignment_4()); 
 
             }
 
@@ -12178,26 +12178,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtOperation__Group__4__Impl"
+    // $ANTLR end "rule__IsAt__Group__4__Impl"
 
 
-    // $ANTLR start "rule__IsAtOperation__Group__5"
-    // InternalCPtester.g:4067:1: rule__IsAtOperation__Group__5 : rule__IsAtOperation__Group__5__Impl rule__IsAtOperation__Group__6 ;
-    public final void rule__IsAtOperation__Group__5() throws RecognitionException {
+    // $ANTLR start "rule__IsAt__Group__5"
+    // InternalCPtester.g:4067:1: rule__IsAt__Group__5 : rule__IsAt__Group__5__Impl rule__IsAt__Group__6 ;
+    public final void rule__IsAt__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:4071:1: ( rule__IsAtOperation__Group__5__Impl rule__IsAtOperation__Group__6 )
-            // InternalCPtester.g:4072:2: rule__IsAtOperation__Group__5__Impl rule__IsAtOperation__Group__6
+            // InternalCPtester.g:4071:1: ( rule__IsAt__Group__5__Impl rule__IsAt__Group__6 )
+            // InternalCPtester.g:4072:2: rule__IsAt__Group__5__Impl rule__IsAt__Group__6
             {
             pushFollow(FOLLOW_18);
-            rule__IsAtOperation__Group__5__Impl();
+            rule__IsAt__Group__5__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__IsAtOperation__Group__6();
+            rule__IsAt__Group__6();
 
             state._fsp--;
 
@@ -12216,12 +12216,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtOperation__Group__5"
+    // $ANTLR end "rule__IsAt__Group__5"
 
 
-    // $ANTLR start "rule__IsAtOperation__Group__5__Impl"
-    // InternalCPtester.g:4079:1: rule__IsAtOperation__Group__5__Impl : ( ',' ) ;
-    public final void rule__IsAtOperation__Group__5__Impl() throws RecognitionException {
+    // $ANTLR start "rule__IsAt__Group__5__Impl"
+    // InternalCPtester.g:4079:1: rule__IsAt__Group__5__Impl : ( ',' ) ;
+    public final void rule__IsAt__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -12232,9 +12232,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:4084:1: ( ',' )
             // InternalCPtester.g:4085:2: ','
             {
-             before(grammarAccess.getIsAtOperationAccess().getCommaKeyword_5()); 
+             before(grammarAccess.getIsAtAccess().getCommaKeyword_5()); 
             match(input,17,FOLLOW_2); 
-             after(grammarAccess.getIsAtOperationAccess().getCommaKeyword_5()); 
+             after(grammarAccess.getIsAtAccess().getCommaKeyword_5()); 
 
             }
 
@@ -12253,26 +12253,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtOperation__Group__5__Impl"
+    // $ANTLR end "rule__IsAt__Group__5__Impl"
 
 
-    // $ANTLR start "rule__IsAtOperation__Group__6"
-    // InternalCPtester.g:4094:1: rule__IsAtOperation__Group__6 : rule__IsAtOperation__Group__6__Impl rule__IsAtOperation__Group__7 ;
-    public final void rule__IsAtOperation__Group__6() throws RecognitionException {
+    // $ANTLR start "rule__IsAt__Group__6"
+    // InternalCPtester.g:4094:1: rule__IsAt__Group__6 : rule__IsAt__Group__6__Impl rule__IsAt__Group__7 ;
+    public final void rule__IsAt__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:4098:1: ( rule__IsAtOperation__Group__6__Impl rule__IsAtOperation__Group__7 )
-            // InternalCPtester.g:4099:2: rule__IsAtOperation__Group__6__Impl rule__IsAtOperation__Group__7
+            // InternalCPtester.g:4098:1: ( rule__IsAt__Group__6__Impl rule__IsAt__Group__7 )
+            // InternalCPtester.g:4099:2: rule__IsAt__Group__6__Impl rule__IsAt__Group__7
             {
             pushFollow(FOLLOW_20);
-            rule__IsAtOperation__Group__6__Impl();
+            rule__IsAt__Group__6__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__IsAtOperation__Group__7();
+            rule__IsAt__Group__7();
 
             state._fsp--;
 
@@ -12291,35 +12291,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtOperation__Group__6"
+    // $ANTLR end "rule__IsAt__Group__6"
 
 
-    // $ANTLR start "rule__IsAtOperation__Group__6__Impl"
-    // InternalCPtester.g:4106:1: rule__IsAtOperation__Group__6__Impl : ( ( rule__IsAtOperation__Angle3Assignment_6 ) ) ;
-    public final void rule__IsAtOperation__Group__6__Impl() throws RecognitionException {
+    // $ANTLR start "rule__IsAt__Group__6__Impl"
+    // InternalCPtester.g:4106:1: rule__IsAt__Group__6__Impl : ( ( rule__IsAt__Angle3Assignment_6 ) ) ;
+    public final void rule__IsAt__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:4110:1: ( ( ( rule__IsAtOperation__Angle3Assignment_6 ) ) )
-            // InternalCPtester.g:4111:1: ( ( rule__IsAtOperation__Angle3Assignment_6 ) )
+            // InternalCPtester.g:4110:1: ( ( ( rule__IsAt__Angle3Assignment_6 ) ) )
+            // InternalCPtester.g:4111:1: ( ( rule__IsAt__Angle3Assignment_6 ) )
             {
-            // InternalCPtester.g:4111:1: ( ( rule__IsAtOperation__Angle3Assignment_6 ) )
-            // InternalCPtester.g:4112:2: ( rule__IsAtOperation__Angle3Assignment_6 )
+            // InternalCPtester.g:4111:1: ( ( rule__IsAt__Angle3Assignment_6 ) )
+            // InternalCPtester.g:4112:2: ( rule__IsAt__Angle3Assignment_6 )
             {
-             before(grammarAccess.getIsAtOperationAccess().getAngle3Assignment_6()); 
-            // InternalCPtester.g:4113:2: ( rule__IsAtOperation__Angle3Assignment_6 )
-            // InternalCPtester.g:4113:3: rule__IsAtOperation__Angle3Assignment_6
+             before(grammarAccess.getIsAtAccess().getAngle3Assignment_6()); 
+            // InternalCPtester.g:4113:2: ( rule__IsAt__Angle3Assignment_6 )
+            // InternalCPtester.g:4113:3: rule__IsAt__Angle3Assignment_6
             {
             pushFollow(FOLLOW_2);
-            rule__IsAtOperation__Angle3Assignment_6();
+            rule__IsAt__Angle3Assignment_6();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getIsAtOperationAccess().getAngle3Assignment_6()); 
+             after(grammarAccess.getIsAtAccess().getAngle3Assignment_6()); 
 
             }
 
@@ -12338,26 +12338,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtOperation__Group__6__Impl"
+    // $ANTLR end "rule__IsAt__Group__6__Impl"
 
 
-    // $ANTLR start "rule__IsAtOperation__Group__7"
-    // InternalCPtester.g:4121:1: rule__IsAtOperation__Group__7 : rule__IsAtOperation__Group__7__Impl rule__IsAtOperation__Group__8 ;
-    public final void rule__IsAtOperation__Group__7() throws RecognitionException {
+    // $ANTLR start "rule__IsAt__Group__7"
+    // InternalCPtester.g:4121:1: rule__IsAt__Group__7 : rule__IsAt__Group__7__Impl rule__IsAt__Group__8 ;
+    public final void rule__IsAt__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:4125:1: ( rule__IsAtOperation__Group__7__Impl rule__IsAtOperation__Group__8 )
-            // InternalCPtester.g:4126:2: rule__IsAtOperation__Group__7__Impl rule__IsAtOperation__Group__8
+            // InternalCPtester.g:4125:1: ( rule__IsAt__Group__7__Impl rule__IsAt__Group__8 )
+            // InternalCPtester.g:4126:2: rule__IsAt__Group__7__Impl rule__IsAt__Group__8
             {
             pushFollow(FOLLOW_18);
-            rule__IsAtOperation__Group__7__Impl();
+            rule__IsAt__Group__7__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__IsAtOperation__Group__8();
+            rule__IsAt__Group__8();
 
             state._fsp--;
 
@@ -12376,12 +12376,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtOperation__Group__7"
+    // $ANTLR end "rule__IsAt__Group__7"
 
 
-    // $ANTLR start "rule__IsAtOperation__Group__7__Impl"
-    // InternalCPtester.g:4133:1: rule__IsAtOperation__Group__7__Impl : ( ',' ) ;
-    public final void rule__IsAtOperation__Group__7__Impl() throws RecognitionException {
+    // $ANTLR start "rule__IsAt__Group__7__Impl"
+    // InternalCPtester.g:4133:1: rule__IsAt__Group__7__Impl : ( ',' ) ;
+    public final void rule__IsAt__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -12392,9 +12392,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:4138:1: ( ',' )
             // InternalCPtester.g:4139:2: ','
             {
-             before(grammarAccess.getIsAtOperationAccess().getCommaKeyword_7()); 
+             before(grammarAccess.getIsAtAccess().getCommaKeyword_7()); 
             match(input,17,FOLLOW_2); 
-             after(grammarAccess.getIsAtOperationAccess().getCommaKeyword_7()); 
+             after(grammarAccess.getIsAtAccess().getCommaKeyword_7()); 
 
             }
 
@@ -12413,26 +12413,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtOperation__Group__7__Impl"
+    // $ANTLR end "rule__IsAt__Group__7__Impl"
 
 
-    // $ANTLR start "rule__IsAtOperation__Group__8"
-    // InternalCPtester.g:4148:1: rule__IsAtOperation__Group__8 : rule__IsAtOperation__Group__8__Impl rule__IsAtOperation__Group__9 ;
-    public final void rule__IsAtOperation__Group__8() throws RecognitionException {
+    // $ANTLR start "rule__IsAt__Group__8"
+    // InternalCPtester.g:4148:1: rule__IsAt__Group__8 : rule__IsAt__Group__8__Impl rule__IsAt__Group__9 ;
+    public final void rule__IsAt__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:4152:1: ( rule__IsAtOperation__Group__8__Impl rule__IsAtOperation__Group__9 )
-            // InternalCPtester.g:4153:2: rule__IsAtOperation__Group__8__Impl rule__IsAtOperation__Group__9
+            // InternalCPtester.g:4152:1: ( rule__IsAt__Group__8__Impl rule__IsAt__Group__9 )
+            // InternalCPtester.g:4153:2: rule__IsAt__Group__8__Impl rule__IsAt__Group__9
             {
             pushFollow(FOLLOW_20);
-            rule__IsAtOperation__Group__8__Impl();
+            rule__IsAt__Group__8__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__IsAtOperation__Group__9();
+            rule__IsAt__Group__9();
 
             state._fsp--;
 
@@ -12451,35 +12451,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtOperation__Group__8"
+    // $ANTLR end "rule__IsAt__Group__8"
 
 
-    // $ANTLR start "rule__IsAtOperation__Group__8__Impl"
-    // InternalCPtester.g:4160:1: rule__IsAtOperation__Group__8__Impl : ( ( rule__IsAtOperation__Angle4Assignment_8 ) ) ;
-    public final void rule__IsAtOperation__Group__8__Impl() throws RecognitionException {
+    // $ANTLR start "rule__IsAt__Group__8__Impl"
+    // InternalCPtester.g:4160:1: rule__IsAt__Group__8__Impl : ( ( rule__IsAt__Angle4Assignment_8 ) ) ;
+    public final void rule__IsAt__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:4164:1: ( ( ( rule__IsAtOperation__Angle4Assignment_8 ) ) )
-            // InternalCPtester.g:4165:1: ( ( rule__IsAtOperation__Angle4Assignment_8 ) )
+            // InternalCPtester.g:4164:1: ( ( ( rule__IsAt__Angle4Assignment_8 ) ) )
+            // InternalCPtester.g:4165:1: ( ( rule__IsAt__Angle4Assignment_8 ) )
             {
-            // InternalCPtester.g:4165:1: ( ( rule__IsAtOperation__Angle4Assignment_8 ) )
-            // InternalCPtester.g:4166:2: ( rule__IsAtOperation__Angle4Assignment_8 )
+            // InternalCPtester.g:4165:1: ( ( rule__IsAt__Angle4Assignment_8 ) )
+            // InternalCPtester.g:4166:2: ( rule__IsAt__Angle4Assignment_8 )
             {
-             before(grammarAccess.getIsAtOperationAccess().getAngle4Assignment_8()); 
-            // InternalCPtester.g:4167:2: ( rule__IsAtOperation__Angle4Assignment_8 )
-            // InternalCPtester.g:4167:3: rule__IsAtOperation__Angle4Assignment_8
+             before(grammarAccess.getIsAtAccess().getAngle4Assignment_8()); 
+            // InternalCPtester.g:4167:2: ( rule__IsAt__Angle4Assignment_8 )
+            // InternalCPtester.g:4167:3: rule__IsAt__Angle4Assignment_8
             {
             pushFollow(FOLLOW_2);
-            rule__IsAtOperation__Angle4Assignment_8();
+            rule__IsAt__Angle4Assignment_8();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getIsAtOperationAccess().getAngle4Assignment_8()); 
+             after(grammarAccess.getIsAtAccess().getAngle4Assignment_8()); 
 
             }
 
@@ -12498,26 +12498,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtOperation__Group__8__Impl"
+    // $ANTLR end "rule__IsAt__Group__8__Impl"
 
 
-    // $ANTLR start "rule__IsAtOperation__Group__9"
-    // InternalCPtester.g:4175:1: rule__IsAtOperation__Group__9 : rule__IsAtOperation__Group__9__Impl rule__IsAtOperation__Group__10 ;
-    public final void rule__IsAtOperation__Group__9() throws RecognitionException {
+    // $ANTLR start "rule__IsAt__Group__9"
+    // InternalCPtester.g:4175:1: rule__IsAt__Group__9 : rule__IsAt__Group__9__Impl rule__IsAt__Group__10 ;
+    public final void rule__IsAt__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:4179:1: ( rule__IsAtOperation__Group__9__Impl rule__IsAtOperation__Group__10 )
-            // InternalCPtester.g:4180:2: rule__IsAtOperation__Group__9__Impl rule__IsAtOperation__Group__10
+            // InternalCPtester.g:4179:1: ( rule__IsAt__Group__9__Impl rule__IsAt__Group__10 )
+            // InternalCPtester.g:4180:2: rule__IsAt__Group__9__Impl rule__IsAt__Group__10
             {
             pushFollow(FOLLOW_18);
-            rule__IsAtOperation__Group__9__Impl();
+            rule__IsAt__Group__9__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__IsAtOperation__Group__10();
+            rule__IsAt__Group__10();
 
             state._fsp--;
 
@@ -12536,12 +12536,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtOperation__Group__9"
+    // $ANTLR end "rule__IsAt__Group__9"
 
 
-    // $ANTLR start "rule__IsAtOperation__Group__9__Impl"
-    // InternalCPtester.g:4187:1: rule__IsAtOperation__Group__9__Impl : ( ',' ) ;
-    public final void rule__IsAtOperation__Group__9__Impl() throws RecognitionException {
+    // $ANTLR start "rule__IsAt__Group__9__Impl"
+    // InternalCPtester.g:4187:1: rule__IsAt__Group__9__Impl : ( ',' ) ;
+    public final void rule__IsAt__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -12552,9 +12552,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:4192:1: ( ',' )
             // InternalCPtester.g:4193:2: ','
             {
-             before(grammarAccess.getIsAtOperationAccess().getCommaKeyword_9()); 
+             before(grammarAccess.getIsAtAccess().getCommaKeyword_9()); 
             match(input,17,FOLLOW_2); 
-             after(grammarAccess.getIsAtOperationAccess().getCommaKeyword_9()); 
+             after(grammarAccess.getIsAtAccess().getCommaKeyword_9()); 
 
             }
 
@@ -12573,26 +12573,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtOperation__Group__9__Impl"
+    // $ANTLR end "rule__IsAt__Group__9__Impl"
 
 
-    // $ANTLR start "rule__IsAtOperation__Group__10"
-    // InternalCPtester.g:4202:1: rule__IsAtOperation__Group__10 : rule__IsAtOperation__Group__10__Impl rule__IsAtOperation__Group__11 ;
-    public final void rule__IsAtOperation__Group__10() throws RecognitionException {
+    // $ANTLR start "rule__IsAt__Group__10"
+    // InternalCPtester.g:4202:1: rule__IsAt__Group__10 : rule__IsAt__Group__10__Impl rule__IsAt__Group__11 ;
+    public final void rule__IsAt__Group__10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:4206:1: ( rule__IsAtOperation__Group__10__Impl rule__IsAtOperation__Group__11 )
-            // InternalCPtester.g:4207:2: rule__IsAtOperation__Group__10__Impl rule__IsAtOperation__Group__11
+            // InternalCPtester.g:4206:1: ( rule__IsAt__Group__10__Impl rule__IsAt__Group__11 )
+            // InternalCPtester.g:4207:2: rule__IsAt__Group__10__Impl rule__IsAt__Group__11
             {
             pushFollow(FOLLOW_20);
-            rule__IsAtOperation__Group__10__Impl();
+            rule__IsAt__Group__10__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__IsAtOperation__Group__11();
+            rule__IsAt__Group__11();
 
             state._fsp--;
 
@@ -12611,35 +12611,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtOperation__Group__10"
+    // $ANTLR end "rule__IsAt__Group__10"
 
 
-    // $ANTLR start "rule__IsAtOperation__Group__10__Impl"
-    // InternalCPtester.g:4214:1: rule__IsAtOperation__Group__10__Impl : ( ( rule__IsAtOperation__Angle5Assignment_10 ) ) ;
-    public final void rule__IsAtOperation__Group__10__Impl() throws RecognitionException {
+    // $ANTLR start "rule__IsAt__Group__10__Impl"
+    // InternalCPtester.g:4214:1: rule__IsAt__Group__10__Impl : ( ( rule__IsAt__Angle5Assignment_10 ) ) ;
+    public final void rule__IsAt__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:4218:1: ( ( ( rule__IsAtOperation__Angle5Assignment_10 ) ) )
-            // InternalCPtester.g:4219:1: ( ( rule__IsAtOperation__Angle5Assignment_10 ) )
+            // InternalCPtester.g:4218:1: ( ( ( rule__IsAt__Angle5Assignment_10 ) ) )
+            // InternalCPtester.g:4219:1: ( ( rule__IsAt__Angle5Assignment_10 ) )
             {
-            // InternalCPtester.g:4219:1: ( ( rule__IsAtOperation__Angle5Assignment_10 ) )
-            // InternalCPtester.g:4220:2: ( rule__IsAtOperation__Angle5Assignment_10 )
+            // InternalCPtester.g:4219:1: ( ( rule__IsAt__Angle5Assignment_10 ) )
+            // InternalCPtester.g:4220:2: ( rule__IsAt__Angle5Assignment_10 )
             {
-             before(grammarAccess.getIsAtOperationAccess().getAngle5Assignment_10()); 
-            // InternalCPtester.g:4221:2: ( rule__IsAtOperation__Angle5Assignment_10 )
-            // InternalCPtester.g:4221:3: rule__IsAtOperation__Angle5Assignment_10
+             before(grammarAccess.getIsAtAccess().getAngle5Assignment_10()); 
+            // InternalCPtester.g:4221:2: ( rule__IsAt__Angle5Assignment_10 )
+            // InternalCPtester.g:4221:3: rule__IsAt__Angle5Assignment_10
             {
             pushFollow(FOLLOW_2);
-            rule__IsAtOperation__Angle5Assignment_10();
+            rule__IsAt__Angle5Assignment_10();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getIsAtOperationAccess().getAngle5Assignment_10()); 
+             after(grammarAccess.getIsAtAccess().getAngle5Assignment_10()); 
 
             }
 
@@ -12658,26 +12658,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtOperation__Group__10__Impl"
+    // $ANTLR end "rule__IsAt__Group__10__Impl"
 
 
-    // $ANTLR start "rule__IsAtOperation__Group__11"
-    // InternalCPtester.g:4229:1: rule__IsAtOperation__Group__11 : rule__IsAtOperation__Group__11__Impl rule__IsAtOperation__Group__12 ;
-    public final void rule__IsAtOperation__Group__11() throws RecognitionException {
+    // $ANTLR start "rule__IsAt__Group__11"
+    // InternalCPtester.g:4229:1: rule__IsAt__Group__11 : rule__IsAt__Group__11__Impl rule__IsAt__Group__12 ;
+    public final void rule__IsAt__Group__11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:4233:1: ( rule__IsAtOperation__Group__11__Impl rule__IsAtOperation__Group__12 )
-            // InternalCPtester.g:4234:2: rule__IsAtOperation__Group__11__Impl rule__IsAtOperation__Group__12
+            // InternalCPtester.g:4233:1: ( rule__IsAt__Group__11__Impl rule__IsAt__Group__12 )
+            // InternalCPtester.g:4234:2: rule__IsAt__Group__11__Impl rule__IsAt__Group__12
             {
             pushFollow(FOLLOW_18);
-            rule__IsAtOperation__Group__11__Impl();
+            rule__IsAt__Group__11__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__IsAtOperation__Group__12();
+            rule__IsAt__Group__12();
 
             state._fsp--;
 
@@ -12696,12 +12696,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtOperation__Group__11"
+    // $ANTLR end "rule__IsAt__Group__11"
 
 
-    // $ANTLR start "rule__IsAtOperation__Group__11__Impl"
-    // InternalCPtester.g:4241:1: rule__IsAtOperation__Group__11__Impl : ( ',' ) ;
-    public final void rule__IsAtOperation__Group__11__Impl() throws RecognitionException {
+    // $ANTLR start "rule__IsAt__Group__11__Impl"
+    // InternalCPtester.g:4241:1: rule__IsAt__Group__11__Impl : ( ',' ) ;
+    public final void rule__IsAt__Group__11__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -12712,9 +12712,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:4246:1: ( ',' )
             // InternalCPtester.g:4247:2: ','
             {
-             before(grammarAccess.getIsAtOperationAccess().getCommaKeyword_11()); 
+             before(grammarAccess.getIsAtAccess().getCommaKeyword_11()); 
             match(input,17,FOLLOW_2); 
-             after(grammarAccess.getIsAtOperationAccess().getCommaKeyword_11()); 
+             after(grammarAccess.getIsAtAccess().getCommaKeyword_11()); 
 
             }
 
@@ -12733,26 +12733,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtOperation__Group__11__Impl"
+    // $ANTLR end "rule__IsAt__Group__11__Impl"
 
 
-    // $ANTLR start "rule__IsAtOperation__Group__12"
-    // InternalCPtester.g:4256:1: rule__IsAtOperation__Group__12 : rule__IsAtOperation__Group__12__Impl rule__IsAtOperation__Group__13 ;
-    public final void rule__IsAtOperation__Group__12() throws RecognitionException {
+    // $ANTLR start "rule__IsAt__Group__12"
+    // InternalCPtester.g:4256:1: rule__IsAt__Group__12 : rule__IsAt__Group__12__Impl rule__IsAt__Group__13 ;
+    public final void rule__IsAt__Group__12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:4260:1: ( rule__IsAtOperation__Group__12__Impl rule__IsAtOperation__Group__13 )
-            // InternalCPtester.g:4261:2: rule__IsAtOperation__Group__12__Impl rule__IsAtOperation__Group__13
+            // InternalCPtester.g:4260:1: ( rule__IsAt__Group__12__Impl rule__IsAt__Group__13 )
+            // InternalCPtester.g:4261:2: rule__IsAt__Group__12__Impl rule__IsAt__Group__13
             {
             pushFollow(FOLLOW_20);
-            rule__IsAtOperation__Group__12__Impl();
+            rule__IsAt__Group__12__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__IsAtOperation__Group__13();
+            rule__IsAt__Group__13();
 
             state._fsp--;
 
@@ -12771,35 +12771,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtOperation__Group__12"
+    // $ANTLR end "rule__IsAt__Group__12"
 
 
-    // $ANTLR start "rule__IsAtOperation__Group__12__Impl"
-    // InternalCPtester.g:4268:1: rule__IsAtOperation__Group__12__Impl : ( ( rule__IsAtOperation__Angle6Assignment_12 ) ) ;
-    public final void rule__IsAtOperation__Group__12__Impl() throws RecognitionException {
+    // $ANTLR start "rule__IsAt__Group__12__Impl"
+    // InternalCPtester.g:4268:1: rule__IsAt__Group__12__Impl : ( ( rule__IsAt__Angle6Assignment_12 ) ) ;
+    public final void rule__IsAt__Group__12__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:4272:1: ( ( ( rule__IsAtOperation__Angle6Assignment_12 ) ) )
-            // InternalCPtester.g:4273:1: ( ( rule__IsAtOperation__Angle6Assignment_12 ) )
+            // InternalCPtester.g:4272:1: ( ( ( rule__IsAt__Angle6Assignment_12 ) ) )
+            // InternalCPtester.g:4273:1: ( ( rule__IsAt__Angle6Assignment_12 ) )
             {
-            // InternalCPtester.g:4273:1: ( ( rule__IsAtOperation__Angle6Assignment_12 ) )
-            // InternalCPtester.g:4274:2: ( rule__IsAtOperation__Angle6Assignment_12 )
+            // InternalCPtester.g:4273:1: ( ( rule__IsAt__Angle6Assignment_12 ) )
+            // InternalCPtester.g:4274:2: ( rule__IsAt__Angle6Assignment_12 )
             {
-             before(grammarAccess.getIsAtOperationAccess().getAngle6Assignment_12()); 
-            // InternalCPtester.g:4275:2: ( rule__IsAtOperation__Angle6Assignment_12 )
-            // InternalCPtester.g:4275:3: rule__IsAtOperation__Angle6Assignment_12
+             before(grammarAccess.getIsAtAccess().getAngle6Assignment_12()); 
+            // InternalCPtester.g:4275:2: ( rule__IsAt__Angle6Assignment_12 )
+            // InternalCPtester.g:4275:3: rule__IsAt__Angle6Assignment_12
             {
             pushFollow(FOLLOW_2);
-            rule__IsAtOperation__Angle6Assignment_12();
+            rule__IsAt__Angle6Assignment_12();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getIsAtOperationAccess().getAngle6Assignment_12()); 
+             after(grammarAccess.getIsAtAccess().getAngle6Assignment_12()); 
 
             }
 
@@ -12818,26 +12818,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtOperation__Group__12__Impl"
+    // $ANTLR end "rule__IsAt__Group__12__Impl"
 
 
-    // $ANTLR start "rule__IsAtOperation__Group__13"
-    // InternalCPtester.g:4283:1: rule__IsAtOperation__Group__13 : rule__IsAtOperation__Group__13__Impl rule__IsAtOperation__Group__14 ;
-    public final void rule__IsAtOperation__Group__13() throws RecognitionException {
+    // $ANTLR start "rule__IsAt__Group__13"
+    // InternalCPtester.g:4283:1: rule__IsAt__Group__13 : rule__IsAt__Group__13__Impl rule__IsAt__Group__14 ;
+    public final void rule__IsAt__Group__13() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:4287:1: ( rule__IsAtOperation__Group__13__Impl rule__IsAtOperation__Group__14 )
-            // InternalCPtester.g:4288:2: rule__IsAtOperation__Group__13__Impl rule__IsAtOperation__Group__14
+            // InternalCPtester.g:4287:1: ( rule__IsAt__Group__13__Impl rule__IsAt__Group__14 )
+            // InternalCPtester.g:4288:2: rule__IsAt__Group__13__Impl rule__IsAt__Group__14
             {
             pushFollow(FOLLOW_18);
-            rule__IsAtOperation__Group__13__Impl();
+            rule__IsAt__Group__13__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__IsAtOperation__Group__14();
+            rule__IsAt__Group__14();
 
             state._fsp--;
 
@@ -12856,12 +12856,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtOperation__Group__13"
+    // $ANTLR end "rule__IsAt__Group__13"
 
 
-    // $ANTLR start "rule__IsAtOperation__Group__13__Impl"
-    // InternalCPtester.g:4295:1: rule__IsAtOperation__Group__13__Impl : ( ',' ) ;
-    public final void rule__IsAtOperation__Group__13__Impl() throws RecognitionException {
+    // $ANTLR start "rule__IsAt__Group__13__Impl"
+    // InternalCPtester.g:4295:1: rule__IsAt__Group__13__Impl : ( ',' ) ;
+    public final void rule__IsAt__Group__13__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -12872,9 +12872,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:4300:1: ( ',' )
             // InternalCPtester.g:4301:2: ','
             {
-             before(grammarAccess.getIsAtOperationAccess().getCommaKeyword_13()); 
+             before(grammarAccess.getIsAtAccess().getCommaKeyword_13()); 
             match(input,17,FOLLOW_2); 
-             after(grammarAccess.getIsAtOperationAccess().getCommaKeyword_13()); 
+             after(grammarAccess.getIsAtAccess().getCommaKeyword_13()); 
 
             }
 
@@ -12893,26 +12893,26 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtOperation__Group__13__Impl"
+    // $ANTLR end "rule__IsAt__Group__13__Impl"
 
 
-    // $ANTLR start "rule__IsAtOperation__Group__14"
-    // InternalCPtester.g:4310:1: rule__IsAtOperation__Group__14 : rule__IsAtOperation__Group__14__Impl rule__IsAtOperation__Group__15 ;
-    public final void rule__IsAtOperation__Group__14() throws RecognitionException {
+    // $ANTLR start "rule__IsAt__Group__14"
+    // InternalCPtester.g:4310:1: rule__IsAt__Group__14 : rule__IsAt__Group__14__Impl rule__IsAt__Group__15 ;
+    public final void rule__IsAt__Group__14() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:4314:1: ( rule__IsAtOperation__Group__14__Impl rule__IsAtOperation__Group__15 )
-            // InternalCPtester.g:4315:2: rule__IsAtOperation__Group__14__Impl rule__IsAtOperation__Group__15
+            // InternalCPtester.g:4314:1: ( rule__IsAt__Group__14__Impl rule__IsAt__Group__15 )
+            // InternalCPtester.g:4315:2: rule__IsAt__Group__14__Impl rule__IsAt__Group__15
             {
             pushFollow(FOLLOW_19);
-            rule__IsAtOperation__Group__14__Impl();
+            rule__IsAt__Group__14__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__IsAtOperation__Group__15();
+            rule__IsAt__Group__15();
 
             state._fsp--;
 
@@ -12931,35 +12931,35 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtOperation__Group__14"
+    // $ANTLR end "rule__IsAt__Group__14"
 
 
-    // $ANTLR start "rule__IsAtOperation__Group__14__Impl"
-    // InternalCPtester.g:4322:1: rule__IsAtOperation__Group__14__Impl : ( ( rule__IsAtOperation__Angle_resAssignment_14 ) ) ;
-    public final void rule__IsAtOperation__Group__14__Impl() throws RecognitionException {
+    // $ANTLR start "rule__IsAt__Group__14__Impl"
+    // InternalCPtester.g:4322:1: rule__IsAt__Group__14__Impl : ( ( rule__IsAt__Angle_resAssignment_14 ) ) ;
+    public final void rule__IsAt__Group__14__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:4326:1: ( ( ( rule__IsAtOperation__Angle_resAssignment_14 ) ) )
-            // InternalCPtester.g:4327:1: ( ( rule__IsAtOperation__Angle_resAssignment_14 ) )
+            // InternalCPtester.g:4326:1: ( ( ( rule__IsAt__Angle_resAssignment_14 ) ) )
+            // InternalCPtester.g:4327:1: ( ( rule__IsAt__Angle_resAssignment_14 ) )
             {
-            // InternalCPtester.g:4327:1: ( ( rule__IsAtOperation__Angle_resAssignment_14 ) )
-            // InternalCPtester.g:4328:2: ( rule__IsAtOperation__Angle_resAssignment_14 )
+            // InternalCPtester.g:4327:1: ( ( rule__IsAt__Angle_resAssignment_14 ) )
+            // InternalCPtester.g:4328:2: ( rule__IsAt__Angle_resAssignment_14 )
             {
-             before(grammarAccess.getIsAtOperationAccess().getAngle_resAssignment_14()); 
-            // InternalCPtester.g:4329:2: ( rule__IsAtOperation__Angle_resAssignment_14 )
-            // InternalCPtester.g:4329:3: rule__IsAtOperation__Angle_resAssignment_14
+             before(grammarAccess.getIsAtAccess().getAngle_resAssignment_14()); 
+            // InternalCPtester.g:4329:2: ( rule__IsAt__Angle_resAssignment_14 )
+            // InternalCPtester.g:4329:3: rule__IsAt__Angle_resAssignment_14
             {
             pushFollow(FOLLOW_2);
-            rule__IsAtOperation__Angle_resAssignment_14();
+            rule__IsAt__Angle_resAssignment_14();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getIsAtOperationAccess().getAngle_resAssignment_14()); 
+             after(grammarAccess.getIsAtAccess().getAngle_resAssignment_14()); 
 
             }
 
@@ -12978,21 +12978,21 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtOperation__Group__14__Impl"
+    // $ANTLR end "rule__IsAt__Group__14__Impl"
 
 
-    // $ANTLR start "rule__IsAtOperation__Group__15"
-    // InternalCPtester.g:4337:1: rule__IsAtOperation__Group__15 : rule__IsAtOperation__Group__15__Impl ;
-    public final void rule__IsAtOperation__Group__15() throws RecognitionException {
+    // $ANTLR start "rule__IsAt__Group__15"
+    // InternalCPtester.g:4337:1: rule__IsAt__Group__15 : rule__IsAt__Group__15__Impl ;
+    public final void rule__IsAt__Group__15() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:4341:1: ( rule__IsAtOperation__Group__15__Impl )
-            // InternalCPtester.g:4342:2: rule__IsAtOperation__Group__15__Impl
+            // InternalCPtester.g:4341:1: ( rule__IsAt__Group__15__Impl )
+            // InternalCPtester.g:4342:2: rule__IsAt__Group__15__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__IsAtOperation__Group__15__Impl();
+            rule__IsAt__Group__15__Impl();
 
             state._fsp--;
 
@@ -13011,12 +13011,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtOperation__Group__15"
+    // $ANTLR end "rule__IsAt__Group__15"
 
 
-    // $ANTLR start "rule__IsAtOperation__Group__15__Impl"
-    // InternalCPtester.g:4348:1: rule__IsAtOperation__Group__15__Impl : ( ')' ) ;
-    public final void rule__IsAtOperation__Group__15__Impl() throws RecognitionException {
+    // $ANTLR start "rule__IsAt__Group__15__Impl"
+    // InternalCPtester.g:4348:1: rule__IsAt__Group__15__Impl : ( ')' ) ;
+    public final void rule__IsAt__Group__15__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -13027,9 +13027,9 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:4353:1: ( ')' )
             // InternalCPtester.g:4354:2: ')'
             {
-             before(grammarAccess.getIsAtOperationAccess().getRightParenthesisKeyword_15()); 
+             before(grammarAccess.getIsAtAccess().getRightParenthesisKeyword_15()); 
             match(input,16,FOLLOW_2); 
-             after(grammarAccess.getIsAtOperationAccess().getRightParenthesisKeyword_15()); 
+             after(grammarAccess.getIsAtAccess().getRightParenthesisKeyword_15()); 
 
             }
 
@@ -13048,7 +13048,7 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtOperation__Group__15__Impl"
+    // $ANTLR end "rule__IsAt__Group__15__Impl"
 
 
     // $ANTLR start "rule__Scenario__SurnameAssignment_1"
@@ -13765,29 +13765,29 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Initial__NameAssignment_0"
-    // InternalCPtester.g:4639:1: rule__Initial__NameAssignment_0 : ( ( 'posInicialOperation' ) ) ;
+    // InternalCPtester.g:4639:1: rule__Initial__NameAssignment_0 : ( ( 'posInicial' ) ) ;
     public final void rule__Initial__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:4643:1: ( ( ( 'posInicialOperation' ) ) )
-            // InternalCPtester.g:4644:2: ( ( 'posInicialOperation' ) )
+            // InternalCPtester.g:4643:1: ( ( ( 'posInicial' ) ) )
+            // InternalCPtester.g:4644:2: ( ( 'posInicial' ) )
             {
-            // InternalCPtester.g:4644:2: ( ( 'posInicialOperation' ) )
-            // InternalCPtester.g:4645:3: ( 'posInicialOperation' )
+            // InternalCPtester.g:4644:2: ( ( 'posInicial' ) )
+            // InternalCPtester.g:4645:3: ( 'posInicial' )
             {
-             before(grammarAccess.getInitialAccess().getNamePosInicialOperationKeyword_0_0()); 
-            // InternalCPtester.g:4646:3: ( 'posInicialOperation' )
-            // InternalCPtester.g:4647:4: 'posInicialOperation'
+             before(grammarAccess.getInitialAccess().getNamePosInicialKeyword_0_0()); 
+            // InternalCPtester.g:4646:3: ( 'posInicial' )
+            // InternalCPtester.g:4647:4: 'posInicial'
             {
-             before(grammarAccess.getInitialAccess().getNamePosInicialOperationKeyword_0_0()); 
+             before(grammarAccess.getInitialAccess().getNamePosInicialKeyword_0_0()); 
             match(input,22,FOLLOW_2); 
-             after(grammarAccess.getInitialAccess().getNamePosInicialOperationKeyword_0_0()); 
+             after(grammarAccess.getInitialAccess().getNamePosInicialKeyword_0_0()); 
 
             }
 
-             after(grammarAccess.getInitialAccess().getNamePosInicialOperationKeyword_0_0()); 
+             after(grammarAccess.getInitialAccess().getNamePosInicialKeyword_0_0()); 
 
             }
 
@@ -13850,30 +13850,30 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__Initial__TimeAssignment_2"
 
 
-    // $ANTLR start "rule__LightRGBOperation__NameAssignment_0"
-    // InternalCPtester.g:4673:1: rule__LightRGBOperation__NameAssignment_0 : ( ( 'lightRGBOperation' ) ) ;
-    public final void rule__LightRGBOperation__NameAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__LightRGB__NameAssignment_0"
+    // InternalCPtester.g:4673:1: rule__LightRGB__NameAssignment_0 : ( ( 'lightRGB' ) ) ;
+    public final void rule__LightRGB__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:4677:1: ( ( ( 'lightRGBOperation' ) ) )
-            // InternalCPtester.g:4678:2: ( ( 'lightRGBOperation' ) )
+            // InternalCPtester.g:4677:1: ( ( ( 'lightRGB' ) ) )
+            // InternalCPtester.g:4678:2: ( ( 'lightRGB' ) )
             {
-            // InternalCPtester.g:4678:2: ( ( 'lightRGBOperation' ) )
-            // InternalCPtester.g:4679:3: ( 'lightRGBOperation' )
+            // InternalCPtester.g:4678:2: ( ( 'lightRGB' ) )
+            // InternalCPtester.g:4679:3: ( 'lightRGB' )
             {
-             before(grammarAccess.getLightRGBOperationAccess().getNameLightRGBOperationKeyword_0_0()); 
-            // InternalCPtester.g:4680:3: ( 'lightRGBOperation' )
-            // InternalCPtester.g:4681:4: 'lightRGBOperation'
+             before(grammarAccess.getLightRGBAccess().getNameLightRGBKeyword_0_0()); 
+            // InternalCPtester.g:4680:3: ( 'lightRGB' )
+            // InternalCPtester.g:4681:4: 'lightRGB'
             {
-             before(grammarAccess.getLightRGBOperationAccess().getNameLightRGBOperationKeyword_0_0()); 
+             before(grammarAccess.getLightRGBAccess().getNameLightRGBKeyword_0_0()); 
             match(input,23,FOLLOW_2); 
-             after(grammarAccess.getLightRGBOperationAccess().getNameLightRGBOperationKeyword_0_0()); 
+             after(grammarAccess.getLightRGBAccess().getNameLightRGBKeyword_0_0()); 
 
             }
 
-             after(grammarAccess.getLightRGBOperationAccess().getNameLightRGBOperationKeyword_0_0()); 
+             after(grammarAccess.getLightRGBAccess().getNameLightRGBKeyword_0_0()); 
 
             }
 
@@ -13892,12 +13892,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__LightRGBOperation__NameAssignment_0"
+    // $ANTLR end "rule__LightRGB__NameAssignment_0"
 
 
-    // $ANTLR start "rule__LightRGBOperation__RAssignment_2"
-    // InternalCPtester.g:4692:1: rule__LightRGBOperation__RAssignment_2 : ( ruleR ) ;
-    public final void rule__LightRGBOperation__RAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__LightRGB__RAssignment_2"
+    // InternalCPtester.g:4692:1: rule__LightRGB__RAssignment_2 : ( ruleR ) ;
+    public final void rule__LightRGB__RAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -13908,13 +13908,13 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:4697:2: ( ruleR )
             // InternalCPtester.g:4698:3: ruleR
             {
-             before(grammarAccess.getLightRGBOperationAccess().getRRParserRuleCall_2_0()); 
+             before(grammarAccess.getLightRGBAccess().getRRParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
             ruleR();
 
             state._fsp--;
 
-             after(grammarAccess.getLightRGBOperationAccess().getRRParserRuleCall_2_0()); 
+             after(grammarAccess.getLightRGBAccess().getRRParserRuleCall_2_0()); 
 
             }
 
@@ -13933,12 +13933,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__LightRGBOperation__RAssignment_2"
+    // $ANTLR end "rule__LightRGB__RAssignment_2"
 
 
-    // $ANTLR start "rule__LightRGBOperation__GAssignment_4"
-    // InternalCPtester.g:4707:1: rule__LightRGBOperation__GAssignment_4 : ( ruleG ) ;
-    public final void rule__LightRGBOperation__GAssignment_4() throws RecognitionException {
+    // $ANTLR start "rule__LightRGB__GAssignment_4"
+    // InternalCPtester.g:4707:1: rule__LightRGB__GAssignment_4 : ( ruleG ) ;
+    public final void rule__LightRGB__GAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -13949,13 +13949,13 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:4712:2: ( ruleG )
             // InternalCPtester.g:4713:3: ruleG
             {
-             before(grammarAccess.getLightRGBOperationAccess().getGGParserRuleCall_4_0()); 
+             before(grammarAccess.getLightRGBAccess().getGGParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
             ruleG();
 
             state._fsp--;
 
-             after(grammarAccess.getLightRGBOperationAccess().getGGParserRuleCall_4_0()); 
+             after(grammarAccess.getLightRGBAccess().getGGParserRuleCall_4_0()); 
 
             }
 
@@ -13974,12 +13974,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__LightRGBOperation__GAssignment_4"
+    // $ANTLR end "rule__LightRGB__GAssignment_4"
 
 
-    // $ANTLR start "rule__LightRGBOperation__BAssignment_6"
-    // InternalCPtester.g:4722:1: rule__LightRGBOperation__BAssignment_6 : ( ruleB ) ;
-    public final void rule__LightRGBOperation__BAssignment_6() throws RecognitionException {
+    // $ANTLR start "rule__LightRGB__BAssignment_6"
+    // InternalCPtester.g:4722:1: rule__LightRGB__BAssignment_6 : ( ruleB ) ;
+    public final void rule__LightRGB__BAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -13990,13 +13990,13 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:4727:2: ( ruleB )
             // InternalCPtester.g:4728:3: ruleB
             {
-             before(grammarAccess.getLightRGBOperationAccess().getBBParserRuleCall_6_0()); 
+             before(grammarAccess.getLightRGBAccess().getBBParserRuleCall_6_0()); 
             pushFollow(FOLLOW_2);
             ruleB();
 
             state._fsp--;
 
-             after(grammarAccess.getLightRGBOperationAccess().getBBParserRuleCall_6_0()); 
+             after(grammarAccess.getLightRGBAccess().getBBParserRuleCall_6_0()); 
 
             }
 
@@ -14015,33 +14015,33 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__LightRGBOperation__BAssignment_6"
+    // $ANTLR end "rule__LightRGB__BAssignment_6"
 
 
-    // $ANTLR start "rule__BuzzerOffOperation__NameAssignment_0"
-    // InternalCPtester.g:4737:1: rule__BuzzerOffOperation__NameAssignment_0 : ( ( 'buzzerOffOperation' ) ) ;
-    public final void rule__BuzzerOffOperation__NameAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__BuzzerOff__NameAssignment_0"
+    // InternalCPtester.g:4737:1: rule__BuzzerOff__NameAssignment_0 : ( ( 'buzzerOff' ) ) ;
+    public final void rule__BuzzerOff__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:4741:1: ( ( ( 'buzzerOffOperation' ) ) )
-            // InternalCPtester.g:4742:2: ( ( 'buzzerOffOperation' ) )
+            // InternalCPtester.g:4741:1: ( ( ( 'buzzerOff' ) ) )
+            // InternalCPtester.g:4742:2: ( ( 'buzzerOff' ) )
             {
-            // InternalCPtester.g:4742:2: ( ( 'buzzerOffOperation' ) )
-            // InternalCPtester.g:4743:3: ( 'buzzerOffOperation' )
+            // InternalCPtester.g:4742:2: ( ( 'buzzerOff' ) )
+            // InternalCPtester.g:4743:3: ( 'buzzerOff' )
             {
-             before(grammarAccess.getBuzzerOffOperationAccess().getNameBuzzerOffOperationKeyword_0_0()); 
-            // InternalCPtester.g:4744:3: ( 'buzzerOffOperation' )
-            // InternalCPtester.g:4745:4: 'buzzerOffOperation'
+             before(grammarAccess.getBuzzerOffAccess().getNameBuzzerOffKeyword_0_0()); 
+            // InternalCPtester.g:4744:3: ( 'buzzerOff' )
+            // InternalCPtester.g:4745:4: 'buzzerOff'
             {
-             before(grammarAccess.getBuzzerOffOperationAccess().getNameBuzzerOffOperationKeyword_0_0()); 
+             before(grammarAccess.getBuzzerOffAccess().getNameBuzzerOffKeyword_0_0()); 
             match(input,24,FOLLOW_2); 
-             after(grammarAccess.getBuzzerOffOperationAccess().getNameBuzzerOffOperationKeyword_0_0()); 
+             after(grammarAccess.getBuzzerOffAccess().getNameBuzzerOffKeyword_0_0()); 
 
             }
 
-             after(grammarAccess.getBuzzerOffOperationAccess().getNameBuzzerOffOperationKeyword_0_0()); 
+             after(grammarAccess.getBuzzerOffAccess().getNameBuzzerOffKeyword_0_0()); 
 
             }
 
@@ -14060,33 +14060,33 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__BuzzerOffOperation__NameAssignment_0"
+    // $ANTLR end "rule__BuzzerOff__NameAssignment_0"
 
 
-    // $ANTLR start "rule__BuzzerOnOperation__NameAssignment_0"
-    // InternalCPtester.g:4756:1: rule__BuzzerOnOperation__NameAssignment_0 : ( ( 'buzzerOnOperation' ) ) ;
-    public final void rule__BuzzerOnOperation__NameAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__BuzzerOn__NameAssignment_0"
+    // InternalCPtester.g:4756:1: rule__BuzzerOn__NameAssignment_0 : ( ( 'buzzerOn' ) ) ;
+    public final void rule__BuzzerOn__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:4760:1: ( ( ( 'buzzerOnOperation' ) ) )
-            // InternalCPtester.g:4761:2: ( ( 'buzzerOnOperation' ) )
+            // InternalCPtester.g:4760:1: ( ( ( 'buzzerOn' ) ) )
+            // InternalCPtester.g:4761:2: ( ( 'buzzerOn' ) )
             {
-            // InternalCPtester.g:4761:2: ( ( 'buzzerOnOperation' ) )
-            // InternalCPtester.g:4762:3: ( 'buzzerOnOperation' )
+            // InternalCPtester.g:4761:2: ( ( 'buzzerOn' ) )
+            // InternalCPtester.g:4762:3: ( 'buzzerOn' )
             {
-             before(grammarAccess.getBuzzerOnOperationAccess().getNameBuzzerOnOperationKeyword_0_0()); 
-            // InternalCPtester.g:4763:3: ( 'buzzerOnOperation' )
-            // InternalCPtester.g:4764:4: 'buzzerOnOperation'
+             before(grammarAccess.getBuzzerOnAccess().getNameBuzzerOnKeyword_0_0()); 
+            // InternalCPtester.g:4763:3: ( 'buzzerOn' )
+            // InternalCPtester.g:4764:4: 'buzzerOn'
             {
-             before(grammarAccess.getBuzzerOnOperationAccess().getNameBuzzerOnOperationKeyword_0_0()); 
+             before(grammarAccess.getBuzzerOnAccess().getNameBuzzerOnKeyword_0_0()); 
             match(input,25,FOLLOW_2); 
-             after(grammarAccess.getBuzzerOnOperationAccess().getNameBuzzerOnOperationKeyword_0_0()); 
+             after(grammarAccess.getBuzzerOnAccess().getNameBuzzerOnKeyword_0_0()); 
 
             }
 
-             after(grammarAccess.getBuzzerOnOperationAccess().getNameBuzzerOnOperationKeyword_0_0()); 
+             after(grammarAccess.getBuzzerOnAccess().getNameBuzzerOnKeyword_0_0()); 
 
             }
 
@@ -14105,12 +14105,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__BuzzerOnOperation__NameAssignment_0"
+    // $ANTLR end "rule__BuzzerOn__NameAssignment_0"
 
 
-    // $ANTLR start "rule__BuzzerOnOperation__TimeAssignment_2"
-    // InternalCPtester.g:4775:1: rule__BuzzerOnOperation__TimeAssignment_2 : ( ruleTime ) ;
-    public final void rule__BuzzerOnOperation__TimeAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__BuzzerOn__TimeAssignment_2"
+    // InternalCPtester.g:4775:1: rule__BuzzerOn__TimeAssignment_2 : ( ruleTime ) ;
+    public final void rule__BuzzerOn__TimeAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -14121,13 +14121,13 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:4780:2: ( ruleTime )
             // InternalCPtester.g:4781:3: ruleTime
             {
-             before(grammarAccess.getBuzzerOnOperationAccess().getTimeTimeParserRuleCall_2_0()); 
+             before(grammarAccess.getBuzzerOnAccess().getTimeTimeParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
             ruleTime();
 
             state._fsp--;
 
-             after(grammarAccess.getBuzzerOnOperationAccess().getTimeTimeParserRuleCall_2_0()); 
+             after(grammarAccess.getBuzzerOnAccess().getTimeTimeParserRuleCall_2_0()); 
 
             }
 
@@ -14146,33 +14146,33 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__BuzzerOnOperation__TimeAssignment_2"
+    // $ANTLR end "rule__BuzzerOn__TimeAssignment_2"
 
 
-    // $ANTLR start "rule__CalibrationOperation__NameAssignment_0"
-    // InternalCPtester.g:4790:1: rule__CalibrationOperation__NameAssignment_0 : ( ( 'calibrationOperation' ) ) ;
-    public final void rule__CalibrationOperation__NameAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__Calibration__NameAssignment_0"
+    // InternalCPtester.g:4790:1: rule__Calibration__NameAssignment_0 : ( ( 'calibration' ) ) ;
+    public final void rule__Calibration__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:4794:1: ( ( ( 'calibrationOperation' ) ) )
-            // InternalCPtester.g:4795:2: ( ( 'calibrationOperation' ) )
+            // InternalCPtester.g:4794:1: ( ( ( 'calibration' ) ) )
+            // InternalCPtester.g:4795:2: ( ( 'calibration' ) )
             {
-            // InternalCPtester.g:4795:2: ( ( 'calibrationOperation' ) )
-            // InternalCPtester.g:4796:3: ( 'calibrationOperation' )
+            // InternalCPtester.g:4795:2: ( ( 'calibration' ) )
+            // InternalCPtester.g:4796:3: ( 'calibration' )
             {
-             before(grammarAccess.getCalibrationOperationAccess().getNameCalibrationOperationKeyword_0_0()); 
-            // InternalCPtester.g:4797:3: ( 'calibrationOperation' )
-            // InternalCPtester.g:4798:4: 'calibrationOperation'
+             before(grammarAccess.getCalibrationAccess().getNameCalibrationKeyword_0_0()); 
+            // InternalCPtester.g:4797:3: ( 'calibration' )
+            // InternalCPtester.g:4798:4: 'calibration'
             {
-             before(grammarAccess.getCalibrationOperationAccess().getNameCalibrationOperationKeyword_0_0()); 
+             before(grammarAccess.getCalibrationAccess().getNameCalibrationKeyword_0_0()); 
             match(input,26,FOLLOW_2); 
-             after(grammarAccess.getCalibrationOperationAccess().getNameCalibrationOperationKeyword_0_0()); 
+             after(grammarAccess.getCalibrationAccess().getNameCalibrationKeyword_0_0()); 
 
             }
 
-             after(grammarAccess.getCalibrationOperationAccess().getNameCalibrationOperationKeyword_0_0()); 
+             after(grammarAccess.getCalibrationAccess().getNameCalibrationKeyword_0_0()); 
 
             }
 
@@ -14191,12 +14191,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CalibrationOperation__NameAssignment_0"
+    // $ANTLR end "rule__Calibration__NameAssignment_0"
 
 
-    // $ANTLR start "rule__CalibrationOperation__ColorAssignment_2"
-    // InternalCPtester.g:4809:1: rule__CalibrationOperation__ColorAssignment_2 : ( ruleColor ) ;
-    public final void rule__CalibrationOperation__ColorAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__Calibration__ColorAssignment_2"
+    // InternalCPtester.g:4809:1: rule__Calibration__ColorAssignment_2 : ( ruleColor ) ;
+    public final void rule__Calibration__ColorAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -14207,13 +14207,13 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:4814:2: ( ruleColor )
             // InternalCPtester.g:4815:3: ruleColor
             {
-             before(grammarAccess.getCalibrationOperationAccess().getColorColorParserRuleCall_2_0()); 
+             before(grammarAccess.getCalibrationAccess().getColorColorParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
             ruleColor();
 
             state._fsp--;
 
-             after(grammarAccess.getCalibrationOperationAccess().getColorColorParserRuleCall_2_0()); 
+             after(grammarAccess.getCalibrationAccess().getColorColorParserRuleCall_2_0()); 
 
             }
 
@@ -14232,12 +14232,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CalibrationOperation__ColorAssignment_2"
+    // $ANTLR end "rule__Calibration__ColorAssignment_2"
 
 
-    // $ANTLR start "rule__CalibrationOperation__H_minAssignment_4"
-    // InternalCPtester.g:4824:1: rule__CalibrationOperation__H_minAssignment_4 : ( ruleH_min ) ;
-    public final void rule__CalibrationOperation__H_minAssignment_4() throws RecognitionException {
+    // $ANTLR start "rule__Calibration__H_minAssignment_4"
+    // InternalCPtester.g:4824:1: rule__Calibration__H_minAssignment_4 : ( ruleH_min ) ;
+    public final void rule__Calibration__H_minAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -14248,13 +14248,13 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:4829:2: ( ruleH_min )
             // InternalCPtester.g:4830:3: ruleH_min
             {
-             before(grammarAccess.getCalibrationOperationAccess().getH_minH_minParserRuleCall_4_0()); 
+             before(grammarAccess.getCalibrationAccess().getH_minH_minParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
             ruleH_min();
 
             state._fsp--;
 
-             after(grammarAccess.getCalibrationOperationAccess().getH_minH_minParserRuleCall_4_0()); 
+             after(grammarAccess.getCalibrationAccess().getH_minH_minParserRuleCall_4_0()); 
 
             }
 
@@ -14273,12 +14273,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CalibrationOperation__H_minAssignment_4"
+    // $ANTLR end "rule__Calibration__H_minAssignment_4"
 
 
-    // $ANTLR start "rule__CalibrationOperation__S_minAssignment_6"
-    // InternalCPtester.g:4839:1: rule__CalibrationOperation__S_minAssignment_6 : ( ruleS_min ) ;
-    public final void rule__CalibrationOperation__S_minAssignment_6() throws RecognitionException {
+    // $ANTLR start "rule__Calibration__S_minAssignment_6"
+    // InternalCPtester.g:4839:1: rule__Calibration__S_minAssignment_6 : ( ruleS_min ) ;
+    public final void rule__Calibration__S_minAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -14289,13 +14289,13 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:4844:2: ( ruleS_min )
             // InternalCPtester.g:4845:3: ruleS_min
             {
-             before(grammarAccess.getCalibrationOperationAccess().getS_minS_minParserRuleCall_6_0()); 
+             before(grammarAccess.getCalibrationAccess().getS_minS_minParserRuleCall_6_0()); 
             pushFollow(FOLLOW_2);
             ruleS_min();
 
             state._fsp--;
 
-             after(grammarAccess.getCalibrationOperationAccess().getS_minS_minParserRuleCall_6_0()); 
+             after(grammarAccess.getCalibrationAccess().getS_minS_minParserRuleCall_6_0()); 
 
             }
 
@@ -14314,12 +14314,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CalibrationOperation__S_minAssignment_6"
+    // $ANTLR end "rule__Calibration__S_minAssignment_6"
 
 
-    // $ANTLR start "rule__CalibrationOperation__V_minAssignment_8"
-    // InternalCPtester.g:4854:1: rule__CalibrationOperation__V_minAssignment_8 : ( ruleV_min ) ;
-    public final void rule__CalibrationOperation__V_minAssignment_8() throws RecognitionException {
+    // $ANTLR start "rule__Calibration__V_minAssignment_8"
+    // InternalCPtester.g:4854:1: rule__Calibration__V_minAssignment_8 : ( ruleV_min ) ;
+    public final void rule__Calibration__V_minAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -14330,13 +14330,13 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:4859:2: ( ruleV_min )
             // InternalCPtester.g:4860:3: ruleV_min
             {
-             before(grammarAccess.getCalibrationOperationAccess().getV_minV_minParserRuleCall_8_0()); 
+             before(grammarAccess.getCalibrationAccess().getV_minV_minParserRuleCall_8_0()); 
             pushFollow(FOLLOW_2);
             ruleV_min();
 
             state._fsp--;
 
-             after(grammarAccess.getCalibrationOperationAccess().getV_minV_minParserRuleCall_8_0()); 
+             after(grammarAccess.getCalibrationAccess().getV_minV_minParserRuleCall_8_0()); 
 
             }
 
@@ -14355,12 +14355,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CalibrationOperation__V_minAssignment_8"
+    // $ANTLR end "rule__Calibration__V_minAssignment_8"
 
 
-    // $ANTLR start "rule__CalibrationOperation__H_maxAssignment_10"
-    // InternalCPtester.g:4869:1: rule__CalibrationOperation__H_maxAssignment_10 : ( ruleH_max ) ;
-    public final void rule__CalibrationOperation__H_maxAssignment_10() throws RecognitionException {
+    // $ANTLR start "rule__Calibration__H_maxAssignment_10"
+    // InternalCPtester.g:4869:1: rule__Calibration__H_maxAssignment_10 : ( ruleH_max ) ;
+    public final void rule__Calibration__H_maxAssignment_10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -14371,13 +14371,13 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:4874:2: ( ruleH_max )
             // InternalCPtester.g:4875:3: ruleH_max
             {
-             before(grammarAccess.getCalibrationOperationAccess().getH_maxH_maxParserRuleCall_10_0()); 
+             before(grammarAccess.getCalibrationAccess().getH_maxH_maxParserRuleCall_10_0()); 
             pushFollow(FOLLOW_2);
             ruleH_max();
 
             state._fsp--;
 
-             after(grammarAccess.getCalibrationOperationAccess().getH_maxH_maxParserRuleCall_10_0()); 
+             after(grammarAccess.getCalibrationAccess().getH_maxH_maxParserRuleCall_10_0()); 
 
             }
 
@@ -14396,12 +14396,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CalibrationOperation__H_maxAssignment_10"
+    // $ANTLR end "rule__Calibration__H_maxAssignment_10"
 
 
-    // $ANTLR start "rule__CalibrationOperation__S_maxAssignment_12"
-    // InternalCPtester.g:4884:1: rule__CalibrationOperation__S_maxAssignment_12 : ( ruleS_max ) ;
-    public final void rule__CalibrationOperation__S_maxAssignment_12() throws RecognitionException {
+    // $ANTLR start "rule__Calibration__S_maxAssignment_12"
+    // InternalCPtester.g:4884:1: rule__Calibration__S_maxAssignment_12 : ( ruleS_max ) ;
+    public final void rule__Calibration__S_maxAssignment_12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -14412,13 +14412,13 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:4889:2: ( ruleS_max )
             // InternalCPtester.g:4890:3: ruleS_max
             {
-             before(grammarAccess.getCalibrationOperationAccess().getS_maxS_maxParserRuleCall_12_0()); 
+             before(grammarAccess.getCalibrationAccess().getS_maxS_maxParserRuleCall_12_0()); 
             pushFollow(FOLLOW_2);
             ruleS_max();
 
             state._fsp--;
 
-             after(grammarAccess.getCalibrationOperationAccess().getS_maxS_maxParserRuleCall_12_0()); 
+             after(grammarAccess.getCalibrationAccess().getS_maxS_maxParserRuleCall_12_0()); 
 
             }
 
@@ -14437,12 +14437,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CalibrationOperation__S_maxAssignment_12"
+    // $ANTLR end "rule__Calibration__S_maxAssignment_12"
 
 
-    // $ANTLR start "rule__CalibrationOperation__V_maxAssignment_14"
-    // InternalCPtester.g:4899:1: rule__CalibrationOperation__V_maxAssignment_14 : ( ruleV_max ) ;
-    public final void rule__CalibrationOperation__V_maxAssignment_14() throws RecognitionException {
+    // $ANTLR start "rule__Calibration__V_maxAssignment_14"
+    // InternalCPtester.g:4899:1: rule__Calibration__V_maxAssignment_14 : ( ruleV_max ) ;
+    public final void rule__Calibration__V_maxAssignment_14() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -14453,13 +14453,13 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:4904:2: ( ruleV_max )
             // InternalCPtester.g:4905:3: ruleV_max
             {
-             before(grammarAccess.getCalibrationOperationAccess().getV_maxV_maxParserRuleCall_14_0()); 
+             before(grammarAccess.getCalibrationAccess().getV_maxV_maxParserRuleCall_14_0()); 
             pushFollow(FOLLOW_2);
             ruleV_max();
 
             state._fsp--;
 
-             after(grammarAccess.getCalibrationOperationAccess().getV_maxV_maxParserRuleCall_14_0()); 
+             after(grammarAccess.getCalibrationAccess().getV_maxV_maxParserRuleCall_14_0()); 
 
             }
 
@@ -14478,33 +14478,33 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CalibrationOperation__V_maxAssignment_14"
+    // $ANTLR end "rule__Calibration__V_maxAssignment_14"
 
 
-    // $ANTLR start "rule__CameraColorOperation__NameAssignment_0"
-    // InternalCPtester.g:4914:1: rule__CameraColorOperation__NameAssignment_0 : ( ( 'cameraColorOperation' ) ) ;
-    public final void rule__CameraColorOperation__NameAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__CameraColor__NameAssignment_0"
+    // InternalCPtester.g:4914:1: rule__CameraColor__NameAssignment_0 : ( ( 'cameraColor' ) ) ;
+    public final void rule__CameraColor__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:4918:1: ( ( ( 'cameraColorOperation' ) ) )
-            // InternalCPtester.g:4919:2: ( ( 'cameraColorOperation' ) )
+            // InternalCPtester.g:4918:1: ( ( ( 'cameraColor' ) ) )
+            // InternalCPtester.g:4919:2: ( ( 'cameraColor' ) )
             {
-            // InternalCPtester.g:4919:2: ( ( 'cameraColorOperation' ) )
-            // InternalCPtester.g:4920:3: ( 'cameraColorOperation' )
+            // InternalCPtester.g:4919:2: ( ( 'cameraColor' ) )
+            // InternalCPtester.g:4920:3: ( 'cameraColor' )
             {
-             before(grammarAccess.getCameraColorOperationAccess().getNameCameraColorOperationKeyword_0_0()); 
-            // InternalCPtester.g:4921:3: ( 'cameraColorOperation' )
-            // InternalCPtester.g:4922:4: 'cameraColorOperation'
+             before(grammarAccess.getCameraColorAccess().getNameCameraColorKeyword_0_0()); 
+            // InternalCPtester.g:4921:3: ( 'cameraColor' )
+            // InternalCPtester.g:4922:4: 'cameraColor'
             {
-             before(grammarAccess.getCameraColorOperationAccess().getNameCameraColorOperationKeyword_0_0()); 
+             before(grammarAccess.getCameraColorAccess().getNameCameraColorKeyword_0_0()); 
             match(input,27,FOLLOW_2); 
-             after(grammarAccess.getCameraColorOperationAccess().getNameCameraColorOperationKeyword_0_0()); 
+             after(grammarAccess.getCameraColorAccess().getNameCameraColorKeyword_0_0()); 
 
             }
 
-             after(grammarAccess.getCameraColorOperationAccess().getNameCameraColorOperationKeyword_0_0()); 
+             after(grammarAccess.getCameraColorAccess().getNameCameraColorKeyword_0_0()); 
 
             }
 
@@ -14523,12 +14523,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CameraColorOperation__NameAssignment_0"
+    // $ANTLR end "rule__CameraColor__NameAssignment_0"
 
 
-    // $ANTLR start "rule__CameraColorOperation__TimeAssignment_2"
-    // InternalCPtester.g:4933:1: rule__CameraColorOperation__TimeAssignment_2 : ( ruleTime ) ;
-    public final void rule__CameraColorOperation__TimeAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__CameraColor__TimeAssignment_2"
+    // InternalCPtester.g:4933:1: rule__CameraColor__TimeAssignment_2 : ( ruleTime ) ;
+    public final void rule__CameraColor__TimeAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -14539,13 +14539,13 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:4938:2: ( ruleTime )
             // InternalCPtester.g:4939:3: ruleTime
             {
-             before(grammarAccess.getCameraColorOperationAccess().getTimeTimeParserRuleCall_2_0()); 
+             before(grammarAccess.getCameraColorAccess().getTimeTimeParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
             ruleTime();
 
             state._fsp--;
 
-             after(grammarAccess.getCameraColorOperationAccess().getTimeTimeParserRuleCall_2_0()); 
+             after(grammarAccess.getCameraColorAccess().getTimeTimeParserRuleCall_2_0()); 
 
             }
 
@@ -14564,33 +14564,33 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CameraColorOperation__TimeAssignment_2"
+    // $ANTLR end "rule__CameraColor__TimeAssignment_2"
 
 
-    // $ANTLR start "rule__ReadAllServosOperation__NameAssignment_0"
-    // InternalCPtester.g:4948:1: rule__ReadAllServosOperation__NameAssignment_0 : ( ( 'readAllServosOperation' ) ) ;
-    public final void rule__ReadAllServosOperation__NameAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__ReadAllServos__NameAssignment_0"
+    // InternalCPtester.g:4948:1: rule__ReadAllServos__NameAssignment_0 : ( ( 'readAllServos' ) ) ;
+    public final void rule__ReadAllServos__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:4952:1: ( ( ( 'readAllServosOperation' ) ) )
-            // InternalCPtester.g:4953:2: ( ( 'readAllServosOperation' ) )
+            // InternalCPtester.g:4952:1: ( ( ( 'readAllServos' ) ) )
+            // InternalCPtester.g:4953:2: ( ( 'readAllServos' ) )
             {
-            // InternalCPtester.g:4953:2: ( ( 'readAllServosOperation' ) )
-            // InternalCPtester.g:4954:3: ( 'readAllServosOperation' )
+            // InternalCPtester.g:4953:2: ( ( 'readAllServos' ) )
+            // InternalCPtester.g:4954:3: ( 'readAllServos' )
             {
-             before(grammarAccess.getReadAllServosOperationAccess().getNameReadAllServosOperationKeyword_0_0()); 
-            // InternalCPtester.g:4955:3: ( 'readAllServosOperation' )
-            // InternalCPtester.g:4956:4: 'readAllServosOperation'
+             before(grammarAccess.getReadAllServosAccess().getNameReadAllServosKeyword_0_0()); 
+            // InternalCPtester.g:4955:3: ( 'readAllServos' )
+            // InternalCPtester.g:4956:4: 'readAllServos'
             {
-             before(grammarAccess.getReadAllServosOperationAccess().getNameReadAllServosOperationKeyword_0_0()); 
+             before(grammarAccess.getReadAllServosAccess().getNameReadAllServosKeyword_0_0()); 
             match(input,28,FOLLOW_2); 
-             after(grammarAccess.getReadAllServosOperationAccess().getNameReadAllServosOperationKeyword_0_0()); 
+             after(grammarAccess.getReadAllServosAccess().getNameReadAllServosKeyword_0_0()); 
 
             }
 
-             after(grammarAccess.getReadAllServosOperationAccess().getNameReadAllServosOperationKeyword_0_0()); 
+             after(grammarAccess.getReadAllServosAccess().getNameReadAllServosKeyword_0_0()); 
 
             }
 
@@ -14609,33 +14609,33 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__ReadAllServosOperation__NameAssignment_0"
+    // $ANTLR end "rule__ReadAllServos__NameAssignment_0"
 
 
-    // $ANTLR start "rule__ReadServoOperation__NameAssignment_0"
-    // InternalCPtester.g:4967:1: rule__ReadServoOperation__NameAssignment_0 : ( ( 'readServoOperation' ) ) ;
-    public final void rule__ReadServoOperation__NameAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__ReadServo__NameAssignment_0"
+    // InternalCPtester.g:4967:1: rule__ReadServo__NameAssignment_0 : ( ( 'readServo' ) ) ;
+    public final void rule__ReadServo__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:4971:1: ( ( ( 'readServoOperation' ) ) )
-            // InternalCPtester.g:4972:2: ( ( 'readServoOperation' ) )
+            // InternalCPtester.g:4971:1: ( ( ( 'readServo' ) ) )
+            // InternalCPtester.g:4972:2: ( ( 'readServo' ) )
             {
-            // InternalCPtester.g:4972:2: ( ( 'readServoOperation' ) )
-            // InternalCPtester.g:4973:3: ( 'readServoOperation' )
+            // InternalCPtester.g:4972:2: ( ( 'readServo' ) )
+            // InternalCPtester.g:4973:3: ( 'readServo' )
             {
-             before(grammarAccess.getReadServoOperationAccess().getNameReadServoOperationKeyword_0_0()); 
-            // InternalCPtester.g:4974:3: ( 'readServoOperation' )
-            // InternalCPtester.g:4975:4: 'readServoOperation'
+             before(grammarAccess.getReadServoAccess().getNameReadServoKeyword_0_0()); 
+            // InternalCPtester.g:4974:3: ( 'readServo' )
+            // InternalCPtester.g:4975:4: 'readServo'
             {
-             before(grammarAccess.getReadServoOperationAccess().getNameReadServoOperationKeyword_0_0()); 
+             before(grammarAccess.getReadServoAccess().getNameReadServoKeyword_0_0()); 
             match(input,29,FOLLOW_2); 
-             after(grammarAccess.getReadServoOperationAccess().getNameReadServoOperationKeyword_0_0()); 
+             after(grammarAccess.getReadServoAccess().getNameReadServoKeyword_0_0()); 
 
             }
 
-             after(grammarAccess.getReadServoOperationAccess().getNameReadServoOperationKeyword_0_0()); 
+             after(grammarAccess.getReadServoAccess().getNameReadServoKeyword_0_0()); 
 
             }
 
@@ -14654,12 +14654,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__ReadServoOperation__NameAssignment_0"
+    // $ANTLR end "rule__ReadServo__NameAssignment_0"
 
 
-    // $ANTLR start "rule__ReadServoOperation__ServoAssignment_2"
-    // InternalCPtester.g:4986:1: rule__ReadServoOperation__ServoAssignment_2 : ( ruleServo ) ;
-    public final void rule__ReadServoOperation__ServoAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__ReadServo__ServoAssignment_2"
+    // InternalCPtester.g:4986:1: rule__ReadServo__ServoAssignment_2 : ( ruleServo ) ;
+    public final void rule__ReadServo__ServoAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -14670,13 +14670,13 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:4991:2: ( ruleServo )
             // InternalCPtester.g:4992:3: ruleServo
             {
-             before(grammarAccess.getReadServoOperationAccess().getServoServoParserRuleCall_2_0()); 
+             before(grammarAccess.getReadServoAccess().getServoServoParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
             ruleServo();
 
             state._fsp--;
 
-             after(grammarAccess.getReadServoOperationAccess().getServoServoParserRuleCall_2_0()); 
+             after(grammarAccess.getReadServoAccess().getServoServoParserRuleCall_2_0()); 
 
             }
 
@@ -14695,33 +14695,33 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__ReadServoOperation__ServoAssignment_2"
+    // $ANTLR end "rule__ReadServo__ServoAssignment_2"
 
 
-    // $ANTLR start "rule__RotateServoOperation__NameAssignment_0"
-    // InternalCPtester.g:5001:1: rule__RotateServoOperation__NameAssignment_0 : ( ( 'rotateServoOperation' ) ) ;
-    public final void rule__RotateServoOperation__NameAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__RotateServo__NameAssignment_0"
+    // InternalCPtester.g:5001:1: rule__RotateServo__NameAssignment_0 : ( ( 'rotateServo' ) ) ;
+    public final void rule__RotateServo__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:5005:1: ( ( ( 'rotateServoOperation' ) ) )
-            // InternalCPtester.g:5006:2: ( ( 'rotateServoOperation' ) )
+            // InternalCPtester.g:5005:1: ( ( ( 'rotateServo' ) ) )
+            // InternalCPtester.g:5006:2: ( ( 'rotateServo' ) )
             {
-            // InternalCPtester.g:5006:2: ( ( 'rotateServoOperation' ) )
-            // InternalCPtester.g:5007:3: ( 'rotateServoOperation' )
+            // InternalCPtester.g:5006:2: ( ( 'rotateServo' ) )
+            // InternalCPtester.g:5007:3: ( 'rotateServo' )
             {
-             before(grammarAccess.getRotateServoOperationAccess().getNameRotateServoOperationKeyword_0_0()); 
-            // InternalCPtester.g:5008:3: ( 'rotateServoOperation' )
-            // InternalCPtester.g:5009:4: 'rotateServoOperation'
+             before(grammarAccess.getRotateServoAccess().getNameRotateServoKeyword_0_0()); 
+            // InternalCPtester.g:5008:3: ( 'rotateServo' )
+            // InternalCPtester.g:5009:4: 'rotateServo'
             {
-             before(grammarAccess.getRotateServoOperationAccess().getNameRotateServoOperationKeyword_0_0()); 
+             before(grammarAccess.getRotateServoAccess().getNameRotateServoKeyword_0_0()); 
             match(input,30,FOLLOW_2); 
-             after(grammarAccess.getRotateServoOperationAccess().getNameRotateServoOperationKeyword_0_0()); 
+             after(grammarAccess.getRotateServoAccess().getNameRotateServoKeyword_0_0()); 
 
             }
 
-             after(grammarAccess.getRotateServoOperationAccess().getNameRotateServoOperationKeyword_0_0()); 
+             after(grammarAccess.getRotateServoAccess().getNameRotateServoKeyword_0_0()); 
 
             }
 
@@ -14740,12 +14740,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateServoOperation__NameAssignment_0"
+    // $ANTLR end "rule__RotateServo__NameAssignment_0"
 
 
-    // $ANTLR start "rule__RotateServoOperation__ServoAssignment_2"
-    // InternalCPtester.g:5020:1: rule__RotateServoOperation__ServoAssignment_2 : ( ruleServo ) ;
-    public final void rule__RotateServoOperation__ServoAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__RotateServo__ServoAssignment_2"
+    // InternalCPtester.g:5020:1: rule__RotateServo__ServoAssignment_2 : ( ruleServo ) ;
+    public final void rule__RotateServo__ServoAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -14756,13 +14756,13 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:5025:2: ( ruleServo )
             // InternalCPtester.g:5026:3: ruleServo
             {
-             before(grammarAccess.getRotateServoOperationAccess().getServoServoParserRuleCall_2_0()); 
+             before(grammarAccess.getRotateServoAccess().getServoServoParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
             ruleServo();
 
             state._fsp--;
 
-             after(grammarAccess.getRotateServoOperationAccess().getServoServoParserRuleCall_2_0()); 
+             after(grammarAccess.getRotateServoAccess().getServoServoParserRuleCall_2_0()); 
 
             }
 
@@ -14781,12 +14781,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateServoOperation__ServoAssignment_2"
+    // $ANTLR end "rule__RotateServo__ServoAssignment_2"
 
 
-    // $ANTLR start "rule__RotateServoOperation__AngleAssignment_4"
-    // InternalCPtester.g:5035:1: rule__RotateServoOperation__AngleAssignment_4 : ( ruleAngle ) ;
-    public final void rule__RotateServoOperation__AngleAssignment_4() throws RecognitionException {
+    // $ANTLR start "rule__RotateServo__AngleAssignment_4"
+    // InternalCPtester.g:5035:1: rule__RotateServo__AngleAssignment_4 : ( ruleAngle ) ;
+    public final void rule__RotateServo__AngleAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -14797,13 +14797,13 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:5040:2: ( ruleAngle )
             // InternalCPtester.g:5041:3: ruleAngle
             {
-             before(grammarAccess.getRotateServoOperationAccess().getAngleAngleParserRuleCall_4_0()); 
+             before(grammarAccess.getRotateServoAccess().getAngleAngleParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
             ruleAngle();
 
             state._fsp--;
 
-             after(grammarAccess.getRotateServoOperationAccess().getAngleAngleParserRuleCall_4_0()); 
+             after(grammarAccess.getRotateServoAccess().getAngleAngleParserRuleCall_4_0()); 
 
             }
 
@@ -14822,12 +14822,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateServoOperation__AngleAssignment_4"
+    // $ANTLR end "rule__RotateServo__AngleAssignment_4"
 
 
-    // $ANTLR start "rule__RotateServoOperation__TimeAssignment_6"
-    // InternalCPtester.g:5050:1: rule__RotateServoOperation__TimeAssignment_6 : ( ruleTime ) ;
-    public final void rule__RotateServoOperation__TimeAssignment_6() throws RecognitionException {
+    // $ANTLR start "rule__RotateServo__TimeAssignment_6"
+    // InternalCPtester.g:5050:1: rule__RotateServo__TimeAssignment_6 : ( ruleTime ) ;
+    public final void rule__RotateServo__TimeAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -14838,13 +14838,13 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:5055:2: ( ruleTime )
             // InternalCPtester.g:5056:3: ruleTime
             {
-             before(grammarAccess.getRotateServoOperationAccess().getTimeTimeParserRuleCall_6_0()); 
+             before(grammarAccess.getRotateServoAccess().getTimeTimeParserRuleCall_6_0()); 
             pushFollow(FOLLOW_2);
             ruleTime();
 
             state._fsp--;
 
-             after(grammarAccess.getRotateServoOperationAccess().getTimeTimeParserRuleCall_6_0()); 
+             after(grammarAccess.getRotateServoAccess().getTimeTimeParserRuleCall_6_0()); 
 
             }
 
@@ -14863,33 +14863,33 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateServoOperation__TimeAssignment_6"
+    // $ANTLR end "rule__RotateServo__TimeAssignment_6"
 
 
-    // $ANTLR start "rule__RotateAllServosOperation__NameAssignment_0"
-    // InternalCPtester.g:5065:1: rule__RotateAllServosOperation__NameAssignment_0 : ( ( 'rotateAllServosOperation' ) ) ;
-    public final void rule__RotateAllServosOperation__NameAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__RotateAllServos__NameAssignment_0"
+    // InternalCPtester.g:5065:1: rule__RotateAllServos__NameAssignment_0 : ( ( 'rotateAllServos' ) ) ;
+    public final void rule__RotateAllServos__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:5069:1: ( ( ( 'rotateAllServosOperation' ) ) )
-            // InternalCPtester.g:5070:2: ( ( 'rotateAllServosOperation' ) )
+            // InternalCPtester.g:5069:1: ( ( ( 'rotateAllServos' ) ) )
+            // InternalCPtester.g:5070:2: ( ( 'rotateAllServos' ) )
             {
-            // InternalCPtester.g:5070:2: ( ( 'rotateAllServosOperation' ) )
-            // InternalCPtester.g:5071:3: ( 'rotateAllServosOperation' )
+            // InternalCPtester.g:5070:2: ( ( 'rotateAllServos' ) )
+            // InternalCPtester.g:5071:3: ( 'rotateAllServos' )
             {
-             before(grammarAccess.getRotateAllServosOperationAccess().getNameRotateAllServosOperationKeyword_0_0()); 
-            // InternalCPtester.g:5072:3: ( 'rotateAllServosOperation' )
-            // InternalCPtester.g:5073:4: 'rotateAllServosOperation'
+             before(grammarAccess.getRotateAllServosAccess().getNameRotateAllServosKeyword_0_0()); 
+            // InternalCPtester.g:5072:3: ( 'rotateAllServos' )
+            // InternalCPtester.g:5073:4: 'rotateAllServos'
             {
-             before(grammarAccess.getRotateAllServosOperationAccess().getNameRotateAllServosOperationKeyword_0_0()); 
+             before(grammarAccess.getRotateAllServosAccess().getNameRotateAllServosKeyword_0_0()); 
             match(input,31,FOLLOW_2); 
-             after(grammarAccess.getRotateAllServosOperationAccess().getNameRotateAllServosOperationKeyword_0_0()); 
+             after(grammarAccess.getRotateAllServosAccess().getNameRotateAllServosKeyword_0_0()); 
 
             }
 
-             after(grammarAccess.getRotateAllServosOperationAccess().getNameRotateAllServosOperationKeyword_0_0()); 
+             after(grammarAccess.getRotateAllServosAccess().getNameRotateAllServosKeyword_0_0()); 
 
             }
 
@@ -14908,12 +14908,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateAllServosOperation__NameAssignment_0"
+    // $ANTLR end "rule__RotateAllServos__NameAssignment_0"
 
 
-    // $ANTLR start "rule__RotateAllServosOperation__Angle1Assignment_2"
-    // InternalCPtester.g:5084:1: rule__RotateAllServosOperation__Angle1Assignment_2 : ( ruleAngle ) ;
-    public final void rule__RotateAllServosOperation__Angle1Assignment_2() throws RecognitionException {
+    // $ANTLR start "rule__RotateAllServos__Angle1Assignment_2"
+    // InternalCPtester.g:5084:1: rule__RotateAllServos__Angle1Assignment_2 : ( ruleAngle ) ;
+    public final void rule__RotateAllServos__Angle1Assignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -14924,13 +14924,13 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:5089:2: ( ruleAngle )
             // InternalCPtester.g:5090:3: ruleAngle
             {
-             before(grammarAccess.getRotateAllServosOperationAccess().getAngle1AngleParserRuleCall_2_0()); 
+             before(grammarAccess.getRotateAllServosAccess().getAngle1AngleParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
             ruleAngle();
 
             state._fsp--;
 
-             after(grammarAccess.getRotateAllServosOperationAccess().getAngle1AngleParserRuleCall_2_0()); 
+             after(grammarAccess.getRotateAllServosAccess().getAngle1AngleParserRuleCall_2_0()); 
 
             }
 
@@ -14949,12 +14949,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateAllServosOperation__Angle1Assignment_2"
+    // $ANTLR end "rule__RotateAllServos__Angle1Assignment_2"
 
 
-    // $ANTLR start "rule__RotateAllServosOperation__Angle2Assignment_4"
-    // InternalCPtester.g:5099:1: rule__RotateAllServosOperation__Angle2Assignment_4 : ( ruleAngle ) ;
-    public final void rule__RotateAllServosOperation__Angle2Assignment_4() throws RecognitionException {
+    // $ANTLR start "rule__RotateAllServos__Angle2Assignment_4"
+    // InternalCPtester.g:5099:1: rule__RotateAllServos__Angle2Assignment_4 : ( ruleAngle ) ;
+    public final void rule__RotateAllServos__Angle2Assignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -14965,13 +14965,13 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:5104:2: ( ruleAngle )
             // InternalCPtester.g:5105:3: ruleAngle
             {
-             before(grammarAccess.getRotateAllServosOperationAccess().getAngle2AngleParserRuleCall_4_0()); 
+             before(grammarAccess.getRotateAllServosAccess().getAngle2AngleParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
             ruleAngle();
 
             state._fsp--;
 
-             after(grammarAccess.getRotateAllServosOperationAccess().getAngle2AngleParserRuleCall_4_0()); 
+             after(grammarAccess.getRotateAllServosAccess().getAngle2AngleParserRuleCall_4_0()); 
 
             }
 
@@ -14990,12 +14990,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateAllServosOperation__Angle2Assignment_4"
+    // $ANTLR end "rule__RotateAllServos__Angle2Assignment_4"
 
 
-    // $ANTLR start "rule__RotateAllServosOperation__Angle3Assignment_6"
-    // InternalCPtester.g:5114:1: rule__RotateAllServosOperation__Angle3Assignment_6 : ( ruleAngle ) ;
-    public final void rule__RotateAllServosOperation__Angle3Assignment_6() throws RecognitionException {
+    // $ANTLR start "rule__RotateAllServos__Angle3Assignment_6"
+    // InternalCPtester.g:5114:1: rule__RotateAllServos__Angle3Assignment_6 : ( ruleAngle ) ;
+    public final void rule__RotateAllServos__Angle3Assignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -15006,13 +15006,13 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:5119:2: ( ruleAngle )
             // InternalCPtester.g:5120:3: ruleAngle
             {
-             before(grammarAccess.getRotateAllServosOperationAccess().getAngle3AngleParserRuleCall_6_0()); 
+             before(grammarAccess.getRotateAllServosAccess().getAngle3AngleParserRuleCall_6_0()); 
             pushFollow(FOLLOW_2);
             ruleAngle();
 
             state._fsp--;
 
-             after(grammarAccess.getRotateAllServosOperationAccess().getAngle3AngleParserRuleCall_6_0()); 
+             after(grammarAccess.getRotateAllServosAccess().getAngle3AngleParserRuleCall_6_0()); 
 
             }
 
@@ -15031,12 +15031,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateAllServosOperation__Angle3Assignment_6"
+    // $ANTLR end "rule__RotateAllServos__Angle3Assignment_6"
 
 
-    // $ANTLR start "rule__RotateAllServosOperation__Angle4Assignment_8"
-    // InternalCPtester.g:5129:1: rule__RotateAllServosOperation__Angle4Assignment_8 : ( ruleAngle ) ;
-    public final void rule__RotateAllServosOperation__Angle4Assignment_8() throws RecognitionException {
+    // $ANTLR start "rule__RotateAllServos__Angle4Assignment_8"
+    // InternalCPtester.g:5129:1: rule__RotateAllServos__Angle4Assignment_8 : ( ruleAngle ) ;
+    public final void rule__RotateAllServos__Angle4Assignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -15047,13 +15047,13 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:5134:2: ( ruleAngle )
             // InternalCPtester.g:5135:3: ruleAngle
             {
-             before(grammarAccess.getRotateAllServosOperationAccess().getAngle4AngleParserRuleCall_8_0()); 
+             before(grammarAccess.getRotateAllServosAccess().getAngle4AngleParserRuleCall_8_0()); 
             pushFollow(FOLLOW_2);
             ruleAngle();
 
             state._fsp--;
 
-             after(grammarAccess.getRotateAllServosOperationAccess().getAngle4AngleParserRuleCall_8_0()); 
+             after(grammarAccess.getRotateAllServosAccess().getAngle4AngleParserRuleCall_8_0()); 
 
             }
 
@@ -15072,12 +15072,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateAllServosOperation__Angle4Assignment_8"
+    // $ANTLR end "rule__RotateAllServos__Angle4Assignment_8"
 
 
-    // $ANTLR start "rule__RotateAllServosOperation__Angle5Assignment_10"
-    // InternalCPtester.g:5144:1: rule__RotateAllServosOperation__Angle5Assignment_10 : ( ruleAngle ) ;
-    public final void rule__RotateAllServosOperation__Angle5Assignment_10() throws RecognitionException {
+    // $ANTLR start "rule__RotateAllServos__Angle5Assignment_10"
+    // InternalCPtester.g:5144:1: rule__RotateAllServos__Angle5Assignment_10 : ( ruleAngle ) ;
+    public final void rule__RotateAllServos__Angle5Assignment_10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -15088,13 +15088,13 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:5149:2: ( ruleAngle )
             // InternalCPtester.g:5150:3: ruleAngle
             {
-             before(grammarAccess.getRotateAllServosOperationAccess().getAngle5AngleParserRuleCall_10_0()); 
+             before(grammarAccess.getRotateAllServosAccess().getAngle5AngleParserRuleCall_10_0()); 
             pushFollow(FOLLOW_2);
             ruleAngle();
 
             state._fsp--;
 
-             after(grammarAccess.getRotateAllServosOperationAccess().getAngle5AngleParserRuleCall_10_0()); 
+             after(grammarAccess.getRotateAllServosAccess().getAngle5AngleParserRuleCall_10_0()); 
 
             }
 
@@ -15113,12 +15113,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateAllServosOperation__Angle5Assignment_10"
+    // $ANTLR end "rule__RotateAllServos__Angle5Assignment_10"
 
 
-    // $ANTLR start "rule__RotateAllServosOperation__Angle6Assignment_12"
-    // InternalCPtester.g:5159:1: rule__RotateAllServosOperation__Angle6Assignment_12 : ( ruleAngle ) ;
-    public final void rule__RotateAllServosOperation__Angle6Assignment_12() throws RecognitionException {
+    // $ANTLR start "rule__RotateAllServos__Angle6Assignment_12"
+    // InternalCPtester.g:5159:1: rule__RotateAllServos__Angle6Assignment_12 : ( ruleAngle ) ;
+    public final void rule__RotateAllServos__Angle6Assignment_12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -15129,13 +15129,13 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:5164:2: ( ruleAngle )
             // InternalCPtester.g:5165:3: ruleAngle
             {
-             before(grammarAccess.getRotateAllServosOperationAccess().getAngle6AngleParserRuleCall_12_0()); 
+             before(grammarAccess.getRotateAllServosAccess().getAngle6AngleParserRuleCall_12_0()); 
             pushFollow(FOLLOW_2);
             ruleAngle();
 
             state._fsp--;
 
-             after(grammarAccess.getRotateAllServosOperationAccess().getAngle6AngleParserRuleCall_12_0()); 
+             after(grammarAccess.getRotateAllServosAccess().getAngle6AngleParserRuleCall_12_0()); 
 
             }
 
@@ -15154,12 +15154,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateAllServosOperation__Angle6Assignment_12"
+    // $ANTLR end "rule__RotateAllServos__Angle6Assignment_12"
 
 
-    // $ANTLR start "rule__RotateAllServosOperation__TimeAssignment_14"
-    // InternalCPtester.g:5174:1: rule__RotateAllServosOperation__TimeAssignment_14 : ( ruleTime ) ;
-    public final void rule__RotateAllServosOperation__TimeAssignment_14() throws RecognitionException {
+    // $ANTLR start "rule__RotateAllServos__TimeAssignment_14"
+    // InternalCPtester.g:5174:1: rule__RotateAllServos__TimeAssignment_14 : ( ruleTime ) ;
+    public final void rule__RotateAllServos__TimeAssignment_14() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -15170,13 +15170,13 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:5179:2: ( ruleTime )
             // InternalCPtester.g:5180:3: ruleTime
             {
-             before(grammarAccess.getRotateAllServosOperationAccess().getTimeTimeParserRuleCall_14_0()); 
+             before(grammarAccess.getRotateAllServosAccess().getTimeTimeParserRuleCall_14_0()); 
             pushFollow(FOLLOW_2);
             ruleTime();
 
             state._fsp--;
 
-             after(grammarAccess.getRotateAllServosOperationAccess().getTimeTimeParserRuleCall_14_0()); 
+             after(grammarAccess.getRotateAllServosAccess().getTimeTimeParserRuleCall_14_0()); 
 
             }
 
@@ -15195,7 +15195,7 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__RotateAllServosOperation__TimeAssignment_14"
+    // $ANTLR end "rule__RotateAllServos__TimeAssignment_14"
 
 
     // $ANTLR start "rule__Result__NameAssignment_0"
@@ -15370,30 +15370,30 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__Conditions__TimeAssignment_2"
 
 
-    // $ANTLR start "rule__IsAtSingleOperation__NameAssignment_0"
-    // InternalCPtester.g:5257:1: rule__IsAtSingleOperation__NameAssignment_0 : ( ( 'isAtSingleOperation' ) ) ;
-    public final void rule__IsAtSingleOperation__NameAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__IsAtSingle__NameAssignment_0"
+    // InternalCPtester.g:5257:1: rule__IsAtSingle__NameAssignment_0 : ( ( 'isAtSingle' ) ) ;
+    public final void rule__IsAtSingle__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:5261:1: ( ( ( 'isAtSingleOperation' ) ) )
-            // InternalCPtester.g:5262:2: ( ( 'isAtSingleOperation' ) )
+            // InternalCPtester.g:5261:1: ( ( ( 'isAtSingle' ) ) )
+            // InternalCPtester.g:5262:2: ( ( 'isAtSingle' ) )
             {
-            // InternalCPtester.g:5262:2: ( ( 'isAtSingleOperation' ) )
-            // InternalCPtester.g:5263:3: ( 'isAtSingleOperation' )
+            // InternalCPtester.g:5262:2: ( ( 'isAtSingle' ) )
+            // InternalCPtester.g:5263:3: ( 'isAtSingle' )
             {
-             before(grammarAccess.getIsAtSingleOperationAccess().getNameIsAtSingleOperationKeyword_0_0()); 
-            // InternalCPtester.g:5264:3: ( 'isAtSingleOperation' )
-            // InternalCPtester.g:5265:4: 'isAtSingleOperation'
+             before(grammarAccess.getIsAtSingleAccess().getNameIsAtSingleKeyword_0_0()); 
+            // InternalCPtester.g:5264:3: ( 'isAtSingle' )
+            // InternalCPtester.g:5265:4: 'isAtSingle'
             {
-             before(grammarAccess.getIsAtSingleOperationAccess().getNameIsAtSingleOperationKeyword_0_0()); 
+             before(grammarAccess.getIsAtSingleAccess().getNameIsAtSingleKeyword_0_0()); 
             match(input,34,FOLLOW_2); 
-             after(grammarAccess.getIsAtSingleOperationAccess().getNameIsAtSingleOperationKeyword_0_0()); 
+             after(grammarAccess.getIsAtSingleAccess().getNameIsAtSingleKeyword_0_0()); 
 
             }
 
-             after(grammarAccess.getIsAtSingleOperationAccess().getNameIsAtSingleOperationKeyword_0_0()); 
+             after(grammarAccess.getIsAtSingleAccess().getNameIsAtSingleKeyword_0_0()); 
 
             }
 
@@ -15412,12 +15412,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtSingleOperation__NameAssignment_0"
+    // $ANTLR end "rule__IsAtSingle__NameAssignment_0"
 
 
-    // $ANTLR start "rule__IsAtSingleOperation__ServoAssignment_2"
-    // InternalCPtester.g:5276:1: rule__IsAtSingleOperation__ServoAssignment_2 : ( ruleServo ) ;
-    public final void rule__IsAtSingleOperation__ServoAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__IsAtSingle__ServoAssignment_2"
+    // InternalCPtester.g:5276:1: rule__IsAtSingle__ServoAssignment_2 : ( ruleServo ) ;
+    public final void rule__IsAtSingle__ServoAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -15428,13 +15428,13 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:5281:2: ( ruleServo )
             // InternalCPtester.g:5282:3: ruleServo
             {
-             before(grammarAccess.getIsAtSingleOperationAccess().getServoServoParserRuleCall_2_0()); 
+             before(grammarAccess.getIsAtSingleAccess().getServoServoParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
             ruleServo();
 
             state._fsp--;
 
-             after(grammarAccess.getIsAtSingleOperationAccess().getServoServoParserRuleCall_2_0()); 
+             after(grammarAccess.getIsAtSingleAccess().getServoServoParserRuleCall_2_0()); 
 
             }
 
@@ -15453,12 +15453,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtSingleOperation__ServoAssignment_2"
+    // $ANTLR end "rule__IsAtSingle__ServoAssignment_2"
 
 
-    // $ANTLR start "rule__IsAtSingleOperation__AngleAssignment_4"
-    // InternalCPtester.g:5291:1: rule__IsAtSingleOperation__AngleAssignment_4 : ( ruleAngle ) ;
-    public final void rule__IsAtSingleOperation__AngleAssignment_4() throws RecognitionException {
+    // $ANTLR start "rule__IsAtSingle__AngleAssignment_4"
+    // InternalCPtester.g:5291:1: rule__IsAtSingle__AngleAssignment_4 : ( ruleAngle ) ;
+    public final void rule__IsAtSingle__AngleAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -15469,13 +15469,13 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:5296:2: ( ruleAngle )
             // InternalCPtester.g:5297:3: ruleAngle
             {
-             before(grammarAccess.getIsAtSingleOperationAccess().getAngleAngleParserRuleCall_4_0()); 
+             before(grammarAccess.getIsAtSingleAccess().getAngleAngleParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
             ruleAngle();
 
             state._fsp--;
 
-             after(grammarAccess.getIsAtSingleOperationAccess().getAngleAngleParserRuleCall_4_0()); 
+             after(grammarAccess.getIsAtSingleAccess().getAngleAngleParserRuleCall_4_0()); 
 
             }
 
@@ -15494,12 +15494,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtSingleOperation__AngleAssignment_4"
+    // $ANTLR end "rule__IsAtSingle__AngleAssignment_4"
 
 
-    // $ANTLR start "rule__IsAtSingleOperation__Angle_resAssignment_6"
-    // InternalCPtester.g:5306:1: rule__IsAtSingleOperation__Angle_resAssignment_6 : ( ruleAngle_res ) ;
-    public final void rule__IsAtSingleOperation__Angle_resAssignment_6() throws RecognitionException {
+    // $ANTLR start "rule__IsAtSingle__Angle_resAssignment_6"
+    // InternalCPtester.g:5306:1: rule__IsAtSingle__Angle_resAssignment_6 : ( ruleAngle_res ) ;
+    public final void rule__IsAtSingle__Angle_resAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -15510,13 +15510,13 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:5311:2: ( ruleAngle_res )
             // InternalCPtester.g:5312:3: ruleAngle_res
             {
-             before(grammarAccess.getIsAtSingleOperationAccess().getAngle_resAngle_resParserRuleCall_6_0()); 
+             before(grammarAccess.getIsAtSingleAccess().getAngle_resAngle_resParserRuleCall_6_0()); 
             pushFollow(FOLLOW_2);
             ruleAngle_res();
 
             state._fsp--;
 
-             after(grammarAccess.getIsAtSingleOperationAccess().getAngle_resAngle_resParserRuleCall_6_0()); 
+             after(grammarAccess.getIsAtSingleAccess().getAngle_resAngle_resParserRuleCall_6_0()); 
 
             }
 
@@ -15535,33 +15535,33 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtSingleOperation__Angle_resAssignment_6"
+    // $ANTLR end "rule__IsAtSingle__Angle_resAssignment_6"
 
 
-    // $ANTLR start "rule__IsAtOperation__NameAssignment_0"
-    // InternalCPtester.g:5321:1: rule__IsAtOperation__NameAssignment_0 : ( ( 'isAtOperation' ) ) ;
-    public final void rule__IsAtOperation__NameAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__IsAt__NameAssignment_0"
+    // InternalCPtester.g:5321:1: rule__IsAt__NameAssignment_0 : ( ( 'isAt' ) ) ;
+    public final void rule__IsAt__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCPtester.g:5325:1: ( ( ( 'isAtOperation' ) ) )
-            // InternalCPtester.g:5326:2: ( ( 'isAtOperation' ) )
+            // InternalCPtester.g:5325:1: ( ( ( 'isAt' ) ) )
+            // InternalCPtester.g:5326:2: ( ( 'isAt' ) )
             {
-            // InternalCPtester.g:5326:2: ( ( 'isAtOperation' ) )
-            // InternalCPtester.g:5327:3: ( 'isAtOperation' )
+            // InternalCPtester.g:5326:2: ( ( 'isAt' ) )
+            // InternalCPtester.g:5327:3: ( 'isAt' )
             {
-             before(grammarAccess.getIsAtOperationAccess().getNameIsAtOperationKeyword_0_0()); 
-            // InternalCPtester.g:5328:3: ( 'isAtOperation' )
-            // InternalCPtester.g:5329:4: 'isAtOperation'
+             before(grammarAccess.getIsAtAccess().getNameIsAtKeyword_0_0()); 
+            // InternalCPtester.g:5328:3: ( 'isAt' )
+            // InternalCPtester.g:5329:4: 'isAt'
             {
-             before(grammarAccess.getIsAtOperationAccess().getNameIsAtOperationKeyword_0_0()); 
+             before(grammarAccess.getIsAtAccess().getNameIsAtKeyword_0_0()); 
             match(input,35,FOLLOW_2); 
-             after(grammarAccess.getIsAtOperationAccess().getNameIsAtOperationKeyword_0_0()); 
+             after(grammarAccess.getIsAtAccess().getNameIsAtKeyword_0_0()); 
 
             }
 
-             after(grammarAccess.getIsAtOperationAccess().getNameIsAtOperationKeyword_0_0()); 
+             after(grammarAccess.getIsAtAccess().getNameIsAtKeyword_0_0()); 
 
             }
 
@@ -15580,12 +15580,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtOperation__NameAssignment_0"
+    // $ANTLR end "rule__IsAt__NameAssignment_0"
 
 
-    // $ANTLR start "rule__IsAtOperation__Angle1Assignment_2"
-    // InternalCPtester.g:5340:1: rule__IsAtOperation__Angle1Assignment_2 : ( ruleAngle ) ;
-    public final void rule__IsAtOperation__Angle1Assignment_2() throws RecognitionException {
+    // $ANTLR start "rule__IsAt__Angle1Assignment_2"
+    // InternalCPtester.g:5340:1: rule__IsAt__Angle1Assignment_2 : ( ruleAngle ) ;
+    public final void rule__IsAt__Angle1Assignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -15596,13 +15596,13 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:5345:2: ( ruleAngle )
             // InternalCPtester.g:5346:3: ruleAngle
             {
-             before(grammarAccess.getIsAtOperationAccess().getAngle1AngleParserRuleCall_2_0()); 
+             before(grammarAccess.getIsAtAccess().getAngle1AngleParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
             ruleAngle();
 
             state._fsp--;
 
-             after(grammarAccess.getIsAtOperationAccess().getAngle1AngleParserRuleCall_2_0()); 
+             after(grammarAccess.getIsAtAccess().getAngle1AngleParserRuleCall_2_0()); 
 
             }
 
@@ -15621,12 +15621,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtOperation__Angle1Assignment_2"
+    // $ANTLR end "rule__IsAt__Angle1Assignment_2"
 
 
-    // $ANTLR start "rule__IsAtOperation__Angle2Assignment_4"
-    // InternalCPtester.g:5355:1: rule__IsAtOperation__Angle2Assignment_4 : ( ruleAngle ) ;
-    public final void rule__IsAtOperation__Angle2Assignment_4() throws RecognitionException {
+    // $ANTLR start "rule__IsAt__Angle2Assignment_4"
+    // InternalCPtester.g:5355:1: rule__IsAt__Angle2Assignment_4 : ( ruleAngle ) ;
+    public final void rule__IsAt__Angle2Assignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -15637,13 +15637,13 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:5360:2: ( ruleAngle )
             // InternalCPtester.g:5361:3: ruleAngle
             {
-             before(grammarAccess.getIsAtOperationAccess().getAngle2AngleParserRuleCall_4_0()); 
+             before(grammarAccess.getIsAtAccess().getAngle2AngleParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
             ruleAngle();
 
             state._fsp--;
 
-             after(grammarAccess.getIsAtOperationAccess().getAngle2AngleParserRuleCall_4_0()); 
+             after(grammarAccess.getIsAtAccess().getAngle2AngleParserRuleCall_4_0()); 
 
             }
 
@@ -15662,12 +15662,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtOperation__Angle2Assignment_4"
+    // $ANTLR end "rule__IsAt__Angle2Assignment_4"
 
 
-    // $ANTLR start "rule__IsAtOperation__Angle3Assignment_6"
-    // InternalCPtester.g:5370:1: rule__IsAtOperation__Angle3Assignment_6 : ( ruleAngle ) ;
-    public final void rule__IsAtOperation__Angle3Assignment_6() throws RecognitionException {
+    // $ANTLR start "rule__IsAt__Angle3Assignment_6"
+    // InternalCPtester.g:5370:1: rule__IsAt__Angle3Assignment_6 : ( ruleAngle ) ;
+    public final void rule__IsAt__Angle3Assignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -15678,13 +15678,13 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:5375:2: ( ruleAngle )
             // InternalCPtester.g:5376:3: ruleAngle
             {
-             before(grammarAccess.getIsAtOperationAccess().getAngle3AngleParserRuleCall_6_0()); 
+             before(grammarAccess.getIsAtAccess().getAngle3AngleParserRuleCall_6_0()); 
             pushFollow(FOLLOW_2);
             ruleAngle();
 
             state._fsp--;
 
-             after(grammarAccess.getIsAtOperationAccess().getAngle3AngleParserRuleCall_6_0()); 
+             after(grammarAccess.getIsAtAccess().getAngle3AngleParserRuleCall_6_0()); 
 
             }
 
@@ -15703,12 +15703,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtOperation__Angle3Assignment_6"
+    // $ANTLR end "rule__IsAt__Angle3Assignment_6"
 
 
-    // $ANTLR start "rule__IsAtOperation__Angle4Assignment_8"
-    // InternalCPtester.g:5385:1: rule__IsAtOperation__Angle4Assignment_8 : ( ruleAngle ) ;
-    public final void rule__IsAtOperation__Angle4Assignment_8() throws RecognitionException {
+    // $ANTLR start "rule__IsAt__Angle4Assignment_8"
+    // InternalCPtester.g:5385:1: rule__IsAt__Angle4Assignment_8 : ( ruleAngle ) ;
+    public final void rule__IsAt__Angle4Assignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -15719,13 +15719,13 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:5390:2: ( ruleAngle )
             // InternalCPtester.g:5391:3: ruleAngle
             {
-             before(grammarAccess.getIsAtOperationAccess().getAngle4AngleParserRuleCall_8_0()); 
+             before(grammarAccess.getIsAtAccess().getAngle4AngleParserRuleCall_8_0()); 
             pushFollow(FOLLOW_2);
             ruleAngle();
 
             state._fsp--;
 
-             after(grammarAccess.getIsAtOperationAccess().getAngle4AngleParserRuleCall_8_0()); 
+             after(grammarAccess.getIsAtAccess().getAngle4AngleParserRuleCall_8_0()); 
 
             }
 
@@ -15744,12 +15744,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtOperation__Angle4Assignment_8"
+    // $ANTLR end "rule__IsAt__Angle4Assignment_8"
 
 
-    // $ANTLR start "rule__IsAtOperation__Angle5Assignment_10"
-    // InternalCPtester.g:5400:1: rule__IsAtOperation__Angle5Assignment_10 : ( ruleAngle ) ;
-    public final void rule__IsAtOperation__Angle5Assignment_10() throws RecognitionException {
+    // $ANTLR start "rule__IsAt__Angle5Assignment_10"
+    // InternalCPtester.g:5400:1: rule__IsAt__Angle5Assignment_10 : ( ruleAngle ) ;
+    public final void rule__IsAt__Angle5Assignment_10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -15760,13 +15760,13 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:5405:2: ( ruleAngle )
             // InternalCPtester.g:5406:3: ruleAngle
             {
-             before(grammarAccess.getIsAtOperationAccess().getAngle5AngleParserRuleCall_10_0()); 
+             before(grammarAccess.getIsAtAccess().getAngle5AngleParserRuleCall_10_0()); 
             pushFollow(FOLLOW_2);
             ruleAngle();
 
             state._fsp--;
 
-             after(grammarAccess.getIsAtOperationAccess().getAngle5AngleParserRuleCall_10_0()); 
+             after(grammarAccess.getIsAtAccess().getAngle5AngleParserRuleCall_10_0()); 
 
             }
 
@@ -15785,12 +15785,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtOperation__Angle5Assignment_10"
+    // $ANTLR end "rule__IsAt__Angle5Assignment_10"
 
 
-    // $ANTLR start "rule__IsAtOperation__Angle6Assignment_12"
-    // InternalCPtester.g:5415:1: rule__IsAtOperation__Angle6Assignment_12 : ( ruleAngle ) ;
-    public final void rule__IsAtOperation__Angle6Assignment_12() throws RecognitionException {
+    // $ANTLR start "rule__IsAt__Angle6Assignment_12"
+    // InternalCPtester.g:5415:1: rule__IsAt__Angle6Assignment_12 : ( ruleAngle ) ;
+    public final void rule__IsAt__Angle6Assignment_12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -15801,13 +15801,13 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:5420:2: ( ruleAngle )
             // InternalCPtester.g:5421:3: ruleAngle
             {
-             before(grammarAccess.getIsAtOperationAccess().getAngle6AngleParserRuleCall_12_0()); 
+             before(grammarAccess.getIsAtAccess().getAngle6AngleParserRuleCall_12_0()); 
             pushFollow(FOLLOW_2);
             ruleAngle();
 
             state._fsp--;
 
-             after(grammarAccess.getIsAtOperationAccess().getAngle6AngleParserRuleCall_12_0()); 
+             after(grammarAccess.getIsAtAccess().getAngle6AngleParserRuleCall_12_0()); 
 
             }
 
@@ -15826,12 +15826,12 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtOperation__Angle6Assignment_12"
+    // $ANTLR end "rule__IsAt__Angle6Assignment_12"
 
 
-    // $ANTLR start "rule__IsAtOperation__Angle_resAssignment_14"
-    // InternalCPtester.g:5430:1: rule__IsAtOperation__Angle_resAssignment_14 : ( ruleAngle_res ) ;
-    public final void rule__IsAtOperation__Angle_resAssignment_14() throws RecognitionException {
+    // $ANTLR start "rule__IsAt__Angle_resAssignment_14"
+    // InternalCPtester.g:5430:1: rule__IsAt__Angle_resAssignment_14 : ( ruleAngle_res ) ;
+    public final void rule__IsAt__Angle_resAssignment_14() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -15842,13 +15842,13 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
             // InternalCPtester.g:5435:2: ( ruleAngle_res )
             // InternalCPtester.g:5436:3: ruleAngle_res
             {
-             before(grammarAccess.getIsAtOperationAccess().getAngle_resAngle_resParserRuleCall_14_0()); 
+             before(grammarAccess.getIsAtAccess().getAngle_resAngle_resParserRuleCall_14_0()); 
             pushFollow(FOLLOW_2);
             ruleAngle_res();
 
             state._fsp--;
 
-             after(grammarAccess.getIsAtOperationAccess().getAngle_resAngle_resParserRuleCall_14_0()); 
+             after(grammarAccess.getIsAtAccess().getAngle_resAngle_resParserRuleCall_14_0()); 
 
             }
 
@@ -15867,7 +15867,7 @@ public class InternalCPtesterParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__IsAtOperation__Angle_resAssignment_14"
+    // $ANTLR end "rule__IsAt__Angle_resAssignment_14"
 
 
     // $ANTLR start "rule__Angle_res__Angle_resAssignment"

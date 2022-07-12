@@ -16,6 +16,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link org.xtext.operations.rotateServo#getServo <em>Servo</em>}</li>
  *   <li>{@link org.xtext.operations.rotateServo#getAngle <em>Angle</em>}</li>
+ *   <li>{@link org.xtext.operations.rotateServo#getTime <em>Time</em>}</li>
  * </ul>
  *
  * @see org.xtext.operations.OperationsPackage#getrotateServo()
@@ -47,5 +48,17 @@ public interface rotateServo extends Command
    * @generated
    */
   EList<Angle> getAngle();
+
+  /**
+   * Returns the value of the '<em><b>Time</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.operations.Time}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Time</em>' containment reference list.
+   * @see org.xtext.operations.OperationsPackage#getrotateServo_Time()
+   * @model containment="true"
+   * @generated
+   */
+  EList<Time> getTime();
 
 } // rotateServo

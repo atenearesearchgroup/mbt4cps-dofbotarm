@@ -123,14 +123,14 @@ public interface OperationsPackage extends EPackage
   int COMMAND_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link org.xtext.operations.impl.lightRGBOperationImpl <em>light RGB Operation</em>}' class.
+   * The meta object id for the '{@link org.xtext.operations.impl.lightRGBImpl <em>light RGB</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.operations.impl.lightRGBOperationImpl
-   * @see org.xtext.operations.impl.OperationsPackageImpl#getlightRGBOperation()
+   * @see org.xtext.operations.impl.lightRGBImpl
+   * @see org.xtext.operations.impl.OperationsPackageImpl#getlightRGB()
    * @generated
    */
-  int LIGHT_RGB_OPERATION = 2;
+  int LIGHT_RGB = 2;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -139,7 +139,7 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LIGHT_RGB_OPERATION__NAME = COMMAND__NAME;
+  int LIGHT_RGB__NAME = COMMAND__NAME;
 
   /**
    * The feature id for the '<em><b>R</b></em>' containment reference list.
@@ -148,7 +148,7 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LIGHT_RGB_OPERATION__R = COMMAND_FEATURE_COUNT + 0;
+  int LIGHT_RGB__R = COMMAND_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>G</b></em>' containment reference list.
@@ -157,7 +157,7 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LIGHT_RGB_OPERATION__G = COMMAND_FEATURE_COUNT + 1;
+  int LIGHT_RGB__G = COMMAND_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>B</b></em>' containment reference list.
@@ -166,26 +166,26 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LIGHT_RGB_OPERATION__B = COMMAND_FEATURE_COUNT + 2;
+  int LIGHT_RGB__B = COMMAND_FEATURE_COUNT + 2;
 
   /**
-   * The number of structural features of the '<em>light RGB Operation</em>' class.
+   * The number of structural features of the '<em>light RGB</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LIGHT_RGB_OPERATION_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 3;
+  int LIGHT_RGB_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 3;
 
   /**
-   * The meta object id for the '{@link org.xtext.operations.impl.buzzerOffOperationImpl <em>buzzer Off Operation</em>}' class.
+   * The meta object id for the '{@link org.xtext.operations.impl.buzzerOffImpl <em>buzzer Off</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.operations.impl.buzzerOffOperationImpl
-   * @see org.xtext.operations.impl.OperationsPackageImpl#getbuzzerOffOperation()
+   * @see org.xtext.operations.impl.buzzerOffImpl
+   * @see org.xtext.operations.impl.OperationsPackageImpl#getbuzzerOff()
    * @generated
    */
-  int BUZZER_OFF_OPERATION = 3;
+  int BUZZER_OFF = 3;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -194,26 +194,26 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BUZZER_OFF_OPERATION__NAME = COMMAND__NAME;
+  int BUZZER_OFF__NAME = COMMAND__NAME;
 
   /**
-   * The number of structural features of the '<em>buzzer Off Operation</em>' class.
+   * The number of structural features of the '<em>buzzer Off</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BUZZER_OFF_OPERATION_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 0;
+  int BUZZER_OFF_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 0;
 
   /**
-   * The meta object id for the '{@link org.xtext.operations.impl.buzzerOnOperationImpl <em>buzzer On Operation</em>}' class.
+   * The meta object id for the '{@link org.xtext.operations.impl.buzzerOnImpl <em>buzzer On</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.operations.impl.buzzerOnOperationImpl
-   * @see org.xtext.operations.impl.OperationsPackageImpl#getbuzzerOnOperation()
+   * @see org.xtext.operations.impl.buzzerOnImpl
+   * @see org.xtext.operations.impl.OperationsPackageImpl#getbuzzerOn()
    * @generated
    */
-  int BUZZER_ON_OPERATION = 4;
+  int BUZZER_ON = 4;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -222,7 +222,7 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BUZZER_ON_OPERATION__NAME = COMMAND__NAME;
+  int BUZZER_ON__NAME = COMMAND__NAME;
 
   /**
    * The feature id for the '<em><b>Time</b></em>' containment reference list.
@@ -231,26 +231,26 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BUZZER_ON_OPERATION__TIME = COMMAND_FEATURE_COUNT + 0;
+  int BUZZER_ON__TIME = COMMAND_FEATURE_COUNT + 0;
 
   /**
-   * The number of structural features of the '<em>buzzer On Operation</em>' class.
+   * The number of structural features of the '<em>buzzer On</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BUZZER_ON_OPERATION_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 1;
+  int BUZZER_ON_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 1;
 
   /**
-   * The meta object id for the '{@link org.xtext.operations.impl.calibrationOperationImpl <em>calibration Operation</em>}' class.
+   * The meta object id for the '{@link org.xtext.operations.impl.calibrationImpl <em>calibration</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.operations.impl.calibrationOperationImpl
-   * @see org.xtext.operations.impl.OperationsPackageImpl#getcalibrationOperation()
+   * @see org.xtext.operations.impl.calibrationImpl
+   * @see org.xtext.operations.impl.OperationsPackageImpl#getcalibration()
    * @generated
    */
-  int CALIBRATION_OPERATION = 5;
+  int CALIBRATION = 5;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -259,7 +259,7 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CALIBRATION_OPERATION__NAME = COMMAND__NAME;
+  int CALIBRATION__NAME = COMMAND__NAME;
 
   /**
    * The feature id for the '<em><b>Color</b></em>' containment reference list.
@@ -268,7 +268,7 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CALIBRATION_OPERATION__COLOR = COMMAND_FEATURE_COUNT + 0;
+  int CALIBRATION__COLOR = COMMAND_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Hmin</b></em>' containment reference list.
@@ -277,7 +277,7 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CALIBRATION_OPERATION__HMIN = COMMAND_FEATURE_COUNT + 1;
+  int CALIBRATION__HMIN = COMMAND_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Smin</b></em>' containment reference list.
@@ -286,7 +286,7 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CALIBRATION_OPERATION__SMIN = COMMAND_FEATURE_COUNT + 2;
+  int CALIBRATION__SMIN = COMMAND_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Vmin</b></em>' containment reference list.
@@ -295,7 +295,7 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CALIBRATION_OPERATION__VMIN = COMMAND_FEATURE_COUNT + 3;
+  int CALIBRATION__VMIN = COMMAND_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Hmax</b></em>' containment reference list.
@@ -304,7 +304,7 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CALIBRATION_OPERATION__HMAX = COMMAND_FEATURE_COUNT + 4;
+  int CALIBRATION__HMAX = COMMAND_FEATURE_COUNT + 4;
 
   /**
    * The feature id for the '<em><b>Smax</b></em>' containment reference list.
@@ -313,7 +313,7 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CALIBRATION_OPERATION__SMAX = COMMAND_FEATURE_COUNT + 5;
+  int CALIBRATION__SMAX = COMMAND_FEATURE_COUNT + 5;
 
   /**
    * The feature id for the '<em><b>Vmax</b></em>' containment reference list.
@@ -322,26 +322,26 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CALIBRATION_OPERATION__VMAX = COMMAND_FEATURE_COUNT + 6;
+  int CALIBRATION__VMAX = COMMAND_FEATURE_COUNT + 6;
 
   /**
-   * The number of structural features of the '<em>calibration Operation</em>' class.
+   * The number of structural features of the '<em>calibration</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CALIBRATION_OPERATION_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 7;
+  int CALIBRATION_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 7;
 
   /**
-   * The meta object id for the '{@link org.xtext.operations.impl.cameraColorOperationImpl <em>camera Color Operation</em>}' class.
+   * The meta object id for the '{@link org.xtext.operations.impl.cameraColorImpl <em>camera Color</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.operations.impl.cameraColorOperationImpl
-   * @see org.xtext.operations.impl.OperationsPackageImpl#getcameraColorOperation()
+   * @see org.xtext.operations.impl.cameraColorImpl
+   * @see org.xtext.operations.impl.OperationsPackageImpl#getcameraColor()
    * @generated
    */
-  int CAMERA_COLOR_OPERATION = 6;
+  int CAMERA_COLOR = 6;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -350,7 +350,7 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CAMERA_COLOR_OPERATION__NAME = COMMAND__NAME;
+  int CAMERA_COLOR__NAME = COMMAND__NAME;
 
   /**
    * The feature id for the '<em><b>Time</b></em>' containment reference list.
@@ -359,26 +359,26 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CAMERA_COLOR_OPERATION__TIME = COMMAND_FEATURE_COUNT + 0;
+  int CAMERA_COLOR__TIME = COMMAND_FEATURE_COUNT + 0;
 
   /**
-   * The number of structural features of the '<em>camera Color Operation</em>' class.
+   * The number of structural features of the '<em>camera Color</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CAMERA_COLOR_OPERATION_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 1;
+  int CAMERA_COLOR_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 1;
 
   /**
-   * The meta object id for the '{@link org.xtext.operations.impl.readAllServosOperationImpl <em>read All Servos Operation</em>}' class.
+   * The meta object id for the '{@link org.xtext.operations.impl.readAllServosImpl <em>read All Servos</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.operations.impl.readAllServosOperationImpl
-   * @see org.xtext.operations.impl.OperationsPackageImpl#getreadAllServosOperation()
+   * @see org.xtext.operations.impl.readAllServosImpl
+   * @see org.xtext.operations.impl.OperationsPackageImpl#getreadAllServos()
    * @generated
    */
-  int READ_ALL_SERVOS_OPERATION = 7;
+  int READ_ALL_SERVOS = 7;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -387,26 +387,26 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int READ_ALL_SERVOS_OPERATION__NAME = COMMAND__NAME;
+  int READ_ALL_SERVOS__NAME = COMMAND__NAME;
 
   /**
-   * The number of structural features of the '<em>read All Servos Operation</em>' class.
+   * The number of structural features of the '<em>read All Servos</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int READ_ALL_SERVOS_OPERATION_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 0;
+  int READ_ALL_SERVOS_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 0;
 
   /**
-   * The meta object id for the '{@link org.xtext.operations.impl.readServoOperationImpl <em>read Servo Operation</em>}' class.
+   * The meta object id for the '{@link org.xtext.operations.impl.readServoImpl <em>read Servo</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.operations.impl.readServoOperationImpl
-   * @see org.xtext.operations.impl.OperationsPackageImpl#getreadServoOperation()
+   * @see org.xtext.operations.impl.readServoImpl
+   * @see org.xtext.operations.impl.OperationsPackageImpl#getreadServo()
    * @generated
    */
-  int READ_SERVO_OPERATION = 8;
+  int READ_SERVO = 8;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -415,7 +415,7 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int READ_SERVO_OPERATION__NAME = COMMAND__NAME;
+  int READ_SERVO__NAME = COMMAND__NAME;
 
   /**
    * The feature id for the '<em><b>Servo</b></em>' containment reference list.
@@ -424,26 +424,26 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int READ_SERVO_OPERATION__SERVO = COMMAND_FEATURE_COUNT + 0;
+  int READ_SERVO__SERVO = COMMAND_FEATURE_COUNT + 0;
 
   /**
-   * The number of structural features of the '<em>read Servo Operation</em>' class.
+   * The number of structural features of the '<em>read Servo</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int READ_SERVO_OPERATION_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 1;
+  int READ_SERVO_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 1;
 
   /**
-   * The meta object id for the '{@link org.xtext.operations.impl.rotateServoOperationImpl <em>rotate Servo Operation</em>}' class.
+   * The meta object id for the '{@link org.xtext.operations.impl.rotateServoImpl <em>rotate Servo</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.operations.impl.rotateServoOperationImpl
-   * @see org.xtext.operations.impl.OperationsPackageImpl#getrotateServoOperation()
+   * @see org.xtext.operations.impl.rotateServoImpl
+   * @see org.xtext.operations.impl.OperationsPackageImpl#getrotateServo()
    * @generated
    */
-  int ROTATE_SERVO_OPERATION = 9;
+  int ROTATE_SERVO = 9;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -452,7 +452,7 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ROTATE_SERVO_OPERATION__NAME = COMMAND__NAME;
+  int ROTATE_SERVO__NAME = COMMAND__NAME;
 
   /**
    * The feature id for the '<em><b>Servo</b></em>' containment reference list.
@@ -461,7 +461,7 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ROTATE_SERVO_OPERATION__SERVO = COMMAND_FEATURE_COUNT + 0;
+  int ROTATE_SERVO__SERVO = COMMAND_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Angle</b></em>' containment reference list.
@@ -470,7 +470,7 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ROTATE_SERVO_OPERATION__ANGLE = COMMAND_FEATURE_COUNT + 1;
+  int ROTATE_SERVO__ANGLE = COMMAND_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Time</b></em>' containment reference list.
@@ -479,26 +479,26 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ROTATE_SERVO_OPERATION__TIME = COMMAND_FEATURE_COUNT + 2;
+  int ROTATE_SERVO__TIME = COMMAND_FEATURE_COUNT + 2;
 
   /**
-   * The number of structural features of the '<em>rotate Servo Operation</em>' class.
+   * The number of structural features of the '<em>rotate Servo</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ROTATE_SERVO_OPERATION_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 3;
+  int ROTATE_SERVO_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 3;
 
   /**
-   * The meta object id for the '{@link org.xtext.operations.impl.rotateAllServosOperationImpl <em>rotate All Servos Operation</em>}' class.
+   * The meta object id for the '{@link org.xtext.operations.impl.rotateAllServosImpl <em>rotate All Servos</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.operations.impl.rotateAllServosOperationImpl
-   * @see org.xtext.operations.impl.OperationsPackageImpl#getrotateAllServosOperation()
+   * @see org.xtext.operations.impl.rotateAllServosImpl
+   * @see org.xtext.operations.impl.OperationsPackageImpl#getrotateAllServos()
    * @generated
    */
-  int ROTATE_ALL_SERVOS_OPERATION = 10;
+  int ROTATE_ALL_SERVOS = 10;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -507,7 +507,7 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ROTATE_ALL_SERVOS_OPERATION__NAME = COMMAND__NAME;
+  int ROTATE_ALL_SERVOS__NAME = COMMAND__NAME;
 
   /**
    * The feature id for the '<em><b>Angle1</b></em>' containment reference list.
@@ -516,7 +516,7 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ROTATE_ALL_SERVOS_OPERATION__ANGLE1 = COMMAND_FEATURE_COUNT + 0;
+  int ROTATE_ALL_SERVOS__ANGLE1 = COMMAND_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Angle2</b></em>' containment reference list.
@@ -525,7 +525,7 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ROTATE_ALL_SERVOS_OPERATION__ANGLE2 = COMMAND_FEATURE_COUNT + 1;
+  int ROTATE_ALL_SERVOS__ANGLE2 = COMMAND_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Angle3</b></em>' containment reference list.
@@ -534,7 +534,7 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ROTATE_ALL_SERVOS_OPERATION__ANGLE3 = COMMAND_FEATURE_COUNT + 2;
+  int ROTATE_ALL_SERVOS__ANGLE3 = COMMAND_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Angle4</b></em>' containment reference list.
@@ -543,7 +543,7 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ROTATE_ALL_SERVOS_OPERATION__ANGLE4 = COMMAND_FEATURE_COUNT + 3;
+  int ROTATE_ALL_SERVOS__ANGLE4 = COMMAND_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Angle5</b></em>' containment reference list.
@@ -552,7 +552,7 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ROTATE_ALL_SERVOS_OPERATION__ANGLE5 = COMMAND_FEATURE_COUNT + 4;
+  int ROTATE_ALL_SERVOS__ANGLE5 = COMMAND_FEATURE_COUNT + 4;
 
   /**
    * The feature id for the '<em><b>Angle6</b></em>' containment reference list.
@@ -561,7 +561,7 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ROTATE_ALL_SERVOS_OPERATION__ANGLE6 = COMMAND_FEATURE_COUNT + 5;
+  int ROTATE_ALL_SERVOS__ANGLE6 = COMMAND_FEATURE_COUNT + 5;
 
   /**
    * The feature id for the '<em><b>Time</b></em>' containment reference list.
@@ -570,16 +570,16 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ROTATE_ALL_SERVOS_OPERATION__TIME = COMMAND_FEATURE_COUNT + 6;
+  int ROTATE_ALL_SERVOS__TIME = COMMAND_FEATURE_COUNT + 6;
 
   /**
-   * The number of structural features of the '<em>rotate All Servos Operation</em>' class.
+   * The number of structural features of the '<em>rotate All Servos</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ROTATE_ALL_SERVOS_OPERATION_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 7;
+  int ROTATE_ALL_SERVOS_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 7;
 
   /**
    * The meta object id for the '{@link org.xtext.operations.impl.ResultImpl <em>Result</em>}' class.
@@ -693,14 +693,14 @@ public interface OperationsPackage extends EPackage
   int SOLUTION_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link org.xtext.operations.impl.isAtSingleOperationImpl <em>is At Single Operation</em>}' class.
+   * The meta object id for the '{@link org.xtext.operations.impl.isAtSingleImpl <em>is At Single</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.operations.impl.isAtSingleOperationImpl
-   * @see org.xtext.operations.impl.OperationsPackageImpl#getisAtSingleOperation()
+   * @see org.xtext.operations.impl.isAtSingleImpl
+   * @see org.xtext.operations.impl.OperationsPackageImpl#getisAtSingle()
    * @generated
    */
-  int IS_AT_SINGLE_OPERATION = 14;
+  int IS_AT_SINGLE = 14;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -709,7 +709,7 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int IS_AT_SINGLE_OPERATION__NAME = SOLUTION__NAME;
+  int IS_AT_SINGLE__NAME = SOLUTION__NAME;
 
   /**
    * The feature id for the '<em><b>Angle res</b></em>' containment reference list.
@@ -718,7 +718,7 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int IS_AT_SINGLE_OPERATION__ANGLE_RES = SOLUTION__ANGLE_RES;
+  int IS_AT_SINGLE__ANGLE_RES = SOLUTION__ANGLE_RES;
 
   /**
    * The feature id for the '<em><b>Servo</b></em>' containment reference list.
@@ -727,7 +727,7 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int IS_AT_SINGLE_OPERATION__SERVO = SOLUTION_FEATURE_COUNT + 0;
+  int IS_AT_SINGLE__SERVO = SOLUTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Angle</b></em>' containment reference list.
@@ -736,26 +736,26 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int IS_AT_SINGLE_OPERATION__ANGLE = SOLUTION_FEATURE_COUNT + 1;
+  int IS_AT_SINGLE__ANGLE = SOLUTION_FEATURE_COUNT + 1;
 
   /**
-   * The number of structural features of the '<em>is At Single Operation</em>' class.
+   * The number of structural features of the '<em>is At Single</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int IS_AT_SINGLE_OPERATION_FEATURE_COUNT = SOLUTION_FEATURE_COUNT + 2;
+  int IS_AT_SINGLE_FEATURE_COUNT = SOLUTION_FEATURE_COUNT + 2;
 
   /**
-   * The meta object id for the '{@link org.xtext.operations.impl.isAtOperationImpl <em>is At Operation</em>}' class.
+   * The meta object id for the '{@link org.xtext.operations.impl.isAtImpl <em>is At</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.operations.impl.isAtOperationImpl
-   * @see org.xtext.operations.impl.OperationsPackageImpl#getisAtOperation()
+   * @see org.xtext.operations.impl.isAtImpl
+   * @see org.xtext.operations.impl.OperationsPackageImpl#getisAt()
    * @generated
    */
-  int IS_AT_OPERATION = 15;
+  int IS_AT = 15;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -764,7 +764,7 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int IS_AT_OPERATION__NAME = SOLUTION__NAME;
+  int IS_AT__NAME = SOLUTION__NAME;
 
   /**
    * The feature id for the '<em><b>Angle res</b></em>' containment reference list.
@@ -773,7 +773,7 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int IS_AT_OPERATION__ANGLE_RES = SOLUTION__ANGLE_RES;
+  int IS_AT__ANGLE_RES = SOLUTION__ANGLE_RES;
 
   /**
    * The feature id for the '<em><b>Angle1</b></em>' containment reference list.
@@ -782,7 +782,7 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int IS_AT_OPERATION__ANGLE1 = SOLUTION_FEATURE_COUNT + 0;
+  int IS_AT__ANGLE1 = SOLUTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Angle2</b></em>' containment reference list.
@@ -791,7 +791,7 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int IS_AT_OPERATION__ANGLE2 = SOLUTION_FEATURE_COUNT + 1;
+  int IS_AT__ANGLE2 = SOLUTION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Angle3</b></em>' containment reference list.
@@ -800,7 +800,7 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int IS_AT_OPERATION__ANGLE3 = SOLUTION_FEATURE_COUNT + 2;
+  int IS_AT__ANGLE3 = SOLUTION_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Angle4</b></em>' containment reference list.
@@ -809,7 +809,7 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int IS_AT_OPERATION__ANGLE4 = SOLUTION_FEATURE_COUNT + 3;
+  int IS_AT__ANGLE4 = SOLUTION_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Angle5</b></em>' containment reference list.
@@ -818,7 +818,7 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int IS_AT_OPERATION__ANGLE5 = SOLUTION_FEATURE_COUNT + 4;
+  int IS_AT__ANGLE5 = SOLUTION_FEATURE_COUNT + 4;
 
   /**
    * The feature id for the '<em><b>Angle6</b></em>' containment reference list.
@@ -827,16 +827,16 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int IS_AT_OPERATION__ANGLE6 = SOLUTION_FEATURE_COUNT + 5;
+  int IS_AT__ANGLE6 = SOLUTION_FEATURE_COUNT + 5;
 
   /**
-   * The number of structural features of the '<em>is At Operation</em>' class.
+   * The number of structural features of the '<em>is At</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int IS_AT_OPERATION_FEATURE_COUNT = SOLUTION_FEATURE_COUNT + 6;
+  int IS_AT_FEATURE_COUNT = SOLUTION_FEATURE_COUNT + 6;
 
   /**
    * The meta object id for the '{@link org.xtext.operations.impl.Angle_resImpl <em>Angle res</em>}' class.
@@ -1285,347 +1285,347 @@ public interface OperationsPackage extends EPackage
   EAttribute getCommand_Name();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.operations.lightRGBOperation <em>light RGB Operation</em>}'.
+   * Returns the meta object for class '{@link org.xtext.operations.lightRGB <em>light RGB</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>light RGB Operation</em>'.
-   * @see org.xtext.operations.lightRGBOperation
+   * @return the meta object for class '<em>light RGB</em>'.
+   * @see org.xtext.operations.lightRGB
    * @generated
    */
-  EClass getlightRGBOperation();
+  EClass getlightRGB();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.operations.lightRGBOperation#getR <em>R</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.lightRGB#getR <em>R</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>R</em>'.
-   * @see org.xtext.operations.lightRGBOperation#getR()
-   * @see #getlightRGBOperation()
+   * @see org.xtext.operations.lightRGB#getR()
+   * @see #getlightRGB()
    * @generated
    */
-  EReference getlightRGBOperation_R();
+  EReference getlightRGB_R();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.operations.lightRGBOperation#getG <em>G</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.lightRGB#getG <em>G</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>G</em>'.
-   * @see org.xtext.operations.lightRGBOperation#getG()
-   * @see #getlightRGBOperation()
+   * @see org.xtext.operations.lightRGB#getG()
+   * @see #getlightRGB()
    * @generated
    */
-  EReference getlightRGBOperation_G();
+  EReference getlightRGB_G();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.operations.lightRGBOperation#getB <em>B</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.lightRGB#getB <em>B</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>B</em>'.
-   * @see org.xtext.operations.lightRGBOperation#getB()
-   * @see #getlightRGBOperation()
+   * @see org.xtext.operations.lightRGB#getB()
+   * @see #getlightRGB()
    * @generated
    */
-  EReference getlightRGBOperation_B();
+  EReference getlightRGB_B();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.operations.buzzerOffOperation <em>buzzer Off Operation</em>}'.
+   * Returns the meta object for class '{@link org.xtext.operations.buzzerOff <em>buzzer Off</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>buzzer Off Operation</em>'.
-   * @see org.xtext.operations.buzzerOffOperation
+   * @return the meta object for class '<em>buzzer Off</em>'.
+   * @see org.xtext.operations.buzzerOff
    * @generated
    */
-  EClass getbuzzerOffOperation();
+  EClass getbuzzerOff();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.operations.buzzerOnOperation <em>buzzer On Operation</em>}'.
+   * Returns the meta object for class '{@link org.xtext.operations.buzzerOn <em>buzzer On</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>buzzer On Operation</em>'.
-   * @see org.xtext.operations.buzzerOnOperation
+   * @return the meta object for class '<em>buzzer On</em>'.
+   * @see org.xtext.operations.buzzerOn
    * @generated
    */
-  EClass getbuzzerOnOperation();
+  EClass getbuzzerOn();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.operations.buzzerOnOperation#getTime <em>Time</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.buzzerOn#getTime <em>Time</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Time</em>'.
-   * @see org.xtext.operations.buzzerOnOperation#getTime()
-   * @see #getbuzzerOnOperation()
+   * @see org.xtext.operations.buzzerOn#getTime()
+   * @see #getbuzzerOn()
    * @generated
    */
-  EReference getbuzzerOnOperation_Time();
+  EReference getbuzzerOn_Time();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.operations.calibrationOperation <em>calibration Operation</em>}'.
+   * Returns the meta object for class '{@link org.xtext.operations.calibration <em>calibration</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>calibration Operation</em>'.
-   * @see org.xtext.operations.calibrationOperation
+   * @return the meta object for class '<em>calibration</em>'.
+   * @see org.xtext.operations.calibration
    * @generated
    */
-  EClass getcalibrationOperation();
+  EClass getcalibration();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.operations.calibrationOperation#getColor <em>Color</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.calibration#getColor <em>Color</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Color</em>'.
-   * @see org.xtext.operations.calibrationOperation#getColor()
-   * @see #getcalibrationOperation()
+   * @see org.xtext.operations.calibration#getColor()
+   * @see #getcalibration()
    * @generated
    */
-  EReference getcalibrationOperation_Color();
+  EReference getcalibration_Color();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.operations.calibrationOperation#getH_min <em>Hmin</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.calibration#getH_min <em>Hmin</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Hmin</em>'.
-   * @see org.xtext.operations.calibrationOperation#getH_min()
-   * @see #getcalibrationOperation()
+   * @see org.xtext.operations.calibration#getH_min()
+   * @see #getcalibration()
    * @generated
    */
-  EReference getcalibrationOperation_H_min();
+  EReference getcalibration_H_min();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.operations.calibrationOperation#getS_min <em>Smin</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.calibration#getS_min <em>Smin</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Smin</em>'.
-   * @see org.xtext.operations.calibrationOperation#getS_min()
-   * @see #getcalibrationOperation()
+   * @see org.xtext.operations.calibration#getS_min()
+   * @see #getcalibration()
    * @generated
    */
-  EReference getcalibrationOperation_S_min();
+  EReference getcalibration_S_min();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.operations.calibrationOperation#getV_min <em>Vmin</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.calibration#getV_min <em>Vmin</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Vmin</em>'.
-   * @see org.xtext.operations.calibrationOperation#getV_min()
-   * @see #getcalibrationOperation()
+   * @see org.xtext.operations.calibration#getV_min()
+   * @see #getcalibration()
    * @generated
    */
-  EReference getcalibrationOperation_V_min();
+  EReference getcalibration_V_min();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.operations.calibrationOperation#getH_max <em>Hmax</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.calibration#getH_max <em>Hmax</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Hmax</em>'.
-   * @see org.xtext.operations.calibrationOperation#getH_max()
-   * @see #getcalibrationOperation()
+   * @see org.xtext.operations.calibration#getH_max()
+   * @see #getcalibration()
    * @generated
    */
-  EReference getcalibrationOperation_H_max();
+  EReference getcalibration_H_max();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.operations.calibrationOperation#getS_max <em>Smax</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.calibration#getS_max <em>Smax</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Smax</em>'.
-   * @see org.xtext.operations.calibrationOperation#getS_max()
-   * @see #getcalibrationOperation()
+   * @see org.xtext.operations.calibration#getS_max()
+   * @see #getcalibration()
    * @generated
    */
-  EReference getcalibrationOperation_S_max();
+  EReference getcalibration_S_max();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.operations.calibrationOperation#getV_max <em>Vmax</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.calibration#getV_max <em>Vmax</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Vmax</em>'.
-   * @see org.xtext.operations.calibrationOperation#getV_max()
-   * @see #getcalibrationOperation()
+   * @see org.xtext.operations.calibration#getV_max()
+   * @see #getcalibration()
    * @generated
    */
-  EReference getcalibrationOperation_V_max();
+  EReference getcalibration_V_max();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.operations.cameraColorOperation <em>camera Color Operation</em>}'.
+   * Returns the meta object for class '{@link org.xtext.operations.cameraColor <em>camera Color</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>camera Color Operation</em>'.
-   * @see org.xtext.operations.cameraColorOperation
+   * @return the meta object for class '<em>camera Color</em>'.
+   * @see org.xtext.operations.cameraColor
    * @generated
    */
-  EClass getcameraColorOperation();
+  EClass getcameraColor();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.operations.cameraColorOperation#getTime <em>Time</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.cameraColor#getTime <em>Time</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Time</em>'.
-   * @see org.xtext.operations.cameraColorOperation#getTime()
-   * @see #getcameraColorOperation()
+   * @see org.xtext.operations.cameraColor#getTime()
+   * @see #getcameraColor()
    * @generated
    */
-  EReference getcameraColorOperation_Time();
+  EReference getcameraColor_Time();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.operations.readAllServosOperation <em>read All Servos Operation</em>}'.
+   * Returns the meta object for class '{@link org.xtext.operations.readAllServos <em>read All Servos</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>read All Servos Operation</em>'.
-   * @see org.xtext.operations.readAllServosOperation
+   * @return the meta object for class '<em>read All Servos</em>'.
+   * @see org.xtext.operations.readAllServos
    * @generated
    */
-  EClass getreadAllServosOperation();
+  EClass getreadAllServos();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.operations.readServoOperation <em>read Servo Operation</em>}'.
+   * Returns the meta object for class '{@link org.xtext.operations.readServo <em>read Servo</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>read Servo Operation</em>'.
-   * @see org.xtext.operations.readServoOperation
+   * @return the meta object for class '<em>read Servo</em>'.
+   * @see org.xtext.operations.readServo
    * @generated
    */
-  EClass getreadServoOperation();
+  EClass getreadServo();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.operations.readServoOperation#getServo <em>Servo</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Servo</em>'.
-   * @see org.xtext.operations.readServoOperation#getServo()
-   * @see #getreadServoOperation()
-   * @generated
-   */
-  EReference getreadServoOperation_Servo();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.operations.rotateServoOperation <em>rotate Servo Operation</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>rotate Servo Operation</em>'.
-   * @see org.xtext.operations.rotateServoOperation
-   * @generated
-   */
-  EClass getrotateServoOperation();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.operations.rotateServoOperation#getServo <em>Servo</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.readServo#getServo <em>Servo</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Servo</em>'.
-   * @see org.xtext.operations.rotateServoOperation#getServo()
-   * @see #getrotateServoOperation()
+   * @see org.xtext.operations.readServo#getServo()
+   * @see #getreadServo()
    * @generated
    */
-  EReference getrotateServoOperation_Servo();
+  EReference getreadServo_Servo();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.operations.rotateServoOperation#getAngle <em>Angle</em>}'.
+   * Returns the meta object for class '{@link org.xtext.operations.rotateServo <em>rotate Servo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>rotate Servo</em>'.
+   * @see org.xtext.operations.rotateServo
+   * @generated
+   */
+  EClass getrotateServo();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.rotateServo#getServo <em>Servo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Servo</em>'.
+   * @see org.xtext.operations.rotateServo#getServo()
+   * @see #getrotateServo()
+   * @generated
+   */
+  EReference getrotateServo_Servo();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.rotateServo#getAngle <em>Angle</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Angle</em>'.
-   * @see org.xtext.operations.rotateServoOperation#getAngle()
-   * @see #getrotateServoOperation()
+   * @see org.xtext.operations.rotateServo#getAngle()
+   * @see #getrotateServo()
    * @generated
    */
-  EReference getrotateServoOperation_Angle();
+  EReference getrotateServo_Angle();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.operations.rotateServoOperation#getTime <em>Time</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.rotateServo#getTime <em>Time</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Time</em>'.
-   * @see org.xtext.operations.rotateServoOperation#getTime()
-   * @see #getrotateServoOperation()
+   * @see org.xtext.operations.rotateServo#getTime()
+   * @see #getrotateServo()
    * @generated
    */
-  EReference getrotateServoOperation_Time();
+  EReference getrotateServo_Time();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.operations.rotateAllServosOperation <em>rotate All Servos Operation</em>}'.
+   * Returns the meta object for class '{@link org.xtext.operations.rotateAllServos <em>rotate All Servos</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>rotate All Servos Operation</em>'.
-   * @see org.xtext.operations.rotateAllServosOperation
+   * @return the meta object for class '<em>rotate All Servos</em>'.
+   * @see org.xtext.operations.rotateAllServos
    * @generated
    */
-  EClass getrotateAllServosOperation();
+  EClass getrotateAllServos();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.operations.rotateAllServosOperation#getAngle1 <em>Angle1</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.rotateAllServos#getAngle1 <em>Angle1</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Angle1</em>'.
-   * @see org.xtext.operations.rotateAllServosOperation#getAngle1()
-   * @see #getrotateAllServosOperation()
+   * @see org.xtext.operations.rotateAllServos#getAngle1()
+   * @see #getrotateAllServos()
    * @generated
    */
-  EReference getrotateAllServosOperation_Angle1();
+  EReference getrotateAllServos_Angle1();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.operations.rotateAllServosOperation#getAngle2 <em>Angle2</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.rotateAllServos#getAngle2 <em>Angle2</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Angle2</em>'.
-   * @see org.xtext.operations.rotateAllServosOperation#getAngle2()
-   * @see #getrotateAllServosOperation()
+   * @see org.xtext.operations.rotateAllServos#getAngle2()
+   * @see #getrotateAllServos()
    * @generated
    */
-  EReference getrotateAllServosOperation_Angle2();
+  EReference getrotateAllServos_Angle2();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.operations.rotateAllServosOperation#getAngle3 <em>Angle3</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.rotateAllServos#getAngle3 <em>Angle3</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Angle3</em>'.
-   * @see org.xtext.operations.rotateAllServosOperation#getAngle3()
-   * @see #getrotateAllServosOperation()
+   * @see org.xtext.operations.rotateAllServos#getAngle3()
+   * @see #getrotateAllServos()
    * @generated
    */
-  EReference getrotateAllServosOperation_Angle3();
+  EReference getrotateAllServos_Angle3();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.operations.rotateAllServosOperation#getAngle4 <em>Angle4</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.rotateAllServos#getAngle4 <em>Angle4</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Angle4</em>'.
-   * @see org.xtext.operations.rotateAllServosOperation#getAngle4()
-   * @see #getrotateAllServosOperation()
+   * @see org.xtext.operations.rotateAllServos#getAngle4()
+   * @see #getrotateAllServos()
    * @generated
    */
-  EReference getrotateAllServosOperation_Angle4();
+  EReference getrotateAllServos_Angle4();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.operations.rotateAllServosOperation#getAngle5 <em>Angle5</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.rotateAllServos#getAngle5 <em>Angle5</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Angle5</em>'.
-   * @see org.xtext.operations.rotateAllServosOperation#getAngle5()
-   * @see #getrotateAllServosOperation()
+   * @see org.xtext.operations.rotateAllServos#getAngle5()
+   * @see #getrotateAllServos()
    * @generated
    */
-  EReference getrotateAllServosOperation_Angle5();
+  EReference getrotateAllServos_Angle5();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.operations.rotateAllServosOperation#getAngle6 <em>Angle6</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.rotateAllServos#getAngle6 <em>Angle6</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Angle6</em>'.
-   * @see org.xtext.operations.rotateAllServosOperation#getAngle6()
-   * @see #getrotateAllServosOperation()
+   * @see org.xtext.operations.rotateAllServos#getAngle6()
+   * @see #getrotateAllServos()
    * @generated
    */
-  EReference getrotateAllServosOperation_Angle6();
+  EReference getrotateAllServos_Angle6();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.operations.rotateAllServosOperation#getTime <em>Time</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.rotateAllServos#getTime <em>Time</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Time</em>'.
-   * @see org.xtext.operations.rotateAllServosOperation#getTime()
-   * @see #getrotateAllServosOperation()
+   * @see org.xtext.operations.rotateAllServos#getTime()
+   * @see #getrotateAllServos()
    * @generated
    */
-  EReference getrotateAllServosOperation_Time();
+  EReference getrotateAllServos_Time();
 
   /**
    * Returns the meta object for class '{@link org.xtext.operations.Result <em>Result</em>}'.
@@ -1724,112 +1724,112 @@ public interface OperationsPackage extends EPackage
   EReference getSolution_Angle_res();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.operations.isAtSingleOperation <em>is At Single Operation</em>}'.
+   * Returns the meta object for class '{@link org.xtext.operations.isAtSingle <em>is At Single</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>is At Single Operation</em>'.
-   * @see org.xtext.operations.isAtSingleOperation
+   * @return the meta object for class '<em>is At Single</em>'.
+   * @see org.xtext.operations.isAtSingle
    * @generated
    */
-  EClass getisAtSingleOperation();
+  EClass getisAtSingle();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.operations.isAtSingleOperation#getServo <em>Servo</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.isAtSingle#getServo <em>Servo</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Servo</em>'.
-   * @see org.xtext.operations.isAtSingleOperation#getServo()
-   * @see #getisAtSingleOperation()
+   * @see org.xtext.operations.isAtSingle#getServo()
+   * @see #getisAtSingle()
    * @generated
    */
-  EReference getisAtSingleOperation_Servo();
+  EReference getisAtSingle_Servo();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.operations.isAtSingleOperation#getAngle <em>Angle</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.isAtSingle#getAngle <em>Angle</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Angle</em>'.
-   * @see org.xtext.operations.isAtSingleOperation#getAngle()
-   * @see #getisAtSingleOperation()
+   * @see org.xtext.operations.isAtSingle#getAngle()
+   * @see #getisAtSingle()
    * @generated
    */
-  EReference getisAtSingleOperation_Angle();
+  EReference getisAtSingle_Angle();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.operations.isAtOperation <em>is At Operation</em>}'.
+   * Returns the meta object for class '{@link org.xtext.operations.isAt <em>is At</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>is At Operation</em>'.
-   * @see org.xtext.operations.isAtOperation
+   * @return the meta object for class '<em>is At</em>'.
+   * @see org.xtext.operations.isAt
    * @generated
    */
-  EClass getisAtOperation();
+  EClass getisAt();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.operations.isAtOperation#getAngle1 <em>Angle1</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.isAt#getAngle1 <em>Angle1</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Angle1</em>'.
-   * @see org.xtext.operations.isAtOperation#getAngle1()
-   * @see #getisAtOperation()
+   * @see org.xtext.operations.isAt#getAngle1()
+   * @see #getisAt()
    * @generated
    */
-  EReference getisAtOperation_Angle1();
+  EReference getisAt_Angle1();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.operations.isAtOperation#getAngle2 <em>Angle2</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.isAt#getAngle2 <em>Angle2</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Angle2</em>'.
-   * @see org.xtext.operations.isAtOperation#getAngle2()
-   * @see #getisAtOperation()
+   * @see org.xtext.operations.isAt#getAngle2()
+   * @see #getisAt()
    * @generated
    */
-  EReference getisAtOperation_Angle2();
+  EReference getisAt_Angle2();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.operations.isAtOperation#getAngle3 <em>Angle3</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.isAt#getAngle3 <em>Angle3</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Angle3</em>'.
-   * @see org.xtext.operations.isAtOperation#getAngle3()
-   * @see #getisAtOperation()
+   * @see org.xtext.operations.isAt#getAngle3()
+   * @see #getisAt()
    * @generated
    */
-  EReference getisAtOperation_Angle3();
+  EReference getisAt_Angle3();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.operations.isAtOperation#getAngle4 <em>Angle4</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.isAt#getAngle4 <em>Angle4</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Angle4</em>'.
-   * @see org.xtext.operations.isAtOperation#getAngle4()
-   * @see #getisAtOperation()
+   * @see org.xtext.operations.isAt#getAngle4()
+   * @see #getisAt()
    * @generated
    */
-  EReference getisAtOperation_Angle4();
+  EReference getisAt_Angle4();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.operations.isAtOperation#getAngle5 <em>Angle5</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.isAt#getAngle5 <em>Angle5</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Angle5</em>'.
-   * @see org.xtext.operations.isAtOperation#getAngle5()
-   * @see #getisAtOperation()
+   * @see org.xtext.operations.isAt#getAngle5()
+   * @see #getisAt()
    * @generated
    */
-  EReference getisAtOperation_Angle5();
+  EReference getisAt_Angle5();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.operations.isAtOperation#getAngle6 <em>Angle6</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.isAt#getAngle6 <em>Angle6</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Angle6</em>'.
-   * @see org.xtext.operations.isAtOperation#getAngle6()
-   * @see #getisAtOperation()
+   * @see org.xtext.operations.isAt#getAngle6()
+   * @see #getisAt()
    * @generated
    */
-  EReference getisAtOperation_Angle6();
+  EReference getisAt_Angle6();
 
   /**
    * Returns the meta object for class '{@link org.xtext.operations.Angle_res <em>Angle res</em>}'.
@@ -2193,14 +2193,14 @@ public interface OperationsPackage extends EPackage
     EAttribute COMMAND__NAME = eINSTANCE.getCommand_Name();
 
     /**
-     * The meta object literal for the '{@link org.xtext.operations.impl.lightRGBOperationImpl <em>light RGB Operation</em>}' class.
+     * The meta object literal for the '{@link org.xtext.operations.impl.lightRGBImpl <em>light RGB</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.xtext.operations.impl.lightRGBOperationImpl
-     * @see org.xtext.operations.impl.OperationsPackageImpl#getlightRGBOperation()
+     * @see org.xtext.operations.impl.lightRGBImpl
+     * @see org.xtext.operations.impl.OperationsPackageImpl#getlightRGB()
      * @generated
      */
-    EClass LIGHT_RGB_OPERATION = eINSTANCE.getlightRGBOperation();
+    EClass LIGHT_RGB = eINSTANCE.getlightRGB();
 
     /**
      * The meta object literal for the '<em><b>R</b></em>' containment reference list feature.
@@ -2208,7 +2208,7 @@ public interface OperationsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference LIGHT_RGB_OPERATION__R = eINSTANCE.getlightRGBOperation_R();
+    EReference LIGHT_RGB__R = eINSTANCE.getlightRGB_R();
 
     /**
      * The meta object literal for the '<em><b>G</b></em>' containment reference list feature.
@@ -2216,7 +2216,7 @@ public interface OperationsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference LIGHT_RGB_OPERATION__G = eINSTANCE.getlightRGBOperation_G();
+    EReference LIGHT_RGB__G = eINSTANCE.getlightRGB_G();
 
     /**
      * The meta object literal for the '<em><b>B</b></em>' containment reference list feature.
@@ -2224,27 +2224,27 @@ public interface OperationsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference LIGHT_RGB_OPERATION__B = eINSTANCE.getlightRGBOperation_B();
+    EReference LIGHT_RGB__B = eINSTANCE.getlightRGB_B();
 
     /**
-     * The meta object literal for the '{@link org.xtext.operations.impl.buzzerOffOperationImpl <em>buzzer Off Operation</em>}' class.
+     * The meta object literal for the '{@link org.xtext.operations.impl.buzzerOffImpl <em>buzzer Off</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.xtext.operations.impl.buzzerOffOperationImpl
-     * @see org.xtext.operations.impl.OperationsPackageImpl#getbuzzerOffOperation()
+     * @see org.xtext.operations.impl.buzzerOffImpl
+     * @see org.xtext.operations.impl.OperationsPackageImpl#getbuzzerOff()
      * @generated
      */
-    EClass BUZZER_OFF_OPERATION = eINSTANCE.getbuzzerOffOperation();
+    EClass BUZZER_OFF = eINSTANCE.getbuzzerOff();
 
     /**
-     * The meta object literal for the '{@link org.xtext.operations.impl.buzzerOnOperationImpl <em>buzzer On Operation</em>}' class.
+     * The meta object literal for the '{@link org.xtext.operations.impl.buzzerOnImpl <em>buzzer On</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.xtext.operations.impl.buzzerOnOperationImpl
-     * @see org.xtext.operations.impl.OperationsPackageImpl#getbuzzerOnOperation()
+     * @see org.xtext.operations.impl.buzzerOnImpl
+     * @see org.xtext.operations.impl.OperationsPackageImpl#getbuzzerOn()
      * @generated
      */
-    EClass BUZZER_ON_OPERATION = eINSTANCE.getbuzzerOnOperation();
+    EClass BUZZER_ON = eINSTANCE.getbuzzerOn();
 
     /**
      * The meta object literal for the '<em><b>Time</b></em>' containment reference list feature.
@@ -2252,17 +2252,17 @@ public interface OperationsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference BUZZER_ON_OPERATION__TIME = eINSTANCE.getbuzzerOnOperation_Time();
+    EReference BUZZER_ON__TIME = eINSTANCE.getbuzzerOn_Time();
 
     /**
-     * The meta object literal for the '{@link org.xtext.operations.impl.calibrationOperationImpl <em>calibration Operation</em>}' class.
+     * The meta object literal for the '{@link org.xtext.operations.impl.calibrationImpl <em>calibration</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.xtext.operations.impl.calibrationOperationImpl
-     * @see org.xtext.operations.impl.OperationsPackageImpl#getcalibrationOperation()
+     * @see org.xtext.operations.impl.calibrationImpl
+     * @see org.xtext.operations.impl.OperationsPackageImpl#getcalibration()
      * @generated
      */
-    EClass CALIBRATION_OPERATION = eINSTANCE.getcalibrationOperation();
+    EClass CALIBRATION = eINSTANCE.getcalibration();
 
     /**
      * The meta object literal for the '<em><b>Color</b></em>' containment reference list feature.
@@ -2270,7 +2270,7 @@ public interface OperationsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference CALIBRATION_OPERATION__COLOR = eINSTANCE.getcalibrationOperation_Color();
+    EReference CALIBRATION__COLOR = eINSTANCE.getcalibration_Color();
 
     /**
      * The meta object literal for the '<em><b>Hmin</b></em>' containment reference list feature.
@@ -2278,7 +2278,7 @@ public interface OperationsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference CALIBRATION_OPERATION__HMIN = eINSTANCE.getcalibrationOperation_H_min();
+    EReference CALIBRATION__HMIN = eINSTANCE.getcalibration_H_min();
 
     /**
      * The meta object literal for the '<em><b>Smin</b></em>' containment reference list feature.
@@ -2286,7 +2286,7 @@ public interface OperationsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference CALIBRATION_OPERATION__SMIN = eINSTANCE.getcalibrationOperation_S_min();
+    EReference CALIBRATION__SMIN = eINSTANCE.getcalibration_S_min();
 
     /**
      * The meta object literal for the '<em><b>Vmin</b></em>' containment reference list feature.
@@ -2294,7 +2294,7 @@ public interface OperationsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference CALIBRATION_OPERATION__VMIN = eINSTANCE.getcalibrationOperation_V_min();
+    EReference CALIBRATION__VMIN = eINSTANCE.getcalibration_V_min();
 
     /**
      * The meta object literal for the '<em><b>Hmax</b></em>' containment reference list feature.
@@ -2302,7 +2302,7 @@ public interface OperationsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference CALIBRATION_OPERATION__HMAX = eINSTANCE.getcalibrationOperation_H_max();
+    EReference CALIBRATION__HMAX = eINSTANCE.getcalibration_H_max();
 
     /**
      * The meta object literal for the '<em><b>Smax</b></em>' containment reference list feature.
@@ -2310,7 +2310,7 @@ public interface OperationsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference CALIBRATION_OPERATION__SMAX = eINSTANCE.getcalibrationOperation_S_max();
+    EReference CALIBRATION__SMAX = eINSTANCE.getcalibration_S_max();
 
     /**
      * The meta object literal for the '<em><b>Vmax</b></em>' containment reference list feature.
@@ -2318,17 +2318,17 @@ public interface OperationsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference CALIBRATION_OPERATION__VMAX = eINSTANCE.getcalibrationOperation_V_max();
+    EReference CALIBRATION__VMAX = eINSTANCE.getcalibration_V_max();
 
     /**
-     * The meta object literal for the '{@link org.xtext.operations.impl.cameraColorOperationImpl <em>camera Color Operation</em>}' class.
+     * The meta object literal for the '{@link org.xtext.operations.impl.cameraColorImpl <em>camera Color</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.xtext.operations.impl.cameraColorOperationImpl
-     * @see org.xtext.operations.impl.OperationsPackageImpl#getcameraColorOperation()
+     * @see org.xtext.operations.impl.cameraColorImpl
+     * @see org.xtext.operations.impl.OperationsPackageImpl#getcameraColor()
      * @generated
      */
-    EClass CAMERA_COLOR_OPERATION = eINSTANCE.getcameraColorOperation();
+    EClass CAMERA_COLOR = eINSTANCE.getcameraColor();
 
     /**
      * The meta object literal for the '<em><b>Time</b></em>' containment reference list feature.
@@ -2336,45 +2336,27 @@ public interface OperationsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference CAMERA_COLOR_OPERATION__TIME = eINSTANCE.getcameraColorOperation_Time();
+    EReference CAMERA_COLOR__TIME = eINSTANCE.getcameraColor_Time();
 
     /**
-     * The meta object literal for the '{@link org.xtext.operations.impl.readAllServosOperationImpl <em>read All Servos Operation</em>}' class.
+     * The meta object literal for the '{@link org.xtext.operations.impl.readAllServosImpl <em>read All Servos</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.xtext.operations.impl.readAllServosOperationImpl
-     * @see org.xtext.operations.impl.OperationsPackageImpl#getreadAllServosOperation()
+     * @see org.xtext.operations.impl.readAllServosImpl
+     * @see org.xtext.operations.impl.OperationsPackageImpl#getreadAllServos()
      * @generated
      */
-    EClass READ_ALL_SERVOS_OPERATION = eINSTANCE.getreadAllServosOperation();
+    EClass READ_ALL_SERVOS = eINSTANCE.getreadAllServos();
 
     /**
-     * The meta object literal for the '{@link org.xtext.operations.impl.readServoOperationImpl <em>read Servo Operation</em>}' class.
+     * The meta object literal for the '{@link org.xtext.operations.impl.readServoImpl <em>read Servo</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.xtext.operations.impl.readServoOperationImpl
-     * @see org.xtext.operations.impl.OperationsPackageImpl#getreadServoOperation()
+     * @see org.xtext.operations.impl.readServoImpl
+     * @see org.xtext.operations.impl.OperationsPackageImpl#getreadServo()
      * @generated
      */
-    EClass READ_SERVO_OPERATION = eINSTANCE.getreadServoOperation();
-
-    /**
-     * The meta object literal for the '<em><b>Servo</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference READ_SERVO_OPERATION__SERVO = eINSTANCE.getreadServoOperation_Servo();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.operations.impl.rotateServoOperationImpl <em>rotate Servo Operation</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.operations.impl.rotateServoOperationImpl
-     * @see org.xtext.operations.impl.OperationsPackageImpl#getrotateServoOperation()
-     * @generated
-     */
-    EClass ROTATE_SERVO_OPERATION = eINSTANCE.getrotateServoOperation();
+    EClass READ_SERVO = eINSTANCE.getreadServo();
 
     /**
      * The meta object literal for the '<em><b>Servo</b></em>' containment reference list feature.
@@ -2382,7 +2364,25 @@ public interface OperationsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference ROTATE_SERVO_OPERATION__SERVO = eINSTANCE.getrotateServoOperation_Servo();
+    EReference READ_SERVO__SERVO = eINSTANCE.getreadServo_Servo();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.operations.impl.rotateServoImpl <em>rotate Servo</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.operations.impl.rotateServoImpl
+     * @see org.xtext.operations.impl.OperationsPackageImpl#getrotateServo()
+     * @generated
+     */
+    EClass ROTATE_SERVO = eINSTANCE.getrotateServo();
+
+    /**
+     * The meta object literal for the '<em><b>Servo</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ROTATE_SERVO__SERVO = eINSTANCE.getrotateServo_Servo();
 
     /**
      * The meta object literal for the '<em><b>Angle</b></em>' containment reference list feature.
@@ -2390,7 +2390,7 @@ public interface OperationsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference ROTATE_SERVO_OPERATION__ANGLE = eINSTANCE.getrotateServoOperation_Angle();
+    EReference ROTATE_SERVO__ANGLE = eINSTANCE.getrotateServo_Angle();
 
     /**
      * The meta object literal for the '<em><b>Time</b></em>' containment reference list feature.
@@ -2398,17 +2398,17 @@ public interface OperationsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference ROTATE_SERVO_OPERATION__TIME = eINSTANCE.getrotateServoOperation_Time();
+    EReference ROTATE_SERVO__TIME = eINSTANCE.getrotateServo_Time();
 
     /**
-     * The meta object literal for the '{@link org.xtext.operations.impl.rotateAllServosOperationImpl <em>rotate All Servos Operation</em>}' class.
+     * The meta object literal for the '{@link org.xtext.operations.impl.rotateAllServosImpl <em>rotate All Servos</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.xtext.operations.impl.rotateAllServosOperationImpl
-     * @see org.xtext.operations.impl.OperationsPackageImpl#getrotateAllServosOperation()
+     * @see org.xtext.operations.impl.rotateAllServosImpl
+     * @see org.xtext.operations.impl.OperationsPackageImpl#getrotateAllServos()
      * @generated
      */
-    EClass ROTATE_ALL_SERVOS_OPERATION = eINSTANCE.getrotateAllServosOperation();
+    EClass ROTATE_ALL_SERVOS = eINSTANCE.getrotateAllServos();
 
     /**
      * The meta object literal for the '<em><b>Angle1</b></em>' containment reference list feature.
@@ -2416,7 +2416,7 @@ public interface OperationsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference ROTATE_ALL_SERVOS_OPERATION__ANGLE1 = eINSTANCE.getrotateAllServosOperation_Angle1();
+    EReference ROTATE_ALL_SERVOS__ANGLE1 = eINSTANCE.getrotateAllServos_Angle1();
 
     /**
      * The meta object literal for the '<em><b>Angle2</b></em>' containment reference list feature.
@@ -2424,7 +2424,7 @@ public interface OperationsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference ROTATE_ALL_SERVOS_OPERATION__ANGLE2 = eINSTANCE.getrotateAllServosOperation_Angle2();
+    EReference ROTATE_ALL_SERVOS__ANGLE2 = eINSTANCE.getrotateAllServos_Angle2();
 
     /**
      * The meta object literal for the '<em><b>Angle3</b></em>' containment reference list feature.
@@ -2432,7 +2432,7 @@ public interface OperationsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference ROTATE_ALL_SERVOS_OPERATION__ANGLE3 = eINSTANCE.getrotateAllServosOperation_Angle3();
+    EReference ROTATE_ALL_SERVOS__ANGLE3 = eINSTANCE.getrotateAllServos_Angle3();
 
     /**
      * The meta object literal for the '<em><b>Angle4</b></em>' containment reference list feature.
@@ -2440,7 +2440,7 @@ public interface OperationsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference ROTATE_ALL_SERVOS_OPERATION__ANGLE4 = eINSTANCE.getrotateAllServosOperation_Angle4();
+    EReference ROTATE_ALL_SERVOS__ANGLE4 = eINSTANCE.getrotateAllServos_Angle4();
 
     /**
      * The meta object literal for the '<em><b>Angle5</b></em>' containment reference list feature.
@@ -2448,7 +2448,7 @@ public interface OperationsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference ROTATE_ALL_SERVOS_OPERATION__ANGLE5 = eINSTANCE.getrotateAllServosOperation_Angle5();
+    EReference ROTATE_ALL_SERVOS__ANGLE5 = eINSTANCE.getrotateAllServos_Angle5();
 
     /**
      * The meta object literal for the '<em><b>Angle6</b></em>' containment reference list feature.
@@ -2456,7 +2456,7 @@ public interface OperationsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference ROTATE_ALL_SERVOS_OPERATION__ANGLE6 = eINSTANCE.getrotateAllServosOperation_Angle6();
+    EReference ROTATE_ALL_SERVOS__ANGLE6 = eINSTANCE.getrotateAllServos_Angle6();
 
     /**
      * The meta object literal for the '<em><b>Time</b></em>' containment reference list feature.
@@ -2464,7 +2464,7 @@ public interface OperationsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference ROTATE_ALL_SERVOS_OPERATION__TIME = eINSTANCE.getrotateAllServosOperation_Time();
+    EReference ROTATE_ALL_SERVOS__TIME = eINSTANCE.getrotateAllServos_Time();
 
     /**
      * The meta object literal for the '{@link org.xtext.operations.impl.ResultImpl <em>Result</em>}' class.
@@ -2545,14 +2545,14 @@ public interface OperationsPackage extends EPackage
     EReference SOLUTION__ANGLE_RES = eINSTANCE.getSolution_Angle_res();
 
     /**
-     * The meta object literal for the '{@link org.xtext.operations.impl.isAtSingleOperationImpl <em>is At Single Operation</em>}' class.
+     * The meta object literal for the '{@link org.xtext.operations.impl.isAtSingleImpl <em>is At Single</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.xtext.operations.impl.isAtSingleOperationImpl
-     * @see org.xtext.operations.impl.OperationsPackageImpl#getisAtSingleOperation()
+     * @see org.xtext.operations.impl.isAtSingleImpl
+     * @see org.xtext.operations.impl.OperationsPackageImpl#getisAtSingle()
      * @generated
      */
-    EClass IS_AT_SINGLE_OPERATION = eINSTANCE.getisAtSingleOperation();
+    EClass IS_AT_SINGLE = eINSTANCE.getisAtSingle();
 
     /**
      * The meta object literal for the '<em><b>Servo</b></em>' containment reference list feature.
@@ -2560,7 +2560,7 @@ public interface OperationsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference IS_AT_SINGLE_OPERATION__SERVO = eINSTANCE.getisAtSingleOperation_Servo();
+    EReference IS_AT_SINGLE__SERVO = eINSTANCE.getisAtSingle_Servo();
 
     /**
      * The meta object literal for the '<em><b>Angle</b></em>' containment reference list feature.
@@ -2568,17 +2568,17 @@ public interface OperationsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference IS_AT_SINGLE_OPERATION__ANGLE = eINSTANCE.getisAtSingleOperation_Angle();
+    EReference IS_AT_SINGLE__ANGLE = eINSTANCE.getisAtSingle_Angle();
 
     /**
-     * The meta object literal for the '{@link org.xtext.operations.impl.isAtOperationImpl <em>is At Operation</em>}' class.
+     * The meta object literal for the '{@link org.xtext.operations.impl.isAtImpl <em>is At</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.xtext.operations.impl.isAtOperationImpl
-     * @see org.xtext.operations.impl.OperationsPackageImpl#getisAtOperation()
+     * @see org.xtext.operations.impl.isAtImpl
+     * @see org.xtext.operations.impl.OperationsPackageImpl#getisAt()
      * @generated
      */
-    EClass IS_AT_OPERATION = eINSTANCE.getisAtOperation();
+    EClass IS_AT = eINSTANCE.getisAt();
 
     /**
      * The meta object literal for the '<em><b>Angle1</b></em>' containment reference list feature.
@@ -2586,7 +2586,7 @@ public interface OperationsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference IS_AT_OPERATION__ANGLE1 = eINSTANCE.getisAtOperation_Angle1();
+    EReference IS_AT__ANGLE1 = eINSTANCE.getisAt_Angle1();
 
     /**
      * The meta object literal for the '<em><b>Angle2</b></em>' containment reference list feature.
@@ -2594,7 +2594,7 @@ public interface OperationsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference IS_AT_OPERATION__ANGLE2 = eINSTANCE.getisAtOperation_Angle2();
+    EReference IS_AT__ANGLE2 = eINSTANCE.getisAt_Angle2();
 
     /**
      * The meta object literal for the '<em><b>Angle3</b></em>' containment reference list feature.
@@ -2602,7 +2602,7 @@ public interface OperationsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference IS_AT_OPERATION__ANGLE3 = eINSTANCE.getisAtOperation_Angle3();
+    EReference IS_AT__ANGLE3 = eINSTANCE.getisAt_Angle3();
 
     /**
      * The meta object literal for the '<em><b>Angle4</b></em>' containment reference list feature.
@@ -2610,7 +2610,7 @@ public interface OperationsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference IS_AT_OPERATION__ANGLE4 = eINSTANCE.getisAtOperation_Angle4();
+    EReference IS_AT__ANGLE4 = eINSTANCE.getisAt_Angle4();
 
     /**
      * The meta object literal for the '<em><b>Angle5</b></em>' containment reference list feature.
@@ -2618,7 +2618,7 @@ public interface OperationsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference IS_AT_OPERATION__ANGLE5 = eINSTANCE.getisAtOperation_Angle5();
+    EReference IS_AT__ANGLE5 = eINSTANCE.getisAt_Angle5();
 
     /**
      * The meta object literal for the '<em><b>Angle6</b></em>' containment reference list feature.
@@ -2626,7 +2626,7 @@ public interface OperationsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference IS_AT_OPERATION__ANGLE6 = eINSTANCE.getisAtOperation_Angle6();
+    EReference IS_AT__ANGLE6 = eINSTANCE.getisAt_Angle6();
 
     /**
      * The meta object literal for the '{@link org.xtext.operations.impl.Angle_resImpl <em>Angle res</em>}' class.

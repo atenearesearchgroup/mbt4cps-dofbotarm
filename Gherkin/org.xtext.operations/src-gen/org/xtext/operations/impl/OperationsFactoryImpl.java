@@ -67,20 +67,20 @@ public class OperationsFactoryImpl extends EFactoryImpl implements OperationsFac
     {
       case OperationsPackage.INITIAL: return createInitial();
       case OperationsPackage.COMMAND: return createCommand();
-      case OperationsPackage.LIGHT_RGB_OPERATION: return createlightRGBOperation();
-      case OperationsPackage.BUZZER_OFF_OPERATION: return createbuzzerOffOperation();
-      case OperationsPackage.BUZZER_ON_OPERATION: return createbuzzerOnOperation();
-      case OperationsPackage.CALIBRATION_OPERATION: return createcalibrationOperation();
-      case OperationsPackage.CAMERA_COLOR_OPERATION: return createcameraColorOperation();
-      case OperationsPackage.READ_ALL_SERVOS_OPERATION: return createreadAllServosOperation();
-      case OperationsPackage.READ_SERVO_OPERATION: return createreadServoOperation();
-      case OperationsPackage.ROTATE_SERVO_OPERATION: return createrotateServoOperation();
-      case OperationsPackage.ROTATE_ALL_SERVOS_OPERATION: return createrotateAllServosOperation();
+      case OperationsPackage.LIGHT_RGB: return createlightRGB();
+      case OperationsPackage.BUZZER_OFF: return createbuzzerOff();
+      case OperationsPackage.BUZZER_ON: return createbuzzerOn();
+      case OperationsPackage.CALIBRATION: return createcalibration();
+      case OperationsPackage.CAMERA_COLOR: return createcameraColor();
+      case OperationsPackage.READ_ALL_SERVOS: return createreadAllServos();
+      case OperationsPackage.READ_SERVO: return createreadServo();
+      case OperationsPackage.ROTATE_SERVO: return createrotateServo();
+      case OperationsPackage.ROTATE_ALL_SERVOS: return createrotateAllServos();
       case OperationsPackage.RESULT: return createResult();
       case OperationsPackage.CONDITIONS: return createConditions();
       case OperationsPackage.SOLUTION: return createSolution();
-      case OperationsPackage.IS_AT_SINGLE_OPERATION: return createisAtSingleOperation();
-      case OperationsPackage.IS_AT_OPERATION: return createisAtOperation();
+      case OperationsPackage.IS_AT_SINGLE: return createisAtSingle();
+      case OperationsPackage.IS_AT: return createisAt();
       case OperationsPackage.ANGLE_RES: return createAngle_res();
       case OperationsPackage.ANGLE: return createAngle();
       case OperationsPackage.TIME: return createTime();
@@ -130,10 +130,10 @@ public class OperationsFactoryImpl extends EFactoryImpl implements OperationsFac
    * @generated
    */
   @Override
-  public lightRGBOperation createlightRGBOperation()
+  public lightRGB createlightRGB()
   {
-    lightRGBOperationImpl lightRGBOperation = new lightRGBOperationImpl();
-    return lightRGBOperation;
+    lightRGBImpl lightRGB = new lightRGBImpl();
+    return lightRGB;
   }
 
   /**
@@ -142,10 +142,10 @@ public class OperationsFactoryImpl extends EFactoryImpl implements OperationsFac
    * @generated
    */
   @Override
-  public buzzerOffOperation createbuzzerOffOperation()
+  public buzzerOff createbuzzerOff()
   {
-    buzzerOffOperationImpl buzzerOffOperation = new buzzerOffOperationImpl();
-    return buzzerOffOperation;
+    buzzerOffImpl buzzerOff = new buzzerOffImpl();
+    return buzzerOff;
   }
 
   /**
@@ -154,10 +154,10 @@ public class OperationsFactoryImpl extends EFactoryImpl implements OperationsFac
    * @generated
    */
   @Override
-  public buzzerOnOperation createbuzzerOnOperation()
+  public buzzerOn createbuzzerOn()
   {
-    buzzerOnOperationImpl buzzerOnOperation = new buzzerOnOperationImpl();
-    return buzzerOnOperation;
+    buzzerOnImpl buzzerOn = new buzzerOnImpl();
+    return buzzerOn;
   }
 
   /**
@@ -166,10 +166,10 @@ public class OperationsFactoryImpl extends EFactoryImpl implements OperationsFac
    * @generated
    */
   @Override
-  public calibrationOperation createcalibrationOperation()
+  public calibration createcalibration()
   {
-    calibrationOperationImpl calibrationOperation = new calibrationOperationImpl();
-    return calibrationOperation;
+    calibrationImpl calibration = new calibrationImpl();
+    return calibration;
   }
 
   /**
@@ -178,10 +178,10 @@ public class OperationsFactoryImpl extends EFactoryImpl implements OperationsFac
    * @generated
    */
   @Override
-  public cameraColorOperation createcameraColorOperation()
+  public cameraColor createcameraColor()
   {
-    cameraColorOperationImpl cameraColorOperation = new cameraColorOperationImpl();
-    return cameraColorOperation;
+    cameraColorImpl cameraColor = new cameraColorImpl();
+    return cameraColor;
   }
 
   /**
@@ -190,10 +190,10 @@ public class OperationsFactoryImpl extends EFactoryImpl implements OperationsFac
    * @generated
    */
   @Override
-  public readAllServosOperation createreadAllServosOperation()
+  public readAllServos createreadAllServos()
   {
-    readAllServosOperationImpl readAllServosOperation = new readAllServosOperationImpl();
-    return readAllServosOperation;
+    readAllServosImpl readAllServos = new readAllServosImpl();
+    return readAllServos;
   }
 
   /**
@@ -202,10 +202,10 @@ public class OperationsFactoryImpl extends EFactoryImpl implements OperationsFac
    * @generated
    */
   @Override
-  public readServoOperation createreadServoOperation()
+  public readServo createreadServo()
   {
-    readServoOperationImpl readServoOperation = new readServoOperationImpl();
-    return readServoOperation;
+    readServoImpl readServo = new readServoImpl();
+    return readServo;
   }
 
   /**
@@ -214,10 +214,10 @@ public class OperationsFactoryImpl extends EFactoryImpl implements OperationsFac
    * @generated
    */
   @Override
-  public rotateServoOperation createrotateServoOperation()
+  public rotateServo createrotateServo()
   {
-    rotateServoOperationImpl rotateServoOperation = new rotateServoOperationImpl();
-    return rotateServoOperation;
+    rotateServoImpl rotateServo = new rotateServoImpl();
+    return rotateServo;
   }
 
   /**
@@ -226,10 +226,10 @@ public class OperationsFactoryImpl extends EFactoryImpl implements OperationsFac
    * @generated
    */
   @Override
-  public rotateAllServosOperation createrotateAllServosOperation()
+  public rotateAllServos createrotateAllServos()
   {
-    rotateAllServosOperationImpl rotateAllServosOperation = new rotateAllServosOperationImpl();
-    return rotateAllServosOperation;
+    rotateAllServosImpl rotateAllServos = new rotateAllServosImpl();
+    return rotateAllServos;
   }
 
   /**
@@ -274,10 +274,10 @@ public class OperationsFactoryImpl extends EFactoryImpl implements OperationsFac
    * @generated
    */
   @Override
-  public isAtSingleOperation createisAtSingleOperation()
+  public isAtSingle createisAtSingle()
   {
-    isAtSingleOperationImpl isAtSingleOperation = new isAtSingleOperationImpl();
-    return isAtSingleOperation;
+    isAtSingleImpl isAtSingle = new isAtSingleImpl();
+    return isAtSingle;
   }
 
   /**
@@ -286,10 +286,10 @@ public class OperationsFactoryImpl extends EFactoryImpl implements OperationsFac
    * @generated
    */
   @Override
-  public isAtOperation createisAtOperation()
+  public isAt createisAt()
   {
-    isAtOperationImpl isAtOperation = new isAtOperationImpl();
-    return isAtOperation;
+    isAtImpl isAt = new isAtImpl();
+    return isAt;
   }
 
   /**

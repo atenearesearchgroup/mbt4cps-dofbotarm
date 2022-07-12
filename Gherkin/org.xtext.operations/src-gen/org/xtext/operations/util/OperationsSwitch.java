@@ -87,75 +87,75 @@ public class OperationsSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case OperationsPackage.LIGHT_RGB_OPERATION:
+      case OperationsPackage.LIGHT_RGB:
       {
-        lightRGBOperation lightRGBOperation = (lightRGBOperation)theEObject;
-        T result = caselightRGBOperation(lightRGBOperation);
-        if (result == null) result = caseCommand(lightRGBOperation);
+        lightRGB lightRGB = (lightRGB)theEObject;
+        T result = caselightRGB(lightRGB);
+        if (result == null) result = caseCommand(lightRGB);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case OperationsPackage.BUZZER_OFF_OPERATION:
+      case OperationsPackage.BUZZER_OFF:
       {
-        buzzerOffOperation buzzerOffOperation = (buzzerOffOperation)theEObject;
-        T result = casebuzzerOffOperation(buzzerOffOperation);
-        if (result == null) result = caseCommand(buzzerOffOperation);
+        buzzerOff buzzerOff = (buzzerOff)theEObject;
+        T result = casebuzzerOff(buzzerOff);
+        if (result == null) result = caseCommand(buzzerOff);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case OperationsPackage.BUZZER_ON_OPERATION:
+      case OperationsPackage.BUZZER_ON:
       {
-        buzzerOnOperation buzzerOnOperation = (buzzerOnOperation)theEObject;
-        T result = casebuzzerOnOperation(buzzerOnOperation);
-        if (result == null) result = caseCommand(buzzerOnOperation);
+        buzzerOn buzzerOn = (buzzerOn)theEObject;
+        T result = casebuzzerOn(buzzerOn);
+        if (result == null) result = caseCommand(buzzerOn);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case OperationsPackage.CALIBRATION_OPERATION:
+      case OperationsPackage.CALIBRATION:
       {
-        calibrationOperation calibrationOperation = (calibrationOperation)theEObject;
-        T result = casecalibrationOperation(calibrationOperation);
-        if (result == null) result = caseCommand(calibrationOperation);
+        calibration calibration = (calibration)theEObject;
+        T result = casecalibration(calibration);
+        if (result == null) result = caseCommand(calibration);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case OperationsPackage.CAMERA_COLOR_OPERATION:
+      case OperationsPackage.CAMERA_COLOR:
       {
-        cameraColorOperation cameraColorOperation = (cameraColorOperation)theEObject;
-        T result = casecameraColorOperation(cameraColorOperation);
-        if (result == null) result = caseCommand(cameraColorOperation);
+        cameraColor cameraColor = (cameraColor)theEObject;
+        T result = casecameraColor(cameraColor);
+        if (result == null) result = caseCommand(cameraColor);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case OperationsPackage.READ_ALL_SERVOS_OPERATION:
+      case OperationsPackage.READ_ALL_SERVOS:
       {
-        readAllServosOperation readAllServosOperation = (readAllServosOperation)theEObject;
-        T result = casereadAllServosOperation(readAllServosOperation);
-        if (result == null) result = caseCommand(readAllServosOperation);
+        readAllServos readAllServos = (readAllServos)theEObject;
+        T result = casereadAllServos(readAllServos);
+        if (result == null) result = caseCommand(readAllServos);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case OperationsPackage.READ_SERVO_OPERATION:
+      case OperationsPackage.READ_SERVO:
       {
-        readServoOperation readServoOperation = (readServoOperation)theEObject;
-        T result = casereadServoOperation(readServoOperation);
-        if (result == null) result = caseCommand(readServoOperation);
+        readServo readServo = (readServo)theEObject;
+        T result = casereadServo(readServo);
+        if (result == null) result = caseCommand(readServo);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case OperationsPackage.ROTATE_SERVO_OPERATION:
+      case OperationsPackage.ROTATE_SERVO:
       {
-        rotateServoOperation rotateServoOperation = (rotateServoOperation)theEObject;
-        T result = caserotateServoOperation(rotateServoOperation);
-        if (result == null) result = caseCommand(rotateServoOperation);
+        rotateServo rotateServo = (rotateServo)theEObject;
+        T result = caserotateServo(rotateServo);
+        if (result == null) result = caseCommand(rotateServo);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case OperationsPackage.ROTATE_ALL_SERVOS_OPERATION:
+      case OperationsPackage.ROTATE_ALL_SERVOS:
       {
-        rotateAllServosOperation rotateAllServosOperation = (rotateAllServosOperation)theEObject;
-        T result = caserotateAllServosOperation(rotateAllServosOperation);
-        if (result == null) result = caseCommand(rotateAllServosOperation);
+        rotateAllServos rotateAllServos = (rotateAllServos)theEObject;
+        T result = caserotateAllServos(rotateAllServos);
+        if (result == null) result = caseCommand(rotateAllServos);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -180,19 +180,19 @@ public class OperationsSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case OperationsPackage.IS_AT_SINGLE_OPERATION:
+      case OperationsPackage.IS_AT_SINGLE:
       {
-        isAtSingleOperation isAtSingleOperation = (isAtSingleOperation)theEObject;
-        T result = caseisAtSingleOperation(isAtSingleOperation);
-        if (result == null) result = caseSolution(isAtSingleOperation);
+        isAtSingle isAtSingle = (isAtSingle)theEObject;
+        T result = caseisAtSingle(isAtSingle);
+        if (result == null) result = caseSolution(isAtSingle);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case OperationsPackage.IS_AT_OPERATION:
+      case OperationsPackage.IS_AT:
       {
-        isAtOperation isAtOperation = (isAtOperation)theEObject;
-        T result = caseisAtOperation(isAtOperation);
-        if (result == null) result = caseSolution(isAtOperation);
+        isAt isAt = (isAt)theEObject;
+        T result = caseisAt(isAt);
+        if (result == null) result = caseSolution(isAt);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -331,145 +331,145 @@ public class OperationsSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>light RGB Operation</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>light RGB</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>light RGB Operation</em>'.
+   * @return the result of interpreting the object as an instance of '<em>light RGB</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caselightRGBOperation(lightRGBOperation object)
+  public T caselightRGB(lightRGB object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>buzzer Off Operation</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>buzzer Off</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>buzzer Off Operation</em>'.
+   * @return the result of interpreting the object as an instance of '<em>buzzer Off</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casebuzzerOffOperation(buzzerOffOperation object)
+  public T casebuzzerOff(buzzerOff object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>buzzer On Operation</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>buzzer On</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>buzzer On Operation</em>'.
+   * @return the result of interpreting the object as an instance of '<em>buzzer On</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casebuzzerOnOperation(buzzerOnOperation object)
+  public T casebuzzerOn(buzzerOn object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>calibration Operation</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>calibration</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>calibration Operation</em>'.
+   * @return the result of interpreting the object as an instance of '<em>calibration</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casecalibrationOperation(calibrationOperation object)
+  public T casecalibration(calibration object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>camera Color Operation</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>camera Color</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>camera Color Operation</em>'.
+   * @return the result of interpreting the object as an instance of '<em>camera Color</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casecameraColorOperation(cameraColorOperation object)
+  public T casecameraColor(cameraColor object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>read All Servos Operation</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>read All Servos</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>read All Servos Operation</em>'.
+   * @return the result of interpreting the object as an instance of '<em>read All Servos</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casereadAllServosOperation(readAllServosOperation object)
+  public T casereadAllServos(readAllServos object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>read Servo Operation</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>read Servo</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>read Servo Operation</em>'.
+   * @return the result of interpreting the object as an instance of '<em>read Servo</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casereadServoOperation(readServoOperation object)
+  public T casereadServo(readServo object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>rotate Servo Operation</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>rotate Servo</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>rotate Servo Operation</em>'.
+   * @return the result of interpreting the object as an instance of '<em>rotate Servo</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caserotateServoOperation(rotateServoOperation object)
+  public T caserotateServo(rotateServo object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>rotate All Servos Operation</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>rotate All Servos</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>rotate All Servos Operation</em>'.
+   * @return the result of interpreting the object as an instance of '<em>rotate All Servos</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caserotateAllServosOperation(rotateAllServosOperation object)
+  public T caserotateAllServos(rotateAllServos object)
   {
     return null;
   }
@@ -523,33 +523,33 @@ public class OperationsSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>is At Single Operation</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>is At Single</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>is At Single Operation</em>'.
+   * @return the result of interpreting the object as an instance of '<em>is At Single</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseisAtSingleOperation(isAtSingleOperation object)
+  public T caseisAtSingle(isAtSingle object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>is At Operation</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>is At</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>is At Operation</em>'.
+   * @return the result of interpreting the object as an instance of '<em>is At</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseisAtOperation(isAtOperation object)
+  public T caseisAt(isAt object)
   {
     return null;
   }
