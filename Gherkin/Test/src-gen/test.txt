@@ -14,9 +14,13 @@ Class: Machine
 				Activity: Arm.Camera.CameraOperations.cameraColorOperation(100);
 				Activity: Arm.Camera.CameraOperations.calibrationOperation(Rojo, 1, 1, 1, 1, 1, 1);
 				Activity: Board.Light.LightOperations.lightRGBOperation(1, 1, 1);
-				Activity: Arm.BaseServo.ServosOperations.rotateServoOperation(3, 3, 3);
+				Activity: Arm.MiddleServo.ServosOperations.rotateServoOperation(3, 3, 3);
 				Activity: Arm.ArmOperations.readAllServosOperation()
-				Activity: Arm.BaseServo.ServosOperations.readServoOperation(4);
+				Activity: Arm.BaseServo.ServosOperations.readServoOperation(1);
+				Activity: Arm.LowerServo.ServosOperations.readServoOperation(2);
+				Activity: Arm.MiddleServo.ServosOperations.readServoOperation(3);
+				Activity: Arm.UpperServo.ServosOperations.readServoOperation(4);
+				Activity: Arm.WristServo.ServosOperations.readServoOperation(5);
 				Activity: Arm.ArmOperations.rotateAllServosOperation(1, 1, 1, 1, 1, 1, 1);
 									
 		State: GivenWarning
@@ -31,11 +35,11 @@ Class: Machine
 		Transition: (Given->When)				
 				Guard: Arm.ArmOperations.isAtOperation(1, 1, 1, 1, 1, 1, 2);
 				
-		State:  When
-				Activity: Arm.BaseServo.ServosOperations.rotateServoOperation(1, 2, 3);
+		State: When
+				Activity: Arm.UpperServo.ServosOperations.rotateServoOperation(4, 2, 3);
 								
 		Transition: (When->Error)						
-				Guard: NotLaterThan(oRuntime, 1);
+				Guard: StateVar(oRunTime) >= (3+Sett(time_resolution);
 
 		Transition: (When->Final)		
-				Guard: Arm.BaseServo.ServosOperations.isAtSingleOperation(1, 1, 1);
+				Guard: Arm.BaseServo.ServosOperations.isAtSingle(1, 1, 2);

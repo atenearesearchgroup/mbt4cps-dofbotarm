@@ -68,14 +68,34 @@ class CPtesterGenerator extends AbstractGenerator {
 				State: «scenario.given.eClass.name»
 						Activity: Arm.ArmOperations.«FOR giv : scenario.given.initial»«giv.name»(«FOR tm : giv.time»«var value = tm as Time»«value.time»«{counterTime+=value.time; "" }»«ENDFOR»);«ENDFOR»
 						«FOR andG : scenario.andGiven»«FOR cmd : andG.command»
-						«IF cmd.eClass.name.equals('rotateServoOperation')»«var rot = cmd as rotateServoOperation»
-						Activity: Arm.BaseServo.ServosOperations.«cmd.eClass.name»(«FOR ser : rot.servo»«var value = ser as Servo»«value.servo»«ENDFOR», «FOR ang : rot.angle»«var value = ang as Angle»«value.angle»«ENDFOR», «FOR tmp : rot.time»«var value = tmp as Time»«value.time»«{counterTime+=value.time; "" }»«ENDFOR»);
+						«IF cmd.eClass.name.equals('rotateServoOperation')»«var rot = cmd as rotateServoOperation»«FOR ser : rot.servo»«var value = ser as Servo»						
+						«IF value.servo == 1»
+						Activity: Arm.BaseServo.ServosOperations.«cmd.eClass.name»(«value.servo», «FOR ang : rot.angle»«var valor = ang as Angle»«valor.angle»«ENDFOR», «FOR tmp : rot.time»«var valor = tmp as Time»«valor.time»«{counterTime+=valor.time; "" }»«ENDFOR»);
+						«ELSEIF value.servo == 2»
+						Activity: Arm.LowerServo.ServosOperations.«cmd.eClass.name»(«value.servo», «FOR ang : rot.angle»«var valor = ang as Angle»«valor.angle»«ENDFOR», «FOR tmp : rot.time»«var valor = tmp as Time»«valor.time»«{counterTime+=valor.time; "" }»«ENDFOR»);
+						«ELSEIF value.servo == 3»
+						Activity: Arm.MiddleServo.ServosOperations.«cmd.eClass.name»(«value.servo», «FOR ang : rot.angle»«var valor = ang as Angle»«valor.angle»«ENDFOR», «FOR tmp : rot.time»«var valor = tmp as Time»«valor.time»«{counterTime+=valor.time; "" }»«ENDFOR»);
+						«ELSEIF value.servo == 4»
+						Activity: Arm.UpperServo.ServosOperations.«cmd.eClass.name»(«value.servo», «FOR ang : rot.angle»«var valor = ang as Angle»«valor.angle»«ENDFOR», «FOR tmp : rot.time»«var valor = tmp as Time»«valor.time»«{counterTime+=valor.time; "" }»«ENDFOR»);
+						«ELSEIF value.servo == 5»
+						Activity: Arm.WristServo.ServosOperations.«cmd.eClass.name»(«value.servo», «FOR ang : rot.angle»«var valor = ang as Angle»«valor.angle»«ENDFOR», «FOR tmp : rot.time»«var valor = tmp as Time»«valor.time»«{counterTime+=valor.time; "" }»«ENDFOR»);
+						«ENDIF»«ENDFOR»
 						«ELSEIF cmd.eClass.name.equals('rotateAllServosOperation')»«var rot = cmd as rotateAllServosOperation»
 						Activity: Arm.ArmOperations.«cmd.eClass.name»(«FOR ang1 : rot.angle1»«var value = ang1 as Angle»«value.angle»«ENDFOR», «FOR ang2 : rot.angle2»«var value = ang2 as Angle»«value.angle»«ENDFOR», «FOR ang3 : rot.angle3»«var value = ang3 as Angle»«value.angle»«ENDFOR», «FOR ang4 : rot.angle4»«var value = ang4 as Angle»«value.angle»«ENDFOR», «FOR ang5 : rot.angle5»«var value = ang5 as Angle»«value.angle»«ENDFOR», «FOR ang6 : rot.angle6»«var value = ang6 as Angle»«value.angle»«ENDFOR», «FOR tmp : rot.time»«var value = tmp as Time»«value.time»«{counterTime+=value.time; "" }»«ENDFOR»);
 						«ELSEIF cmd.eClass.name.equals('readAllServosOperation')»«var ras = cmd as readAllServosOperation»
 						Activity: Arm.ArmOperations.«cmd.eClass.name»()
-						«ELSEIF cmd.eClass.name.equals('readServoOperation')»«var rs = cmd as readServoOperation»
-						Activity: Arm.BaseServo.ServosOperations.«cmd.eClass.name»(«FOR ser : rs.servo»«var value = ser as Servo»«value.servo»«ENDFOR»);
+						«ELSEIF cmd.eClass.name.equals('readServoOperation')»«var rs = cmd as readServoOperation»«FOR ser : rs.servo»«var value = ser as Servo»
+						«IF value.servo == 1»
+						Activity: Arm.BaseServo.ServosOperations.«cmd.eClass.name»(«value.servo»);
+						«ELSEIF value.servo == 2»
+						Activity: Arm.LowerServo.ServosOperations.«cmd.eClass.name»(«value.servo»);
+						«ELSEIF value.servo == 3»
+						Activity: Arm.MiddleServo.ServosOperations.«cmd.eClass.name»(«value.servo»);
+						«ELSEIF value.servo == 4»
+						Activity: Arm.UpperServo.ServosOperations.«cmd.eClass.name»(«value.servo»);
+						«ELSEIF value.servo == 5»
+						Activity: Arm.WristServo.ServosOperations.«cmd.eClass.name»(«value.servo»);
+						«ENDIF»«ENDFOR»
 						«ELSEIF cmd.eClass.name.equals('cameraColorOperation')»«var cc = cmd as cameraColorOperation»
 						Activity: Arm.Camera.CameraOperations.«cmd.eClass.name»(«FOR tm : cc.time»«var value = tm as Time»«value.time»«{counterTime+=value.time; "" }»«ENDFOR»);
 						«ELSEIF cmd.eClass.name.equals('calibrationOperation')»«var ccon = cmd as calibrationOperation»
@@ -105,21 +125,52 @@ class CPtesterGenerator extends AbstractGenerator {
 						«FOR cmd : andG.command»
 						«{counterLength++; "" }»
 						«IF counterLength == scenario.andGiven.length »
-						«IF cmd.name.equals('rotateServoOperation')»«var ias = cmd as rotateServoOperation»
-						Guard: Arm.BaseServo.ServosOperations.isAtSingle(«FOR ser : ias.servo»«var value = ser as Servo»«value.servo»«ENDFOR», «FOR ang : ias.angle»«var value = ang as Angle»«value.angle»«ENDFOR», 2);
+						«IF cmd.name.equals('rotateServoOperation')»«var ias = cmd as rotateServoOperation»«FOR ser : ias.servo»«var value = ser as Servo»
+						«IF value.servo == 1»
+						Guard: Arm.BaseServo.ServosOperations.isAtSingle(«value.servo», «FOR ang : ias.angle»«var valor = ang as Angle»«valor.angle»«ENDFOR», 2);
+						«ELSEIF value.servo == 2»
+						Guard: Arm.LowerServo.ServosOperations.isAtSingle(«value.servo», «FOR ang : ias.angle»«var valor = ang as Angle»«valor.angle»«ENDFOR», 2);
+						«ELSEIF value.servo == 3»
+						Guard: Arm.MiddelServo.ServosOperations.isAtSingle(«value.servo», «FOR ang : ias.angle»«var valor = ang as Angle»«valor.angle»«ENDFOR», 2);
+						«ELSEIF value.servo == 4»
+						Guard: Arm.UpperServo.ServosOperations.isAtSingle(«value.servo», «FOR ang : ias.angle»«var valor = ang as Angle»«valor.angle»«ENDFOR», 2);
+						«ELSEIF value.servo == 5»
+						Guard: Arm.WristServo.ServosOperations.isAtSingle(«value.servo», «FOR ang : ias.angle»«var valor = ang as Angle»«valor.angle»«ENDFOR», 2);
+						«ENDIF»«ENDFOR»
 						«ELSEIF cmd.name.equals('rotateAllServosOperation')»«var ia = cmd as rotateAllServosOperation»						
 						Guard: Arm.ArmOperations.isAtOperation(«FOR ang : ia.angle1»«var value = ang as Angle»«value.angle»«ENDFOR», «FOR ang : ia.angle2»«var value = ang as Angle»«value.angle»«ENDFOR», «FOR ang : ia.angle3»«var value = ang as Angle»«value.angle»«ENDFOR», «FOR ang : ia.angle4»«var value = ang as Angle»«value.angle»«ENDFOR», «FOR ang : ia.angle5»«var value = ang as Angle»«value.angle»«ENDFOR», «FOR ang : ia.angle6»«var value = ang as Angle»«value.angle»«ENDFOR», 2);
 						«ENDIF»«ENDIF»«ENDFOR»«ENDFOR»«ENDIF»
 						
 				State: «scenario.when.eClass.name»
-						«FOR cmd : scenario.when.command»«IF cmd.eClass.name.equals('rotateServoOperation')»«var rot = cmd as rotateServoOperation»
-						Activity: Arm.BaseServo.ServosOperations.«cmd.eClass.name»(«FOR ser : rot.servo»«var value = ser as Servo»«value.servo»«ENDFOR», «FOR ang : rot.angle»«var value = ang as Angle»«value.angle»«ENDFOR», «FOR tmp : rot.time»«var value = tmp as Time»«value.time»«ENDFOR»);
+						«FOR cmd : scenario.when.command»
+						«IF cmd.eClass.name.equals('rotateServoOperation')»«var rot = cmd as rotateServoOperation»«FOR ser : rot.servo»«var value = ser as Servo»						
+						«IF value.servo == 1»
+						Activity: Arm.BaseServo.ServosOperations.«cmd.eClass.name»(«value.servo», «FOR ang : rot.angle»«var valor = ang as Angle»«valor.angle»«ENDFOR», «FOR tmp : rot.time»«var valor = tmp as Time»«valor.time»«{counterTime+=valor.time; "" }»«ENDFOR»);
+						«ELSEIF value.servo == 2»
+						Activity: Arm.LowerServo.ServosOperations.«cmd.eClass.name»(«value.servo», «FOR ang : rot.angle»«var valor = ang as Angle»«valor.angle»«ENDFOR», «FOR tmp : rot.time»«var valor = tmp as Time»«valor.time»«{counterTime+=valor.time; "" }»«ENDFOR»);
+						«ELSEIF value.servo == 3»
+						Activity: Arm.MiddleServo.ServosOperations.«cmd.eClass.name»(«value.servo», «FOR ang : rot.angle»«var valor = ang as Angle»«valor.angle»«ENDFOR», «FOR tmp : rot.time»«var valor = tmp as Time»«valor.time»«{counterTime+=valor.time; "" }»«ENDFOR»);
+						«ELSEIF value.servo == 4»
+						Activity: Arm.UpperServo.ServosOperations.«cmd.eClass.name»(«value.servo», «FOR ang : rot.angle»«var valor = ang as Angle»«valor.angle»«ENDFOR», «FOR tmp : rot.time»«var valor = tmp as Time»«valor.time»«{counterTime+=valor.time; "" }»«ENDFOR»);
+						«ELSEIF value.servo == 5»
+						Activity: Arm.WristServo.ServosOperations.«cmd.eClass.name»(«value.servo», «FOR ang : rot.angle»«var valor = ang as Angle»«valor.angle»«ENDFOR», «FOR tmp : rot.time»«var valor = tmp as Time»«valor.time»«{counterTime+=valor.time; "" }»«ENDFOR»);
+						«ENDIF»«ENDFOR»
 						«ELSEIF cmd.eClass.name.equals('rotateAllServosOperation')»«var rot = cmd as rotateAllServosOperation»
 						Activity: Arm.ArmOperations.«cmd.eClass.name»(«FOR ang1 : rot.angle1»«var value = ang1 as Angle»«value.angle»«ENDFOR», «FOR ang2 : rot.angle2»«var value = ang2 as Angle»«value.angle»«ENDFOR», «FOR ang3 : rot.angle3»«var value = ang3 as Angle»«value.angle»«ENDFOR», «FOR ang4 : rot.angle4»«var value = ang4 as Angle»«value.angle»«ENDFOR», «FOR ang5 : rot.angle5»«var value = ang5 as Angle»«value.angle»«ENDFOR», «FOR ang6 : rot.angle6»«var value = ang6 as Angle»«value.angle»«ENDFOR», «FOR tmp : rot.time»«var value = tmp as Time»«value.time»«ENDFOR»);
 						«ELSEIF cmd.eClass.name.equals('readAllServosOperation')»«var ras = cmd as readAllServosOperation»
 						Activity: Arm.ArmOperations.«cmd.eClass.name»()
-						«ELSEIF cmd.eClass.name.equals('readServoOperation')»«var rs = cmd as readServoOperation»
-						Activity: Arm.BaseServo.ServosOperations.«cmd.eClass.name»(«FOR ser : rs.servo»«var value = ser as Servo»«value.servo»«ENDFOR»);
+						«ELSEIF cmd.eClass.name.equals('readServoOperation')»«var rs = cmd as readServoOperation»«FOR ser : rs.servo»«var value = ser as Servo»
+						«IF value.servo == 1»
+						Activity: Arm.BaseServo.ServosOperations.«cmd.eClass.name»(«value.servo»);
+						«ELSEIF value.servo == 2»
+						Activity: Arm.LowerServo.ServosOperations.«cmd.eClass.name»(«value.servo»);
+						«ELSEIF value.servo == 3»
+						Activity: Arm.MiddleServo.ServosOperations.«cmd.eClass.name»(«value.servo»);
+						«ELSEIF value.servo == 4»
+						Activity: Arm.UpperServo.ServosOperations.«cmd.eClass.name»(«value.servo»);
+						«ELSEIF value.servo == 5»
+						Activity: Arm.WristServo.ServosOperations.«cmd.eClass.name»(«value.servo»);
+						«ENDIF»«ENDFOR»						
 						«ELSEIF cmd.eClass.name.equals('cameraColorOperation')»«var cc = cmd as cameraColorOperation»
 						Activity: Arm.Camera.CameraOperations.«cmd.eClass.name»(«FOR tm : cc.time»«var value = tm as Time»«value.time»«{counterTime+=value.time; "" }»«ENDFOR»);
 						«ELSEIF cmd.eClass.name.equals('calibrationOperation')»«var ccon = cmd as calibrationOperation»
@@ -137,14 +188,24 @@ class CPtesterGenerator extends AbstractGenerator {
 						«IF value.time > maxTime»
 						«{maxTime = value.time; "" }»
 						«{condName = cond.name; "" }»
-						«ENDIF»«ENDFOR»«ENDFOR»«ENDFOR»						
-						Guard: «condName»(oRuntime, «maxTime»);
+						«ENDIF»«ENDFOR»«ENDFOR»«ENDFOR»
+						Guard: StateVar(oRunTime) >= («maxTime»+Sett(time_resolution);
 		
 				Transition: («scenario.when.eClass.name»->Final)		
 						«FOR and : scenario.and»
-						«FOR sol : and.solution»
-						«IF sol.eClass.name.equals('isAtSingleOperation')»«var ias = sol as isAtSingleOperation»
-						Guard: Arm.BaseServo.ServosOperations.«sol.eClass.name»(«FOR ser : ias.servo»«var value = ser as Servo»«value.servo»«ENDFOR», «FOR ang : ias.angle»«var value = ang as Angle»«value.angle»«ENDFOR», «FOR tmp : ias.angle_res»«var value = tmp as Angle_res»«value.angle_res»«ENDFOR»);
+						«FOR sol : and.solution»						
+						«IF sol.eClass.name.equals('isAtSingleOperation')»«var ias = sol as isAtSingleOperation»«FOR ser : ias.servo»«var value = ser as Servo»
+						«IF value.servo == 1»
+						Guard: Arm.BaseServo.ServosOperations.isAtSingle(«value.servo», «FOR ang : ias.angle»«var valor = ang as Angle»«valor.angle»«ENDFOR», 2);
+						«ELSEIF value.servo == 2»
+						Guard: Arm.LowerServo.ServosOperations.isAtSingle(«value.servo», «FOR ang : ias.angle»«var valor = ang as Angle»«valor.angle»«ENDFOR», 2);
+						«ELSEIF value.servo == 3»
+						Guard: Arm.MiddelServo.ServosOperations.isAtSingle(«value.servo», «FOR ang : ias.angle»«var valor = ang as Angle»«valor.angle»«ENDFOR», 2);
+						«ELSEIF value.servo == 4»
+						Guard: Arm.UpperServo.ServosOperations.isAtSingle(«value.servo», «FOR ang : ias.angle»«var valor = ang as Angle»«valor.angle»«ENDFOR», 2);
+						«ELSEIF value.servo == 5»
+						Guard: Arm.WristServo.ServosOperations.isAtSingle(«value.servo», «FOR ang : ias.angle»«var valor = ang as Angle»«valor.angle»«ENDFOR», 2);
+						«ENDIF»«ENDFOR»
 						«ELSEIF sol.eClass.name.equals('isAtOperation')»«var ia = sol as isAtOperation»
 						Guard: Arm.ArmOperations.«sol.eClass.name»(«FOR ang : ia.angle1»«var value = ang as Angle»«value.angle»«ENDFOR», «FOR ang : ia.angle2»«var value = ang as Angle»«value.angle»«ENDFOR», «FOR ang : ia.angle2»«var value = ang as Angle»«value.angle»«ENDFOR», «FOR ang : ia.angle4»«var value = ang as Angle»«value.angle»«ENDFOR», «FOR ang : ia.angle5»«var value = ang as Angle»«value.angle»«ENDFOR», «FOR ang : ia.angle6»«var value = ang as Angle»«value.angle»«ENDFOR», «FOR ang : ia.angle_res»«var value = ang as Angle_res»«value.angle_res»«ENDFOR»);
 						«ENDIF»

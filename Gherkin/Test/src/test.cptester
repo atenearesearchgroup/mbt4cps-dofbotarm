@@ -8,9 +8,13 @@ Scenario "TestingOperations"
 	AND lightRGBOperation(1,1,1)
 	AND rotateServoOperation(3,3,3)
 	AND readAllServosOperation() 
+	AND readServoOperation(1)
+	AND readServoOperation(2)
+	AND readServoOperation(3)
 	AND readServoOperation(4)
+	AND readServoOperation(5)
 	AND rotateAllServosOperation(1,1,1,1,1,1,1)
-	WHEN rotateServoOperation(1,2,3)
+	WHEN rotateServoOperation(4,2,3)
 	THEN result(1)
-	AND NotLaterThan(1) Query isAtSingleOperation(1,1,1)
-} 
+	AND NotLaterThan(3) Query isAtSingleOperation(1,1,1)
+}
