@@ -45,10 +45,9 @@ public class CPtesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//    '{'
 		//        given=Given
 		//        (andGiven+=AndWhen)*
-		//        //andGiven=AndGiven?
 		//        when=When
 		//        then=Then
-		//        (and+=And)+
+		//        (and+=And)+ //Cambiar a estrella
 		//    '}'
 		//;
 		@Override public ParserRule getRule() { return rule; }
@@ -57,10 +56,9 @@ public class CPtesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//'{'
 		//    given=Given
 		//    (andGiven+=AndWhen)*
-		//    //andGiven=AndGiven?
 		//    when=When
 		//    then=Then
-		//    (and+=And)+
+		//    (and+=And)+ //Cambiar a estrella
 		//'}'
 		public Group getGroup() { return cGroup; }
 		
@@ -88,7 +86,6 @@ public class CPtesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//AndWhen
 		public RuleCall getAndGivenAndWhenParserRuleCall_4_0() { return cAndGivenAndWhenParserRuleCall_4_0; }
 		
-		////andGiven=AndGiven?
 		//when=When
 		public Assignment getWhenAssignment_5() { return cWhenAssignment_5; }
 		
@@ -107,7 +104,8 @@ public class CPtesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//And
 		public RuleCall getAndAndParserRuleCall_7_0() { return cAndAndParserRuleCall_7_0; }
 		
-		//'}'
+		////Cambiar a estrella
+		//   '}'
 		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
 	}
 	public class GivenElements extends AbstractParserRuleElementFinder {
@@ -345,10 +343,9 @@ public class CPtesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	//    '{'
 	//        given=Given
 	//        (andGiven+=AndWhen)*
-	//        //andGiven=AndGiven?
 	//        when=When
 	//        then=Then
-	//        (and+=And)+
+	//        (and+=And)+ //Cambiar a estrella
 	//    '}'
 	//;
 	public ScenarioElements getScenarioAccess() {
@@ -426,7 +423,7 @@ public class CPtesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	}
 	
 	//Initial:
-	//    name='posInicial'
+	//    name='posInicialOperation'
 	//    '('
 	//    (time+=Time)
 	//    ')'
@@ -440,7 +437,7 @@ public class CPtesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	}
 	
 	//Command:
-	//    rotateServo | rotateAllServos
+	//    rotateServoOperation | rotateAllServosOperation | readServoOperation | readAllServosOperation | cameraColorOperation | calibrationOperation | buzzerOnOperation | buzzerOffOperation | lightRGBOperation
 	//;
 	public OperationsGrammarAccess.CommandElements getCommandAccess() {
 		return gaOperations.getCommandAccess();
@@ -450,8 +447,120 @@ public class CPtesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		return getCommandAccess().getRule();
 	}
 	
-	//rotateServo:
-	//    name='rotateServo'
+	//lightRGBOperation:
+	//    name='lightRGBOperation'
+	//    '('
+	//    (r+=R)
+	//    ','
+	//    (g+=G)
+	//    ','
+	//    (b+=B)
+	//    ')'
+	//;
+	public OperationsGrammarAccess.LightRGBOperationElements getLightRGBOperationAccess() {
+		return gaOperations.getLightRGBOperationAccess();
+	}
+	
+	public ParserRule getLightRGBOperationRule() {
+		return getLightRGBOperationAccess().getRule();
+	}
+	
+	//buzzerOffOperation:
+	//    name='buzzerOffOperation'
+	//    '('
+	//    ')'
+	//;
+	public OperationsGrammarAccess.BuzzerOffOperationElements getBuzzerOffOperationAccess() {
+		return gaOperations.getBuzzerOffOperationAccess();
+	}
+	
+	public ParserRule getBuzzerOffOperationRule() {
+		return getBuzzerOffOperationAccess().getRule();
+	}
+	
+	//buzzerOnOperation:
+	//    name='buzzerOnOperation'
+	//    '('
+	//    (time+=Time)
+	//    ')'
+	//;
+	public OperationsGrammarAccess.BuzzerOnOperationElements getBuzzerOnOperationAccess() {
+		return gaOperations.getBuzzerOnOperationAccess();
+	}
+	
+	public ParserRule getBuzzerOnOperationRule() {
+		return getBuzzerOnOperationAccess().getRule();
+	}
+	
+	//calibrationOperation:
+	//    name='calibrationOperation'
+	//    '('
+	//    (color+=Color)
+	//    ','
+	//    (h_min+=H_min)
+	//    ','
+	//    (s_min+=S_min)
+	//    ','
+	//    (v_min+=V_min)
+	//    ','
+	//    (h_max+=H_max)
+	//    ','
+	//    (s_max+=S_max)
+	//    ','
+	//    (v_max+=V_max)
+	//    ')'
+	//;
+	public OperationsGrammarAccess.CalibrationOperationElements getCalibrationOperationAccess() {
+		return gaOperations.getCalibrationOperationAccess();
+	}
+	
+	public ParserRule getCalibrationOperationRule() {
+		return getCalibrationOperationAccess().getRule();
+	}
+	
+	//cameraColorOperation:
+	//    name='cameraColorOperation'
+	//    '('
+	//    (time+=Time)
+	//    ')'
+	//;
+	public OperationsGrammarAccess.CameraColorOperationElements getCameraColorOperationAccess() {
+		return gaOperations.getCameraColorOperationAccess();
+	}
+	
+	public ParserRule getCameraColorOperationRule() {
+		return getCameraColorOperationAccess().getRule();
+	}
+	
+	//readAllServosOperation:
+	//    name='readAllServosOperation'
+	//    '('
+	//    ')'
+	//;
+	public OperationsGrammarAccess.ReadAllServosOperationElements getReadAllServosOperationAccess() {
+		return gaOperations.getReadAllServosOperationAccess();
+	}
+	
+	public ParserRule getReadAllServosOperationRule() {
+		return getReadAllServosOperationAccess().getRule();
+	}
+	
+	//readServoOperation:
+	//    name='readServoOperation'
+	//    '('
+	//    (servo+=Servo)
+	//    ')'
+	//;
+	public OperationsGrammarAccess.ReadServoOperationElements getReadServoOperationAccess() {
+		return gaOperations.getReadServoOperationAccess();
+	}
+	
+	public ParserRule getReadServoOperationRule() {
+		return getReadServoOperationAccess().getRule();
+	}
+	
+	//rotateServoOperation:
+	//    name='rotateServoOperation'
 	//    '('
 	//    (servo+=Servo)
 	//    ','
@@ -460,16 +569,16 @@ public class CPtesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	//    (time+=Time)
 	//    ')'
 	//;
-	public OperationsGrammarAccess.RotateServoElements getRotateServoAccess() {
-		return gaOperations.getRotateServoAccess();
+	public OperationsGrammarAccess.RotateServoOperationElements getRotateServoOperationAccess() {
+		return gaOperations.getRotateServoOperationAccess();
 	}
 	
-	public ParserRule getRotateServoRule() {
-		return getRotateServoAccess().getRule();
+	public ParserRule getRotateServoOperationRule() {
+		return getRotateServoOperationAccess().getRule();
 	}
 	
-	//rotateAllServos:
-	//    name='rotateAllServos'
+	//rotateAllServosOperation:
+	//    name='rotateAllServosOperation'
 	//    '('
 	//    (angle1+=Angle)
 	//    ','
@@ -486,12 +595,12 @@ public class CPtesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	//    (time+=Time)
 	//    ')'
 	//;
-	public OperationsGrammarAccess.RotateAllServosElements getRotateAllServosAccess() {
-		return gaOperations.getRotateAllServosAccess();
+	public OperationsGrammarAccess.RotateAllServosOperationElements getRotateAllServosOperationAccess() {
+		return gaOperations.getRotateAllServosOperationAccess();
 	}
 	
-	public ParserRule getRotateAllServosRule() {
-		return getRotateAllServosAccess().getRule();
+	public ParserRule getRotateAllServosOperationRule() {
+		return getRotateAllServosOperationAccess().getRule();
 	}
 	
 	//Result:
@@ -523,7 +632,7 @@ public class CPtesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	}
 	
 	//Solution:
-	//    isAtSingle | isAt
+	//    isAtSingleOperation | isAtOperation
 	//;
 	public OperationsGrammarAccess.SolutionElements getSolutionAccess() {
 		return gaOperations.getSolutionAccess();
@@ -533,8 +642,8 @@ public class CPtesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		return getSolutionAccess().getRule();
 	}
 	
-	//isAtSingle:
-	//    name='isAtSingle'
+	//isAtSingleOperation:
+	//    name='isAtSingleOperation'
 	//    '('
 	//    (servo+=Servo)
 	//    ','
@@ -543,16 +652,16 @@ public class CPtesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	//    (angle_res+=Angle_res)
 	//    ')'
 	//;
-	public OperationsGrammarAccess.IsAtSingleElements getIsAtSingleAccess() {
-		return gaOperations.getIsAtSingleAccess();
+	public OperationsGrammarAccess.IsAtSingleOperationElements getIsAtSingleOperationAccess() {
+		return gaOperations.getIsAtSingleOperationAccess();
 	}
 	
-	public ParserRule getIsAtSingleRule() {
-		return getIsAtSingleAccess().getRule();
+	public ParserRule getIsAtSingleOperationRule() {
+		return getIsAtSingleOperationAccess().getRule();
 	}
 	
-	//isAt:
-	//    name='isAt'
+	//isAtOperation:
+	//    name='isAtOperation'
 	//    '('
 	//    (angle1+=Angle)
 	//    ','
@@ -569,12 +678,12 @@ public class CPtesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	//    (angle_res+=Angle_res)
 	//    ')'
 	//;
-	public OperationsGrammarAccess.IsAtElements getIsAtAccess() {
-		return gaOperations.getIsAtAccess();
+	public OperationsGrammarAccess.IsAtOperationElements getIsAtOperationAccess() {
+		return gaOperations.getIsAtOperationAccess();
 	}
 	
-	public ParserRule getIsAtRule() {
-		return getIsAtAccess().getRule();
+	public ParserRule getIsAtOperationRule() {
+		return getIsAtOperationAccess().getRule();
 	}
 	
 	//Angle_res:
@@ -619,6 +728,116 @@ public class CPtesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	
 	public ParserRule getServoRule() {
 		return getServoAccess().getRule();
+	}
+	
+	//V_max:
+	//    v_max=INT
+	//;
+	public OperationsGrammarAccess.V_maxElements getV_maxAccess() {
+		return gaOperations.getV_maxAccess();
+	}
+	
+	public ParserRule getV_maxRule() {
+		return getV_maxAccess().getRule();
+	}
+	
+	//S_max:
+	//    s_max=INT
+	//;
+	public OperationsGrammarAccess.S_maxElements getS_maxAccess() {
+		return gaOperations.getS_maxAccess();
+	}
+	
+	public ParserRule getS_maxRule() {
+		return getS_maxAccess().getRule();
+	}
+	
+	//H_max:
+	//    h_max=INT
+	//;
+	public OperationsGrammarAccess.H_maxElements getH_maxAccess() {
+		return gaOperations.getH_maxAccess();
+	}
+	
+	public ParserRule getH_maxRule() {
+		return getH_maxAccess().getRule();
+	}
+	
+	//V_min:
+	//    v_min=INT
+	//;
+	public OperationsGrammarAccess.V_minElements getV_minAccess() {
+		return gaOperations.getV_minAccess();
+	}
+	
+	public ParserRule getV_minRule() {
+		return getV_minAccess().getRule();
+	}
+	
+	//S_min:
+	//    s_min=INT
+	//;
+	public OperationsGrammarAccess.S_minElements getS_minAccess() {
+		return gaOperations.getS_minAccess();
+	}
+	
+	public ParserRule getS_minRule() {
+		return getS_minAccess().getRule();
+	}
+	
+	//H_min:
+	//    h_min=INT
+	//;
+	public OperationsGrammarAccess.H_minElements getH_minAccess() {
+		return gaOperations.getH_minAccess();
+	}
+	
+	public ParserRule getH_minRule() {
+		return getH_minAccess().getRule();
+	}
+	
+	//Color:
+	//    color=STRING
+	//;
+	public OperationsGrammarAccess.ColorElements getColorAccess() {
+		return gaOperations.getColorAccess();
+	}
+	
+	public ParserRule getColorRule() {
+		return getColorAccess().getRule();
+	}
+	
+	//B:
+	//    b=INT
+	//;
+	public OperationsGrammarAccess.BElements getBAccess() {
+		return gaOperations.getBAccess();
+	}
+	
+	public ParserRule getBRule() {
+		return getBAccess().getRule();
+	}
+	
+	//G:
+	//    g=INT
+	//;
+	public OperationsGrammarAccess.GElements getGAccess() {
+		return gaOperations.getGAccess();
+	}
+	
+	public ParserRule getGRule() {
+		return getGAccess().getRule();
+	}
+	
+	//R:
+	//    r=INT
+	//;
+	public OperationsGrammarAccess.RElements getRAccess() {
+		return gaOperations.getRAccess();
+	}
+	
+	public ParserRule getRRule() {
+		return getRAccess().getRule();
 	}
 	
 	//terminal ID: '^'?('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;

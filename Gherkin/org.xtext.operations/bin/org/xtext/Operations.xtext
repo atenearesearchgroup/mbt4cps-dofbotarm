@@ -4,18 +4,82 @@ generate operations "http://www.xtext.org/Operations"
 
 
 Initial:
-	name='posInicial'
+	name='posInicialOperation'
 	'('
 	(time+=Time)
 	')'
 ;
 
 Command:
-	rotateServo | rotateAllServos
+	rotateServoOperation | rotateAllServosOperation | readServoOperation | readAllServosOperation | cameraColorOperation | calibrationOperation | buzzerOnOperation | buzzerOffOperation | lightRGBOperation
 ;
 
-rotateServo:
-	name='rotateServo'
+lightRGBOperation:
+	name='lightRGBOperation'
+	'('
+	(r+=R)
+	','
+	(g+=G)
+	','
+	(b+=B)
+	')'
+;
+
+
+buzzerOffOperation:
+	name='buzzerOffOperation'
+	'('
+	')'	
+;
+
+buzzerOnOperation:
+	name='buzzerOnOperation'
+	'('
+	(time+=Time)
+	')'
+;
+
+calibrationOperation:
+	name='calibrationOperation'
+	'('
+	(color+=Color)
+	','
+	(h_min+=H_min)
+	','
+	(s_min+=S_min)
+	','
+	(v_min+=V_min)
+	','
+	(h_max+=H_max)
+	','
+	(s_max+=S_max)
+	','
+	(v_max+=V_max)
+	')'
+;
+
+cameraColorOperation:
+	name='cameraColorOperation'
+	'('
+	(time+=Time)
+	')'
+;
+
+readAllServosOperation:
+	name='readAllServosOperation'
+	'('
+	')'
+;
+
+readServoOperation:
+	name='readServoOperation'
+	'('
+	(servo+=Servo)
+	')'
+;
+
+rotateServoOperation:
+	name='rotateServoOperation'
 	'('
 	(servo+=Servo)
 	','
@@ -25,8 +89,8 @@ rotateServo:
 	')'
 ;
 
-rotateAllServos:
-	name='rotateAllServos'
+rotateAllServosOperation:
+	name='rotateAllServosOperation'
 	'('
 	(angle1+=Angle)
 	','
@@ -60,11 +124,11 @@ Conditions:
 ;
 
 Solution:
-	isAtSingle | isAt
+	isAtSingleOperation | isAtOperation
 ;
 
-isAtSingle:
-	name='isAtSingle'
+isAtSingleOperation:
+	name='isAtSingleOperation'
 	'('
 	(servo+=Servo)
 	','
@@ -74,8 +138,8 @@ isAtSingle:
 	')'
 ;
 
-isAt:
-	name='isAt'
+isAtOperation:
+	name='isAtOperation'
 	'('
 	(angle1+=Angle)
 	','
@@ -109,4 +173,46 @@ Time:
 
 Servo:
 	servo=INT
+;
+
+
+V_max:
+	v_max=INT
+;
+
+S_max:
+	s_max=INT
+;
+
+H_max:
+	h_max=INT
+;
+
+V_min:
+	v_min=INT
+;
+
+S_min:
+	s_min=INT
+;
+
+H_min:
+	h_min=INT
+;
+
+Color:
+	color=STRING
+;
+
+
+B:
+	b=INT
+;
+
+G:
+	g=INT
+;
+
+R:
+	r=INT
 ;

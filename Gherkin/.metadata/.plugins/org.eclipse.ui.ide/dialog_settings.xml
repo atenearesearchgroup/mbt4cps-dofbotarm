@@ -12,6 +12,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="D:\eclipse-workspace"/>
 			<item value="C:\Users\Migue\Downloads\Xtext_Example-20220504T061743Z-001\Xtext_Example"/>
 		</list>
 	</section>

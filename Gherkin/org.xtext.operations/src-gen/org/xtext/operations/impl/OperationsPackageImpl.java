@@ -12,19 +12,33 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.xtext.operations.Angle;
 import org.xtext.operations.Angle_res;
+import org.xtext.operations.Color;
 import org.xtext.operations.Command;
 import org.xtext.operations.Conditions;
+import org.xtext.operations.H_max;
+import org.xtext.operations.H_min;
 import org.xtext.operations.Initial;
 import org.xtext.operations.OperationsFactory;
 import org.xtext.operations.OperationsPackage;
 import org.xtext.operations.Result;
+import org.xtext.operations.S_max;
+import org.xtext.operations.S_min;
 import org.xtext.operations.Servo;
 import org.xtext.operations.Solution;
 import org.xtext.operations.Time;
-import org.xtext.operations.isAt;
-import org.xtext.operations.isAtSingle;
-import org.xtext.operations.rotateAllServos;
-import org.xtext.operations.rotateServo;
+import org.xtext.operations.V_max;
+import org.xtext.operations.V_min;
+import org.xtext.operations.buzzerOffOperation;
+import org.xtext.operations.buzzerOnOperation;
+import org.xtext.operations.calibrationOperation;
+import org.xtext.operations.cameraColorOperation;
+import org.xtext.operations.isAtOperation;
+import org.xtext.operations.isAtSingleOperation;
+import org.xtext.operations.lightRGBOperation;
+import org.xtext.operations.readAllServosOperation;
+import org.xtext.operations.readServoOperation;
+import org.xtext.operations.rotateAllServosOperation;
+import org.xtext.operations.rotateServoOperation;
 
 /**
  * <!-- begin-user-doc -->
@@ -53,14 +67,63 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass rotateServoEClass = null;
+  private EClass lightRGBOperationEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass rotateAllServosEClass = null;
+  private EClass buzzerOffOperationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass buzzerOnOperationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass calibrationOperationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass cameraColorOperationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass readAllServosOperationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass readServoOperationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass rotateServoOperationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass rotateAllServosOperationEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -88,14 +151,14 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass isAtSingleEClass = null;
+  private EClass isAtSingleOperationEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass isAtEClass = null;
+  private EClass isAtOperationEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -124,6 +187,76 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
    * @generated
    */
   private EClass servoEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass v_maxEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass s_maxEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass h_maxEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass v_minEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass s_minEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass h_minEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass colorEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass bEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass gEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass rEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -249,9 +382,9 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
    * @generated
    */
   @Override
-  public EReference getCommand_Time()
+  public EClass getlightRGBOperation()
   {
-    return (EReference)commandEClass.getEStructuralFeatures().get(1);
+    return lightRGBOperationEClass;
   }
 
   /**
@@ -260,9 +393,9 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
    * @generated
    */
   @Override
-  public EClass getrotateServo()
+  public EReference getlightRGBOperation_R()
   {
-    return rotateServoEClass;
+    return (EReference)lightRGBOperationEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -271,9 +404,9 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
    * @generated
    */
   @Override
-  public EReference getrotateServo_Servo()
+  public EReference getlightRGBOperation_G()
   {
-    return (EReference)rotateServoEClass.getEStructuralFeatures().get(0);
+    return (EReference)lightRGBOperationEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -282,9 +415,9 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
    * @generated
    */
   @Override
-  public EReference getrotateServo_Angle()
+  public EReference getlightRGBOperation_B()
   {
-    return (EReference)rotateServoEClass.getEStructuralFeatures().get(1);
+    return (EReference)lightRGBOperationEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -293,9 +426,9 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
    * @generated
    */
   @Override
-  public EClass getrotateAllServos()
+  public EClass getbuzzerOffOperation()
   {
-    return rotateAllServosEClass;
+    return buzzerOffOperationEClass;
   }
 
   /**
@@ -304,9 +437,9 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
    * @generated
    */
   @Override
-  public EReference getrotateAllServos_Angle1()
+  public EClass getbuzzerOnOperation()
   {
-    return (EReference)rotateAllServosEClass.getEStructuralFeatures().get(0);
+    return buzzerOnOperationEClass;
   }
 
   /**
@@ -315,9 +448,9 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
    * @generated
    */
   @Override
-  public EReference getrotateAllServos_Angle2()
+  public EReference getbuzzerOnOperation_Time()
   {
-    return (EReference)rotateAllServosEClass.getEStructuralFeatures().get(1);
+    return (EReference)buzzerOnOperationEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -326,9 +459,9 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
    * @generated
    */
   @Override
-  public EReference getrotateAllServos_Angle3()
+  public EClass getcalibrationOperation()
   {
-    return (EReference)rotateAllServosEClass.getEStructuralFeatures().get(2);
+    return calibrationOperationEClass;
   }
 
   /**
@@ -337,9 +470,9 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
    * @generated
    */
   @Override
-  public EReference getrotateAllServos_Angle4()
+  public EReference getcalibrationOperation_Color()
   {
-    return (EReference)rotateAllServosEClass.getEStructuralFeatures().get(3);
+    return (EReference)calibrationOperationEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -348,9 +481,9 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
    * @generated
    */
   @Override
-  public EReference getrotateAllServos_Angle5()
+  public EReference getcalibrationOperation_H_min()
   {
-    return (EReference)rotateAllServosEClass.getEStructuralFeatures().get(4);
+    return (EReference)calibrationOperationEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -359,9 +492,240 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
    * @generated
    */
   @Override
-  public EReference getrotateAllServos_Angle6()
+  public EReference getcalibrationOperation_S_min()
   {
-    return (EReference)rotateAllServosEClass.getEStructuralFeatures().get(5);
+    return (EReference)calibrationOperationEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getcalibrationOperation_V_min()
+  {
+    return (EReference)calibrationOperationEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getcalibrationOperation_H_max()
+  {
+    return (EReference)calibrationOperationEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getcalibrationOperation_S_max()
+  {
+    return (EReference)calibrationOperationEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getcalibrationOperation_V_max()
+  {
+    return (EReference)calibrationOperationEClass.getEStructuralFeatures().get(6);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getcameraColorOperation()
+  {
+    return cameraColorOperationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getcameraColorOperation_Time()
+  {
+    return (EReference)cameraColorOperationEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getreadAllServosOperation()
+  {
+    return readAllServosOperationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getreadServoOperation()
+  {
+    return readServoOperationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getreadServoOperation_Servo()
+  {
+    return (EReference)readServoOperationEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getrotateServoOperation()
+  {
+    return rotateServoOperationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getrotateServoOperation_Servo()
+  {
+    return (EReference)rotateServoOperationEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getrotateServoOperation_Angle()
+  {
+    return (EReference)rotateServoOperationEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getrotateServoOperation_Time()
+  {
+    return (EReference)rotateServoOperationEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getrotateAllServosOperation()
+  {
+    return rotateAllServosOperationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getrotateAllServosOperation_Angle1()
+  {
+    return (EReference)rotateAllServosOperationEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getrotateAllServosOperation_Angle2()
+  {
+    return (EReference)rotateAllServosOperationEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getrotateAllServosOperation_Angle3()
+  {
+    return (EReference)rotateAllServosOperationEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getrotateAllServosOperation_Angle4()
+  {
+    return (EReference)rotateAllServosOperationEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getrotateAllServosOperation_Angle5()
+  {
+    return (EReference)rotateAllServosOperationEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getrotateAllServosOperation_Angle6()
+  {
+    return (EReference)rotateAllServosOperationEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getrotateAllServosOperation_Time()
+  {
+    return (EReference)rotateAllServosOperationEClass.getEStructuralFeatures().get(6);
   }
 
   /**
@@ -469,9 +833,9 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
    * @generated
    */
   @Override
-  public EClass getisAtSingle()
+  public EClass getisAtSingleOperation()
   {
-    return isAtSingleEClass;
+    return isAtSingleOperationEClass;
   }
 
   /**
@@ -480,9 +844,9 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
    * @generated
    */
   @Override
-  public EReference getisAtSingle_Servo()
+  public EReference getisAtSingleOperation_Servo()
   {
-    return (EReference)isAtSingleEClass.getEStructuralFeatures().get(0);
+    return (EReference)isAtSingleOperationEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -491,9 +855,9 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
    * @generated
    */
   @Override
-  public EReference getisAtSingle_Angle()
+  public EReference getisAtSingleOperation_Angle()
   {
-    return (EReference)isAtSingleEClass.getEStructuralFeatures().get(1);
+    return (EReference)isAtSingleOperationEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -502,9 +866,9 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
    * @generated
    */
   @Override
-  public EClass getisAt()
+  public EClass getisAtOperation()
   {
-    return isAtEClass;
+    return isAtOperationEClass;
   }
 
   /**
@@ -513,9 +877,9 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
    * @generated
    */
   @Override
-  public EReference getisAt_Angle1()
+  public EReference getisAtOperation_Angle1()
   {
-    return (EReference)isAtEClass.getEStructuralFeatures().get(0);
+    return (EReference)isAtOperationEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -524,9 +888,9 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
    * @generated
    */
   @Override
-  public EReference getisAt_Angle2()
+  public EReference getisAtOperation_Angle2()
   {
-    return (EReference)isAtEClass.getEStructuralFeatures().get(1);
+    return (EReference)isAtOperationEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -535,9 +899,9 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
    * @generated
    */
   @Override
-  public EReference getisAt_Angle3()
+  public EReference getisAtOperation_Angle3()
   {
-    return (EReference)isAtEClass.getEStructuralFeatures().get(2);
+    return (EReference)isAtOperationEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -546,9 +910,9 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
    * @generated
    */
   @Override
-  public EReference getisAt_Angle4()
+  public EReference getisAtOperation_Angle4()
   {
-    return (EReference)isAtEClass.getEStructuralFeatures().get(3);
+    return (EReference)isAtOperationEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -557,9 +921,9 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
    * @generated
    */
   @Override
-  public EReference getisAt_Angle5()
+  public EReference getisAtOperation_Angle5()
   {
-    return (EReference)isAtEClass.getEStructuralFeatures().get(4);
+    return (EReference)isAtOperationEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -568,9 +932,9 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
    * @generated
    */
   @Override
-  public EReference getisAt_Angle6()
+  public EReference getisAtOperation_Angle6()
   {
-    return (EReference)isAtEClass.getEStructuralFeatures().get(5);
+    return (EReference)isAtOperationEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -667,6 +1031,226 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
    * @generated
    */
   @Override
+  public EClass getV_max()
+  {
+    return v_maxEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getV_max_V_max()
+  {
+    return (EAttribute)v_maxEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getS_max()
+  {
+    return s_maxEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getS_max_S_max()
+  {
+    return (EAttribute)s_maxEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getH_max()
+  {
+    return h_maxEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getH_max_H_max()
+  {
+    return (EAttribute)h_maxEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getV_min()
+  {
+    return v_minEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getV_min_V_min()
+  {
+    return (EAttribute)v_minEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getS_min()
+  {
+    return s_minEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getS_min_S_min()
+  {
+    return (EAttribute)s_minEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getH_min()
+  {
+    return h_minEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getH_min_H_min()
+  {
+    return (EAttribute)h_minEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getColor()
+  {
+    return colorEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getColor_Color()
+  {
+    return (EAttribute)colorEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getB()
+  {
+    return bEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getB_B()
+  {
+    return (EAttribute)bEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getG()
+  {
+    return gEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getG_G()
+  {
+    return (EAttribute)gEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getR()
+  {
+    return rEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getR_R()
+  {
+    return (EAttribute)rEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public OperationsFactory getOperationsFactory()
   {
     return (OperationsFactory)getEFactoryInstance();
@@ -698,19 +1282,47 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
 
     commandEClass = createEClass(COMMAND);
     createEAttribute(commandEClass, COMMAND__NAME);
-    createEReference(commandEClass, COMMAND__TIME);
 
-    rotateServoEClass = createEClass(ROTATE_SERVO);
-    createEReference(rotateServoEClass, ROTATE_SERVO__SERVO);
-    createEReference(rotateServoEClass, ROTATE_SERVO__ANGLE);
+    lightRGBOperationEClass = createEClass(LIGHT_RGB_OPERATION);
+    createEReference(lightRGBOperationEClass, LIGHT_RGB_OPERATION__R);
+    createEReference(lightRGBOperationEClass, LIGHT_RGB_OPERATION__G);
+    createEReference(lightRGBOperationEClass, LIGHT_RGB_OPERATION__B);
 
-    rotateAllServosEClass = createEClass(ROTATE_ALL_SERVOS);
-    createEReference(rotateAllServosEClass, ROTATE_ALL_SERVOS__ANGLE1);
-    createEReference(rotateAllServosEClass, ROTATE_ALL_SERVOS__ANGLE2);
-    createEReference(rotateAllServosEClass, ROTATE_ALL_SERVOS__ANGLE3);
-    createEReference(rotateAllServosEClass, ROTATE_ALL_SERVOS__ANGLE4);
-    createEReference(rotateAllServosEClass, ROTATE_ALL_SERVOS__ANGLE5);
-    createEReference(rotateAllServosEClass, ROTATE_ALL_SERVOS__ANGLE6);
+    buzzerOffOperationEClass = createEClass(BUZZER_OFF_OPERATION);
+
+    buzzerOnOperationEClass = createEClass(BUZZER_ON_OPERATION);
+    createEReference(buzzerOnOperationEClass, BUZZER_ON_OPERATION__TIME);
+
+    calibrationOperationEClass = createEClass(CALIBRATION_OPERATION);
+    createEReference(calibrationOperationEClass, CALIBRATION_OPERATION__COLOR);
+    createEReference(calibrationOperationEClass, CALIBRATION_OPERATION__HMIN);
+    createEReference(calibrationOperationEClass, CALIBRATION_OPERATION__SMIN);
+    createEReference(calibrationOperationEClass, CALIBRATION_OPERATION__VMIN);
+    createEReference(calibrationOperationEClass, CALIBRATION_OPERATION__HMAX);
+    createEReference(calibrationOperationEClass, CALIBRATION_OPERATION__SMAX);
+    createEReference(calibrationOperationEClass, CALIBRATION_OPERATION__VMAX);
+
+    cameraColorOperationEClass = createEClass(CAMERA_COLOR_OPERATION);
+    createEReference(cameraColorOperationEClass, CAMERA_COLOR_OPERATION__TIME);
+
+    readAllServosOperationEClass = createEClass(READ_ALL_SERVOS_OPERATION);
+
+    readServoOperationEClass = createEClass(READ_SERVO_OPERATION);
+    createEReference(readServoOperationEClass, READ_SERVO_OPERATION__SERVO);
+
+    rotateServoOperationEClass = createEClass(ROTATE_SERVO_OPERATION);
+    createEReference(rotateServoOperationEClass, ROTATE_SERVO_OPERATION__SERVO);
+    createEReference(rotateServoOperationEClass, ROTATE_SERVO_OPERATION__ANGLE);
+    createEReference(rotateServoOperationEClass, ROTATE_SERVO_OPERATION__TIME);
+
+    rotateAllServosOperationEClass = createEClass(ROTATE_ALL_SERVOS_OPERATION);
+    createEReference(rotateAllServosOperationEClass, ROTATE_ALL_SERVOS_OPERATION__ANGLE1);
+    createEReference(rotateAllServosOperationEClass, ROTATE_ALL_SERVOS_OPERATION__ANGLE2);
+    createEReference(rotateAllServosOperationEClass, ROTATE_ALL_SERVOS_OPERATION__ANGLE3);
+    createEReference(rotateAllServosOperationEClass, ROTATE_ALL_SERVOS_OPERATION__ANGLE4);
+    createEReference(rotateAllServosOperationEClass, ROTATE_ALL_SERVOS_OPERATION__ANGLE5);
+    createEReference(rotateAllServosOperationEClass, ROTATE_ALL_SERVOS_OPERATION__ANGLE6);
+    createEReference(rotateAllServosOperationEClass, ROTATE_ALL_SERVOS_OPERATION__TIME);
 
     resultEClass = createEClass(RESULT);
     createEAttribute(resultEClass, RESULT__NAME);
@@ -724,17 +1336,17 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
     createEAttribute(solutionEClass, SOLUTION__NAME);
     createEReference(solutionEClass, SOLUTION__ANGLE_RES);
 
-    isAtSingleEClass = createEClass(IS_AT_SINGLE);
-    createEReference(isAtSingleEClass, IS_AT_SINGLE__SERVO);
-    createEReference(isAtSingleEClass, IS_AT_SINGLE__ANGLE);
+    isAtSingleOperationEClass = createEClass(IS_AT_SINGLE_OPERATION);
+    createEReference(isAtSingleOperationEClass, IS_AT_SINGLE_OPERATION__SERVO);
+    createEReference(isAtSingleOperationEClass, IS_AT_SINGLE_OPERATION__ANGLE);
 
-    isAtEClass = createEClass(IS_AT);
-    createEReference(isAtEClass, IS_AT__ANGLE1);
-    createEReference(isAtEClass, IS_AT__ANGLE2);
-    createEReference(isAtEClass, IS_AT__ANGLE3);
-    createEReference(isAtEClass, IS_AT__ANGLE4);
-    createEReference(isAtEClass, IS_AT__ANGLE5);
-    createEReference(isAtEClass, IS_AT__ANGLE6);
+    isAtOperationEClass = createEClass(IS_AT_OPERATION);
+    createEReference(isAtOperationEClass, IS_AT_OPERATION__ANGLE1);
+    createEReference(isAtOperationEClass, IS_AT_OPERATION__ANGLE2);
+    createEReference(isAtOperationEClass, IS_AT_OPERATION__ANGLE3);
+    createEReference(isAtOperationEClass, IS_AT_OPERATION__ANGLE4);
+    createEReference(isAtOperationEClass, IS_AT_OPERATION__ANGLE5);
+    createEReference(isAtOperationEClass, IS_AT_OPERATION__ANGLE6);
 
     angle_resEClass = createEClass(ANGLE_RES);
     createEAttribute(angle_resEClass, ANGLE_RES__ANGLE_RES);
@@ -747,6 +1359,36 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
 
     servoEClass = createEClass(SERVO);
     createEAttribute(servoEClass, SERVO__SERVO);
+
+    v_maxEClass = createEClass(VMAX);
+    createEAttribute(v_maxEClass, VMAX__VMAX);
+
+    s_maxEClass = createEClass(SMAX);
+    createEAttribute(s_maxEClass, SMAX__SMAX);
+
+    h_maxEClass = createEClass(HMAX);
+    createEAttribute(h_maxEClass, HMAX__HMAX);
+
+    v_minEClass = createEClass(VMIN);
+    createEAttribute(v_minEClass, VMIN__VMIN);
+
+    s_minEClass = createEClass(SMIN);
+    createEAttribute(s_minEClass, SMIN__SMIN);
+
+    h_minEClass = createEClass(HMIN);
+    createEAttribute(h_minEClass, HMIN__HMIN);
+
+    colorEClass = createEClass(COLOR);
+    createEAttribute(colorEClass, COLOR__COLOR);
+
+    bEClass = createEClass(B);
+    createEAttribute(bEClass, B__B);
+
+    gEClass = createEClass(G);
+    createEAttribute(gEClass, G__G);
+
+    rEClass = createEClass(R);
+    createEAttribute(rEClass, R__R);
   }
 
   /**
@@ -778,10 +1420,17 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
     // Set bounds for type parameters
 
     // Add supertypes to classes
-    rotateServoEClass.getESuperTypes().add(this.getCommand());
-    rotateAllServosEClass.getESuperTypes().add(this.getCommand());
-    isAtSingleEClass.getESuperTypes().add(this.getSolution());
-    isAtEClass.getESuperTypes().add(this.getSolution());
+    lightRGBOperationEClass.getESuperTypes().add(this.getCommand());
+    buzzerOffOperationEClass.getESuperTypes().add(this.getCommand());
+    buzzerOnOperationEClass.getESuperTypes().add(this.getCommand());
+    calibrationOperationEClass.getESuperTypes().add(this.getCommand());
+    cameraColorOperationEClass.getESuperTypes().add(this.getCommand());
+    readAllServosOperationEClass.getESuperTypes().add(this.getCommand());
+    readServoOperationEClass.getESuperTypes().add(this.getCommand());
+    rotateServoOperationEClass.getESuperTypes().add(this.getCommand());
+    rotateAllServosOperationEClass.getESuperTypes().add(this.getCommand());
+    isAtSingleOperationEClass.getESuperTypes().add(this.getSolution());
+    isAtOperationEClass.getESuperTypes().add(this.getSolution());
 
     // Initialize classes and features; add operations and parameters
     initEClass(initialEClass, Initial.class, "Initial", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -790,19 +1439,47 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
 
     initEClass(commandEClass, Command.class, "Command", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getCommand_Name(), ecorePackage.getEString(), "name", null, 0, 1, Command.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getCommand_Time(), this.getTime(), null, "time", null, 0, -1, Command.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(rotateServoEClass, rotateServo.class, "rotateServo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getrotateServo_Servo(), this.getServo(), null, "servo", null, 0, -1, rotateServo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getrotateServo_Angle(), this.getAngle(), null, "angle", null, 0, -1, rotateServo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(lightRGBOperationEClass, lightRGBOperation.class, "lightRGBOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getlightRGBOperation_R(), this.getR(), null, "r", null, 0, -1, lightRGBOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getlightRGBOperation_G(), this.getG(), null, "g", null, 0, -1, lightRGBOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getlightRGBOperation_B(), this.getB(), null, "b", null, 0, -1, lightRGBOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(rotateAllServosEClass, rotateAllServos.class, "rotateAllServos", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getrotateAllServos_Angle1(), this.getAngle(), null, "angle1", null, 0, -1, rotateAllServos.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getrotateAllServos_Angle2(), this.getAngle(), null, "angle2", null, 0, -1, rotateAllServos.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getrotateAllServos_Angle3(), this.getAngle(), null, "angle3", null, 0, -1, rotateAllServos.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getrotateAllServos_Angle4(), this.getAngle(), null, "angle4", null, 0, -1, rotateAllServos.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getrotateAllServos_Angle5(), this.getAngle(), null, "angle5", null, 0, -1, rotateAllServos.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getrotateAllServos_Angle6(), this.getAngle(), null, "angle6", null, 0, -1, rotateAllServos.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(buzzerOffOperationEClass, buzzerOffOperation.class, "buzzerOffOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(buzzerOnOperationEClass, buzzerOnOperation.class, "buzzerOnOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getbuzzerOnOperation_Time(), this.getTime(), null, "time", null, 0, -1, buzzerOnOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(calibrationOperationEClass, calibrationOperation.class, "calibrationOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getcalibrationOperation_Color(), this.getColor(), null, "color", null, 0, -1, calibrationOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getcalibrationOperation_H_min(), this.getH_min(), null, "h_min", null, 0, -1, calibrationOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getcalibrationOperation_S_min(), this.getS_min(), null, "s_min", null, 0, -1, calibrationOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getcalibrationOperation_V_min(), this.getV_min(), null, "v_min", null, 0, -1, calibrationOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getcalibrationOperation_H_max(), this.getH_max(), null, "h_max", null, 0, -1, calibrationOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getcalibrationOperation_S_max(), this.getS_max(), null, "s_max", null, 0, -1, calibrationOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getcalibrationOperation_V_max(), this.getV_max(), null, "v_max", null, 0, -1, calibrationOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(cameraColorOperationEClass, cameraColorOperation.class, "cameraColorOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getcameraColorOperation_Time(), this.getTime(), null, "time", null, 0, -1, cameraColorOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(readAllServosOperationEClass, readAllServosOperation.class, "readAllServosOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(readServoOperationEClass, readServoOperation.class, "readServoOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getreadServoOperation_Servo(), this.getServo(), null, "servo", null, 0, -1, readServoOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(rotateServoOperationEClass, rotateServoOperation.class, "rotateServoOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getrotateServoOperation_Servo(), this.getServo(), null, "servo", null, 0, -1, rotateServoOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getrotateServoOperation_Angle(), this.getAngle(), null, "angle", null, 0, -1, rotateServoOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getrotateServoOperation_Time(), this.getTime(), null, "time", null, 0, -1, rotateServoOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(rotateAllServosOperationEClass, rotateAllServosOperation.class, "rotateAllServosOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getrotateAllServosOperation_Angle1(), this.getAngle(), null, "angle1", null, 0, -1, rotateAllServosOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getrotateAllServosOperation_Angle2(), this.getAngle(), null, "angle2", null, 0, -1, rotateAllServosOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getrotateAllServosOperation_Angle3(), this.getAngle(), null, "angle3", null, 0, -1, rotateAllServosOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getrotateAllServosOperation_Angle4(), this.getAngle(), null, "angle4", null, 0, -1, rotateAllServosOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getrotateAllServosOperation_Angle5(), this.getAngle(), null, "angle5", null, 0, -1, rotateAllServosOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getrotateAllServosOperation_Angle6(), this.getAngle(), null, "angle6", null, 0, -1, rotateAllServosOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getrotateAllServosOperation_Time(), this.getTime(), null, "time", null, 0, -1, rotateAllServosOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(resultEClass, Result.class, "Result", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getResult_Name(), ecorePackage.getEString(), "name", null, 0, 1, Result.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -816,17 +1493,17 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
     initEAttribute(getSolution_Name(), ecorePackage.getEString(), "name", null, 0, 1, Solution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getSolution_Angle_res(), this.getAngle_res(), null, "angle_res", null, 0, -1, Solution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(isAtSingleEClass, isAtSingle.class, "isAtSingle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getisAtSingle_Servo(), this.getServo(), null, "servo", null, 0, -1, isAtSingle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getisAtSingle_Angle(), this.getAngle(), null, "angle", null, 0, -1, isAtSingle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(isAtSingleOperationEClass, isAtSingleOperation.class, "isAtSingleOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getisAtSingleOperation_Servo(), this.getServo(), null, "servo", null, 0, -1, isAtSingleOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getisAtSingleOperation_Angle(), this.getAngle(), null, "angle", null, 0, -1, isAtSingleOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(isAtEClass, isAt.class, "isAt", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getisAt_Angle1(), this.getAngle(), null, "angle1", null, 0, -1, isAt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getisAt_Angle2(), this.getAngle(), null, "angle2", null, 0, -1, isAt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getisAt_Angle3(), this.getAngle(), null, "angle3", null, 0, -1, isAt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getisAt_Angle4(), this.getAngle(), null, "angle4", null, 0, -1, isAt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getisAt_Angle5(), this.getAngle(), null, "angle5", null, 0, -1, isAt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getisAt_Angle6(), this.getAngle(), null, "angle6", null, 0, -1, isAt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(isAtOperationEClass, isAtOperation.class, "isAtOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getisAtOperation_Angle1(), this.getAngle(), null, "angle1", null, 0, -1, isAtOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getisAtOperation_Angle2(), this.getAngle(), null, "angle2", null, 0, -1, isAtOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getisAtOperation_Angle3(), this.getAngle(), null, "angle3", null, 0, -1, isAtOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getisAtOperation_Angle4(), this.getAngle(), null, "angle4", null, 0, -1, isAtOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getisAtOperation_Angle5(), this.getAngle(), null, "angle5", null, 0, -1, isAtOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getisAtOperation_Angle6(), this.getAngle(), null, "angle6", null, 0, -1, isAtOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(angle_resEClass, Angle_res.class, "Angle_res", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getAngle_res_Angle_res(), ecorePackage.getEInt(), "angle_res", null, 0, 1, Angle_res.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -839,6 +1516,36 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
 
     initEClass(servoEClass, Servo.class, "Servo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getServo_Servo(), ecorePackage.getEInt(), "servo", null, 0, 1, Servo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(v_maxEClass, V_max.class, "V_max", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getV_max_V_max(), ecorePackage.getEInt(), "v_max", null, 0, 1, V_max.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(s_maxEClass, S_max.class, "S_max", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getS_max_S_max(), ecorePackage.getEInt(), "s_max", null, 0, 1, S_max.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(h_maxEClass, H_max.class, "H_max", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getH_max_H_max(), ecorePackage.getEInt(), "h_max", null, 0, 1, H_max.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(v_minEClass, V_min.class, "V_min", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getV_min_V_min(), ecorePackage.getEInt(), "v_min", null, 0, 1, V_min.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(s_minEClass, S_min.class, "S_min", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getS_min_S_min(), ecorePackage.getEInt(), "s_min", null, 0, 1, S_min.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(h_minEClass, H_min.class, "H_min", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getH_min_H_min(), ecorePackage.getEInt(), "h_min", null, 0, 1, H_min.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(colorEClass, Color.class, "Color", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getColor_Color(), ecorePackage.getEString(), "color", null, 0, 1, Color.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(bEClass, org.xtext.operations.B.class, "B", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getB_B(), ecorePackage.getEInt(), "b", null, 0, 1, org.xtext.operations.B.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(gEClass, org.xtext.operations.G.class, "G", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getG_G(), ecorePackage.getEInt(), "g", null, 0, 1, org.xtext.operations.G.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(rEClass, org.xtext.operations.R.class, "R", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getR_R(), ecorePackage.getEInt(), "r", null, 0, 1, org.xtext.operations.R.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

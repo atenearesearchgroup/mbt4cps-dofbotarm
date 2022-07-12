@@ -1,4 +1,3 @@
-
 Class: Machine
 	StateMachine: TestingOperations
 		PseudoState: Initial
@@ -9,29 +8,34 @@ Class: Machine
 				Guard: []
 		
 		State: Given
-				Activity: Arm.BaseServo.ServosOperations.posInicial(1000)
-				Activity: Arm.BaseServo.ServosOperations.rotateAllServos(45, 45, 45, 45, 45, 45, 1000)
-				Activity: Arm.BaseServo.ServosOperations.rotateServo(1, 45, 2000)
-				Activity: Arm.BaseServo.ServosOperations.rotateServo(2, 90, 2000)
-				Activity: Arm.BaseServo.ServosOperations.rotateAllServos(20, 20, 20, 20, 20, 20, 1000)
-					
+				Activity: Arm.ArmOperations.posInicialOperation(1000);
+				Activity: Board.Buzzer.BuzzerOperations.buzzerOnOperation(10);
+				Activity: Board.Buzzer.BuzzerOperations.buzzerOffOperation();
+				Activity: Arm.Camera.CameraOperations.cameraColorOperation(100);
+				Activity: Arm.Camera.CameraOperations.calibrationOperation(Rojo, 1, 1, 1, 1, 1, 1);
+				Activity: Board.Light.LightOperations.lightRGBOperation(1, 1, 1);
+				Activity: Arm.BaseServo.ServosOperations.rotateServoOperation(3, 3, 3);
+				Activity: Arm.ArmOperations.readAllServosOperation()
+				Activity: Arm.BaseServo.ServosOperations.readServoOperation(4);
+				Activity: Arm.ArmOperations.rotateAllServosOperation(1, 1, 1, 1, 1, 1, 1);
+									
 		State: GivenWarning
-				Activity: MessReport(mWarning, "Warning Time")
+				Activity: MessReport(mWarning, "Warning Time");
 		
 		Transition: (GivenWarning->Given)
 				Guard: []			
 					
 		Transition: (Given->GivenWarning)
-				Guard: Arm.BaseServo.ServosOperations.Time(7000)
+				Guard: Arm.ArmOperations.waitOperation(1114);
 					
 		Transition: (Given->When)				
-				Guard: Arm.BaseServo.ServosOperations.isAt(20, 20, 20, 20, 20, 20, 2)
+				Guard: Arm.ArmOperations.isAtOperation(1, 1, 1, 1, 1, 1, 2);
 				
 		State:  When
-				Activity: Arm.BaseServo.ServosOperations.rotateServo(1, 45, 2000)
+				Activity: Arm.BaseServo.ServosOperations.rotateServoOperation(1, 2, 3);
 								
-		Transition: (When->Error)
-				Guard: NotLaterThan(oRunTime, 3000)
-				
+		Transition: (When->Error)						
+				Guard: NotLaterThan(oRuntime, 1);
+
 		Transition: (When->Final)		
-				Guard: Arm.BaseServo.ServosOperations.isAtSingle(1, 60, 2)
+				Guard: Arm.BaseServo.ServosOperations.isAtSingleOperation(1, 1, 1);

@@ -7,10 +7,9 @@ Scenario:
 	'{'
 		given=Given
 		(andGiven+=AndWhen)*
-		//andGiven=AndGiven?
 		when=When
 		then=Then
-		(and+=And)+
+		(and+=And)+ //Cambiar a estrella
 	'}'
 ;
 

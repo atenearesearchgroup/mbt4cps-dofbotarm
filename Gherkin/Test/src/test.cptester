@@ -1,12 +1,16 @@
 Scenario "TestingOperations"
 {
-	GIVEN posInicial(1000)
-	AND rotateAllServos(45,45,45,45,45,45,1000)
-	AND rotateServo(1,45,2000)
-	AND rotateServo(2,90,2000)
-	AND rotateAllServos(20,20,20,20,20,20,1000)
- 	WHEN rotateServo(1,45,2000)
-	THEN result(1000)
-	AND NotLaterThan(2000) Query isAtSingle(1,45,2)
-	AND NotLaterThan(3000) Query isAtSingle(1,60,2)
-}    
+	GIVEN posInicialOperation(1000)
+	AND buzzerOnOperation(10)
+	AND buzzerOffOperation()
+	AND cameraColorOperation(100)
+	AND calibrationOperation("Rojo",1,1,1,1,1,1)
+	AND lightRGBOperation(1,1,1)
+	AND rotateServoOperation(3,3,3)
+	AND readAllServosOperation() 
+	AND readServoOperation(4)
+	AND rotateAllServosOperation(1,1,1,1,1,1,1)
+	WHEN rotateServoOperation(1,2,3)
+	THEN result(1)
+	AND NotLaterThan(1) Query isAtSingleOperation(1,1,1)
+} 

@@ -16,16 +16,33 @@ import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequence
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 import org.xtext.operations.Angle;
 import org.xtext.operations.Angle_res;
+import org.xtext.operations.B;
+import org.xtext.operations.Color;
 import org.xtext.operations.Conditions;
+import org.xtext.operations.G;
+import org.xtext.operations.H_max;
+import org.xtext.operations.H_min;
 import org.xtext.operations.Initial;
 import org.xtext.operations.OperationsPackage;
+import org.xtext.operations.R;
 import org.xtext.operations.Result;
+import org.xtext.operations.S_max;
+import org.xtext.operations.S_min;
 import org.xtext.operations.Servo;
 import org.xtext.operations.Time;
-import org.xtext.operations.isAt;
-import org.xtext.operations.isAtSingle;
-import org.xtext.operations.rotateAllServos;
-import org.xtext.operations.rotateServo;
+import org.xtext.operations.V_max;
+import org.xtext.operations.V_min;
+import org.xtext.operations.buzzerOffOperation;
+import org.xtext.operations.buzzerOnOperation;
+import org.xtext.operations.calibrationOperation;
+import org.xtext.operations.cameraColorOperation;
+import org.xtext.operations.isAtOperation;
+import org.xtext.operations.isAtSingleOperation;
+import org.xtext.operations.lightRGBOperation;
+import org.xtext.operations.readAllServosOperation;
+import org.xtext.operations.readServoOperation;
+import org.xtext.operations.rotateAllServosOperation;
+import org.xtext.operations.rotateServoOperation;
 import org.xtext.services.OperationsGrammarAccess;
 
 @SuppressWarnings("all")
@@ -48,14 +65,38 @@ public class OperationsSemanticSequencer extends AbstractDelegatingSemanticSeque
 			case OperationsPackage.ANGLE_RES:
 				sequence_Angle_res(context, (Angle_res) semanticObject); 
 				return; 
+			case OperationsPackage.B:
+				sequence_B(context, (B) semanticObject); 
+				return; 
+			case OperationsPackage.COLOR:
+				sequence_Color(context, (Color) semanticObject); 
+				return; 
 			case OperationsPackage.CONDITIONS:
 				sequence_Conditions(context, (Conditions) semanticObject); 
+				return; 
+			case OperationsPackage.G:
+				sequence_G(context, (G) semanticObject); 
+				return; 
+			case OperationsPackage.HMAX:
+				sequence_H_max(context, (H_max) semanticObject); 
+				return; 
+			case OperationsPackage.HMIN:
+				sequence_H_min(context, (H_min) semanticObject); 
 				return; 
 			case OperationsPackage.INITIAL:
 				sequence_Initial(context, (Initial) semanticObject); 
 				return; 
+			case OperationsPackage.R:
+				sequence_R(context, (R) semanticObject); 
+				return; 
 			case OperationsPackage.RESULT:
 				sequence_Result(context, (Result) semanticObject); 
+				return; 
+			case OperationsPackage.SMAX:
+				sequence_S_max(context, (S_max) semanticObject); 
+				return; 
+			case OperationsPackage.SMIN:
+				sequence_S_min(context, (S_min) semanticObject); 
 				return; 
 			case OperationsPackage.SERVO:
 				sequence_Servo(context, (Servo) semanticObject); 
@@ -63,17 +104,44 @@ public class OperationsSemanticSequencer extends AbstractDelegatingSemanticSeque
 			case OperationsPackage.TIME:
 				sequence_Time(context, (Time) semanticObject); 
 				return; 
-			case OperationsPackage.IS_AT:
-				sequence_isAt(context, (isAt) semanticObject); 
+			case OperationsPackage.VMAX:
+				sequence_V_max(context, (V_max) semanticObject); 
 				return; 
-			case OperationsPackage.IS_AT_SINGLE:
-				sequence_isAtSingle(context, (isAtSingle) semanticObject); 
+			case OperationsPackage.VMIN:
+				sequence_V_min(context, (V_min) semanticObject); 
 				return; 
-			case OperationsPackage.ROTATE_ALL_SERVOS:
-				sequence_rotateAllServos(context, (rotateAllServos) semanticObject); 
+			case OperationsPackage.BUZZER_OFF_OPERATION:
+				sequence_buzzerOffOperation(context, (buzzerOffOperation) semanticObject); 
 				return; 
-			case OperationsPackage.ROTATE_SERVO:
-				sequence_rotateServo(context, (rotateServo) semanticObject); 
+			case OperationsPackage.BUZZER_ON_OPERATION:
+				sequence_buzzerOnOperation(context, (buzzerOnOperation) semanticObject); 
+				return; 
+			case OperationsPackage.CALIBRATION_OPERATION:
+				sequence_calibrationOperation(context, (calibrationOperation) semanticObject); 
+				return; 
+			case OperationsPackage.CAMERA_COLOR_OPERATION:
+				sequence_cameraColorOperation(context, (cameraColorOperation) semanticObject); 
+				return; 
+			case OperationsPackage.IS_AT_OPERATION:
+				sequence_isAtOperation(context, (isAtOperation) semanticObject); 
+				return; 
+			case OperationsPackage.IS_AT_SINGLE_OPERATION:
+				sequence_isAtSingleOperation(context, (isAtSingleOperation) semanticObject); 
+				return; 
+			case OperationsPackage.LIGHT_RGB_OPERATION:
+				sequence_lightRGBOperation(context, (lightRGBOperation) semanticObject); 
+				return; 
+			case OperationsPackage.READ_ALL_SERVOS_OPERATION:
+				sequence_readAllServosOperation(context, (readAllServosOperation) semanticObject); 
+				return; 
+			case OperationsPackage.READ_SERVO_OPERATION:
+				sequence_readServoOperation(context, (readServoOperation) semanticObject); 
+				return; 
+			case OperationsPackage.ROTATE_ALL_SERVOS_OPERATION:
+				sequence_rotateAllServosOperation(context, (rotateAllServosOperation) semanticObject); 
+				return; 
+			case OperationsPackage.ROTATE_SERVO_OPERATION:
+				sequence_rotateServoOperation(context, (rotateServoOperation) semanticObject); 
 				return; 
 			}
 		if (errorAcceptor != null)
@@ -123,6 +191,46 @@ public class OperationsSemanticSequencer extends AbstractDelegatingSemanticSeque
 	/**
 	 * <pre>
 	 * Contexts:
+	 *     B returns B
+	 *
+	 * Constraint:
+	 *     b=INT
+	 * </pre>
+	 */
+	protected void sequence_B(ISerializationContext context, B semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.B__B) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.B__B));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getBAccess().getBINTTerminalRuleCall_0(), semanticObject.getB());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Color returns Color
+	 *
+	 * Constraint:
+	 *     color=STRING
+	 * </pre>
+	 */
+	protected void sequence_Color(ISerializationContext context, Color semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.COLOR__COLOR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.COLOR__COLOR));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getColorAccess().getColorSTRINGTerminalRuleCall_0(), semanticObject.getColor());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
 	 *     Conditions returns Conditions
 	 *
 	 * Constraint:
@@ -137,14 +245,94 @@ public class OperationsSemanticSequencer extends AbstractDelegatingSemanticSeque
 	/**
 	 * <pre>
 	 * Contexts:
+	 *     G returns G
+	 *
+	 * Constraint:
+	 *     g=INT
+	 * </pre>
+	 */
+	protected void sequence_G(ISerializationContext context, G semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.G__G) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.G__G));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getGAccess().getGINTTerminalRuleCall_0(), semanticObject.getG());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     H_max returns H_max
+	 *
+	 * Constraint:
+	 *     h_max=INT
+	 * </pre>
+	 */
+	protected void sequence_H_max(ISerializationContext context, H_max semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.HMAX__HMAX) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.HMAX__HMAX));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getH_maxAccess().getH_maxINTTerminalRuleCall_0(), semanticObject.getH_max());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     H_min returns H_min
+	 *
+	 * Constraint:
+	 *     h_min=INT
+	 * </pre>
+	 */
+	protected void sequence_H_min(ISerializationContext context, H_min semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.HMIN__HMIN) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.HMIN__HMIN));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getH_minAccess().getH_minINTTerminalRuleCall_0(), semanticObject.getH_min());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
 	 *     Initial returns Initial
 	 *
 	 * Constraint:
-	 *     (name='posInicial' time+=Time)
+	 *     (name='posInicialOperation' time+=Time)
 	 * </pre>
 	 */
 	protected void sequence_Initial(ISerializationContext context, Initial semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     R returns R
+	 *
+	 * Constraint:
+	 *     r=INT
+	 * </pre>
+	 */
+	protected void sequence_R(ISerializationContext context, R semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.R__R) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.R__R));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getRAccess().getRINTTerminalRuleCall_0(), semanticObject.getR());
+		feeder.finish();
 	}
 	
 	
@@ -159,6 +347,46 @@ public class OperationsSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 */
 	protected void sequence_Result(ISerializationContext context, Result semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     S_max returns S_max
+	 *
+	 * Constraint:
+	 *     s_max=INT
+	 * </pre>
+	 */
+	protected void sequence_S_max(ISerializationContext context, S_max semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.SMAX__SMAX) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.SMAX__SMAX));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getS_maxAccess().getS_maxINTTerminalRuleCall_0(), semanticObject.getS_max());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     S_min returns S_min
+	 *
+	 * Constraint:
+	 *     s_min=INT
+	 * </pre>
+	 */
+	protected void sequence_S_min(ISerializationContext context, S_min semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.SMIN__SMIN) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.SMIN__SMIN));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getS_minAccess().getS_minINTTerminalRuleCall_0(), semanticObject.getS_min());
+		feeder.finish();
 	}
 	
 	
@@ -205,14 +433,75 @@ public class OperationsSemanticSequencer extends AbstractDelegatingSemanticSeque
 	/**
 	 * <pre>
 	 * Contexts:
-	 *     Solution returns isAtSingle
-	 *     isAtSingle returns isAtSingle
+	 *     V_max returns V_max
 	 *
 	 * Constraint:
-	 *     (name='isAtSingle' servo+=Servo angle+=Angle angle_res+=Angle_res)
+	 *     v_max=INT
 	 * </pre>
 	 */
-	protected void sequence_isAtSingle(ISerializationContext context, isAtSingle semanticObject) {
+	protected void sequence_V_max(ISerializationContext context, V_max semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.VMAX__VMAX) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.VMAX__VMAX));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getV_maxAccess().getV_maxINTTerminalRuleCall_0(), semanticObject.getV_max());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     V_min returns V_min
+	 *
+	 * Constraint:
+	 *     v_min=INT
+	 * </pre>
+	 */
+	protected void sequence_V_min(ISerializationContext context, V_min semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.VMIN__VMIN) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.VMIN__VMIN));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getV_minAccess().getV_minINTTerminalRuleCall_0(), semanticObject.getV_min());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Command returns buzzerOffOperation
+	 *     buzzerOffOperation returns buzzerOffOperation
+	 *
+	 * Constraint:
+	 *     name='buzzerOffOperation'
+	 * </pre>
+	 */
+	protected void sequence_buzzerOffOperation(ISerializationContext context, buzzerOffOperation semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.COMMAND__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.COMMAND__NAME));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getBuzzerOffOperationAccess().getNameBuzzerOffOperationKeyword_0_0(), semanticObject.getName());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Command returns buzzerOnOperation
+	 *     buzzerOnOperation returns buzzerOnOperation
+	 *
+	 * Constraint:
+	 *     (name='buzzerOnOperation' time+=Time)
+	 * </pre>
+	 */
+	protected void sequence_buzzerOnOperation(ISerializationContext context, buzzerOnOperation semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -220,12 +509,51 @@ public class OperationsSemanticSequencer extends AbstractDelegatingSemanticSeque
 	/**
 	 * <pre>
 	 * Contexts:
-	 *     Solution returns isAt
-	 *     isAt returns isAt
+	 *     Command returns calibrationOperation
+	 *     calibrationOperation returns calibrationOperation
 	 *
 	 * Constraint:
 	 *     (
-	 *         name='isAt' 
+	 *         name='calibrationOperation' 
+	 *         color+=Color 
+	 *         h_min+=H_min 
+	 *         s_min+=S_min 
+	 *         v_min+=V_min 
+	 *         h_max+=H_max 
+	 *         s_max+=S_max 
+	 *         v_max+=V_max
+	 *     )
+	 * </pre>
+	 */
+	protected void sequence_calibrationOperation(ISerializationContext context, calibrationOperation semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Command returns cameraColorOperation
+	 *     cameraColorOperation returns cameraColorOperation
+	 *
+	 * Constraint:
+	 *     (name='cameraColorOperation' time+=Time)
+	 * </pre>
+	 */
+	protected void sequence_cameraColorOperation(ISerializationContext context, cameraColorOperation semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Solution returns isAtOperation
+	 *     isAtOperation returns isAtOperation
+	 *
+	 * Constraint:
+	 *     (
+	 *         name='isAtOperation' 
 	 *         angle1+=Angle 
 	 *         angle2+=Angle 
 	 *         angle3+=Angle 
@@ -236,7 +564,7 @@ public class OperationsSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     )
 	 * </pre>
 	 */
-	protected void sequence_isAt(ISerializationContext context, isAt semanticObject) {
+	protected void sequence_isAtOperation(ISerializationContext context, isAtOperation semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -244,12 +572,78 @@ public class OperationsSemanticSequencer extends AbstractDelegatingSemanticSeque
 	/**
 	 * <pre>
 	 * Contexts:
-	 *     Command returns rotateAllServos
-	 *     rotateAllServos returns rotateAllServos
+	 *     Solution returns isAtSingleOperation
+	 *     isAtSingleOperation returns isAtSingleOperation
+	 *
+	 * Constraint:
+	 *     (name='isAtSingleOperation' servo+=Servo angle+=Angle angle_res+=Angle_res)
+	 * </pre>
+	 */
+	protected void sequence_isAtSingleOperation(ISerializationContext context, isAtSingleOperation semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Command returns lightRGBOperation
+	 *     lightRGBOperation returns lightRGBOperation
+	 *
+	 * Constraint:
+	 *     (name='lightRGBOperation' r+=R g+=G b+=B)
+	 * </pre>
+	 */
+	protected void sequence_lightRGBOperation(ISerializationContext context, lightRGBOperation semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Command returns readAllServosOperation
+	 *     readAllServosOperation returns readAllServosOperation
+	 *
+	 * Constraint:
+	 *     name='readAllServosOperation'
+	 * </pre>
+	 */
+	protected void sequence_readAllServosOperation(ISerializationContext context, readAllServosOperation semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, OperationsPackage.Literals.COMMAND__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OperationsPackage.Literals.COMMAND__NAME));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getReadAllServosOperationAccess().getNameReadAllServosOperationKeyword_0_0(), semanticObject.getName());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Command returns readServoOperation
+	 *     readServoOperation returns readServoOperation
+	 *
+	 * Constraint:
+	 *     (name='readServoOperation' servo+=Servo)
+	 * </pre>
+	 */
+	protected void sequence_readServoOperation(ISerializationContext context, readServoOperation semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Command returns rotateAllServosOperation
+	 *     rotateAllServosOperation returns rotateAllServosOperation
 	 *
 	 * Constraint:
 	 *     (
-	 *         name='rotateAllServos' 
+	 *         name='rotateAllServosOperation' 
 	 *         angle1+=Angle 
 	 *         angle2+=Angle 
 	 *         angle3+=Angle 
@@ -260,7 +654,7 @@ public class OperationsSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     )
 	 * </pre>
 	 */
-	protected void sequence_rotateAllServos(ISerializationContext context, rotateAllServos semanticObject) {
+	protected void sequence_rotateAllServosOperation(ISerializationContext context, rotateAllServosOperation semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -268,14 +662,14 @@ public class OperationsSemanticSequencer extends AbstractDelegatingSemanticSeque
 	/**
 	 * <pre>
 	 * Contexts:
-	 *     Command returns rotateServo
-	 *     rotateServo returns rotateServo
+	 *     Command returns rotateServoOperation
+	 *     rotateServoOperation returns rotateServoOperation
 	 *
 	 * Constraint:
-	 *     (name='rotateServo' servo+=Servo angle+=Angle time+=Time)
+	 *     (name='rotateServoOperation' servo+=Servo angle+=Angle time+=Time)
 	 * </pre>
 	 */
-	protected void sequence_rotateServo(ISerializationContext context, rotateServo semanticObject) {
+	protected void sequence_rotateServoOperation(ISerializationContext context, rotateServoOperation semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

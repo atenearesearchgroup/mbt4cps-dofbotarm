@@ -67,17 +67,34 @@ public class OperationsFactoryImpl extends EFactoryImpl implements OperationsFac
     {
       case OperationsPackage.INITIAL: return createInitial();
       case OperationsPackage.COMMAND: return createCommand();
-      case OperationsPackage.ROTATE_SERVO: return createrotateServo();
-      case OperationsPackage.ROTATE_ALL_SERVOS: return createrotateAllServos();
+      case OperationsPackage.LIGHT_RGB_OPERATION: return createlightRGBOperation();
+      case OperationsPackage.BUZZER_OFF_OPERATION: return createbuzzerOffOperation();
+      case OperationsPackage.BUZZER_ON_OPERATION: return createbuzzerOnOperation();
+      case OperationsPackage.CALIBRATION_OPERATION: return createcalibrationOperation();
+      case OperationsPackage.CAMERA_COLOR_OPERATION: return createcameraColorOperation();
+      case OperationsPackage.READ_ALL_SERVOS_OPERATION: return createreadAllServosOperation();
+      case OperationsPackage.READ_SERVO_OPERATION: return createreadServoOperation();
+      case OperationsPackage.ROTATE_SERVO_OPERATION: return createrotateServoOperation();
+      case OperationsPackage.ROTATE_ALL_SERVOS_OPERATION: return createrotateAllServosOperation();
       case OperationsPackage.RESULT: return createResult();
       case OperationsPackage.CONDITIONS: return createConditions();
       case OperationsPackage.SOLUTION: return createSolution();
-      case OperationsPackage.IS_AT_SINGLE: return createisAtSingle();
-      case OperationsPackage.IS_AT: return createisAt();
+      case OperationsPackage.IS_AT_SINGLE_OPERATION: return createisAtSingleOperation();
+      case OperationsPackage.IS_AT_OPERATION: return createisAtOperation();
       case OperationsPackage.ANGLE_RES: return createAngle_res();
       case OperationsPackage.ANGLE: return createAngle();
       case OperationsPackage.TIME: return createTime();
       case OperationsPackage.SERVO: return createServo();
+      case OperationsPackage.VMAX: return createV_max();
+      case OperationsPackage.SMAX: return createS_max();
+      case OperationsPackage.HMAX: return createH_max();
+      case OperationsPackage.VMIN: return createV_min();
+      case OperationsPackage.SMIN: return createS_min();
+      case OperationsPackage.HMIN: return createH_min();
+      case OperationsPackage.COLOR: return createColor();
+      case OperationsPackage.B: return createB();
+      case OperationsPackage.G: return createG();
+      case OperationsPackage.R: return createR();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -113,10 +130,10 @@ public class OperationsFactoryImpl extends EFactoryImpl implements OperationsFac
    * @generated
    */
   @Override
-  public rotateServo createrotateServo()
+  public lightRGBOperation createlightRGBOperation()
   {
-    rotateServoImpl rotateServo = new rotateServoImpl();
-    return rotateServo;
+    lightRGBOperationImpl lightRGBOperation = new lightRGBOperationImpl();
+    return lightRGBOperation;
   }
 
   /**
@@ -125,10 +142,94 @@ public class OperationsFactoryImpl extends EFactoryImpl implements OperationsFac
    * @generated
    */
   @Override
-  public rotateAllServos createrotateAllServos()
+  public buzzerOffOperation createbuzzerOffOperation()
   {
-    rotateAllServosImpl rotateAllServos = new rotateAllServosImpl();
-    return rotateAllServos;
+    buzzerOffOperationImpl buzzerOffOperation = new buzzerOffOperationImpl();
+    return buzzerOffOperation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public buzzerOnOperation createbuzzerOnOperation()
+  {
+    buzzerOnOperationImpl buzzerOnOperation = new buzzerOnOperationImpl();
+    return buzzerOnOperation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public calibrationOperation createcalibrationOperation()
+  {
+    calibrationOperationImpl calibrationOperation = new calibrationOperationImpl();
+    return calibrationOperation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public cameraColorOperation createcameraColorOperation()
+  {
+    cameraColorOperationImpl cameraColorOperation = new cameraColorOperationImpl();
+    return cameraColorOperation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public readAllServosOperation createreadAllServosOperation()
+  {
+    readAllServosOperationImpl readAllServosOperation = new readAllServosOperationImpl();
+    return readAllServosOperation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public readServoOperation createreadServoOperation()
+  {
+    readServoOperationImpl readServoOperation = new readServoOperationImpl();
+    return readServoOperation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public rotateServoOperation createrotateServoOperation()
+  {
+    rotateServoOperationImpl rotateServoOperation = new rotateServoOperationImpl();
+    return rotateServoOperation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public rotateAllServosOperation createrotateAllServosOperation()
+  {
+    rotateAllServosOperationImpl rotateAllServosOperation = new rotateAllServosOperationImpl();
+    return rotateAllServosOperation;
   }
 
   /**
@@ -173,10 +274,10 @@ public class OperationsFactoryImpl extends EFactoryImpl implements OperationsFac
    * @generated
    */
   @Override
-  public isAtSingle createisAtSingle()
+  public isAtSingleOperation createisAtSingleOperation()
   {
-    isAtSingleImpl isAtSingle = new isAtSingleImpl();
-    return isAtSingle;
+    isAtSingleOperationImpl isAtSingleOperation = new isAtSingleOperationImpl();
+    return isAtSingleOperation;
   }
 
   /**
@@ -185,10 +286,10 @@ public class OperationsFactoryImpl extends EFactoryImpl implements OperationsFac
    * @generated
    */
   @Override
-  public isAt createisAt()
+  public isAtOperation createisAtOperation()
   {
-    isAtImpl isAt = new isAtImpl();
-    return isAt;
+    isAtOperationImpl isAtOperation = new isAtOperationImpl();
+    return isAtOperation;
   }
 
   /**
@@ -237,6 +338,126 @@ public class OperationsFactoryImpl extends EFactoryImpl implements OperationsFac
   {
     ServoImpl servo = new ServoImpl();
     return servo;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public V_max createV_max()
+  {
+    V_maxImpl v_max = new V_maxImpl();
+    return v_max;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public S_max createS_max()
+  {
+    S_maxImpl s_max = new S_maxImpl();
+    return s_max;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public H_max createH_max()
+  {
+    H_maxImpl h_max = new H_maxImpl();
+    return h_max;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public V_min createV_min()
+  {
+    V_minImpl v_min = new V_minImpl();
+    return v_min;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public S_min createS_min()
+  {
+    S_minImpl s_min = new S_minImpl();
+    return s_min;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public H_min createH_min()
+  {
+    H_minImpl h_min = new H_minImpl();
+    return h_min;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Color createColor()
+  {
+    ColorImpl color = new ColorImpl();
+    return color;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public B createB()
+  {
+    BImpl b = new BImpl();
+    return b;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public G createG()
+  {
+    GImpl g = new GImpl();
+    return g;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public R createR()
+  {
+    RImpl r = new RImpl();
+    return r;
   }
 
   /**
