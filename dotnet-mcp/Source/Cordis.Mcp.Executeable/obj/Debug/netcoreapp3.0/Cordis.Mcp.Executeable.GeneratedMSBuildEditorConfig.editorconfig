@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = Cordis.Mcp.Executeable
+build_property.ProjectDir = D:\RaspberryPi\dotnet-mcp\Source\Cordis.Mcp.Executeable\

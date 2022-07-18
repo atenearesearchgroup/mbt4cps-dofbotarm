@@ -1,0 +1,14 @@
+D:\RaspberryPi\dotnet-mcp\Delivery\Bin\Release\netcoreapp3.0\linux-arm64\Cordis.Mcp.Executeable
+D:\RaspberryPi\dotnet-mcp\Delivery\Bin\Release\netcoreapp3.0\linux-arm64\Cordis.Mcp.Executeable.dll.config
+D:\RaspberryPi\dotnet-mcp\Delivery\Bin\Release\netcoreapp3.0\linux-arm64\Cordis.Mcp.Executeable.deps.json
+D:\RaspberryPi\dotnet-mcp\Delivery\Bin\Release\netcoreapp3.0\linux-arm64\Cordis.Mcp.Executeable.runtimeconfig.json
+D:\RaspberryPi\dotnet-mcp\Delivery\Bin\Release\netcoreapp3.0\linux-arm64\Cordis.Mcp.Executeable.runtimeconfig.dev.json
+D:\RaspberryPi\dotnet-mcp\Delivery\Bin\Release\netcoreapp3.0\linux-arm64\Cordis.Mcp.Executeable.dll
+D:\RaspberryPi\dotnet-mcp\Delivery\Bin\Release\netcoreapp3.0\linux-arm64\Cordis.Mcp.Executeable.pdb
+D:\RaspberryPi\dotnet-mcp\Source\Cordis.Mcp.Executeable\obj\Release\netcoreapp3.0\linux-arm64\Cordis.Mcp.Executeable.csproj.AssemblyReference.cache
+D:\RaspberryPi\dotnet-mcp\Source\Cordis.Mcp.Executeable\obj\Release\netcoreapp3.0\linux-arm64\Cordis.Mcp.Executeable.GeneratedMSBuildEditorConfig.editorconfig
+D:\RaspberryPi\dotnet-mcp\Source\Cordis.Mcp.Executeable\obj\Release\netcoreapp3.0\linux-arm64\Cordis.Mcp.Executeable.csproj.CoreCompileInputs.cache
+D:\RaspberryPi\dotnet-mcp\Source\Cordis.Mcp.Executeable\obj\Release\netcoreapp3.0\linux-arm64\Cordis.Mcp.Executeable.csproj.CopyComplete
+D:\RaspberryPi\dotnet-mcp\Source\Cordis.Mcp.Executeable\obj\Release\netcoreapp3.0\linux-arm64\Cordis.Mcp.Executeable.dll
+D:\RaspberryPi\dotnet-mcp\Source\Cordis.Mcp.Executeable\obj\Release\netcoreapp3.0\linux-arm64\Cordis.Mcp.Executeable.pdb
+D:\RaspberryPi\dotnet-mcp\Source\Cordis.Mcp.Executeable\obj\Release\netcoreapp3.0\linux-arm64\Cordis.Mcp.Executeable.genruntimeconfig.cache

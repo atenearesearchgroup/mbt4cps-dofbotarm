@@ -1,0 +1,22 @@
+2022-07-01 10:42:22.772  Info  -1;-----------------------------------------------
+2022-07-01 10:42:22.823  Info  -1; McpApplication startup
+2022-07-01 10:42:22.829  Info  -1;- - - - - - - - - - - - - - - - - - - - - - - -
+2022-07-01 10:42:23.396 Error  -1;No license file found. MCP will run for one hour.
+2022-07-01 10:42:23.432  Info  -1;Name of the Computer = DESKTOP-18G0CP5
+2022-07-01 10:42:23.432  Info  -1;Machine Description = Machine (Simulation Mode)
+2022-07-01 10:42:23.432  Info  -1;Hardware Identification = Machine
+2022-07-01 10:42:23.432  Info  -1;Hardware Version = Name: SystemConfiguration.xml, Version: 1
+2022-07-01 10:42:23.432  Info  -1;Database Files = 
+2022-07-01 10:42:23.440  Info  -1;    
+2022-07-01 10:42:23.440  Info  -1;Software Identification =  [Copyright 2000-2019 Cordis Products B.V.]
+2022-07-01 10:42:23.440  Info  -1;Software Version =  [ v2.1.0.0]
+2022-07-01 10:42:23.940 Error   3;2022-07-01 10:42:23.938 ; ERROR;;FATAL ERROR;(System.ComponentModel.Win32Exception (2): The system cannot find the file specified.
+   at System.Diagnostics.Process.StartWithCreateProcess(ProcessStartInfo startInfo)
+   at System.Diagnostics.Process.Start()
+   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   at dofbotArm.Dofbot.rotateAllServos(Double angle1, Double angle2, Double angle3, Double angle4, Double angle5, Double angle6, Int32 time) in C:\Users\Migue\source\repos\dofbotArm\dofbotArm\Dofbot.cs:line 76
+   at Cordis.Machine.ArmOperations.rotateAllServosOperation(Double angle1, Double angle2, Double angle3, Double angle4, Double angle5, Double angle6, Int32 aTime) in D:\RaspberryPi\dotnet-mcp\Source\ProjectSpecific\GeneratedCode\ArmOperations.cs:line 237
+   at Cordis.Machine.Machine.Cyclic() in D:\RaspberryPi\dotnet-mcp\Source\ProjectSpecific\GeneratedCode\Machine.cs:line 571
+   at Cordis.Mcp.Generic.MachinePart.MachinePart.Cordis.Mcp.Generic.Interfaces.ICyclicTask.CyclicTask()
+   at Cordis.Mcp.Generic.Engine.CyclicScheduler.ExecuteCyclicTasks(CyclicExecutionPriority prio)
+   at Cordis.Mcp.Generic.Engine.CyclicScheduler.OnScheduledEvent());ERR_FATAL_ERROR

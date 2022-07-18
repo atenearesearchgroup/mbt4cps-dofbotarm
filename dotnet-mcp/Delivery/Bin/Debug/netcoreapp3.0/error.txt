@@ -1,0 +1,11 @@
+2022-07-01 10:42:23.396 Error  -1;No license file found. MCP will run for one hour.
+2022-07-01 10:42:23.940 Error   3;2022-07-01 10:42:23.938 ; ERROR;;FATAL ERROR;(System.ComponentModel.Win32Exception (2): The system cannot find the file specified.
+   at System.Diagnostics.Process.StartWithCreateProcess(ProcessStartInfo startInfo)
+   at System.Diagnostics.Process.Start()
+   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   at dofbotArm.Dofbot.rotateAllServos(Double angle1, Double angle2, Double angle3, Double angle4, Double angle5, Double angle6, Int32 time) in C:\Users\Migue\source\repos\dofbotArm\dofbotArm\Dofbot.cs:line 76
+   at Cordis.Machine.ArmOperations.rotateAllServosOperation(Double angle1, Double angle2, Double angle3, Double angle4, Double angle5, Double angle6, Int32 aTime) in D:\RaspberryPi\dotnet-mcp\Source\ProjectSpecific\GeneratedCode\ArmOperations.cs:line 237
+   at Cordis.Machine.Machine.Cyclic() in D:\RaspberryPi\dotnet-mcp\Source\ProjectSpecific\GeneratedCode\Machine.cs:line 571
+   at Cordis.Mcp.Generic.MachinePart.MachinePart.Cordis.Mcp.Generic.Interfaces.ICyclicTask.CyclicTask()
+   at Cordis.Mcp.Generic.Engine.CyclicScheduler.ExecuteCyclicTasks(CyclicExecutionPriority prio)
+   at Cordis.Mcp.Generic.Engine.CyclicScheduler.OnScheduledEvent());ERR_FATAL_ERROR

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SystemConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <VersionInfo>Name: SystemConfiguration.xml, Version: 1</VersionInfo>
+  <AssemblyFiles>
+    <MachineAssemblyFile>Company.Project.dll</MachineAssemblyFile>
+    <MachineClassName>Cordis.Machine.Machine</MachineClassName>
+  </AssemblyFiles>
+  <DatabaseFiles>
+    <Database>Database.xml</Database>
+  </DatabaseFiles>
+  <MachineFiles>
+    <Machine>Machine.xml</Machine>
+  </MachineFiles>
+</SystemConfiguration>

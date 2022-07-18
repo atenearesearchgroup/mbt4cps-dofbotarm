@@ -1,0 +1,88 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <ApplicationIcon></ApplicationIcon>
+    <OutputType>Exe</OutputType>
+    <StartupObject>Cordis.Mcp.Executable.Program</StartupObject>
+    <Platforms>x86;AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AssemblyName>Cordis.Mcp.Executeable</AssemblyName>
+    <RootNamespace>Cordis.Mcp.Executeable</RootNamespace>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\..\Delivery\Bin\Debug\</OutputPath>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <OutputPath>..\..\Delivery\Bin\Debug\</OutputPath>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutputPath>..\..\Delivery\Bin\Debug\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\..\Delivery\Bin\Release\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+    <OutputPath>..\..\Delivery\Bin\Release\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutputPath>..\..\Delivery\Bin\Release\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Context.cs" />
+    <Compile Remove="MessageEventArgs.cs" />
+    <Compile Remove="MessagesForm.cs" />
+    <Compile Remove="MessagesForm.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="MessagesForm.resx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\Resources\ProductInfo.cs" Link="Properties\ProductInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Management" Version="4.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Cordis.Mcp.Application">
+      <HintPath>..\Libs\Cordis.Mcp.Application.dll</HintPath>
+    </Reference>
+    <Reference Include="Cordis.Mcp.Generic">
+      <HintPath>..\Libs\Cordis.Mcp.Generic.dll</HintPath>
+    </Reference>
+    <Reference Include="Cordis.Mcp.MqttClient">
+      <HintPath>..\Libs\Cordis.Mcp.MqttClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Cordis.Mcp.Server">
+      <HintPath>..\Libs\Cordis.Mcp.Server.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Resources\NLog.config">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Settings.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy Resources\NLog.config $(OutDir) /Y" />
+  </Target>
+
+</Project>
