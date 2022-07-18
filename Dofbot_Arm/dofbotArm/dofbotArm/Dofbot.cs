@@ -655,7 +655,7 @@ namespace dofbotArm
             return doubles;
         }
 
-        public bool isAt(double angle1, double angle2, double angle3, double angle4, double angle5, double angle6, double res)
+        public bool isAt(double angle1isAt, double angle2isAt, double angle3isAt, double angle4isAt, double angle5isAt, double angle6isAt, double res)
         {
             // Creation of the process
             ProcessStartInfo psi = new ProcessStartInfo();
@@ -670,7 +670,7 @@ namespace dofbotArm
             string func = "isAt";
 
             // Arguments with the values that we want to pass to the script
-            psi.Arguments = $"\"{script}\" \"{func}\" \"{angle1}\" \"{angle2}\" \"{angle3}\" \"{angle4}\" \"{angle5}\" \"{angle6}\" \"{res}\"";
+            psi.Arguments = $"\"{script}\" \"{func}\" \"{angle1isAt}\" \"{angle2isAt}\" \"{angle3isAt}\" \"{angle4isAt}\" \"{angle5isAt}\" \"{angle6isAt}\" \"{res}\"";
 
             // Configuration of process characteristics
             psi.UseShellExecute = false;
