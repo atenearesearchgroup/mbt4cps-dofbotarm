@@ -4,35 +4,178 @@ Class: Machine
 		PseudoState: Final
 		PseudoState: Error
 		
-		Transition: (Initial->Given)
+		Transition: (Initial->Given0)
 				Guard: []
 		
-		State: Given
-				Activity: Arm.posInicial(1000);
-				Activity: Board.Buzzer.buzzerOn(10);
-				Activity: Board.Buzzer.buzzerOff();
-				Activity: Arm.Camera.cameraColor(100);
-				Activity: Arm.Camera.calibration(Rojo, 1, 1, 1, 1, 1, 1);
-				Activity: Board.Light.lightRGB(1, 1, 1);
-				Activity: Arm.Servos.rotateServo(3, 3, 3)
-				Activity: Arm.readAllServos()
-				Activity: Arm.Servos.readServo(1)
-				Activity: Arm.Servos.readServo(2)
-				Activity: Arm.Servos.readServo(3)
-				Activity: Arm.Servos.readServo(4)
-				Activity: Arm.Servos.readServo(5)
-				Activity: Arm.rotateAllServos(1, 1, 1, 1, 1, 1, 1);
-									
+		State: Given0
+			Activity: Arm.posInicial(1000);
+		
+		Transition: (Given0->Given1)
+			Guard: []	
+			
+		Transition: (Given0->GivenWarning)
+			Guard: Arm.wait(1000);	
+		
+		Transition: (GivenWarning->Given0)
+			Guard: []
+			
+		State: Given1
+			Activity: Board.Buzzer.buzzerOn(10);
+						
+		Transition: (Given1->GivenWarning)
+			Guard: Arm.wait(1000);	
+											
+		Transition: (GivenWarning->Given1)
+			Guard: []
+			
+		Transition: (Given1->Given2)
+			Guard: []
+		
+		State: Given2
+			Activity: Board.Buzzer.buzzerOff();
+						
+		Transition: (Given2->GivenWarning)
+			Guard: Arm.wait(1000);	
+											
+		Transition: (GivenWarning->Given2)
+			Guard: []
+			
+		Transition: (Given2->Given3)
+			Guard: []
+		
+		State: Given3
+			Activity: Arm.Camera.cameraColor(100);
+		
+		Transition: (Given3->GivenWarning)
+			Guard: Arm.wait(100);	
+											
+		Transition: (GivenWarning->Given3)
+			Guard: []
+							
+		Transition: (Given3->Given4)
+			Guard: []
+		
+		State: Given4
+			Activity: Arm.Camera.calibration(Rojo, 1, 1, 1, 1, 1, 1);
+		
+		Transition: (Given4->GivenWarning)
+			Guard: Arm.wait(1000);	
+											
+		Transition: (GivenWarning->Given4)
+			Guard: []
+			
+		Transition: (Given4->Given5)
+			Guard: []
+		
+		State: Given5
+			Activity: Board.Light.lightRGB(1, 1, 1);
+					
+		Transition: (Given5->GivenWarning)
+			Guard: Arm.wait(1000);	
+											
+		Transition: (GivenWarning->Given5)
+			Guard: []
+			
+		Transition: (Given5->Given6)
+			Guard: []
+		
+		State: Given6
+			Activity: Arm.Servos.rotateServo(3, 3, 3)
+						
+		Transition: (Given6->GivenWarning)
+			Guard: Arm.wait(3);	
+											
+		Transition: (GivenWarning->Given6)
+			Guard: []
+			
+		Transition: (Given6->Given7)
+			Guard: []
+		
+		State: Given7
+			Activity: Arm.readAllServos()
+		
+		Transition: (Given7->GivenWarning)
+			Guard: Arm.wait(1000);	
+											
+		Transition: (GivenWarning->Given7)
+			Guard: []
+			
+		Transition: (Given7->Given8)
+			Guard: []
+		
+		State: Given8
+			Activity: Arm.Servos.readServo(1)
+		
+		Transition: (Given8->GivenWarning)
+			Guard: Arm.wait(1000);	
+											
+		Transition: (GivenWarning->Given8)
+			Guard: []
+			
+		Transition: (Given8->Given9)
+			Guard: []
+		
+		State: Given9
+			Activity: Arm.Servos.readServo(2)
+		
+		Transition: (Given9->GivenWarning)
+			Guard: Arm.wait(1000);	
+											
+		Transition: (GivenWarning->Given9)
+			Guard: []
+			
+		Transition: (Given9->Given10)
+			Guard: []
+		
+		State: Given10
+			Activity: Arm.Servos.readServo(3)
+		
+		Transition: (Given10->GivenWarning)
+			Guard: Arm.wait(1000);	
+											
+		Transition: (GivenWarning->Given10)
+			Guard: []
+			
+		Transition: (Given10->Given11)
+			Guard: []
+		
+		State: Given11
+			Activity: Arm.Servos.readServo(4)
+		
+		Transition: (Given11->GivenWarning)
+			Guard: Arm.wait(1000);	
+											
+		Transition: (GivenWarning->Given11)
+			Guard: []
+			
+		Transition: (Given11->Given12)
+			Guard: []
+		
+		State: Given12
+			Activity: Arm.Servos.readServo(5)
+		
+		Transition: (Given12->GivenWarning)
+			Guard: Arm.wait(1000);	
+											
+		Transition: (GivenWarning->Given12)
+			Guard: []
+			
+		Transition: (Given12->Given13)
+			Guard: []
+		
+		State: Given13
+			Activity: Arm.rotateAllServos(1, 1, 1, 1, 1, 1, 1);
+		
+		Transition: (Given13->GivenWarning)
+			Guard: Arm.wait(1);	
+											
+		Transition: (GivenWarning->Given13)
+			Guard: []
+			
 		State: GivenWarning
 				Activity: MessReport(mWarning, "Warning Time");
-		
-		Transition: (GivenWarning->Given)
-				Guard: []			
-					
-		Transition: (Given->GivenWarning)
-				Guard: Arm.wait(1114);
-					
-		Transition: (Given->When)				
+			
+		Transition: (Given13->When)				
 				Guard: Arm.isAt(1, 1, 1, 1, 1, 1, 2);
 				
 		State: When

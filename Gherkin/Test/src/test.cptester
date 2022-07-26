@@ -17,4 +17,4 @@ Scenario "Testings"
 	WHEN rotateServo(4,2,3)
 	THEN result(1)
 	AND NotLaterThan(3) Query isAtSingle(2,1,1)
-} 
+}
