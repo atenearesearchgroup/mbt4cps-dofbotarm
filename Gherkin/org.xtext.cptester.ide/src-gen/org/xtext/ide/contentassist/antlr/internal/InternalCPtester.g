@@ -1240,16 +1240,9 @@ rule__Scenario__Group__7__Impl
 	}
 :
 (
-	(
-		{ before(grammarAccess.getScenarioAccess().getAndAssignment_7()); }
-		(rule__Scenario__AndAssignment_7)
-		{ after(grammarAccess.getScenarioAccess().getAndAssignment_7()); }
-	)
-	(
-		{ before(grammarAccess.getScenarioAccess().getAndAssignment_7()); }
-		(rule__Scenario__AndAssignment_7)*
-		{ after(grammarAccess.getScenarioAccess().getAndAssignment_7()); }
-	)
+	{ before(grammarAccess.getScenarioAccess().getAndAssignment_7()); }
+	(rule__Scenario__AndAssignment_7)*
+	{ after(grammarAccess.getScenarioAccess().getAndAssignment_7()); }
 )
 ;
 finally {

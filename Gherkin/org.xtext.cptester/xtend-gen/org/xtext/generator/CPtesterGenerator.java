@@ -1575,15 +1575,15 @@ public class CPtesterGenerator extends AbstractGenerator {
     _builder.append("Transition: (");
     String _name_80 = scenario.getWhen().eClass().getName();
     _builder.append(_name_80, "\t\t");
-    _builder.append("->Error)\t\t\t\t\t\t");
+    _builder.append("->Error)");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t\t");
     {
       EList<And> _and = scenario.getAnd();
       for(final And and : _and) {
         {
           EList<Conditions> _conditions = and.getConditions();
           for(final Conditions cond : _conditions) {
+            _builder.append("\t\t\t\t");
             {
               EList<Time> _time_26 = cond.getTime();
               for(final Time tm_6 : _time_26) {
@@ -1617,11 +1617,21 @@ public class CPtesterGenerator extends AbstractGenerator {
         }
       }
     }
+    {
+      boolean _isEmpty_1 = scenario.getAnd().isEmpty();
+      if (_isEmpty_1) {
+        _builder.append("\t\t\t\t");
+        _builder.append("Guard: StateVar(oRunTime) >= (Sett(time_resolution);");
+        _builder.newLine();
+      } else {
+        _builder.append("\t\t\t\t");
+        _builder.append("Guard: StateVar(oRunTime) >= (");
+        _builder.append(maxTime, "\t\t\t\t");
+        _builder.append("+Sett(time_resolution);");
+        _builder.newLineIfNotEmpty();
+      }
+    }
     _builder.append("\t\t\t\t");
-    _builder.append("Guard: StateVar(oRunTime) >= (");
-    _builder.append(maxTime, "\t\t\t\t");
-    _builder.append("+Sett(time_resolution);");
-    _builder.newLineIfNotEmpty();
     _builder.newLine();
     _builder.append("\t\t");
     _builder.append("Transition: (");
@@ -1629,6 +1639,14 @@ public class CPtesterGenerator extends AbstractGenerator {
     _builder.append(_name_81, "\t\t");
     _builder.append("->Final)\t\t");
     _builder.newLineIfNotEmpty();
+    {
+      boolean _isEmpty_2 = scenario.getAnd().isEmpty();
+      if (_isEmpty_2) {
+        _builder.append("\t\t\t\t");
+        _builder.append("Guard: []");
+        _builder.newLine();
+      }
+    }
     {
       EList<And> _and_1 = scenario.getAnd();
       for(final And and_1 : _and_1) {

@@ -9,7 +9,7 @@ Scenario:
 		(andGiven+=AndWhen)*
 		when=When
 		then=Then
-		(and+=And)+ //Cambiar a estrella
+		(and+=And)* //Cambiar a estrella
 	'}'
 ;
 

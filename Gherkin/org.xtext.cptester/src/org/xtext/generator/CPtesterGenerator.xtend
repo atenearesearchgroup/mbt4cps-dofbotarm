@@ -218,15 +218,24 @@ class CPtesterGenerator extends AbstractGenerator {
 						Activity: Board.Light.«cmd.eClass.name»(«FOR r : rgb.r»«var value = r as R»«value.r»«ENDFOR», «FOR g : rgb.g»«var value = g as G»«value.g»«ENDFOR», «FOR b : rgb.b»«var value = b as B»«value.b»«ENDFOR»);
 						«ENDIF»«ENDFOR»
 						
-				Transition: («scenario.when.eClass.name»->Error)						
-						«FOR and : scenario.and»«FOR cond : and.conditions»«FOR tm : cond.time»«var value = tm as Time»
+				Transition: («scenario.when.eClass.name»->Error)
+						«FOR and : scenario.and»
+						«FOR cond : and.conditions»
+						«FOR tm : cond.time»«var value = tm as Time»
 						«IF value.time > maxTime»
 						«{maxTime = value.time; "" }»
 						«{condName = cond.name; "" }»
 						«ENDIF»«ENDFOR»«ENDFOR»«ENDFOR»
+						«IF scenario.and.empty»
+						Guard: StateVar(oRunTime) >= (Sett(time_resolution);
+						«ELSE»
 						Guard: StateVar(oRunTime) >= («maxTime»+Sett(time_resolution);
-		
+						«ENDIF»
+						
 				Transition: («scenario.when.eClass.name»->Final)		
+						«IF scenario.and.empty»
+						Guard: []
+						«ENDIF»
 						«FOR and : scenario.and»
 						«FOR sol : and.solution»						
 						«IF sol.eClass.name.equals('isAtSingle')»«var ias = sol as isAtSingle»

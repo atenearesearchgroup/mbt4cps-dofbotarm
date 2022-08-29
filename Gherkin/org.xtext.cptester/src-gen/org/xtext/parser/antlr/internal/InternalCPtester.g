@@ -196,7 +196,7 @@ ruleScenario returns [EObject current=null]
 					afterParserOrEnumRuleCall();
 				}
 			)
-		)+
+		)*
 		otherlv_8='}'
 		{
 			newLeafNode(otherlv_8, grammarAccess.getScenarioAccess().getRightCurlyBracketKeyword_8());

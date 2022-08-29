@@ -47,7 +47,7 @@ public class CPtesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//        (andGiven+=AndWhen)*
 		//        when=When
 		//        then=Then
-		//        (and+=And)+ //Cambiar a estrella
+		//        (and+=And)* //Cambiar a estrella
 		//    '}'
 		//;
 		@Override public ParserRule getRule() { return rule; }
@@ -58,7 +58,7 @@ public class CPtesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//    (andGiven+=AndWhen)*
 		//    when=When
 		//    then=Then
-		//    (and+=And)+ //Cambiar a estrella
+		//    (and+=And)* //Cambiar a estrella
 		//'}'
 		public Group getGroup() { return cGroup; }
 		
@@ -98,7 +98,7 @@ public class CPtesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//Then
 		public RuleCall getThenThenParserRuleCall_6_0() { return cThenThenParserRuleCall_6_0; }
 		
-		//(and+=And)+
+		//(and+=And)*
 		public Assignment getAndAssignment_7() { return cAndAssignment_7; }
 		
 		//And
@@ -345,7 +345,7 @@ public class CPtesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	//        (andGiven+=AndWhen)*
 	//        when=When
 	//        then=Then
-	//        (and+=And)+ //Cambiar a estrella
+	//        (and+=And)* //Cambiar a estrella
 	//    '}'
 	//;
 	public ScenarioElements getScenarioAccess() {

@@ -227,7 +227,7 @@ public class CPtesterSemanticSequencer extends OperationsSemanticSequencer {
 	 *         andGiven+=AndWhen* 
 	 *         when=When 
 	 *         then=Then 
-	 *         and+=And+
+	 *         and+=And*
 	 *     )
 	 * </pre>
 	 */
