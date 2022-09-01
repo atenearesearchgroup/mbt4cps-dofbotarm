@@ -6,7 +6,7 @@ Scenario "Testings"
 	AND cameraColor(100)
 	AND calibration("Rojo",1,1,1,1,1,1)
 	AND lightRGB(1,1,1)
-	AND rotateServo(3,3,3)
+	AND rotateServo(1,3,3)
 	AND readAllServos() 
 	AND readServo(1)
 	AND readServo(2)
@@ -14,7 +14,6 @@ Scenario "Testings"
 	AND readServo(4)
 	AND readServo(5)
 	AND rotateAllServos(1,1,1,1,1,1,1)
-	WHEN rotateServo(4,2,3)
+	WHEN rotateServo(5,2,3)
 	THEN result(1)
-	AND NotLaterThan(3) Query isAtSingle(2,1,1)
-}
+}   
