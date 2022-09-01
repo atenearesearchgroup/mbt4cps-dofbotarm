@@ -245,188 +245,566 @@ public class CPtesterGenerator extends AbstractGenerator {
               boolean _equals = cmd.eClass().getName().equals("rotateServo");
               if (_equals) {
                 rotateServo rot = ((rotateServo) cmd);
-                _builder.newLineIfNotEmpty();
-                _builder.append("\t\t");
-                _builder.append("State: ");
-                String _name_11 = scenario.getGiven().eClass().getName();
-                _builder.append(_name_11, "\t\t");
-                _builder.append(counterGiven, "\t\t");
-                _builder.newLineIfNotEmpty();
-                _builder.append("\t\t");
-                _builder.append("\t");
-                _builder.append("Activity: Arm.Servos.");
-                String _name_12 = cmd.eClass().getName();
-                _builder.append(_name_12, "\t\t\t");
-                _builder.append("(");
                 {
                   EList<Servo> _servo = rot.getServo();
                   for(final Servo ser : _servo) {
                     Servo value_2 = ((Servo) ser);
-                    int _servo_1 = value_2.getServo();
-                    _builder.append(_servo_1, "\t\t\t");
-                  }
-                }
-                _builder.append(", ");
-                {
-                  EList<Angle> _angle = rot.getAngle();
-                  for(final Angle ang : _angle) {
-                    Angle value_3 = ((Angle) ang);
-                    int _angle_1 = value_3.getAngle();
-                    _builder.append(_angle_1, "\t\t\t");
-                  }
-                }
-                _builder.append(", ");
-                {
-                  EList<Time> _time_4 = rot.getTime();
-                  for(final Time tmp : _time_4) {
-                    Time value_4 = ((Time) tmp);
-                    int _time_5 = value_4.getTime();
-                    _builder.append(_time_5, "\t\t\t");
-                    String _xblockexpression_3 = null;
+                    _builder.append("\t\t\t\t\t\t");
+                    _builder.newLineIfNotEmpty();
                     {
-                      int _counterTime = counterTime;
-                      int _time_6 = value_4.getTime();
-                      counterTime = (_counterTime + _time_6);
-                      _xblockexpression_3 = "";
+                      int _servo_1 = value_2.getServo();
+                      boolean _equals_1 = (_servo_1 == 1);
+                      if (_equals_1) {
+                        _builder.append("\t\t");
+                        _builder.append("State: ");
+                        String _name_11 = scenario.getGiven().eClass().getName();
+                        _builder.append(_name_11, "\t\t");
+                        _builder.append(counterGiven, "\t\t");
+                        _builder.newLineIfNotEmpty();
+                        _builder.append("\t\t");
+                        _builder.append("\t");
+                        _builder.append("Activity: Arm.BaseServo.ServosOperations.");
+                        String _name_12 = cmd.eClass().getName();
+                        _builder.append(_name_12, "\t\t\t");
+                        _builder.append("(");
+                        int _servo_2 = value_2.getServo();
+                        _builder.append(_servo_2, "\t\t\t");
+                        _builder.append(", ");
+                        {
+                          EList<Angle> _angle = rot.getAngle();
+                          for(final Angle ang : _angle) {
+                            Angle valor = ((Angle) ang);
+                            int _angle_1 = valor.getAngle();
+                            _builder.append(_angle_1, "\t\t\t");
+                          }
+                        }
+                        _builder.append(", ");
+                        {
+                          EList<Time> _time_4 = rot.getTime();
+                          for(final Time tmp : _time_4) {
+                            Time valor_1 = ((Time) tmp);
+                            int _time_5 = valor_1.getTime();
+                            _builder.append(_time_5, "\t\t\t");
+                            String _xblockexpression_3 = null;
+                            {
+                              int _counterTime = counterTime;
+                              int _time_6 = valor_1.getTime();
+                              counterTime = (_counterTime + _time_6);
+                              _xblockexpression_3 = "";
+                            }
+                            _builder.append(_xblockexpression_3, "\t\t\t");
+                          }
+                        }
+                        _builder.append(");");
+                        _builder.newLineIfNotEmpty();
+                        _builder.append("\t\t");
+                        _builder.append("\t");
+                        _builder.newLine();
+                        _builder.append("\t\t");
+                        _builder.append("Transition: (");
+                        String _name_13 = scenario.getGiven().eClass().getName();
+                        _builder.append(_name_13, "\t\t");
+                        _builder.append(counterGiven, "\t\t");
+                        _builder.append("->");
+                        String _name_14 = scenario.getGiven().eClass().getName();
+                        _builder.append(_name_14, "\t\t");
+                        _builder.append("Warning)");
+                        _builder.newLineIfNotEmpty();
+                        _builder.append("\t\t");
+                        _builder.append("\t");
+                        _builder.append("Guard: Arm.wait(");
+                        {
+                          EList<Time> _time_6 = rot.getTime();
+                          for(final Time tmp_1 : _time_6) {
+                            Time amount = ((Time) tmp_1);
+                            int _time_7 = amount.getTime();
+                            _builder.append(_time_7, "\t\t\t");
+                            _builder.append(");");
+                          }
+                        }
+                        _builder.append("\t\t\t\t\t");
+                        _builder.newLineIfNotEmpty();
+                        _builder.append("\t\t");
+                        _builder.newLine();
+                        _builder.append("\t\t");
+                        _builder.append("Transition: (");
+                        String _name_15 = scenario.getGiven().eClass().getName();
+                        _builder.append(_name_15, "\t\t");
+                        _builder.append("Warning->");
+                        String _name_16 = scenario.getGiven().eClass().getName();
+                        _builder.append(_name_16, "\t\t");
+                        _builder.append(counterGiven, "\t\t");
+                        _builder.append(")");
+                        _builder.newLineIfNotEmpty();
+                        _builder.append("\t\t");
+                        _builder.append("\t");
+                        _builder.append("Guard: []");
+                        _builder.newLine();
+                        _builder.append("\t\t");
+                        _builder.append("\t");
+                        _builder.newLine();
+                      } else {
+                        int _servo_3 = value_2.getServo();
+                        boolean _equals_2 = (_servo_3 == 2);
+                        if (_equals_2) {
+                          _builder.append("\t\t");
+                          _builder.append("State: ");
+                          String _name_17 = scenario.getGiven().eClass().getName();
+                          _builder.append(_name_17, "\t\t");
+                          _builder.append(counterGiven, "\t\t");
+                          _builder.newLineIfNotEmpty();
+                          _builder.append("\t\t");
+                          _builder.append("\t");
+                          _builder.append("Activity: Arm.LowerServo.ServosOperations.");
+                          String _name_18 = cmd.eClass().getName();
+                          _builder.append(_name_18, "\t\t\t");
+                          _builder.append("(");
+                          int _servo_4 = value_2.getServo();
+                          _builder.append(_servo_4, "\t\t\t");
+                          _builder.append(", ");
+                          {
+                            EList<Angle> _angle_2 = rot.getAngle();
+                            for(final Angle ang_1 : _angle_2) {
+                              Angle valor_2 = ((Angle) ang_1);
+                              int _angle_3 = valor_2.getAngle();
+                              _builder.append(_angle_3, "\t\t\t");
+                            }
+                          }
+                          _builder.append(", ");
+                          {
+                            EList<Time> _time_8 = rot.getTime();
+                            for(final Time tmp_2 : _time_8) {
+                              Time valor_3 = ((Time) tmp_2);
+                              int _time_9 = valor_3.getTime();
+                              _builder.append(_time_9, "\t\t\t");
+                              String _xblockexpression_4 = null;
+                              {
+                                int _counterTime = counterTime;
+                                int _time_10 = valor_3.getTime();
+                                counterTime = (_counterTime + _time_10);
+                                _xblockexpression_4 = "";
+                              }
+                              _builder.append(_xblockexpression_4, "\t\t\t");
+                            }
+                          }
+                          _builder.append(");");
+                          _builder.newLineIfNotEmpty();
+                          _builder.append("\t\t");
+                          _builder.newLine();
+                          _builder.append("\t\t");
+                          _builder.append("Transition: (");
+                          String _name_19 = scenario.getGiven().eClass().getName();
+                          _builder.append(_name_19, "\t\t");
+                          _builder.append(counterGiven, "\t\t");
+                          _builder.append("->");
+                          String _name_20 = scenario.getGiven().eClass().getName();
+                          _builder.append(_name_20, "\t\t");
+                          _builder.append("Warning)");
+                          _builder.newLineIfNotEmpty();
+                          _builder.append("\t\t");
+                          _builder.append("\t");
+                          _builder.append("Guard: Arm.wait(");
+                          {
+                            EList<Time> _time_10 = rot.getTime();
+                            for(final Time tmp_3 : _time_10) {
+                              Time amount_1 = ((Time) tmp_3);
+                              int _time_11 = amount_1.getTime();
+                              _builder.append(_time_11, "\t\t\t");
+                              _builder.append(");");
+                            }
+                          }
+                          _builder.append("\t\t\t\t\t");
+                          _builder.newLineIfNotEmpty();
+                          _builder.append("\t\t");
+                          _builder.append("\t\t\t\t");
+                          _builder.newLine();
+                          _builder.append("\t\t");
+                          _builder.append("Transition: (");
+                          String _name_21 = scenario.getGiven().eClass().getName();
+                          _builder.append(_name_21, "\t\t");
+                          _builder.append("Warning->");
+                          String _name_22 = scenario.getGiven().eClass().getName();
+                          _builder.append(_name_22, "\t\t");
+                          _builder.append(counterGiven, "\t\t");
+                          _builder.append(")");
+                          _builder.newLineIfNotEmpty();
+                          _builder.append("\t\t");
+                          _builder.append("\t");
+                          _builder.append("Guard: []");
+                          _builder.newLine();
+                          _builder.append("\t\t");
+                          _builder.append("\t");
+                          _builder.newLine();
+                        } else {
+                          int _servo_5 = value_2.getServo();
+                          boolean _equals_3 = (_servo_5 == 3);
+                          if (_equals_3) {
+                            _builder.append("\t\t");
+                            _builder.append("State: ");
+                            String _name_23 = scenario.getGiven().eClass().getName();
+                            _builder.append(_name_23, "\t\t");
+                            _builder.append(counterGiven, "\t\t");
+                            _builder.newLineIfNotEmpty();
+                            _builder.append("\t\t");
+                            _builder.append("\t");
+                            _builder.append("Activity: Arm.MiddleServo.ServosOperations.");
+                            String _name_24 = cmd.eClass().getName();
+                            _builder.append(_name_24, "\t\t\t");
+                            _builder.append("(");
+                            int _servo_6 = value_2.getServo();
+                            _builder.append(_servo_6, "\t\t\t");
+                            _builder.append(", ");
+                            {
+                              EList<Angle> _angle_4 = rot.getAngle();
+                              for(final Angle ang_2 : _angle_4) {
+                                Angle valor_4 = ((Angle) ang_2);
+                                int _angle_5 = valor_4.getAngle();
+                                _builder.append(_angle_5, "\t\t\t");
+                              }
+                            }
+                            _builder.append(", ");
+                            {
+                              EList<Time> _time_12 = rot.getTime();
+                              for(final Time tmp_4 : _time_12) {
+                                Time valor_5 = ((Time) tmp_4);
+                                int _time_13 = valor_5.getTime();
+                                _builder.append(_time_13, "\t\t\t");
+                                String _xblockexpression_5 = null;
+                                {
+                                  int _counterTime = counterTime;
+                                  int _time_14 = valor_5.getTime();
+                                  counterTime = (_counterTime + _time_14);
+                                  _xblockexpression_5 = "";
+                                }
+                                _builder.append(_xblockexpression_5, "\t\t\t");
+                              }
+                            }
+                            _builder.append(");");
+                            _builder.newLineIfNotEmpty();
+                            _builder.append("\t\t");
+                            _builder.newLine();
+                            _builder.append("\t\t");
+                            _builder.append("Transition: (");
+                            String _name_25 = scenario.getGiven().eClass().getName();
+                            _builder.append(_name_25, "\t\t");
+                            _builder.append(counterGiven, "\t\t");
+                            _builder.append("->");
+                            String _name_26 = scenario.getGiven().eClass().getName();
+                            _builder.append(_name_26, "\t\t");
+                            _builder.append("Warning)");
+                            _builder.newLineIfNotEmpty();
+                            _builder.append("\t\t");
+                            _builder.append("\t");
+                            _builder.append("Guard: Arm.wait(");
+                            {
+                              EList<Time> _time_14 = rot.getTime();
+                              for(final Time tmp_5 : _time_14) {
+                                Time amount_2 = ((Time) tmp_5);
+                                int _time_15 = amount_2.getTime();
+                                _builder.append(_time_15, "\t\t\t");
+                                _builder.append(");");
+                              }
+                            }
+                            _builder.append("\t\t\t\t\t");
+                            _builder.newLineIfNotEmpty();
+                            _builder.append("\t\t");
+                            _builder.append("\t\t\t\t");
+                            _builder.newLine();
+                            _builder.append("\t\t");
+                            _builder.append("Transition: (");
+                            String _name_27 = scenario.getGiven().eClass().getName();
+                            _builder.append(_name_27, "\t\t");
+                            _builder.append("Warning->");
+                            String _name_28 = scenario.getGiven().eClass().getName();
+                            _builder.append(_name_28, "\t\t");
+                            _builder.append(counterGiven, "\t\t");
+                            _builder.append(")");
+                            _builder.newLineIfNotEmpty();
+                            _builder.append("\t\t");
+                            _builder.append("\t");
+                            _builder.append("Guard: []");
+                            _builder.newLine();
+                            _builder.append("\t\t");
+                            _builder.append("\t");
+                            _builder.newLine();
+                          } else {
+                            int _servo_7 = value_2.getServo();
+                            boolean _equals_4 = (_servo_7 == 4);
+                            if (_equals_4) {
+                              _builder.append("\t\t");
+                              _builder.append("State: ");
+                              String _name_29 = scenario.getGiven().eClass().getName();
+                              _builder.append(_name_29, "\t\t");
+                              _builder.append(counterGiven, "\t\t");
+                              _builder.newLineIfNotEmpty();
+                              _builder.append("\t\t");
+                              _builder.append("\t");
+                              _builder.append("Activity: Arm.UpperServo.ServosOperations.");
+                              String _name_30 = cmd.eClass().getName();
+                              _builder.append(_name_30, "\t\t\t");
+                              _builder.append("(");
+                              int _servo_8 = value_2.getServo();
+                              _builder.append(_servo_8, "\t\t\t");
+                              _builder.append(", ");
+                              {
+                                EList<Angle> _angle_6 = rot.getAngle();
+                                for(final Angle ang_3 : _angle_6) {
+                                  Angle valor_6 = ((Angle) ang_3);
+                                  int _angle_7 = valor_6.getAngle();
+                                  _builder.append(_angle_7, "\t\t\t");
+                                }
+                              }
+                              _builder.append(", ");
+                              {
+                                EList<Time> _time_16 = rot.getTime();
+                                for(final Time tmp_6 : _time_16) {
+                                  Time valor_7 = ((Time) tmp_6);
+                                  int _time_17 = valor_7.getTime();
+                                  _builder.append(_time_17, "\t\t\t");
+                                  String _xblockexpression_6 = null;
+                                  {
+                                    int _counterTime = counterTime;
+                                    int _time_18 = valor_7.getTime();
+                                    counterTime = (_counterTime + _time_18);
+                                    _xblockexpression_6 = "";
+                                  }
+                                  _builder.append(_xblockexpression_6, "\t\t\t");
+                                }
+                              }
+                              _builder.append(");");
+                              _builder.newLineIfNotEmpty();
+                              _builder.append("\t\t");
+                              _builder.newLine();
+                              _builder.append("\t\t");
+                              _builder.append("Transition: (");
+                              String _name_31 = scenario.getGiven().eClass().getName();
+                              _builder.append(_name_31, "\t\t");
+                              _builder.append(counterGiven, "\t\t");
+                              _builder.append("->");
+                              String _name_32 = scenario.getGiven().eClass().getName();
+                              _builder.append(_name_32, "\t\t");
+                              _builder.append("Warning)");
+                              _builder.newLineIfNotEmpty();
+                              _builder.append("\t\t");
+                              _builder.append("\t");
+                              _builder.append("Guard: Arm.wait(");
+                              {
+                                EList<Time> _time_18 = rot.getTime();
+                                for(final Time tmp_7 : _time_18) {
+                                  Time amount_3 = ((Time) tmp_7);
+                                  int _time_19 = amount_3.getTime();
+                                  _builder.append(_time_19, "\t\t\t");
+                                  _builder.append(");");
+                                }
+                              }
+                              _builder.append("\t\t\t\t\t");
+                              _builder.newLineIfNotEmpty();
+                              _builder.append("\t\t");
+                              _builder.append("\t\t\t\t");
+                              _builder.newLine();
+                              _builder.append("\t\t");
+                              _builder.append("Transition: (");
+                              String _name_33 = scenario.getGiven().eClass().getName();
+                              _builder.append(_name_33, "\t\t");
+                              _builder.append("Warning->");
+                              String _name_34 = scenario.getGiven().eClass().getName();
+                              _builder.append(_name_34, "\t\t");
+                              _builder.append(counterGiven, "\t\t");
+                              _builder.append(")");
+                              _builder.newLineIfNotEmpty();
+                              _builder.append("\t\t");
+                              _builder.append("\t");
+                              _builder.append("Guard: []");
+                              _builder.newLine();
+                              _builder.append("\t\t");
+                              _builder.append("\t");
+                              _builder.newLine();
+                            } else {
+                              int _servo_9 = value_2.getServo();
+                              boolean _equals_5 = (_servo_9 == 5);
+                              if (_equals_5) {
+                                _builder.append("\t\t");
+                                _builder.append("State: ");
+                                String _name_35 = scenario.getGiven().eClass().getName();
+                                _builder.append(_name_35, "\t\t");
+                                _builder.append(counterGiven, "\t\t");
+                                _builder.newLineIfNotEmpty();
+                                _builder.append("\t\t");
+                                _builder.append("\t");
+                                _builder.append("Activity: Arm.WristServo.ServosOperations.");
+                                String _name_36 = cmd.eClass().getName();
+                                _builder.append(_name_36, "\t\t\t");
+                                _builder.append("(");
+                                int _servo_10 = value_2.getServo();
+                                _builder.append(_servo_10, "\t\t\t");
+                                _builder.append(", ");
+                                {
+                                  EList<Angle> _angle_8 = rot.getAngle();
+                                  for(final Angle ang_4 : _angle_8) {
+                                    Angle valor_8 = ((Angle) ang_4);
+                                    int _angle_9 = valor_8.getAngle();
+                                    _builder.append(_angle_9, "\t\t\t");
+                                  }
+                                }
+                                _builder.append(", ");
+                                {
+                                  EList<Time> _time_20 = rot.getTime();
+                                  for(final Time tmp_8 : _time_20) {
+                                    Time valor_9 = ((Time) tmp_8);
+                                    int _time_21 = valor_9.getTime();
+                                    _builder.append(_time_21, "\t\t\t");
+                                    String _xblockexpression_7 = null;
+                                    {
+                                      int _counterTime = counterTime;
+                                      int _time_22 = valor_9.getTime();
+                                      counterTime = (_counterTime + _time_22);
+                                      _xblockexpression_7 = "";
+                                    }
+                                    _builder.append(_xblockexpression_7, "\t\t\t");
+                                  }
+                                }
+                                _builder.append(");");
+                                _builder.newLineIfNotEmpty();
+                                _builder.append("\t\t");
+                                _builder.newLine();
+                                _builder.append("\t\t");
+                                _builder.append("Transition: (");
+                                String _name_37 = scenario.getGiven().eClass().getName();
+                                _builder.append(_name_37, "\t\t");
+                                _builder.append(counterGiven, "\t\t");
+                                _builder.append("->");
+                                String _name_38 = scenario.getGiven().eClass().getName();
+                                _builder.append(_name_38, "\t\t");
+                                _builder.append("Warning)");
+                                _builder.newLineIfNotEmpty();
+                                _builder.append("\t\t");
+                                _builder.append("\t");
+                                _builder.append("Guard: Arm.wait(");
+                                {
+                                  EList<Time> _time_22 = rot.getTime();
+                                  for(final Time tmp_9 : _time_22) {
+                                    Time amount_4 = ((Time) tmp_9);
+                                    int _time_23 = amount_4.getTime();
+                                    _builder.append(_time_23, "\t\t\t");
+                                    _builder.append(");");
+                                  }
+                                }
+                                _builder.append("\t\t\t\t\t");
+                                _builder.newLineIfNotEmpty();
+                                _builder.append("\t\t");
+                                _builder.append("\t\t\t\t");
+                                _builder.newLine();
+                                _builder.append("\t\t");
+                                _builder.append("Transition: (");
+                                String _name_39 = scenario.getGiven().eClass().getName();
+                                _builder.append(_name_39, "\t\t");
+                                _builder.append("Warning->");
+                                String _name_40 = scenario.getGiven().eClass().getName();
+                                _builder.append(_name_40, "\t\t");
+                                _builder.append(counterGiven, "\t\t");
+                                _builder.append(")");
+                                _builder.newLineIfNotEmpty();
+                                _builder.append("\t\t");
+                                _builder.append("\t");
+                                _builder.append("Guard: []");
+                                _builder.newLine();
+                                _builder.append("\t\t");
+                                _builder.append("\t");
+                                _builder.newLine();
+                              }
+                            }
+                          }
+                        }
+                      }
                     }
-                    _builder.append(_xblockexpression_3, "\t\t\t");
                   }
                 }
-                _builder.append(")");
-                _builder.newLineIfNotEmpty();
-                _builder.append("\t\t");
-                _builder.append("\t\t\t\t");
-                _builder.newLine();
-                _builder.append("\t\t");
-                _builder.append("Transition: (");
-                String _name_13 = scenario.getGiven().eClass().getName();
-                _builder.append(_name_13, "\t\t");
-                _builder.append(counterGiven, "\t\t");
-                _builder.append("->");
-                String _name_14 = scenario.getGiven().eClass().getName();
-                _builder.append(_name_14, "\t\t");
-                _builder.append("Warning)");
-                _builder.newLineIfNotEmpty();
-                _builder.append("\t\t");
-                _builder.append("\t");
-                _builder.append("Guard: Arm.wait(");
-                {
-                  EList<Time> _time_6 = rot.getTime();
-                  for(final Time tmp_1 : _time_6) {
-                    Time value_5 = ((Time) tmp_1);
-                    int _time_7 = value_5.getTime();
-                    _builder.append(_time_7, "\t\t\t");
-                    _builder.append(");");
-                  }
-                }
-                _builder.append("\t");
-                _builder.newLineIfNotEmpty();
-                _builder.append("\t\t");
-                _builder.append("\t\t\t\t\t\t\t\t\t");
-                _builder.newLine();
-                _builder.append("\t\t");
-                _builder.append("Transition: (");
-                String _name_15 = scenario.getGiven().eClass().getName();
-                _builder.append(_name_15, "\t\t");
-                _builder.append("Warning->");
-                String _name_16 = scenario.getGiven().eClass().getName();
-                _builder.append(_name_16, "\t\t");
-                _builder.append(counterGiven, "\t\t");
-                _builder.append(")");
-                _builder.newLineIfNotEmpty();
-                _builder.append("\t\t");
-                _builder.append("\t");
-                _builder.append("Guard: []");
-                _builder.newLine();
-                _builder.append("\t\t");
-                _builder.append("\t");
-                _builder.newLine();
                 _builder.append("\t\t");
               } else {
-                boolean _equals_1 = cmd.eClass().getName().equals("rotateAllServos");
-                if (_equals_1) {
+                boolean _equals_6 = cmd.eClass().getName().equals("rotateAllServos");
+                if (_equals_6) {
                   rotateAllServos rot_1 = ((rotateAllServos) cmd);
                   _builder.newLineIfNotEmpty();
                   _builder.append("\t\t");
                   _builder.append("State: ");
-                  String _name_17 = scenario.getGiven().eClass().getName();
-                  _builder.append(_name_17, "\t\t");
+                  String _name_41 = scenario.getGiven().eClass().getName();
+                  _builder.append(_name_41, "\t\t");
                   _builder.append(counterGiven, "\t\t");
                   _builder.newLineIfNotEmpty();
                   _builder.append("\t\t");
                   _builder.append("\t");
                   _builder.append("Activity: Arm.");
-                  String _name_18 = cmd.eClass().getName();
-                  _builder.append(_name_18, "\t\t\t");
+                  String _name_42 = cmd.eClass().getName();
+                  _builder.append(_name_42, "\t\t\t");
                   _builder.append("(");
                   {
                     EList<Angle> _angle1 = rot_1.getAngle1();
                     for(final Angle ang1 : _angle1) {
-                      Angle value_6 = ((Angle) ang1);
-                      int _angle_2 = value_6.getAngle();
-                      _builder.append(_angle_2, "\t\t\t");
+                      Angle value_3 = ((Angle) ang1);
+                      int _angle_10 = value_3.getAngle();
+                      _builder.append(_angle_10, "\t\t\t");
                     }
                   }
                   _builder.append(", ");
                   {
                     EList<Angle> _angle2 = rot_1.getAngle2();
                     for(final Angle ang2 : _angle2) {
-                      Angle value_7 = ((Angle) ang2);
-                      int _angle_3 = value_7.getAngle();
-                      _builder.append(_angle_3, "\t\t\t");
+                      Angle value_4 = ((Angle) ang2);
+                      int _angle_11 = value_4.getAngle();
+                      _builder.append(_angle_11, "\t\t\t");
                     }
                   }
                   _builder.append(", ");
                   {
                     EList<Angle> _angle3 = rot_1.getAngle3();
                     for(final Angle ang3 : _angle3) {
-                      Angle value_8 = ((Angle) ang3);
-                      int _angle_4 = value_8.getAngle();
-                      _builder.append(_angle_4, "\t\t\t");
+                      Angle value_5 = ((Angle) ang3);
+                      int _angle_12 = value_5.getAngle();
+                      _builder.append(_angle_12, "\t\t\t");
                     }
                   }
                   _builder.append(", ");
                   {
                     EList<Angle> _angle4 = rot_1.getAngle4();
                     for(final Angle ang4 : _angle4) {
-                      Angle value_9 = ((Angle) ang4);
-                      int _angle_5 = value_9.getAngle();
-                      _builder.append(_angle_5, "\t\t\t");
+                      Angle value_6 = ((Angle) ang4);
+                      int _angle_13 = value_6.getAngle();
+                      _builder.append(_angle_13, "\t\t\t");
                     }
                   }
                   _builder.append(", ");
                   {
                     EList<Angle> _angle5 = rot_1.getAngle5();
                     for(final Angle ang5 : _angle5) {
-                      Angle value_10 = ((Angle) ang5);
-                      int _angle_6 = value_10.getAngle();
-                      _builder.append(_angle_6, "\t\t\t");
+                      Angle value_7 = ((Angle) ang5);
+                      int _angle_14 = value_7.getAngle();
+                      _builder.append(_angle_14, "\t\t\t");
                     }
                   }
                   _builder.append(", ");
                   {
                     EList<Angle> _angle6 = rot_1.getAngle6();
                     for(final Angle ang6 : _angle6) {
-                      Angle value_11 = ((Angle) ang6);
-                      int _angle_7 = value_11.getAngle();
-                      _builder.append(_angle_7, "\t\t\t");
+                      Angle value_8 = ((Angle) ang6);
+                      int _angle_15 = value_8.getAngle();
+                      _builder.append(_angle_15, "\t\t\t");
                     }
                   }
                   _builder.append(", ");
                   {
-                    EList<Time> _time_8 = rot_1.getTime();
-                    for(final Time tmp_2 : _time_8) {
-                      Time value_12 = ((Time) tmp_2);
-                      int _time_9 = value_12.getTime();
-                      _builder.append(_time_9, "\t\t\t");
-                      String _xblockexpression_4 = null;
+                    EList<Time> _time_24 = rot_1.getTime();
+                    for(final Time tmp_10 : _time_24) {
+                      Time value_9 = ((Time) tmp_10);
+                      int _time_25 = value_9.getTime();
+                      _builder.append(_time_25, "\t\t\t");
+                      String _xblockexpression_8 = null;
                       {
                         int _counterTime = counterTime;
-                        int _time_10 = value_12.getTime();
-                        counterTime = (_counterTime + _time_10);
-                        _xblockexpression_4 = "";
+                        int _time_26 = value_9.getTime();
+                        counterTime = (_counterTime + _time_26);
+                        _xblockexpression_8 = "";
                       }
-                      _builder.append(_xblockexpression_4, "\t\t\t");
+                      _builder.append(_xblockexpression_8, "\t\t\t");
                     }
                   }
                   _builder.append(");");
@@ -435,23 +813,23 @@ public class CPtesterGenerator extends AbstractGenerator {
                   _builder.newLine();
                   _builder.append("\t\t");
                   _builder.append("Transition: (");
-                  String _name_19 = scenario.getGiven().eClass().getName();
-                  _builder.append(_name_19, "\t\t");
+                  String _name_43 = scenario.getGiven().eClass().getName();
+                  _builder.append(_name_43, "\t\t");
                   _builder.append(counterGiven, "\t\t");
                   _builder.append("->");
-                  String _name_20 = scenario.getGiven().eClass().getName();
-                  _builder.append(_name_20, "\t\t");
+                  String _name_44 = scenario.getGiven().eClass().getName();
+                  _builder.append(_name_44, "\t\t");
                   _builder.append("Warning)");
                   _builder.newLineIfNotEmpty();
                   _builder.append("\t\t");
                   _builder.append("\t");
                   _builder.append("Guard: Arm.wait(");
                   {
-                    EList<Time> _time_10 = rot_1.getTime();
-                    for(final Time tmp_3 : _time_10) {
-                      Time value_13 = ((Time) tmp_3);
-                      int _time_11 = value_13.getTime();
-                      _builder.append(_time_11, "\t\t\t");
+                    EList<Time> _time_26 = rot_1.getTime();
+                    for(final Time tmp_11 : _time_26) {
+                      Time value_10 = ((Time) tmp_11);
+                      int _time_27 = value_10.getTime();
+                      _builder.append(_time_27, "\t\t\t");
                       _builder.append(");");
                     }
                   }
@@ -462,11 +840,11 @@ public class CPtesterGenerator extends AbstractGenerator {
                   _builder.newLine();
                   _builder.append("\t\t");
                   _builder.append("Transition: (");
-                  String _name_21 = scenario.getGiven().eClass().getName();
-                  _builder.append(_name_21, "\t\t");
+                  String _name_45 = scenario.getGiven().eClass().getName();
+                  _builder.append(_name_45, "\t\t");
                   _builder.append("Warning->");
-                  String _name_22 = scenario.getGiven().eClass().getName();
-                  _builder.append(_name_22, "\t\t");
+                  String _name_46 = scenario.getGiven().eClass().getName();
+                  _builder.append(_name_46, "\t\t");
                   _builder.append(counterGiven, "\t\t");
                   _builder.append(")");
                   _builder.newLineIfNotEmpty();
@@ -479,33 +857,33 @@ public class CPtesterGenerator extends AbstractGenerator {
                   _builder.newLine();
                   _builder.append("\t\t");
                 } else {
-                  boolean _equals_2 = cmd.eClass().getName().equals("readAllServos");
-                  if (_equals_2) {
+                  boolean _equals_7 = cmd.eClass().getName().equals("readAllServos");
+                  if (_equals_7) {
                     readAllServos ras = ((readAllServos) cmd);
                     _builder.newLineIfNotEmpty();
                     _builder.append("\t\t");
                     _builder.append("State: ");
-                    String _name_23 = scenario.getGiven().eClass().getName();
-                    _builder.append(_name_23, "\t\t");
+                    String _name_47 = scenario.getGiven().eClass().getName();
+                    _builder.append(_name_47, "\t\t");
                     _builder.append(counterGiven, "\t\t");
                     _builder.newLineIfNotEmpty();
                     _builder.append("\t\t");
                     _builder.append("\t");
                     _builder.append("Activity: Arm.");
-                    String _name_24 = cmd.eClass().getName();
-                    _builder.append(_name_24, "\t\t\t");
+                    String _name_48 = cmd.eClass().getName();
+                    _builder.append(_name_48, "\t\t\t");
                     _builder.append("()");
                     _builder.newLineIfNotEmpty();
                     _builder.append("\t\t");
                     _builder.newLine();
                     _builder.append("\t\t");
                     _builder.append("Transition: (");
-                    String _name_25 = scenario.getGiven().eClass().getName();
-                    _builder.append(_name_25, "\t\t");
+                    String _name_49 = scenario.getGiven().eClass().getName();
+                    _builder.append(_name_49, "\t\t");
                     _builder.append(counterGiven, "\t\t");
                     _builder.append("->");
-                    String _name_26 = scenario.getGiven().eClass().getName();
-                    _builder.append(_name_26, "\t\t");
+                    String _name_50 = scenario.getGiven().eClass().getName();
+                    _builder.append(_name_50, "\t\t");
                     _builder.append("Warning)");
                     _builder.newLineIfNotEmpty();
                     _builder.append("\t\t");
@@ -517,11 +895,11 @@ public class CPtesterGenerator extends AbstractGenerator {
                     _builder.newLine();
                     _builder.append("\t\t");
                     _builder.append("Transition: (");
-                    String _name_27 = scenario.getGiven().eClass().getName();
-                    _builder.append(_name_27, "\t\t");
+                    String _name_51 = scenario.getGiven().eClass().getName();
+                    _builder.append(_name_51, "\t\t");
                     _builder.append("Warning->");
-                    String _name_28 = scenario.getGiven().eClass().getName();
-                    _builder.append(_name_28, "\t\t");
+                    String _name_52 = scenario.getGiven().eClass().getName();
+                    _builder.append(_name_52, "\t\t");
                     _builder.append(counterGiven, "\t\t");
                     _builder.append(")");
                     _builder.newLineIfNotEmpty();
@@ -534,28 +912,28 @@ public class CPtesterGenerator extends AbstractGenerator {
                     _builder.newLine();
                     _builder.append("\t\t");
                   } else {
-                    boolean _equals_3 = cmd.eClass().getName().equals("readServo");
-                    if (_equals_3) {
+                    boolean _equals_8 = cmd.eClass().getName().equals("readServo");
+                    if (_equals_8) {
                       readServo rs = ((readServo) cmd);
                       _builder.newLineIfNotEmpty();
                       _builder.append("\t\t");
                       _builder.append("State: ");
-                      String _name_29 = scenario.getGiven().eClass().getName();
-                      _builder.append(_name_29, "\t\t");
+                      String _name_53 = scenario.getGiven().eClass().getName();
+                      _builder.append(_name_53, "\t\t");
                       _builder.append(counterGiven, "\t\t");
                       _builder.newLineIfNotEmpty();
                       _builder.append("\t\t");
                       _builder.append("\t");
                       _builder.append("Activity: Arm.Servos.");
-                      String _name_30 = cmd.eClass().getName();
-                      _builder.append(_name_30, "\t\t\t");
+                      String _name_54 = cmd.eClass().getName();
+                      _builder.append(_name_54, "\t\t\t");
                       _builder.append("(");
                       {
-                        EList<Servo> _servo_2 = rs.getServo();
-                        for(final Servo ser_1 : _servo_2) {
-                          Servo value_14 = ((Servo) ser_1);
-                          int _servo_3 = value_14.getServo();
-                          _builder.append(_servo_3, "\t\t\t");
+                        EList<Servo> _servo_11 = rs.getServo();
+                        for(final Servo ser_1 : _servo_11) {
+                          Servo value_11 = ((Servo) ser_1);
+                          int _servo_12 = value_11.getServo();
+                          _builder.append(_servo_12, "\t\t\t");
                         }
                       }
                       _builder.append(")");
@@ -564,12 +942,12 @@ public class CPtesterGenerator extends AbstractGenerator {
                       _builder.newLine();
                       _builder.append("\t\t");
                       _builder.append("Transition: (");
-                      String _name_31 = scenario.getGiven().eClass().getName();
-                      _builder.append(_name_31, "\t\t");
+                      String _name_55 = scenario.getGiven().eClass().getName();
+                      _builder.append(_name_55, "\t\t");
                       _builder.append(counterGiven, "\t\t");
                       _builder.append("->");
-                      String _name_32 = scenario.getGiven().eClass().getName();
-                      _builder.append(_name_32, "\t\t");
+                      String _name_56 = scenario.getGiven().eClass().getName();
+                      _builder.append(_name_56, "\t\t");
                       _builder.append("Warning)");
                       _builder.newLineIfNotEmpty();
                       _builder.append("\t\t");
@@ -581,11 +959,11 @@ public class CPtesterGenerator extends AbstractGenerator {
                       _builder.newLine();
                       _builder.append("\t\t");
                       _builder.append("Transition: (");
-                      String _name_33 = scenario.getGiven().eClass().getName();
-                      _builder.append(_name_33, "\t\t");
+                      String _name_57 = scenario.getGiven().eClass().getName();
+                      _builder.append(_name_57, "\t\t");
                       _builder.append("Warning->");
-                      String _name_34 = scenario.getGiven().eClass().getName();
-                      _builder.append(_name_34, "\t\t");
+                      String _name_58 = scenario.getGiven().eClass().getName();
+                      _builder.append(_name_58, "\t\t");
                       _builder.append(counterGiven, "\t\t");
                       _builder.append(")");
                       _builder.newLineIfNotEmpty();
@@ -598,36 +976,36 @@ public class CPtesterGenerator extends AbstractGenerator {
                       _builder.newLine();
                       _builder.append("\t\t");
                     } else {
-                      boolean _equals_4 = cmd.eClass().getName().equals("cameraColor");
-                      if (_equals_4) {
+                      boolean _equals_9 = cmd.eClass().getName().equals("cameraColor");
+                      if (_equals_9) {
                         cameraColor cc = ((cameraColor) cmd);
                         _builder.newLineIfNotEmpty();
                         _builder.append("\t\t");
                         _builder.append("State: ");
-                        String _name_35 = scenario.getGiven().eClass().getName();
-                        _builder.append(_name_35, "\t\t");
+                        String _name_59 = scenario.getGiven().eClass().getName();
+                        _builder.append(_name_59, "\t\t");
                         _builder.append(counterGiven, "\t\t");
                         _builder.newLineIfNotEmpty();
                         _builder.append("\t\t");
                         _builder.append("\t");
                         _builder.append("Activity: Arm.Camera.");
-                        String _name_36 = cmd.eClass().getName();
-                        _builder.append(_name_36, "\t\t\t");
+                        String _name_60 = cmd.eClass().getName();
+                        _builder.append(_name_60, "\t\t\t");
                         _builder.append("(");
                         {
-                          EList<Time> _time_12 = cc.getTime();
-                          for(final Time tm_2 : _time_12) {
-                            Time value_15 = ((Time) tm_2);
-                            int _time_13 = value_15.getTime();
-                            _builder.append(_time_13, "\t\t\t");
-                            String _xblockexpression_5 = null;
+                          EList<Time> _time_28 = cc.getTime();
+                          for(final Time tm_2 : _time_28) {
+                            Time value_12 = ((Time) tm_2);
+                            int _time_29 = value_12.getTime();
+                            _builder.append(_time_29, "\t\t\t");
+                            String _xblockexpression_9 = null;
                             {
                               int _counterTime = counterTime;
-                              int _time_14 = value_15.getTime();
-                              counterTime = (_counterTime + _time_14);
-                              _xblockexpression_5 = "";
+                              int _time_30 = value_12.getTime();
+                              counterTime = (_counterTime + _time_30);
+                              _xblockexpression_9 = "";
                             }
-                            _builder.append(_xblockexpression_5, "\t\t\t");
+                            _builder.append(_xblockexpression_9, "\t\t\t");
                           }
                         }
                         _builder.append(");");
@@ -636,23 +1014,23 @@ public class CPtesterGenerator extends AbstractGenerator {
                         _builder.newLine();
                         _builder.append("\t\t");
                         _builder.append("Transition: (");
-                        String _name_37 = scenario.getGiven().eClass().getName();
-                        _builder.append(_name_37, "\t\t");
+                        String _name_61 = scenario.getGiven().eClass().getName();
+                        _builder.append(_name_61, "\t\t");
                         _builder.append(counterGiven, "\t\t");
                         _builder.append("->");
-                        String _name_38 = scenario.getGiven().eClass().getName();
-                        _builder.append(_name_38, "\t\t");
+                        String _name_62 = scenario.getGiven().eClass().getName();
+                        _builder.append(_name_62, "\t\t");
                         _builder.append("Warning)");
                         _builder.newLineIfNotEmpty();
                         _builder.append("\t\t");
                         _builder.append("\t");
                         _builder.append("Guard: Arm.wait(");
                         {
-                          EList<Time> _time_14 = cc.getTime();
-                          for(final Time tmp_4 : _time_14) {
-                            Time value_16 = ((Time) tmp_4);
-                            int _time_15 = value_16.getTime();
-                            _builder.append(_time_15, "\t\t\t");
+                          EList<Time> _time_30 = cc.getTime();
+                          for(final Time tmp_12 : _time_30) {
+                            Time value_13 = ((Time) tmp_12);
+                            int _time_31 = value_13.getTime();
+                            _builder.append(_time_31, "\t\t\t");
                             _builder.append(");");
                           }
                         }
@@ -663,11 +1041,11 @@ public class CPtesterGenerator extends AbstractGenerator {
                         _builder.newLine();
                         _builder.append("\t\t");
                         _builder.append("Transition: (");
-                        String _name_39 = scenario.getGiven().eClass().getName();
-                        _builder.append(_name_39, "\t\t");
+                        String _name_63 = scenario.getGiven().eClass().getName();
+                        _builder.append(_name_63, "\t\t");
                         _builder.append("Warning->");
-                        String _name_40 = scenario.getGiven().eClass().getName();
-                        _builder.append(_name_40, "\t\t");
+                        String _name_64 = scenario.getGiven().eClass().getName();
+                        _builder.append(_name_64, "\t\t");
                         _builder.append(counterGiven, "\t\t");
                         _builder.append(")");
                         _builder.newLineIfNotEmpty();
@@ -680,27 +1058,27 @@ public class CPtesterGenerator extends AbstractGenerator {
                         _builder.newLine();
                         _builder.append("\t\t");
                       } else {
-                        boolean _equals_5 = cmd.eClass().getName().equals("calibration");
-                        if (_equals_5) {
+                        boolean _equals_10 = cmd.eClass().getName().equals("calibration");
+                        if (_equals_10) {
                           calibration ccon = ((calibration) cmd);
                           _builder.newLineIfNotEmpty();
                           _builder.append("\t\t");
                           _builder.append("State: ");
-                          String _name_41 = scenario.getGiven().eClass().getName();
-                          _builder.append(_name_41, "\t\t");
+                          String _name_65 = scenario.getGiven().eClass().getName();
+                          _builder.append(_name_65, "\t\t");
                           _builder.append(counterGiven, "\t\t");
                           _builder.newLineIfNotEmpty();
                           _builder.append("\t\t");
                           _builder.append("\t");
                           _builder.append("Activity: Arm.Camera.");
-                          String _name_42 = cmd.eClass().getName();
-                          _builder.append(_name_42, "\t\t\t");
+                          String _name_66 = cmd.eClass().getName();
+                          _builder.append(_name_66, "\t\t\t");
                           _builder.append("(");
                           {
                             EList<Color> _color = ccon.getColor();
                             for(final Color color : _color) {
-                              Color value_17 = ((Color) color);
-                              String _color_1 = value_17.getColor();
+                              Color value_14 = ((Color) color);
+                              String _color_1 = value_14.getColor();
                               _builder.append(_color_1, "\t\t\t");
                             }
                           }
@@ -708,8 +1086,8 @@ public class CPtesterGenerator extends AbstractGenerator {
                           {
                             EList<H_min> _h_min = ccon.getH_min();
                             for(final H_min hMin : _h_min) {
-                              H_min value_18 = ((H_min) hMin);
-                              int _h_min_1 = value_18.getH_min();
+                              H_min value_15 = ((H_min) hMin);
+                              int _h_min_1 = value_15.getH_min();
                               _builder.append(_h_min_1, "\t\t\t");
                             }
                           }
@@ -717,8 +1095,8 @@ public class CPtesterGenerator extends AbstractGenerator {
                           {
                             EList<S_min> _s_min = ccon.getS_min();
                             for(final S_min sMin : _s_min) {
-                              S_min value_19 = ((S_min) sMin);
-                              int _s_min_1 = value_19.getS_min();
+                              S_min value_16 = ((S_min) sMin);
+                              int _s_min_1 = value_16.getS_min();
                               _builder.append(_s_min_1, "\t\t\t");
                             }
                           }
@@ -726,8 +1104,8 @@ public class CPtesterGenerator extends AbstractGenerator {
                           {
                             EList<V_min> _v_min = ccon.getV_min();
                             for(final V_min vMin : _v_min) {
-                              V_min value_20 = ((V_min) vMin);
-                              int _v_min_1 = value_20.getV_min();
+                              V_min value_17 = ((V_min) vMin);
+                              int _v_min_1 = value_17.getV_min();
                               _builder.append(_v_min_1, "\t\t\t");
                             }
                           }
@@ -735,8 +1113,8 @@ public class CPtesterGenerator extends AbstractGenerator {
                           {
                             EList<H_max> _h_max = ccon.getH_max();
                             for(final H_max hMax : _h_max) {
-                              H_max value_21 = ((H_max) hMax);
-                              int _h_max_1 = value_21.getH_max();
+                              H_max value_18 = ((H_max) hMax);
+                              int _h_max_1 = value_18.getH_max();
                               _builder.append(_h_max_1, "\t\t\t");
                             }
                           }
@@ -744,8 +1122,8 @@ public class CPtesterGenerator extends AbstractGenerator {
                           {
                             EList<S_max> _s_max = ccon.getS_max();
                             for(final S_max sMax : _s_max) {
-                              S_max value_22 = ((S_max) sMax);
-                              int _s_max_1 = value_22.getS_max();
+                              S_max value_19 = ((S_max) sMax);
+                              int _s_max_1 = value_19.getS_max();
                               _builder.append(_s_max_1, "\t\t\t");
                             }
                           }
@@ -753,8 +1131,8 @@ public class CPtesterGenerator extends AbstractGenerator {
                           {
                             EList<V_max> _v_max = ccon.getV_max();
                             for(final V_max vMax : _v_max) {
-                              V_max value_23 = ((V_max) vMax);
-                              int _v_max_1 = value_23.getV_max();
+                              V_max value_20 = ((V_max) vMax);
+                              int _v_max_1 = value_20.getV_max();
                               _builder.append(_v_max_1, "\t\t\t");
                             }
                           }
@@ -764,12 +1142,12 @@ public class CPtesterGenerator extends AbstractGenerator {
                           _builder.newLine();
                           _builder.append("\t\t");
                           _builder.append("Transition: (");
-                          String _name_43 = scenario.getGiven().eClass().getName();
-                          _builder.append(_name_43, "\t\t");
+                          String _name_67 = scenario.getGiven().eClass().getName();
+                          _builder.append(_name_67, "\t\t");
                           _builder.append(counterGiven, "\t\t");
                           _builder.append("->");
-                          String _name_44 = scenario.getGiven().eClass().getName();
-                          _builder.append(_name_44, "\t\t");
+                          String _name_68 = scenario.getGiven().eClass().getName();
+                          _builder.append(_name_68, "\t\t");
                           _builder.append("Warning)");
                           _builder.newLineIfNotEmpty();
                           _builder.append("\t\t");
@@ -781,11 +1159,11 @@ public class CPtesterGenerator extends AbstractGenerator {
                           _builder.newLine();
                           _builder.append("\t\t");
                           _builder.append("Transition: (");
-                          String _name_45 = scenario.getGiven().eClass().getName();
-                          _builder.append(_name_45, "\t\t");
+                          String _name_69 = scenario.getGiven().eClass().getName();
+                          _builder.append(_name_69, "\t\t");
                           _builder.append("Warning->");
-                          String _name_46 = scenario.getGiven().eClass().getName();
-                          _builder.append(_name_46, "\t\t");
+                          String _name_70 = scenario.getGiven().eClass().getName();
+                          _builder.append(_name_70, "\t\t");
                           _builder.append(counterGiven, "\t\t");
                           _builder.append(")");
                           _builder.newLineIfNotEmpty();
@@ -798,36 +1176,36 @@ public class CPtesterGenerator extends AbstractGenerator {
                           _builder.newLine();
                           _builder.append("\t\t");
                         } else {
-                          boolean _equals_6 = cmd.eClass().getName().equals("buzzerOn");
-                          if (_equals_6) {
+                          boolean _equals_11 = cmd.eClass().getName().equals("buzzerOn");
+                          if (_equals_11) {
                             buzzerOn bon = ((buzzerOn) cmd);
                             _builder.newLineIfNotEmpty();
                             _builder.append("\t\t");
                             _builder.append("State: ");
-                            String _name_47 = scenario.getGiven().eClass().getName();
-                            _builder.append(_name_47, "\t\t");
+                            String _name_71 = scenario.getGiven().eClass().getName();
+                            _builder.append(_name_71, "\t\t");
                             _builder.append(counterGiven, "\t\t");
                             _builder.newLineIfNotEmpty();
                             _builder.append("\t\t");
                             _builder.append("\t");
                             _builder.append("Activity: Board.Buzzer.");
-                            String _name_48 = cmd.eClass().getName();
-                            _builder.append(_name_48, "\t\t\t");
+                            String _name_72 = cmd.eClass().getName();
+                            _builder.append(_name_72, "\t\t\t");
                             _builder.append("(");
                             {
-                              EList<Time> _time_16 = bon.getTime();
-                              for(final Time tm_3 : _time_16) {
-                                Time value_24 = ((Time) tm_3);
-                                int _time_17 = value_24.getTime();
-                                _builder.append(_time_17, "\t\t\t");
-                                String _xblockexpression_6 = null;
+                              EList<Time> _time_32 = bon.getTime();
+                              for(final Time tm_3 : _time_32) {
+                                Time value_21 = ((Time) tm_3);
+                                int _time_33 = value_21.getTime();
+                                _builder.append(_time_33, "\t\t\t");
+                                String _xblockexpression_10 = null;
                                 {
                                   int _counterTime = counterTime;
-                                  int _time_18 = value_24.getTime();
-                                  counterTime = (_counterTime + _time_18);
-                                  _xblockexpression_6 = "";
+                                  int _time_34 = value_21.getTime();
+                                  counterTime = (_counterTime + _time_34);
+                                  _xblockexpression_10 = "";
                                 }
-                                _builder.append(_xblockexpression_6, "\t\t\t");
+                                _builder.append(_xblockexpression_10, "\t\t\t");
                               }
                             }
                             _builder.append(");");
@@ -837,12 +1215,12 @@ public class CPtesterGenerator extends AbstractGenerator {
                             _builder.newLine();
                             _builder.append("\t\t");
                             _builder.append("Transition: (");
-                            String _name_49 = scenario.getGiven().eClass().getName();
-                            _builder.append(_name_49, "\t\t");
+                            String _name_73 = scenario.getGiven().eClass().getName();
+                            _builder.append(_name_73, "\t\t");
                             _builder.append(counterGiven, "\t\t");
                             _builder.append("->");
-                            String _name_50 = scenario.getGiven().eClass().getName();
-                            _builder.append(_name_50, "\t\t");
+                            String _name_74 = scenario.getGiven().eClass().getName();
+                            _builder.append(_name_74, "\t\t");
                             _builder.append("Warning)");
                             _builder.newLineIfNotEmpty();
                             _builder.append("\t\t");
@@ -854,11 +1232,11 @@ public class CPtesterGenerator extends AbstractGenerator {
                             _builder.newLine();
                             _builder.append("\t\t");
                             _builder.append("Transition: (");
-                            String _name_51 = scenario.getGiven().eClass().getName();
-                            _builder.append(_name_51, "\t\t");
+                            String _name_75 = scenario.getGiven().eClass().getName();
+                            _builder.append(_name_75, "\t\t");
                             _builder.append("Warning->");
-                            String _name_52 = scenario.getGiven().eClass().getName();
-                            _builder.append(_name_52, "\t\t");
+                            String _name_76 = scenario.getGiven().eClass().getName();
+                            _builder.append(_name_76, "\t\t");
                             _builder.append(counterGiven, "\t\t");
                             _builder.append(")");
                             _builder.newLineIfNotEmpty();
@@ -871,21 +1249,21 @@ public class CPtesterGenerator extends AbstractGenerator {
                             _builder.newLine();
                             _builder.append("\t\t");
                           } else {
-                            boolean _equals_7 = cmd.eClass().getName().equals("buzzerOff");
-                            if (_equals_7) {
+                            boolean _equals_12 = cmd.eClass().getName().equals("buzzerOff");
+                            if (_equals_12) {
                               buzzerOff boff = ((buzzerOff) cmd);
                               _builder.newLineIfNotEmpty();
                               _builder.append("\t\t");
                               _builder.append("State: ");
-                              String _name_53 = scenario.getGiven().eClass().getName();
-                              _builder.append(_name_53, "\t\t");
+                              String _name_77 = scenario.getGiven().eClass().getName();
+                              _builder.append(_name_77, "\t\t");
                               _builder.append(counterGiven, "\t\t");
                               _builder.newLineIfNotEmpty();
                               _builder.append("\t\t");
                               _builder.append("\t");
                               _builder.append("Activity: Board.Buzzer.");
-                              String _name_54 = cmd.eClass().getName();
-                              _builder.append(_name_54, "\t\t\t");
+                              String _name_78 = cmd.eClass().getName();
+                              _builder.append(_name_78, "\t\t\t");
                               _builder.append("();");
                               _builder.newLineIfNotEmpty();
                               _builder.append("\t\t");
@@ -893,12 +1271,12 @@ public class CPtesterGenerator extends AbstractGenerator {
                               _builder.newLine();
                               _builder.append("\t\t");
                               _builder.append("Transition: (");
-                              String _name_55 = scenario.getGiven().eClass().getName();
-                              _builder.append(_name_55, "\t\t");
+                              String _name_79 = scenario.getGiven().eClass().getName();
+                              _builder.append(_name_79, "\t\t");
                               _builder.append(counterGiven, "\t\t");
                               _builder.append("->");
-                              String _name_56 = scenario.getGiven().eClass().getName();
-                              _builder.append(_name_56, "\t\t");
+                              String _name_80 = scenario.getGiven().eClass().getName();
+                              _builder.append(_name_80, "\t\t");
                               _builder.append("Warning)");
                               _builder.newLineIfNotEmpty();
                               _builder.append("\t\t");
@@ -910,11 +1288,11 @@ public class CPtesterGenerator extends AbstractGenerator {
                               _builder.newLine();
                               _builder.append("\t\t");
                               _builder.append("Transition: (");
-                              String _name_57 = scenario.getGiven().eClass().getName();
-                              _builder.append(_name_57, "\t\t");
+                              String _name_81 = scenario.getGiven().eClass().getName();
+                              _builder.append(_name_81, "\t\t");
                               _builder.append("Warning->");
-                              String _name_58 = scenario.getGiven().eClass().getName();
-                              _builder.append(_name_58, "\t\t");
+                              String _name_82 = scenario.getGiven().eClass().getName();
+                              _builder.append(_name_82, "\t\t");
                               _builder.append(counterGiven, "\t\t");
                               _builder.append(")");
                               _builder.newLineIfNotEmpty();
@@ -927,27 +1305,27 @@ public class CPtesterGenerator extends AbstractGenerator {
                               _builder.newLine();
                               _builder.append("\t\t");
                             } else {
-                              boolean _equals_8 = cmd.eClass().getName().equals("lightRGB");
-                              if (_equals_8) {
+                              boolean _equals_13 = cmd.eClass().getName().equals("lightRGB");
+                              if (_equals_13) {
                                 lightRGB rgb = ((lightRGB) cmd);
                                 _builder.newLineIfNotEmpty();
                                 _builder.append("\t\t");
                                 _builder.append("State: ");
-                                String _name_59 = scenario.getGiven().eClass().getName();
-                                _builder.append(_name_59, "\t\t");
+                                String _name_83 = scenario.getGiven().eClass().getName();
+                                _builder.append(_name_83, "\t\t");
                                 _builder.append(counterGiven, "\t\t");
                                 _builder.newLineIfNotEmpty();
                                 _builder.append("\t\t");
                                 _builder.append("\t");
                                 _builder.append("Activity: Board.Light.");
-                                String _name_60 = cmd.eClass().getName();
-                                _builder.append(_name_60, "\t\t\t");
+                                String _name_84 = cmd.eClass().getName();
+                                _builder.append(_name_84, "\t\t\t");
                                 _builder.append("(");
                                 {
                                   EList<R> _r = rgb.getR();
                                   for(final R r : _r) {
-                                    R value_25 = ((R) r);
-                                    int _r_1 = value_25.getR();
+                                    R value_22 = ((R) r);
+                                    int _r_1 = value_22.getR();
                                     _builder.append(_r_1, "\t\t\t");
                                   }
                                 }
@@ -955,8 +1333,8 @@ public class CPtesterGenerator extends AbstractGenerator {
                                 {
                                   EList<G> _g = rgb.getG();
                                   for(final G g : _g) {
-                                    G value_26 = ((G) g);
-                                    int _g_1 = value_26.getG();
+                                    G value_23 = ((G) g);
+                                    int _g_1 = value_23.getG();
                                     _builder.append(_g_1, "\t\t\t");
                                   }
                                 }
@@ -964,8 +1342,8 @@ public class CPtesterGenerator extends AbstractGenerator {
                                 {
                                   EList<B> _b = rgb.getB();
                                   for(final B b : _b) {
-                                    B value_27 = ((B) b);
-                                    int _b_1 = value_27.getB();
+                                    B value_24 = ((B) b);
+                                    int _b_1 = value_24.getB();
                                     _builder.append(_b_1, "\t\t\t");
                                   }
                                 }
@@ -976,12 +1354,12 @@ public class CPtesterGenerator extends AbstractGenerator {
                                 _builder.newLine();
                                 _builder.append("\t\t");
                                 _builder.append("Transition: (");
-                                String _name_61 = scenario.getGiven().eClass().getName();
-                                _builder.append(_name_61, "\t\t");
+                                String _name_85 = scenario.getGiven().eClass().getName();
+                                _builder.append(_name_85, "\t\t");
                                 _builder.append(counterGiven, "\t\t");
                                 _builder.append("->");
-                                String _name_62 = scenario.getGiven().eClass().getName();
-                                _builder.append(_name_62, "\t\t");
+                                String _name_86 = scenario.getGiven().eClass().getName();
+                                _builder.append(_name_86, "\t\t");
                                 _builder.append("Warning)");
                                 _builder.newLineIfNotEmpty();
                                 _builder.append("\t\t");
@@ -993,11 +1371,11 @@ public class CPtesterGenerator extends AbstractGenerator {
                                 _builder.newLine();
                                 _builder.append("\t\t");
                                 _builder.append("Transition: (");
-                                String _name_63 = scenario.getGiven().eClass().getName();
-                                _builder.append(_name_63, "\t\t");
+                                String _name_87 = scenario.getGiven().eClass().getName();
+                                _builder.append(_name_87, "\t\t");
                                 _builder.append("Warning->");
-                                String _name_64 = scenario.getGiven().eClass().getName();
-                                _builder.append(_name_64, "\t\t");
+                                String _name_88 = scenario.getGiven().eClass().getName();
+                                _builder.append(_name_88, "\t\t");
                                 _builder.append(counterGiven, "\t\t");
                                 _builder.append(")");
                                 _builder.newLineIfNotEmpty();
@@ -1021,32 +1399,32 @@ public class CPtesterGenerator extends AbstractGenerator {
             }
           }
         }
-        String _xblockexpression_7 = null;
+        String _xblockexpression_11 = null;
         {
           current = counterGiven;
-          _xblockexpression_7 = "";
+          _xblockexpression_11 = "";
         }
-        _builder.append(_xblockexpression_7, "\t\t");
-        String _xblockexpression_8 = null;
+        _builder.append(_xblockexpression_11, "\t\t");
+        String _xblockexpression_12 = null;
         {
           counterGiven++;
-          _xblockexpression_8 = "";
+          _xblockexpression_12 = "";
         }
-        _builder.append(_xblockexpression_8, "\t\t");
+        _builder.append(_xblockexpression_12, "\t\t");
         _builder.newLineIfNotEmpty();
         {
           int _length = ((Object[])Conversions.unwrapArray(scenario.getAndGiven(), Object.class)).length;
-          boolean _equals_9 = (current == _length);
-          if (_equals_9) {
+          boolean _equals_14 = (current == _length);
+          if (_equals_14) {
           } else {
             _builder.append("\t\t");
             _builder.append("Transition: (");
-            String _name_65 = scenario.getGiven().eClass().getName();
-            _builder.append(_name_65, "\t\t");
+            String _name_89 = scenario.getGiven().eClass().getName();
+            _builder.append(_name_89, "\t\t");
             _builder.append(current, "\t\t");
             _builder.append("->");
-            String _name_66 = scenario.getGiven().eClass().getName();
-            _builder.append(_name_66, "\t\t");
+            String _name_90 = scenario.getGiven().eClass().getName();
+            _builder.append(_name_90, "\t\t");
             _builder.append(counterGiven, "\t\t");
             _builder.append(")");
             _builder.newLineIfNotEmpty();
@@ -1062,8 +1440,8 @@ public class CPtesterGenerator extends AbstractGenerator {
     }
     _builder.append("\t\t");
     _builder.append("State: ");
-    String _name_67 = scenario.getGiven().eClass().getName();
-    _builder.append(_name_67, "\t\t");
+    String _name_91 = scenario.getGiven().eClass().getName();
+    _builder.append(_name_91, "\t\t");
     _builder.append("Warning");
     _builder.newLineIfNotEmpty();
     _builder.append("\t\t\t\t");
@@ -1073,12 +1451,12 @@ public class CPtesterGenerator extends AbstractGenerator {
     _builder.newLine();
     _builder.append("\t\t");
     _builder.append("Transition: (");
-    String _name_68 = scenario.getGiven().eClass().getName();
-    _builder.append(_name_68, "\t\t");
+    String _name_92 = scenario.getGiven().eClass().getName();
+    _builder.append(_name_92, "\t\t");
     _builder.append(current, "\t\t");
     _builder.append("->");
-    String _name_69 = scenario.getWhen().eClass().getName();
-    _builder.append(_name_69, "\t\t");
+    String _name_93 = scenario.getWhen().eClass().getName();
+    _builder.append(_name_93, "\t\t");
     _builder.append(")\t\t\t\t");
     _builder.newLineIfNotEmpty();
     {
@@ -1095,48 +1473,48 @@ public class CPtesterGenerator extends AbstractGenerator {
               EList<Command> _command_1 = andG_1.getCommand();
               for(final Command cmd_1 : _command_1) {
                 _builder.append("\t\t\t\t");
-                String _xblockexpression_9 = null;
+                String _xblockexpression_13 = null;
                 {
                   counterLength++;
-                  _xblockexpression_9 = "";
+                  _xblockexpression_13 = "";
                 }
-                _builder.append(_xblockexpression_9, "\t\t\t\t");
+                _builder.append(_xblockexpression_13, "\t\t\t\t");
                 _builder.newLineIfNotEmpty();
                 {
                   int _length_1 = ((Object[])Conversions.unwrapArray(scenario.getAndGiven(), Object.class)).length;
-                  boolean _equals_10 = (counterLength == _length_1);
-                  if (_equals_10) {
+                  boolean _equals_15 = (counterLength == _length_1);
+                  if (_equals_15) {
                     _builder.append("\t\t\t\t");
                     {
-                      boolean _equals_11 = cmd_1.getName().equals("rotateServo");
-                      if (_equals_11) {
+                      boolean _equals_16 = cmd_1.getName().equals("rotateServo");
+                      if (_equals_16) {
                         rotateServo ias = ((rotateServo) cmd_1);
                         _builder.newLineIfNotEmpty();
                         _builder.append("\t\t\t\t");
                         _builder.append("Guard: Arm.Servos.isAtSingle(");
                         {
-                          EList<Servo> _servo_4 = ias.getServo();
-                          for(final Servo ser_2 : _servo_4) {
-                            Servo value_28 = ((Servo) ser_2);
-                            int _servo_5 = value_28.getServo();
-                            _builder.append(_servo_5, "\t\t\t\t");
+                          EList<Servo> _servo_13 = ias.getServo();
+                          for(final Servo ser_2 : _servo_13) {
+                            Servo value_25 = ((Servo) ser_2);
+                            int _servo_14 = value_25.getServo();
+                            _builder.append(_servo_14, "\t\t\t\t");
                           }
                         }
                         _builder.append(", ");
                         {
-                          EList<Angle> _angle_8 = ias.getAngle();
-                          for(final Angle ang_1 : _angle_8) {
-                            Angle value_29 = ((Angle) ang_1);
-                            int _angle_9 = value_29.getAngle();
-                            _builder.append(_angle_9, "\t\t\t\t");
+                          EList<Angle> _angle_16 = ias.getAngle();
+                          for(final Angle ang_5 : _angle_16) {
+                            Angle value_26 = ((Angle) ang_5);
+                            int _angle_17 = value_26.getAngle();
+                            _builder.append(_angle_17, "\t\t\t\t");
                           }
                         }
                         _builder.append(", 2)\t\t\t\t\t\t\t\t\t\t\t\t");
                         _builder.newLineIfNotEmpty();
                         _builder.append("\t\t\t\t");
                       } else {
-                        boolean _equals_12 = cmd_1.getName().equals("rotateAllServos");
-                        if (_equals_12) {
+                        boolean _equals_17 = cmd_1.getName().equals("rotateAllServos");
+                        if (_equals_17) {
                           rotateAllServos ia = ((rotateAllServos) cmd_1);
                           _builder.append("\t\t\t\t\t\t");
                           _builder.newLineIfNotEmpty();
@@ -1144,55 +1522,55 @@ public class CPtesterGenerator extends AbstractGenerator {
                           _builder.append("Guard: Arm.isAt(");
                           {
                             EList<Angle> _angle1_1 = ia.getAngle1();
-                            for(final Angle ang_2 : _angle1_1) {
-                              Angle value_30 = ((Angle) ang_2);
-                              int _angle_10 = value_30.getAngle();
-                              _builder.append(_angle_10, "\t\t\t\t");
+                            for(final Angle ang_6 : _angle1_1) {
+                              Angle value_27 = ((Angle) ang_6);
+                              int _angle_18 = value_27.getAngle();
+                              _builder.append(_angle_18, "\t\t\t\t");
                             }
                           }
                           _builder.append(", ");
                           {
                             EList<Angle> _angle2_1 = ia.getAngle2();
-                            for(final Angle ang_3 : _angle2_1) {
-                              Angle value_31 = ((Angle) ang_3);
-                              int _angle_11 = value_31.getAngle();
-                              _builder.append(_angle_11, "\t\t\t\t");
+                            for(final Angle ang_7 : _angle2_1) {
+                              Angle value_28 = ((Angle) ang_7);
+                              int _angle_19 = value_28.getAngle();
+                              _builder.append(_angle_19, "\t\t\t\t");
                             }
                           }
                           _builder.append(", ");
                           {
                             EList<Angle> _angle3_1 = ia.getAngle3();
-                            for(final Angle ang_4 : _angle3_1) {
-                              Angle value_32 = ((Angle) ang_4);
-                              int _angle_12 = value_32.getAngle();
-                              _builder.append(_angle_12, "\t\t\t\t");
+                            for(final Angle ang_8 : _angle3_1) {
+                              Angle value_29 = ((Angle) ang_8);
+                              int _angle_20 = value_29.getAngle();
+                              _builder.append(_angle_20, "\t\t\t\t");
                             }
                           }
                           _builder.append(", ");
                           {
                             EList<Angle> _angle4_1 = ia.getAngle4();
-                            for(final Angle ang_5 : _angle4_1) {
-                              Angle value_33 = ((Angle) ang_5);
-                              int _angle_13 = value_33.getAngle();
-                              _builder.append(_angle_13, "\t\t\t\t");
+                            for(final Angle ang_9 : _angle4_1) {
+                              Angle value_30 = ((Angle) ang_9);
+                              int _angle_21 = value_30.getAngle();
+                              _builder.append(_angle_21, "\t\t\t\t");
                             }
                           }
                           _builder.append(", ");
                           {
                             EList<Angle> _angle5_1 = ia.getAngle5();
-                            for(final Angle ang_6 : _angle5_1) {
-                              Angle value_34 = ((Angle) ang_6);
-                              int _angle_14 = value_34.getAngle();
-                              _builder.append(_angle_14, "\t\t\t\t");
+                            for(final Angle ang_10 : _angle5_1) {
+                              Angle value_31 = ((Angle) ang_10);
+                              int _angle_22 = value_31.getAngle();
+                              _builder.append(_angle_22, "\t\t\t\t");
                             }
                           }
                           _builder.append(", ");
                           {
                             EList<Angle> _angle6_1 = ia.getAngle6();
-                            for(final Angle ang_7 : _angle6_1) {
-                              Angle value_35 = ((Angle) ang_7);
-                              int _angle_15 = value_35.getAngle();
-                              _builder.append(_angle_15, "\t\t\t\t");
+                            for(final Angle ang_11 : _angle6_1) {
+                              Angle value_32 = ((Angle) ang_11);
+                              int _angle_23 = value_32.getAngle();
+                              _builder.append(_angle_23, "\t\t\t\t");
                             }
                           }
                           _builder.append(", 2);");
@@ -1212,212 +1590,212 @@ public class CPtesterGenerator extends AbstractGenerator {
     _builder.newLine();
     _builder.append("\t\t");
     _builder.append("State: ");
-    String _name_70 = scenario.getWhen().eClass().getName();
-    _builder.append(_name_70, "\t\t");
+    String _name_94 = scenario.getWhen().eClass().getName();
+    _builder.append(_name_94, "\t\t");
     _builder.newLineIfNotEmpty();
     {
       EList<Command> _command_2 = scenario.getWhen().getCommand();
       for(final Command cmd_2 : _command_2) {
         _builder.append("\t\t\t\t");
         {
-          boolean _equals_13 = cmd_2.eClass().getName().equals("rotateServo");
-          if (_equals_13) {
+          boolean _equals_18 = cmd_2.eClass().getName().equals("rotateServo");
+          if (_equals_18) {
             rotateServo rot_2 = ((rotateServo) cmd_2);
             _builder.newLineIfNotEmpty();
             _builder.append("\t\t\t\t");
             _builder.append("Activity: Arm.Servos.");
-            String _name_71 = cmd_2.eClass().getName();
-            _builder.append(_name_71, "\t\t\t\t");
+            String _name_95 = cmd_2.eClass().getName();
+            _builder.append(_name_95, "\t\t\t\t");
             _builder.append("(");
             {
-              EList<Servo> _servo_6 = rot_2.getServo();
-              for(final Servo ser_3 : _servo_6) {
-                Servo value_36 = ((Servo) ser_3);
-                int _servo_7 = value_36.getServo();
-                _builder.append(_servo_7, "\t\t\t\t");
+              EList<Servo> _servo_15 = rot_2.getServo();
+              for(final Servo ser_3 : _servo_15) {
+                Servo value_33 = ((Servo) ser_3);
+                int _servo_16 = value_33.getServo();
+                _builder.append(_servo_16, "\t\t\t\t");
               }
             }
             _builder.append(", ");
             {
-              EList<Angle> _angle_16 = rot_2.getAngle();
-              for(final Angle ang_8 : _angle_16) {
-                Angle value_37 = ((Angle) ang_8);
-                int _angle_17 = value_37.getAngle();
-                _builder.append(_angle_17, "\t\t\t\t");
+              EList<Angle> _angle_24 = rot_2.getAngle();
+              for(final Angle ang_12 : _angle_24) {
+                Angle value_34 = ((Angle) ang_12);
+                int _angle_25 = value_34.getAngle();
+                _builder.append(_angle_25, "\t\t\t\t");
               }
             }
             _builder.append(", ");
             {
-              EList<Time> _time_18 = rot_2.getTime();
-              for(final Time tmp_5 : _time_18) {
-                Time value_38 = ((Time) tmp_5);
-                int _time_19 = value_38.getTime();
-                _builder.append(_time_19, "\t\t\t\t");
-                String _xblockexpression_10 = null;
+              EList<Time> _time_34 = rot_2.getTime();
+              for(final Time tmp_13 : _time_34) {
+                Time value_35 = ((Time) tmp_13);
+                int _time_35 = value_35.getTime();
+                _builder.append(_time_35, "\t\t\t\t");
+                String _xblockexpression_14 = null;
                 {
                   int _counterTime = counterTime;
-                  int _time_20 = value_38.getTime();
-                  counterTime = (_counterTime + _time_20);
-                  _xblockexpression_10 = "";
+                  int _time_36 = value_35.getTime();
+                  counterTime = (_counterTime + _time_36);
+                  _xblockexpression_14 = "";
                 }
-                _builder.append(_xblockexpression_10, "\t\t\t\t");
+                _builder.append(_xblockexpression_14, "\t\t\t\t");
               }
             }
             _builder.append(")");
             _builder.newLineIfNotEmpty();
             _builder.append("\t\t\t\t");
           } else {
-            boolean _equals_14 = cmd_2.eClass().getName().equals("rotateAllServos");
-            if (_equals_14) {
+            boolean _equals_19 = cmd_2.eClass().getName().equals("rotateAllServos");
+            if (_equals_19) {
               rotateAllServos rot_3 = ((rotateAllServos) cmd_2);
               _builder.newLineIfNotEmpty();
               _builder.append("\t\t\t\t");
               _builder.append("Activity: Arm.");
-              String _name_72 = cmd_2.eClass().getName();
-              _builder.append(_name_72, "\t\t\t\t");
+              String _name_96 = cmd_2.eClass().getName();
+              _builder.append(_name_96, "\t\t\t\t");
               _builder.append("(");
               {
                 EList<Angle> _angle1_2 = rot_3.getAngle1();
                 for(final Angle ang1_1 : _angle1_2) {
-                  Angle value_39 = ((Angle) ang1_1);
-                  int _angle_18 = value_39.getAngle();
-                  _builder.append(_angle_18, "\t\t\t\t");
+                  Angle value_36 = ((Angle) ang1_1);
+                  int _angle_26 = value_36.getAngle();
+                  _builder.append(_angle_26, "\t\t\t\t");
                 }
               }
               _builder.append(", ");
               {
                 EList<Angle> _angle2_2 = rot_3.getAngle2();
                 for(final Angle ang2_1 : _angle2_2) {
-                  Angle value_40 = ((Angle) ang2_1);
-                  int _angle_19 = value_40.getAngle();
-                  _builder.append(_angle_19, "\t\t\t\t");
+                  Angle value_37 = ((Angle) ang2_1);
+                  int _angle_27 = value_37.getAngle();
+                  _builder.append(_angle_27, "\t\t\t\t");
                 }
               }
               _builder.append(", ");
               {
                 EList<Angle> _angle3_2 = rot_3.getAngle3();
                 for(final Angle ang3_1 : _angle3_2) {
-                  Angle value_41 = ((Angle) ang3_1);
-                  int _angle_20 = value_41.getAngle();
-                  _builder.append(_angle_20, "\t\t\t\t");
+                  Angle value_38 = ((Angle) ang3_1);
+                  int _angle_28 = value_38.getAngle();
+                  _builder.append(_angle_28, "\t\t\t\t");
                 }
               }
               _builder.append(", ");
               {
                 EList<Angle> _angle4_2 = rot_3.getAngle4();
                 for(final Angle ang4_1 : _angle4_2) {
-                  Angle value_42 = ((Angle) ang4_1);
-                  int _angle_21 = value_42.getAngle();
-                  _builder.append(_angle_21, "\t\t\t\t");
+                  Angle value_39 = ((Angle) ang4_1);
+                  int _angle_29 = value_39.getAngle();
+                  _builder.append(_angle_29, "\t\t\t\t");
                 }
               }
               _builder.append(", ");
               {
                 EList<Angle> _angle5_2 = rot_3.getAngle5();
                 for(final Angle ang5_1 : _angle5_2) {
-                  Angle value_43 = ((Angle) ang5_1);
-                  int _angle_22 = value_43.getAngle();
-                  _builder.append(_angle_22, "\t\t\t\t");
+                  Angle value_40 = ((Angle) ang5_1);
+                  int _angle_30 = value_40.getAngle();
+                  _builder.append(_angle_30, "\t\t\t\t");
                 }
               }
               _builder.append(", ");
               {
                 EList<Angle> _angle6_2 = rot_3.getAngle6();
                 for(final Angle ang6_1 : _angle6_2) {
-                  Angle value_44 = ((Angle) ang6_1);
-                  int _angle_23 = value_44.getAngle();
-                  _builder.append(_angle_23, "\t\t\t\t");
+                  Angle value_41 = ((Angle) ang6_1);
+                  int _angle_31 = value_41.getAngle();
+                  _builder.append(_angle_31, "\t\t\t\t");
                 }
               }
               _builder.append(", ");
               {
-                EList<Time> _time_20 = rot_3.getTime();
-                for(final Time tmp_6 : _time_20) {
-                  Time value_45 = ((Time) tmp_6);
-                  int _time_21 = value_45.getTime();
-                  _builder.append(_time_21, "\t\t\t\t");
+                EList<Time> _time_36 = rot_3.getTime();
+                for(final Time tmp_14 : _time_36) {
+                  Time value_42 = ((Time) tmp_14);
+                  int _time_37 = value_42.getTime();
+                  _builder.append(_time_37, "\t\t\t\t");
                 }
               }
               _builder.append(");");
               _builder.newLineIfNotEmpty();
               _builder.append("\t\t\t\t");
             } else {
-              boolean _equals_15 = cmd_2.eClass().getName().equals("readAllServos");
-              if (_equals_15) {
+              boolean _equals_20 = cmd_2.eClass().getName().equals("readAllServos");
+              if (_equals_20) {
                 readAllServos ras_1 = ((readAllServos) cmd_2);
                 _builder.newLineIfNotEmpty();
                 _builder.append("\t\t\t\t");
                 _builder.append("Activity: Arm.");
-                String _name_73 = cmd_2.eClass().getName();
-                _builder.append(_name_73, "\t\t\t\t");
+                String _name_97 = cmd_2.eClass().getName();
+                _builder.append(_name_97, "\t\t\t\t");
                 _builder.append("()");
                 _builder.newLineIfNotEmpty();
                 _builder.append("\t\t\t\t");
               } else {
-                boolean _equals_16 = cmd_2.eClass().getName().equals("readServo");
-                if (_equals_16) {
+                boolean _equals_21 = cmd_2.eClass().getName().equals("readServo");
+                if (_equals_21) {
                   readServo rs_1 = ((readServo) cmd_2);
                   _builder.newLineIfNotEmpty();
                   _builder.append("\t\t\t\t");
                   _builder.append("Activity: Arm.Servos.");
-                  String _name_74 = cmd_2.eClass().getName();
-                  _builder.append(_name_74, "\t\t\t\t");
+                  String _name_98 = cmd_2.eClass().getName();
+                  _builder.append(_name_98, "\t\t\t\t");
                   _builder.append("(");
                   {
-                    EList<Servo> _servo_8 = rs_1.getServo();
-                    for(final Servo ser_4 : _servo_8) {
-                      Servo value_46 = ((Servo) ser_4);
-                      int _servo_9 = value_46.getServo();
-                      _builder.append(_servo_9, "\t\t\t\t");
+                    EList<Servo> _servo_17 = rs_1.getServo();
+                    for(final Servo ser_4 : _servo_17) {
+                      Servo value_43 = ((Servo) ser_4);
+                      int _servo_18 = value_43.getServo();
+                      _builder.append(_servo_18, "\t\t\t\t");
                     }
                   }
                   _builder.append(")");
                   _builder.newLineIfNotEmpty();
                   _builder.append("\t\t\t\t");
                 } else {
-                  boolean _equals_17 = cmd_2.eClass().getName().equals("cameraColor");
-                  if (_equals_17) {
+                  boolean _equals_22 = cmd_2.eClass().getName().equals("cameraColor");
+                  if (_equals_22) {
                     cameraColor cc_1 = ((cameraColor) cmd_2);
                     _builder.newLineIfNotEmpty();
                     _builder.append("\t\t\t\t");
                     _builder.append("Activity: Arm.Camera.");
-                    String _name_75 = cmd_2.eClass().getName();
-                    _builder.append(_name_75, "\t\t\t\t");
+                    String _name_99 = cmd_2.eClass().getName();
+                    _builder.append(_name_99, "\t\t\t\t");
                     _builder.append("(");
                     {
-                      EList<Time> _time_22 = cc_1.getTime();
-                      for(final Time tm_4 : _time_22) {
-                        Time value_47 = ((Time) tm_4);
-                        int _time_23 = value_47.getTime();
-                        _builder.append(_time_23, "\t\t\t\t");
-                        String _xblockexpression_11 = null;
+                      EList<Time> _time_38 = cc_1.getTime();
+                      for(final Time tm_4 : _time_38) {
+                        Time value_44 = ((Time) tm_4);
+                        int _time_39 = value_44.getTime();
+                        _builder.append(_time_39, "\t\t\t\t");
+                        String _xblockexpression_15 = null;
                         {
                           int _counterTime = counterTime;
-                          int _time_24 = value_47.getTime();
-                          counterTime = (_counterTime + _time_24);
-                          _xblockexpression_11 = "";
+                          int _time_40 = value_44.getTime();
+                          counterTime = (_counterTime + _time_40);
+                          _xblockexpression_15 = "";
                         }
-                        _builder.append(_xblockexpression_11, "\t\t\t\t");
+                        _builder.append(_xblockexpression_15, "\t\t\t\t");
                       }
                     }
                     _builder.append(");");
                     _builder.newLineIfNotEmpty();
                     _builder.append("\t\t\t\t");
                   } else {
-                    boolean _equals_18 = cmd_2.eClass().getName().equals("calibration");
-                    if (_equals_18) {
+                    boolean _equals_23 = cmd_2.eClass().getName().equals("calibration");
+                    if (_equals_23) {
                       calibration ccon_1 = ((calibration) cmd_2);
                       _builder.newLineIfNotEmpty();
                       _builder.append("\t\t\t\t");
                       _builder.append("Activity: Arm.Camera.");
-                      String _name_76 = cmd_2.eClass().getName();
-                      _builder.append(_name_76, "\t\t\t\t");
+                      String _name_100 = cmd_2.eClass().getName();
+                      _builder.append(_name_100, "\t\t\t\t");
                       _builder.append("(");
                       {
                         EList<Color> _color_2 = ccon_1.getColor();
                         for(final Color color_1 : _color_2) {
-                          Color value_48 = ((Color) color_1);
-                          String _color_3 = value_48.getColor();
+                          Color value_45 = ((Color) color_1);
+                          String _color_3 = value_45.getColor();
                           _builder.append(_color_3, "\t\t\t\t");
                         }
                       }
@@ -1425,8 +1803,8 @@ public class CPtesterGenerator extends AbstractGenerator {
                       {
                         EList<H_min> _h_min_2 = ccon_1.getH_min();
                         for(final H_min hMin_1 : _h_min_2) {
-                          H_min value_49 = ((H_min) hMin_1);
-                          int _h_min_3 = value_49.getH_min();
+                          H_min value_46 = ((H_min) hMin_1);
+                          int _h_min_3 = value_46.getH_min();
                           _builder.append(_h_min_3, "\t\t\t\t");
                         }
                       }
@@ -1434,8 +1812,8 @@ public class CPtesterGenerator extends AbstractGenerator {
                       {
                         EList<S_min> _s_min_2 = ccon_1.getS_min();
                         for(final S_min sMin_1 : _s_min_2) {
-                          S_min value_50 = ((S_min) sMin_1);
-                          int _s_min_3 = value_50.getS_min();
+                          S_min value_47 = ((S_min) sMin_1);
+                          int _s_min_3 = value_47.getS_min();
                           _builder.append(_s_min_3, "\t\t\t\t");
                         }
                       }
@@ -1443,8 +1821,8 @@ public class CPtesterGenerator extends AbstractGenerator {
                       {
                         EList<V_min> _v_min_2 = ccon_1.getV_min();
                         for(final V_min vMin_1 : _v_min_2) {
-                          V_min value_51 = ((V_min) vMin_1);
-                          int _v_min_3 = value_51.getV_min();
+                          V_min value_48 = ((V_min) vMin_1);
+                          int _v_min_3 = value_48.getV_min();
                           _builder.append(_v_min_3, "\t\t\t\t");
                         }
                       }
@@ -1452,8 +1830,8 @@ public class CPtesterGenerator extends AbstractGenerator {
                       {
                         EList<H_max> _h_max_2 = ccon_1.getH_max();
                         for(final H_max hMax_1 : _h_max_2) {
-                          H_max value_52 = ((H_max) hMax_1);
-                          int _h_max_3 = value_52.getH_max();
+                          H_max value_49 = ((H_max) hMax_1);
+                          int _h_max_3 = value_49.getH_max();
                           _builder.append(_h_max_3, "\t\t\t\t");
                         }
                       }
@@ -1461,8 +1839,8 @@ public class CPtesterGenerator extends AbstractGenerator {
                       {
                         EList<S_max> _s_max_2 = ccon_1.getS_max();
                         for(final S_max sMax_1 : _s_max_2) {
-                          S_max value_53 = ((S_max) sMax_1);
-                          int _s_max_3 = value_53.getS_max();
+                          S_max value_50 = ((S_max) sMax_1);
+                          int _s_max_3 = value_50.getS_max();
                           _builder.append(_s_max_3, "\t\t\t\t");
                         }
                       }
@@ -1470,8 +1848,8 @@ public class CPtesterGenerator extends AbstractGenerator {
                       {
                         EList<V_max> _v_max_2 = ccon_1.getV_max();
                         for(final V_max vMax_1 : _v_max_2) {
-                          V_max value_54 = ((V_max) vMax_1);
-                          int _v_max_3 = value_54.getV_max();
+                          V_max value_51 = ((V_max) vMax_1);
+                          int _v_max_3 = value_51.getV_max();
                           _builder.append(_v_max_3, "\t\t\t\t");
                         }
                       }
@@ -1479,61 +1857,61 @@ public class CPtesterGenerator extends AbstractGenerator {
                       _builder.newLineIfNotEmpty();
                       _builder.append("\t\t\t\t");
                     } else {
-                      boolean _equals_19 = cmd_2.eClass().getName().equals("buzzerOn");
-                      if (_equals_19) {
+                      boolean _equals_24 = cmd_2.eClass().getName().equals("buzzerOn");
+                      if (_equals_24) {
                         buzzerOn bon_1 = ((buzzerOn) cmd_2);
                         _builder.newLineIfNotEmpty();
                         _builder.append("\t\t\t\t");
                         _builder.append("Activity: Board.Buzzer.");
-                        String _name_77 = cmd_2.eClass().getName();
-                        _builder.append(_name_77, "\t\t\t\t");
+                        String _name_101 = cmd_2.eClass().getName();
+                        _builder.append(_name_101, "\t\t\t\t");
                         _builder.append("(");
                         {
-                          EList<Time> _time_24 = bon_1.getTime();
-                          for(final Time tm_5 : _time_24) {
-                            Time value_55 = ((Time) tm_5);
-                            int _time_25 = value_55.getTime();
-                            _builder.append(_time_25, "\t\t\t\t");
-                            String _xblockexpression_12 = null;
+                          EList<Time> _time_40 = bon_1.getTime();
+                          for(final Time tm_5 : _time_40) {
+                            Time value_52 = ((Time) tm_5);
+                            int _time_41 = value_52.getTime();
+                            _builder.append(_time_41, "\t\t\t\t");
+                            String _xblockexpression_16 = null;
                             {
                               int _counterTime = counterTime;
-                              int _time_26 = value_55.getTime();
-                              counterTime = (_counterTime + _time_26);
-                              _xblockexpression_12 = "";
+                              int _time_42 = value_52.getTime();
+                              counterTime = (_counterTime + _time_42);
+                              _xblockexpression_16 = "";
                             }
-                            _builder.append(_xblockexpression_12, "\t\t\t\t");
+                            _builder.append(_xblockexpression_16, "\t\t\t\t");
                           }
                         }
                         _builder.append(");");
                         _builder.newLineIfNotEmpty();
                         _builder.append("\t\t\t\t");
                       } else {
-                        boolean _equals_20 = cmd_2.eClass().getName().equals("buzzerOff");
-                        if (_equals_20) {
+                        boolean _equals_25 = cmd_2.eClass().getName().equals("buzzerOff");
+                        if (_equals_25) {
                           buzzerOff boff_1 = ((buzzerOff) cmd_2);
                           _builder.newLineIfNotEmpty();
                           _builder.append("\t\t\t\t");
                           _builder.append("Activity: Board.Buzzer.");
-                          String _name_78 = cmd_2.eClass().getName();
-                          _builder.append(_name_78, "\t\t\t\t");
+                          String _name_102 = cmd_2.eClass().getName();
+                          _builder.append(_name_102, "\t\t\t\t");
                           _builder.append("();");
                           _builder.newLineIfNotEmpty();
                           _builder.append("\t\t\t\t");
                         } else {
-                          boolean _equals_21 = cmd_2.eClass().getName().equals("lightRGB");
-                          if (_equals_21) {
+                          boolean _equals_26 = cmd_2.eClass().getName().equals("lightRGB");
+                          if (_equals_26) {
                             lightRGB rgb_1 = ((lightRGB) cmd_2);
                             _builder.newLineIfNotEmpty();
                             _builder.append("\t\t\t\t");
                             _builder.append("Activity: Board.Light.");
-                            String _name_79 = cmd_2.eClass().getName();
-                            _builder.append(_name_79, "\t\t\t\t");
+                            String _name_103 = cmd_2.eClass().getName();
+                            _builder.append(_name_103, "\t\t\t\t");
                             _builder.append("(");
                             {
                               EList<R> _r_2 = rgb_1.getR();
                               for(final R r_1 : _r_2) {
-                                R value_56 = ((R) r_1);
-                                int _r_3 = value_56.getR();
+                                R value_53 = ((R) r_1);
+                                int _r_3 = value_53.getR();
                                 _builder.append(_r_3, "\t\t\t\t");
                               }
                             }
@@ -1541,8 +1919,8 @@ public class CPtesterGenerator extends AbstractGenerator {
                             {
                               EList<G> _g_2 = rgb_1.getG();
                               for(final G g_1 : _g_2) {
-                                G value_57 = ((G) g_1);
-                                int _g_3 = value_57.getG();
+                                G value_54 = ((G) g_1);
+                                int _g_3 = value_54.getG();
                                 _builder.append(_g_3, "\t\t\t\t");
                               }
                             }
@@ -1550,8 +1928,8 @@ public class CPtesterGenerator extends AbstractGenerator {
                             {
                               EList<B> _b_2 = rgb_1.getB();
                               for(final B b_1 : _b_2) {
-                                B value_58 = ((B) b_1);
-                                int _b_3 = value_58.getB();
+                                B value_55 = ((B) b_1);
+                                int _b_3 = value_55.getB();
                                 _builder.append(_b_3, "\t\t\t\t");
                               }
                             }
@@ -1573,8 +1951,8 @@ public class CPtesterGenerator extends AbstractGenerator {
     _builder.newLine();
     _builder.append("\t\t");
     _builder.append("Transition: (");
-    String _name_80 = scenario.getWhen().eClass().getName();
-    _builder.append(_name_80, "\t\t");
+    String _name_104 = scenario.getWhen().eClass().getName();
+    _builder.append(_name_104, "\t\t");
     _builder.append("->Error)");
     _builder.newLineIfNotEmpty();
     {
@@ -1585,29 +1963,29 @@ public class CPtesterGenerator extends AbstractGenerator {
           for(final Conditions cond : _conditions) {
             _builder.append("\t\t\t\t");
             {
-              EList<Time> _time_26 = cond.getTime();
-              for(final Time tm_6 : _time_26) {
-                Time value_59 = ((Time) tm_6);
+              EList<Time> _time_42 = cond.getTime();
+              for(final Time tm_6 : _time_42) {
+                Time value_56 = ((Time) tm_6);
                 _builder.newLineIfNotEmpty();
                 {
-                  int _time_27 = value_59.getTime();
-                  boolean _greaterThan = (_time_27 > maxTime);
+                  int _time_43 = value_56.getTime();
+                  boolean _greaterThan = (_time_43 > maxTime);
                   if (_greaterThan) {
                     _builder.append("\t\t\t\t");
-                    String _xblockexpression_13 = null;
+                    String _xblockexpression_17 = null;
                     {
-                      maxTime = value_59.getTime();
-                      _xblockexpression_13 = "";
+                      maxTime = value_56.getTime();
+                      _xblockexpression_17 = "";
                     }
-                    _builder.append(_xblockexpression_13, "\t\t\t\t");
+                    _builder.append(_xblockexpression_17, "\t\t\t\t");
                     _builder.newLineIfNotEmpty();
                     _builder.append("\t\t\t\t");
-                    String _xblockexpression_14 = null;
+                    String _xblockexpression_18 = null;
                     {
                       condName = cond.getName();
-                      _xblockexpression_14 = "";
+                      _xblockexpression_18 = "";
                     }
-                    _builder.append(_xblockexpression_14, "\t\t\t\t");
+                    _builder.append(_xblockexpression_18, "\t\t\t\t");
                     _builder.newLineIfNotEmpty();
                   }
                 }
@@ -1635,8 +2013,8 @@ public class CPtesterGenerator extends AbstractGenerator {
     _builder.newLine();
     _builder.append("\t\t");
     _builder.append("Transition: (");
-    String _name_81 = scenario.getWhen().eClass().getName();
-    _builder.append(_name_81, "\t\t");
+    String _name_105 = scenario.getWhen().eClass().getName();
+    _builder.append(_name_105, "\t\t");
     _builder.append("->Final)\t\t");
     _builder.newLineIfNotEmpty();
     {
@@ -1655,38 +2033,38 @@ public class CPtesterGenerator extends AbstractGenerator {
           for(final Solution sol : _solution) {
             _builder.append("\t\t\t\t");
             {
-              boolean _equals_22 = sol.eClass().getName().equals("isAtSingle");
-              if (_equals_22) {
+              boolean _equals_27 = sol.eClass().getName().equals("isAtSingle");
+              if (_equals_27) {
                 isAtSingle ias_1 = ((isAtSingle) sol);
                 _builder.newLineIfNotEmpty();
                 _builder.append("\t\t\t\t");
                 _builder.append("Guard: Arm.Servos.");
-                String _name_82 = sol.eClass().getName();
-                _builder.append(_name_82, "\t\t\t\t");
+                String _name_106 = sol.eClass().getName();
+                _builder.append(_name_106, "\t\t\t\t");
                 _builder.append("(");
                 {
-                  EList<Servo> _servo_10 = ias_1.getServo();
-                  for(final Servo ser_5 : _servo_10) {
-                    Servo value_60 = ((Servo) ser_5);
-                    int _servo_11 = value_60.getServo();
-                    _builder.append(_servo_11, "\t\t\t\t");
+                  EList<Servo> _servo_19 = ias_1.getServo();
+                  for(final Servo ser_5 : _servo_19) {
+                    Servo value_57 = ((Servo) ser_5);
+                    int _servo_20 = value_57.getServo();
+                    _builder.append(_servo_20, "\t\t\t\t");
                   }
                 }
                 _builder.append(", ");
                 {
-                  EList<Angle> _angle_24 = ias_1.getAngle();
-                  for(final Angle ang_9 : _angle_24) {
-                    Angle value_61 = ((Angle) ang_9);
-                    int _angle_25 = value_61.getAngle();
-                    _builder.append(_angle_25, "\t\t\t\t");
+                  EList<Angle> _angle_32 = ias_1.getAngle();
+                  for(final Angle ang_13 : _angle_32) {
+                    Angle value_58 = ((Angle) ang_13);
+                    int _angle_33 = value_58.getAngle();
+                    _builder.append(_angle_33, "\t\t\t\t");
                   }
                 }
                 _builder.append(", ");
                 {
                   EList<Angle_res> _angle_res = ias_1.getAngle_res();
-                  for(final Angle_res tmp_7 : _angle_res) {
-                    Angle_res value_62 = ((Angle_res) tmp_7);
-                    int _angle_res_1 = value_62.getAngle_res();
+                  for(final Angle_res tmp_15 : _angle_res) {
+                    Angle_res value_59 = ((Angle_res) tmp_15);
+                    int _angle_res_1 = value_59.getAngle_res();
                     _builder.append(_angle_res_1, "\t\t\t\t");
                   }
                 }
@@ -1694,74 +2072,74 @@ public class CPtesterGenerator extends AbstractGenerator {
                 _builder.newLineIfNotEmpty();
                 _builder.append("\t\t\t\t");
               } else {
-                boolean _equals_23 = sol.eClass().getName().equals("isAt");
-                if (_equals_23) {
+                boolean _equals_28 = sol.eClass().getName().equals("isAt");
+                if (_equals_28) {
                   isAt ia_1 = ((isAt) sol);
                   _builder.newLineIfNotEmpty();
                   _builder.append("\t\t\t\t");
                   _builder.append("Guard: Arm.");
-                  String _name_83 = sol.eClass().getName();
-                  _builder.append(_name_83, "\t\t\t\t");
+                  String _name_107 = sol.eClass().getName();
+                  _builder.append(_name_107, "\t\t\t\t");
                   _builder.append("(");
                   {
                     EList<Angle> _angle1_3 = ia_1.getAngle1();
-                    for(final Angle ang_10 : _angle1_3) {
-                      Angle value_63 = ((Angle) ang_10);
-                      int _angle_26 = value_63.getAngle();
-                      _builder.append(_angle_26, "\t\t\t\t");
+                    for(final Angle ang_14 : _angle1_3) {
+                      Angle value_60 = ((Angle) ang_14);
+                      int _angle_34 = value_60.getAngle();
+                      _builder.append(_angle_34, "\t\t\t\t");
                     }
                   }
                   _builder.append(", ");
                   {
                     EList<Angle> _angle2_3 = ia_1.getAngle2();
-                    for(final Angle ang_11 : _angle2_3) {
-                      Angle value_64 = ((Angle) ang_11);
-                      int _angle_27 = value_64.getAngle();
-                      _builder.append(_angle_27, "\t\t\t\t");
+                    for(final Angle ang_15 : _angle2_3) {
+                      Angle value_61 = ((Angle) ang_15);
+                      int _angle_35 = value_61.getAngle();
+                      _builder.append(_angle_35, "\t\t\t\t");
                     }
                   }
                   _builder.append(", ");
                   {
                     EList<Angle> _angle2_4 = ia_1.getAngle2();
-                    for(final Angle ang_12 : _angle2_4) {
-                      Angle value_65 = ((Angle) ang_12);
-                      int _angle_28 = value_65.getAngle();
-                      _builder.append(_angle_28, "\t\t\t\t");
+                    for(final Angle ang_16 : _angle2_4) {
+                      Angle value_62 = ((Angle) ang_16);
+                      int _angle_36 = value_62.getAngle();
+                      _builder.append(_angle_36, "\t\t\t\t");
                     }
                   }
                   _builder.append(", ");
                   {
                     EList<Angle> _angle4_3 = ia_1.getAngle4();
-                    for(final Angle ang_13 : _angle4_3) {
-                      Angle value_66 = ((Angle) ang_13);
-                      int _angle_29 = value_66.getAngle();
-                      _builder.append(_angle_29, "\t\t\t\t");
+                    for(final Angle ang_17 : _angle4_3) {
+                      Angle value_63 = ((Angle) ang_17);
+                      int _angle_37 = value_63.getAngle();
+                      _builder.append(_angle_37, "\t\t\t\t");
                     }
                   }
                   _builder.append(", ");
                   {
                     EList<Angle> _angle5_3 = ia_1.getAngle5();
-                    for(final Angle ang_14 : _angle5_3) {
-                      Angle value_67 = ((Angle) ang_14);
-                      int _angle_30 = value_67.getAngle();
-                      _builder.append(_angle_30, "\t\t\t\t");
+                    for(final Angle ang_18 : _angle5_3) {
+                      Angle value_64 = ((Angle) ang_18);
+                      int _angle_38 = value_64.getAngle();
+                      _builder.append(_angle_38, "\t\t\t\t");
                     }
                   }
                   _builder.append(", ");
                   {
                     EList<Angle> _angle6_3 = ia_1.getAngle6();
-                    for(final Angle ang_15 : _angle6_3) {
-                      Angle value_68 = ((Angle) ang_15);
-                      int _angle_31 = value_68.getAngle();
-                      _builder.append(_angle_31, "\t\t\t\t");
+                    for(final Angle ang_19 : _angle6_3) {
+                      Angle value_65 = ((Angle) ang_19);
+                      int _angle_39 = value_65.getAngle();
+                      _builder.append(_angle_39, "\t\t\t\t");
                     }
                   }
                   _builder.append(", ");
                   {
                     EList<Angle_res> _angle_res_2 = ia_1.getAngle_res();
-                    for(final Angle_res ang_16 : _angle_res_2) {
-                      Angle_res value_69 = ((Angle_res) ang_16);
-                      int _angle_res_3 = value_69.getAngle_res();
+                    for(final Angle_res ang_20 : _angle_res_2) {
+                      Angle_res value_66 = ((Angle_res) ang_20);
+                      int _angle_res_3 = value_66.getAngle_res();
                       _builder.append(_angle_res_3, "\t\t\t\t");
                     }
                   }

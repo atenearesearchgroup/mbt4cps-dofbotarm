@@ -81,16 +81,58 @@ class CPtesterGenerator extends AbstractGenerator {
 					Guard: []
 					
 				«FOR andG : scenario.andGiven»«FOR cmd : andG.command»
-				«IF cmd.eClass.name.equals('rotateServo')»«var rot = cmd as rotateServo»
+				«IF cmd.eClass.name.equals('rotateServo')»«var rot = cmd as rotateServo»«FOR ser : rot.servo»«var value = ser as Servo»						
+				«IF value.servo == 1»
 				State: «scenario.given.eClass.name»«counterGiven»
-					Activity: Arm.Servos.«cmd.eClass.name»(«FOR ser : rot.servo»«var value = ser as Servo»«value.servo»«ENDFOR», «FOR ang : rot.angle»«var value = ang as Angle»«value.angle»«ENDFOR», «FOR tmp : rot.time»«var value = tmp as Time»«value.time»«{counterTime+=value.time; "" }»«ENDFOR»)
-								
+					Activity: Arm.BaseServo.ServosOperations.«cmd.eClass.name»(«value.servo», «FOR ang : rot.angle»«var valor = ang as Angle»«valor.angle»«ENDFOR», «FOR tmp : rot.time»«var valor = tmp as Time»«valor.time»«{counterTime+=valor.time; "" }»«ENDFOR»);
+					
 				Transition: («scenario.given.eClass.name»«counterGiven»->«scenario.given.eClass.name»Warning)
-					Guard: Arm.wait(«FOR tmp : rot.time»«var value = tmp as Time»«value.time»);«ENDFOR»	
-													
+					Guard: Arm.wait(«FOR tmp : rot.time»«var amount = tmp as Time»«amount.time»);«ENDFOR»					
+				
 				Transition: («scenario.given.eClass.name»Warning->«scenario.given.eClass.name»«counterGiven»)
 					Guard: []
 					
+				«ELSEIF value.servo == 2»
+				State: «scenario.given.eClass.name»«counterGiven»
+					Activity: Arm.LowerServo.ServosOperations.«cmd.eClass.name»(«value.servo», «FOR ang : rot.angle»«var valor = ang as Angle»«valor.angle»«ENDFOR», «FOR tmp : rot.time»«var valor = tmp as Time»«valor.time»«{counterTime+=valor.time; "" }»«ENDFOR»);
+				
+				Transition: («scenario.given.eClass.name»«counterGiven»->«scenario.given.eClass.name»Warning)
+					Guard: Arm.wait(«FOR tmp : rot.time»«var amount = tmp as Time»«amount.time»);«ENDFOR»					
+								
+				Transition: («scenario.given.eClass.name»Warning->«scenario.given.eClass.name»«counterGiven»)
+					Guard: []
+					
+				«ELSEIF value.servo == 3»
+				State: «scenario.given.eClass.name»«counterGiven»
+					Activity: Arm.MiddleServo.ServosOperations.«cmd.eClass.name»(«value.servo», «FOR ang : rot.angle»«var valor = ang as Angle»«valor.angle»«ENDFOR», «FOR tmp : rot.time»«var valor = tmp as Time»«valor.time»«{counterTime+=valor.time; "" }»«ENDFOR»);
+				
+				Transition: («scenario.given.eClass.name»«counterGiven»->«scenario.given.eClass.name»Warning)
+					Guard: Arm.wait(«FOR tmp : rot.time»«var amount = tmp as Time»«amount.time»);«ENDFOR»					
+								
+				Transition: («scenario.given.eClass.name»Warning->«scenario.given.eClass.name»«counterGiven»)
+					Guard: []
+					
+				«ELSEIF value.servo == 4»
+				State: «scenario.given.eClass.name»«counterGiven»
+					Activity: Arm.UpperServo.ServosOperations.«cmd.eClass.name»(«value.servo», «FOR ang : rot.angle»«var valor = ang as Angle»«valor.angle»«ENDFOR», «FOR tmp : rot.time»«var valor = tmp as Time»«valor.time»«{counterTime+=valor.time; "" }»«ENDFOR»);
+				
+				Transition: («scenario.given.eClass.name»«counterGiven»->«scenario.given.eClass.name»Warning)
+					Guard: Arm.wait(«FOR tmp : rot.time»«var amount = tmp as Time»«amount.time»);«ENDFOR»					
+								
+				Transition: («scenario.given.eClass.name»Warning->«scenario.given.eClass.name»«counterGiven»)
+					Guard: []
+					
+				«ELSEIF value.servo == 5»
+				State: «scenario.given.eClass.name»«counterGiven»
+					Activity: Arm.WristServo.ServosOperations.«cmd.eClass.name»(«value.servo», «FOR ang : rot.angle»«var valor = ang as Angle»«valor.angle»«ENDFOR», «FOR tmp : rot.time»«var valor = tmp as Time»«valor.time»«{counterTime+=valor.time; "" }»«ENDFOR»);
+				
+				Transition: («scenario.given.eClass.name»«counterGiven»->«scenario.given.eClass.name»Warning)
+					Guard: Arm.wait(«FOR tmp : rot.time»«var amount = tmp as Time»«amount.time»);«ENDFOR»					
+								
+				Transition: («scenario.given.eClass.name»Warning->«scenario.given.eClass.name»«counterGiven»)
+					Guard: []
+					
+				«ENDIF»«ENDFOR»	
 				«ELSEIF cmd.eClass.name.equals('rotateAllServos')»«var rot = cmd as rotateAllServos»
 				State: «scenario.given.eClass.name»«counterGiven»
 					Activity: Arm.«cmd.eClass.name»(«FOR ang1 : rot.angle1»«var value = ang1 as Angle»«value.angle»«ENDFOR», «FOR ang2 : rot.angle2»«var value = ang2 as Angle»«value.angle»«ENDFOR», «FOR ang3 : rot.angle3»«var value = ang3 as Angle»«value.angle»«ENDFOR», «FOR ang4 : rot.angle4»«var value = ang4 as Angle»«value.angle»«ENDFOR», «FOR ang5 : rot.angle5»«var value = ang5 as Angle»«value.angle»«ENDFOR», «FOR ang6 : rot.angle6»«var value = ang6 as Angle»«value.angle»«ENDFOR», «FOR tmp : rot.time»«var value = tmp as Time»«value.time»«{counterTime+=value.time; "" }»«ENDFOR»);
