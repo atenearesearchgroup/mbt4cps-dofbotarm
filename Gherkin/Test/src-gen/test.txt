@@ -20,7 +20,7 @@ Class: Machine
 			Guard: []
 			
 		State: Given1
-			Activity: Board.Buzzer.buzzerOn(10);
+			Activity: Board.Buzzer.buzzerOff();
 						
 		Transition: (Given1->GivenWarning)
 			Guard: Arm.wait(1000);	
@@ -32,7 +32,7 @@ Class: Machine
 			Guard: []
 		
 		State: Given2
-			Activity: Board.Buzzer.buzzerOff();
+			Activity: Board.Buzzer.buzzerOn(1);
 						
 		Transition: (Given2->GivenWarning)
 			Guard: Arm.wait(1000);	
@@ -44,145 +44,37 @@ Class: Machine
 			Guard: []
 		
 		State: Given3
-			Activity: Arm.Camera.cameraColor(100);
+			Activity: Arm.rotateAllServos(45, 45, 45, 45, 45, 45, 2000);
 		
 		Transition: (Given3->GivenWarning)
-			Guard: Arm.wait(100);	
+			Guard: Arm.wait(2000);	
 											
 		Transition: (GivenWarning->Given3)
 			Guard: []
-							
+			
 		Transition: (Given3->Given4)
 			Guard: []
 		
 		State: Given4
-			Activity: Arm.Camera.calibration(Rojo, 1, 1, 1, 1, 1, 1);
+			Activity: Arm.MiddleServo.ServosOperations.rotateServo(3, 30, 1000);
 		
 		Transition: (Given4->GivenWarning)
-			Guard: Arm.wait(1000);	
-											
+			Guard: Arm.wait(1000);					
+						
 		Transition: (GivenWarning->Given4)
-			Guard: []
-			
-		Transition: (Given4->Given5)
-			Guard: []
-		
-		State: Given5
-			Activity: Board.Light.lightRGB(1, 1, 1);
-					
-		Transition: (Given5->GivenWarning)
-			Guard: Arm.wait(1000);	
-											
-		Transition: (GivenWarning->Given5)
-			Guard: []
-			
-		Transition: (Given5->Given6)
-			Guard: []
-		
-		State: Given6
-			Activity: Arm.BaseServo.ServosOperations.rotateServo(1, 3, 3);
-			
-		Transition: (Given6->GivenWarning)
-			Guard: Arm.wait(3);					
-		
-		Transition: (GivenWarning->Given6)
-			Guard: []
-			
-		Transition: (Given6->Given7)
-			Guard: []
-		
-		State: Given7
-			Activity: Arm.readAllServos()
-		
-		Transition: (Given7->GivenWarning)
-			Guard: Arm.wait(1000);	
-											
-		Transition: (GivenWarning->Given7)
-			Guard: []
-			
-		Transition: (Given7->Given8)
-			Guard: []
-		
-		State: Given8
-			Activity: Arm.Servos.readServo(1)
-		
-		Transition: (Given8->GivenWarning)
-			Guard: Arm.wait(1000);	
-											
-		Transition: (GivenWarning->Given8)
-			Guard: []
-			
-		Transition: (Given8->Given9)
-			Guard: []
-		
-		State: Given9
-			Activity: Arm.Servos.readServo(2)
-		
-		Transition: (Given9->GivenWarning)
-			Guard: Arm.wait(1000);	
-											
-		Transition: (GivenWarning->Given9)
-			Guard: []
-			
-		Transition: (Given9->Given10)
-			Guard: []
-		
-		State: Given10
-			Activity: Arm.Servos.readServo(3)
-		
-		Transition: (Given10->GivenWarning)
-			Guard: Arm.wait(1000);	
-											
-		Transition: (GivenWarning->Given10)
-			Guard: []
-			
-		Transition: (Given10->Given11)
-			Guard: []
-		
-		State: Given11
-			Activity: Arm.Servos.readServo(4)
-		
-		Transition: (Given11->GivenWarning)
-			Guard: Arm.wait(1000);	
-											
-		Transition: (GivenWarning->Given11)
-			Guard: []
-			
-		Transition: (Given11->Given12)
-			Guard: []
-		
-		State: Given12
-			Activity: Arm.Servos.readServo(5)
-		
-		Transition: (Given12->GivenWarning)
-			Guard: Arm.wait(1000);	
-											
-		Transition: (GivenWarning->Given12)
-			Guard: []
-			
-		Transition: (Given12->Given13)
-			Guard: []
-		
-		State: Given13
-			Activity: Arm.rotateAllServos(1, 1, 1, 1, 1, 1, 1);
-		
-		Transition: (Given13->GivenWarning)
-			Guard: Arm.wait(1);	
-											
-		Transition: (GivenWarning->Given13)
 			Guard: []
 			
 		State: GivenWarning
 				Activity: MessReport(mWarning, "Warning Time");
 			
-		Transition: (Given13->When)				
-				Guard: Arm.isAt(1, 1, 1, 1, 1, 1, 2);
-				
+		Transition: (Given4->When)				
+				Guard: Arm.Servos.isAtSingle(3, 30, 2)												
+								
 		State: When
-				Activity: Arm.WristServo.ServosOperations.rotateServo(5, 2, 3);
+				Activity: Arm.BaseServo.ServosOperations.rotateServo(1, 90, 2000);
 								
 		Transition: (When->Error)
-				Guard: StateVar(oRunTime) >= (Sett(time_resolution);
+				Guard: StateVar(oRunTime) >= (2000+Sett(time_resolution);
 				
 		Transition: (When->Final)		
-				Guard: []
+				Guard: Arm.Servos.isAtSingle(1, 90, 2)						
