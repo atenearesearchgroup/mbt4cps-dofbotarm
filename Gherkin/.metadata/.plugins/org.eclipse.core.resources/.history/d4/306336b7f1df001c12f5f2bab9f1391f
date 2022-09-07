@@ -1,9 +1,0 @@
-grammar org.xtext.Operations with org.eclipse.xtext.common.Terminals
-
-generate operations "http://www.xtext.org/Operations"
-
-Model:
-	greetings+=Greeting*;
-	
-Greeting:
-	'Hello' name=ID '!';

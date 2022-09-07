@@ -1,9 +1,0 @@
-grammar org.xtext.example.mydsl.MyDslB with org.eclipse.xtext.common.Terminals
-
-generate myDslB "http://www.xtext.org/example/mydsl/MyDslB"
-
-Model:
-	greetings+=Greeting*;
-	
-Greeting:
-	'Hello' name=ID '!';

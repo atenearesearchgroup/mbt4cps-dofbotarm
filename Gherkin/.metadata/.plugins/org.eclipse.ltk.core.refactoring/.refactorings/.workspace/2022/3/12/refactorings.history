@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Delete resource &apos;hellocucumber/src/test/resources/hellocucumber/is_it_friday_yet.feature&apos;" deleteContents="false" description="Delete resource &apos;hellocucumber/src/test/resources/hellocucumber/is_it_friday_yet.feature&apos;" element1="/hellocucumber/src/test/resources/hellocucumber/is_it_friday_yet.feature" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1647331845900"/>
-</session>

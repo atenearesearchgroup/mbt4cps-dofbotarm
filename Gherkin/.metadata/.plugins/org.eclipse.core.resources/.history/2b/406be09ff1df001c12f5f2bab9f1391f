@@ -1,9 +1,0 @@
-grammar org.xtext.CPtester with org.eclipse.xtext.common.Terminals
-
-generate cPtester "http://www.xtext.org/CPtester"
-
-Model:
-	greetings+=Greeting*;
-	
-Greeting:
-	'Hello' name=ID '!';
