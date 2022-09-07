@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ExportOptions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Mode>Classes</Mode>
-  <Filter>FullModel</Filter>
-  <GenerationType>XML</GenerationType>
-  <IncludeDiagrams>None</IncludeDiagrams>
-  <IncludeStandardComponents>true</IncludeStandardComponents>
-  <ExportGenerationPath>C:\Users\Migue\Documents</ExportGenerationPath>
-</ExportOptions>
