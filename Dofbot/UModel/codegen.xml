@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TargetConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <classgeninfo>
+    <geninfo>
+      <generatecode>True</generatecode>
+      <classname>IOLinks</classname>
+      <rootpackage>IOLinks</rootpackage>
+      <uuid>c2cf8f4a-b247-406e-b01e-1dcb6b955c44</uuid>
+    </geninfo>
+    <geninfo>
+      <generatecode>True</generatecode>
+      <classname>Arm</classname>
+      <rootpackage>Sandbox</rootpackage>
+      <uuid>ac5dbf19-e631-4f85-997a-ae154bcb4394</uuid>
+    </geninfo>
+    <geninfo>
+      <generatecode>True</generatecode>
+      <classname>ArmOperations</classname>
+      <rootpackage>Sandbox</rootpackage>
+      <uuid>7448fcef-f56d-4ff4-bd7b-a68037b8821c</uuid>
+    </geninfo>
+    <geninfo>
+      <generatecode>True</generatecode>
+      <classname>Board</classname>
+      <rootpackage>Sandbox</rootpackage>
+      <uuid>5547554e-13d8-49ec-a695-9b78b780dfee</uuid>
+    </geninfo>
+    <geninfo>
+      <generatecode>True</generatecode>
+      <classname>Buzzer</classname>
+      <rootpackage>Sandbox</rootpackage>
+      <uuid>736f53c3-bf84-477b-a7d2-f7448fdeec18</uuid>
+    </geninfo>
+    <geninfo>
+      <generatecode>True</generatecode>
+      <classname>BuzzerOperations</classname>
+      <rootpackage>Sandbox</rootpackage>
+      <uuid>f9f33ae1-a0a9-4461-a9ec-98deeeef3907</uuid>
+    </geninfo>
+    <geninfo>
+      <generatecode>True</generatecode>
+      <classname>Camera</classname>
+      <rootpackage>Sandbox</rootpackage>
+      <uuid>900462cb-fbd8-46a3-a7b0-840595c60196</uuid>
+    </geninfo>
+    <geninfo>
+      <generatecode>True</generatecode>
+      <classname>CameraOperations</classname>
+      <rootpackage>Sandbox</rootpackage>
+      <uuid>85c86cd4-4efd-4143-a370-6ab3737ae1ca</uuid>
+    </geninfo>
+    <geninfo>
+      <generatecode>True</generatecode>
+      <classname>Light</classname>
+      <rootpackage>Sandbox</rootpackage>
+      <uuid>cbc032fc-d1d1-4069-ad0d-0e90744729de</uuid>
+    </geninfo>
+    <geninfo>
+      <generatecode>True</generatecode>
+      <classname>LightOperations</classname>
+      <rootpackage>Sandbox</rootpackage>
+      <uuid>e08722cb-5119-4acc-9378-9333284d822c</uuid>
+    </geninfo>
+    <geninfo>
+      <generatecode>True</generatecode>
+      <classname>Machine</classname>
+      <rootpackage>Sandbox</rootpackage>
+      <uuid>19225c09-f2d9-4495-b1ff-0562ab9c16ae</uuid>
+    </geninfo>
+    <geninfo>
+      <generatecode>True</generatecode>
+      <classname>ServoOperations</classname>
+      <rootpackage>Sandbox</rootpackage>
+      <uuid>321a66ab-48bc-45ca-96d7-d19140529aab</uuid>
+    </geninfo>
+    <geninfo>
+      <generatecode>True</generatecode>
+      <classname>Servos</classname>
+      <rootpackage>Sandbox</rootpackage>
+      <uuid>d9eb7c8c-a942-4b02-ab10-11486dee71e9</uuid>
+    </geninfo>
+  </classgeninfo>
+  <activetarget>C#</activetarget>
+  <InputsOutputsFile>true</InputsOutputsFile>
+  <DateAndTimestamp>false</DateAndTimestamp>
+  <TransitionInfoLines>false</TransitionInfoLines>
+  <LineTypeComments>false</LineTypeComments>
+  <SubstatePublication>false</SubstatePublication>
+  <OpcPublication>false</OpcPublication>
+  <GenerateValidationModel>false</GenerateValidationModel>
+  <GenerateMachinePartHashes>true</GenerateMachinePartHashes>
+  <GenerateRad>false</GenerateRad>
+  <TiaPortalEnabled>false</TiaPortalEnabled>
+  <TiaPortalversionSelected />
+  <TiaPortalAssemblyPath />
+  <ImportSourceCode>false</ImportSourceCode>
+  <GenerateBlocksFromSource>true</GenerateBlocksFromSource>
+  <GenerateBlocksFromSourceEnable>false</GenerateBlocksFromSourceEnable>
+  <CompilePlcCheck>true</CompilePlcCheck>
+  <CompilePlcEnable>false</CompilePlcEnable>
+  <DownloadToPlcCheck>false</DownloadToPlcCheck>
+  <DownloadToPlcEnable>false</DownloadToPlcEnable>
+  <RunPlcCheck>false</RunPlcCheck>
+  <RunPlcEnable>false</RunPlcEnable>
+  <TiaProjectPath />
+  <TiaPortalRelativePathCheck>false</TiaPortalRelativePathCheck>
+  <Plc />
+  <PcInterface />
+  <TargetInterface />
+  <CloseTiaPortal>false</CloseTiaPortal>
+  <SkipItemDeletionModelCheck>false</SkipItemDeletionModelCheck>
+  <SkipSearchAndReplaceModelCheck>false</SkipSearchAndReplaceModelCheck>
+  <ImportTwincatCode>false</ImportTwincatCode>
+  <BuildSolution>false</BuildSolution>
+  <ActivateTwincatConfiguration>false</ActivateTwincatConfiguration>
+  <RunTwincat>false</RunTwincat>
+  <CloseTwincat>false</CloseTwincat>
+  <TwincatProjectPath />
+  <TwincatRelativePathCheck>false</TwincatRelativePathCheck>
+  <TwincatVisualStudioVersion />
+  <TwincatTargetSystemList />
+  <TwincatTargetSystem />
+  <UseTwincatRemoteIp>false</UseTwincatRemoteIp>
+  <TwincatRemoteIp />
+  <ImportCSharpCode>false</ImportCSharpCode>
+  <BuildCSharpSolution>false</BuildCSharpSolution>
+  <RunCSharp>false</RunCSharp>
+  <CloseCSharp>false</CloseCSharp>
+  <CloseCSharpCheckboxEnabled>false</CloseCSharpCheckboxEnabled>
+  <CSharpProjectPath>D:\TestComm2\Build\MCP .NET Core.sln</CSharpProjectPath>
+  <CSharpRelativePathCheck>false</CSharpRelativePathCheck>
+  <CSharpVisualStudioVersion>Visual Studio 2019</CSharpVisualStudioVersion>
+  <S7HeaderPath />
+  <CodeSysHeaderPath />
+  <TwincatHeaderPath />
+  <CSharpHeaderPath />
+  <BandRHeaderPath />
+  <LenzeHeaderPath />
+  <BoschRexrothHeaderPath />
+  <RockwellHeaderPath />
+  <S7Path />
+  <TwincatPath />
+  <CSharpPath>D:\TestComm</CSharpPath>
+  <BandRPath />
+  <LenzePath />
+  <BoschRexrothPath />
+  <RockwellPath />
+  <PreprocessCommand />
+  <PostprocessCommand />
+  <Namespace>Cordis.Machine</Namespace>
+  <ColorNormalstate>#9FA0DD</ColorNormalstate>
+  <ColorPrestate>#80FF80</ColorPrestate>
+  <ColorPoststate>#80D0FF</ColorPoststate>
+  <ColorCompositestate>#A0D0FF</ColorCompositestate>
+  <ColorFlatstate>#D0D0D0</ColorFlatstate>
+  <ColorLinkedstate>#509090</ColorLinkedstate>
+  <SymbolTableFBstartNumber>200</SymbolTableFBstartNumber>
+  <SymbolTableDBstartNumber>200</SymbolTableDBstartNumber>
+  <SymbolTableUDTstartNumber>200</SymbolTableUDTstartNumber>
+  <CheckPackages>
+    <string>bfd67d6a-cf6c-4e6e-8f3b-ad249ddac248</string>
+  </CheckPackages>
+  <RadBlocks>10</RadBlocks>
+</TargetConfiguration>

@@ -1,0 +1,55 @@
+grammar org.xtext.CPtester with org.xtext.Operations
+
+generate cPtester "http://www.xtext.org/CPtester"
+
+Scenario:
+	'Scenario' surname=STRING
+	'{'
+		given=Given
+		(andGiven+=AndWhen)*
+		when=When
+		then=Then
+		(and+=And)*
+	'}'
+;
+
+
+//////////////////////////////////////////////////
+
+Given:
+	name='GIVEN'
+	(initial+=Initial)
+;
+
+
+
+//////////////////////////////////////////////////
+
+AndWhen:
+	name='AND'
+	(command+=Command)
+;
+
+//////////////////////////////////////////////////
+
+When:
+	name='WHEN'
+	(command+=Command)
+;
+
+
+//////////////////////////////////////////////////
+
+Then:
+	name='THEN'
+	(result+=Result)
+;
+
+//////////////////////////////////////////////////
+
+And:
+	name='AND'
+	(conditions+=Conditions)
+	'Query' (solution+=Solution)
+;
+

@@ -1,0 +1,640 @@
+-------------------------------------------------------------------------------
+Test set: hellocucumber.RunCucumberTest
+-------------------------------------------------------------------------------
+Tests run: 18, Failures: 0, Errors: 18, Skipped: 0, Time elapsed: 0.37 s <<< FAILURE! - in hellocucumber.RunCucumberTest
+Examples.Example #1  Time elapsed: 0.088 s  <<< ERROR!
+io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'A call to the operation' and 6 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("A call to the operation")
+public void a_call_to_the_operation() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("We will receive the value of the angle for {int}")
+public void we_will_receive_the_value_of_the_angle_for(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Examples.Example #2  Time elapsed: 0.008 s  <<< ERROR!
+io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'A call to the operation' and 6 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("A call to the operation")
+public void a_call_to_the_operation() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("We will receive the value of the angle for {int}")
+public void we_will_receive_the_value_of_the_angle_for(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Examples.Example #3  Time elapsed: 0.009 s  <<< ERROR!
+io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'A call to the operation' and 6 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("A call to the operation")
+public void a_call_to_the_operation() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("We will receive the value of the angle for {int}")
+public void we_will_receive_the_value_of_the_angle_for(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Examples.Example #1  Time elapsed: 0.006 s  <<< ERROR!
+io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'An 1 indicating the servo' and 2 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("An {int} indicating the servo")
+public void an_indicating_the_servo(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is equals to one of the servos")
+public void the_is_equals_to_one_of_the_servos(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The system will print the {int} of the servo")
+public void the_system_will_print_the_of_the_servo(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Examples.Example #2  Time elapsed: 0.004 s  <<< ERROR!
+io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'An 2 indicating the servo' and 2 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("An {int} indicating the servo")
+public void an_indicating_the_servo(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is equals to one of the servos")
+public void the_is_equals_to_one_of_the_servos(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The system will print the {int} of the servo")
+public void the_system_will_print_the_of_the_servo(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Examples.Example #3  Time elapsed: 0.007 s  <<< ERROR!
+io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'An 3 indicating the servo' and 2 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("An {int} indicating the servo")
+public void an_indicating_the_servo(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is equals to one of the servos")
+public void the_is_equals_to_one_of_the_servos(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The system will print the {int} of the servo")
+public void the_system_will_print_the_of_the_servo(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Examples.Example #4  Time elapsed: 0.003 s  <<< ERROR!
+io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'An 4 indicating the servo' and 2 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("An {int} indicating the servo")
+public void an_indicating_the_servo(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is equals to one of the servos")
+public void the_is_equals_to_one_of_the_servos(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The system will print the {int} of the servo")
+public void the_system_will_print_the_of_the_servo(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Examples.Example #5  Time elapsed: 0.004 s  <<< ERROR!
+io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'An 5 indicating the servo' and 2 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("An {int} indicating the servo")
+public void an_indicating_the_servo(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is equals to one of the servos")
+public void the_is_equals_to_one_of_the_servos(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The system will print the {int} of the servo")
+public void the_system_will_print_the_of_the_servo(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Examples.Example #6  Time elapsed: 0.007 s  <<< ERROR!
+io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'An 6 indicating the servo' and 2 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("An {int} indicating the servo")
+public void an_indicating_the_servo(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is equals to one of the servos")
+public void the_is_equals_to_one_of_the_servos(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The system will print the {int} of the servo")
+public void the_system_will_print_the_of_the_servo(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Examples.Example #1  Time elapsed: 0.012 s  <<< ERROR!
+io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'An 1 indicating the servo' and 7 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("An {int} indicating the servo")
+public void an_indicating_the_servo(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("An {int} for the rotation")
+public void an_for_the_rotation(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("A {int} for the completion of the move")
+public void a_for_the_completion_of_the_move(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is equals to one of the servos")
+public void the_is_equals_to_one_of_the_servos(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is in the range of movement")
+public void the_is_in_the_range_of_movement(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is acceptable")
+public void the_is_acceptable(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo with the {int} given will rotate to the {int}")
+public void the_servo_with_the_given_will_rotate_to_the(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("It will complete the movement in the {int} given")
+public void it_will_complete_the_movement_in_the_given(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Examples.Example #2  Time elapsed: 0.009 s  <<< ERROR!
+io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'An 2 indicating the servo' and 7 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("An {int} indicating the servo")
+public void an_indicating_the_servo(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("An {int} for the rotation")
+public void an_for_the_rotation(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("A {int} for the completion of the move")
+public void a_for_the_completion_of_the_move(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is equals to one of the servos")
+public void the_is_equals_to_one_of_the_servos(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is in the range of movement")
+public void the_is_in_the_range_of_movement(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is acceptable")
+public void the_is_acceptable(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo with the {int} given will rotate to the {int}")
+public void the_servo_with_the_given_will_rotate_to_the(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("It will complete the movement in the {int} given")
+public void it_will_complete_the_movement_in_the_given(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Examples.Example #3  Time elapsed: 0.012 s  <<< ERROR!
+io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'An 3 indicating the servo' and 7 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("An {int} indicating the servo")
+public void an_indicating_the_servo(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("An {int} for the rotation")
+public void an_for_the_rotation(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("A {int} for the completion of the move")
+public void a_for_the_completion_of_the_move(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is equals to one of the servos")
+public void the_is_equals_to_one_of_the_servos(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is in the range of movement")
+public void the_is_in_the_range_of_movement(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is acceptable")
+public void the_is_acceptable(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo with the {int} given will rotate to the {int}")
+public void the_servo_with_the_given_will_rotate_to_the(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("It will complete the movement in the {int} given")
+public void it_will_complete_the_movement_in_the_given(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Examples.Example #4  Time elapsed: 0.013 s  <<< ERROR!
+io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'An 4 indicating the servo' and 7 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("An {int} indicating the servo")
+public void an_indicating_the_servo(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("An {int} for the rotation")
+public void an_for_the_rotation(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("A {int} for the completion of the move")
+public void a_for_the_completion_of_the_move(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is equals to one of the servos")
+public void the_is_equals_to_one_of_the_servos(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is in the range of movement")
+public void the_is_in_the_range_of_movement(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is acceptable")
+public void the_is_acceptable(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo with the {int} given will rotate to the {int}")
+public void the_servo_with_the_given_will_rotate_to_the(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("It will complete the movement in the {int} given")
+public void it_will_complete_the_movement_in_the_given(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Examples.Example #5  Time elapsed: 0.009 s  <<< ERROR!
+io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'An 5 indicating the servo' and 7 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("An {int} indicating the servo")
+public void an_indicating_the_servo(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("An {int} for the rotation")
+public void an_for_the_rotation(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("A {int} for the completion of the move")
+public void a_for_the_completion_of_the_move(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is equals to one of the servos")
+public void the_is_equals_to_one_of_the_servos(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is in the range of movement")
+public void the_is_in_the_range_of_movement(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is acceptable")
+public void the_is_acceptable(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo with the {int} given will rotate to the {int}")
+public void the_servo_with_the_given_will_rotate_to_the(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("It will complete the movement in the {int} given")
+public void it_will_complete_the_movement_in_the_given(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Examples.Example #6  Time elapsed: 0.012 s  <<< ERROR!
+io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'An 6 indicating the servo' and 7 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("An {int} indicating the servo")
+public void an_indicating_the_servo(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("An {int} for the rotation")
+public void an_for_the_rotation(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("A {int} for the completion of the move")
+public void a_for_the_completion_of_the_move(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is equals to one of the servos")
+public void the_is_equals_to_one_of_the_servos(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is in the range of movement")
+public void the_is_in_the_range_of_movement(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} is acceptable")
+public void the_is_acceptable(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo with the {int} given will rotate to the {int}")
+public void the_servo_with_the_given_will_rotate_to_the(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("It will complete the movement in the {int} given")
+public void it_will_complete_the_movement_in_the_given(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Examples.Example #1  Time elapsed: 0.025 s  <<< ERROR!
+io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'A angle value for 90' and 19 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("A angle value for {int}")
+public void a_angle_value_for(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("A {int} value for the movement")
+public void a_value_for_the_movement(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The value for {int} is in range")
+public void the_value_for_is_in_range(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} value is acceptable")
+public void the_value_is_acceptable(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo1 will rotate to the value for {int} in the given {int}")
+public void the_servo1_will_rotate_to_the_value_for_in_the_given(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo2 will rotate to the value for {int} in the given {int}")
+public void the_servo2_will_rotate_to_the_value_for_in_the_given(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo3 will rotate to the value for {int} in the given {int}")
+public void the_servo3_will_rotate_to_the_value_for_in_the_given(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo4 will rotate to the value for {int} in the given {int}")
+public void the_servo4_will_rotate_to_the_value_for_in_the_given(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo5 will rotate to the value for {int} in the given {int}")
+public void the_servo5_will_rotate_to_the_value_for_in_the_given(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo6 will rotate to the value for {int} in the given {int}")
+public void the_servo6_will_rotate_to_the_value_for_in_the_given(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Examples.Example #2  Time elapsed: 0.026 s  <<< ERROR!
+io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'A angle value for 45' and 19 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("A angle value for {int}")
+public void a_angle_value_for(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("A {int} value for the movement")
+public void a_value_for_the_movement(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The value for {int} is in range")
+public void the_value_for_is_in_range(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} value is acceptable")
+public void the_value_is_acceptable(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo1 will rotate to the value for {int} in the given {int}")
+public void the_servo1_will_rotate_to_the_value_for_in_the_given(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo2 will rotate to the value for {int} in the given {int}")
+public void the_servo2_will_rotate_to_the_value_for_in_the_given(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo3 will rotate to the value for {int} in the given {int}")
+public void the_servo3_will_rotate_to_the_value_for_in_the_given(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo4 will rotate to the value for {int} in the given {int}")
+public void the_servo4_will_rotate_to_the_value_for_in_the_given(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo5 will rotate to the value for {int} in the given {int}")
+public void the_servo5_will_rotate_to_the_value_for_in_the_given(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo6 will rotate to the value for {int} in the given {int}")
+public void the_servo6_will_rotate_to_the_value_for_in_the_given(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Examples.Example #3  Time elapsed: 0.02 s  <<< ERROR!
+io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'A angle value for 90' and 19 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("A angle value for {int}")
+public void a_angle_value_for(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("A {int} value for the movement")
+public void a_value_for_the_movement(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The value for {int} is in range")
+public void the_value_for_is_in_range(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("The {int} value is acceptable")
+public void the_value_is_acceptable(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo1 will rotate to the value for {int} in the given {int}")
+public void the_servo1_will_rotate_to_the_value_for_in_the_given(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo2 will rotate to the value for {int} in the given {int}")
+public void the_servo2_will_rotate_to_the_value_for_in_the_given(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo3 will rotate to the value for {int} in the given {int}")
+public void the_servo3_will_rotate_to_the_value_for_in_the_given(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo4 will rotate to the value for {int} in the given {int}")
+public void the_servo4_will_rotate_to_the_value_for_in_the_given(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo5 will rotate to the value for {int} in the given {int}")
+public void the_servo5_will_rotate_to_the_value_for_in_the_given(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The servo6 will rotate to the value for {int} in the given {int}")
+public void the_servo6_will_rotate_to_the_value_for_in_the_given(Integer int1, Integer int2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+

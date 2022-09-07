@@ -1,0 +1,80 @@
+Class: Machine
+	StateMachine: Testings
+		PseudoState: Initial
+		PseudoState: Final
+		PseudoState: Error
+		
+		Transition: (Initial->Given0)
+				Guard: []
+		
+		State: Given0
+			Activity: Arm.posInicial(1000);
+		
+		Transition: (Given0->Given1)
+			Guard: []	
+			
+		Transition: (Given0->GivenWarning)
+			Guard: Arm.wait(1000);	
+		
+		Transition: (GivenWarning->Given0)
+			Guard: []
+			
+		State: Given1
+			Activity: Board.Buzzer.buzzerOff();
+						
+		Transition: (Given1->GivenWarning)
+			Guard: Arm.wait(1000);	
+											
+		Transition: (GivenWarning->Given1)
+			Guard: []
+			
+		Transition: (Given1->Given2)
+			Guard: []
+		
+		State: Given2
+			Activity: Board.Buzzer.buzzerOn(1);
+						
+		Transition: (Given2->GivenWarning)
+			Guard: Arm.wait(1000);	
+											
+		Transition: (GivenWarning->Given2)
+			Guard: []
+			
+		Transition: (Given2->Given3)
+			Guard: []
+		
+		State: Given3
+			Activity: Arm.rotateAllServos(45, 45, 45, 45, 45, 45, 2000);
+		
+		Transition: (Given3->GivenWarning)
+			Guard: Arm.wait(2000);	
+											
+		Transition: (GivenWarning->Given3)
+			Guard: []
+			
+		Transition: (Given3->Given4)
+			Guard: []
+		
+		State: Given4
+			Activity: Arm.MiddleServo.ServosOperations.rotateServo(3, 30, 1000);
+		
+		Transition: (Given4->GivenWarning)
+			Guard: Arm.wait(1000);					
+						
+		Transition: (GivenWarning->Given4)
+			Guard: []
+			
+		State: GivenWarning
+				Activity: MessReport(mWarning, "Warning Time");
+			
+		Transition: (Given4->When)				
+				Guard: Arm.Servos.isAtSingle(3, 30, 2)												
+								
+		State: When
+				Activity: Arm.BaseServo.ServosOperations.rotateServo(1, 90, 2000);
+								
+		Transition: (When->Error)
+				Guard: StateVar(oRunTime) >= (2000+Sett(time_resolution);
+				
+		Transition: (When->Final)		
+				Guard: Arm.Servos.isAtSingle(1, 90, 2)						

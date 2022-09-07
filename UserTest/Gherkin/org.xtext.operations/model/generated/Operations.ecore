@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="operations" nsURI="http://www.xtext.org/Operations" nsPrefix="operations">
+  <eClassifiers xsi:type="ecore:EClass" name="Initial">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="time" upperBound="-1" eType="#//Time"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Command">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="lightRGB" eSuperTypes="#//Command">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="r" upperBound="-1" eType="#//R"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="g" upperBound="-1" eType="#//G"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="b" upperBound="-1" eType="#//B"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="buzzerOff" eSuperTypes="#//Command"/>
+  <eClassifiers xsi:type="ecore:EClass" name="buzzerOn" eSuperTypes="#//Command">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="time" upperBound="-1" eType="#//Time"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="calibration" eSuperTypes="#//Command">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="color" upperBound="-1"
+        eType="#//Color" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="h_min" upperBound="-1"
+        eType="#//H_min" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="s_min" upperBound="-1"
+        eType="#//S_min" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="v_min" upperBound="-1"
+        eType="#//V_min" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="h_max" upperBound="-1"
+        eType="#//H_max" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="s_max" upperBound="-1"
+        eType="#//S_max" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="v_max" upperBound="-1"
+        eType="#//V_max" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="cameraColor" eSuperTypes="#//Command">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="time" upperBound="-1" eType="#//Time"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="readAllServos" eSuperTypes="#//Command"/>
+  <eClassifiers xsi:type="ecore:EClass" name="readServo" eSuperTypes="#//Command">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="servo" upperBound="-1"
+        eType="#//Servo" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="rotateServo" eSuperTypes="#//Command">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="servo" upperBound="-1"
+        eType="#//Servo" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angle" upperBound="-1"
+        eType="#//Angle" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="time" upperBound="-1" eType="#//Time"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="rotateAllServos" eSuperTypes="#//Command">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angle1" upperBound="-1"
+        eType="#//Angle" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angle2" upperBound="-1"
+        eType="#//Angle" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angle3" upperBound="-1"
+        eType="#//Angle" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angle4" upperBound="-1"
+        eType="#//Angle" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angle5" upperBound="-1"
+        eType="#//Angle" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angle6" upperBound="-1"
+        eType="#//Angle" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="time" upperBound="-1" eType="#//Time"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Result">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="time" upperBound="-1" eType="#//Time"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Conditions">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="time" upperBound="-1" eType="#//Time"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Solution">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angle_res" upperBound="-1"
+        eType="#//Angle_res" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="isAtSingle" eSuperTypes="#//Solution">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="servo" upperBound="-1"
+        eType="#//Servo" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angle" upperBound="-1"
+        eType="#//Angle" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="isAt" eSuperTypes="#//Solution">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angle1" upperBound="-1"
+        eType="#//Angle" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angle2" upperBound="-1"
+        eType="#//Angle" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angle3" upperBound="-1"
+        eType="#//Angle" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angle4" upperBound="-1"
+        eType="#//Angle" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angle5" upperBound="-1"
+        eType="#//Angle" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angle6" upperBound="-1"
+        eType="#//Angle" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Angle_res">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="angle_res" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Angle">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="angle" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Time">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="time" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Servo">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="servo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="V_max">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="v_max" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="S_max">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="s_max" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="H_max">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="h_max" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="V_min">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="v_min" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="S_min">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="s_min" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="H_min">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="h_min" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Color">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="B">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="b" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="G">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="g" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="R">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="r" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+</ecore:EPackage>
