@@ -120,7 +120,7 @@ class GenerateData:
             pre=self.operationNames[operationID]["pre"]
             post=self.operationNames[operationID]["post"]
             if pre=="[]":
-                pre="True"
+                pre=""
             if post=="[]":
                 post="True"
             print(post.split("(")[0])
@@ -194,7 +194,7 @@ class GenerateData:
             return testfile
         
             
-        def createPytestFileCordis(self, iters, window3, type="Aleatorio"):
+        def createPytestFileCordis(self, iters, window3, type="Random"):
             testfile = open("test_apitree_script.py", "w")
             self.populateDictionaries("output.txt", "")
             self.getEverything("DofbotAPI.txt")
@@ -215,11 +215,11 @@ class GenerateData:
             testfile.write("######################################\n")
             testfile.write("#TEST FUNCTIONS\n")
             testfile.write("######################################\n")
-            if type=="Aleatorio":
+            if type=="Random":
                 testfile =self.randomOrderTesting(iters, testfile)
-            elif type=="En profundidad":
+            elif type=="Depth":
                 testfile =self.DepthOrderTesting(iters, testfile)
-            elif type=="En anchura":
+            elif type=="Width":
                 testfile =self.WidthOrderTesting(iters, testfile)
             testfile.close()
             window3.destroy()
@@ -230,20 +230,20 @@ def main():
     #handler.createPytestFileCordis(20)
     #testfile.close()
     window3= tk.Tk()
-    window3.title("Configuración del generador de pruebas")
-    label_iters = tk.Label(window3, text="Indique el número de iteraciones a realizar")
+    window3.title("Test Generator Configuration")
+    label_iters = tk.Label(window3, text="Number of iterations")
     entry_iters = tk.Entry(window3)
     entry_iters.insert(0, "5")
-    label_mode = tk.Label(window3, text="Elija el modo de generación de pruebas")
-    combo = ttk.Combobox(window3,state="readonly", values=["Aleatorio", "En anchura", "En profundidad"])
-    combo.insert(0, "Aleatorio")
+    label_mode = tk.Label(window3, text="Test Generation Mode")
+    combo = ttk.Combobox(window3,state="readonly", values=["Random", "Width", "Depth"])
+    combo.insert(0, "Random")
     label_iters.grid(row=0, column=0)
     entry_iters.grid(row=0, column=1)
     label_mode.grid(row=1, column=0)
     combo.grid(row=1, column=1)
 
-    button_generate= tk.Button(window3, text="Generar", command=lambda: handler.createPytestFileCordis(entry_iters.get(),window3, combo.get()))
-    button_back= tk.Button(window3, text="Cancelar", command=window3.destroy)
+    button_generate= tk.Button(window3, text="Generate", command=lambda: handler.createPytestFileCordis(entry_iters.get(),window3, combo.get()))
+    button_back= tk.Button(window3, text="Cancel", command=window3.destroy)
     button_generate.grid(row=2, column=0)
     button_back.grid(row=2, column=1)
     window3.mainloop()

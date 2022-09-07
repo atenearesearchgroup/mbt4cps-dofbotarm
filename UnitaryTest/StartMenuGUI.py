@@ -57,7 +57,7 @@ def configureModel():
             operations.append(operation)
     print(operations)
     window2 = tk.Tk()
-    window2.title("Configuración del generador de pruebas")
+    window2.title("Test generator configuration")
     window2.geometry("600x400")
 
     main_frame=tk.Frame(window2)
@@ -76,7 +76,7 @@ def configureModel():
 
     my_canvas.create_window((0,0),window=second_frame, anchor="nw")
 
-    greeting = tk.Label(second_frame, text="Selecciona las operaciones para las que quieres generar pruebas.")
+    greeting = tk.Label(second_frame, text="Select the operations that you want to test.")
     greeting.grid(row=0, column=0)
     numops=len(operations)
     checkbox = [""]*numops
@@ -105,9 +105,9 @@ def configureModel():
         j=j+3
 
     
-    select_all_check = tk.Checkbutton(second_frame, text="Seleccionar todo", command = select_all)
-    button_accept= tk.Button(second_frame, text="Confirmar", command= lambda: update_API(window2, prebox, postbox, checkvariables, lines))
-    button_cancel= tk.Button(second_frame, text="Cancelar", command=window2.destroy)
+    select_all_check = tk.Checkbutton(second_frame, text="Select all", command = select_all)
+    button_accept= tk.Button(second_frame, text="Accept", command= lambda: update_API(window2, prebox, postbox, checkvariables, lines))
+    button_cancel= tk.Button(second_frame, text="Cancel", command=window2.destroy)
     select_all_check.grid(row=numops+j+2, column=0)
     button_accept.grid(row=numops+j+3, column=0)
     button_cancel.grid(row=numops+j+3, column=1)
@@ -127,12 +127,12 @@ route= askopenfilename(
 processor.getAPITree(route)
 processor.parseAPI(route)
 window = tk.Tk()
-window.title("Configuración del generador de pruebas")
+window.title("Test generator configuration")
 
-mainmessage = tk.Label(window, text="Bienvenido al asistente de generación de pruebas unitarias para su modelo.")
+mainmessage = tk.Label(window, text="Welcome to the unitary test generator.")
 mainmessage.grid(row=0, column=0)
-button_1= tk.Button(window, text="Configurar y generar pruebas", command=configureModel)
-button_2= tk.Button(window, text="Generar pruebas con la configuración actual", command=onlyGenerateTests)
+button_1= tk.Button(window, text="Configure and generate tests", command=configureModel)
+button_2= tk.Button(window, text="Generate tests using current configuration", command=onlyGenerateTests)
 button_1.grid(row=1, column=0)
 button_2.grid(row=2, column=0)
 window.mainloop()
