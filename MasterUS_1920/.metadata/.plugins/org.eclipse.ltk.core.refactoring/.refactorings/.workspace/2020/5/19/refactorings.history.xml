@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Delete resource &apos;SampleMMs/metamodels/Family.aird&apos;" deleteContents="false" description="Delete resource &apos;SampleMMs/metamodels/Family.aird&apos;" element1="/SampleMMs/metamodels/Family.aird" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1588929821175"/>
-</session>

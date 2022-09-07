@@ -1,9 +1,0 @@
-grammar lsi.us.es.mis.xtext.exercise.MyDomainModel with org.eclipse.xtext.common.Terminals
-
-generate myDomainModel "http://www.us.lsi/es/mis/xtext/exercise/MyDomainModel"
-
-Model:
-	greetings+=Greeting*;
-	
-Greeting:
-	'Hello' name=ID '!';
