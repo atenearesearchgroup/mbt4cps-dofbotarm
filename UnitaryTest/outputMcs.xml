@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="0.304" timestamp="2022-09-07T12:49:29.601414" hostname="DESKTOP-I5SV5VF"><testcase classname="" name="UseCaseTesting.test_apitree_script" time="0.000"><error message="collection failure">import file mismatch:
+imported module 'test_apitree_script' has this __file__ attribute:
+  C:\Users\Juanjo\Downloads\Cordis-20220718T073048Z-001\Cordis\test environment\test_apitree_script.py
+which is not the same as the test file we want to collect:
+  C:\Users\Juanjo\Downloads\Cordis-20220718T073048Z-001\Cordis\test environment\UseCaseTesting\test_apitree_script.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules</error></testcase></testsuite></testsuites>

@@ -1,0 +1,56 @@
+CordisModel
+Class: IOLinks
+Class: Machine
+Class: Arm
+	Operation: rotateAllServos
+		Pre: posInicial(2000)
+		Post: isAt(angle1, angle2, angle3, angle4, angle5, angle6, 3)
+			angle1: Real
+			angle1_min = 0
+			angle1_max = 180
+			angle2: Real
+			angle2_min = 0
+			angle2_max = 180
+			angle3: Real
+			angle3_min = 0
+			angle3_max = 180
+			angle4: Real
+			angle4_min = 0
+			angle4_max = 180
+			angle5: Real
+			angle5_min = 0
+			angle5_max = 270
+			angle6: Real
+			angle6_min = 0
+			angle6_max = 180
+			aTime: Int32
+			aTime_min = 0
+			aTime_max = 100000
+Class: Servos
+Class: ServoOperations
+Class: Board
+Class: Buzzer
+	Operation: buzzerOn
+		Pre: True
+		Post: True
+			aTime: Int32
+			aTime_min = 0
+			aTime_max = 50
+Class: BuzzerOperations
+Class: Light
+	Operation: lightRGB
+		Pre: True
+		Post: True
+			r: Int32
+			r_min = 0
+			r_max = 255
+			g: Int32
+			g_min = 0
+			g_max = 255
+			b: Int32
+			b_min = 0
+			b_max = 255
+Class: LightOperations
+Class: Camera
+Class: CameraOperations
+Class: ArmOperations

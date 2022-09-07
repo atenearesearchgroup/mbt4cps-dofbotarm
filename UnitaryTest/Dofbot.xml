@@ -1,0 +1,692 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- C:\Users\Juanjo\Downloads\ -->
+<!-- (C) 2022 - Cordis Products B.V. and Cordis IP B.V. -->
+<!-- CordisModeler version 3.14.1623.7106 -->
+<CordisModel>
+    <Packages>
+        <Package Name="IOLinks" Uuid="859346ff-08b1-4674-80d0-96ea044b45fe" LastModified="21/07/2022 07:43:30">
+            <MachineParts>
+                <MachinePart ClassName="IOLinks" Uuid="c2cf8f4a-b247-406e-b01e-1dcb6b955c44" Hash="76111">
+                    <StateMachines>
+                        <StateMachine StateMachineName="CmdExecution" Name="CmdExecution" InstancePath="CmdExecution" Text="CmdExecution" IsStandard="True"/>
+                        <StateMachine StateMachineName="SM_OperatingState" Name="SM_OperatingState" InstancePath="Operating" Text="Operating" IsStandard="True"/>
+                    </StateMachines>
+                    <Commands>
+                        <Command Name="Manufacturing" Text="Manufacturing" Id="32001" Type="Sync" IsStandard="True"/>
+                        <Command Name="Maintenance" Text="Maintenance" Id="32002" Type="Sync" IsStandard="True"/>
+                        <Command Name="Abort" Text="Abort" Id="32003" Type="Sync" IsStandard="True"/>
+                        <Command Name="ResetErrors" Text="Reset Errors" Id="32004" Type="Sync" IsStandard="True"/>
+                    </Commands>
+                    <Settings>
+                        <Setting Name="SettCommandTimeout" Text="Command Time-out" Id="1" Type="Int16" LowerLimit="0" UpperLimit="1000" DefaultValue="0" IsStandard="True">
+                            <Unit><![CDATA[ms]]></Unit>
+                        </Setting>
+                    </Settings>
+                    <Observers>
+                        <Observer Name="MACHINEPARTHASH" Text="MachinePartHash" Id="1" Type="Int32" IsStandard="True"/>
+                    </Observers>
+                </MachinePart>
+            </MachineParts>
+        </Package>
+        <Package Name="Sandbox" Uuid="bfd67d6a-cf6c-4e6e-8f3b-ad249ddac248" LastModified="21/07/2022 07:43:30">
+            <MachineParts>
+                <MachinePart Name="Dofbot" Text="Dofbot" ClassName="Machine" ClassType="Machine" Uuid="19225c09-f2d9-4495-b1ff-0562ab9c16ae" Hash="11428380">
+                    <StateMachines>
+                        <StateMachine StateMachineName="StateMachine1" Name="StateMachine1" InstancePath="StateMachine1" Text="StateMachine1" Type="TopLevel" Uuid="f1a16edf-2c04-41a1-b6a6-446d48445e34">
+                            <States>
+                                <State Name="Initial" Text="Initial" Id="1" Uuid="e85239b6-a2b6-4a4a-b8a1-237699efd169">
+                                    <Transitions>
+                                        <Transition Target="StateInit" Uuid="a7ff847b-0b17-4c36-9593-7c8a5bbb2de4">
+                                        </Transition>
+                                    </Transitions>
+                                </State>
+                                <State Name="StateInit" Text="StateInit" Id="5" StateType="SubStateMachineReference" StateMachine="Init" Uuid="fc4a9545-07ac-4a2a-a1a0-cd823f504e10" TargetStateMachineName="StateInit_Init">
+                                    <Transitions>
+                                        <Transition Target="StateLoop" Uuid="30ff68be-56fa-4a63-be6b-22befca9d486">
+                                            <Guard><![CDATA[Arm.ArmOperations.isAtOperation( Sett(angleServo1), Sett(angleServo2), Sett(angleServo3), Sett(angleServo4), Sett(angleServo5), Sett(angleServo6), Sett(angle_resolution)) = true]]></Guard>
+                                        </Transition>
+                                    </Transitions>
+                                </State>
+                                <State Name="StateLoop" Text="StateLoop" Id="6" StateType="SubStateMachineReference" StateMachine="Loop" Uuid="4ac75e1e-508d-4c7b-9d26-618634edc4cd" TargetStateMachineName="StateLoop_Loop">
+                                    <Transitions>
+                                        <Transition Target="StateFinal" Uuid="97c67125-a59b-490f-ba43-794d6a7481ef">
+                                            <Guard><![CDATA[Sett(counterIterations) >= Sett(maxIterations)]]></Guard>
+                                        </Transition>
+                                    </Transitions>
+                                </State>
+                                <State Name="StateFinal" Text="StateFinal" Id="7" StateType="SubStateMachineReference" StateMachine="Final" Uuid="adb0fbfc-d45e-4c3f-ac9a-4a0737d148e7" TargetStateMachineName="StateFinal_Final">
+                                </State>
+                            </States>
+                        </StateMachine>
+                        <StateMachine StateMachineName="Init" Name="StateInit_Init" InstancePath="StateMachine1.StateInit" Text="Init - StateInit" Type="SubLevel" Uuid="56123cd9-9aff-4f37-92d4-ebec2eae03f3">
+                            <States>
+                                <State Name="Initial" Text="Initial" Id="1" Uuid="a983a79f-ecae-4de8-82e4-b0016056af40">
+                                    <Transitions>
+                                        <Transition Target="initialPos" Uuid="e78c4dcf-0a3b-413a-9b5c-9a8031f0e6ea">
+                                        </Transition>
+                                    </Transitions>
+                                </State>
+                                <State Name="initialPos" Text="initialPos" Id="2" Uuid="68793aa8-85e1-4ba3-b110-97e3a4a0b2e2">
+                                    <Transitions>
+                                        <Transition Target="initialWARNING" Uuid="d3e99e8b-1310-4b0f-94e8-f109bd5e37bd">
+                                            <Guard><![CDATA[StateVar(oRuntime) >= (Sett(setTime)+Sett(time_resolution))]]></Guard>
+                                        </Transition>
+                                        <Transition Target="FinalState" Uuid="a302a289-17a9-49ed-882a-99489df84481">
+                                        </Transition>
+                                    </Transitions>
+                                    <Entry><![CDATA[Arm.ArmOperations.rotateAllServosOperation( Sett(angleServo1), Sett(angleServo2), Sett(angleServo3), Sett(angleServo4), Sett(angleServo5), Sett(angleServo6), Sett(setTime));]]></Entry>
+                                </State>
+                                <State Name="Final" Text="Final" Id="0" Uuid="0351dc38-ee3c-4bc1-9efd-ce256ca55291"/>
+                                <State Name="initialWARNING" Text="initialWARNING" Id="3" Uuid="55888ea7-7ce1-4b47-9dd0-f1b2a0fafa52">
+                                    <Transitions>
+                                        <Transition Target="initialPos" Uuid="c9b3de93-4185-432b-bcfa-6b85c2e05507">
+                                            <Guard><![CDATA[Arm.ArmOperations.isAtOperation( Sett(angleServo1), Sett(angleServo2), Sett(angleServo3), Sett(angleServo4), Sett(angleServo5), Sett(angleServo6), Sett(angle_resolution)) = false]]></Guard>
+                                        </Transition>
+                                    </Transitions>
+                                    <Entry><![CDATA[MessReport(mWarning, "Warning Time");
+//MessReport(mError, "Error");]]></Entry>
+                                </State>
+                            </States>
+                        </StateMachine>
+                        <StateMachine StateMachineName="Loop" Name="StateLoop_Loop" InstancePath="StateMachine1.StateLoop" Text="Loop - StateLoop" Type="SubLevel" Uuid="fbcb1527-2259-4386-809e-a0c3374c4bc0">
+                            <States>
+                                <State Name="Initial" Text="Initial" Id="1" Uuid="b2e4e6ab-552c-46c1-885c-b6aeffe0dc53">
+                                    <Transitions>
+                                        <Transition Target="readyPos" Uuid="c61793f1-9f85-44ed-be1e-8fbeebc57f81">
+                                        </Transition>
+                                    </Transitions>
+                                </State>
+                                <State Name="readyPos" Text="readyPos" Id="2" Uuid="c005c4e8-3ff9-44f0-81f6-aa5d70be56b8">
+                                    <Transitions>
+                                        <Transition Target="secondPos" Uuid="d55722db-8d3e-401b-9e09-7fd1e38fa5c4">
+                                            <Guard><![CDATA[Arm.ArmOperations.isAtOperation(90, 130, 0, 0, 270, 60, Sett(angle_resolution)) = true]]></Guard>
+                                        </Transition>
+                                        <Transition Target="readyERROR" Uuid="787230e1-bfb5-451b-8ccd-ab6de0b3f2f2">
+                                            <Guard><![CDATA[StateVar(oRuntime) >= (Sett(setTime)+Sett(time_resolution))]]></Guard>
+                                        </Transition>
+                                        <Transition Target="FinalState" Uuid="68dfbbe4-5a83-4da0-82ec-ef9384172b38">
+                                        </Transition>
+                                    </Transitions>
+                                    <Entry><![CDATA[Sett(angleServo1) := 90;
+Sett(angleServo2) := 130;
+Sett(angleServo3) := 0;
+Sett(angleServo4) := 0;
+Sett(angleServo5) := 270;
+Sett(angleServo6) := 60;
+
+Sett(counterIterations) := Sett(counterIterations)+1;
+
+Arm.ArmOperations.rotateAllServosOperation( Sett(angleServo1), Sett(angleServo2), Sett(angleServo3), Sett(angleServo4), Sett(angleServo5), Sett(angleServo6), Sett(setTime));]]></Entry>
+                                </State>
+                                <State Name="secondPos" Text="secondPos" Id="3" Uuid="d6f0d642-419e-4e29-b4b0-a428b635a5e2">
+                                    <Transitions>
+                                        <Transition Target="readyPos" Uuid="c3cf8fd4-b70e-46f5-9bd5-a40a75f850b1">
+                                            <Guard><![CDATA[Arm.ArmOperations.isAtOperation(90, 80, 50, 50, 270, 135, Sett(angle_resolution)) = true]]></Guard>
+                                        </Transition>
+                                        <Transition Target="readyERROR" Uuid="670befcd-bfe7-4572-81a9-8f08ca11228a">
+                                            <Guard><![CDATA[StateVar(oRuntime) >= (Sett(setTime)+Sett(time_resolution))]]></Guard>
+                                        </Transition>
+                                    </Transitions>
+                                    <Entry><![CDATA[Sett(angleServo1) := 90;
+Sett(angleServo2) := 80;
+Sett(angleServo3) := 50;
+Sett(angleServo4) := 50;
+Sett(angleServo5) := 270;
+Sett(angleServo6) := 135;
+
+Arm.ArmOperations.rotateAllServosOperation( Sett(angleServo1), Sett(angleServo2), Sett(angleServo3), Sett(angleServo4), Sett(angleServo5), Sett(angleServo6), Sett(setTime));]]></Entry>
+                                </State>
+                                <State Name="Final" Text="Final" Id="0" Uuid="5c219531-cd0e-4622-a2e8-caf821e6f553"/>
+                                <State Name="readyERROR" Text="readyERROR" Id="4" Uuid="e40990fe-b7fd-463c-954a-e43366c95e1e">
+                                    <Entry><![CDATA[// MessReport(mWarning, "Warning Time");
+MessReport(mError, "Error");]]></Entry>
+                                </State>
+                            </States>
+                        </StateMachine>
+                        <StateMachine StateMachineName="Final" Name="StateFinal_Final" InstancePath="StateMachine1.StateFinal" Text="Final - StateFinal" Type="SubLevel" Uuid="883087c8-2939-45cf-bd8e-d52bb252cf9c">
+                            <States>
+                                <State Name="Initial" Text="Initial" Id="1" Uuid="1bbc69bf-b8e9-42c6-92fe-f69ab7264482">
+                                    <Transitions>
+                                        <Transition Target="finalPos" Uuid="f304481f-4ea5-486d-a6ac-c57ca0e4249d">
+                                        </Transition>
+                                    </Transitions>
+                                </State>
+                                <State Name="finalPos" Text="finalPos" Id="2" Uuid="a2e7b18d-9118-4dd2-b266-4ff988993477">
+                                    <Transitions>
+                                        <Transition Target="FinalState" Uuid="f2acc8dc-a666-488f-a4c8-9403e305712e">
+                                            <Guard><![CDATA[Arm.ArmOperations.isAtOperation(90, 90, 90, 90, 90, 90, Sett(angle_resolution)) = true]]></Guard>
+                                        </Transition>
+                                        <Transition Target="finalWARNING" Uuid="60d62eca-cf94-4b9a-8905-163f8c394d5d">
+                                            <Guard><![CDATA[StateVar(oRuntime) >= (Sett(setTime)+Sett(time_resolution))]]></Guard>
+                                        </Transition>
+                                    </Transitions>
+                                    <Entry><![CDATA[Sett(angleServo1) := 90;
+Sett(angleServo2) := 90;
+Sett(angleServo3) := 90;
+Sett(angleServo4) := 90;
+Sett(angleServo5) := 90;
+Sett(angleServo6) := 90;
+
+Arm.ArmOperations.rotateAllServosOperation( Sett(angleServo1), Sett(angleServo2), Sett(angleServo3), Sett(angleServo4), Sett(angleServo5), Sett(angleServo6), Sett(setTime));]]></Entry>
+                                </State>
+                                <State Name="Final" Text="Final" Id="0" Uuid="c186deb3-db27-48d3-9de6-2e69e4ed9432"/>
+                                <State Name="finalWARNING" Text="finalWARNING" Id="3" Uuid="8917b7cb-ef97-45e6-a1a2-3a6e66c90ed0">
+                                    <Transitions>
+                                        <Transition Target="finalPos" Uuid="96d0d60d-2e8b-4130-94ed-727429e64534">
+                                            <Guard><![CDATA[Arm.ArmOperations.isAtOperation( 90, 90, 90, 90, 90, 90, Sett(angle_resolution)) = false]]></Guard>
+                                        </Transition>
+                                    </Transitions>
+                                    <Entry><![CDATA[MessReport(mWarning, "Warning Time");
+// MessReport(mError, "Error");]]></Entry>
+                                </State>
+                            </States>
+                        </StateMachine>
+                        <StateMachine StateMachineName="CmdExecution" Name="CmdExecution" InstancePath="CmdExecution" Text="CmdExecution" IsStandard="True"/>
+                        <StateMachine StateMachineName="SM_OperatingState" Name="SM_OperatingState" InstancePath="Operating" Text="Operating" IsStandard="True"/>
+                    </StateMachines>
+                    <Commands>
+                        <Command Name="Manufacturing" Text="Manufacturing" Id="32001" Type="Sync" IsStandard="True"/>
+                        <Command Name="Maintenance" Text="Maintenance" Id="32002" Type="Sync" IsStandard="True"/>
+                        <Command Name="Abort" Text="Abort" Id="32003" Type="Sync" IsStandard="True"/>
+                        <Command Name="ResetErrors" Text="Reset Errors" Id="32004" Type="Sync" IsStandard="True"/>
+                    </Commands>
+                    <Settings>
+                        <Setting Name="angleServo1" Text="angleServo1" Id="23" Type="Double" LowerLimit="0" UpperLimit="180" DefaultValue="90" Uuid="2296204c-94fc-491d-80e0-dd537fc77f34"/>
+                        <Setting Name="angleServo2" Text="angleServo2" Id="24" Type="Double" LowerLimit="0" UpperLimit="180" DefaultValue="90" Uuid="3d84e356-df50-43f2-a94b-7786dabb04dc"/>
+                        <Setting Name="angleServo3" Text="angleServo3" Id="25" Type="Double" LowerLimit="0" UpperLimit="180" DefaultValue="90" Uuid="4baaec10-b1d6-4818-9e5d-033ba7e8e212"/>
+                        <Setting Name="angleServo4" Text="angleServo4" Id="26" Type="Double" LowerLimit="0" UpperLimit="180" DefaultValue="90" Uuid="48478e5b-7f50-4d92-9515-2a6df50b3e87"/>
+                        <Setting Name="angleServo5" Text="angleServo5" Id="27" Type="Double" LowerLimit="0" UpperLimit="270" DefaultValue="90" Uuid="b2b9745d-b614-40b6-a79b-803d133c89a6"/>
+                        <Setting Name="angleServo6" Text="angleServo6" Id="28" Type="Double" LowerLimit="0" UpperLimit="180" DefaultValue="90" Uuid="9265f6d4-8b89-4c57-b1fd-6b9dbd531fcf"/>
+                        <Setting Name="setTime" Text="setTime" Id="29" Type="Int32" LowerLimit="0" UpperLimit="100000" DefaultValue="1000" Uuid="cc248fe7-6cda-4681-adaf-6282037cf324"/>
+                        <Setting Name="angle_resolution" Text="angle_resolution" Id="30" Type="Double" LowerLimit="0" UpperLimit="270" DefaultValue="2" Uuid="4e0eed5e-3dba-48c9-9410-c794ac173ef7"/>
+                        <Setting Name="time_resolution" Text="time_resolution" Id="33" Type="Int32" LowerLimit="0" UpperLimit="100000" DefaultValue="100" Uuid="97cb1bcb-1153-4008-af90-1ab5fc5993a0"/>
+                        <Setting Name="counterIterations" Text="counterIterations" Id="31" Type="Double" LowerLimit="0" UpperLimit="10000" DefaultValue="0" Uuid="eaf9f12b-ca87-43e3-8c1f-84d7d3925c6a"/>
+                        <Setting Name="maxIterations" Text="maxIterations" Id="32" Type="Double" LowerLimit="0" UpperLimit="10000" DefaultValue="4" Uuid="537eefca-214e-41bb-bc0e-a3b1ac89e8eb"/>
+                        <Setting Name="isAtSetting" Text="isAtSetting" Id="34" Type="Boolean" DefaultValue="False" Uuid="be636aeb-45f8-4535-a9c9-08bd343748a1"/>
+                        <Setting Name="SettCommandTimeout" Text="Command Time-out" Id="1" Type="Int16" LowerLimit="0" UpperLimit="1000" DefaultValue="0" IsStandard="True">
+                            <Unit><![CDATA[ms]]></Unit>
+                        </Setting>
+                    </Settings>
+                    <Messages>
+                        <Message Name="mError" Text="mError" Id="23" Type="Error" Uuid="b75393b4-1cfa-4883-ba03-c2d59da6382d">
+                            <MessageText><![CDATA[mError]]></MessageText>
+                        </Message>
+                        <Message Name="mWarning" Text="mWarning" Id="24" Type="Warning" Uuid="d0a535b1-72bc-4b56-b1dc-929ba86bc962">
+                            <MessageText><![CDATA[mWarning]]></MessageText>
+                        </Message>
+                    </Messages>
+                    <Observers>
+                        <Observer Name="MACHINEPARTHASH" Text="MachinePartHash" Id="1" Type="Int32" IsStandard="True"/>
+                    </Observers>
+                    <MachineParts>
+                        <MachinePart Type="Composition" ClassName="Board" Name="Board" Text="Board"/>
+                        <MachinePart Type="Composition" ClassName="Arm" Name="Arm" Text="Arm"/>
+                    </MachineParts>
+                </MachinePart>
+                <MachinePart ClassName="Arm" Uuid="ac5dbf19-e631-4f85-997a-ae154bcb4394" Hash="1870976">
+                    <StateMachines>
+                        <StateMachine StateMachineName="CmdExecution" Name="CmdExecution" InstancePath="CmdExecution" Text="CmdExecution" IsStandard="True"/>
+                        <StateMachine StateMachineName="SM_OperatingState" Name="SM_OperatingState" InstancePath="Operating" Text="Operating" IsStandard="True"/>
+                    </StateMachines>
+                    <Commands>
+                        <Command Name="rotateAllServos" Text="rotateAllServos" Id="21" Type="Async" HmiExecutionCondition="Maintenance_required" Uuid="37d3a3e8-0232-461f-8442-e2e6e9570aaa">
+                            <CommandAction><![CDATA[ArmOperations.rotateAllServosOperation( CmdArg(rotateAllServos.angle1), CmdArg(rotateAllServos.angle2), CmdArg(rotateAllServos.angle3), CmdArg(rotateAllServos.angle4), CmdArg(rotateAllServos.angle5), CmdArg(rotateAllServos.angle6), CmdArg(rotateAllServos.aTime));]]></CommandAction>
+                            <Arguments>
+                                <Argument Name="angle1" Text="angle1" Id="1" Type="Real" LowerLimit="0" UpperLimit="180" DefaultValue="0" Uuid="2487b3b1-2e59-470a-9343-1eff2449a765"/>
+                                <Argument Name="angle2" Text="angle2" Id="2" Type="Real" LowerLimit="0" UpperLimit="180" DefaultValue="0" Uuid="478467c7-d2ff-4f78-88d3-d3b809cf2f12"/>
+                                <Argument Name="angle3" Text="angle3" Id="3" Type="Real" LowerLimit="0" UpperLimit="180" DefaultValue="0" Uuid="2f372bf8-8d1e-4027-bbeb-d992ea5ebd66"/>
+                                <Argument Name="angle4" Text="angle4" Id="4" Type="Real" LowerLimit="0" UpperLimit="180" DefaultValue="0" Uuid="3fcdee86-35ee-4947-afda-acdeae31c67a"/>
+                                <Argument Name="angle5" Text="angle5" Id="5" Type="Real" LowerLimit="0" UpperLimit="270" DefaultValue="0" Uuid="9e675419-0174-4cd0-b6fb-fb000400c43e"/>
+                                <Argument Name="angle6" Text="angle6" Id="6" Type="Real" LowerLimit="0" UpperLimit="180" DefaultValue="0" Uuid="da995c51-8920-4727-9328-4e97241ea367"/>
+                                <Argument Name="aTime" Text="aTime" Id="7" Type="Int32" LowerLimit="0" UpperLimit="100000" DefaultValue="0" Uuid="8ad8362c-8b25-4fb8-8e72-89133e1043a7"/>
+                            </Arguments>
+                        </Command>
+                        <Command Name="readAllServos" Text="readAllServos" Id="22" Type="Async" HmiExecutionCondition="Maintenance_required" Uuid="791045e1-f04b-42e1-bb72-c8e365920f9f">
+                            <CommandAction><![CDATA[ArmOperations.readAllServosOperation();]]></CommandAction>
+                        </Command>
+                        <Command Name="cameraColor" Text="cameraColor" Id="23" Type="Async" HmiExecutionCondition="Maintenance_required" Uuid="1d3994b6-7490-4fa7-9aa9-0ad1f559cd66">
+                            <CommandAction><![CDATA[ArmOperations.cameraColorOperation( CmdArg(cameraColor.aTime));]]></CommandAction>
+                            <Arguments>
+                                <Argument Name="aTime" Text="aTime" Id="1" Type="Int32" LowerLimit="1000" UpperLimit="100000" DefaultValue="1000" Uuid="366215ec-82d0-4644-8b8a-204276372cd0"/>
+                            </Arguments>
+                        </Command>
+                        <Command Name="isAt" Text="isAt" Id="24" Type="Async" HmiExecutionCondition="Maintenance_required" Uuid="0299c6b9-1e9f-43a5-a63a-c06ba1d106fc">
+                            <CommandAction><![CDATA[ArmOperations.isAtOperation( CmdArg(isAt.angle1isAt), CmdArg(isAt.angle2isAt), CmdArg(isAt.angle3isAt), CmdArg(isAt.angle4isAt), CmdArg(isAt.angle5isAt), CmdArg(isAt.angle6isAt), CmdArg(isAt.angle_res));]]></CommandAction>
+                            <Arguments>
+                                <Argument Name="angle1isAt" Text="angle1isAt" Id="1" Type="Real" LowerLimit="0" UpperLimit="180" DefaultValue="0" Uuid="c0c8ddb9-b471-4a56-9379-46f58ce7c6cb"/>
+                                <Argument Name="angle2isAt" Text="angle2isAt" Id="2" Type="Real" LowerLimit="0" UpperLimit="180" DefaultValue="0" Uuid="42027474-b6c1-44a9-9d8f-c95ac0e22031"/>
+                                <Argument Name="angle3isAt" Text="angle3isAt" Id="3" Type="Real" LowerLimit="0" UpperLimit="180" DefaultValue="0" Uuid="8199e144-882c-49e0-9e6e-9256701ddc64"/>
+                                <Argument Name="angle4isAt" Text="angle4isAt" Id="4" Type="Real" LowerLimit="0" UpperLimit="180" DefaultValue="0" Uuid="8f4f676d-31e5-4eda-b481-bf952c6f8151"/>
+                                <Argument Name="angle5isAt" Text="angle5isAt" Id="5" Type="Real" LowerLimit="0" UpperLimit="270" DefaultValue="0" Uuid="3cc1bf6f-65f8-4eb8-86aa-76917c3d1a86"/>
+                                <Argument Name="angle6isAt" Text="angle6isAt" Id="6" Type="Real" LowerLimit="0" UpperLimit="180" DefaultValue="0" Uuid="1e33fdb5-3b95-4600-9f45-2fec25027254"/>
+                                <Argument Name="angle_res" Text="angle_res" Id="7" Type="Real" LowerLimit="0" UpperLimit="0" DefaultValue="0" Uuid="7680f0c0-fa09-45a7-8610-b430e94ccf81"/>
+                            </Arguments>
+                        </Command>
+                        <Command Name="wait" Text="wait" Id="25" Type="Async" HmiExecutionCondition="Maintenance_required" Uuid="1a35f39d-3fc4-4110-85f5-e62afc795912">
+                            <CommandAction><![CDATA[ArmOperations.waitOperation( CmdArg(wait.aTime));]]></CommandAction>
+                            <Arguments>
+                                <Argument Name="aTime" Text="aTime" Id="1" Type="Int32" LowerLimit="0" UpperLimit="100000" DefaultValue="0" Uuid="ef75e3a8-c504-44ac-861c-af321e6dc3a2"/>
+                            </Arguments>
+                        </Command>
+                        <Command Name="posInicial" Text="posInicial" Id="26" Type="Async" HmiExecutionCondition="Maintenance_required" Uuid="c20260f6-4d0c-4e2a-b454-5d23d0acea49">
+                            <CommandAction><![CDATA[ArmOperations.posInicialOperation(CmdArg(posInicial.aTime));]]></CommandAction>
+                            <Arguments>
+                                <Argument Name="aTime" Text="aTime" Id="1" Type="Int32" LowerLimit="0" UpperLimit="100000" DefaultValue="0" Uuid="c036f86c-1b21-4ec2-bb74-c828819fe367"/>
+                            </Arguments>
+                        </Command>
+                        <Command Name="Manufacturing" Text="Manufacturing" Id="32001" Type="Sync" IsStandard="True"/>
+                        <Command Name="Maintenance" Text="Maintenance" Id="32002" Type="Sync" IsStandard="True"/>
+                        <Command Name="Abort" Text="Abort" Id="32003" Type="Sync" IsStandard="True"/>
+                        <Command Name="ResetErrors" Text="Reset Errors" Id="32004" Type="Sync" IsStandard="True"/>
+                    </Commands>
+                    <Settings>
+                        <Setting Name="SettCommandTimeout" Text="Command Time-out" Id="1" Type="Int16" LowerLimit="0" UpperLimit="1000" DefaultValue="0" IsStandard="True">
+                            <Unit><![CDATA[ms]]></Unit>
+                        </Setting>
+                    </Settings>
+                    <Observers>
+                        <Observer Name="MACHINEPARTHASH" Text="MachinePartHash" Id="1" Type="Int32" IsStandard="True"/>
+                    </Observers>
+                    <MachineParts>
+                        <MachinePart Type="Composition" ClassName="ArmOperations" Name="ArmOperations" Text="ArmOperations"/>
+                        <MachinePart Type="Composition" ClassName="Servos" Name="MiddleServo" Text="MiddleServo"/>
+                        <MachinePart Type="Composition" ClassName="Servos" Name="WristServo" Text="WristServo"/>
+                        <MachinePart Type="Composition" ClassName="Servos" Name="UpperServo" Text="UpperServo"/>
+                        <MachinePart Type="Composition" ClassName="Servos" Name="LowerServo" Text="LowerServo"/>
+                        <MachinePart Type="Composition" ClassName="Servos" Name="BaseServo" Text="BaseServo"/>
+                        <MachinePart Type="Composition" ClassName="Camera" Name="Camera" Text="Camera"/>
+                    </MachineParts>
+                </MachinePart>
+                <MachinePart ClassName="Servos" Uuid="d9eb7c8c-a942-4b02-ab10-11486dee71e9" Hash="907086">
+                    <StateMachines>
+                        <StateMachine StateMachineName="CmdExecution" Name="CmdExecution" InstancePath="CmdExecution" Text="CmdExecution" IsStandard="True"/>
+                        <StateMachine StateMachineName="SM_OperatingState" Name="SM_OperatingState" InstancePath="Operating" Text="Operating" IsStandard="True"/>
+                    </StateMachines>
+                    <Commands>
+                        <Command Name="rotateServo" Text="rotateServo" Id="21" Type="Async" HmiExecutionCondition="Maintenance_required" Uuid="51ba7b33-ed34-42f1-a68d-351133645de3">
+                            <CommandAction><![CDATA[ServosOperations.rotateServoOperation( CmdArg(rotateServo.id), CmdArg(rotateServo.angle), CmdArg(rotateServo.aTime));]]></CommandAction>
+                            <Arguments>
+                                <Argument Name="id" Text="id" Id="1" Type="Int32" LowerLimit="1" UpperLimit="6" DefaultValue="1" Uuid="3fa3837f-8988-4deb-9d69-f493796f1109"/>
+                                <Argument Name="angle" Text="angle" Id="2" Type="Double" LowerLimit="0" UpperLimit="180" DefaultValue="0" Uuid="e461c051-7c8c-4ad9-b6f4-7304e993c3f3"/>
+                                <Argument Name="aTime" Text="aTime" Id="3" Type="Int32" LowerLimit="0" UpperLimit="100000" DefaultValue="0" Uuid="de97a05e-4d29-43ab-ab44-d791eac93dc6"/>
+                            </Arguments>
+                        </Command>
+                        <Command Name="readServo" Text="readServo" Id="22" Type="Async" HmiExecutionCondition="Maintenance_required" Uuid="a3d86b22-818d-4783-9b03-0fbb39deaf58">
+                            <CommandAction><![CDATA[ServosOperations.readServoOperation( CmdArg(readServo.id));]]></CommandAction>
+                            <Arguments>
+                                <Argument Name="id" Text="id" Id="1" Type="Int32" LowerLimit="1" UpperLimit="6" DefaultValue="1" Uuid="fa1d4a0d-f8a1-430f-b7da-bb9669a3b93b"/>
+                            </Arguments>
+                        </Command>
+                        <Command Name="isAt" Text="isAt" Id="23" Type="Async" HmiExecutionCondition="Maintenance_required" Uuid="dd607678-3ac5-4405-83ff-f9423b6e75f6">
+                            <CommandAction><![CDATA[ServosOperations.isAtSingleOperation( CmdArg(isAt.id), CmdArg(isAt.angle), CmdArg(isAt.angle_res));]]></CommandAction>
+                            <Arguments>
+                                <Argument Name="id" Text="id" Id="1" Type="Int32" LowerLimit="1" UpperLimit="6" DefaultValue="1" Uuid="21c44b61-eb6d-4668-8ae9-faef3f3f5bf8"/>
+                                <Argument Name="angle" Text="angle" Id="2" Type="Double" LowerLimit="0" UpperLimit="270" DefaultValue="0" Uuid="7cb0fb49-66cc-4032-8aae-2c969df2fe45"/>
+                                <Argument Name="angle_res" Text="angle_res" Id="3" Type="Double" LowerLimit="0" UpperLimit="0" DefaultValue="0" Uuid="728d0006-02bf-4b2b-9856-fe40f232b242"/>
+                            </Arguments>
+                        </Command>
+                        <Command Name="Manufacturing" Text="Manufacturing" Id="32001" Type="Sync" IsStandard="True"/>
+                        <Command Name="Maintenance" Text="Maintenance" Id="32002" Type="Sync" IsStandard="True"/>
+                        <Command Name="Abort" Text="Abort" Id="32003" Type="Sync" IsStandard="True"/>
+                        <Command Name="ResetErrors" Text="Reset Errors" Id="32004" Type="Sync" IsStandard="True"/>
+                    </Commands>
+                    <Settings>
+                        <Setting Name="SettCommandTimeout" Text="Command Time-out" Id="1" Type="Int16" LowerLimit="0" UpperLimit="1000" DefaultValue="0" IsStandard="True">
+                            <Unit><![CDATA[ms]]></Unit>
+                        </Setting>
+                    </Settings>
+                    <Observers>
+                        <Observer Name="MACHINEPARTHASH" Text="MachinePartHash" Id="1" Type="Int32" IsStandard="True"/>
+                    </Observers>
+                    <MachineParts>
+                        <MachinePart Type="Composition" ClassName="ServoOperations" Name="ServosOperations" Text="ServosOperations"/>
+                    </MachineParts>
+                </MachinePart>
+                <MachinePart ClassName="ServoOperations" Uuid="321a66ab-48bc-45ca-96d7-d19140529aab" Hash="638623">
+                    <StateMachines>
+                        <StateMachine StateMachineName="CmdExecution" Name="CmdExecution" InstancePath="CmdExecution" Text="CmdExecution" IsStandard="True"/>
+                        <StateMachine StateMachineName="SM_OperatingState" Name="SM_OperatingState" InstancePath="Operating" Text="Operating" IsStandard="True"/>
+                    </StateMachines>
+                    <Commands>
+                        <Command Name="rotateServoOperation" Text="rotateServoOperation" Id="21" Type="Async" Uuid="2698a210-0d1d-410e-99ae-d0fe6ffea057">
+                            <CommandAction><![CDATA[Dofbot dof = new Dofbot();
+return dof.rotateServo(id, angle, aTime);]]></CommandAction>
+                            <Arguments>
+                                <Argument Name="id" Text="id" Id="1" Type="Int32" LowerLimit="1" UpperLimit="6" DefaultValue="1" Uuid="48303533-0eb9-47bd-93b5-6c1be5d3bb48"/>
+                                <Argument Name="angle" Text="angle" Id="2" Type="Double" LowerLimit="0" UpperLimit="180" DefaultValue="0" Uuid="4d9ec865-20bd-41fd-887c-bae75b102aca"/>
+                                <Argument Name="aTime" Text="aTime" Id="3" Type="Int32" LowerLimit="0" UpperLimit="100000" DefaultValue="0" Uuid="e09e4b62-e84b-4cd0-8839-ee2b1b4a9759"/>
+                            </Arguments>
+                        </Command>
+                        <Command Name="readServoOperation" Text="readServoOperation" Id="22" Type="Async" Uuid="cbfde8fa-f493-4184-9531-ac4d24b5ef88">
+                            <CommandAction><![CDATA[Dofbot dof = new Dofbot();
+return dof.readServo(id);]]></CommandAction>
+                            <Arguments>
+                                <Argument Name="id" Text="id" Id="1" Type="Int32" LowerLimit="1" UpperLimit="6" DefaultValue="1" Uuid="61cab82e-319c-435f-ae2b-7ded6405705e"/>
+                            </Arguments>
+                        </Command>
+                        <Command Name="isAtSingleOperation" Text="isAtSingleOperation" Id="23" Type="Async" Uuid="c91bbda2-32b2-4617-935a-c94c07776ffa">
+                            <CommandAction><![CDATA[Dofbot dof = new Dofbot();
+return dof.isAtSingle(id, angle, angle_res);]]></CommandAction>
+                            <Arguments>
+                                <Argument Name="id" Text="id" Id="1" Type="Int32" LowerLimit="1" UpperLimit="6" DefaultValue="1" Uuid="baaa6d3b-ca6e-4bdd-b757-3872a8718263"/>
+                                <Argument Name="angle" Text="angle" Id="2" Type="Double" LowerLimit="0" UpperLimit="270" DefaultValue="0" Uuid="736190da-1307-44e2-ad70-edc20af010b4"/>
+                                <Argument Name="angle_res" Text="angle_res" Id="3" Type="Double" LowerLimit="0" UpperLimit="0" DefaultValue="0" Uuid="de855226-914c-4eff-b80d-97da96dc7e72"/>
+                            </Arguments>
+                        </Command>
+                        <Command Name="Manufacturing" Text="Manufacturing" Id="32001" Type="Sync" IsStandard="True"/>
+                        <Command Name="Maintenance" Text="Maintenance" Id="32002" Type="Sync" IsStandard="True"/>
+                        <Command Name="Abort" Text="Abort" Id="32003" Type="Sync" IsStandard="True"/>
+                        <Command Name="ResetErrors" Text="Reset Errors" Id="32004" Type="Sync" IsStandard="True"/>
+                    </Commands>
+                    <Settings>
+                        <Setting Name="SettCommandTimeout" Text="Command Time-out" Id="1" Type="Int16" LowerLimit="0" UpperLimit="1000" DefaultValue="0" IsStandard="True">
+                            <Unit><![CDATA[ms]]></Unit>
+                        </Setting>
+                    </Settings>
+                    <Observers>
+                        <Observer Name="MACHINEPARTHASH" Text="MachinePartHash" Id="1" Type="Int32" IsStandard="True"/>
+                    </Observers>
+                </MachinePart>
+                <MachinePart ClassName="Board" Uuid="5547554e-13d8-49ec-a695-9b78b780dfee" Hash="911716">
+                    <StateMachines>
+                        <StateMachine StateMachineName="CmdExecution" Name="CmdExecution" InstancePath="CmdExecution" Text="CmdExecution" IsStandard="True"/>
+                        <StateMachine StateMachineName="SM_OperatingState" Name="SM_OperatingState" InstancePath="Operating" Text="Operating" IsStandard="True"/>
+                    </StateMachines>
+                    <Commands>
+                        <Command Name="Manufacturing" Text="Manufacturing" Id="32001" Type="Sync" IsStandard="True"/>
+                        <Command Name="Maintenance" Text="Maintenance" Id="32002" Type="Sync" IsStandard="True"/>
+                        <Command Name="Abort" Text="Abort" Id="32003" Type="Sync" IsStandard="True"/>
+                        <Command Name="ResetErrors" Text="Reset Errors" Id="32004" Type="Sync" IsStandard="True"/>
+                    </Commands>
+                    <Settings>
+                        <Setting Name="SettCommandTimeout" Text="Command Time-out" Id="1" Type="Int16" LowerLimit="0" UpperLimit="1000" DefaultValue="0" IsStandard="True">
+                            <Unit><![CDATA[ms]]></Unit>
+                        </Setting>
+                    </Settings>
+                    <Observers>
+                        <Observer Name="MACHINEPARTHASH" Text="MachinePartHash" Id="1" Type="Int32" IsStandard="True"/>
+                    </Observers>
+                    <MachineParts>
+                        <MachinePart Type="Composition" ClassName="Buzzer" Name="Buzzer" Text="Buzzer"/>
+                        <MachinePart Type="Composition" ClassName="Light" Name="Light" Text="Light"/>
+                    </MachineParts>
+                </MachinePart>
+                <MachinePart ClassName="Buzzer" Uuid="736f53c3-bf84-477b-a7d2-f7448fdeec18" Hash="570341">
+                    <StateMachines>
+                        <StateMachine StateMachineName="CmdExecution" Name="CmdExecution" InstancePath="CmdExecution" Text="CmdExecution" IsStandard="True"/>
+                        <StateMachine StateMachineName="SM_OperatingState" Name="SM_OperatingState" InstancePath="Operating" Text="Operating" IsStandard="True"/>
+                    </StateMachines>
+                    <Commands>
+                        <Command Name="buzzerOn" Text="buzzerOn" Id="21" Type="Async" HmiExecutionCondition="Maintenance_required" Uuid="5c8ce363-ebcc-4aad-8bb2-5e3761e54026">
+                            <CommandAction><![CDATA[BuzzerOperations.buzzerOnOperation( CmdArg(buzzerOn.aTime));]]></CommandAction>
+                            <Arguments>
+                                <Argument Name="aTime" Text="aTime" Id="1" Type="Int32" LowerLimit="0" UpperLimit="50" DefaultValue="0" Uuid="6202436f-2a32-4dfd-9d1b-fd3f6eb0c13e"/>
+                            </Arguments>
+                        </Command>
+                        <Command Name="buzzerOff" Text="buzzerOff" Id="22" Type="Async" HmiExecutionCondition="Maintenance_required" Uuid="d53a8958-1fa4-462e-b2f3-125523fd86f0">
+                            <CommandAction><![CDATA[BuzzerOperations.buzzerOffOperation();]]></CommandAction>
+                        </Command>
+                        <Command Name="Manufacturing" Text="Manufacturing" Id="32001" Type="Sync" IsStandard="True"/>
+                        <Command Name="Maintenance" Text="Maintenance" Id="32002" Type="Sync" IsStandard="True"/>
+                        <Command Name="Abort" Text="Abort" Id="32003" Type="Sync" IsStandard="True"/>
+                        <Command Name="ResetErrors" Text="Reset Errors" Id="32004" Type="Sync" IsStandard="True"/>
+                    </Commands>
+                    <Settings>
+                        <Setting Name="SettCommandTimeout" Text="Command Time-out" Id="1" Type="Int16" LowerLimit="0" UpperLimit="1000" DefaultValue="0" IsStandard="True">
+                            <Unit><![CDATA[ms]]></Unit>
+                        </Setting>
+                    </Settings>
+                    <Observers>
+                        <Observer Name="MACHINEPARTHASH" Text="MachinePartHash" Id="1" Type="Int32" IsStandard="True"/>
+                    </Observers>
+                    <MachineParts>
+                        <MachinePart Type="Composition" ClassName="BuzzerOperations" Name="BuzzerOperations" Text="BuzzerOperations"/>
+                    </MachineParts>
+                </MachinePart>
+                <MachinePart ClassName="BuzzerOperations" Uuid="f9f33ae1-a0a9-4461-a9ec-98deeeef3907" Hash="548512">
+                    <StateMachines>
+                        <StateMachine StateMachineName="CmdExecution" Name="CmdExecution" InstancePath="CmdExecution" Text="CmdExecution" IsStandard="True"/>
+                        <StateMachine StateMachineName="SM_OperatingState" Name="SM_OperatingState" InstancePath="Operating" Text="Operating" IsStandard="True"/>
+                    </StateMachines>
+                    <Commands>
+                        <Command Name="buzzerOnOperation" Text="buzzerOnOperation" Id="21" Type="Async" Uuid="86ffd318-5d75-4a1f-a7b7-156e71c7cf82">
+                            <CommandAction><![CDATA[Dofbot dof = new Dofbot();
+dof.buzzerOn(aTime);]]></CommandAction>
+                            <Arguments>
+                                <Argument Name="aTime" Text="aTime" Id="1" Type="Int32" LowerLimit="0" UpperLimit="50" DefaultValue="0" Uuid="311db27e-c054-4e79-a9b1-9e450423c6f0"/>
+                            </Arguments>
+                        </Command>
+                        <Command Name="buzzerOffOperation" Text="buzzerOffOperation" Id="22" Type="Async" Uuid="6adc2de3-f7b1-4a4d-b4b3-1e0905e0b3be">
+                            <CommandAction><![CDATA[Dofbot dof = new Dofbot();
+dof.buzzerOff();]]></CommandAction>
+                        </Command>
+                        <Command Name="Manufacturing" Text="Manufacturing" Id="32001" Type="Sync" IsStandard="True"/>
+                        <Command Name="Maintenance" Text="Maintenance" Id="32002" Type="Sync" IsStandard="True"/>
+                        <Command Name="Abort" Text="Abort" Id="32003" Type="Sync" IsStandard="True"/>
+                        <Command Name="ResetErrors" Text="Reset Errors" Id="32004" Type="Sync" IsStandard="True"/>
+                    </Commands>
+                    <Settings>
+                        <Setting Name="SettCommandTimeout" Text="Command Time-out" Id="1" Type="Int16" LowerLimit="0" UpperLimit="1000" DefaultValue="0" IsStandard="True">
+                            <Unit><![CDATA[ms]]></Unit>
+                        </Setting>
+                    </Settings>
+                    <Observers>
+                        <Observer Name="MACHINEPARTHASH" Text="MachinePartHash" Id="1" Type="Int32" IsStandard="True"/>
+                    </Observers>
+                </MachinePart>
+                <MachinePart ClassName="Light" Uuid="cbc032fc-d1d1-4069-ad0d-0e90744729de" Hash="587546">
+                    <StateMachines>
+                        <StateMachine StateMachineName="CmdExecution" Name="CmdExecution" InstancePath="CmdExecution" Text="CmdExecution" IsStandard="True"/>
+                        <StateMachine StateMachineName="SM_OperatingState" Name="SM_OperatingState" InstancePath="Operating" Text="Operating" IsStandard="True"/>
+                    </StateMachines>
+                    <Commands>
+                        <Command Name="lightRGB" Text="lightRGB" Id="21" Type="Async" HmiExecutionCondition="Maintenance_required" Uuid="889947a0-d85a-4a9b-9721-585cdfb179c4">
+                            <CommandAction><![CDATA[LightOperations.lightRGBOperation( CmdArg(lightRGB.r), CmdArg(lightRGB.g), CmdArg(lightRGB.b));]]></CommandAction>
+                            <Arguments>
+                                <Argument Name="r" Text="r" Id="1" Type="Int32" LowerLimit="0" UpperLimit="255" DefaultValue="0" Uuid="effca83c-1822-4913-aa8f-d5457fc0a866"/>
+                                <Argument Name="g" Text="g" Id="2" Type="Int32" LowerLimit="0" UpperLimit="255" DefaultValue="0" Uuid="a81badf9-6475-4ead-b5c6-55e54d7c17b5"/>
+                                <Argument Name="b" Text="b" Id="3" Type="Int32" LowerLimit="0" UpperLimit="255" DefaultValue="0" Uuid="66589939-df53-4564-8b3e-622f9b37b862"/>
+                            </Arguments>
+                        </Command>
+                        <Command Name="Manufacturing" Text="Manufacturing" Id="32001" Type="Sync" IsStandard="True"/>
+                        <Command Name="Maintenance" Text="Maintenance" Id="32002" Type="Sync" IsStandard="True"/>
+                        <Command Name="Abort" Text="Abort" Id="32003" Type="Sync" IsStandard="True"/>
+                        <Command Name="ResetErrors" Text="Reset Errors" Id="32004" Type="Sync" IsStandard="True"/>
+                    </Commands>
+                    <Settings>
+                        <Setting Name="SettCommandTimeout" Text="Command Time-out" Id="1" Type="Int16" LowerLimit="0" UpperLimit="1000" DefaultValue="0" IsStandard="True">
+                            <Unit><![CDATA[ms]]></Unit>
+                        </Setting>
+                    </Settings>
+                    <Observers>
+                        <Observer Name="MACHINEPARTHASH" Text="MachinePartHash" Id="1" Type="Int32" IsStandard="True"/>
+                    </Observers>
+                    <MachineParts>
+                        <MachinePart Type="Composition" ClassName="LightOperations" Name="LightOperations" Text="LightOperations"/>
+                    </MachineParts>
+                </MachinePart>
+                <MachinePart ClassName="LightOperations" Uuid="e08722cb-5119-4acc-9378-9333284d822c" Hash="160130">
+                    <StateMachines>
+                        <StateMachine StateMachineName="CmdExecution" Name="CmdExecution" InstancePath="CmdExecution" Text="CmdExecution" IsStandard="True"/>
+                        <StateMachine StateMachineName="SM_OperatingState" Name="SM_OperatingState" InstancePath="Operating" Text="Operating" IsStandard="True"/>
+                    </StateMachines>
+                    <Commands>
+                        <Command Name="lightRGBOperation" Text="lightRGBOperation" Id="21" Type="Async" Uuid="b6b722ad-0cbf-4c51-ae80-fa4b6d307ac0">
+                            <CommandAction><![CDATA[Dofbot dof = new Dofbot();
+return dof.lightRGB(r,g,b);]]></CommandAction>
+                            <Arguments>
+                                <Argument Name="r" Text="r" Id="1" Type="Int32" LowerLimit="0" UpperLimit="255" DefaultValue="0" Uuid="a075b856-6843-417b-bfb3-418d1f039115"/>
+                                <Argument Name="g" Text="g" Id="2" Type="Int32" LowerLimit="0" UpperLimit="255" DefaultValue="0" Uuid="e0aa2ba8-5bc8-4cd8-9ef7-e346bd23c197"/>
+                                <Argument Name="b" Text="b" Id="3" Type="Int32" LowerLimit="0" UpperLimit="255" DefaultValue="0" Uuid="17f945ff-95b3-4d20-879e-973791165c53"/>
+                            </Arguments>
+                        </Command>
+                        <Command Name="Manufacturing" Text="Manufacturing" Id="32001" Type="Sync" IsStandard="True"/>
+                        <Command Name="Maintenance" Text="Maintenance" Id="32002" Type="Sync" IsStandard="True"/>
+                        <Command Name="Abort" Text="Abort" Id="32003" Type="Sync" IsStandard="True"/>
+                        <Command Name="ResetErrors" Text="Reset Errors" Id="32004" Type="Sync" IsStandard="True"/>
+                    </Commands>
+                    <Settings>
+                        <Setting Name="SettCommandTimeout" Text="Command Time-out" Id="1" Type="Int16" LowerLimit="0" UpperLimit="1000" DefaultValue="0" IsStandard="True">
+                            <Unit><![CDATA[ms]]></Unit>
+                        </Setting>
+                    </Settings>
+                    <Observers>
+                        <Observer Name="MACHINEPARTHASH" Text="MachinePartHash" Id="1" Type="Int32" IsStandard="True"/>
+                    </Observers>
+                </MachinePart>
+                <MachinePart ClassName="Camera" Uuid="900462cb-fbd8-46a3-a7b0-840595c60196" Hash="946163">
+                    <StateMachines>
+                        <StateMachine StateMachineName="CmdExecution" Name="CmdExecution" InstancePath="CmdExecution" Text="CmdExecution" IsStandard="True"/>
+                        <StateMachine StateMachineName="SM_OperatingState" Name="SM_OperatingState" InstancePath="Operating" Text="Operating" IsStandard="True"/>
+                    </StateMachines>
+                    <Commands>
+                        <Command Name="cameraColor" Text="cameraColor" Id="21" Type="Async" HmiExecutionCondition="Maintenance_required" Uuid="8c922e9d-ff81-4ad5-80c1-433d2bf2c162">
+                            <CommandAction><![CDATA[CameraOperations.cameraColorOperation( CmdArg(cameraColor.aTime));]]></CommandAction>
+                            <Arguments>
+                                <Argument Name="aTime" Text="aTime" Id="1" Type="Int32" LowerLimit="0" UpperLimit="0" DefaultValue="0" Uuid="5f38b457-e52c-4155-86db-d934dc25b0b2"/>
+                            </Arguments>
+                        </Command>
+                        <Command Name="calibration" Text="calibration" Id="22" Type="Async" HmiExecutionCondition="Maintenance_required" Uuid="934b1a76-f7fe-4cdd-8efe-36b92b6838c7">
+                            <CommandAction><![CDATA[CameraOperations.calibrationOperation( CmdArg(calibration.color), CmdArg(calibration.Hmin), CmdArg(calibration.Smin), CmdArg(calibration.Vmin), CmdArg(calibration.Hmax), CmdArg(calibration.Smax), CmdArg(calibration.Vmax));]]></CommandAction>
+                            <Arguments>
+                                <Argument Name="color" Text="color" Id="1" Type="String" DefaultValue="'''0'''" Uuid="e274d9e4-bd9b-4cb3-9db8-b9172bebefe9"/>
+                                <Argument Name="Hmin" Text="Hmin" Id="2" Type="Double" LowerLimit="0" UpperLimit="255" DefaultValue="0" Uuid="bf9ad718-ec9b-4976-ad96-eeba8ea59a2e"/>
+                                <Argument Name="Smin" Text="Smin" Id="3" Type="Double" LowerLimit="0" UpperLimit="255" DefaultValue="0" Uuid="35649544-3ef1-407b-a1f1-354f5aa876bd"/>
+                                <Argument Name="Vmin" Text="Vmin" Id="4" Type="Double" LowerLimit="0" UpperLimit="255" DefaultValue="0" Uuid="dae7ad4f-c445-43a4-b3a5-3d883bf7b3e3"/>
+                                <Argument Name="Hmax" Text="Hmax" Id="5" Type="Double" LowerLimit="0" UpperLimit="255" DefaultValue="0" Uuid="7e2c486d-64cb-47ef-b2f2-5db1e1345162"/>
+                                <Argument Name="Smax" Text="Smax" Id="6" Type="Double" LowerLimit="0" UpperLimit="255" DefaultValue="0" Uuid="0da9464f-32a5-40ca-a1df-1ee3f5e7823b"/>
+                                <Argument Name="Vmax" Text="Vmax" Id="7" Type="Double" LowerLimit="0" UpperLimit="255" DefaultValue="0" Uuid="6115227e-a659-4ce9-8538-1cdb020082ea"/>
+                            </Arguments>
+                        </Command>
+                        <Command Name="Manufacturing" Text="Manufacturing" Id="32001" Type="Sync" IsStandard="True"/>
+                        <Command Name="Maintenance" Text="Maintenance" Id="32002" Type="Sync" IsStandard="True"/>
+                        <Command Name="Abort" Text="Abort" Id="32003" Type="Sync" IsStandard="True"/>
+                        <Command Name="ResetErrors" Text="Reset Errors" Id="32004" Type="Sync" IsStandard="True"/>
+                    </Commands>
+                    <Settings>
+                        <Setting Name="SettCommandTimeout" Text="Command Time-out" Id="1" Type="Int16" LowerLimit="0" UpperLimit="1000" DefaultValue="0" IsStandard="True">
+                            <Unit><![CDATA[ms]]></Unit>
+                        </Setting>
+                    </Settings>
+                    <Observers>
+                        <Observer Name="MACHINEPARTHASH" Text="MachinePartHash" Id="1" Type="Int32" IsStandard="True"/>
+                    </Observers>
+                    <MachineParts>
+                        <MachinePart Type="Composition" ClassName="CameraOperations" Name="CameraOperations" Text="CameraOperations"/>
+                    </MachineParts>
+                </MachinePart>
+                <MachinePart ClassName="CameraOperations" Uuid="85c86cd4-4efd-4143-a370-6ab3737ae1ca" Hash="480744">
+                    <StateMachines>
+                        <StateMachine StateMachineName="CmdExecution" Name="CmdExecution" InstancePath="CmdExecution" Text="CmdExecution" IsStandard="True"/>
+                        <StateMachine StateMachineName="SM_OperatingState" Name="SM_OperatingState" InstancePath="Operating" Text="Operating" IsStandard="True"/>
+                    </StateMachines>
+                    <Commands>
+                        <Command Name="cameraColorOperation" Text="cameraColorOperation" Id="21" Type="Async" Uuid="a604d415-3cab-45aa-932c-930e3da3b731">
+                            <CommandAction><![CDATA[Dofbot dof = new Dofbot();
+return dof.cameraColor(aTime);]]></CommandAction>
+                            <Arguments>
+                                <Argument Name="aTime" Text="aTime" Id="1" Type="Int32" LowerLimit="0" UpperLimit="0" DefaultValue="0" Uuid="2b00026a-a9fa-4c80-8b9f-41d8fc07772f"/>
+                            </Arguments>
+                        </Command>
+                        <Command Name="calibrationOperation" Text="calibrationOperation" Id="22" Type="Async" Uuid="c82fffbe-e0ca-43f3-b248-cf2bddc80568">
+                            <CommandAction><![CDATA[Dofbot dof = new Dofbot();
+dof.colorConfiguration(color, Hmin, Smin, Vmin, Hmax, Smax, Vmax);]]></CommandAction>
+                            <Arguments>
+                                <Argument Name="color" Text="color" Id="1" Type="String" DefaultValue="'''0'''" Uuid="7ddeb3c1-922a-40ea-b106-ffcde672c58f"/>
+                                <Argument Name="Hmin" Text="Hmin" Id="2" Type="Double" LowerLimit="0" UpperLimit="255" DefaultValue="0" Uuid="bc71f547-5031-4049-b2a2-f083a528248f"/>
+                                <Argument Name="Smin" Text="Smin" Id="3" Type="Double" LowerLimit="0" UpperLimit="255" DefaultValue="0" Uuid="07275982-f9d1-4cf8-9a1f-aa58a2fdcba7"/>
+                                <Argument Name="Vmin" Text="Vmin" Id="4" Type="Double" LowerLimit="0" UpperLimit="255" DefaultValue="0" Uuid="263ac8ce-d361-46ad-bd0c-f052f270d06c"/>
+                                <Argument Name="Hmax" Text="Hmax" Id="5" Type="Double" LowerLimit="0" UpperLimit="255" DefaultValue="0" Uuid="811ee9cb-8f92-44a2-a7fc-6b3f51de77e6"/>
+                                <Argument Name="Smax" Text="Smax" Id="6" Type="Double" LowerLimit="0" UpperLimit="255" DefaultValue="0" Uuid="698546f0-ab24-4b58-9f16-84fa1b9abd88"/>
+                                <Argument Name="Vmax" Text="Vmax" Id="7" Type="Double" LowerLimit="0" UpperLimit="255" DefaultValue="0" Uuid="17cb6fae-1a53-4c22-a9d8-7dc8cf64ac4e"/>
+                            </Arguments>
+                        </Command>
+                        <Command Name="Manufacturing" Text="Manufacturing" Id="32001" Type="Sync" IsStandard="True"/>
+                        <Command Name="Maintenance" Text="Maintenance" Id="32002" Type="Sync" IsStandard="True"/>
+                        <Command Name="Abort" Text="Abort" Id="32003" Type="Sync" IsStandard="True"/>
+                        <Command Name="ResetErrors" Text="Reset Errors" Id="32004" Type="Sync" IsStandard="True"/>
+                    </Commands>
+                    <Settings>
+                        <Setting Name="SettCommandTimeout" Text="Command Time-out" Id="1" Type="Int16" LowerLimit="0" UpperLimit="1000" DefaultValue="0" IsStandard="True">
+                            <Unit><![CDATA[ms]]></Unit>
+                        </Setting>
+                    </Settings>
+                    <Observers>
+                        <Observer Name="MACHINEPARTHASH" Text="MachinePartHash" Id="1" Type="Int32" IsStandard="True"/>
+                    </Observers>
+                </MachinePart>
+                <MachinePart ClassName="ArmOperations" Uuid="7448fcef-f56d-4ff4-bd7b-a68037b8821c" Hash="1089276">
+                    <StateMachines>
+                        <StateMachine StateMachineName="CmdExecution" Name="CmdExecution" InstancePath="CmdExecution" Text="CmdExecution" IsStandard="True"/>
+                        <StateMachine StateMachineName="SM_OperatingState" Name="SM_OperatingState" InstancePath="Operating" Text="Operating" IsStandard="True"/>
+                    </StateMachines>
+                    <Commands>
+                        <Command Name="rotateAllServosOperation" Text="rotateAllServosOperation" Id="21" Type="Async" Uuid="ba0c5718-9b3f-42fc-88c9-a99001490a86">
+                            <CommandAction><![CDATA[Dofbot dof = new Dofbot();
+return dof.rotateAllServos(angle1, angle2, angle3, angle4, angle5, angle6, aTime);]]></CommandAction>
+                            <Arguments>
+                                <Argument Name="angle1" Text="angle1" Id="1" Type="Double" LowerLimit="0" UpperLimit="180" DefaultValue="0" Uuid="a4fd44b9-7b75-4ce5-af9a-2c77638a80f6"/>
+                                <Argument Name="angle2" Text="angle2" Id="2" Type="Double" LowerLimit="0" UpperLimit="180" DefaultValue="0" Uuid="3b31c887-a832-4aa7-97b1-e6f79a9f4e5e"/>
+                                <Argument Name="angle3" Text="angle3" Id="3" Type="Double" LowerLimit="0" UpperLimit="180" DefaultValue="0" Uuid="0dda86a9-3c88-4faf-845f-f50551389aa7"/>
+                                <Argument Name="angle4" Text="angle4" Id="4" Type="Double" LowerLimit="0" UpperLimit="180" DefaultValue="0" Uuid="2db6cc3e-a699-4c1f-ad71-980cc571ad69"/>
+                                <Argument Name="angle5" Text="angle5" Id="5" Type="Double" LowerLimit="0" UpperLimit="270" DefaultValue="0" Uuid="f4fe6d39-c7e1-46f1-8945-b4cc18edfb07"/>
+                                <Argument Name="angle6" Text="angle6" Id="6" Type="Double" LowerLimit="0" UpperLimit="180" DefaultValue="0" Uuid="f5f34a56-a6b0-4081-af4c-c7d028d40917"/>
+                                <Argument Name="aTime" Text="aTime" Id="7" Type="Int32" LowerLimit="0" UpperLimit="100000" DefaultValue="0" Uuid="09f68085-ef47-48d7-83b0-e1050366b5fe"/>
+                            </Arguments>
+                        </Command>
+                        <Command Name="readAllServosOperation" Text="readAllServosOperation" Id="22" Type="Async" Uuid="0c572c82-ffda-47b8-adaa-d26220506141">
+                            <CommandAction><![CDATA[Dofbot dof = new Dofbot();
+double[] res = dof.readAllServos();
+return res;]]></CommandAction>
+                        </Command>
+                        <Command Name="cameraColorOperation" Text="cameraColorOperation" Id="23" Type="Async" Uuid="2f873920-f6fa-4982-b4b5-0aca87c52596">
+                            <CommandAction><![CDATA[Dofbot dof = new Dofbot();
+return dof.cameraColor(aTime);]]></CommandAction>
+                            <Arguments>
+                                <Argument Name="aTime" Text="aTime" Id="1" Type="Int32" LowerLimit="1000" UpperLimit="100000" DefaultValue="1000" Uuid="379b0d88-f7fb-4627-a7e6-f9cf441fc391"/>
+                            </Arguments>
+                        </Command>
+                        <Command Name="isAtOperation" Text="isAtOperation" Id="24" Type="Async" Uuid="968e1fa1-66f6-4935-b98f-2297e444e64b">
+                            <CommandAction><![CDATA[Dofbot dof = new Dofbot();
+return dof.isAt(angle1isAt, angle2isAt, angle3isAt, angle4isAt, angle5isAt, angle6isAt, angle_res);]]></CommandAction>
+                            <Arguments>
+                                <Argument Name="angle1isAt" Text="angle1isAt" Id="1" Type="Double" LowerLimit="0" UpperLimit="180" DefaultValue="0" Uuid="bc1d9628-94c1-414e-aeb0-94ef1b8dd38d"/>
+                                <Argument Name="angle2isAt" Text="angle2isAt" Id="2" Type="Double" LowerLimit="0" UpperLimit="180" DefaultValue="0" Uuid="af9b3ca4-77ba-42cb-b16e-67fa0346771a"/>
+                                <Argument Name="angle3isAt" Text="angle3isAt" Id="3" Type="Double" LowerLimit="0" UpperLimit="180" DefaultValue="0" Uuid="d740f62e-678b-4103-8866-07aefc615b6f"/>
+                                <Argument Name="angle4isAt" Text="angle4isAt" Id="4" Type="Double" LowerLimit="0" UpperLimit="180" DefaultValue="0" Uuid="bc061724-962d-4dea-ad68-6297707e8e43"/>
+                                <Argument Name="angle5isAt" Text="angle5isAt" Id="5" Type="Double" LowerLimit="0" UpperLimit="270" DefaultValue="0" Uuid="44323a4e-abe4-4f3d-b62f-b448ffe4159a"/>
+                                <Argument Name="angle6isAt" Text="angle6isAt" Id="6" Type="Double" LowerLimit="0" UpperLimit="180" DefaultValue="0" Uuid="8569ad1f-1067-4170-9aa0-cdf085d5be99"/>
+                                <Argument Name="angle_res" Text="angle_res" Id="7" Type="Double" LowerLimit="0" UpperLimit="0" DefaultValue="0" Uuid="e8fc9023-f85a-47ec-b2b4-d44a5bbb416d"/>
+                            </Arguments>
+                        </Command>
+                        <Command Name="waitOperation" Text="waitOperation" Id="25" Type="Async" Uuid="41a1a1d8-c0c2-4553-a530-d85daceb7448">
+                            <CommandAction><![CDATA[Thread.Sleep(aTime);]]></CommandAction>
+                            <Arguments>
+                                <Argument Name="aTime" Text="aTime" Id="1" Type="Int32" LowerLimit="0" UpperLimit="100000" DefaultValue="0" Uuid="6132035f-1adc-497d-8a88-c179793adf29"/>
+                            </Arguments>
+                        </Command>
+                        <Command Name="posInicialOperation" Text="posInicialOperation" Id="26" Type="Async" Uuid="05091c12-bb2f-4e9a-b442-dac30c7ccbf4">
+                            <CommandAction><![CDATA[Dofbot dof = new Dofbot();
+return dof.straightPosition(aTime);]]></CommandAction>
+                            <Arguments>
+                                <Argument Name="aTime" Text="aTime" Id="1" Type="Int32" LowerLimit="0" UpperLimit="100000" DefaultValue="0" Uuid="5c835ab5-61c8-4574-8b07-fb4bb6e424f1"/>
+                            </Arguments>
+                        </Command>
+                        <Command Name="Manufacturing" Text="Manufacturing" Id="32001" Type="Sync" IsStandard="True"/>
+                        <Command Name="Maintenance" Text="Maintenance" Id="32002" Type="Sync" IsStandard="True"/>
+                        <Command Name="Abort" Text="Abort" Id="32003" Type="Sync" IsStandard="True"/>
+                        <Command Name="ResetErrors" Text="Reset Errors" Id="32004" Type="Sync" IsStandard="True"/>
+                    </Commands>
+                    <Settings>
+                        <Setting Name="SettCommandTimeout" Text="Command Time-out" Id="1" Type="Int16" LowerLimit="0" UpperLimit="1000" DefaultValue="0" IsStandard="True">
+                            <Unit><![CDATA[ms]]></Unit>
+                        </Setting>
+                    </Settings>
+                    <Observers>
+                        <Observer Name="MACHINEPARTHASH" Text="MachinePartHash" Id="1" Type="Int32" IsStandard="True"/>
+                    </Observers>
+                </MachinePart>
+            </MachineParts>
+        </Package>
+    </Packages>
+</CordisModel>
