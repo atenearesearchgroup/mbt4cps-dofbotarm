@@ -119,7 +119,7 @@ class GenerateData:
             testfile.write("def test_"+str(iter)+"_"+name+"(CC1):"+"\n")
             pre=self.operationNames[operationID]["pre"]
             post=self.operationNames[operationID]["post"]
-            if pre=="[]":
+            if pre=="True":
                 pre=""
             if post=="[]":
                 post="True"
