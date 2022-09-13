@@ -16,3 +16,5 @@ In the section [UserTest](https://github.com/atenearesearchgroup/mbt4cps-dofbota
 Also it is include a tutorial video and a manual of how to install everything and create or use this tool.
 
 ## Tool for the generation of unitary tests
+
+In the section [UnitaryTest](https://github.com/atenearesearchgroup/mbt4cps-dofbotarm/tree/main/UnitaryTest) we can find a folder containing all the necessary files, as well as an executable file, for generating unitary tests for the operations of a model that has been developed using CordisModeler tool. These tests can then be launched on the robot corresponding to the model developed. The folder also includes an user manual and a video example explaining how to create and deploy tests using the CordisModeler export file as an input.
